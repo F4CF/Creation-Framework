@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+	<!-- http://www.creationkit.com/fallout4/index.php?title=Papyrus_Projects -->
+	<PapyrusProject
+		xmlns="PapyrusProject.xsd"
+		Flags="Institute_Papyrus_Flags.flg"
+		Output="D:\Games\Steam\SteamApps\common\Fallout 4\Data\Scripts"
+		Asm="Discard"
+		Optimize="false"
+		Release="false"
+		Final="false"
+	>
+	<Imports>
+		<Import>D:\Games\Steam\SteamApps\common\Fallout 4\Data\Scripts\Source\Scripting</Import>
+		<Import>D:\Games\Steam\SteamApps\common\Fallout 4\Data\Scripts\Source\Base</Import>
+	</Imports>
+	<Scripts>
+		<Script>Shared\Collection</Script>
+		<Script>Shared\Compatibility</Script>
+		<Script>Shared\Log</Script>
+		<Script>Shared\Papyrus</Script>
+	</Scripts>
+</PapyrusProject>

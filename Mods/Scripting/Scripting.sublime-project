@@ -1,0 +1,47 @@
+{
+	"folders":
+	[
+		{
+			"name": "GitHub (Wrye)",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Mods\\_Wrye\\Bash Installers\\FO4_Scripting"
+		},
+		{
+			"name": "Logs",
+			"path": "C:\\Users\\Scrivener07\\Documents\\My Games\\Fallout4"
+		},
+		{
+			"name": "Project",
+			"path": "."
+		},
+		{
+			"name": "Meshes",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Meshes"
+		},
+		{
+			"name": "Materials",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Materials"
+		},
+		{
+			"name": "Textures",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Textures"
+		},
+		{
+			"name": "Sound",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Sound"
+		},
+		{
+			"name": "Flash",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Interface\\Source"
+		},
+		{
+			"name": "Papyrus",
+			"path": "D:\\Games\\Steam\\SteamApps\\common\\Fallout 4\\Data\\Scripts\\Source"
+		}
+	],
+	"settings":
+	{
+		"ensure_newline_at_eof_on_save": true,
+		"tab_size": 4,
+		"trim_trailing_white_space_on_save": true
+	}
+}
