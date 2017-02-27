@@ -17,7 +17,6 @@ EndStruct
 ; Functions
 ;---------------------------------------------
 
-; Not Implemented
 string Function PointToString(Point value) Global
 	{Returns a string that represents the Point.}
 	return "X:"+value.X+", Y:"+value.Y+", Z:"+value.Z
