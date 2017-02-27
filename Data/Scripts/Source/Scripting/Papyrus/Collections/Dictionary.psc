@@ -1,0 +1,1 @@
+Scriptname Papyrus:Collections:Dictionary extends Papyrus:Collections:Collection Default
