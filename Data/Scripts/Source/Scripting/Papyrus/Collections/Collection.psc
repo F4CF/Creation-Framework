@@ -8,12 +8,12 @@ Scriptname Papyrus:Collections:Collection extends Form Const Native Hidden
 ; Events
 ;---------------------------------------------
 
-Event CollectionChanged(NotifyCollectionChangedEventArgs e)
+Event OnCollectionChanged(NotifyCollectionChangedEventArgs e)
 	{Occurs when an item is added, removed, changed, moved, or the entire list is refreshed.}
 EndEvent
 
 
-Event PropertyChanged(PropertyChangedEventArgs e)
+Event OnPropertyChanged(PropertyChangedEventArgs e)
 	{Occurs when a property value changes.}
 EndEvent
 
