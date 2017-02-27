@@ -22,7 +22,7 @@ EndEvent
 ;---------------------------------------------
 
 Struct NotifyCollectionChangedEventArgs
-	int Action = -1
+	int ActionType = -1
 	{Gets the action that caused the event.}
 	int NewStartingIndex = -1
 	{The zero-based index at which the change occurred.}

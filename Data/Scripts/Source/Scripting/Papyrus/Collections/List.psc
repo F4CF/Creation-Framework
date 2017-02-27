@@ -16,7 +16,7 @@ CustomEvent PropertyChanged
 Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = "Papyrus"
+	Log.FileName = "Papyrus_Collections"
 	Collection = new var[0]
 	RegisterForCustomEvent(self, "CollectionChanged")
 	RegisterForCustomEvent(self, "PropertyChanged")
