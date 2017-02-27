@@ -19,7 +19,7 @@ Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
 	Log.FileName = LogFile
-    parent.OnInit()
+	parent.OnInit()
 EndEvent
 
 
