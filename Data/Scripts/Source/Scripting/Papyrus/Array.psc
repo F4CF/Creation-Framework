@@ -9,11 +9,13 @@ Scriptname Papyrus:Array Const Native Hidden
 ; Functions
 ;---------------------------------------------
 
-; ArrayToString()
-; Returns a string that represents the current Array.
+string Function ArrayToString(var[] array) Global
+	{Returns a string that represents the current Array.}
+	return array.Length as string
+EndFunction
 
 
-var[] Function GetDistinct(var[] array) Global ; linq
+var[] Function ArrayGetDistinct(var[] array) Global
 	var[] distinct = new var[0]
 	int index = 0
 	While (index < array.Length)

@@ -1,5 +1,4 @@
 ScriptName Papyrus_Test:ArrayTest extends Papyrus_Test:Framework:Lilac
-import Papyrus
 import Papyrus:Array
 import Papyrus:Diagnostics:Log
 
@@ -59,7 +58,7 @@ bool Function DistinctBooleanCase()
 	array.Add(false)
 	array.Add(false)
 	array.Add(false)
-	var[] result = Papyrus:Array.GetDistinct(array)
+	var[] result = ArrayGetDistinct(array)
 	expect(result.Length, beEqualTo, 2)
 	return Done
 EndFunction
@@ -77,7 +76,7 @@ bool Function DistinctIntegerCase()
 	array.Add(3)
 	array.Add(3)
 	array.Add(3)
-	var[] result = Papyrus:Array.GetDistinct(array)
+	var[] result = ArrayGetDistinct(array)
 	expect(result.Length, beEqualTo, 3)
 	return Done
 EndFunction
@@ -102,7 +101,7 @@ bool Function DistinctFloatingCase()
 	array.Add(0.5)
 	array.Add(0.9)
 	array.Add(0.9)
-	var[] result = Papyrus:Array.GetDistinct(array)
+	var[] result = ArrayGetDistinct(array)
 	expect(result.Length, beEqualTo, 9)
 	return Done
 EndFunction
@@ -117,7 +116,7 @@ bool Function DistinctStringCase()
 	array.Add(" ")
 	array.Add("Hello")
 	array.Add("World")
-	var[] result = Papyrus:Array.GetDistinct(array)
+	var[] result = ArrayGetDistinct(array)
 	expect(result.Length, beEqualTo, 4)
 	return Done
 EndFunction
