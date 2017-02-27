@@ -42,6 +42,7 @@ bool Function DistinctSuite()
 	it("should return a distinct array of integers", DistinctIntegerCase())
 	it("should return a distinct array of floating points", DistinctFloatingCase())
 	it("should return a distinct array of strings", DistinctStringCase())
+	it("should return a distinct array of elements", DistinctElementsCase())
 	return Done
 EndFunction
 
@@ -118,5 +119,25 @@ bool Function DistinctStringCase()
 	array.Add("World")
 	var[] result = ArrayGetDistinct(array)
 	expect(result.Length, beEqualTo, 4)
+	return Done
+EndFunction
+
+
+bool Function DistinctElementsCase()
+	WriteLine(Log, "DistinctElementsCase")
+	var[] array = new var[0]
+	array.Add(none)
+	array.Add(1)
+	array.Add(1.0)
+	array.Add("1")
+	array.Add("1.0")
+	array.Add("Hello World")
+	array.Add(true)
+	array.Add(true)
+	array.Add(true)
+	array.Add(true)
+	array.Add(true)
+	var[] result = ArrayGetDistinct(array)
+	expect(result.Length, beEqualTo, 7)
 	return Done
 EndFunction
