@@ -32,11 +32,13 @@ EndFunction
 ; Operators
 ;---------------------------------------------
 
+; Not Implemented
 bool Function VersionEquality(Version value, Version other) Global
 	{Determines whether two specified Version objects are equal.}
 EndFunction
 
 
+; Not Implemented
 bool Function VersionInequality(Version value, Version other) Global
 	{ Determines whether two specified Version objects are not equal. }
 EndFunction
@@ -67,16 +69,19 @@ bool Function VersionGreaterThan(Version value, Version other) Global
 EndFunction
 
 
+; Not Implemented
 bool Function VersionGreaterThanOrEqual(Version value, Version other) Global
 	{Determines whether the first specified Version object is greater than or equal to the second specified Version object.}
 EndFunction
 
 
+; Not Implemented
 bool Function VersionLessThan(Version value, Version other) Global
 	{Determines whether the first specified Version object is less than the second specified Version object.}
 EndFunction
 
 
+; Not Implemented
 bool Function VersionLessThanOrEqual(Version value, Version other) Global
 	{Determines whether the first specified Version object is less than or equal to the second Version object.}
 EndFunction

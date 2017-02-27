@@ -17,28 +17,33 @@ EndStruct
 ; Functions
 ;---------------------------------------------
 
-string Function PointoString(Point value) Global
+; Not Implemented
+string Function PointToString(Point value) Global
 	{Returns a string that represents the Point.}
 	return "X:"+value.X+", Y:"+value.Y+", Z:"+value.Z
 EndFunction
 
 
-float Function AngleBetween(Point value, Point other) Global
+; Not Implemented
+float Function PointAngleBetween(Point value, Point other) Global
 	{Retrieves the angle required to rotate the first specified Point structure into the second specified Point structure.}
 EndFunction
 
 
-float Function DotProduct(Point value, Point other) Global
+; Not Implemented
+float Function PointDotProduct(Point value, Point other) Global
 	{Calculates the dot product of two Point structures.}
 EndFunction
 
 
-Point Function CrossProduct(Point value, Point other) Global
+; Not Implemented
+Point Function PointCrossProduct(Point value, Point other) Global
 	{Calculates the cross product of two Point structures.}
 EndFunction
 
 
-Point Function Normalize() Global
+; Not Implemented
+Point Function PointNormalize() Global
 	{Normalizes the specified Point structure.}
 EndFunction
 
@@ -46,37 +51,44 @@ EndFunction
 ; Operators
 ;---------------------------------------------
 
-bool Function Equality(Point value, Point other) Global
+; Not Implemented
+bool Function PointEquality(Point value, Point other) Global
 	{Compares two Point structures for equality.}
 EndFunction
 
 
-bool Function Inequality(Point value, Point other) Global
+; Not Implemented
+bool Function PointInequality(Point value, Point other) Global
 	{Compares two Point structures for inequality.}
 EndFunction
 
 
-Point Function Addition(Point value, Point other) Global
+; Not Implemented
+Point Function PointAddition(Point value, Point other) Global
 	{Adds two Point structures and returns the result as a Point structure.}
 EndFunction
 
 
-Point Function Subtraction(Point value, Point other) Global
+; Not Implemented
+Point Function PointSubtraction(Point value, Point other) Global
 	{Subtracts a Point structure from a Point structure.}
 EndFunction
 
 
-Point Function Multiply(Point value, float scalar) Global
+; Not Implemented
+Point Function PointMultiply(Point value, float scalar) Global
 	{Multiplies the specified Point structure by the specified scalar and returns the result as a Point.}
 EndFunction
 
 
-Point Function Division(Point value, float scalar) Global
+; Not Implemented
+Point Function PointDivision(Point value, float scalar) Global
 	{Divides the specified Point structure by the specified scalar and returns the result as a Point.}
 EndFunction
 
 
-Point Function UnaryNegation(Point value) Global
+; Not Implemented
+Point Function PointUnaryNegation(Point value) Global
 	{Negates a Point structure.}
 EndFunction
 
