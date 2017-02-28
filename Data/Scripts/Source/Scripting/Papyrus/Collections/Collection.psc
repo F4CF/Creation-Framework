@@ -53,3 +53,44 @@ Group NotifyCollectionChangedAction
 	int Property Reset = 4 AutoReadOnly
 	{The content of the collection was cleared.}
 EndGroup
+
+
+
+
+; Explicit Interface Implementations
+;---------------------------------------------
+
+; IList.Add(Object)
+; Calling this method always throws a NotSupportedException exception.
+
+
+; IList.Clear()
+; Removes all items from the IList.
+
+
+; IList.Contains(Object)
+; Determines whether an element is in the IList.
+
+
+; IList.IndexOf(Object)
+; Determines the index of a specific item in the IList.
+
+
+; IList.Insert(Int32, Object)
+; Inserts an item to the IList at the specified index.
+
+
+; IList.Remove(Object)
+; Removes the first occurrence of a specific object from the IList.
+
+
+; IList.RemoveAt(Int32)
+; Removes the IList item at the specified index.
+
+
+; ICollection.Count
+; Gets the number of elements contained in the Array.
+
+
+; IList.Item[Int32]
+; Gets or sets the element at the specified index.

@@ -32,13 +32,3 @@ EndEvent
 Event OnPropertyChanged(PropertyChangedEventArgs e)
 	{Occurs when a property value changes.}
 EndEvent
-
-
-
-; Functions
-;---------------------------------------------
-
-
-
-; Properties
-;---------------------------------------------

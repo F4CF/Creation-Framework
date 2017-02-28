@@ -4,10 +4,19 @@ Scriptname Papyrus:Array Const Native Hidden
 ; https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx  ; List<T> Class
 ; https://msdn.microsoft.com/en-us/library/bfcke1bz(v=vs.110).aspx ; Predicate<T> Delegate
 
+; Notes
+; -Idea, Support for multi-dimensional arrays if an array capacity is limited
+; -Copying, I may need a solid IList implementation before higher level methods like copy.
 
 
 ; Functions
 ;---------------------------------------------
+
+var[] Function ArrayEmpty() Global
+	{Returns an empty array.}
+	return new var[0]
+EndFunction
+
 
 string Function ArrayToString(var[] array) Global
 	{Returns a string that represents the current Array.}
@@ -29,32 +38,34 @@ var[] Function ArrayGetDistinct(var[] array) Global
 EndFunction
 
 
-; GetLength(Int32)
-; Gets a 32-bit integer that represents the number of elements in the specified dimension of the Array.
+; Not Implemented
+var[] Function ArrayCopy(var[] fromArray, var[] toArray, int copyLength) Global
+	{Copies a range of elements from an Array starting at the first element and pastes them into another Array starting at the first element.}
+
+	; int index = 0
+	; While (index < copyLength)
+	; 	var element = fromArray[index]
+	; 	toArray.Add(element) ; The elements are added the the END of the array here!
+	; 	index += 1
+	; EndWhile
+
+	; return none
+EndFunction
 
 
-; GetLowerBound(Int32)
-; Gets the index of the first element of the specified dimension in the array.
+; Not Implemented
+var[] Function ArrayCopyRange(var[] fromArray, int fromIndex, var[] toArray, int toIndex, int copyLength) Global
+	{Copies a range of elements from an Array starting at the specified source index and pastes them to another Array starting at the specified destination index.}
+	; var[] elements = new var[0]
 
-
-; GetUpperBound(Int32)
-; Gets the index of the last element of the specified dimension in the array.
-
-
-; Copy(Array, Array, Int32)
-; Copies a range of elements from an Array starting at the first element and pastes them into another Array starting at the first element.
-
-
-; Copy(Array, Int32, Array, Int32, Int32)
-; Copies a range of elements from an Array starting at the specified source index and pastes them to another Array starting at the specified destination index.
-
-
-; CopyTo(Array, Int32)
-; Copies all the elements of the current one-dimensional array to the specified one-dimensional array starting at the specified destination array index.
-
-
-; Empty<T>()
-; Returns an empty array.
+	; int range = fromIndex + copyLength
+	; While (fromIndex < range)
+	; 	var element = fromArray[fromIndex]
+	; 	elements.Add(element)
+	; 	fromIndex += 1
+	EndWhile
+;	return none
+EndFunction
 
 
 ; Exists<T>(T[], Predicate<T>)
@@ -158,42 +169,3 @@ EndFunction
 
 ; TrueForAll<T>(T[], Predicate<T>)
 ; Determines whether every element in the array matches the conditions defined by the specified predicate.
-
-
-; Explicit Interface Implementations
-;---------------------------------------------
-
-; IList.Add(Object)
-; Calling this method always throws a NotSupportedException exception.
-
-
-; IList.Clear()
-; Removes all items from the IList.
-
-
-; IList.Contains(Object)
-; Determines whether an element is in the IList.
-
-
-; IList.IndexOf(Object)
-; Determines the index of a specific item in the IList.
-
-
-; IList.Insert(Int32, Object)
-; Inserts an item to the IList at the specified index.
-
-
-; IList.Remove(Object)
-; Removes the first occurrence of a specific object from the IList.
-
-
-; IList.RemoveAt(Int32)
-; Removes the IList item at the specified index.
-
-
-; ICollection.Count
-; Gets the number of elements contained in the Array.
-
-
-; IList.Item[Int32]
-; Gets or sets the element at the specified index.
