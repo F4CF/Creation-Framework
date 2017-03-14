@@ -6,13 +6,13 @@ Scriptname Papyrus:Compatibility:External Const Native Hidden
 
 Struct ExternalForm
 	int FormID
-	string PluginFile
+	string FileName
 EndStruct
 
 
 Form Function GetExternalForm(ExternalForm aExternalForm) Global
-	If (Game.IsPluginInstalled(aExternalForm.PluginFile))
-		return Game.GetFormFromFile(aExternalForm.FormID, aExternalForm.PluginFile)
+	If (Game.IsPluginInstalled(aExternalForm.FileName))
+		return Game.GetFormFromFile(aExternalForm.FormID, aExternalForm.FileName)
 	Else
 		return none
 	EndIf

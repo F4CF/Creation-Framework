@@ -63,7 +63,7 @@ var[] Function ArrayCopyRange(var[] fromArray, int fromIndex, var[] toArray, int
 	; 	var element = fromArray[fromIndex]
 	; 	elements.Add(element)
 	; 	fromIndex += 1
-	EndWhile
+	; EndWhile
 ;	return none
 EndFunction
 

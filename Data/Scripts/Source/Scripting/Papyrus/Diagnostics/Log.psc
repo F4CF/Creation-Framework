@@ -22,7 +22,7 @@ EndFunction
 
 
 bool Function WriteLine(UserLog userLog, var text) Global
-	string defaultFile = "Shared" const
+	string defaultFile = "Scripting" const
 
 	If (userLog == none)
 		userLog = new UserLog

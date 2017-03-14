@@ -25,10 +25,13 @@ Event OnInit()
 	LastVersion = Release
 	Condition = new QuestStage
 	Activated = false
-	RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+
 	RegisterForCustomEvent(self, "OnStartup")
 	RegisterForCustomEvent(self, "OnUpgrade")
 	RegisterForCustomEvent(self, "OnShutdown")
+
+	RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+
 	self.OnInitialize()
 	WriteLine(Log, "The context has initialized.")
 EndEvent
@@ -81,9 +84,10 @@ Event Actor.OnPlayerLoadGame(Actor akSender)
 		arguments[1] = versionPrevious
 		SendCustomEvent("OnUpgrade", arguments)
 	Else
-		WriteLine(Log, "No version change so doing nothing at all..")
+		WriteLine(Log, "No version change with game reload.")
 	EndIf
 
+	self.OnGameReload()
 EndEvent
 
 
@@ -99,21 +103,19 @@ Group Context
 
 	string[] Property Authors Hidden
 		string[] Function Get()
-			string[] values = new string[1]
-			values[0] = "Anonymous"
-			return values
+			return GetAuthors()
 		EndFunction
 	EndProperty
 
-	string Property Plugin Hidden
+	string Property FileName Hidden
 		string Function Get()
-			return Papyrus:Project:ContextType.ContextPlugin()
+			return Context().FileName
 		EndFunction
 	EndProperty
 
 	int Property FormID Hidden
 		int Function Get()
-			return GetFormID()
+			return Context().FormID
 		EndFunction
 	EndProperty
 
