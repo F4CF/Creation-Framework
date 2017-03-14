@@ -11,7 +11,7 @@ UserLog Log
 Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = LogFile
+	Log.FileName = LogFile + "_BoolTest"
 	parent.OnInit()
 EndEvent
 
@@ -46,7 +46,7 @@ EndFunction
 
 bool Function BoolToIntCase()
 	WriteLine(Log, "BoolToIntCase")
-	expect(BoolToInt(true), beEqualTo, 1)
-	expect(BoolToInt(false), beEqualTo, 0)
+	expect(BoolToInt(true), to, beEqualTo, 1)
+	expect(BoolToInt(false), to, beEqualTo, 0)
 	return Done
 EndFunction

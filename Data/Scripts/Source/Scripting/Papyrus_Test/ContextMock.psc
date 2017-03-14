@@ -1,4 +1,5 @@
-ScriptName Papyrus_Test:ContextDummy extends Papyrus:Project:Context
+ScriptName Papyrus_Test:ContextMock extends Papyrus:Project:Context
+import Papyrus
 import Papyrus:Compatibility:External
 import Papyrus:Diagnostics:Log
 import Papyrus:VersionType
@@ -13,15 +14,10 @@ Actor Player
 Event OnInitialize()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = "Dummy Context"
+	Log.FileName = "Lilac" + "_ContextMock"
 	Player = Game.GetPlayer()
 	Required = MQ102
 	RequiredStage = 1
-EndEvent
-
-
-Event OnGameReload()
-	; do stuff
 EndEvent
 
 
@@ -47,7 +43,7 @@ EndEvent
 ;---------------------------------------------
 
 string Function GetTitle()
-	return "Dummy"
+	return "Mock Context"
 EndFunction
 
 

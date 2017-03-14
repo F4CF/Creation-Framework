@@ -13,7 +13,7 @@ UserLog Log
 Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = LogFile
+	Log.FileName = LogFile + "_ArrayTest"
 	parent.OnInit()
 EndEvent
 
@@ -29,11 +29,42 @@ EndFunction
 
 Function TestSuites()
 	WriteLine(Log, "Executing the TestSuites function.")
-	describe("Distinct", DistinctSuite())
+	describe("Array Capacity", CapacitySuite())
+	describe("Array Distinct", DistinctSuite())
 EndFunction
 
 
-; Suites
+; Capacity
+;---------------------------------------------
+; Creating Arrays
+; Arrays can be any size, up to 128 elements.
+; Attempting to create an array larger then that will fail. Every element in the array will be set to the element's default value, be that 0, false, "", or None.
+
+; Adding Arrays
+; You can add items to an array using Add or Insert. Note that you are still restricted to the array size limit listed above.
+
+bool Function CapacitySuite()
+	WriteLine(Log, "Capacity Suite.")
+	it("should have a created length of 0", CapacityTest(0))
+	it("should have a created length of 64", CapacityTest(64))
+	it("should have a created length of 128", CapacityTest(128))
+	it("should have a created length of 256", CapacityTest(256))
+	it("should have a created length of 512", CapacityTest(512))
+	it("should have a created length of 1024", CapacityTest(1024))
+EndFunction
+
+
+bool Function CapacityTest(int aSize)
+	WriteLine(Log, "CapacityTest "+aSize)
+	var[] array = new var[aSize]
+	expect(array.Length, beEqualTo, aSize)
+	return Done
+EndFunction
+
+
+
+
+; Distinct
 ;---------------------------------------------
 
 bool Function DistinctSuite()
@@ -46,9 +77,6 @@ bool Function DistinctSuite()
 	return Done
 EndFunction
 
-
-; Cases
-;---------------------------------------------
 
 bool Function DistinctBooleanCase()
 	WriteLine(Log, "DistinctBooleanCase")

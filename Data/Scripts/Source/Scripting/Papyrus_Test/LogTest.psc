@@ -1,4 +1,4 @@
-ScriptName Papyrus_Test:LogTest extends Lilac
+ScriptName Papyrus_Test:LogTest extends Papyrus_Test:Framework:Lilac
 import Papyrus:Diagnostics:Log
 
 
@@ -9,7 +9,7 @@ UserLog Log
 Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = "Scripting_Test"
+	Log.FileName = LogFile + "_LogTest"
     parent.OnInit()
 EndEvent
 

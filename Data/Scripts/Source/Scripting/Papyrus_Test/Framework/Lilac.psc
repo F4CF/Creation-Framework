@@ -3,7 +3,7 @@ ScriptName Papyrus_Test:Framework:Lilac extends Lilac
 
 ; Constants
 ;---------------------------------------------
-string Property LogFile = "Papyrus_Test" AutoReadOnly
+string Property LogFile = "Lilac" AutoReadOnly
 bool Property Done = true AutoReadOnly
 
 

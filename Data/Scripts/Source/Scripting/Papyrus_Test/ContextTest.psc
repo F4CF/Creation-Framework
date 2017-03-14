@@ -18,7 +18,7 @@ EndGroup
 Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
-	Log.FileName = LogFile
+	Log.FileName = LogFile + "_ContextTest"
 	parent.OnInit()
 EndEvent
 
@@ -46,9 +46,9 @@ bool Function ImplementationSuite()
 	it("should not be none", instanceTestCase())
 	it("should have a valid title", titleTestCase())
 	it("should not have a none authors array, but it may be empty", authorsTestCase())
-	it("should have a valid filename and extension to its plugin", pluginTestCase())
+	it("should have a valid filename and extension to its plugin", filenameTestCase())
 	it("should have a valid FormID which matches the attached Quest", formidTestCase())
-	it("should have a valid release version greater than zero", releaseTestCase())
+	it("should have a valid release version greater than zero", versionTestCase())
 	return Done
 EndFunction
 
@@ -84,12 +84,12 @@ bool Function authorsTestCase()
 EndFunction
 
 
-bool Function pluginTestCase()
-	WriteLine(Log, "pluginTestCase")
+bool Function filenameTestCase()
+	WriteLine(Log, "filenameTestCase")
 	; expectations
 	; -string contains text
 	; -string ends with ".esm" or ".esp"
-	expectStringHasText(Context.Plugin)
+	expectStringHasText(Context.FileName)
 	return Done
 EndFunction
 
@@ -100,13 +100,13 @@ bool Function formidTestCase()
 	; -the attached quest must match this FormID
 	int actualFormID = (Context as Quest).GetFormID()
 	int expectedFormID = Context.FormID
-	expect(expectedFormID, beEqualTo, actualFormID)
+	expect(expectedFormID, to, beEqualTo, actualFormID)
 	return Done
 EndFunction
 
 
-bool Function releaseTestCase()
-	WriteLine(Log, "releaseTestCase")
+bool Function versionTestCase()
+	WriteLine(Log, "versionTestCase")
 	; expectations
 	; -the context version to be greater than a new version (new default 0.0.0.0, false)
 	expectIsNotNone(Context.Release)
