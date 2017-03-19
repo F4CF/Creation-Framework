@@ -1,43 +1,20 @@
 Scriptname Papyrus:Collections:Collection extends Form Const Native Hidden
-; https://msdn.microsoft.com/en-us/library/system.collections.specialized.inotifycollectionchanged(v=vs.110).aspx
-; https://msdn.microsoft.com/en-us/library/system.collections.specialized.inotifycollectionchanged.collectionchanged(v=vs.110).aspx
-; https://msdn.microsoft.com/en-us/library/system.collections.specialized.notifycollectionchangedeventargs(v=vs.110).aspx
-; https://msdn.microsoft.com/en-us/library/system.collections.specialized.notifycollectionchangedaction(v=vs.110).aspx
 
 
-; Events
+; Observable
 ;---------------------------------------------
 
-Event OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+Event OnCollectionChanged(NotifyCollectionChangedEventArgs e, var[] items)
 	{Occurs when an item is added, removed, changed, moved, or the entire list is refreshed.}
 EndEvent
 
 
-Event OnPropertyChanged(PropertyChangedEventArgs e)
-	{Occurs when a property value changes.}
-EndEvent
-
-
-; Properties
-;---------------------------------------------
-
 Struct NotifyCollectionChangedEventArgs
 	int ActionType = -1
 	{Gets the action that caused the event.}
-	int NewStartingIndex = -1
+
+	int StartingIndex = -1
 	{The zero-based index at which the change occurred.}
-	int OldStartingIndex = -1
-	{The zero-based index at which a Move, Remove, or Replace action occurred.}
-	Collection NewItems
-	{The list of new items involved in the change.}
-	Collection OldItems
-	{The list of items affected by a Replace, Remove, or Move action.}
-EndStruct
-
-
-Struct PropertyChangedEventArgs
-	string PropertyName
-	{Gets the name of the property that changed.}
 EndStruct
 
 
@@ -55,42 +32,10 @@ Group NotifyCollectionChangedAction
 EndGroup
 
 
-
-
-; Explicit Interface Implementations
+; Properties
 ;---------------------------------------------
 
-; IList.Add(Object)
-; Calling this method always throws a NotSupportedException exception.
-
-
-; IList.Clear()
-; Removes all items from the IList.
-
-
-; IList.Contains(Object)
-; Determines whether an element is in the IList.
-
-
-; IList.IndexOf(Object)
-; Determines the index of a specific item in the IList.
-
-
-; IList.Insert(Int32, Object)
-; Inserts an item to the IList at the specified index.
-
-
-; IList.Remove(Object)
-; Removes the first occurrence of a specific object from the IList.
-
-
-; IList.RemoveAt(Int32)
-; Removes the IList item at the specified index.
-
-
-; ICollection.Count
-; Gets the number of elements contained in the Array.
-
-
-; IList.Item[Int32]
-; Gets or sets the element at the specified index.
+Group Collection
+	int Property Invalid = -1 AutoReadOnly
+	int Property Maximum = 128 AutoReadOnly
+EndGroup
