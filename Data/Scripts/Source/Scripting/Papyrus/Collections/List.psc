@@ -1,7 +1,6 @@
 Scriptname Papyrus:Collections:List extends Papyrus:Collections:Collection Default
+{Represents a list of objects that can be accessed by index.}
 ; https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx
-import Papyrus:Array
-import Papyrus:Collections
 
 
 var[] Items
@@ -11,7 +10,7 @@ var[] Items
 ;---------------------------------------------
 
 Event OnInit()
-    Items = new var[0]
+	Items = new var[0]
 EndEvent
 
 
