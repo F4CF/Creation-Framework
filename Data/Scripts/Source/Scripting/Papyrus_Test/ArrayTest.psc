@@ -36,12 +36,6 @@ EndFunction
 
 ; Capacity
 ;---------------------------------------------
-; Creating Arrays
-; Arrays can be any size, up to 128 elements.
-; Attempting to create an array larger then that will fail. Every element in the array will be set to the element's default value, be that 0, false, "", or None.
-
-; Adding Arrays
-; You can add items to an array using Add or Insert. Note that you are still restricted to the array size limit listed above.
 
 bool Function CapacitySuite()
 	WriteLine(Log, "Capacity Suite.")
@@ -51,6 +45,7 @@ bool Function CapacitySuite()
 	it("should have a created length of 256", CapacityTest(256))
 	it("should have a created length of 512", CapacityTest(512))
 	it("should have a created length of 1024", CapacityTest(1024))
+	return Done
 EndFunction
 
 
@@ -60,8 +55,6 @@ bool Function CapacityTest(int aSize)
 	expect(array.Length, beEqualTo, aSize)
 	return Done
 EndFunction
-
-
 
 
 ; Distinct
