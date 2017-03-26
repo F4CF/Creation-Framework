@@ -22,6 +22,7 @@ Event OnInit()
 	Log = new UserLog
 	Log.Caller = self
 	Log.FileName = Title
+
 	LastVersion = Release
 	Condition = new QuestStage
 	Activated = false
@@ -95,51 +96,12 @@ EndEvent
 ;---------------------------------------------
 
 Group Context
-	string Property Title Hidden
-		string Function Get()
-			return GetTitle()
-		EndFunction
-	EndProperty
-
-	string[] Property Authors Hidden
-		string[] Function Get()
-			return GetAuthors()
-		EndFunction
-	EndProperty
-
-	string Property FileName Hidden
-		string Function Get()
-			return Context().FileName
-		EndFunction
-	EndProperty
-
-	int Property FormID Hidden
-		int Function Get()
-			return Context().FormID
-		EndFunction
-	EndProperty
-
-	Version Property Release Hidden
-		Version Function Get()
-			Version ver = new Version
-			ver.Distribution = false
-			ver.Major = 0
-			ver.Minor = 0
-			ver.Build = 0
-			ver.Revision = 1
-			return ver
-		EndFunction
-	EndProperty
-EndGroup
-
-
-Group Conditions
 	Quest Property Required Hidden
 		Quest Function Get()
 			return Condition.QuestToSet
 		EndFunction
-		Function Set(Quest aValue)
-			Condition.QuestToSet = aValue
+		Function Set(Quest value)
+			Condition.QuestToSet = value
 		EndFunction
 	EndProperty
 
@@ -147,8 +109,8 @@ Group Conditions
 		int Function Get()
 			return Condition.StageToSet
 		EndFunction
-		Function Set(int aValue)
-			Condition.StageToSet = aValue
+		Function Set(int value)
+			Condition.StageToSet = value
 		EndFunction
 	EndProperty
 
@@ -162,14 +124,14 @@ Group Conditions
 		bool Function Get()
 			return Activated
 		EndFunction
-		Function Set(bool aValue)
-			If (Activated == aValue)
-				WriteLine(Log, "Activated is already equal to "+aValue)
+		Function Set(bool value)
+			If (Activated == value)
+				WriteLine(Log, "Activated is already equal to "+value)
 				return
 			Else
 				If (IsReady)
-					Activated = aValue
-					If (aValue)
+					Activated = value
+					If (value)
 						WriteNotification(Log, Title+" is starting..")
 						SendCustomEvent("OnStartup")
 					Else
