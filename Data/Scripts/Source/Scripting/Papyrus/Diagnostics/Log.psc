@@ -3,13 +3,21 @@ import Papyrus:StringType
 
 
 Struct UserLog
-	string Caller
 	string FileName
+	string Caller
 EndStruct
 
 
 ; Logging
 ;---------------------------------------------
+
+UserLog Function Log(string filename, string caller = "") Global
+	UserLog log = new UserLog
+	log.FileName = filename
+	log.Caller = caller
+	return log
+EndFunction
+
 
 bool Function Write(string filename, string text) Global
 	If(Debug.TraceUser(filename, text))
