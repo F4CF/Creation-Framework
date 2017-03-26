@@ -12,6 +12,7 @@
 	>
 	<Imports>
 		<Import>.</Import>
+		<Import>..\HUD_FRAMEWORK</Import>
 		<Import>..\Lilac</Import>
 		<Import>..\Base</Import>
 	</Imports>
