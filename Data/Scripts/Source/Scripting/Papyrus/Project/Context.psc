@@ -19,22 +19,22 @@ CustomEvent OnUpgrade
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = Title
+	Log = Log(Title, self)
 
 	LastVersion = Release
 	Condition = new QuestStage
 	Activated = false
 
-	RegisterForCustomEvent(self, "OnStartup")
-	RegisterForCustomEvent(self, "OnUpgrade")
-	RegisterForCustomEvent(self, "OnShutdown")
-
-	RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
-
-	self.OnInitialize()
-	WriteLine(Log, "The context has initialized.")
+	If (IsSingleton)
+		If (Papyrus:Project:ContextType.ContextInitialize(self, self))
+			self.OnInitialize()
+			WriteLine(Log, "The context has initialized.")
+		Else
+			WriteLine(Log, "The context could not be initialized.")
+		EndIf
+	Else
+		WriteLine(Log, "The context must be a singleton.")
+	EndIf
 EndEvent
 
 

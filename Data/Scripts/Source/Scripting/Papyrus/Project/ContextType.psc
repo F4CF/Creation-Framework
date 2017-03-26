@@ -24,9 +24,35 @@ Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] argument
 	Version newVersion = arguments[0] as Version
 	Version oldVersion = arguments[1] as Version
 	self.OnContextUpgrade(newVersion, oldVersion)
-	Write(akSender.Title, "The context has finished the OnUpgrade event. " \
-		+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
+	Write(akSender.Title, \
+		"The context has finished the OnUpgrade event. "+\
+		"New '"+VersionToString(newVersion)+"', "+\
+		"Old '"+VersionToString(oldVersion)+"'.")
 EndEvent
+
+
+; Methods
+;---------------------------------------------
+
+bool Function ContextInitialize(Papyrus:Project:Context context, ScriptObject script) Global
+	If (script)
+		If (context)
+			script.RegisterForCustomEvent(context, "OnStartup")
+			script.RegisterForCustomEvent(context, "OnUpgrade")
+			script.RegisterForCustomEvent(context, "OnShutdown")
+			script.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+			return true
+		Else
+			Write(none, "Cannot initialize a script with a none context.")
+			return false
+		EndIf
+	Else
+		Write(none, "Cannot initialize a context with a none ScriptObject.")
+		return false
+	EndIf
+EndFunction
+
+
 
 
 ; Virtual
@@ -130,4 +156,15 @@ Group Context
 			return GetVersion()
 		EndFunction
 	EndProperty
+
+	bool Property IsSingleton Hidden
+		bool Function Get()
+			return FormID == self.GetFormID()
+		EndFunction
+	EndProperty
 EndGroup
+
+
+
+
+
