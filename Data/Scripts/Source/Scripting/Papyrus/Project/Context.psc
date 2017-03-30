@@ -44,6 +44,7 @@ EndEvent
 Event OnQuestInit()
 	; Event received when this quest has just started up.
 	; This is after aliases are filled, and at the same time as the quest startup stage is run.
+	Utility.Wait(5.0)
 	WriteLine(Log, "OnQuestInit")
 	IsActivated = true
 EndEvent
