@@ -5,61 +5,63 @@ import Papyrus:Diagnostics:Log
 import Papyrus:VersionType
 
 
-; Events
+; Module
 ;---------------------------------------------
 
-Event OnInit()
-	Papyrus:Project:Context context = Papyrus:Project:ContextType.GetInstance() ; DUMMY!
-
-	If (ModuleInitialize(context, self))
+bool Function Initialize(Project:Context context)
+	If (ModuleInitialize(Context, self))
 		self.OnInitialize()
 		Write(none, "The module has initialized.")
+		return true
 	Else
 		Write(none, "The module could not be initialized.")
+		return false
 	EndIf
-EndEvent
+EndFunction
 
 
-Event Papyrus:Project:Context.OnStartup(Papyrus:Project:Context akSender, var[] arguments)
-	self.OnEnable()
-	Write(none, "The module has finished the OnStartup event.")
-EndEvent
-
-
-Event Papyrus:Project:Context.OnShutdown(Papyrus:Project:Context akSender, var[] arguments)
-	self.OnDisable()
-	Write(none, "The module has finished the OnShutdown event.")
-EndEvent
-
-
-Event Papyrus:Project:Context.OnUpgrade(Papyrus:Project:Context akSender, var[] arguments)
-	Version newVersion = arguments[0] as Version
-	Version oldVersion = arguments[1] as Version
-	self.OnUpgrade(newVersion, oldVersion)
-	Write(none, "The module has finished the OnUpgrade event. " \
-		+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
-EndEvent
-
-
-; Globals
-;---------------------------------------------
-
-bool Function ModuleInitialize(Papyrus:Project:Context aContext, ScriptObject aModule) Global
-	If (aModule)
-		If (aContext)
-			aModule.RegisterForCustomEvent(aContext, "OnStartup")
-			aModule.RegisterForCustomEvent(aContext, "OnUpgrade")
-			aModule.RegisterForCustomEvent(aContext, "OnShutdown")
+bool Function ModuleInitialize(Project:Context context, ScriptObject script) Global
+	If (script)
+		If (context)
+			script.RegisterForCustomEvent(context, "OnStartup")
+			script.RegisterForCustomEvent(context, "OnUpgrade")
+			script.RegisterForCustomEvent(context, "OnShutdown")
 			return true
 		Else
 			Write(none, "Cannot initialize a module with a none context.")
 			return false
 		EndIf
 	Else
-		Write(none, "Cannot initialize a module with a none ScriptObject.")
+		Write(none, "Cannot initialize a module with a none script.")
 		return false
 	EndIf
 EndFunction
+
+
+; Events
+;---------------------------------------------
+
+Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
+	self.OnEnable()
+	Write(akSender.Title, "The module has finished the OnStartup event.")
+EndEvent
+
+
+Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
+	self.OnDisable()
+	Write(akSender.Title, "The module has finished the OnShutdown event.")
+EndEvent
+
+
+Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
+	Version newVersion = arguments[0] as Version
+	Version oldVersion = arguments[1] as Version
+	self.OnUpgrade(newVersion, oldVersion)
+	Write(akSender.Title, \
+		"The module has finished the OnUpgrade event. "+\
+		"New '"+VersionToString(newVersion)+"', "+\
+		"Old '"+VersionToString(oldVersion)+"'.")
+EndEvent
 
 
 ; Virtual

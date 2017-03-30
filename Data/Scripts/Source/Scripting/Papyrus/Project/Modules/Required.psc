@@ -9,14 +9,14 @@ Actor PlayerReference
 
 Event OnInit()
 	PlayerReference = Game.GetPlayer()
-	parent.OnInit()
+	Initialize(Context)
 EndEvent
 
 
 ; Properties
 ;---------------------------------------------
 
-Group Context
+Group Module
 	Project:Context Property Context Auto Const Mandatory
 EndGroup
 

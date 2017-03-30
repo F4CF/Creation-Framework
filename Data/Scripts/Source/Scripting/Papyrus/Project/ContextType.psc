@@ -1,8 +1,31 @@
-ScriptName Papyrus:Project:ContextType extends Quest Const Native Hidden
+ScriptName Papyrus:Project:ContextType extends Quest Native Const Hidden
 import Papyrus
 import Papyrus:Compatibility:External
 import Papyrus:Diagnostics:Log
 import Papyrus:VersionType
+
+
+
+; Context
+;---------------------------------------------
+
+bool Function ContextInitialize(Project:Context context, ScriptObject script) Global
+	If (script)
+		If (context)
+			script.RegisterForCustomEvent(context, "OnStartup")
+			script.RegisterForCustomEvent(context, "OnShutdown")
+			script.RegisterForCustomEvent(context, "OnUpgrade")
+			script.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+			return true
+		Else
+			Write(none, "Cannot initialize a script with a none context.")
+			return false
+		EndIf
+	Else
+		Write(none, "Cannot initialize a context with a none ScriptObject.")
+		return false
+	EndIf
+EndFunction
 
 
 ; Events
@@ -29,30 +52,6 @@ Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] argument
 		"New '"+VersionToString(newVersion)+"', "+\
 		"Old '"+VersionToString(oldVersion)+"'.")
 EndEvent
-
-
-; Methods
-;---------------------------------------------
-
-bool Function ContextInitialize(Papyrus:Project:Context context, ScriptObject script) Global
-	If (script)
-		If (context)
-			script.RegisterForCustomEvent(context, "OnStartup")
-			script.RegisterForCustomEvent(context, "OnUpgrade")
-			script.RegisterForCustomEvent(context, "OnShutdown")
-			script.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
-			return true
-		Else
-			Write(none, "Cannot initialize a script with a none context.")
-			return false
-		EndIf
-	Else
-		Write(none, "Cannot initialize a context with a none ScriptObject.")
-		return false
-	EndIf
-EndFunction
-
-
 
 
 ; Virtual
@@ -115,14 +114,6 @@ ExternalForm Function Context()
 EndFunction
 
 
-; DUMMY, DELETE ME
-;---------------------------------------------
-; Allows my copy paste module classes to compile until fully implemented in this common library.
-
-Papyrus:Project:Context Function GetInstance() Global
-EndFunction
-
-
 ; Properties
 ;---------------------------------------------
 
@@ -163,8 +154,3 @@ Group Context
 		EndFunction
 	EndProperty
 EndGroup
-
-
-
-
-

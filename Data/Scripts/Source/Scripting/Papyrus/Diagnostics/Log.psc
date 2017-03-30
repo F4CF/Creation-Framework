@@ -2,14 +2,14 @@ Scriptname Papyrus:Diagnostics:Log Hidden Const DebugOnly
 import Papyrus:StringType
 
 
+; UserLog
+;---------------------------------------------
+
 Struct UserLog
 	string FileName
 	string Caller
 EndStruct
 
-
-; Logging
-;---------------------------------------------
 
 UserLog Function Log(string filename, string caller = "") Global
 	UserLog log = new UserLog
@@ -19,7 +19,13 @@ UserLog Function Log(string filename, string caller = "") Global
 EndFunction
 
 
+; Logging
+;---------------------------------------------
+
 bool Function Write(string filename, string text) Global
+	If (StringIsNoneOrEmpty(filename) || filename == "none")
+		filename = "Scripting"
+	EndIf
 	If(Debug.TraceUser(filename, text))
 		return true
 	Else
@@ -30,16 +36,9 @@ EndFunction
 
 
 bool Function WriteLine(UserLog userLog, var text) Global
-	string defaultFile = "Scripting" const
-
 	If (userLog == none)
 		userLog = new UserLog
-		userLog.Caller = ""
-		userLog.FileName = defaultFile
-	ElseIf (StringIsNoneOrEmpty(userLog.FileName))
-		userLog.FileName = defaultFile
 	EndIf
-
 	text = userLog.Caller + " " + text
 	return Write(userLog.FileName, text)
 EndFunction

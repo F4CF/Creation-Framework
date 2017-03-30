@@ -1,6 +1,7 @@
 ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden
 import Papyrus:Compatibility
 import Papyrus:Diagnostics:Log
+import Papyrus:Project:ContextType
 import Papyrus:VersionType
 import Quest
 
@@ -23,17 +24,19 @@ Event OnInit()
 
 	LastVersion = Release
 	Condition = new QuestStage
+
 	Activated = false
 
-	If (IsSingleton)
-		If (Papyrus:Project:ContextType.ContextInitialize(self, self))
-			self.OnInitialize()
-			WriteLine(Log, "The context has initialized.")
-		Else
-			WriteLine(Log, "The context could not be initialized.")
-		EndIf
+	; If (IsSingleton)
+	; Else
+	; 	WriteLine(Log, "The context must be a singleton.")
+	; EndIf
+
+	If (Papyrus:Project:ContextType.ContextInitialize(self, self))
+		self.OnInitialize()
+		WriteLine(Log, "The context has initialized.")
 	Else
-		WriteLine(Log, "The context must be a singleton.")
+		WriteLine(Log, "The context could not be initialized.")
 	EndIf
 EndEvent
 
@@ -49,26 +52,7 @@ EndEvent
 Event OnQuestShutdown()
 	; Event received when this quest has shut down (aliases are cleared at this time).
 	WriteLine(Log, "OnQuestShutdown")
-EndEvent
-
-
-Event OnReset()
-    ; Event received when this quest is started up, either the first time or subsequent times.
-    ; This will fire in parallel with your startup stage!.
-    WriteLine(Log, "OnReset")
-EndEvent
-
-
-Event OnStageSet(int auiStageID, int auiItemID)
-	; Event received when a quest stage is set (runs in parallel with the fragment).
-	WriteLine(Log, "OnStageSet")
-	IsActivated = true
-EndEvent
-
-
-Event Quest.OnStageSet(Quest akSender, Int auiStageID, Int auiItemID)
-	{Remote Event}
-	WriteLine(Log, "Remote (Quest.OnStageSet) "+akSender)
+	IsActivated = false
 EndEvent
 
 
@@ -89,6 +73,18 @@ Event Actor.OnPlayerLoadGame(Actor akSender)
 	EndIf
 
 	self.OnGameReload()
+EndEvent
+
+
+Event OnStageSet(int auiStageID, int auiItemID)
+	; Event received when a quest stage is set (runs in parallel with the fragment).
+	WriteLine(Log, "OnStageSet")
+	IsActivated = true
+EndEvent
+Event Quest.OnStageSet(Quest akSender, Int auiStageID, Int auiItemID)
+	{Remote Event}
+	WriteLine(Log, "Remote (Quest.OnStageSet) "+akSender)
+	IsActivated = true
 EndEvent
 
 

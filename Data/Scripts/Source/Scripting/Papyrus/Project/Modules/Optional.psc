@@ -15,18 +15,16 @@ Actor PlayerReference
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = none
+	Log = Log(Context.Title, self)
 	PlayerReference = Game.GetPlayer()
 	EnabledValue = true
-	parent.OnInit()
+	Initialize(Context)
 EndEvent
 
 
 Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
 	If (SetActive(self))
-		OnEnable()
+		self.OnEnable()
 		WriteLine(Log, "The module has finished the OnStartup event.")
 	Else
 		WriteLine(Log, "The module could not finish the OnStartup event.")
@@ -36,7 +34,7 @@ EndEvent
 
 Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
 	If (SetActive(self, false))
-		OnDisable()
+		self.OnDisable()
 		WriteLine(Log, "The module has finished the OnShutdown event.")
 	Else
 		WriteLine(Log, "The module could not finish the OnShutdown event.")
@@ -102,19 +100,9 @@ EndFunction
 ; Properties
 ;---------------------------------------------
 
-Group Context
-	Project:Context Property Context Auto Const Mandatory
-EndGroup
-
-Group Properties
-	Actor Property Player Hidden
-		Actor Function Get()
-			return PlayerReference
-		EndFunction
-	EndProperty
-EndGroup
-
 Group Module
+	Project:Context Property Context Auto Const Mandatory
+
 	bool Property IsReady Hidden
 		bool Function Get()
 			return EnabledValue && HasState(self)
@@ -137,4 +125,12 @@ Group Module
 	EndProperty
 
 	string Property ActiveState = "ActiveState" AutoReadOnly
+EndGroup
+
+Group Properties
+	Actor Property Player Hidden
+		Actor Function Get()
+			return PlayerReference
+		EndFunction
+	EndProperty
 EndGroup

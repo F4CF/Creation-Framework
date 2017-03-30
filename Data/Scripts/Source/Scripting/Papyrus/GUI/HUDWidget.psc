@@ -38,15 +38,35 @@ Struct WidgetData
 EndStruct
 
 
+
+; Widget
+;---------------------------------------------
+
+Function Widget()
+	HUDFramework framework = HUDFramework.GetInstance()
+	If (framework)
+		HUD = framework
+
+		WidgetData created = Create()
+		If (created)
+			Widget = created
+			WriteLine(Log, "The '"+WidgetToString(created)+"' widget was created.")
+		Else
+			WriteLine(Log, "The created widget is equal to none.")
+		EndIf
+	Else
+		WriteLine(Log, "Could not get and instance to the HUD Framework.")
+	EndIf
+EndFunction
+
+
 ; Events
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = none
+	Log = Log(Context.Title, self)
 	Widget()
-	parent.OnInit()
+	Initialize(Context)
 EndEvent
 
 
@@ -89,24 +109,6 @@ EndFunction
 
 ; Functions
 ;---------------------------------------------
-
-Function Widget()
-	HUDFramework framework = HUDFramework.GetInstance()
-	If (framework)
-		HUD = framework
-
-		WidgetData created = Create()
-		If (created)
-			Widget = created
-			WriteLine(Log, "The '"+WidgetToString(created)+"' widget was created.")
-		Else
-			WriteLine(Log, "The created widget is equal to none.")
-		EndIf
-	Else
-		WriteLine(Log, "Could not get and instance to the HUD Framework.")
-	EndIf
-EndFunction
-
 
 bool Function Load()
 	return WidgetLoad(HUD, Widget)
@@ -277,12 +279,10 @@ EndFunction
 ; Properties
 ;---------------------------------------------
 
-Group Context
-	Project:Context Property Context Auto Const Mandatory
-EndGroup
-
-
 Group Widget
+	Project:Context Property Context Auto Const Mandatory
+
+
 	bool Property IsReady Hidden
 		bool Function Get()
 			If (HUD)

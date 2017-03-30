@@ -7,5 +7,5 @@ import Papyrus:Diagnostics:Log
 
 Event OnWidgetLoaded()
 	{VIRTUAL}
-	Write("HUD", "The widget has not implemented the virtual 'OnWidgetLoaded' event.")
+	Write(none, "The widget has not implemented the virtual 'OnWidgetLoaded' event.")
 EndEvent
