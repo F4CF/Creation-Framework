@@ -1,4 +1,4 @@
-ScriptName Papyrus:Project:Modules:Required extends Papyrus:Project:Modules:Module Hidden
+ScriptName Papyrus:Project:Modules:Required extends Papyrus:Project:Module Hidden
 import Papyrus
 
 Actor PlayerReference

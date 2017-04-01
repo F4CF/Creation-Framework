@@ -1,4 +1,4 @@
-Scriptname Papyrus:GUI:HUD extends Papyrus:Project:Modules:Module Native Const Hidden
+Scriptname Papyrus:GUI:HUD extends Papyrus:Project:Module Native Const Hidden
 import Papyrus:Diagnostics:Log
 
 

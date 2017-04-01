@@ -1,4 +1,4 @@
-ScriptName Papyrus:Project:Modules:Optional extends Papyrus:Project:Modules:Module Hidden
+ScriptName Papyrus:Project:Modules:Optional extends Papyrus:Project:Module Hidden
 import Papyrus
 import Papyrus:Compatibility
 import Papyrus:Diagnostics:Log
