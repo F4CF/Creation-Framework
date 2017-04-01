@@ -1,7 +1,7 @@
 ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden
+import Papyrus
 import Papyrus:Compatibility
 import Papyrus:Diagnostics:Log
-import Papyrus:Project:ContextType
 import Papyrus:VersionType
 import Quest
 
@@ -21,37 +21,24 @@ CustomEvent OnUpgrade
 
 Event OnInit()
 	Log = Log(Title, self)
-
 	LastVersion = Release
 	Condition = new QuestStage
-
 	Activated = false
-
-	; If (IsSingleton)
-	; Else
-	; 	WriteLine(Log, "The context must be a singleton.")
-	; EndIf
-
-	If (Papyrus:Project:ContextType.ContextInitialize(self, self))
-		self.OnInitialize()
-		WriteLine(Log, "The context has initialized.")
-	Else
-		WriteLine(Log, "The context could not be initialized.")
-	EndIf
+	RegisterForCustomEvent(self, "OnStartup")
+	RegisterForCustomEvent(self, "OnShutdown")
+	RegisterForCustomEvent(self, "OnUpgrade")
+	RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+	self.OnInitialize()
 EndEvent
 
 
 Event OnQuestInit()
-	; Event received when this quest has just started up.
-	; This is after aliases are filled, and at the same time as the quest startup stage is run.
-	Utility.Wait(5.0)
 	WriteLine(Log, "OnQuestInit")
 	IsActivated = true
 EndEvent
 
 
 Event OnQuestShutdown()
-	; Event received when this quest has shut down (aliases are cleared at this time).
 	WriteLine(Log, "OnQuestShutdown")
 	IsActivated = false
 EndEvent
@@ -77,15 +64,37 @@ Event Actor.OnPlayerLoadGame(Actor akSender)
 EndEvent
 
 
-Event OnStageSet(int auiStageID, int auiItemID)
-	; Event received when a quest stage is set (runs in parallel with the fragment).
-	WriteLine(Log, "OnStageSet")
-	IsActivated = true
-EndEvent
 Event Quest.OnStageSet(Quest akSender, Int auiStageID, Int auiItemID)
-	{Remote Event}
 	WriteLine(Log, "Remote (Quest.OnStageSet) "+akSender)
-	IsActivated = true
+	If (akSender == Required)
+		IsActivated = true
+	EndIf
+EndEvent
+
+
+; Custom Events
+;---------------------------------------------
+
+Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
+	self.OnContextStartup()
+	Write(akSender.Title, "The context has finished the OnStartup event.")
+EndEvent
+
+
+Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
+	self.OnContextShutdown()
+	Write(akSender.Title, "The context has finished the OnShutdown event.")
+EndEvent
+
+
+Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
+	Version newVersion = arguments[0] as Version
+	Version oldVersion = arguments[1] as Version
+	self.OnContextUpgrade(newVersion, oldVersion)
+	Write(akSender.Title, \
+		"The context has finished the OnUpgrade event. "+\
+		"New '"+VersionToString(newVersion)+"', "+\
+		"Old '"+VersionToString(oldVersion)+"'.")
 EndEvent
 
 
@@ -129,10 +138,10 @@ Group Context
 				If (IsReady)
 					Activated = value
 					If (value)
-						WriteNotification(Log, Title+" is starting..")
+						WriteLine(Log, Title+" is starting..")
 						SendCustomEvent("OnStartup")
 					Else
-						WriteNotification(Log, Title+" is shutting down.")
+						WriteLine(Log, Title+" is shutting down.")
 						SendCustomEvent("OnShutdown")
 					EndIf
 					UnregisterForRemoteEvent(Required, "OnStageSet")
