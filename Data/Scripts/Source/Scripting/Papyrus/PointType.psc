@@ -62,27 +62,44 @@ bool Function PointInequality(Point value, Point other) Global
 EndFunction
 
 
-; Not Implemented
+
 Point Function PointAddition(Point value, Point other) Global
 	{Adds two Point structures and returns the result as a Point structure.}
+	Point result = new Point
+	result.X = value.X + other.X
+	result.Y = value.Y + other.Y
+	result.Z = value.Z + other.Z
+	return result
 EndFunction
 
 
-; Not Implemented
 Point Function PointSubtraction(Point value, Point other) Global
 	{Subtracts a Point structure from a Point structure.}
+	Point result = new Point
+	result.X = value.X - other.X
+	result.Y = value.Y - other.Y
+	result.Z = value.Z - other.Z
+	return result
 EndFunction
 
 
-; Not Implemented
 Point Function PointMultiply(Point value, float scalar) Global
 	{Multiplies the specified Point structure by the specified scalar and returns the result as a Point.}
+	Point result = new Point
+	result.X = value.X * scalar
+	result.Y = value.Y * scalar
+	result.Z = value.Z * scalar
+	return result
 EndFunction
 
 
-; Not Implemented
 Point Function PointDivision(Point value, float scalar) Global
 	{Divides the specified Point structure by the specified scalar and returns the result as a Point.}
+	Point result = new Point
+	result.X = value.X / scalar
+	result.Y = value.Y / scalar
+	result.Z = value.Z / scalar
+	return result
 EndFunction
 
 
