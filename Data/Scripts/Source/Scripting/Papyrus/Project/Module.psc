@@ -18,7 +18,7 @@ bool Function Initialize(Project:Context context)
 		Write(context.Title, "The module has initialized.")
 
 		If (context.IsActivated)
-			ContextEvent(StartupEvent, Context, none)
+			OnEvent(StartupEvent, Context, none)
 			Write(context.Title, "The module has starting on the initialize thread.")
 		Else
 			Write(context.Title, "The module is waiting to be started from the initialize thread.")
@@ -36,19 +36,19 @@ EndFunction
 ;---------------------------------------------
 
 Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
-	ContextEvent(StartupEvent, akSender, arguments)
+	OnEvent(StartupEvent, akSender, arguments)
 EndEvent
 
 Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
-	ContextEvent(ShutdownEvent, akSender, arguments)
+	OnEvent(ShutdownEvent, akSender, arguments)
 EndEvent
 
 Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
-	ContextEvent(UpgradeEvent, akSender, arguments)
+	OnEvent(UpgradeEvent, akSender, arguments)
 EndEvent
 
 
-Event ContextEvent(int aEvent, Project:Context sender, var[] arguments)
+Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		self.OnEnable()
 		Write(sender.Title, "The module has finished the OnStartup event.")

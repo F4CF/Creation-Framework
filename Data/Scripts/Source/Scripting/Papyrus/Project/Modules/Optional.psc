@@ -23,7 +23,7 @@ Event OnInit()
 EndEvent
 
 
-Event ContextEvent(int aEvent, Project:Context sender, var[] arguments)
+Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (SetActive(self))
 			self.OnEnable()
