@@ -9,59 +9,27 @@ import Papyrus:VersionType
 ;---------------------------------------------
 
 bool Function Initialize(Project:Context context)
-	If (ModuleInitialize(Context, self))
+	If (context)
+		RegisterForCustomEvent(context, "OnStartup")
+		RegisterForCustomEvent(context, "OnUpgrade")
+		RegisterForCustomEvent(context, "OnShutdown")
+
 		self.OnInitialize()
 		Write(context.Title, "The module has initialized.")
 
 		If (context.IsActivated)
 			ContextEvent(StartupEvent, Context, none)
-			Write(context.Title, "The module is starting on the initialize thread.")
+			Write(context.Title, "The module has starting on the initialize thread.")
 		Else
 			Write(context.Title, "The module is waiting to be started from the initialize thread.")
 		EndIf
 
 		return true
 	Else
-		Write(context.Title, "The module could not be initialized.")
+		Write(none, "Cannot initialize a module with a none context.")
 		return false
 	EndIf
 EndFunction
-
-
-bool Function ModuleInitialize(Project:Context context, ScriptObject script) Global
-	If (script)
-		If (context)
-			script.RegisterForCustomEvent(context, "OnStartup")
-			script.RegisterForCustomEvent(context, "OnUpgrade")
-			script.RegisterForCustomEvent(context, "OnShutdown")
-			return true
-		Else
-			Write(none, "Cannot initialize a module with a none context.")
-			return false
-		EndIf
-	Else
-		Write(none, "Cannot initialize a module with a none script.")
-		return false
-	EndIf
-EndFunction
-
-
-
-
-
-
-Function BigInit(Project:Context context, Project:Modules:Module module) Global
-
-EndFunction
-
-
-
-
-
-
-
-
-
 
 
 ; Events
