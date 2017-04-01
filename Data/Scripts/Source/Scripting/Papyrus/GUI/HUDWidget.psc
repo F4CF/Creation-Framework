@@ -70,28 +70,29 @@ Event OnInit()
 EndEvent
 
 
-Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
-	If (WidgetRegister(HUD, Widget, self))
-		self.OnEnable()
-		WriteLine(Log, "The widget has enabled with the 'OnStartup' event.")
+Event ContextEvent(int aEvent, Project:Context sender, var[] arguments)
+	If (aEvent == StartupEvent)
+		If (WidgetRegister(HUD, Widget, self))
+			self.OnEnable()
+			WriteLine(Log, "The widget has enabled with the 'OnStartup' event.")
+		EndIf
+	ElseIf (aEvent == ShutdownEvent)
+		If (WidgetUnregister(HUD, Widget))
+			self.OnDisable()
+			WriteLine(Log, "The widget has disabled with the 'OnShutdown' event.")
+		EndIf
+	ElseIf (aEvent == UpgradeEvent)
+		Version newVersion = arguments[0] as Version
+		Version oldVersion = arguments[1] as Version
+		Widget()
+		self.OnUpgrade(newVersion, oldVersion)
+		WriteLine(Log, \
+			"The widget has upgraded to version '"+\
+			VersionToString(newVersion)+"' from '"+\
+			VersionToString(oldVersion)+"' with the 'OnUpgrade' event.")
+	Else
+		WriteLine(Log, "The module has received and unhandled event.")
 	EndIf
-EndEvent
-
-
-Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
-	If (WidgetUnregister(HUD, Widget))
-		self.OnDisable()
-		Write(none, "The widget has disabled with the 'OnShutdown' event.")
-	EndIf
-EndEvent
-
-
-Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
-	Version newVersion = arguments[0] as Version
-	Version oldVersion = arguments[1] as Version
-	Widget()
-	self.OnUpgrade(newVersion, oldVersion)
-	Write(none, "The widget has upgraded to version '"+VersionToString(newVersion)+"' from '"+VersionToString(oldVersion)+"' with the 'OnUpgrade' event.")
 EndEvent
 
 

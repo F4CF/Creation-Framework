@@ -18,41 +18,41 @@ Event OnInit()
 	Log = Log(Context.Title, self)
 	PlayerReference = Game.GetPlayer()
 	EnabledValue = true
+
 	Initialize(Context)
 EndEvent
 
 
-Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
-	If (SetActive(self))
-		self.OnEnable()
-		WriteLine(Log, "The module has finished the OnStartup event.")
+Event ContextEvent(int aEvent, Project:Context sender, var[] arguments)
+	If (aEvent == StartupEvent)
+		If (SetActive(self))
+			self.OnEnable()
+			WriteLine(Log, "The module has finished the OnStartup event.")
+		Else
+			WriteLine(Log, "The module could not finish the OnStartup event.")
+		EndIf
+	ElseIf (aEvent == ShutdownEvent)
+		If (SetActive(self, false))
+			self.OnDisable()
+			WriteLine(Log, "The module has finished the OnShutdown event.")
+		Else
+			WriteLine(Log, "The module could not finish the OnShutdown event.")
+		EndIf
+	ElseIf (aEvent == UpgradeEvent)
+		If (Enabled)
+			Version newVersion = arguments[0] as Version
+			Version oldVersion = arguments[1] as Version
+			self.OnUpgrade(newVersion, oldVersion)
+			WriteLine(Log, "The module has finished the OnUpgrade event. " \
+				+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
+		Else
+			WriteLine(Log, "Ignoring the OnUpgrade event, module is not enabled.")
+		EndIf
 	Else
-		WriteLine(Log, "The module could not finish the OnStartup event.")
+		WriteLine(Log, "The module has received and unhandled event.")
 	EndIf
 EndEvent
 
-
-Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
-	If (SetActive(self, false))
-		self.OnDisable()
-		WriteLine(Log, "The module has finished the OnShutdown event.")
-	Else
-		WriteLine(Log, "The module could not finish the OnShutdown event.")
-	EndIf
-EndEvent
-
-
-Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
-	If (Enabled)
-		Version newVersion = arguments[0] as Version
-		Version oldVersion = arguments[1] as Version
-		self.OnUpgrade(newVersion, oldVersion)
-		WriteLine(Log, "The module has finished the OnUpgrade event. " \
-			+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
-	Else
-		WriteLine(Log, "Ignoring the OnUpgrade event, module is not enabled.")
-	EndIf
-EndEvent
 
 
 ; Functions

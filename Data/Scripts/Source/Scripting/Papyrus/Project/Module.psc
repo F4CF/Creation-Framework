@@ -11,10 +11,18 @@ import Papyrus:VersionType
 bool Function Initialize(Project:Context context)
 	If (ModuleInitialize(Context, self))
 		self.OnInitialize()
-		Write(none, "The module has initialized.")
+		Write(context.Title, "The module has initialized.")
+
+		If (context.IsActivated)
+			ContextEvent(StartupEvent, Context, none)
+			Write(context.Title, "The module is starting on the initialize thread.")
+		Else
+			Write(context.Title, "The module is waiting to be started from the initialize thread.")
+		EndIf
+
 		return true
 	Else
-		Write(none, "The module could not be initialized.")
+		Write(context.Title, "The module could not be initialized.")
 		return false
 	EndIf
 EndFunction
@@ -38,29 +46,58 @@ bool Function ModuleInitialize(Project:Context context, ScriptObject script) Glo
 EndFunction
 
 
+
+
+
+
+Function BigInit(Project:Context context, Project:Modules:Module module) Global
+
+EndFunction
+
+
+
+
+
+
+
+
+
+
+
 ; Events
 ;---------------------------------------------
 
 Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
-	self.OnEnable()
-	Write(akSender.Title, "The module has finished the OnStartup event.")
+	ContextEvent(StartupEvent, akSender, arguments)
 EndEvent
-
 
 Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
-	self.OnDisable()
-	Write(akSender.Title, "The module has finished the OnShutdown event.")
+	ContextEvent(ShutdownEvent, akSender, arguments)
+EndEvent
+
+Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
+	ContextEvent(UpgradeEvent, akSender, arguments)
 EndEvent
 
 
-Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
-	Version newVersion = arguments[0] as Version
-	Version oldVersion = arguments[1] as Version
-	self.OnUpgrade(newVersion, oldVersion)
-	Write(akSender.Title, \
-		"The module has finished the OnUpgrade event. "+\
-		"New '"+VersionToString(newVersion)+"', "+\
-		"Old '"+VersionToString(oldVersion)+"'.")
+Event ContextEvent(int aEvent, Project:Context sender, var[] arguments)
+	If (aEvent == StartupEvent)
+		self.OnEnable()
+		Write(sender.Title, "The module has finished the OnStartup event.")
+	ElseIf (aEvent == ShutdownEvent)
+		self.OnDisable()
+		Write(sender.Title, "The module has finished the OnShutdown event.")
+	ElseIf (aEvent == UpgradeEvent)
+		Version newVersion = arguments[0] as Version
+		Version oldVersion = arguments[1] as Version
+		self.OnUpgrade(newVersion, oldVersion)
+		Write(sender.Title, \
+			"The module has finished the OnUpgrade event. "+\
+			"New '"+VersionToString(newVersion)+"', "+\
+			"Old '"+VersionToString(oldVersion)+"'.")
+	Else
+		Write(sender.Title, "The module has received and unhandled event.")
+	EndIf
 EndEvent
 
 
@@ -92,6 +129,10 @@ EndEvent
 ;---------------------------------------------
 
 Group Module
+	int Property StartupEvent = 0 AutoReadOnly
+	int Property ShutdownEvent = 1 AutoReadOnly
+	int Property UpgradeEvent = 2 AutoReadOnly
+
 	string Property StateName Hidden
 		string Function Get()
 			return GetState()
