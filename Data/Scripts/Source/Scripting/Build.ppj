@@ -5,7 +5,7 @@
 		xmlns="PapyrusProject.xsd"
 		Flags="Institute_Papyrus_Flags.flg"
 		Output="..\..\"
-		Asm="Keep"
+		Asm="Discard"
 		Optimize="false"
 		Release="false"
 		Final="false"
