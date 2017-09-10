@@ -5,12 +5,13 @@ import Papyrus:StringType
 ; UserLog
 ;---------------------------------------------
 
+; TODO: Depreciate
 Struct UserLog
 	string FileName
 	string Caller
 EndStruct
 
-
+; TODO: Depreciate
 UserLog Function LogNew(string filename, string caller = "") Global
 	UserLog log = new UserLog
 	log.FileName = filename
