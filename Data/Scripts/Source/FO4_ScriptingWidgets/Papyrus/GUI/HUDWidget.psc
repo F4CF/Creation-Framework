@@ -64,7 +64,7 @@ EndFunction
 ;---------------------------------------------
 
 Event OnInit()
-	Log = Log(Context.Title, self)
+	Log = LogNew(Context.Title, self)
 	Widget()
 	Initialize(Context)
 EndEvent

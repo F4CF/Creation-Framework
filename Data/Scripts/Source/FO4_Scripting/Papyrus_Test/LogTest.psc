@@ -6,11 +6,10 @@ UserLog Log
 
 ; Events
 ;---------------------------------------------
+
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = LogFile + "_LogTest"
-    parent.OnInit()
+	Log = LogNew(Common.LogFile, self)
+	parent.OnInit()
 EndEvent
 
 

@@ -9,9 +9,7 @@ UserLog Log
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = LogFile + "_BoolTest"
+	Log = LogNew(Common.LogFile, self)
 	parent.OnInit()
 EndEvent
 

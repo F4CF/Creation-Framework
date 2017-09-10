@@ -7,18 +7,11 @@ import Papyrus:VersionType
 UserLog Log
 
 
-Group Actual
-	Project:Context Property Context Auto Const Mandatory
-EndGroup
-
-
 ; Events
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = LogFile + "_ContextTest"
+	Log = LogNew(Common.LogFile, self)
 	parent.OnInit()
 EndEvent
 
@@ -113,3 +106,11 @@ bool Function versionTestCase()
 	expect(VersionGreaterThan(Context.Release, new Version), to, beTruthy)
 	return Done
 EndFunction
+
+
+; Properties
+;---------------------------------------------
+
+Group Actual
+	Project:Context Property Context Auto Const Mandatory
+EndGroup

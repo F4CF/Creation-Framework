@@ -6,14 +6,11 @@ import Papyrus:Diagnostics:Log
 UserLog Log
 
 
-
 ; Events
 ;---------------------------------------------
 
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = LogFile + "_ArrayTest"
+	Log = LogNew(Common.LogFile, self)
 	parent.OnInit()
 EndEvent
 

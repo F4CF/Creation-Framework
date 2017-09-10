@@ -1,10 +1,21 @@
 Scriptname Papyrus:Collections:Dictionary extends Papyrus:Collections:Collection Default
 {Represents a collection of keys and values.}
 ; https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx
+import Papyrus
+import Papyrus:Objects:Factory
 
 
 var[] Keys
 var[] Values
+
+
+; Constructor
+;---------------------------------------------
+
+Dictionary Function Init() Global
+	Objects:Factory Factory = GetFactory()
+	return Factory.Initialize(0x0000083B) as Dictionary
+EndFunction
 
 
 ; Events

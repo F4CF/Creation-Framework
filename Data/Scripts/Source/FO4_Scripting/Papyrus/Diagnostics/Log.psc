@@ -11,7 +11,7 @@ Struct UserLog
 EndStruct
 
 
-UserLog Function Log(string filename, string caller = "") Global
+UserLog Function LogNew(string filename, string caller = "") Global
 	UserLog log = new UserLog
 	log.FileName = filename
 	log.Caller = caller

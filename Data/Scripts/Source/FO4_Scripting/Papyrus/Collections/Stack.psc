@@ -1,9 +1,19 @@
 Scriptname Papyrus:Collections:Stack extends Papyrus:Collections:Collection Default
 {Represents a last-in-first-out (LIFO) collection of objects.}
 ; https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx
-
+import Papyrus
+import Papyrus:Objects:Factory
 
 var[] Items
+
+
+; Constructor
+;---------------------------------------------
+
+Stack Function Init() Global
+	Objects:Factory Factory = GetFactory()
+	return Factory.Initialize(0x0000083D) as Stack
+EndFunction
 
 
 ; Events

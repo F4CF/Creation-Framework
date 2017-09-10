@@ -1,4 +1,4 @@
-ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden
+ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden Conditional
 import Papyrus
 import Papyrus:Compatibility
 import Papyrus:Diagnostics:Log
@@ -20,10 +20,11 @@ CustomEvent OnUpgrade
 ;---------------------------------------------
 
 Event OnInit()
-	Log = Log(Title, self)
+	Log = LogNew(Title, self)
 	LastVersion = Release
 	Condition = new QuestStage
 	Activated = false
+	HasActivated = false
 	RegisterForCustomEvent(self, "OnStartup")
 	RegisterForCustomEvent(self, "OnShutdown")
 	RegisterForCustomEvent(self, "OnUpgrade")
@@ -77,12 +78,14 @@ EndEvent
 
 Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
 	self.OnContextStartup()
+	HasActivated = true
 	Write(akSender.Title, "The context has finished the OnStartup event.")
 EndEvent
 
 
 Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
 	self.OnContextShutdown()
+	HasActivated = false
 	Write(akSender.Title, "The context has finished the OnShutdown event.")
 EndEvent
 
@@ -126,6 +129,7 @@ Group Context
 		EndFunction
 	EndProperty
 
+	bool Property HasActivated Auto Hidden Conditional
 	bool Property IsActivated Hidden
 		bool Function Get()
 			return Activated

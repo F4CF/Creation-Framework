@@ -1,4 +1,4 @@
-Scriptname Papyrus:Collections:Collection extends Form Const Native Hidden
+Scriptname Papyrus:Collections:Collection extends ObjectReference Const Native Hidden
 
 
 ; Observable

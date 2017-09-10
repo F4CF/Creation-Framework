@@ -15,7 +15,7 @@ Actor PlayerReference
 ;---------------------------------------------
 
 Event OnInit()
-	Log = Log(Context.Title, self)
+	Log = LogNew(Context.Title, self)
 	PlayerReference = Game.GetPlayer()
 	EnabledValue = true
 

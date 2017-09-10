@@ -64,7 +64,7 @@ Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
 			"New '"+VersionToString(newVersion)+"', "+\
 			"Old '"+VersionToString(oldVersion)+"'.")
 	Else
-		Write(sender.Title, "The module has received and unhandled event.")
+		Write(sender.Title, "The module has received an unhandled event. Event:" + aEvent)
 	EndIf
 EndEvent
 

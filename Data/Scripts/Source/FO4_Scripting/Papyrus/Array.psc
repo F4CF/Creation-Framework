@@ -8,6 +8,11 @@ Scriptname Papyrus:Array Const Native Hidden
 ; -Idea, Support for multi-dimensional arrays if an array capacity is limited
 ; -Copying, I may need a solid IList implementation before higher level methods like copy.
 
+int Function CountRange(int first, int last) Global
+	{Returns the length of a range.}
+	return (last - first) + 1
+EndFunction
+
 
 ; Functions
 ;---------------------------------------------

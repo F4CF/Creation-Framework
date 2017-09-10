@@ -3,26 +3,14 @@ import Papyrus:Collections
 import Papyrus:Diagnostics:Log
 
 UserLog Log
-string LogName = "_CollectionsListTest" const
-
-Group Actuals
-	List Property MyList Auto Const Mandatory
-EndGroup
-
-Group Properties
-	Potion Property Bourbon Auto Const Mandatory
-	Potion Property Bubblegum Auto Const Mandatory
-	Potion Property Cram Auto Const Mandatory
-EndGroup
 
 
 ; Events
 ;---------------------------------------------
+
 Event OnInit()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = LogFile + LogName
-    parent.OnInit()
+	Log = LogNew(Common.LogFile, self)
+	parent.OnInit()
 EndEvent
 
 
@@ -123,3 +111,18 @@ EndFunction
 
 ; Removing
 ;---------------------------------------------
+
+
+
+; Properties
+;---------------------------------------------
+
+Group Actuals
+	List Property MyList Auto Const Mandatory
+EndGroup
+
+Group Properties
+	Potion Property Bourbon Auto Const Mandatory
+	Potion Property Bubblegum Auto Const Mandatory
+	Potion Property Cram Auto Const Mandatory
+EndGroup
