@@ -3,7 +3,7 @@ Scriptname Papyrus:Collections:List extends Papyrus:Collections:Collection Defau
 ; https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx
 import Papyrus
 import Papyrus:Objects:Factory
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 
 var[] Items

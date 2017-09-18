@@ -1,7 +1,7 @@
 ScriptName Papyrus:Project:Modules:Optional extends Papyrus:Project:Module Hidden
 import Papyrus
 import Papyrus:Compatibility
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 import Papyrus:Script
 

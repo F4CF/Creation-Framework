@@ -1,4 +1,4 @@
-Scriptname Papyrus:Diagnostics:Log Hidden Const DebugOnly
+Scriptname Papyrus:Log Hidden Const DebugOnly
 import Papyrus:StringType
 
 

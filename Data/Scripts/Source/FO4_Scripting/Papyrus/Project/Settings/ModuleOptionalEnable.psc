@@ -1,6 +1,6 @@
 Scriptname Papyrus:Project:Settings:ModuleOptionalEnable extends Terminal
 import Papyrus
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 UserLog Log
 

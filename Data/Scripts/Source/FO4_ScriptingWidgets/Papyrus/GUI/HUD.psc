@@ -1,5 +1,5 @@
 Scriptname Papyrus:GUI:HUD extends Papyrus:Project:Module Native Const Hidden
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 
 ; Virtual

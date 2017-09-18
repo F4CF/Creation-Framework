@@ -1,7 +1,7 @@
 ScriptName Papyrus:Project:Module extends Form Native Const Hidden
 import Papyrus
 import Papyrus:Compatibility
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 
 

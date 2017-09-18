@@ -1,5 +1,5 @@
 Scriptname Papyrus_Test:Widget extends Papyrus:GUI:HUDWidget
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:PointType
 
 UserLog Log

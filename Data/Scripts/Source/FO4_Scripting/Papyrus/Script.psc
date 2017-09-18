@@ -1,5 +1,5 @@
 Scriptname Papyrus:Script Const Native Hidden
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:StringType
 
 

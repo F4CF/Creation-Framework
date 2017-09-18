@@ -1,6 +1,6 @@
 ScriptName Papyrus:Project:ContextType extends Quest Native Const Hidden
 import Papyrus:Compatibility:External
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 
 

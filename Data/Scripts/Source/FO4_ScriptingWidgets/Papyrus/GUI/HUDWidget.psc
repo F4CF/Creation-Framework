@@ -1,6 +1,6 @@
 Scriptname Papyrus:GUI:HUDWidget extends Papyrus:GUI:HUD Hidden
 import Papyrus
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:PointType
 import Papyrus:StringType
 import Papyrus:VersionType

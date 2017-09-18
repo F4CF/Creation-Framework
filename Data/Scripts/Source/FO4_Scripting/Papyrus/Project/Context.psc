@@ -1,7 +1,7 @@
 ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden Conditional
 import Papyrus
 import Papyrus:Compatibility
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 import Quest
 
