@@ -1,7 +1,7 @@
 ScriptName Papyrus_Test:ContextTest extends Papyrus_Test:Framework:Lilac
 import Papyrus
 import Papyrus:Compatibility
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 
 UserLog Log

@@ -1,6 +1,6 @@
 ScriptName Papyrus_Test:ArrayTest extends Papyrus_Test:Framework:Lilac
 import Papyrus:Array
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 
 UserLog Log

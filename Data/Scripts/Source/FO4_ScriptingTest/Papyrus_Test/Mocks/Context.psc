@@ -1,7 +1,7 @@
 ScriptName Papyrus_Test:Mocks:Context extends Papyrus:Project:Context
 import Papyrus
 import Papyrus:Compatibility:External
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 import Papyrus:VersionType
 import Papyrus_Test:Framework:Common
 

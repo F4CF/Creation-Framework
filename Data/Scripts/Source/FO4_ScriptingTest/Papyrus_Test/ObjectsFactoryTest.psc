@@ -1,6 +1,6 @@
 Scriptname Papyrus_Test:ObjectsFactoryTest extends Papyrus_Test:Framework:Lilac
 import Papyrus:Collections
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 
 UserLog Log

@@ -1,5 +1,5 @@
 ScriptName Papyrus_Test:LogTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 
 UserLog Log

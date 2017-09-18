@@ -1,6 +1,6 @@
 ScriptName Papyrus_Test:BoolTest extends Papyrus_Test:Framework:Lilac
 import Papyrus:BoolType
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 UserLog Log
 

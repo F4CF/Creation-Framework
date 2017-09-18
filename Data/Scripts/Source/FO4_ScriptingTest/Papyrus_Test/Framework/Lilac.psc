@@ -1,5 +1,5 @@
 ScriptName Papyrus_Test:Framework:Lilac extends Lilac
-import Papyrus:Diagnostics:Log
+import Papyrus:Log
 
 ; Overrides
 ;---------------------------------------------
