@@ -23,6 +23,15 @@ string Function PointToString(Point value) Global
 EndFunction
 
 
+Point Function PointAbsolute(Point value) Global
+	Point result = new Point
+	result.X = Math.Abs(value.X)
+	result.Y = Math.Abs(value.Y)
+	result.Z = Math.Abs(value.Z)
+	return result
+EndFunction
+
+
 ; Not Implemented
 float Function PointAngleBetween(Point value, Point other) Global
 	{Retrieves the angle required to rotate the first specified Point structure into the second specified Point structure.}
@@ -50,15 +59,15 @@ EndFunction
 ; Operators
 ;---------------------------------------------
 
-; Not Implemented
 bool Function PointEquality(Point value, Point other) Global
 	{Compares two Point structures for equality.}
+	return (value.X == other.X) && (value.Y == other.Y) && (value.Z == other.Z)
 EndFunction
 
 
-; Not Implemented
 bool Function PointInequality(Point value, Point other) Global
 	{Compares two Point structures for inequality.}
+	return (value.X != other.X) || (value.Y != other.Y) || (value.Z != other.Z)
 EndFunction
 
 
