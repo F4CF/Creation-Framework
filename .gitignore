@@ -1,14 +1,6 @@
 # Bethesda Modding
 # =========================
 *.sublime-workspace
-*.pex
-*.swf
-*.wav
-*.nif
-*.hkx
-*.dds
-*.bgsm
-*.bgem
 
 # Windows
 # =========================
