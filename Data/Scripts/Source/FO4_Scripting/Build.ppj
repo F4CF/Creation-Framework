@@ -12,7 +12,8 @@
 	>
 	<Imports>
 		<Import>.</Import>
-		<Import>..\Lilac</Import>
+		<Import>..\HUD_FRAMEWORK</Import>
+		<Import>..\F4SE</Import>
 		<Import>..\Base</Import>
 	</Imports>
 	<Folders>

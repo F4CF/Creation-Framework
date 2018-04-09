@@ -5,8 +5,6 @@ import Papyrus:Log
 import Papyrus:VersionType
 import Papyrus:Script
 
-UserLog Log
-
 bool EnabledValue
 Actor PlayerReference
 
@@ -15,7 +13,6 @@ Actor PlayerReference
 ;---------------------------------------------
 
 Event OnInit()
-	Log = LogNew(Context.Title, self)
 	PlayerReference = Game.GetPlayer()
 	EnabledValue = true
 
@@ -27,32 +24,31 @@ Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (SetActive(self))
 			self.OnEnable()
-			WriteLine(Log, "The module has finished the OnStartup event.")
+			WriteLine(self, "The module has finished the OnStartup event.")
 		Else
-			WriteLine(Log, "The module could not finish the OnStartup event.")
+			WriteLine(self, "The module could not finish the OnStartup event.")
 		EndIf
 	ElseIf (aEvent == ShutdownEvent)
 		If (SetActive(self, false))
 			self.OnDisable()
-			WriteLine(Log, "The module has finished the OnShutdown event.")
+			WriteLine(self, "The module has finished the OnShutdown event.")
 		Else
-			WriteLine(Log, "The module could not finish the OnShutdown event.")
+			WriteLine(self, "The module could not finish the OnShutdown event.")
 		EndIf
 	ElseIf (aEvent == UpgradeEvent)
 		If (Enabled)
 			Version newVersion = arguments[0] as Version
 			Version oldVersion = arguments[1] as Version
 			self.OnUpgrade(newVersion, oldVersion)
-			WriteLine(Log, "The module has finished the OnUpgrade event. " \
+			WriteLine(self, "The module has finished the OnUpgrade event. " \
 				+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
 		Else
-			WriteLine(Log, "Ignoring the OnUpgrade event, module is not enabled.")
+			WriteLine(self, "Ignoring the OnUpgrade event, module is not enabled.")
 		EndIf
 	Else
-		WriteLine(Log, "The module has received and unhandled event.")
+		WriteLine(self, "The module has received and unhandled event.")
 	EndIf
 EndEvent
-
 
 
 ; Functions
@@ -64,34 +60,34 @@ bool Function SetActive(Optional aOptional, bool abActive = true) Global
 
 	If (aOptional)
 		If (abActive) ; requested active state
-			If (HasState(aOptional)) ; already activated
-				Write(none, "Ignoring request for ActiveState, module is already active.")
+			If (aOptional.StateName != "") ; already activated
+				WriteLine(aOptional, "Ignoring request for ActiveState, module is already active.")
 				return false
 			Else
 				If (ChangeState(aOptional, sActiveState))
-					Write(none, "The module has finished enabling.")
+					WriteLine(aOptional, "The module has finished enabling.")
 					return true
 				Else
-					Write(none, "The module could not be enabled.")
+					WriteLine(aOptional, "The module could not be enabled.")
 					return false
 				EndIf
 			EndIf
 		Else ; requested empty state
 			If (aOptional.GetState() == sEmptyState) ; already deactivated
-				Write(none, "Ignoring request for EmptyState, module is already deactivated.")
+				WriteLine(aOptional, "Ignoring request for EmptyState, module is already deactivated.")
 				return false
 			Else
 				If (ChangeState(aOptional, sEmptyState))
-					Write(none, "The module has finished disabling.")
+					WriteLine(aOptional, "The module has finished disabling.")
 					return true
 				Else
-					Write(none, "The module could not be disabled.")
+					WriteLine(aOptional, "The module could not be disabled.")
 					return false
 				EndIf
 			EndIf
 		EndIf
 	Else
-		Write(none, "Cannot change ActiveState on a none script object.")
+		WriteLine("Modules:Optional", "Cannot change ActiveState on a none script object.")
 		return false
 	EndIf
 EndFunction
@@ -105,7 +101,7 @@ Group Module
 
 	bool Property IsReady Hidden
 		bool Function Get()
-			return EnabledValue && HasState(self)
+			return EnabledValue && StateName != ""
 		EndFunction
 	EndProperty
 
@@ -116,10 +112,10 @@ Group Module
 		Function Set(bool aValue)
 			If (aValue != EnabledValue)
 				EnabledValue = aValue
-				WriteChangedValue(Log, "Enabled", !aValue, aValue)
+				WriteChangedValue(self, "Enabled", !aValue, aValue)
 				SetActive(self, aValue)
 			Else
-				WriteLine(Log, "The module's Enabled property already equals '"+aValue+"'.")
+				WriteLine(self, "The module's Enabled property already equals '"+aValue+"'.")
 			EndIf
 		EndFunction
 	EndProperty

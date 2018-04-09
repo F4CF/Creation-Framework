@@ -2,111 +2,104 @@ Scriptname Papyrus:Script Const Native Hidden
 import Papyrus:Log
 import Papyrus:StringType
 
-
 ; States
 ;---------------------------------------------
 
-bool Function ChangeState(ScriptObject script, string newState) Global
-	{Changes the given scripts state only to a different state.}
-	If(script.GetState() != newState)
-		script.GoToState(newState)
+bool Function NewState(ScriptObject this, int stateID) Global
+	If (this)
+		this.StartTimer(0.1, stateID)
 		return true
 	Else
+		WriteUnexpectedValue("Papyrus:Script", "NewState", "this", "Cannot request state ID "+stateID+" on a none script.")
 		return false
 	EndIf
 EndFunction
 
 
-bool Function HasState(ScriptObject script) Global
-	{Return true if the given script has any state other than the default empty state.}
-	return script.GetState() != EmptyState()
-EndFunction
-
-
-string Function EmptyState() Global
-	{The default papyrus script state is the empty state.}
-	return ""
-EndFunction
-
-
-; Tasks
-;---------------------------------------------
-; Tasks are simply regular script states. These states can be run, awaited, or ended.
-
-bool Function TaskAwait(ScriptObject script, string thread = "Busy") Global
-	{Waits for the configured task to complete.}
-	If (script)
-		If (TaskRun(script, thread))
-			While (TaskRunning(script))
+bool Function AwaitState(ScriptObject this, string statename = "Busy") Global
+	{Polling until the given script is in the "empty" state.}
+	If (this)
+		If (BeginState(this, statename))
+			While (StateRunning(this))
 				Utility.Wait(0.1)
 			EndWhile
 			return true
 		Else
-			Write(script, "Task could not await the '"+thread+"' thread.")
+			WriteUnexpected(this, "AwaitState", "Could not await the '"+statename+"' state.")
 			return false
 		EndIf
 	Else
-		Write(script, "Task cannot operate on a none script.")
+		WriteUnexpectedValue("Papyrus:Script", "AwaitState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
 
 
-bool Function TaskRun(ScriptObject script, string thread = "Busy") Global
-	{Runs the configured task without waiting for completion.}
-	If (script)
-		If (TaskRunning(script))
-			Write(script, "Task cannot await the '"+thread+"' thread while busy.")
+bool Function BeginState(ScriptObject this, string statename = "Busy") Global
+	{Begins the given state without waiting for it to end.}
+	If (this)
+		If (StateRunning(this))
+			WriteUnexpected(this, "BeginState", "Cannot start the '"+statename+"' state while '"+this.GetState()+"' state is running.")
 			return false
 		Else
-			If !(StringIsNoneOrEmpty(thread))
-				If (ChangeState(script, thread))
+			If !(StringIsNoneOrEmpty(statename))
+				If (ChangeState(this, statename))
 					return true
 				Else
-					Write(script, "Task cannot change state for the '"+thread+"' thread.")
+					WriteUnexpected(this, "BeginState", "Start state cannot change state for the '"+statename+"' state.")
 					return false
 				EndIf
 			Else
-				Write(script, "Task cannot await thread for a none or empty state.")
+				WriteUnexpectedValue(this, "BeginState", "statename", "Cannot operate on a none or empty state.")
 				return false
 			EndIf
 		EndIf
 	Else
-		Write(script, "Task cannot operate on a none script.")
+		WriteUnexpectedValue("Papyrus:Script", "BeginState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
 
 
-bool Function TaskEnd(ScriptObject script) Global
-	{Ends any running task on the given script.}
-	If (script)
-		If (ChangeState(script, EmptyState()))
+bool Function StateRunning(ScriptObject this) Global
+	{Return true if the given script has any state other than the default empty state.}
+	If (this)
+		return this.GetState() != ""
+	Else
+		WriteUnexpectedValue("Papyrus:Script", "StateRunning", "this", "The script cannot be none.")
+		return false
+	EndIf
+EndFunction
+
+
+bool Function ClearState(ScriptObject this) Global
+	{Ends any running state on the given script.}
+	If (this)
+		If (ChangeState(this, ""))
 			return true
 		Else
-			Write(script, "Task is unable to end right now.")
+			WriteUnexpected(this, "ClearState", "Unable to change the scripts state to empty.")
 			return false
 		EndIf
 	Else
-		Write(script, "Task cannot operate on a none script.")
+		WriteUnexpectedValue("Papyrus:Script", "ClearState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
 
 
-bool Function TaskRunning(ScriptObject script) Global
-	{Return true if the given script has any state other than the default empty state.}
-	; TODO: Pretty much a duplicate of HasState(ScriptObject)
-	If (script)
-		return HasState(script)
+bool Function ChangeState(ScriptObject this, string statename) Global
+	{Changes the given scripts state only to a different state.}
+	If (this)
+		If(this.GetState() != statename)
+			this.GoToState(statename)
+			return true
+		Else
+			WriteUnexpectedValue(this, "ChangeState", "statename", "The script is already in the '"+statename+"' state.")
+			return false
+		EndIf
 	Else
-		Write(script, "Task cannot operate on a none script.")
+		WriteUnexpectedValue("Papyrus:Script", "ChangeState", "this", "The script cannot be none.")
 		return false
 	EndIf
-EndFunction
-
-
-string Function TaskDefault() Global
-	{The default task is the busy state.}
-	return "Busy"
 EndFunction

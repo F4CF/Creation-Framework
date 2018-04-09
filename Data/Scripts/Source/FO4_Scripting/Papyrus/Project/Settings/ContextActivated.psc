@@ -2,19 +2,11 @@ Scriptname Papyrus:Project:Settings:ContextActivated extends Terminal
 import Papyrus
 import Papyrus:Log
 
-UserLog Log
-
-
 ; Events
 ;---------------------------------------------
 
-Event OnInit()
-	Log = LogNew(Context.Title, self)
-EndEvent
-
-
 Event OnMenuItemRun(int auiMenuItemID, ObjectReference akTerminalRef)
-	WriteLine(Log, "OnMenuItemRun :: auiMenuItemID="+auiMenuItemID + ", akTerminalRef="+akTerminalRef)
+	WriteLine(self, "OnMenuItemRun :: auiMenuItemID="+auiMenuItemID + ", akTerminalRef="+akTerminalRef)
 
 	If (auiMenuItemID == OptionStartup)
 		Context.IsActivated = true
