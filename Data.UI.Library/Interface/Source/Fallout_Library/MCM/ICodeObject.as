@@ -1,4 +1,4 @@
-package Shared.MCM
+package MCM
 {
 	public interface ICodeObject
 	{

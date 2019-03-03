@@ -1,16 +1,20 @@
-package Shared.AS3
+package System.IO
 {
+	/**
+	 * Performs operations on String instances that contain file or directory path information.
+	 */
 	public class Path
 	{
+
 		public static function ConvertFileExtension(filepath:String, toExtension:String):String
 		{
-			return filepath.replace(new RegExp("\\.[^/.]+$", ""), "."+toExtension);
+			return filepath.replace(new RegExp("\\.[^/.]+$", ""), "." + toExtension);
 		}
 
 
 		public static function GetFileExtension(filepath:String):String
 		{
-			return filepath.substring(filepath.lastIndexOf(".")+1, filepath.length);
+			return filepath.substring(filepath.lastIndexOf(".") + 1, filepath.length);
 		}
 
 

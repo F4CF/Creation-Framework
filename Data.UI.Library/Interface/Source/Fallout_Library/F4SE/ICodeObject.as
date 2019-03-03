@@ -1,4 +1,4 @@
-package Shared.F4SE
+package F4SE
 {
 	public interface ICodeObject
 	{

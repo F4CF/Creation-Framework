@@ -1,32 +1,20 @@
-package Shared.AS3
+package System.Diagnostics
 {
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.utils.*;
 	import XML;
+	import System.Diagnostics.Debug;
 
-	public class Debug
+	public class Utility
 	{
-
-		public static function WriteLine(prefix:Object, line:Object="", ... rest):void
-		{
-			if (rest != null)
-			{
-				for (var index:uint = 0; index < rest.length; index++)
-				{
-					line += " "+rest[index];
-				}
-			}
-			trace(prefix+" "+line);
-		}
-
 
 		public static function TraceObject(object:Object, prefix:String = ""):void
 		{
 			prefix == "" ? prefix = "---" : prefix += "---";
 			for (var element:* in object)
 			{
-				WriteLine(prefix, element + " : " + object[element], "  ");
+				Debug.WriteLine(prefix, element + " : " + object[element], "  ");
 				if (typeof(object[element]) == "object") TraceObject(object[element], prefix);
 			}
 		}
@@ -56,10 +44,10 @@ package Shared.AS3
 				output += ", h:"+child.height+"px ("+child.scaleY.toFixed(2)+")";
 				output += ", r:"+child.rotation.toFixed(1)+"";
 
-				if (typeof options == "number") WriteLine(output);
+				if (typeof options == "number") Debug.WriteLine(output);
 				else if (typeof options == "string" && output.match(new RegExp(options, "gi")).length != 0)
 				{
-					WriteLine(output, "in", container.name, "-->", container);
+					Debug.WriteLine(output, "in", container.name, "-->", container);
 				}
 
 				if (child is DisplayObjectContainer) TraceDisplayList(DisplayObjectContainer(child), options, indentString + INDENT, depth + 1);

@@ -1,12 +1,13 @@
-package Shared
+package System
 {
+	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
-	import Shared.AS3.Debug;
-	import Shared.AS3.Utility;
 	import Shared.IMenu;
+	import System.Diagnostics.Debug;
+	import System.Display;
 
-	public class Display extends IMenu implements IDisplay
+	public class Menu extends IMenu
 	{
 		private var menu:MovieClip;
 		public function get MenuRoot():MovieClip { return menu; }
@@ -20,16 +21,16 @@ package Shared
 		// Menu
 		//---------------------------------------------
 
-		public function Display()
+		public function Menu()
 		{
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
-			Debug.WriteLine("[Display]", "(ctor)", Utility.WalkMovie(this));
+			Debug.WriteLine("[System.Menu]", "(ctor)", Display.GetInstance(this));
 		}
 
 
 		public function OnAddedToStage(e:Event) : void
 		{
-			Debug.WriteLine("[Display]", "(OnAddedToStage)", Utility.WalkMovie(this));
+			Debug.WriteLine("[System.Menu]", "(OnAddedToStage)", Display.GetInstance(this));
 			menu = stage.getChildAt(0) as MovieClip;
 		}
 
