@@ -47,20 +47,20 @@ package Components
 			ContentLoader = new Loader();
 			Info.addEventListener(Event.COMPLETE, this.OnLoadComplete);
 			Info.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
-			Debug.WriteLine("[LoaderType]", "(ctor)", "Constructor Code");
+			Debug.WriteLine("[Components.LoaderType]", "(ctor)", "Constructor Code");
 		}
 
 
 		public function onF4SEObjCreated(codeObject:*) : void
-		{ // @F4SE, implements ICodeObject
+		{ // @F4SE.ICodeObject
 			if(codeObject != null)
 			{
 				XSE = codeObject;
-				Debug.WriteLine("[LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
+				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
 			}
 			else
 			{
-				Debug.WriteLine("[LoaderType]", "(onF4SEObjCreated)", "The F4SE object was null.");
+				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "The F4SE object was null.");
 			}
 		}
 
@@ -70,20 +70,20 @@ package Components
 
 		protected function OnAddedToStage(e:Event) : void
 		{
-			Debug.WriteLine("[LoaderType]", "(OnAddedToStage)");
+			Debug.WriteLine("[Components.LoaderType]", "(OnAddedToStage)");
 		}
 
 
 		protected function OnRemovedFromStage(e:Event) : void
 		{
-			Debug.WriteLine("[LoaderType]", "(OnRemovedFromStage)", "Unloading..");
+			Debug.WriteLine("[Components.LoaderType]", "(OnRemovedFromStage)", "Unloading..");
 			Unload();
 		}
 
 
 		protected function OnLoadComplete(e:Event) : void
 		{
-			Debug.WriteLine("[LoaderType]", "(OnLoadComplete)", e.toString(), toString());
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", e.toString());
 			addChild(Content);
 			this.visible = true;
 		}
@@ -91,9 +91,8 @@ package Components
 
 		protected function OnLoadError(e:IOErrorEvent) : void
 		{
-			Debug.WriteLine("[LoaderType]", "(OnLoadError)", e.toString(), toString());
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", e.toString());
 			Unload();
-			this.visible = false;
 		}
 
 
@@ -102,13 +101,11 @@ package Components
 
 		public function Load(request:URLRequest) : Boolean
 		{
-			ContentLoader.close(); // Cancels a load() method operation that is currently in progress for the Loader instance.
-
+			ContentLoader.close();
 			if (Content)
 			{
 				Unload();
 			}
-
 			ContentLoader.load(request);
 			return true;
 		}
@@ -122,18 +119,18 @@ package Components
 
 		public function Unload() : Boolean
 		{
+			this.visible = false;
+			ContentLoader.close();
 			if (Content)
 			{
-				this.visible = false;
 				removeChild(Content);
-				Content.loaderInfo.loader.unload(); // TODO: Which Unload is the "right" way?
 				ContentLoader.unload();
-				Debug.WriteLine("[LoaderType]", "(Unload)", "Unloaded content from loader.");
+				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
 				return true;
 			}
 			else
 			{
-				Debug.WriteLine("[LoaderType]", "(Unload)", "No existing content to unload.");
+				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "No existing content to unload.");
 				return false;
 			}
 		}
@@ -142,11 +139,11 @@ package Components
 		// Functions
 		//---------------------------------------------
 
-		public override function toString():String
+		public override function toString() : String
 		{
 			var sResolution = "Resolution: "+stage.width+"x"+stage.height+" ("+this.x+"x"+this.y+")";
 			var sUrl = "Url: '"+Url+"'";
-			return "[LoaderType] "+sResolution+", "+sUrl;
+			return "[Components.LoaderType] "+sResolution+", "+sUrl;
 		}
 
 

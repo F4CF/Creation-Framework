@@ -6,18 +6,27 @@ package System.IO
 	public class Path
 	{
 
+		/**
+		 *
+		 */
 		public static function ConvertFileExtension(filepath:String, toExtension:String):String
 		{
 			return filepath.replace(new RegExp("\\.[^/.]+$", ""), "." + toExtension);
 		}
 
 
+		/**
+		 * Gets the file's extension.
+		 */
 		public static function GetFileExtension(filepath:String):String
 		{
 			return filepath.substring(filepath.lastIndexOf(".") + 1, filepath.length);
 		}
 
 
+		/**
+		 * Gets the file name and extension.
+		 */
 		public static function GetFileName(fullPath:String):String
 		{
 			var fSlash:int = fullPath.lastIndexOf("/");
@@ -27,6 +36,9 @@ package System.IO
 		}
 
 
+		/**
+		 *
+		 */
 		public static function GetDirectory(path:String):String
 		{
 			var fSlash:int = path.lastIndexOf("/");
