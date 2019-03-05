@@ -40,6 +40,9 @@ package Components
 		private var ContentLoader:Loader;
 		protected function get Content():DisplayObject { return ContentLoader.content; }
 
+		private var loaded:Boolean = false;
+		protected function get IsLoaded():Boolean { return loaded; }
+
 		// Events
 		public static const CODEOBJECT_READY:String = "CodeObject_Ready";
 		public static const LOAD_ERROR:String = "Load_Error";
@@ -99,6 +102,7 @@ package Components
 		protected function OnLoadComplete(e:Event):void
 		{
 			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", e.toString());
+			loaded = true;
 			this.dispatchEvent(new Event(LOAD_COMPLETE));
 		}
 
@@ -125,11 +129,12 @@ package Components
 		 */
 		public function Load(filepath:String, mountID:String=null):Boolean
 		{
-			if (Unload())
+			if (IsLoaded == false || Unload())
 			{
 				Value = filepath;
 				if (mountID != null)
 				{
+					// Use the mount ID for textures if one is provided.
 					Request.url = mountID;
 				}
 				else
@@ -147,11 +152,16 @@ package Components
 					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Error:", error.toString());
 					success = false;
 				}
-				Debug.WriteLine("[Components.LoaderType]", "(Load)", "Loaded content request.", Requested);
+
+				if (success)
+				{
+					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Loaded the content request.", "filepath:"+filepath, "mountID:"+mountID);
+				}
 				return success;
 			}
 			else
 			{
+				Debug.WriteLine("[Components.LoaderType]", "(Load)", "Failed to load files.", "filepath:"+filepath, "mountID:"+mountID);
 				return false;
 			}
 		}
@@ -175,7 +185,12 @@ package Components
 				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
 				success = false;
 			}
-			Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
+			loaded = false;
+
+			if (success)
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
+			}
 			return success;
 		}
 
