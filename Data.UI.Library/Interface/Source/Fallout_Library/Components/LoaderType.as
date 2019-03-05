@@ -18,20 +18,32 @@ package Components
 	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/LoaderInfo.html
 	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/URLRequest.html
 
+	/**
+	 * TODO: Look into if a thread-safe lock is needed.
+	 * TODO: I removed the visibility preferences. Ill let child classes handle visibility.
+	 * TODO: Maybe I should NOT be using add/remove child on the loader itself? Maybe not at all?
+	 * 		The AS3 documentation implies that calling `loader.unload()` is enough.
+	 */
 	public dynamic class LoaderType extends MovieClip implements F4SE.ICodeObject
 	{
+		// F4SE
 		protected var XSE:*;
 
-		// Stage
-		private function get Resolution():Number { return stage.height; }
-		public static const DefaultHeight:Number = 720;
+		// Files
+		private var Value:String;
+		public function get FilePath():String { return Value; }
+
+		private var Request:URLRequest;
+		public function get Requested():String { return Request.url; }
 
 		// Loader
 		private var ContentLoader:Loader;
-		private function get Info() : LoaderInfo { return ContentLoader.contentLoaderInfo; }
-		private function get Url() : String { return ContentLoader.contentLoaderInfo.url; }
-		protected function get Content() : DisplayObject { return ContentLoader.contentLoaderInfo.content; }
-		private function get Instance() : String { return Display.GetInstanceFrom(Content, this); }
+		protected function get Content():DisplayObject { return ContentLoader.content; }
+
+		// Events
+		public static const CODEOBJECT_READY:String = "CodeObject_Ready";
+		public static const LOAD_ERROR:String = "Load_Error";
+		public static const LOAD_COMPLETE:String = "Load_Complete";
 
 
 		// Initialize
@@ -42,21 +54,22 @@ package Components
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
 			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
-			this.visible = false;
-
+			Request = new URLRequest();
 			ContentLoader = new Loader();
-			Info.addEventListener(Event.COMPLETE, this.OnLoadComplete);
-			Info.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
+			ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
+			ContentLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
 			Debug.WriteLine("[Components.LoaderType]", "(ctor)", "Constructor Code");
 		}
 
 
-		public function onF4SEObjCreated(codeObject:*) : void
-		{ // @F4SE.ICodeObject
+		// @F4SE.ICodeObject
+		public function onF4SEObjCreated(codeObject:*):void
+		{
 			if(codeObject != null)
 			{
 				XSE = codeObject;
 				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
+				this.dispatchEvent(new Event(CODEOBJECT_READY));
 			}
 			else
 			{
@@ -68,82 +81,100 @@ package Components
 		// Events
 		//---------------------------------------------
 
-		protected function OnAddedToStage(e:Event) : void
+		protected function OnAddedToStage(e:Event):void
 		{
 			Debug.WriteLine("[Components.LoaderType]", "(OnAddedToStage)");
+			this.addChild(ContentLoader);
 		}
 
 
-		protected function OnRemovedFromStage(e:Event) : void
+		protected function OnRemovedFromStage(e:Event):void
 		{
 			Debug.WriteLine("[Components.LoaderType]", "(OnRemovedFromStage)", "Unloading..");
 			Unload();
+			this.removeChild(ContentLoader);
 		}
 
 
-		protected function OnLoadComplete(e:Event) : void
+		protected function OnLoadComplete(e:Event):void
 		{
 			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", e.toString());
-			addChild(Content);
-			this.visible = true;
+			this.dispatchEvent(new Event(LOAD_COMPLETE));
 		}
 
 
-		protected function OnLoadError(e:IOErrorEvent) : void
+		protected function OnLoadError(e:IOErrorEvent):void
 		{
 			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", e.toString());
 			Unload();
+			this.dispatchEvent(new Event(LOAD_ERROR));
 		}
 
 
 		// Methods
 		//---------------------------------------------
 
-		public function Load(request:URLRequest) : Boolean
+		/**
+		 * The absolute or relative URL of the SWF, JPEG, GIF, or PNG file to be loaded.
+		 * A relative path must be relative to the main SWF file.
+		 * Absolute URLs must include the protocol reference, such as http:// or file:///.
+		 * Filenames cannot include disk drive specifications.
+		 *
+		 * https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html#load()
+		 */
+		public function Load(filepath:String, mountID:String=null):Boolean
 		{
-			ContentLoader.close();
-			if (Content)
+			// TODO: Add parameter check for file exists.
+			if(Unload())
 			{
-				Unload();
-			}
-			ContentLoader.load(request);
-			return true;
-		}
-
-
-		protected function LoadPath(filePath:String) : Boolean
-		{
-			return Load(new URLRequest(filePath));
-		}
-
-
-		public function Unload() : Boolean
-		{
-			this.visible = false;
-			ContentLoader.close();
-			if (Content)
-			{
-				removeChild(Content);
-				ContentLoader.unload();
-				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
-				return true;
+				Request.url = Value = filepath;
+				var success:Boolean = true;
+				try
+				{
+					ContentLoader.load(Request);
+				}
+				catch (error:Error)
+				{
+					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Error:", error.toString());
+					success = false;
+				}
+				Debug.WriteLine("[Components.LoaderType]", "(Load)", "Loaded content request.", Requested);
+				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "No existing content to unload.");
 				return false;
 			}
+		}
+
+
+		// TODO: Look into if I need to use `loader.unloadAndStop()` for swf files.
+		public function Unload():Boolean
+		{
+			var success:Boolean = true;
+			try
+			{
+				ContentLoader.close();
+				ContentLoader.unload();
+				// ContentLoader.unloadAndStop();
+			}
+			catch (error:Error)
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
+				success = false;
+			}
+			Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
+			return success;
 		}
 
 
 		// Functions
 		//---------------------------------------------
 
-		public override function toString() : String
+		public override function toString():String
 		{
 			var sResolution = "Resolution: "+stage.width+"x"+stage.height+" ("+this.x+"x"+this.y+")";
-			var sUrl = "Url: '"+Url+"'";
-			return "[Components.LoaderType] "+sResolution+", "+sUrl;
+			return "[Components.LoaderType] "+sResolution+", "+"Requested: '"+Requested+"'";
 		}
 
 

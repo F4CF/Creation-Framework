@@ -7,7 +7,9 @@ package System.IO
 	{
 		// Archives
 		public static const Interface:String = "Interface";
+		public static const Meshes:String = "Meshes";
 		public static const Textures:String = "Textures";
+		public static const Materials:String = "Materials";
 
 
 		/**

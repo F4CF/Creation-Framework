@@ -6,13 +6,14 @@ package F4SE
 	 * Exposes the F4SE code object's methods and data.
 	 * https://www.creationkit.com/fallout4/index.php?title=Category:F4SE
 	 * TODO: Check for null arguments on f4se function calls. A null parameter may crash the game!
+	 * TODO: Add boolean return values for functions.
 	 */
 	public class Extensions
 	{
 
 		/**
 		 * Gets an object representing the running version of F4SE.
-		 * @param f4se - The F4SE `code` object.
+		 * @param f4se - The F4SE `code` object to use.
 		 * @return Object - The F4SE `version` object.
 		 */
 		public static function GetVersion(f4se:*):Object
@@ -39,10 +40,10 @@ package F4SE
 
 		/**
 		 * Gets an array of objects representing `FileSystemInfo` objects for the given path.
-		 * @param f4se - The F4SE `code` object.
-		 * @param path -
-		 * @param match -
-		 * @param recursive -
+		 * @param f4se - The F4SE `code` object to use.
+		 * @param path - The directory to search within. Searches the top level folder only.
+		 * @param match - Filters the listing using a string pattern. The pattern accepts a wildcard expression (*).
+		 * @param recursive - Searches any child directories as well.
 		 * @return Array - An array of F4SE `FileSystemInfo` objects.
 		 */
 		public static function GetDirectoryListing(f4se:*, path:String, match:String, recursive:Boolean=false):Array
@@ -70,10 +71,10 @@ package F4SE
 
 		/**
 		 * Mounts a texture to the given menu.
-		 * @param f4se - The F4SE `code` object.
-		 * @param menuName -
-		 * @param mountPath -
-		 * @param mountName -
+		 * @param f4se - The F4SE `code` object to use.
+		 * @param menuName - The name of a menu the texture will be mounted to.
+		 * @param mountPath - The file path to a texture that will be mounted.
+		 * @param mountName - A unique identifier for this texture mount.
 		 */
 		public static function MountImage(f4se:*, menuName:String, mountPath:String, mountName:String):void
 		{
@@ -98,9 +99,9 @@ package F4SE
 
 		/**
 		 * Unmounts a texture from the given menu.
-		 * @param f4se - The F4SE `code` object.
-		 * @param menuName -
-		 * @param mountPath -
+		 * @param f4se - The F4SE `code` object to use.
+		 * @param menuName - The name of a menu the texture will be unmounted from.
+		 * @param mountPath - The file path to a texture that will be unmounted.
 		 */
 		public static function UnmountImage(f4se:*, menuName:String, mountPath:String):void
 		{
@@ -125,7 +126,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object.
+		//  * @param f4se - The F4SE `code` object to use.
 		//  */
 		// public static function GetMembers(f4se:*):void
 		// {
@@ -142,7 +143,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object.
+		//  * @param f4se - The F4SE `code` object to use.
 		//  */
 		// public static function CallFunctionNoWait(f4se:*):void
 		// {
@@ -159,7 +160,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object.
+		//  * @param f4se - The F4SE `code` object to use.
 		//  */
 		// public static function AllowTextInput(f4se:*):void
 		// {
@@ -176,7 +177,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object.
+		//  * @param f4se - The F4SE `code` object to use.
 		//  */
 		// public static function SendExternalEvent(f4se:*):void
 		// {
@@ -193,7 +194,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object.
+		//  * @param f4se - The F4SE `code` object to use.
 		//  */
 		// public static function GetPlugins(f4se:*):void
 		// {

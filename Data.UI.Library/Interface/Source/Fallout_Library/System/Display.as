@@ -8,6 +8,10 @@ package System
 
 	public class Display
 	{
+		// Stage
+		public static const DefaultWidth:Number = 1280;
+		public static const DefaultHeight:Number = 720;
+
 		// Display
 		//---------------------------------------------
 

@@ -6,32 +6,44 @@ package System.IO
 	import System.Diagnostics.Debug;
 
 	/**
-	 * Exposes static methods for working with files.
+	 * Provides static methods for working with files.
+	 * TODO: Allow match pattern from the root of `Data\` directory.
+	 * TODO: Should I have the `Exists` condition strictly `.length == 1` or `.length > 0`?
 	 */
 	public class File
 	{
+		// Type Extensions
 		public static const SWF:String = "swf";
+		public static const NIF:String = "nif";
 		public static const DDS:String = "dds";
 
 
-		public static function Exists(f4se:*, archive:String, filepath:String):Boolean
+		/**
+		 * Determines whether the specified file exists.
+		 * @param f4se - The F4SE code object to use.
+		 * @param filepath - The file to check. "Fallout 4\Data\{FILEPATH}"
+		 * @return true if the path contains the name of an existing file; otherwise, false.
+		 */
+		public static function Exists(f4se:*, filepath:String):Boolean
+		{
+			var name:String = Path.GetFileName(filepath);
+			var folder:String = Path.GetDirectory(filepath);
+			return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length == 1;
+		}
+
+
+		/**
+		 * Determines whether the specified file exists within an archive directory.
+		 * @param f4se - The F4SE code object to use.
+		 * @param archive - The archive directory to check within. "Fallout 4\Data\{ARCHIVE}\..."
+		 * @param filepath - The file to check. "Fallout 4\Data\{ARCHIVE}\{FILEPATH}"
+		 * @return true if the path contains the name of an existing file; otherwise, false.
+		 */
+		public static function ExistsIn(f4se:*, archive:String, filepath:String):Boolean
 		{
 			var name:String = Path.GetFileName(filepath);
 			var folder:String = Path.GetDirectory("Data\\"+archive+"\\"+filepath);
-
-			if (archive == FileSystem.Interface)
-			{
-				return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length > 0;
-			}
-			else if (archive == FileSystem.Textures)
-			{
-				return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length > 0;
-			}
-			else
-			{
-				Debug.WriteLine("[System.IO.File]", "(Exists)", "archive: "+archive, "The archive is unhandled.");
-				return false;
-			}
+			return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length == 1;
 		}
 
 
