@@ -65,7 +65,7 @@ package Components
 		// @F4SE.ICodeObject
 		public function onF4SEObjCreated(codeObject:*):void
 		{
-			if(codeObject != null)
+			if (codeObject != null)
 			{
 				XSE = codeObject;
 				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
@@ -121,13 +121,22 @@ package Components
 		 * Filenames cannot include disk drive specifications.
 		 *
 		 * https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html#load()
+		 * // TODO: Add parameter check for file exists.
 		 */
 		public function Load(filepath:String, mountID:String=null):Boolean
 		{
-			// TODO: Add parameter check for file exists.
-			if(Unload())
+			if (Unload())
 			{
-				Request.url = Value = filepath;
+				Value = filepath;
+				if (mountID != null)
+				{
+					Request.url = mountID;
+				}
+				else
+				{
+					Request.url = filepath;
+				}
+
 				var success:Boolean = true;
 				try
 				{
@@ -148,7 +157,10 @@ package Components
 		}
 
 
-		// TODO: Look into if I need to use `loader.unloadAndStop()` for swf files.
+		/**
+		 *
+		 * TODO: Look into if I need to use `loader.unloadAndStop()` for swf files.
+		 */
 		public function Unload():Boolean
 		{
 			var success:Boolean = true;
