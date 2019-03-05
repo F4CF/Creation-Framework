@@ -11,6 +11,7 @@ package Components
 	import flash.net.URLRequest;
 	import System.Diagnostics.Debug;
 	import System.Display;
+	import System.IO.File;
 	import System.IO.Path;
 
 	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html
@@ -39,9 +40,6 @@ package Components
 		// Loader
 		private var ContentLoader:Loader;
 		protected function get Content():DisplayObject { return ContentLoader.content; }
-
-		private var loaded:Boolean = false;
-		protected function get IsLoaded():Boolean { return loaded; }
 
 		// Events
 		public static const CODEOBJECT_READY:String = "CodeObject_Ready";
@@ -101,15 +99,14 @@ package Components
 
 		protected function OnLoadComplete(e:Event):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", e.toString());
-			loaded = true;
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", FilePath);
 			this.dispatchEvent(new Event(LOAD_COMPLETE));
 		}
 
 
 		protected function OnLoadError(e:IOErrorEvent):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", e.toString());
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", FilePath);
 			Unload();
 			this.dispatchEvent(new Event(LOAD_ERROR));
 		}
@@ -129,8 +126,9 @@ package Components
 		 */
 		public function Load(filepath:String, mountID:String=null):Boolean
 		{
-			if (IsLoaded == false || Unload())
+			if (filepath != null)
 			{
+				Unload();
 				Value = filepath;
 				if (mountID != null)
 				{
@@ -161,37 +159,49 @@ package Components
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Load)", "Failed to load files.", "filepath:"+filepath, "mountID:"+mountID);
+				Debug.WriteLine("[Components.LoaderType]", "(Load)", "The filepath cannot be null.");
 				return false;
 			}
 		}
 
 
 		/**
-		 *
-		 * TODO: Look into if I need to use `loader.unloadAndStop()` for swf files.
+		 * Removes a child of this Loader object that was loaded by using the load() method.
 		 */
 		public function Unload():Boolean
 		{
-			var success:Boolean = true;
-			try
+			if (FilePath != null)
 			{
-				ContentLoader.close();
-				ContentLoader.unload();
-				// ContentLoader.unloadAndStop();
+				var success:Boolean = true;
+				try
+				{
+					ContentLoader.close();
+					if (Path.GetExtension(FilePath) == File.SWF)
+					{
+						ContentLoader.unloadAndStop();
+					}
+					else
+					{
+						ContentLoader.unload();
+					}
+				}
+				catch (error:Error)
+				{
+					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
+					success = false;
+				}
+				if (success)
+				{
+					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
+					Value = null;
+				}
+				return success;
 			}
-			catch (error:Error)
+			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
-				success = false;
+				Debug.WriteLine("[Components.LoaderType]", "(Load)", "The filepath cannot be null.");
+				return false;
 			}
-			loaded = false;
-
-			if (success)
-			{
-				Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
-			}
-			return success;
 		}
 
 
