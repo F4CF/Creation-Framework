@@ -24,16 +24,10 @@ package Components
 		// F4SE
 		protected var XSE:*;
 
-		// Class
-		private var Ready:Boolean = false;
-
-		private var Menu:String;
-		public function get MenuName():String { return Menu; }
-		public function set MenuName(value:String):void { Menu = value; }
-
-		private var ImageMount:String;
-		public function get MountID():String { return ImageMount; }
-		public function set MountID(value:String):void { ImageMount = value; }
+		// Loader
+		private var Ready:Boolean;
+		private var MenuName:String;
+		private var MountID:String;
 
 		// Files
 		private var Value:String;
@@ -55,11 +49,14 @@ package Components
 		// Initialize
 		//---------------------------------------------
 
-		public function LoaderType()
+		public function LoaderType(menuName:String, mountID:String)
 		{
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
 			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
+			Ready = false;
+			MenuName = menuName;
+			MountID = mountID;
 			Request = new URLRequest();
 			ContentLoader = new Loader();
 			ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
@@ -174,18 +171,37 @@ package Components
 		}
 
 
+		protected function Mount(filepath:String):Boolean
+		{
+			if (File.ExistsIn(XSE, FileSystem.Textures, filepath))
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
+				Unmount(filepath);
+				F4SE.Extensions.MountImage(XSE, MenuName, filepath, MountID);
+				return true;
+			}
+			else
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "File does not exist. '"+filepath+"'.");
+				return false;
+			}
+		}
+
+
 		/**
 		 * Removes a child of this Loader object that was loaded by using the load() method.
 		 */
 		public function Unload():Boolean
 		{
 			if (!Ready) { return false; }
+			ContentLoader.close();
+
 			if (FilePath != null)
 			{
+				Unmount(FilePath);
 				var success:Boolean = true;
 				try
 				{
-					ContentLoader.close();
 					if (Path.GetExtension(FilePath) == File.SWF)
 					{
 						ContentLoader.unloadAndStop();
@@ -200,6 +216,7 @@ package Components
 					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
 					success = false;
 				}
+
 				if (success)
 				{
 					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
@@ -214,26 +231,6 @@ package Components
 		}
 
 
-		// Functions
-		//---------------------------------------------
-
-		protected function Mount(filepath:String):Boolean
-		{
-			if (File.ExistsIn(XSE, FileSystem.Textures, filepath))
-			{
-				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
-				Unmount(FilePath);
-				F4SE.Extensions.MountImage(XSE, MenuName, filepath, MountID);
-				return true;
-			}
-			else
-			{
-				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "File does not exist. '"+filepath+"'.");
-				return false;
-			}
-		}
-
-
 		protected function Unmount(filepath:String):Boolean
 		{
 			if (filepath != null)
@@ -241,6 +238,7 @@ package Components
 				if (Path.GetExtension(filepath) == File.DDS)
 				{
 					F4SE.Extensions.UnmountImage(XSE, MenuName, filepath);
+					// F4SE.Extensions.UnmountImage(XSE, MenuName, MountID);
 					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
 					return true;
 				}
