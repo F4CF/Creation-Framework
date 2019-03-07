@@ -4,8 +4,7 @@ package System.IO
 
 	/**
 	 * Performs operations on String instances that contain file or directory path information.
-	 *
-	 * https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/String.html
+	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/String.html
 	 */
 	public class Path
 	{
@@ -41,8 +40,8 @@ package System.IO
 		 * Returns the extension of the specified path string.
 		 * @param path - The path string from which to get the extension.
 		 * @return String - The extension of the specified path (including the period "."), or null, or Empty.
-		 * 	* If path is null, GetExtension(String) returns null.
-		 * 	* If path does not have extension information, GetExtension(String) returns Empty.
+		 *    * If path is null, GetExtension(String) returns null.
+		 *    * If path does not have extension information, GetExtension(String) returns Empty.
 		 */
 		public static function GetExtension(path:String):String
 		{
@@ -87,14 +86,12 @@ package System.IO
 
 		/**
 		 * Gets an array containing the characters that are not allowed in path names.
-		 *
-		 * The following characters are invalid in a path:
+		 * @example The following characters are invalid in a path:
 		 * Char    Hex Value
 		 * ",      0022
 		 * <,      003C
 		 * >,      003E
 		 * |,      007C
-		 *
 		 * @param path -
 		 * @return ???? -
 		 */
@@ -106,14 +103,12 @@ package System.IO
 
 		/**
 		 * Gets an array containing the characters that are not allowed in path names.
-		 *
-		 * The following characters are invalid in a filename:
+		 * @example The following characters are invalid in a filename:
 		 * Char    Hex Value
 		 * ",      0022
 		 * <,      003C
 		 * >,      003E
 		 * |,      007C
-		 *
 		 * @param path -
 		 * @return ???? -
 		 */

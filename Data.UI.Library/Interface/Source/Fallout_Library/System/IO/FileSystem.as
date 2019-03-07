@@ -5,6 +5,10 @@ package System.IO
 
 	public class FileSystem
 	{
+		/** Constant value used for loading an image based on the url protocol string.*/
+		public static const ImageProtocol:String = "img://";
+
+
 		// Archives
 		public static const Interface:String = "Interface";
 		public static const Meshes:String = "Meshes";

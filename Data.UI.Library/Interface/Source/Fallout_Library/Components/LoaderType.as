@@ -1,34 +1,39 @@
 package Components
-{ // WIP
+{
 	import F4SE.Extensions;
 	import F4SE.ICodeObject;
 	import flash.display.DisplayObject;
 	import flash.display.Loader;
-	import flash.display.LoaderInfo;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.net.URLRequest;
 	import System.Diagnostics.Debug;
-	import System.Display;
 	import System.IO.File;
+	import System.IO.FileSystem;
 	import System.IO.Path;
 
-	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html
-	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html
-	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/LoaderInfo.html
-	// https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/URLRequest.html
-
 	/**
-	 * TODO: Look into if a thread-safe lock is needed.
-	 * TODO: I removed the visibility preferences. Ill let child classes handle visibility.
-	 * TODO: Maybe I should NOT be using add/remove child on the loader itself? Maybe not at all?
-	 * 		The AS3 documentation implies that calling `loader.unload()` is enough.
+	 * The Loader class is used to load SWF & DDS files.
+	 * TODO: Check `MenuName` for nulls.
+	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html
+	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/URLRequest.html
 	 */
 	public dynamic class LoaderType extends MovieClip implements F4SE.ICodeObject
 	{
 		// F4SE
 		protected var XSE:*;
+
+		// Class
+		private var Ready:Boolean = false;
+
+		private var Menu:String;
+		public function get MenuName():String { return Menu; }
+		public function set MenuName(value:String):void { Menu = value; }
+
+		private var ImageMount:String;
+		public function get MountID():String { return ImageMount; }
+		public function set MountID(value:String):void { ImageMount = value; }
 
 		// Files
 		private var Value:String;
@@ -59,7 +64,6 @@ package Components
 			ContentLoader = new Loader();
 			ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
 			ContentLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
-			Debug.WriteLine("[Components.LoaderType]", "(ctor)", "Constructor Code");
 		}
 
 
@@ -84,14 +88,12 @@ package Components
 
 		protected function OnAddedToStage(e:Event):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnAddedToStage)");
 			this.addChild(ContentLoader);
 		}
 
 
 		protected function OnRemovedFromStage(e:Event):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnRemovedFromStage)", "Unloading..");
 			Unload();
 			this.removeChild(ContentLoader);
 		}
@@ -99,14 +101,14 @@ package Components
 
 		protected function OnLoadComplete(e:Event):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", FilePath);
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", "FilePath:"+FilePath);
 			this.dispatchEvent(new Event(LOAD_COMPLETE));
 		}
 
 
 		protected function OnLoadError(e:IOErrorEvent):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", FilePath);
+			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", "FilePath:"+FilePath, e.toString());
 			Unload();
 			this.dispatchEvent(new Event(LOAD_ERROR));
 		}
@@ -116,44 +118,51 @@ package Components
 		//---------------------------------------------
 
 		/**
-		 * The absolute or relative URL of the SWF, JPEG, GIF, or PNG file to be loaded.
-		 * A relative path must be relative to the main SWF file.
-		 * Absolute URLs must include the protocol reference, such as http:// or file:///.
-		 * Filenames cannot include disk drive specifications.
-		 *
-		 * https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html#load()
-		 * // TODO: Add parameter check for file exists.
+		 * The absolute or relative path of the SWF or DDS file to be loaded.
+		 * A relative path must be relative to the main SWF file. Filenames cannot include disk drive specifications.
+		 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html#load()
 		 */
-		public function Load(filepath:String, mountID:String=null):Boolean
+		public function Load(filepath:String):Boolean
 		{
+			if (!Ready) { Ready = true; }
+			Unload();
+
 			if (filepath != null)
 			{
-				Unload();
-				Value = filepath;
-				if (mountID != null)
+				var extension:String = Path.GetExtension(filepath);
+				if (extension == File.SWF && File.ExistsIn(XSE, FileSystem.Interface, filepath))
 				{
-					// Use the mount ID for textures if one is provided.
-					Request.url = mountID;
+					Request.url = filepath;
+				}
+				else if (extension == File.DDS && File.ExistsIn(XSE, FileSystem.Textures, filepath))
+				{
+					if (MountID != null)
+					{
+						Mount(filepath);
+						Request.url = FileSystem.ImageProtocol+MountID;
+					}
+					else
+					{
+						Debug.WriteLine("[Components.LoaderType]", "(Load)", "The mount ID cannot be null.", "filepath:"+filepath);
+						return false;
+					}
 				}
 				else
 				{
-					Request.url = filepath;
+					Debug.WriteLine("[Components.LoaderType]", "(Load)", "The file doesnt not exist or is not supported.", "filepath:"+filepath);
+					return false;
 				}
 
 				var success:Boolean = true;
 				try
 				{
+					Value = filepath;
 					ContentLoader.load(Request);
 				}
 				catch (error:Error)
 				{
 					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Error:", error.toString());
 					success = false;
-				}
-
-				if (success)
-				{
-					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Loaded the content request.", "filepath:"+filepath, "mountID:"+mountID);
 				}
 				return success;
 			}
@@ -170,6 +179,7 @@ package Components
 		 */
 		public function Unload():Boolean
 		{
+			if (!Ready) { return false; }
 			if (FilePath != null)
 			{
 				var success:Boolean = true;
@@ -199,7 +209,6 @@ package Components
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Load)", "The filepath cannot be null.");
 				return false;
 			}
 		}
@@ -208,10 +217,51 @@ package Components
 		// Functions
 		//---------------------------------------------
 
+		protected function Mount(filepath:String):Boolean
+		{
+			if (File.ExistsIn(XSE, FileSystem.Textures, filepath))
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
+				Unmount(FilePath);
+				F4SE.Extensions.MountImage(XSE, MenuName, filepath, MountID);
+				return true;
+			}
+			else
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "File does not exist. '"+filepath+"'.");
+				return false;
+			}
+		}
+
+
+		protected function Unmount(filepath:String):Boolean
+		{
+			if (filepath != null)
+			{
+				if (Path.GetExtension(filepath) == File.DDS)
+				{
+					F4SE.Extensions.UnmountImage(XSE, MenuName, filepath);
+					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
+					return true;
+				}
+				else
+				{
+					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Only DDS texture files may be unmounted. '"+filepath+"'");
+					return false;
+				}
+			}
+			else
+			{
+				Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Cannot unmount a null filepath.");
+				return false;
+			}
+		}
+
+
 		public override function toString():String
 		{
 			var sResolution = "Resolution: "+stage.width+"x"+stage.height+" ("+this.x+"x"+this.y+")";
-			return "[Components.LoaderType] "+sResolution+", "+"Requested: '"+Requested+"'";
+			return sResolution+", "+"Requested: '"+Requested+"', FilePath:'"+FilePath+"'";
 		}
 
 
