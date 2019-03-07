@@ -4,6 +4,8 @@ package System.IO
 
 	/**
 	 * Performs operations on String instances that contain file or directory path information.
+	 *
+	 * https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/String.html
 	 */
 	public class Path
 	{

@@ -44,7 +44,7 @@ package F4SE
 		 * @param path - The directory to search within. Searches the top level folder only.
 		 * @param match - Filters the listing using a string pattern. The pattern accepts a wildcard expression (*).
 		 * @param recursive - Searches any child directories as well.
-		 * @return Array - An array of F4SE `FileSystemInfo` objects.
+		 * @return Array - An array of F4SE file system info objects.
 		 */
 		public static function GetDirectoryListing(f4se:*, path:String, match:String, recursive:Boolean=false):Array
 		{
