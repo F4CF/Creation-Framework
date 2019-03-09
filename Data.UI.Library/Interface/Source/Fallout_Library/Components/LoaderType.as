@@ -238,7 +238,6 @@ package Components
 				if (Path.GetExtension(filepath) == File.DDS)
 				{
 					F4SE.Extensions.UnmountImage(XSE, MenuName, filepath);
-					// F4SE.Extensions.UnmountImage(XSE, MenuName, MountID);
 					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
 					return true;
 				}
