@@ -15,14 +15,14 @@ package Components
 
 	/**
 	 * The Loader class is used to load SWF & DDS files.
-	 * TODO: Check `MenuName` for nulls.
+	 * The files must be loose (unarchived) or they will not be detected by FileSystem.
 	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html
 	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/URLRequest.html
 	 */
 	public dynamic class LoaderType extends MovieClip implements F4SE.ICodeObject
 	{
 		// F4SE
-		protected var XSE:*;
+		protected var F4SE:*;
 
 		// Loader
 		private var Ready:Boolean;
@@ -51,16 +51,27 @@ package Components
 
 		public function LoaderType(menuName:String, mountID:String)
 		{
-			super();
-			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
-			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
-			Ready = false;
-			MenuName = menuName;
-			MountID = mountID;
-			Request = new URLRequest();
-			ContentLoader = new Loader();
-			ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
-			ContentLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
+				super();
+				if (menuName == null)
+				{
+					throw new Error("[Components.LoaderType] (ctor) The parameter 'menuName' cannot be null.");
+				}
+				else if (mountID == null)
+				{
+					throw new Error("[Components.LoaderType] (ctor) The parameter 'mountID' cannot be null.");
+				}
+				else
+				{
+					MenuName = menuName;
+					MountID = mountID;
+					Ready = false;
+					Request = new URLRequest();
+					ContentLoader = new Loader();
+					this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
+					this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
+					ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
+					ContentLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
+				}
 		}
 
 
@@ -69,7 +80,7 @@ package Components
 		{
 			if (codeObject != null)
 			{
-				XSE = codeObject;
+				F4SE = codeObject;
 				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
 				this.dispatchEvent(new Event(CODEOBJECT_READY));
 			}
@@ -127,11 +138,11 @@ package Components
 			if (filepath != null)
 			{
 				var extension:String = Path.GetExtension(filepath);
-				if (extension == File.SWF && File.ExistsIn(XSE, FileSystem.Interface, filepath))
+				if (extension == File.SWF && File.ExistsIn(F4SE, FileSystem.Interface, filepath))
 				{
 					Request.url = filepath;
 				}
-				else if (extension == File.DDS && File.ExistsIn(XSE, FileSystem.Textures, filepath))
+				else if (extension == File.DDS && File.ExistsIn(F4SE, FileSystem.Textures, filepath))
 				{
 					if (MountID != null)
 					{
@@ -173,11 +184,11 @@ package Components
 
 		protected function Mount(filepath:String):Boolean
 		{
-			if (File.ExistsIn(XSE, FileSystem.Textures, filepath))
+			if (File.ExistsIn(F4SE, FileSystem.Textures, filepath))
 			{
 				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
 				Unmount(filepath);
-				F4SE.Extensions.MountImage(XSE, MenuName, filepath, MountID);
+				F4SE.Extensions.MountImage(F4SE, MenuName, filepath, MountID);
 				return true;
 			}
 			else
@@ -237,7 +248,7 @@ package Components
 			{
 				if (Path.GetExtension(filepath) == File.DDS)
 				{
-					F4SE.Extensions.UnmountImage(XSE, MenuName, filepath);
+					F4SE.Extensions.UnmountImage(F4SE, MenuName, filepath);
 					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
 					return true;
 				}
