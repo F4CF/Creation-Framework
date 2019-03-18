@@ -266,6 +266,19 @@ package Components
 		}
 
 
+		public function GetInstance():string
+		{
+			if (Content)
+			{
+				return Display.GetInstanceFrom(Content, this);
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+
 		public override function toString():String
 		{
 			var sResolution = "Resolution: "+stage.width+"x"+stage.height+" ("+this.x+"x"+this.y+")";
