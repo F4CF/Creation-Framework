@@ -1,7 +1,6 @@
 package Components
 {
 	import F4SE.Extensions;
-	import F4SE.ICodeObject;
 	import flash.display.DisplayObject;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
@@ -9,25 +8,26 @@ package Components
 	import flash.events.IOErrorEvent;
 	import flash.net.URLRequest;
 	import System.Diagnostics.Debug;
+	import System.Display;
 	import System.IO.File;
 	import System.IO.FileSystem;
 	import System.IO.Path;
 
 	/**
-	 * The Loader class is used to load SWF & DDS files.
+	 * This class is used to load SWF & DDS files.
 	 * The files must be loose (unarchived) or they will not be detected by FileSystem.
 	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html
 	 * @see https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/URLRequest.html
 	 */
-	public dynamic class LoaderType extends MovieClip implements F4SE.ICodeObject
+	public dynamic class AssetLoader extends MovieClip
 	{
-		// F4SE
-		protected var F4SE:*;
-
 		// Loader
 		private var Ready:Boolean;
 		private var MenuName:String;
 		private var MountID:String;
+
+		private var Asset:Loader;
+		protected function get Content():DisplayObject { return Asset.content; }
 
 		// Files
 		private var Value:String;
@@ -36,12 +36,7 @@ package Components
 		private var Request:URLRequest;
 		public function get Requested():String { return Request.url; }
 
-		// Loader
-		private var ContentLoader:Loader;
-		protected function get Content():DisplayObject { return ContentLoader.content; }
-
 		// Events
-		public static const CODEOBJECT_READY:String = "CodeObject_Ready";
 		public static const LOAD_ERROR:String = "Load_Error";
 		public static const LOAD_COMPLETE:String = "Load_Complete";
 
@@ -49,44 +44,28 @@ package Components
 		// Initialize
 		//---------------------------------------------
 
-		public function LoaderType(menuName:String, mountID:String)
+		public function AssetLoader(menuName:String, mountID:String)
 		{
-				super();
-				if (menuName == null)
-				{
-					throw new Error("[Components.LoaderType] (ctor) The parameter 'menuName' cannot be null.");
-				}
-				else if (mountID == null)
-				{
-					throw new Error("[Components.LoaderType] (ctor) The parameter 'mountID' cannot be null.");
-				}
-				else
-				{
-					MenuName = menuName;
-					MountID = mountID;
-					Ready = false;
-					Request = new URLRequest();
-					ContentLoader = new Loader();
-					this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
-					this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
-					ContentLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
-					ContentLoader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
-				}
-		}
-
-
-		// @F4SE.ICodeObject
-		public function onF4SEObjCreated(codeObject:*):void
-		{
-			if (codeObject != null)
+			super();
+			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
+			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
+			if (menuName == null)
 			{
-				F4SE = codeObject;
-				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "Received the F4SE code object.");
-				this.dispatchEvent(new Event(CODEOBJECT_READY));
+				throw new Error("[Components.AssetLoader] (ctor) The parameter 'menuName' cannot be null.");
+			}
+			else if (mountID == null)
+			{
+				throw new Error("[Components.AssetLoader] (ctor) The parameter 'mountID' cannot be null.");
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(onF4SEObjCreated)", "The F4SE object was null.");
+				MenuName = menuName;
+				MountID = mountID;
+				Ready = false;
+				Request = new URLRequest();
+				Asset = new Loader();
+				Asset.contentLoaderInfo.addEventListener(Event.COMPLETE, this.OnLoadComplete);
+				Asset.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.OnLoadError);
 			}
 		}
 
@@ -96,27 +75,27 @@ package Components
 
 		protected function OnAddedToStage(e:Event):void
 		{
-			this.addChild(ContentLoader);
+			this.addChild(Asset);
 		}
 
 
 		protected function OnRemovedFromStage(e:Event):void
 		{
 			Unload();
-			this.removeChild(ContentLoader);
+			this.removeChild(Asset);
 		}
 
 
 		protected function OnLoadComplete(e:Event):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadComplete)", "FilePath:"+FilePath);
+			Debug.WriteLine("[Components.AssetLoader]", "(OnLoadComplete)", "FilePath:"+FilePath);
 			this.dispatchEvent(new Event(LOAD_COMPLETE));
 		}
 
 
 		protected function OnLoadError(e:IOErrorEvent):void
 		{
-			Debug.WriteLine("[Components.LoaderType]", "(OnLoadError)", "FilePath:"+FilePath, e.toString());
+			Debug.WriteLine("[Components.AssetLoader]", "(OnLoadError)", "FilePath:"+FilePath, e.toString());
 			Unload();
 			this.dispatchEvent(new Event(LOAD_ERROR));
 		}
@@ -138,11 +117,11 @@ package Components
 			if (filepath != null)
 			{
 				var extension:String = Path.GetExtension(filepath);
-				if (extension == File.SWF && File.ExistsIn(F4SE, FileSystem.Interface, filepath))
+				if (extension == File.SWF && File.ExistsIn(FileSystem.Interface, filepath))
 				{
 					Request.url = filepath;
 				}
-				else if (extension == File.DDS && File.ExistsIn(F4SE, FileSystem.Textures, filepath))
+				else if (extension == File.DDS && File.ExistsIn(FileSystem.Textures, filepath))
 				{
 					if (MountID != null)
 					{
@@ -151,13 +130,13 @@ package Components
 					}
 					else
 					{
-						Debug.WriteLine("[Components.LoaderType]", "(Load)", "The mount ID cannot be null.", "filepath:"+filepath);
+						Debug.WriteLine("[Components.AssetLoader]", "(Load)", "The mount ID cannot be null.", "filepath:"+filepath);
 						return false;
 					}
 				}
 				else
 				{
-					Debug.WriteLine("[Components.LoaderType]", "(Load)", "The file doesnt not exist or is not supported.", "filepath:"+filepath);
+					Debug.WriteLine("[Components.AssetLoader]", "(Load)", "The file doesnt not exist or is not supported.", "filepath:"+filepath);
 					return false;
 				}
 
@@ -165,18 +144,18 @@ package Components
 				try
 				{
 					Value = filepath;
-					ContentLoader.load(Request);
+					Asset.load(Request);
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[Components.LoaderType]", "(Load)", "Error:", error.toString());
+					Debug.WriteLine("[Components.AssetLoader]", "(Load)", "Error:", error.toString());
 					success = false;
 				}
 				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Load)", "The filepath cannot be null.");
+				Debug.WriteLine("[Components.AssetLoader]", "(Load)", "The filepath cannot be null.");
 				return false;
 			}
 		}
@@ -184,16 +163,16 @@ package Components
 
 		protected function Mount(filepath:String):Boolean
 		{
-			if (File.ExistsIn(F4SE, FileSystem.Textures, filepath))
+			if (File.ExistsIn(FileSystem.Textures, filepath))
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
+				Debug.WriteLine("[Components.AssetLoader]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
 				Unmount(filepath);
-				F4SE.Extensions.MountImage(F4SE, MenuName, filepath, MountID);
+				F4SE.Extensions.MountImage(MenuName, filepath, MountID);
 				return true;
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Mount)", "File does not exist. '"+filepath+"'.");
+				Debug.WriteLine("[Components.AssetLoader]", "(Mount)", "File does not exist. '"+filepath+"'.");
 				return false;
 			}
 		}
@@ -205,7 +184,7 @@ package Components
 		public function Unload():Boolean
 		{
 			if (!Ready) { return false; }
-			ContentLoader.close();
+			Asset.close();
 
 			if (FilePath != null)
 			{
@@ -215,22 +194,22 @@ package Components
 				{
 					if (Path.GetExtension(FilePath) == File.SWF)
 					{
-						ContentLoader.unloadAndStop();
+						Asset.unloadAndStop();
 					}
 					else
 					{
-						ContentLoader.unload();
+						Asset.unload();
 					}
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Error:", error.toString());
+					Debug.WriteLine("[Components.AssetLoader]", "(Unload)", "Error:", error.toString());
 					success = false;
 				}
 
 				if (success)
 				{
-					Debug.WriteLine("[Components.LoaderType]", "(Unload)", "Unloaded content from loader.");
+					Debug.WriteLine("[Components.AssetLoader]", "(Unload)", "Unloaded content from loader.");
 					Value = null;
 				}
 				return success;
@@ -248,25 +227,25 @@ package Components
 			{
 				if (Path.GetExtension(filepath) == File.DDS)
 				{
-					F4SE.Extensions.UnmountImage(F4SE, MenuName, filepath);
-					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
+					F4SE.Extensions.UnmountImage(MenuName, filepath);
+					Debug.WriteLine("[Components.AssetLoader]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
 					return true;
 				}
 				else
 				{
-					Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Only DDS texture files may be unmounted. '"+filepath+"'");
+					Debug.WriteLine("[Components.AssetLoader]", "(Unmount)", "Only DDS texture files may be unmounted. '"+filepath+"'");
 					return false;
 				}
 			}
 			else
 			{
-				Debug.WriteLine("[Components.LoaderType]", "(Unmount)", "Cannot unmount a null filepath.");
+				Debug.WriteLine("[Components.AssetLoader]", "(Unmount)", "Cannot unmount a null filepath.");
 				return false;
 			}
 		}
 
 
-		public function GetInstance():string
+		public function GetInstance():String
 		{
 			if (Content)
 			{

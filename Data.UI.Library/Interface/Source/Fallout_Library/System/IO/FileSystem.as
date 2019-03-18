@@ -18,17 +18,16 @@ package System.IO
 
 		/**
 		 *
-		 * @param f4se - The F4SE code object.
-		 * @param path -
+		 * @param path - The file or directory path to list.
 		 * @param match -
 		 * @param recursive -
 		 * @return Vector.<FileSystemInfo> - ???
 		 */
-		public static function GetListing(f4se:*, path:String, match:String, recursive:Boolean=false):Vector.<FileSystemInfo>
+		public static function GetListing(path:String, match:String, recursive:Boolean=false):Vector.<FileSystemInfo>
 		{
-			if (f4se != null)
+			if (F4SE.Extensions.API != null)
 			{
-				var array:Array = F4SE.Extensions.GetDirectoryListing(f4se, path, match, recursive);
+				var array:Array = F4SE.Extensions.GetDirectoryListing(path, match, recursive);
 				if (array != null)
 				{
 					if(array.length > 0)
@@ -54,7 +53,7 @@ package System.IO
 			}
 			else
 			{
-				Debug.WriteLine("[System.IO.FileSystem]", "GetListing", "The f4se object cannot be null.");
+				Debug.WriteLine("[System.IO.FileSystem]", "GetListing", "The F4SE object cannot be null.");
 				return null;
 			}
 		}

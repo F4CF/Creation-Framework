@@ -5,55 +5,103 @@ package F4SE
 	/**
 	 * Exposes the F4SE code object's methods and data.
 	 * https://www.creationkit.com/fallout4/index.php?title=Category:F4SE
-	 * TODO: Check for null arguments on f4se function calls. A null parameter may crash the game!
 	 * TODO: Add boolean return values for functions.
 	 */
 	public class Extensions
 	{
+		/** The F4SE API code object to use. */
+		public static var API:*;
+
 
 		/**
 		 * Gets an object representing the running version of F4SE.
-		 * @param f4se - The F4SE `code` object to use.
 		 * @return Object - The F4SE `version` object.
 		 */
-		public static function GetVersion(f4se:*):Object
+		public static function GetVersion():Object
 		{
-			if (f4se != null)
+			if (API != null)
 			{
-				if (f4se.version != null)
+				if (API.version != null)
 				{
-					return f4se.version;
+					return API.version;
 				}
 				else
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "f4se.version", "The 'f4se.version' object cannot be null.");
+					Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "API.version", "The 'API.version' object cannot be null.");
 					return null;
 				}
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "f4se", "The 'f4se' object cannot be null.");
+				Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "API", "The 'API' object cannot be null.");
 				return null;
+			}
+		}
+
+
+		// TODO: See if `... rest` parameters would work here.
+		// TODO: See if generic event arguments are allowed. First argument is strongly typed to String.
+		public static function SendExternalEvent(eventID:String, argument:String=null, ... rest):Boolean
+		{
+			if (API != null)
+			{
+				if (eventID != null)
+				{
+					var success:Boolean = true;
+					try
+					{
+						if (argument == null)
+						{
+							API.SendExternalEvent(eventID);
+						}
+						else
+						{
+							if (rest == null)
+							{
+								API.SendExternalEvent(eventID, argument);
+							}
+							else
+							{
+								API.SendExternalEvent(eventID, argument, rest);
+							}
+						}
+					}
+					catch (error:Error)
+					{
+						Debug.WriteLine("[F4SE.Extensions]", "(SendExternalEvent)", "ERROR:", error.toString());
+						success = false;
+					}
+					return success;
+				}
+				else
+				{
+					Debug.WriteLine("[F4SE.Extensions]", "SendExternalEvent", "eventID", "The `eventID` cannot be null.");
+					return false;
+				}
+			}
+			else
+			{
+				Debug.WriteLine("[F4SE.Extensions]", "SendExternalEvent", "API", "The `API` object cannot be null.");
+				return false;
 			}
 		}
 
 
 		/**
 		 * Gets an array of objects representing `FileSystemInfo` objects for the given path.
-		 * @param f4se - The F4SE `code` object to use.
 		 * @param path - The directory to search within. Searches the top level folder only.
 		 * @param match - Filters the listing using a string pattern. The pattern accepts a wildcard expression (*).
 		 * @param recursive - Searches any child directories as well.
 		 * @return Array - An array of F4SE file system info objects.
 		 */
-		public static function GetDirectoryListing(f4se:*, path:String, match:String, recursive:Boolean=false):Array
+		public static function GetDirectoryListing(path:String, match:String, recursive:Boolean=false):Array
 		{
-			if (f4se != null)
+			if (API != null)
 			{
 				var array:Array;
 				try
 				{
-					array = f4se.GetDirectoryListing(path, match, recursive);
+					array = API.GetDirectoryListing(path, match, recursive);
 				}
 				catch (error:Error)
 				{
@@ -63,7 +111,7 @@ package F4SE
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(GetDirectoryListing)", "The f4se object cannot be null.");
+				Debug.WriteLine("[F4SE.Extensions]", "(GetDirectoryListing)", "The API object cannot be null.");
 				return null;
 			}
 		}
@@ -71,140 +119,129 @@ package F4SE
 
 		/**
 		 * Mounts a texture to the given menu.
-		 * @param f4se - The F4SE `code` object to use.
 		 * @param menuName - The name of a menu the texture will be mounted to.
 		 * @param mountPath - The file path to a texture that will be mounted.
 		 * @param mountName - A unique identifier for this texture mount.
 		 */
-		public static function MountImage(f4se:*, menuName:String, mountPath:String, mountName:String):void
+		public static function MountImage(menuName:String, mountPath:String, mountName:String):Boolean
 		{
-			if (f4se != null)
+			if (API != null)
 			{
 				Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", menuName, mountPath, mountName);
+				var success:Boolean = true;
 				try
 				{
-					f4se.MountImage(menuName, mountPath, mountName);
+					API.MountImage(menuName, mountPath, mountName);
 				}
 				catch (error:Error)
 				{
 					Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", "ERROR:", error.toString());
+					success = false;
 				}
+				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", "The f4se object cannot be null.");
+				Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", "The API object cannot be null.");
+				return false;
 			}
 		}
 
 
 		/**
 		 * Unmounts a texture from the given menu.
-		 * @param f4se - The F4SE `code` object to use.
 		 * @param menuName - The name of a menu the texture will be unmounted from.
 		 * @param mountPath - The file path to a texture that will be unmounted.
 		 */
-		public static function UnmountImage(f4se:*, menuName:String, mountPath:String):void
+		public static function UnmountImage(menuName:String, mountPath:String):Boolean
 		{
-			if (f4se != null)
+			if (API != null)
 			{
+				var success:Boolean = true;
 				try
 				{
 					Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", menuName, mountPath);
-					f4se.UnmountImage(menuName, mountPath);
+					API.UnmountImage(menuName, mountPath);
 				}
 				catch (error:Error)
 				{
 					Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", "ERROR:", error.toString());
+					success = false;
 				}
+				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", "The f4se object cannot be null.");
+				Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", "The API object cannot be null.");
+				return false;
 			}
 		}
 
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object to use.
+		//  * @param API - The F4SE `code` object to use.
 		//  */
-		// public static function GetMembers(f4se:*):void
+		// public static function GetMembers(API:*):void
 		// {
-		// 	if (f4se != null)
+		// 	if (API != null)
 		// 	{
 		// 		trace("derpy GetMembers");
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "GetMembers", "The f4se object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.Extensions]", "GetMembers", "The API object cannot be null.");
 		// 	}
 		// }
 
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object to use.
+		//  * @param API - The F4SE `code` object to use.
 		//  */
-		// public static function CallFunctionNoWait(f4se:*):void
+		// public static function CallFunctionNoWait(API:*):void
 		// {
-		// 	if (f4se != null)
+		// 	if (API != null)
 		// 	{
 		// 		trace("derpy CallFunctionNoWait");
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "CallFunctionNoWait", "The f4se object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.Extensions]", "CallFunctionNoWait", "The API object cannot be null.");
 		// 	}
 		// }
 
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object to use.
+		//  * @param API - The F4SE `code` object to use.
 		//  */
-		// public static function AllowTextInput(f4se:*):void
+		// public static function AllowTextInput(API:*):void
 		// {
-		// 	if (f4se != null)
+		// 	if (API != null)
 		// 	{
 		// 		trace("derpy AllowTextInput");
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "AllowTextInput", "The f4se object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.Extensions]", "AllowTextInput", "The API object cannot be null.");
 		// 	}
 		// }
 
 
 		// /**
 		//  *
-		//  * @param f4se - The F4SE `code` object to use.
+		//  * @param API - The F4SE `code` object to use.
 		//  */
-		// public static function SendExternalEvent(f4se:*):void
+		// public static function GetPlugins(API:*):void
 		// {
-		// 	if (f4se != null)
-		// 	{
-		// 		trace("derpy SendExternalEvent");
-		// 	}
-		// 	else
-		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "SendExternalEvent", "The f4se object cannot be null.");
-		// 	}
-		// }
-
-
-		// /**
-		//  *
-		//  * @param f4se - The F4SE `code` object to use.
-		//  */
-		// public static function GetPlugins(f4se:*):void
-		// {
-		// 	if (f4se != null)
+		// 	if (API != null)
 		// 	{
 		// 		trace("derpy GetPlugins");
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "GetPlugins", "The f4se object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.Extensions]", "GetPlugins", "The API object cannot be null.");
 		// 	}
 		// }
 

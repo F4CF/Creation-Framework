@@ -24,11 +24,11 @@ package System.IO
 		 * @param filepath - The file to check. "Fallout 4\Data\{FILEPATH}"
 		 * @return true if the path contains the name of an existing file; otherwise, false.
 		 */
-		public static function Exists(f4se:*, filepath:String):Boolean
+		public static function Exists(filepath:String):Boolean
 		{
 			var name:String = Path.GetFileName(filepath);
 			var folder:String = Path.GetDirectory(filepath);
-			return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length == 1;
+			return F4SE.Extensions.GetDirectoryListing(folder, name, false).length == 1;
 		}
 
 
@@ -39,11 +39,11 @@ package System.IO
 		 * @param filepath - The file to check. "Fallout 4\Data\{ARCHIVE}\{FILEPATH}"
 		 * @return true if the path contains the name of an existing file; otherwise, false.
 		 */
-		public static function ExistsIn(f4se:*, archive:String, filepath:String):Boolean
+		public static function ExistsIn(archive:String, filepath:String):Boolean
 		{
 			var name:String = Path.GetFileName(filepath);
 			var folder:String = Path.GetDirectory("Data\\"+archive+"\\"+filepath);
-			return F4SE.Extensions.GetDirectoryListing(f4se, folder, name, false).length == 1;
+			return F4SE.Extensions.GetDirectoryListing(folder, name, false).length == 1;
 		}
 
 
