@@ -1,0 +1,5 @@
+Set BoSFastTravelCanUse To 1
+Set BoSFastTravelPilot To 1
+PRID 1BBC91
+Enable
+Player.AddItem 00056917 20
