@@ -135,7 +135,7 @@ function execute()
 	{
 		fl.openScript(mainSwf);
 	}
-	fl.trace(FLfile.read(dirURI+"Compiler_Log.txt"));
+	fl.trace(FLfile.read(dirURI+"FlashCompiler_Log.txt"));
 	if (error)
 	{
 		alert("Error(s) encountered. Please check the log file for details.");
@@ -158,7 +158,7 @@ function compile(p_fileURI, p_profile, p_fileName)
 	}
 	doc.publish();
 	appendToLog("");
-	fl.outputPanel.save(dirURI+"Compiler_Log.txt", true);
+	fl.outputPanel.save(dirURI+"FlashCompiler_Log.txt", true);
 	fl.outputPanel.clear();
 	fl.closeDocument(fl.documents[0], false); // close fla without saving
 }
@@ -191,12 +191,12 @@ function move(p_file, p_newName, p_fileName)
 function appendToLog(p_str)
 {
 	log += "\n"+p_str;
-	FLfile.write(dirURI+"Compiler_Log.txt", "\n"+p_str, "append");
+	FLfile.write(dirURI+"FlashCompiler_Log.txt", "\n"+p_str, "append");
 }
 
 
 function startLog(p_str)
 {
 	log = p_str;
-	FLfile.write(dirURI+"Compiler_Log.txt", p_str);
+	FLfile.write(dirURI+"FlashCompiler_Log.txt", p_str);
 }
