@@ -1,3 +1,34 @@
-# Fallout 4 Scripting Library
+# Fallout 4 Scripting Framework
+A general purpose scripting library and framework for Fallout 4 which provides support for Actionscript 3.0 and Papyrus.
+These libraries and frameworks are heavily inspired by Microsoft's .NET Framework.
 
-A general purpose scripting library for Fallout 4. Supports Papyrus and AS3.
+The framework is divided into several assemblies, imports, and namespaces.
+
+
+# Assembly: `System.esl`
+The scripting framework assembly `System.esl` is divided into several imports and namespaces.
+
+#### Import: `System`
+The namespace contains fundamental classes and base classes that define commonly-used functions and data types.
+
+#### Import: `System.Diagnostics`
+The namespace includes classes that allow you to interact with papyrus logs, performance counters, unit testing, and other diagnostics.
+
+#### Import: `System.Objects`
+The namespace includes classes that allow you to programmatically instantiate `new` Papyrus script instances.
+
+#### Import: `System.Projects`
+The namespace includes classes that provide common patterns for projects.
+
+
+# Assembly: `System.UI.esl`
+The scripting framework assembly `System.UI.esl` provides classes for interacting with the Scaleform user interface.
+
+#### Import: `System.UI`
+The namespace includes classes that allow for interacting with the Scaleform user interface.
+
+# Assembly: `System.HUDFramework.esl`
+The namespace includes classes that allow for interacting with the HUD Framework by Reg2K.
+
+# Assembly: `System.MCM.esl`
+The namespace includes classes that allow for interacting with the Mod Configuration Menu by Neanka.
