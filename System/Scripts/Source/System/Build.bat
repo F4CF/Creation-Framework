@@ -1,1 +1,1 @@
-CALL "..\..\..\..\Papyrus Compiler\PapyrusCompiler" "System.ppj"
+CALL "..\..\..\..\Papyrus Compiler\PapyrusCompiler" "..\System\System.ppj"
