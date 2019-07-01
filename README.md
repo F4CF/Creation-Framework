@@ -4,7 +4,6 @@ These libraries and frameworks are heavily inspired by Microsoft's .NET Framewor
 
 The framework is divided into several assemblies, imports, and namespaces.
 
-
 # Assembly: `System.esl`
 The scripting framework assembly `System.esl` is divided into several imports and namespaces.
 
@@ -20,7 +19,6 @@ The namespace includes classes that allow you to programmatically instantiate `n
 #### Import: `System.Projects`
 The namespace includes classes that provide common patterns for projects.
 
-
 # Assembly: `System.UI.esl`
 The scripting framework assembly `System.UI.esl` provides classes for interacting with the Scaleform user interface.
 
@@ -32,3 +30,9 @@ The namespace includes classes that allow for interacting with the HUD Framework
 
 # Assembly: `System.MCM.esl`
 The namespace includes classes that allow for interacting with the Mod Configuration Menu by Neanka.
+
+# Assembly: `Scripting.esl`
+The scripting framework assembly `Scripting.esl` contains highly reusable and common scripts.
+
+# UI
+The UI scripting framework is a distributed library which may be included with source code. The user interface library has no assembly.
