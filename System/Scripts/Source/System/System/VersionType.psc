@@ -1,5 +1,5 @@
-Scriptname Papyrus:VersionType Const Native Hidden
-import Papyrus:BoolType
+Scriptname System:VersionType Const Native Hidden
+import System:BoolType
 ; https://msdn.microsoft.com/en-us/library/system.version(v=vs.110).aspx
 
 
@@ -11,7 +11,7 @@ Struct Version
 	int Minor = -1
 	int Build = -1
 	int Revision = -1
-	bool Distribution = false
+	string Label = ""
 EndStruct
 
 
@@ -19,13 +19,11 @@ EndStruct
 ;---------------------------------------------
 
 string Function VersionToString(Version value) Global
-	string sDevOnly = ""
-	If (value.Distribution)
-		sDevOnly = "[REL]"
+	If (value.Label)
+		return value.Major+"."+value.Minor+"."+value.Build+"."+value.Revision+" "+value.Label
 	Else
-		sDevOnly = "[WIP]"
+		return value.Major+"."+value.Minor+"."+value.Build+"."+value.Revision
 	EndIf
-	return value.Major+"."+value.Minor+"."+value.Build+"."+value.Revision+" "+sDevOnly
 EndFunction
 
 
@@ -44,9 +42,9 @@ bool Function VersionInequality(Version value, Version other) Global
 EndFunction
 
 
+; Determines whether `value` is greater than the `other`.
 bool Function VersionGreaterThan(Version value, Version other) Global
 	{The version on the left is greater than the version on the right.}
-	; Determines whether the first specified Version object is greater than the second specified Version object.
 	If (value.Major > other.Major)
 		return true
 	ElseIf (value.Minor > other.Minor)
@@ -56,15 +54,7 @@ bool Function VersionGreaterThan(Version value, Version other) Global
 	ElseIf (value.Revision > other.Revision)
 		return true
 	Else
-		; A distribution is greater than a work in progress.
-		int valueA = BoolToInt(value.Distribution)
-		int valueB = BoolToInt(other.Distribution)
-
-		If (valueA > valueB)
-			return true
-		Else
-			return false
-		EndIf
+		return false
 	EndIf
 EndFunction
 

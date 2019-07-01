@@ -1,4 +1,4 @@
-ScriptName Papyrus:Environment Const Hidden
+ScriptName System:Environment Const Hidden
 
 
 string Function Name() Global

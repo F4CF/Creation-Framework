@@ -1,5 +1,5 @@
-Scriptname Papyrus:Reference Const Native Hidden
-import Papyrus:PointType
+Scriptname System:Reference Const Native Hidden
+import System:PointType
 
 
 ; References

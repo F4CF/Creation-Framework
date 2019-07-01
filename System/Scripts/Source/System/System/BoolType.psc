@@ -1,4 +1,4 @@
-Scriptname Papyrus:BoolType Const Native Hidden
+Scriptname System:BoolType Const Native Hidden
 
 ; Boolean
 ;---------------------------------------------

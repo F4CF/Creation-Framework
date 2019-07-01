@@ -1,6 +1,6 @@
-Scriptname Papyrus:Script Const Native Hidden
-import Papyrus:Log
-import Papyrus:StringType
+Scriptname System:Script Const Native Hidden
+import System:Log
+import System:StringType
 
 
 ; States

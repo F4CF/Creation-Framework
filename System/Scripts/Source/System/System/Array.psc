@@ -1,4 +1,4 @@
-Scriptname Papyrus:Array Const Native Hidden
+Scriptname System:Array Const Native Hidden
 ; http://www.creationkit.com/fallout4/index.php?title=Array_Reference
 ; https://msdn.microsoft.com/en-us/library/system.array(v=vs.110).aspx
 ; https://msdn.microsoft.com/en-us/library/6sh2ey19.aspx  ; List<T> Class
