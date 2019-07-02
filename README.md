@@ -6,6 +6,52 @@ The framework is divided into several assemblies, imports, and namespaces.
 
 # Assembly: `System.esl`
 The scripting framework assembly `System.esl` is divided into several imports and namespaces.
+```
+System - Main.ba2
+|   Array.pex
+|   BoolType.pex
+|   Environment.pex
+|   External.pex
+|   Form.pex
+|   FormEx.pex
+|   Log.pex
+|   ObjectMod.pex
+|   ObjectModEx.pex
+|   PointType.pex
+|   Reference.pex
+|   Script.pex
+|   StringType.pex
+|   Time.pex
+|   VersionType.pex
+|
++---Collections
+|       Collection.pex
+|       Dictionary.pex
+|       List.pex
+|       Queue.pex
+|       Stack.pex
+|
++---Diagnostics
+|       Common.pex
+|       Lilac.pex
+|       LilacEx.pex
+|
++---Objects
+|       Factory.pex
+|
+\---Projects
+    |   Context.pex
+    |   ContextType.pex
+    |   Module.pex
+    |
+    +---Modules
+    |       Optional.pex
+    |       Required.pex
+    |
+    \---Settings
+            ContextActivated.pex
+            ModuleOptionalEnable.pex
+```
 
 #### Import: `System`
 The namespace contains fundamental classes and base classes that define commonly-used functions and data types.
@@ -19,11 +65,15 @@ The namespace includes classes that allow you to programmatically instantiate `n
 #### Import: `System.Projects`
 The namespace includes classes that provide common patterns for projects.
 
+
+
 # Assembly: `System.UI.esl`
 The scripting framework assembly `System.UI.esl` provides classes for interacting with the Scaleform user interface.
 
 #### Import: `System.UI`
 The namespace includes classes that allow for interacting with the Scaleform user interface.
+
+
 
 # Assembly: `System.HUDFramework.esl`
 The namespace includes classes that allow for interacting with the HUD Framework by Reg2K.
