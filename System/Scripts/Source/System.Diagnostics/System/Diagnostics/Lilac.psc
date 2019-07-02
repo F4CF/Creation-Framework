@@ -1,19 +1,23 @@
-;/********s* Quest/Lilac
-* SCRIPTNAME
-*/;
-scriptname System:Diagnostics:Lilac extends Quest
+ScriptName System:Diagnostics:Lilac Extends Quest
 {
 * OVERVIEW
 * Papyrus unit test syntax and test runner. Base script for creating and running Lilac unit tests. Must be extended. Generally executed by
 * <pre> StartQuest <MyUnitTestQuest></pre>
-* from the console.}
-;*********/;
+* from the console.
+}
 
-string property SystemName = "Lilac" autoReadOnly
-float property SystemVersion = 1.2 autoReadOnly
-int property APIVersion = 2 autoReadOnly
-bool property enabled = true auto
-{ Default: True. If false, this test cannot be run at runtime. Can help prevent unwanted execution. }
+Group Lilac
+	string Property SystemName = "Lilac" AutoReadOnly
+	float Property SystemVersion = 1.2 AutoReadOnly
+	int Property APIVersion = 2 AutoReadOnly
+	bool Property Enabled = true Auto
+	{ Default: True. If false, this test cannot be run at runtime. Can help prevent unwanted execution. }
+EndGroup
+
+Group Constants
+	bool Property Done = true AutoReadOnly
+EndGroup
+
 
 ; Unit Test Runner ================================================================================
 
@@ -29,34 +33,37 @@ int testsRun = 0
 int testsPassed = 0
 int testsFailed = 0
 
-string[] property failedTestSuites auto hidden
-string[] property failedTestCases auto hidden
-string[] property failedActuals auto hidden
-bool[] property failedConditions auto hidden
-int[] property failedMatchers auto hidden
-string[] property failedExpecteds auto hidden
-int[] property failedExpectNumbers auto hidden
-int property expectCount = 0 auto hidden
+Group Runner
+	string[] Property failedTestSuites Auto hidden
+	string[] Property failedTestCases Auto hidden
+	string[] Property failedActuals Auto hidden
+	bool[] Property failedConditions Auto hidden
+	int[] Property failedMatchers Auto hidden
+	string[] Property failedExpecteds Auto hidden
+	int[] Property failedExpectNumbers Auto hidden
+	int Property expectCount = 0 Auto hidden
 
-int property LILAC_TIMER_ID = 0x212AC auto hidden
+	int Property LILAC_TIMER_ID = 0x212AC Auto hidden
+EndGroup
+
 
 Event OnInit()
-	if self.IsRunning()
-		if enabled
+	If self.IsRunning()
+		If Enabled
 			StartTimer(1, LILAC_TIMER_ID)
-		else
+		Else
 			debug.trace(createLilacDebugMessage(INFO, "The Lilac test on " + self + " was disabled."))
-			debug.trace(createLilacDebugMessage(INFO, "Set the 'enabled' property of the test script to True in order to run it."))
+			debug.trace(createLilacDebugMessage(INFO, "Set the 'Enabled' Property of the test script to True in order to run it."))
 			debug.trace(createLilacDebugMessage(INFO, "If you are a mod user and see this message, please ignore it; this message is for mod developers and is not indicative of a bug."))
-		endif
-	endif
+		EndIf
+	EndIf
 EndEvent
 
 Event OnTimer(int aiTimerID)
 	RunTests()
 EndEvent
 
-function RunTests()
+Function RunTests()
 	debug.trace(createLilacDebugMessage(INFO, "Starting " + SystemName + " " + SystemVersion + " (API v" + APIVersion + ") on " + self))
 
 	; Initial setup
@@ -77,107 +84,107 @@ function RunTests()
 	afterEach()
 	afterAll()
 	self.Stop()
-endFunction
+EndFunction
 
 ;/********f* Lilac/SetUp
 * API VERSION ADDED
 * 2
 *
 * DESCRIPTION
-* Override this function to run test set-up functions.
+* Override this Function to run test set-up functions.
 *
 * SYNTAX
 */;
-function SetUp()
+Function SetUp()
 ;/*
 * PARAMETERS
 * None
 *
 * NOTES
-* The most common use for declaring this function is to enable verbose logging (`EnableVerboseLogging()`) or to
+* The most common use for declaring this Function is to enable verbose logging (`EnableVerboseLogging()`) or to
 * warn on slow tests (`EnableWarningOnSlowTests()`)
 *
 * EXAMPLES
-function SetUp()
+Function SetUp()
 	EnableVerboseLogging()
-endFunction
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
 ;/********f* Lilac/TestSuites
 * API VERSION ADDED
 * 1
 *
 * DESCRIPTION
-* Override this function to declare all test suites to run in this Lilac test script. Any test suites declared
-* in this function will be automatically run when the quest this script is attached to runs.
+* Override this Function to declare all test suites to run in this Lilac test script. Any test suites declared
+* in this Function will be automatically run when the quest this script is attached to runs.
 *
 * SYNTAX
 */;
-function TestSuites()
+Function TestSuites()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
-function TestSuites()
-	describe("A test suite", myTestSuite())
-	describe("Another test suite", myOtherTestSuite())
-endFunction
+Function TestSuites()
+	Describe("A test suite", myTestSuite())
+	Describe("Another test suite", myOtherTestSuite())
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
-function SetStartTime()
+Function SetStartTime()
 	last_current_time = Game.GetRealHoursPassed()
-endFunction
+EndFunction
 
 ;/********f* Lilac/EnableVerboseLogging
 * API VERSION ADDED
 * 2
 *
 * DESCRIPTION
-* Call this function to enable verbose logging in the Papyrus log.
+* Call this Function to enable verbose logging in the Papyrus log.
 *
 * SYNTAX
 */;
-function EnableVerboseLogging()
+Function EnableVerboseLogging()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
-function SetUp()
+Function SetUp()
 	EnableVerboseLogging()
-endFunction
+EndFunction
 ;*********/;
 	verbose_logging = true
-endFunction
+EndFunction
 
 ;/********f* Lilac/EnableWarningOnSlowTests
 * API VERSION ADDED
 * 2
 *
 * DESCRIPTION
-* Call this function to enable warning generation on slow test cases.
+* Call this Function to enable warning generation on slow test cases.
 *
 * SYNTAX
 */;
-function EnableWarningOnSlowTests(float afWarningThreshold)
+Function EnableWarningOnSlowTests(float afWarningThreshold)
 ;/*
 * PARAMETERS
 * * afWarningThreshold: If a spec takes longer than this to execute, generate a warning in the Papyrus log.
 *
 * EXAMPLES
-function SetUp()
-	; Generate warnings if a spec takes longer than 1 sec.
+Function SetUp()
+	; Generate warnings If a spec takes longer than 1 sec.
 	EnableWarningOnSlowTests(1.0)
-endFunction
+EndFunction
 ;*********/;
 	warn_on_long_duration = true
 	warning_threshold = afWarningThreshold
-endFunction
+EndFunction
 
-function ResetTestRunner()
+Function ResetTestRunner()
 	failedTestSuites = new string[128]
 	failedTestCases = new string[128]
 	failedActuals = new string[128]
@@ -196,54 +203,54 @@ function ResetTestRunner()
 	verbose_logging = false
 	warn_on_long_duration = false
 	warning_threshold = 0.0
-endFunction
+EndFunction
 
-function ShowTestFailureLog()
+Function ShowTestFailureLog()
 	int working_index = 0
 	bool failed_tests_msg_shown = false
 
 	string current_working_test_suite = ""
 	bool processing_suites = true
-	while processing_suites
-		if failedTestSuites[working_index] != ""
+	While processing_suites
+		If failedTestSuites[working_index] != ""
 			current_working_test_suite = failedTestSuites[working_index]
-			if !failed_tests_msg_shown
+			If !failed_tests_msg_shown
 				debug.trace(createLilacDebugMessage(INFO, "Failed Tests (first 128 failed test steps shown):"))
 				failed_tests_msg_shown = true
-			endif
+			EndIf
 			debug.trace(createLilacDebugMessage(INFO, " - " + failedTestSuites[working_index] + ":"))
 
 			string current_working_test_case = ""
 			bool processing_cases = true
-			while processing_cases
+			While processing_cases
 				bool processing_steps = true
-				if failedTestCases[working_index] != ""  && failedTestSuites[working_index] == current_working_test_suite
+				If failedTestCases[working_index] != ""  && failedTestSuites[working_index] == current_working_test_suite
 					current_working_test_case = failedTestCases[working_index]
 					debug.trace(createLilacDebugMessage(INFO, "    - " + failedTestCases[working_index] + ":"))
 
-					while processing_steps
-						if failedActuals[working_index] != "" && failedTestCases[working_index] == current_working_test_case
+					While processing_steps
+						If failedActuals[working_index] != "" && failedTestCases[working_index] == current_working_test_case
 							debug.trace(createLilacDebugMessage(INFO, CreateStepFailureMessage(working_index)))
 							working_index += 1
-						else
+						Else
 							processing_steps = false
-						endif
-					endWhile
-				else
+						EndIf
+					EndWhile
+				Else
 					processing_cases = false
-				endif
-			endWhile
-		else
+				EndIf
+			EndWhile
+		Else
 			processing_suites = false
-		endif
-	endWhile
-endFunction
+		EndIf
+	EndWhile
+EndFunction
 
-function ShowTestSummary()
+Function ShowTestSummary()
 	debug.trace(createLilacDebugMessage(INFO, "  " + testsRun + " total  " + testsPassed + " passed  " + testsFailed + " failed"))
-endFunction
+EndFunction
 
-string function CreateStepFailureMessage(int index)
+string Function CreateStepFailureMessage(int index)
 	bool cdtn_val = failedConditions[index]
 	int matcher_val = failedMatchers[index]
 	string actual_val = failedActuals[index]
@@ -255,43 +262,43 @@ string function CreateStepFailureMessage(int index)
 	;debug.trace("Creating step failure message from index " + index + " " + cdtn_val  + " " + matcher_val + " " + actual_val + " " + expected_val)
 
 	string cdtn
-	if failedConditions[index] == true
+	If failedConditions[index] == true
 		cdtn = "to"
-	else
+	Else
 		cdtn = "not to"
-	endif
+	EndIf
 
 	string matcher
-	if matcher_val == beEqualTo
+	If matcher_val == beEqualTo
 		matcher = "be equal to"
-	elseif matcher_val == beLessThan
+	ElseIf matcher_val == beLessThan
 		matcher = "be less than"
-	elseif matcher_val == beLessThanOrEqualTo
+	ElseIf matcher_val == beLessThanOrEqualTo
 		matcher = "be less than or equal to"
-	elseif matcher_val == beGreaterThan
+	ElseIf matcher_val == beGreaterThan
 		matcher = "be greater than"
-	elseif matcher_val == beGreaterThanOrEqualTo
+	ElseIf matcher_val == beGreaterThanOrEqualTo
 		matcher = "be greater than or equal to"
-	elseif matcher_val == beTruthy
+	ElseIf matcher_val == beTruthy
 		matcher = "be truthy"
-	elseif matcher_val == beFalsy
+	ElseIf matcher_val == beFalsy
 		matcher = "be falsy"
-	elseif matcher_val == beNone
+	ElseIf matcher_val == beNone
 		matcher = "be None"
-	endif
+	EndIf
 
 	string msg
 
-	if matcher_val == beTruthy || matcher_val == beFalsy || matcher_val == beNone
+	If matcher_val == beTruthy || matcher_val == beFalsy || matcher_val == beNone
 		msg = header + " " + actual_val + " " + cdtn + " " + matcher
-	else
+	Else
 		msg = header + " " + actual_val + " " + cdtn + " " + matcher + " " + expected_val
-	endif
+	EndIf
 
 	return msg
-endFunction
+EndFunction
 
-string function CreateVerboseStepMessage(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected, int aiNumber)
+string Function CreateVerboseStepMessage(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected, int aiNumber)
 	bool cdtn_val = abCondition
 	int matcher_val = aiMatcher
 	string actual_val = asActual
@@ -301,72 +308,72 @@ string function CreateVerboseStepMessage(bool abResult, string asActual, bool ab
 	string header = " - Expect " + expectnumber_val + ": expected"
 
 	string result
-	if abResult == true
+	If abResult == true
 		result = "PASSED"
-	else
+	Else
 		result = "FAILED"
-	endif
+	EndIf
 
 	string cdtn
-	if cdtn_val == true
+	If cdtn_val == true
 		cdtn = "to"
-	else
+	Else
 		cdtn = "not to"
-	endif
+	EndIf
 
 	string matcher
-	if matcher_val == beEqualTo
+	If matcher_val == beEqualTo
 		matcher = "be equal to"
-	elseif matcher_val == beLessThan
+	ElseIf matcher_val == beLessThan
 		matcher = "be less than"
-	elseif matcher_val == beLessThanOrEqualTo
+	ElseIf matcher_val == beLessThanOrEqualTo
 		matcher = "be less than or equal to"
-	elseif matcher_val == beGreaterThan
+	ElseIf matcher_val == beGreaterThan
 		matcher = "be greater than"
-	elseif matcher_val == beGreaterThanOrEqualTo
+	ElseIf matcher_val == beGreaterThanOrEqualTo
 		matcher = "be greater than or equal to"
-	elseif matcher_val == beTruthy
+	ElseIf matcher_val == beTruthy
 		matcher = "be truthy"
-	elseif matcher_val == beFalsy
+	ElseIf matcher_val == beFalsy
 		matcher = "be falsy"
-	elseif matcher_val == beNone
+	ElseIf matcher_val == beNone
 		matcher = "be None"
-	endif
+	EndIf
 
 	string msg
 
-	if matcher_val == beTruthy || matcher_val == beFalsy || matcher_val == beNone
+	If matcher_val == beTruthy || matcher_val == beFalsy || matcher_val == beNone
 		msg = header + " " + actual_val + " " + cdtn + " " + matcher + " " + result
-	else
+	Else
 		msg = header + " " + actual_val + " " + cdtn + " " + matcher + " " + expected_val + " " + result
-	endif
+	EndIf
 
 	return msg
-endFunction
+EndFunction
 
 
 ; Unit Test Composition ===========================================================================
 
 ; Conditions
-bool property to 					= true 	autoReadOnly
-bool property notTo					= false	autoReadOnly
+bool Property to 					= true 	AutoReadOnly
+bool Property notTo					= false	AutoReadOnly
 
 ; Matchers
-int property beEqualTo 				= 0		autoReadOnly
-int property beLessThan 			= 1		autoReadOnly
-int property beLessThanOrEqualTo 	= 2		autoReadOnly
-int property beGreaterThan 			= 3		autoReadOnly
-int property beGreaterThanOrEqualTo	= 4		autoReadOnly
-int property beTruthy 				= 5		autoReadOnly
-int property beFalsy 				= 6		autoReadOnly
-int property beNone					= 7		autoReadOnly
+int Property beEqualTo 				= 0		AutoReadOnly
+int Property beLessThan 			= 1		AutoReadOnly
+int Property beLessThanOrEqualTo 	= 2		AutoReadOnly
+int Property beGreaterThan 			= 3		AutoReadOnly
+int Property beGreaterThanOrEqualTo	= 4		AutoReadOnly
+int Property beTruthy 				= 5		AutoReadOnly
+int Property beFalsy 				= 6		AutoReadOnly
+int Property beNone					= 7		AutoReadOnly
 
 ; Log level enum
-int property INFO 					= 0 	autoReadOnly
-int property WARN 					= 1 	autoReadOnly
-int property ERROR 					= 2 	autoReadOnly
+int Property INFO 					= 0 	AutoReadOnly
+int Property WARN 					= 1 	AutoReadOnly
+int Property ERROR 					= 2 	AutoReadOnly
 
-;/********f* Lilac/describe
+;/********f* Lilac/Describe
 * API VERSION ADDED
 * 1
 *
@@ -375,18 +382,18 @@ int property ERROR 					= 2 	autoReadOnly
 *
 * SYNTAX
 */;
-function describe(string asTestSuiteName, bool abTestCases)
+Function Describe(string asTestSuiteName, bool abTestCases)
 ;/*
 * PARAMETERS
 * * asTestSuiteName: The name of the test suite.
-* * abTestCases: A function that implements this suite's test cases.
+* * abTestCases: A Function that implements this suite's test cases.
 *
 * EXAMPLES
-describe("A test suite", myTestSuite())
+Describe("A test suite", myTestSuite())
 ;*********/;
 	current_test_suite = asTestSuiteName
 	LogFailedTestSuites()
-endFunction
+EndFunction
 
 ;/********f* Lilac/it
 * API VERSION ADDED
@@ -397,11 +404,11 @@ endFunction
 *
 * SYNTAX
 */;
-function it(string asTestCaseName, bool abTestSteps)
+Function it(string asTestCaseName, bool abTestSteps)
 ;/*
 * PARAMETERS
 * * asTestCaseName: The name of the test case.
-* * abTestSteps: A function that implements this suite's test steps.
+* * abTestSteps: A Function that implements this suite's test steps.
 *
 * EXAMPLES
 it("should do something", myTestCase())
@@ -414,27 +421,27 @@ it("should do something", myTestCase())
 	float deltaTimeSecs = (this_current_time - last_current_time) * 3600.0
 
 	testsRun += 1
-	if test_case_had_failures == false
+	If test_case_had_failures == false
 		resultString = " SUCCESS"
 		testsPassed	+= 1
-	else
+	Else
 		resultString = " FAILED"
 		testsFailed	+= 1
-	endif
+	EndIf
 
-	if testsFailed > 0
-		if warn_on_long_duration && deltaTimeSecs > warning_threshold
+	If testsFailed > 0
+		If warn_on_long_duration && deltaTimeSecs > warning_threshold
 			debug.trace(createLilacDebugMessage(WARN, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (slow: " + deltaTimeSecs + " secs)"))
-		else
+		Else
 			debug.trace(createLilacDebugMessage(INFO, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (" + deltaTimeSecs + " secs)"))
-		endif
-	else
-		if warn_on_long_duration && deltaTimeSecs > warning_threshold
+		EndIf
+	Else
+		If warn_on_long_duration && deltaTimeSecs > warning_threshold
 			debug.trace(createLilacDebugMessage(WARN, "Executed " + testsRun + resultString + " (slow: " + deltaTimeSecs + " secs)"))
-		else
+		Else
 			debug.trace(createLilacDebugMessage(INFO, "Executed " + testsRun + resultString + " (" + deltaTimeSecs + " secs)"))
-		endif
-	endif
+		EndIf
+	EndIf
 	last_current_time = this_current_time
 	test_case_had_failures = false
 	expectCount = 0
@@ -442,126 +449,126 @@ it("should do something", myTestCase())
 	; Tear down this test and set up the next one.
 	afterEach()
 	beforeEach()
-endFunction
+EndFunction
 
 ;/********f* Lilac/beforeAll
 * API VERSION ADDED
 * 1
 *
 * DESCRIPTION
-* Override this function to run a block of code before any test case runs (including before any beforeEach).
+* Override this Function to run a block of code before any test case runs (including before any beforeEach).
 *
 * SYNTAX
 */;
-function beforeAll()
+Function beforeAll()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
 ;Make sure the quest isn't running and is on stage 12 before every test.
-function beforeAll()
+Function beforeAll()
 	TheQuest.Stop()
 	TheQuest.SetStage(12)
-endFunction
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
 ;/********f* Lilac/afterAll
 * API VERSION ADDED
 * 1
 *
 * DESCRIPTION
-* Override this function to run a block of code after all test cases run (including after any afterEach).
+* Override this Function to run a block of code after all test cases run (including after any afterEach).
 *
 * SYNTAX
 */;
-function afterAll()
+Function afterAll()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
 ;Make sure the quest isn't running and is on stage 12 after every test.
-function afterAll()
+Function afterAll()
 	TheQuest.Stop()
 	TheQuest.SetStage(12)
-endFunction
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
 ;/********f* Lilac/beforeEach
 * API VERSION ADDED
 * 1
 *
 * DESCRIPTION
-* Override this function to run a block of code before each test case.
+* Override this Function to run a block of code before each test case.
 *
 * SYNTAX
 */;
-function beforeEach()
+Function beforeEach()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
 ;Make sure the storm trooper is reset before every test.
-function beforeEach()
+Function beforeEach()
 	stormtrooper.Reset()
-endFunction
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
 ;/********f* Lilac/afterEach
 * API VERSION ADDED
 * 1
 *
 * DESCRIPTION
-* Override this function to run a block of code after each test case.
+* Override this Function to run a block of code after each test case.
 *
 * SYNTAX
 */;
-function afterEach()
+Function afterEach()
 ;/*
 * PARAMETERS
 * None
 *
 * EXAMPLES
 ;Make sure the star destroyer is deleted after every test.
-function afterEach()
+Function afterEach()
 	destroyer.Disable()
 	destroyer.Delete()
-endFunction
+EndFunction
 ;*********/;
-endFunction
+EndFunction
 
-function LogFailedTestSuites()
+Function LogFailedTestSuites()
 	int end_index = ArrayCountString(failedActuals) - 1
-	if end_index == -1
+	If end_index == -1
 		return
-	endif
+	EndIf
 	int start_index = ArrayCountString(failedTestSuites)
 
 	int i = start_index
-	while i <= end_index
+	While i <= end_index
 		failedTestSuites[i] = current_test_suite
 		i += 1
-	endWhile
-endFunction
+	EndWhile
+EndFunction
 
-function LogFailedTestCases()
+Function LogFailedTestCases()
 	int end_index = ArrayCountString(failedActuals) - 1
-	if end_index == -1
+	If end_index == -1
 		return
-	endif
+	EndIf
 	int start_index = ArrayCountString(failedTestCases)
 
 	int i = start_index
-	while i <= end_index
+	While i <= end_index
 		failedTestCases[i] = current_test_case
 		i += 1
-	endWhile
-endFunction
+	EndWhile
+EndFunction
 
 ;/********f* Lilac/expect
 * API VERSION ADDED
@@ -572,7 +579,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expect(var akActual, bool abCondition, int aiMatcher, var akExpected = None)
+Function expect(var akActual, bool abCondition, int aiMatcher, var akExpected = None)
 ;/*
 * PARAMETERS
 * * akActual: The value under test.
@@ -589,7 +596,7 @@ expect(0, to, beFalsy)
 expect("Preston", to, beEqualTo, "Preston")
 * NOTES
 * This is a type-independent version of the individual expect* functions and can be used in place of them.
-* You must use a valid matcher for the type of Actual and Expected. For instance, you cannot check if a Form is "less than" another Form.
+* You must use a valid matcher for the type of Actual and Expected. For instance, you cannot check If a Form is "less than" another Form.
 * The Actual and Expected must be of the exact same supported type (Form, ObjectReference, Int, Float, Bool, or String).
 * Using 'beTruthy', 'beFalsy', or 'beNone' matcher and not supplying akExpected can produce a (harmless) Papyrus error. If this becomes an issue, use 'to beEqualTo true', or similar, instead.
 * Valid matchers for this expectation:
@@ -603,82 +610,82 @@ expect("Preston", to, beEqualTo, "Preston")
 * * beNone
 ;*********/;
 
-	if akActual is Form
-		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
-			if aiMatcher >= 5 ; beTruthy, beFalsy, beNone
+	If akActual is Form
+		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+			If aiMatcher >= 5 ; beTruthy, beFalsy, beNone
 				expectForm(akActual as Form, abCondition, aiMatcher)
-			elseif akExpected is Form
+			ElseIf akExpected is Form
 				expectForm(akActual as Form, abCondition, aiMatcher, akExpected as Form)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	elseif akActual is ObjectReference
-		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
-			if aiMatcher >= 5 ; beTruthy, beFalsy, beNone
+		EndIf
+	ElseIf akActual is ObjectReference
+		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+			If aiMatcher >= 5 ; beTruthy, beFalsy, beNone
 				expectRef(akActual as ObjectReference, abCondition, aiMatcher)
-			elseif akExpected is ObjectReference
+			ElseIf akExpected is ObjectReference
 				expectRef(akActual as ObjectReference, abCondition, aiMatcher, akExpected as ObjectReference)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	elseif akActual is Int
-		if aiMatcher != beNone
-			if aiMatcher >= 5 ; beTruthy, beFalsy
+		EndIf
+	ElseIf akActual is Int
+		If aiMatcher != beNone
+			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectInt(akActual as Int, abCondition, aiMatcher)
-			elseif akExpected is Int
+			ElseIf akExpected is Int
 				expectInt(akActual as Int, abCondition, aiMatcher, akExpected as Int)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	elseif akActual is Float
-		if aiMatcher != beNone
-			if aiMatcher >= 5 ; beTruthy, beFalsy
+		EndIf
+	ElseIf akActual is Float
+		If aiMatcher != beNone
+			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectFloat(akActual as Float, abCondition, aiMatcher)
-			elseif akExpected is Float
+			ElseIf akExpected is Float
 				expectFloat(akActual as Float, abCondition, aiMatcher, akExpected as Float)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	elseif akActual is Bool
-		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
-			if aiMatcher >= 5 ; beTruthy, beFalsy
+		EndIf
+	ElseIf akActual is Bool
+		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectBool(akActual as Bool, abCondition, aiMatcher)
-			elseif akExpected is Bool
+			ElseIf akExpected is Bool
 				expectBool(akActual as Bool, abCondition, aiMatcher, akExpected as Bool)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	elseif akActual is String
-		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
-			if aiMatcher >= 5 ; beTruthy, beFalsy
+		EndIf
+	ElseIf akActual is String
+		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectString(akActual as String, abCondition, aiMatcher)
-			elseif akExpected is String
+			ElseIf akExpected is String
 				expectString(akActual as String, abCondition, aiMatcher, akExpected as String)
-			else
+			Else
 				RaiseException_NonMatchingType(akActual, akExpected)
-			endif
-		else
+			EndIf
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
-		endif
-	else
+		EndIf
+	Else
 		RaiseException_InvalidType(akActual)
-	endif
-endFunction
+	EndIf
+EndFunction
 
 ;/********f* Lilac/expectForm
 * API VERSION ADDED
@@ -689,7 +696,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectForm(Form akActual, bool abCondition, int aiMatcher, Form akExpected = None)
+Function expectForm(Form akActual, bool abCondition, int aiMatcher, Form akExpected = None)
 ;/*
 * PARAMETERS
 * * akActual: The form under test.
@@ -707,35 +714,35 @@ expectForm(MyArmor, to, beEqualTo, PowerArmor)
 * * beNone
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = akActual == (akExpected as Form)
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (akActual as bool) == false
-		elseif aiMatcher == beNone
+		ElseIf aiMatcher == beNone
 			result = akActual == None
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = akActual != (akExpected as Form)
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == false
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (akActual as bool) == true
-		elseif aiMatcher == beNone
+		ElseIf aiMatcher == beNone
 			result = akActual != None
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, akActual as string, abCondition, aiMatcher, akExpected as string)
-endFunction
+EndFunction
 
 ;/********f* Lilac/expectRef
 * API VERSION ADDED
@@ -746,7 +753,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectRef(ObjectReference akActual, bool abCondition, int aiMatcher, ObjectReference akExpected = None)
+Function expectRef(ObjectReference akActual, bool abCondition, int aiMatcher, ObjectReference akExpected = None)
 ;/*
 * PARAMETERS
 * * akActual: The reference under test.
@@ -764,35 +771,35 @@ expectRef(FalmerRef, to, beEqualTo, BossFalmerRef)
 * * beNone
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = akActual == (akExpected as ObjectReference)
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (akActual as bool) == false
-		elseif aiMatcher == beNone
+		ElseIf aiMatcher == beNone
 			result = akActual == None
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = akActual != (akExpected as ObjectReference)
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == false
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (akActual as bool) == true
-		elseif aiMatcher == beNone
+		ElseIf aiMatcher == beNone
 			result = akActual != None
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, akActual as string, abCondition, aiMatcher, akExpected as string)
-endFunction
+EndFunction
 
 ;/********f* Lilac/expectInt
 * API VERSION ADDED
@@ -803,7 +810,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectInt(int aiActual, bool abCondition, int aiMatcher, int aiExpected = -1)
+Function expectInt(int aiActual, bool abCondition, int aiMatcher, int aiExpected = -1)
 ;/*
 * PARAMETERS
 * * akActual: The integer under test.
@@ -824,47 +831,47 @@ expectInt(counter, to, beLessThan, 40)
 * * beFalsy
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = aiActual == aiExpected
-		elseif aiMatcher == beLessThan
+		ElseIf aiMatcher == beLessThan
 			result = aiActual < aiExpected
-		elseif aiMatcher == beGreaterThan
+		ElseIf aiMatcher == beGreaterThan
 			result = aiActual > aiExpected
-		elseif aiMatcher == beLessThanOrEqualTo
+		ElseIf aiMatcher == beLessThanOrEqualTo
 			result = aiActual <= aiExpected
-		elseif aiMatcher == beGreaterThanOrEqualTo
+		ElseIf aiMatcher == beGreaterThanOrEqualTo
 			result = aiActual >= aiExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (aiActual as bool) == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (aiActual as bool) == false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = aiActual != aiExpected
-		elseif aiMatcher == beLessThan
+		ElseIf aiMatcher == beLessThan
 			result = aiActual >= aiExpected
-		elseif aiMatcher == beGreaterThan
+		ElseIf aiMatcher == beGreaterThan
 			result = aiActual <= aiExpected
-		elseif aiMatcher == beLessThanOrEqualTo
+		ElseIf aiMatcher == beLessThanOrEqualTo
 			result = aiActual > aiExpected
-		elseif aiMatcher == beGreaterThanOrEqualTo
+		ElseIf aiMatcher == beGreaterThanOrEqualTo
 			result = aiActual < aiExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (aiActual as bool) != true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (aiActual as bool) != false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, aiActual as string, abCondition, aiMatcher, aiExpected as string)
-endFunction
+EndFunction
 
 ;/********f* Lilac/expectFloat
 * API VERSION ADDED
@@ -875,7 +882,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectFloat(float afActual, bool abCondition, int aiMatcher, float afExpected = -1.0)
+Function expectFloat(float afActual, bool abCondition, int aiMatcher, float afExpected = -1.0)
 ;/*
 * PARAMETERS
 * * akActual: The float under test.
@@ -896,47 +903,47 @@ expectFloat(GameHour.GetValue(), to, beGreaterThan, 19.0)
 * * beFalsy
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = afActual == afExpected
-		elseif aiMatcher == beLessThan
+		ElseIf aiMatcher == beLessThan
 			result = afActual < afExpected
-		elseif aiMatcher == beGreaterThan
+		ElseIf aiMatcher == beGreaterThan
 			result = afActual > afExpected
-		elseif aiMatcher == beLessThanOrEqualTo
+		ElseIf aiMatcher == beLessThanOrEqualTo
 			result = afActual <= afExpected
-		elseif aiMatcher == beGreaterThanOrEqualTo
+		ElseIf aiMatcher == beGreaterThanOrEqualTo
 			result = afActual >= afExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (afActual as bool) == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (afActual as bool) == false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = afActual != afExpected
-		elseif aiMatcher == beLessThan
+		ElseIf aiMatcher == beLessThan
 			result = afActual >= afExpected
-		elseif aiMatcher == beGreaterThan
+		ElseIf aiMatcher == beGreaterThan
 			result = afActual <= afExpected
-		elseif aiMatcher == beLessThanOrEqualTo
+		ElseIf aiMatcher == beLessThanOrEqualTo
 			result = afActual > afExpected
-		elseif aiMatcher == beGreaterThanOrEqualTo
+		ElseIf aiMatcher == beGreaterThanOrEqualTo
 			result = afActual < afExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (afActual as bool) != true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (afActual as bool) != false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, afActual as string, abCondition, aiMatcher, afExpected as string)
-endFunction
+EndFunction
 
 ;/********f* Lilac/expectBool
 * API VERSION ADDED
@@ -947,7 +954,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectBool(bool abActual, bool abCondition, int aiMatcher, bool abExpected = false)
+Function expectBool(bool abActual, bool abCondition, int aiMatcher, bool abExpected = false)
 ;/*
 * PARAMETERS
 * * akActual: The boolean under test.
@@ -964,31 +971,31 @@ expectBool(Follower.IsEssential(), to, beTruthy)
 * * beFalsy
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = abActual == abExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = abActual == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = abActual == false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = abActual != abExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = abActual != true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = abActual != false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, abActual as string, abCondition, aiMatcher, abExpected as string)
-endFunction
+EndFunction
 
 ;/********f* Lilac/expectString
 * API VERSION ADDED
@@ -999,7 +1006,7 @@ endFunction
 *
 * SYNTAX
 */;
-function expectString(string asActual, bool abCondition, int aiMatcher, string asExpected = "")
+Function expectString(string asActual, bool abCondition, int aiMatcher, string asExpected = "")
 ;/*
 * PARAMETERS
 * * akActual: The string under test.
@@ -1017,146 +1024,146 @@ expectString("Preston", to, beEqualTo, "Preston")
 * The Fallout 4 version of Lilac does not support the "contain" matcher.
 ;*********/;
 	bool result
-	if abCondition == to
-		if aiMatcher == beEqualTo
+	If abCondition == to
+		If aiMatcher == beEqualTo
 			result = asActual == asExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (asActual as bool) == true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (asActual as bool) == false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	else ; notTo
-		if aiMatcher == beEqualTo
+		EndIf
+	Else ; notTo
+		If aiMatcher == beEqualTo
 			result = asActual != asExpected
-		elseif aiMatcher == beTruthy
+		ElseIf aiMatcher == beTruthy
 			result = (asActual as bool) != true
-		elseif aiMatcher == beFalsy
+		ElseIf aiMatcher == beFalsy
 			result = (asActual as bool) != false
-		else
+		Else
 			RaiseException_InvalidMatcher(aiMatcher)
 			result = false
-		endif
-	endif
+		EndIf
+	EndIf
 	RaiseResult(result, asActual, abCondition, aiMatcher, asExpected)
-endFunction
+EndFunction
 
-function RaiseResult(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected)
+Function RaiseResult(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected)
 	expectCount += 1
-	if abResult == false
+	If abResult == false
 		test_case_had_failures = true
 		int idx
-		if asActual != ""
+		If asActual != ""
 			idx = ArrayAddString(failedActuals, asActual as string)
-		else
+		Else
 			idx = ArrayAddString(failedActuals, "(empty string)")
-		endif
-		if idx != -1
+		EndIf
+		If idx != -1
 			failedConditions[idx] = abCondition
 			failedMatchers[idx] = aiMatcher
 			failedExpectNumbers[idx] = expectCount
-			if asExpected != ""
+			If asExpected != ""
 				failedExpecteds[idx] = asExpected
-			else
+			Else
 				failedExpecteds[idx] = "(empty string)"
-			endif
-		endif
-	endif
-	if verbose_logging
+			EndIf
+		EndIf
+	EndIf
+	If verbose_logging
 		debug.trace(createLilacDebugMessage(INFO, CreateVerboseStepMessage(abResult, asActual, abCondition, aiMatcher, asExpected, expectCount)))
-	endif
-endFunction
+	EndIf
+EndFunction
 
-function RaiseException_InvalidMatcher(int aiMatcher)
+Function RaiseException_InvalidMatcher(int aiMatcher)
 	string matcher
-	if aiMatcher == 0
+	If aiMatcher == 0
 		matcher = "beEqualTo"
-	elseif aiMatcher == 1
+	ElseIf aiMatcher == 1
 		matcher = "beLessThan"
-	elseif aiMatcher == 2
+	ElseIf aiMatcher == 2
 		matcher = "beLessThanOrEqualTo"
-	elseif aiMatcher == 3
+	ElseIf aiMatcher == 3
 		matcher = "beGreaterThan"
-	elseif aiMatcher == 4
+	ElseIf aiMatcher == 4
 		matcher = "beGreaterThanOrEqualTo"
-	elseif aiMatcher == 5
+	ElseIf aiMatcher == 5
 		matcher = "beTruthy"
-	elseif aiMatcher == 6
+	ElseIf aiMatcher == 6
 		matcher = "beFalsy"
-	elseif aiMatcher == 7
+	ElseIf aiMatcher == 7
 		matcher = "beNone"
-	endif
+	EndIf
 
 	debug.trace(createLilacDebugMessage(ERROR, "Invalid matcher '" + matcher + "' used."))
-endFunction
+EndFunction
 
-function RaiseException_InvalidType(var akActual)
+Function RaiseException_InvalidType(var akActual)
 	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " was not a Form, ObjectReference, Int, Float, Bool, or String."))
-endFunction
+EndFunction
 
-function RaiseException_NonMatchingType(var akActual, var akExpected)
+Function RaiseException_NonMatchingType(var akActual, var akExpected)
 	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " did not match the type of Expected " + (akExpected as String)))
-endFunction
+EndFunction
 
-string function createLilacDebugMessage(int aiLogLevel, string asMessage)
+string Function createLilacDebugMessage(int aiLogLevel, string asMessage)
 	string level
 	return "[" + SystemName + "] " + getLogLevel(aiLogLevel) + asMessage
-endFunction
+EndFunction
 
-string function getLogLevel(int aiLogLevel)
-	if aiLogLevel == 0
+string Function getLogLevel(int aiLogLevel)
+	If aiLogLevel == 0
 		return ""
-	elseif aiLogLevel == 1
+	ElseIf aiLogLevel == 1
 		return "WARN - "
-	elseif aiLogLevel == 2
+	ElseIf aiLogLevel == 2
 		return "ERROR - "
-	endif
-endFunction
+	EndIf
+EndFunction
 
-int function ArrayAddString(string[] myArray, string myKey)
+int Function ArrayAddString(string[] myArray, string myKey)
     ;Adds a form to the first available element in the array.
     ;       false       =       Error (array full)
     ;       true        =       Success
 
     int i = 0
-    while i < myArray.Length
-        if IsNone(myArray[i])
+    While i < myArray.Length
+        If IsNone(myArray[i])
             myArray[i] = myKey
             return i
-        else
+        Else
             i += 1
-        endif
-    endWhile
+        EndIf
+    EndWhile
     return -1
-endFunction
+EndFunction
 
-int function ArrayCountString(String[] myArray)
+int Function ArrayCountString(String[] myArray)
 ;Counts the number of indices in this array that do not have a "none" type.
     ;       int myCount = number of indicies that are not "none"
 
     int i = 0
     int myCount = 0
-    while i < myArray.Length
-        if !(IsNone(myArray[i]))
+    While i < myArray.Length
+        If !(IsNone(myArray[i]))
             myCount += 1
             i += 1
-        else
+        Else
             i += 1
-        endif
-    endWhile
+        EndIf
+    EndWhile
     return myCount
-endFunction
+EndFunction
 
-bool function IsNone(string akString)
-    if akString
-        if akString == ""
+bool Function IsNone(string akString)
+    If akString
+        If akString == ""
             return true
-        else
+        Else
             return false
-        endif
-    else
+        EndIf
+    Else
         return true
-    endif
-endFunction
+    EndIf
+EndFunction

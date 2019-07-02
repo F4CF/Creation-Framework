@@ -1,11 +1,8 @@
-ScriptName Papyrus:Project:Context extends Papyrus:Project:ContextType Hidden Conditional
-import Papyrus
-import Papyrus:Compatibility
-import Papyrus:Log
-import Papyrus:VersionType
+ScriptName System:Projects:Context extends System:Projects:ContextType Hidden Conditional
+import System
+import System:Log
+import System:VersionType
 import Quest
-
-UserLog Log
 
 Version LastVersion
 QuestStage Condition
@@ -20,7 +17,6 @@ CustomEvent OnUpgrade
 ;---------------------------------------------
 
 Event OnInit()
-	Log = LogNew(Title, self)
 	LastVersion = Release
 	Condition = new QuestStage
 	Activated = false
@@ -34,39 +30,39 @@ EndEvent
 
 
 Event OnQuestInit()
-	WriteLine(Log, "OnQuestInit")
+	WriteLine("System:Projects:Context", "OnQuestInit")
 	IsActivated = true
 EndEvent
 
 
 Event OnQuestShutdown()
-	WriteLine(Log, "OnQuestShutdown")
+	WriteLine("System:Projects:Context", "OnQuestShutdown")
 	IsActivated = false
 EndEvent
 
 
 Event Actor.OnPlayerLoadGame(Actor akSender)
-	WriteLine(Log, "Reloaded "+Title+" version "+VersionToString(Release))
+	WriteLine("System:Projects:Context", "Reloaded "+Title+" version "+VersionToString(Release))
 	Version versionNew = Release
 	Version versionPrevious = LastVersion
 
 	If (VersionGreaterThan(versionNew, versionPrevious))
-		WriteChangedValue(Log, "Version", versionPrevious, versionNew)
+		WriteChangedValue("System:Projects:Context", "Version", versionPrevious, versionNew)
 		LastVersion = versionNew
 		var[] arguments = new var[2]
 		arguments[0] = versionNew
 		arguments[1] = versionPrevious
 		SendCustomEvent("OnUpgrade", arguments)
 	Else
-		WriteLine(Log, "No version change with game reload.")
+		WriteLine("System:Projects:Context", "No version change with game reload.")
 	EndIf
 
 	self.OnGameReload()
 EndEvent
 
 
-Event Quest.OnStageSet(Quest akSender, Int auiStageID, Int auiItemID)
-	WriteLine(Log, "Remote (Quest.OnStageSet) "+akSender)
+Event Quest.OnStageSet(Quest akSender, int auiStageID, int auiItemID)
+	WriteLine("System:Projects:Context", "Remote (Quest.OnStageSet) "+akSender)
 	If (akSender == Required)
 		IsActivated = true
 	EndIf
@@ -76,21 +72,21 @@ EndEvent
 ; Custom Events
 ;---------------------------------------------
 
-Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
 	self.OnContextStartup()
 	HasActivated = true
 	Write(akSender.Title, "The context has finished the OnStartup event.")
 EndEvent
 
 
-Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
 	self.OnContextShutdown()
 	HasActivated = false
 	Write(akSender.Title, "The context has finished the OnShutdown event.")
 EndEvent
 
 
-Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
 	Version newVersion = arguments[0] as Version
 	Version oldVersion = arguments[1] as Version
 	self.OnContextUpgrade(newVersion, oldVersion)
@@ -136,21 +132,21 @@ Group Context
 		EndFunction
 		Function Set(bool value)
 			If (Activated == value)
-				WriteLine(Log, "Activated is already equal to "+value)
+				WriteLine("System:Projects:Context", "Activated is already equal to "+value)
 				return
 			Else
 				If (IsReady)
 					Activated = value
 					If (value)
-						WriteLine(Log, Title+" is starting..")
+						WriteLine("System:Projects:Context", Title+" is starting..")
 						SendCustomEvent("OnStartup")
 					Else
-						WriteLine(Log, Title+" is shutting down.")
+						WriteLine("System:Projects:Context", Title+" is shutting down.")
 						SendCustomEvent("OnShutdown")
 					EndIf
 					UnregisterForRemoteEvent(Required, "OnStageSet")
 				Else
-					WriteLine(Log, Title+" is not ready.")
+					WriteLine("System:Projects:Context", Title+" is not ready.")
 					RegisterForRemoteEvent(Required, "OnStageSet")
 				EndIf
 			EndIf

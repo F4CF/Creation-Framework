@@ -1,8 +1,7 @@
-ScriptName Papyrus:Project:Modules:Required extends Papyrus:Project:Module Hidden
-import Papyrus
+ScriptName System:Projects:Modules:Required extends System:Projects:Module Hidden
+import System
 
 Actor PlayerReference
-
 
 ; Events
 ;---------------------------------------------
@@ -17,9 +16,8 @@ EndEvent
 ;---------------------------------------------
 
 Group Module
-	Project:Context Property Context Auto Const Mandatory
+	Projects:Context Property Context Auto Const Mandatory
 EndGroup
-
 
 Group Properties
 	Actor Property Player Hidden

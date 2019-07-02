@@ -2,7 +2,7 @@ ScriptName System:Diagnostics:Common extends Quest
 
 
 string Function GetLogFile() Global
-	return Papyrus:Environment.Name() + "_Test"
+	return System:Environment.Name() + "_Test"
 EndFunction
 
 

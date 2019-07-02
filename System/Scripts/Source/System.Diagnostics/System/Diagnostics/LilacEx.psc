@@ -35,6 +35,6 @@ Group Properties
 	System:Diagnostics:Common Property Common Auto Const Mandatory
 EndGroup
 
-Group Constants
-	bool Property Done = true AutoReadOnly
-EndGroup
+; Group Constants
+; 	bool Property Done = true AutoReadOnly
+; EndGroup

@@ -1,55 +1,49 @@
-ScriptName Papyrus:Project:Modules:Optional extends Papyrus:Project:Module Hidden
-import Papyrus
-import Papyrus:Compatibility
-import Papyrus:Log
-import Papyrus:VersionType
-import Papyrus:Script
-
-UserLog Log
+ScriptName System:Projects:Modules:Optional Extends System:Projects:Module Hidden
+import System
+import System:Log
+import System:VersionType
+import System:Script
 
 bool EnabledValue
 Actor PlayerReference
-
 
 ; Events
 ;---------------------------------------------
 
 Event OnInit()
-	Log = LogNew(Context.Title, self)
 	PlayerReference = Game.GetPlayer()
 	EnabledValue = true
-
 	Initialize(Context)
 EndEvent
 
 
-Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
+Event OnEvent(int aEvent, Projects:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (SetActive(self))
 			self.OnEnable()
-			WriteLine(Log, "The module has finished the OnStartup event.")
+			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnStartup event.")
 		Else
-			WriteLine(Log, "The module could not finish the OnStartup event.")
+			WriteLine("System:Projects:Modules:Optional", "The module could not finish the OnStartup event.")
 		EndIf
 	ElseIf (aEvent == ShutdownEvent)
 		If (SetActive(self, false))
 			self.OnDisable()
-			WriteLine(Log, "The module has finished the OnShutdown event.")
+			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnShutdown event.")
 		Else
-			WriteLine(Log, "The module could not finish the OnShutdown event.")
+			WriteLine("System:Projects:Modules:Optional", "The module could not finish the OnShutdown event.")
 		EndIf
 	ElseIf (aEvent == UpgradeEvent)
 		If (Enabled)
 			Version newVersion = arguments[0] as Version
 			Version oldVersion = arguments[1] as Version
 			self.OnUpgrade(newVersion, oldVersion)
-			WriteLine(Log, "The module has finished the OnUpgrade event. " \
+			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnUpgrade event. " \
 				+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
 		Else
-			WriteLine(Log, "Ignoring the OnUpgrade event, module is not enabled.")
+			WriteLine("System:Projects:Modules:Optional", "Ignoring the OnUpgrade event, module is not enabled.")
 		EndIf
 	Else
-		WriteLine(Log, "The module has received and unhandled event.")
+		WriteLine("System:Projects:Modules:Optional", "The module has received and unhandled event.")
 	EndIf
 EndEvent
 
@@ -101,7 +95,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Module
-	Project:Context Property Context Auto Const Mandatory
+	Projects:Context Property Context Auto Const Mandatory
 
 	bool Property IsReady Hidden
 		bool Function Get()
@@ -116,10 +110,10 @@ Group Module
 		Function Set(bool aValue)
 			If (aValue != EnabledValue)
 				EnabledValue = aValue
-				WriteChangedValue(Log, "Enabled", !aValue, aValue)
+				WriteChangedValue("System:Projects:Modules:Optional", "Enabled", !aValue, aValue)
 				SetActive(self, aValue)
 			Else
-				WriteLine(Log, "The module's Enabled property already equals '"+aValue+"'.")
+				WriteLine("System:Projects:Modules:Optional", "The module's Enabled property already equals '"+aValue+"'.")
 			EndIf
 		EndFunction
 	EndProperty

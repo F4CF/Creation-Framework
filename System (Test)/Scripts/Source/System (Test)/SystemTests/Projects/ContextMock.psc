@@ -1,9 +1,9 @@
-ScriptName SystemTests:Projects:ContextMock Extends Papyrus:Project:Context
+ScriptName SystemTests:Projects:ContextMock Extends System:Projects:Context
 import System
 import System:External
 import System:Log
 import System:VersionType
-import System:Framework:Common
+import System:Diagnostics:Common
 
 Actor Player
 
@@ -20,18 +20,18 @@ EndEvent
 
 Event OnContextStartup()
 	If (TryHolotape())
-		WriteLine("Added a holotape to the player for startup.")
+		WriteLine("SystemTests:Projects:ContextMock", "Added a holotape to the player for startup.")
 	Else
-		WriteLine("The player already has a holotape for startup.")
+		WriteLine("SystemTests:Projects:ContextMock", "The player already has a holotape for startup.")
 	EndIf
 EndEvent
 
 
 Event OnContextShutdown()
 	If (TryHolotape()) ; so player can enable the mod again
-		WriteLine("Added a holotape to the player for shutdown.")
+		WriteLine("SystemTests:Projects:ContextMock", "Added a holotape to the player for shutdown.")
 	Else
-		WriteLine("The player already has a holotape for shutdown.")
+		WriteLine("SystemTests:Projects:ContextMock", "The player already has a holotape for shutdown.")
 	EndIf
 EndEvent
 

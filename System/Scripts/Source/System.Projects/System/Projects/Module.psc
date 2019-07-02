@@ -1,14 +1,13 @@
-ScriptName Papyrus:Project:Module extends Form Native Const Hidden
-import Papyrus
-import Papyrus:Compatibility
-import Papyrus:Log
-import Papyrus:VersionType
+ScriptName System:Projects:Module extends Form Native Const Hidden
+import System
+import System:Log
+import System:VersionType
 
 
 ; Module
 ;---------------------------------------------
 
-bool Function Initialize(Project:Context context)
+bool Function Initialize(Projects:Context context)
 	If (context)
 		RegisterForCustomEvent(context, "OnStartup")
 		RegisterForCustomEvent(context, "OnUpgrade")
@@ -35,20 +34,20 @@ EndFunction
 ; Events
 ;---------------------------------------------
 
-Event Papyrus:Project:Context.OnStartup(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
 	OnEvent(StartupEvent, akSender, arguments)
 EndEvent
 
-Event Papyrus:Project:Context.OnShutdown(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
 	OnEvent(ShutdownEvent, akSender, arguments)
 EndEvent
 
-Event Papyrus:Project:Context.OnUpgrade(Project:Context akSender, var[] arguments)
+Event System:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
 	OnEvent(UpgradeEvent, akSender, arguments)
 EndEvent
 
 
-Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
+Event OnEvent(int aEvent, Projects:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		self.OnEnable()
 		Write(sender.Title, "The module has finished the OnStartup event.")

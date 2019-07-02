@@ -1,7 +1,8 @@
-ScriptName Papyrus:Project:ContextType extends Quest Native Const Hidden
-import Papyrus:Compatibility:External
-import Papyrus:Log
-import Papyrus:VersionType
+ScriptName System:Projects:ContextType extends Quest Native Const Hidden
+import System
+import System:External
+import System:Log
+import System:VersionType
 
 
 ; Virtual
