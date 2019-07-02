@@ -7,6 +7,7 @@ The framework is divided into several assemblies, imports, and namespaces.
 # Assembly: `System.esl`
 The scripting framework assembly `System.esl` is divided into several imports and namespaces.
 ```
+System.esl
 System - Main.ba2
 |   Array.pex
 |   BoolType.pex
