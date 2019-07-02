@@ -20,18 +20,18 @@ EndEvent
 
 Event OnContextStartup()
 	If (TryHolotape())
-		WriteLine("SystemTests:Projects:ContextMock", "Added a holotape to the player for startup.")
+		WriteLine(self, "Added a holotape to the player for startup.")
 	Else
-		WriteLine("SystemTests:Projects:ContextMock", "The player already has a holotape for startup.")
+		WriteLine(self, "The player already has a holotape for startup.")
 	EndIf
 EndEvent
 
 
 Event OnContextShutdown()
 	If (TryHolotape()) ; so player can enable the mod again
-		WriteLine("SystemTests:Projects:ContextMock", "Added a holotape to the player for shutdown.")
+		WriteLine(self, "Added a holotape to the player for shutdown.")
 	Else
-		WriteLine("SystemTests:Projects:ContextMock", "The player already has a holotape for shutdown.")
+		WriteLine(self, "The player already has a holotape for shutdown.")
 	EndIf
 EndEvent
 
@@ -69,7 +69,7 @@ EndFunction
 
 bool Function TryHolotape()
 	If (HasHolotape == false)
-		Player.AddItem(Scripting_DummyHolotape, 1)
+		Player.AddItem(SystemTests_DummyHolotape, 1)
 		return true
 	Else
 		return false
@@ -82,14 +82,14 @@ EndFunction
 
 Group Properties
 	Quest Property MQ102 Auto Const Mandatory
-	Holotape Property Scripting_DummyHolotape Auto Const Mandatory
+	Holotape Property SystemTests_DummyHolotape Auto Const Mandatory
 EndGroup
 
 
 Group Setup
 	bool Property HasHolotape Hidden
 		bool Function Get()
-			return Player.GetItemCount(Scripting_DummyHolotape) >= 1
+			return Player.GetItemCount(SystemTests_DummyHolotape) >= 1
 		EndFunction
 	EndProperty
 EndGroup

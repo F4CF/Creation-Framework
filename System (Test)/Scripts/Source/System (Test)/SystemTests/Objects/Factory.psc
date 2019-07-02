@@ -1,7 +1,5 @@
-ScriptName SystemTests:Objects:ObjectsFactoryTest Extends System:Diagnostics:Lilac
-import System:Collections
+ScriptName SystemTests:Objects:Factory Extends System:Diagnostics:Lilac
 import System:Log
-
 
 System:Collections:List MyList
 
@@ -11,13 +9,13 @@ System:Collections:List MyList
 
 
 Function Setup()
-	WriteLine("SystemTests:Objects:ObjectsFactoryTest", "Setup")
+	WriteLine(self, "Setup")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine("SystemTests:Objects:ObjectsFactoryTest", "Executing the TestSuites function.")
+	WriteLine(self, "Executing the TestSuites function.")
 ;	describe("New List", NewListSuite())
 EndFunction
 
@@ -44,8 +42,8 @@ Function Foo()
 		MyList.Add("One")
 		MyList.Add("Two")
 		MyList.Add("Three")
-		Write("Scripting", "[Factory] MyList contains '"+MyList.Count+"' elements..")
+		Write(self, "[Factory] MyList contains '"+MyList.Count+"' elements..")
 	Else
-		Write("Scripting", "[Factory] MyList is none.")
+		Write(self, "[Factory] MyList is none.")
 	EndIf
 EndFunction

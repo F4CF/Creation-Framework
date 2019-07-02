@@ -1,18 +1,17 @@
-ScriptName SystemTests:Objects:CollectionsListTest Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Collections:List Extends System:Diagnostics:Lilac
 import System:Log
-
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine("SystemTests:Objects:CollectionsListTest", "Executing the Setup function.")
+	WriteLine(self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine("SystemTests:Objects:CollectionsListTest", "Executing the TestSuites function.")
+	WriteLine(self, "Executing the TestSuites function.")
 	Describe("List IndexOf", IndexOfSuite())
 EndFunction
 

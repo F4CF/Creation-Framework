@@ -1,4 +1,4 @@
-ScriptName SystemTests:Diagnostics:Lilac_Test Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Diagnostics:Lilac Extends System:Diagnostics:Lilac
 
 
 Function TestSuites()
@@ -40,13 +40,13 @@ EndFunction
 
 ; Test Cases ==================================================================
 
-mockLilac mockLilacTest
+SystemTests:Diagnostics:LilacMock mockLilacTest
 Armor ArmorIronCuirass
 ObjectReference TestArmorRef
 Form EmptyForm
 
 Function beforeAll()
-	mockLilacTest = Game.GetFormFromFile(0x12C5, "LilacTestLilac.esp") as mockLilac
+	mockLilacTest = Game.GetFormFromFile(0x12C5, "LilacTestLilac.esp") as SystemTests:Diagnostics:LilacMock
 	mockLilacTest.mockLastLilacDebugMessage = ""
 	mockLilacTest.mockLastRaisedResultResult = true
 	ArmorIronCuirass = Game.GetFormFromFile(0x12E49, "Skyrim.esm") as Armor

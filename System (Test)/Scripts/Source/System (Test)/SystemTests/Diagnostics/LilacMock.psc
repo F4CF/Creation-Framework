@@ -1,4 +1,4 @@
-ScriptName SystemTests:Diagnostics:MockLilac Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Diagnostics:LilacMock Extends System:Diagnostics:Lilac
 {Test-specific subclass of Lilac.}
 
 Event OnInit()
