@@ -1,9 +1,7 @@
 Scriptname System:Collections:Dictionary extends System:Collections:Collection Default
-{Represents a collection of keys and values.}
-; https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx
+{Represents a collection of keys and values.
+https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx}
 import System
-import System:Objects:Factory
-
 
 var[] Keys
 var[] Values
@@ -13,8 +11,7 @@ var[] Values
 ;---------------------------------------------
 
 Dictionary Function Init() Global
-	Objects:Factory Factory = GetFactory()
-	return Factory.Initialize(0x0000083B) as Dictionary
+	return System:Object.Type().Initialize(0x0000083B) as Dictionary
 EndFunction
 
 

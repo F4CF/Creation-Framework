@@ -1,18 +1,15 @@
 Scriptname System:Collections:Queue extends System:Collections:Collection Default
-{Represents a first-in-first-out (FIFO) collection of objects.}
-; https://msdn.microsoft.com/en-us/library/7977ey2c(v=vs.110).aspx
+{Represents a first-in-first-out (FIFO) collection of objects.
+https://msdn.microsoft.com/en-us/library/7977ey2c(v=vs.110).aspx}
 import System
-import System:Objects:Factory
 
 var[] Items
-
 
 ; Constructor
 ;---------------------------------------------
 
 Queue Function Init() Global
-	Objects:Factory Factory = GetFactory()
-	return Factory.Initialize(0x0000083E) as Queue
+	return System:Object.Type().Initialize(0x0000083E) as Queue
 EndFunction
 
 

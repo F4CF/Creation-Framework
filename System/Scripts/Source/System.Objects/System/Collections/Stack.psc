@@ -1,8 +1,7 @@
 Scriptname System:Collections:Stack extends System:Collections:Collection Default
-{Represents a last-in-first-out (LIFO) collection of objects.}
-; https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx
+{Represents a last-in-first-out (LIFO) collection of objects.
+https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx}
 import System
-import System:Objects:Factory
 
 var[] Items
 
@@ -11,8 +10,7 @@ var[] Items
 ;---------------------------------------------
 
 Stack Function Init() Global
-	Objects:Factory Factory = GetFactory()
-	return Factory.Initialize(0x0000083D) as Stack
+	return System:Object.Type().Initialize(0x0000083D) as Stack
 EndFunction
 
 

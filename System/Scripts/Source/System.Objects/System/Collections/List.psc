@@ -1,10 +1,8 @@
 Scriptname System:Collections:List extends System:Collections:Collection Default
-{Represents a list of objects that can be accessed by index.}
-; https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx
+{Represents a list of objects that can be accessed by index.
+https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx}
 import System
-import System:Objects:Factory
 import System:Log
-
 
 var[] Items
 
@@ -13,8 +11,7 @@ var[] Items
 ;---------------------------------------------
 
 List Function Init() Global
-	Objects:Factory Factory = GetFactory()
-	return Factory.Initialize(0x0000083A) as List
+	return System:Object.Type().Initialize(0x0000083A) as List
 EndFunction
 
 

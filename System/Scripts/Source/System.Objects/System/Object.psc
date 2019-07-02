@@ -1,6 +1,5 @@
-Scriptname System:Objects:Factory extends Quest Const
+Scriptname System:Object extends Quest Const
 import System
-import System:Objects
 
 
 ; Functions
@@ -21,13 +20,15 @@ EndFunction
 ; Globals
 ;---------------------------------------------
 
-Factory Function GetFactory() Global
-	return Game.GetFormFromFile(0x00000838, System:Environment.Plugin()) as Factory
+Object Function Type() Global
+	System:Assembly assembly = System:Assembly.GetAssembly()
+	return System:External.Read(assembly.File, assembly.System) as Object
 EndFunction
 
 
-Activator Function GetType(int aFormID) Global
-	return Game.GetFormFromFile(aFormID, System:Environment.Plugin()) as Activator
+Activator Function GetType(int formID) Global
+	System:Assembly assembly = System:Assembly.GetAssembly()
+	return System:External.Read(assembly.File, formID) as Activator
 EndFunction
 
 
