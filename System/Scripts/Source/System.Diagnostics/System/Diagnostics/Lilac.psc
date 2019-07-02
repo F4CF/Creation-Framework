@@ -1,22 +1,26 @@
 ScriptName System:Diagnostics:Lilac Extends Quest
-{
-* OVERVIEW
-* Papyrus unit test syntax and test runner. Base script for creating and running Lilac unit tests. Must be extended. Generally executed by
-* <pre> StartQuest <MyUnitTestQuest></pre>
-* from the console.
-}
+
 
 Group Lilac
 	string Property SystemName = "Lilac" AutoReadOnly
 	float Property SystemVersion = 1.2 AutoReadOnly
 	int Property APIVersion = 2 AutoReadOnly
+EndGroup
+
+Group Settings
+	;
 	bool Property Enabled = true Auto
-	{ Default: True. If false, this test cannot be run at runtime. Can help prevent unwanted execution. }
+	{
+		Default: True.
+		If false, this test cannot be run at runtime. Can help prevent unwanted execution.
+		Note: A "conditional compilation" with the "DebugOnly" flag may be a better option than a boolean condition.
+	}
 EndGroup
 
 Group Constants
 	bool Property Done = true AutoReadOnly
 EndGroup
+
 
 
 ; Unit Test Runner ================================================================================
@@ -48,13 +52,13 @@ EndGroup
 
 
 Event OnInit()
-	If self.IsRunning()
-		If Enabled
+	If (self.IsRunning())
+		If (Enabled)
 			StartTimer(1, LILAC_TIMER_ID)
 		Else
-			debug.trace(createLilacDebugMessage(INFO, "The Lilac test on " + self + " was disabled."))
-			debug.trace(createLilacDebugMessage(INFO, "Set the 'Enabled' Property of the test script to True in order to run it."))
-			debug.trace(createLilacDebugMessage(INFO, "If you are a mod user and see this message, please ignore it; this message is for mod developers and is not indicative of a bug."))
+			Debug.Trace(CreateLilacDebugMessage(INFO, "The Lilac test on " + self + " was disabled."))
+			Debug.Trace(CreateLilacDebugMessage(INFO, "Set the 'Enabled' Property of the test script to True in order to run it."))
+			Debug.Trace(CreateLilacDebugMessage(INFO, "If you are a mod user and see this message, please ignore it; this message is for mod developers and is not indicative of a bug."))
 		EndIf
 	EndIf
 EndEvent
@@ -64,7 +68,7 @@ Event OnTimer(int aiTimerID)
 EndEvent
 
 Function RunTests()
-	debug.trace(createLilacDebugMessage(INFO, "Starting " + SystemName + " " + SystemVersion + " (API v" + APIVersion + ") on " + self))
+	Debug.Trace(CreateLilacDebugMessage(INFO, "Starting " + SystemName + " " + SystemVersion + " (API v" + APIVersion + ") on " + self))
 
 	; Initial setup
 	ResetTestRunner()
@@ -96,19 +100,19 @@ EndFunction
 * SYNTAX
 */;
 Function SetUp()
-;/*
-* PARAMETERS
-* None
-*
-* NOTES
-* The most common use for declaring this Function is to enable verbose logging (`EnableVerboseLogging()`) or to
-* warn on slow tests (`EnableWarningOnSlowTests()`)
-*
-* EXAMPLES
-Function SetUp()
-	EnableVerboseLogging()
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* NOTES
+	* The most common use for declaring this Function is to enable verbose logging (`EnableVerboseLogging()`) or to
+	* warn on slow tests (`EnableWarningOnSlowTests()`)
+	*
+	* EXAMPLES
+	Function SetUp()
+		EnableVerboseLogging()
+	EndFunction
+	;*********/;
 EndFunction
 
 ;/********f* Lilac/TestSuites
@@ -122,21 +126,24 @@ EndFunction
 * SYNTAX
 */;
 Function TestSuites()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-Function TestSuites()
-	Describe("A test suite", myTestSuite())
-	Describe("Another test suite", myOtherTestSuite())
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	Function TestSuites()
+		Describe("A test suite", myTestSuite())
+		Describe("Another test suite", myOtherTestSuite())
+	EndFunction
+	;*********/;
 EndFunction
-;*********/;
-EndFunction
+
 
 Function SetStartTime()
 	last_current_time = Game.GetRealHoursPassed()
 EndFunction
+
+
 
 ;/********f* Lilac/EnableVerboseLogging
 * API VERSION ADDED
@@ -148,17 +155,19 @@ EndFunction
 * SYNTAX
 */;
 Function EnableVerboseLogging()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-Function SetUp()
-	EnableVerboseLogging()
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	Function SetUp()
+		EnableVerboseLogging()
+	EndFunction
+	;*********/;
 	verbose_logging = true
 EndFunction
+
+
 
 ;/********f* Lilac/EnableWarningOnSlowTests
 * API VERSION ADDED
@@ -170,19 +179,20 @@ EndFunction
 * SYNTAX
 */;
 Function EnableWarningOnSlowTests(float afWarningThreshold)
-;/*
-* PARAMETERS
-* * afWarningThreshold: If a spec takes longer than this to execute, generate a warning in the Papyrus log.
-*
-* EXAMPLES
-Function SetUp()
-	; Generate warnings If a spec takes longer than 1 sec.
-	EnableWarningOnSlowTests(1.0)
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* * afWarningThreshold: If a spec takes longer than this to execute, generate a warning in the Papyrus log.
+	*
+	* EXAMPLES
+	Function SetUp()
+		; Generate warnings If a spec takes longer than 1 sec.
+		EnableWarningOnSlowTests(1.0)
+	EndFunction
+	;*********/;
 	warn_on_long_duration = true
 	warning_threshold = afWarningThreshold
 EndFunction
+
 
 Function ResetTestRunner()
 	failedTestSuites = new string[128]
@@ -205,6 +215,7 @@ Function ResetTestRunner()
 	warning_threshold = 0.0
 EndFunction
 
+
 Function ShowTestFailureLog()
 	int working_index = 0
 	bool failed_tests_msg_shown = false
@@ -215,10 +226,10 @@ Function ShowTestFailureLog()
 		If failedTestSuites[working_index] != ""
 			current_working_test_suite = failedTestSuites[working_index]
 			If !failed_tests_msg_shown
-				debug.trace(createLilacDebugMessage(INFO, "Failed Tests (first 128 failed test steps shown):"))
+				Debug.Trace(CreateLilacDebugMessage(INFO, "Failed Tests (first 128 failed test steps shown):"))
 				failed_tests_msg_shown = true
 			EndIf
-			debug.trace(createLilacDebugMessage(INFO, " - " + failedTestSuites[working_index] + ":"))
+			Debug.Trace(CreateLilacDebugMessage(INFO, " - " + failedTestSuites[working_index] + ":"))
 
 			string current_working_test_case = ""
 			bool processing_cases = true
@@ -226,11 +237,11 @@ Function ShowTestFailureLog()
 				bool processing_steps = true
 				If failedTestCases[working_index] != ""  && failedTestSuites[working_index] == current_working_test_suite
 					current_working_test_case = failedTestCases[working_index]
-					debug.trace(createLilacDebugMessage(INFO, "    - " + failedTestCases[working_index] + ":"))
+					Debug.Trace(CreateLilacDebugMessage(INFO, "    - " + failedTestCases[working_index] + ":"))
 
 					While processing_steps
 						If failedActuals[working_index] != "" && failedTestCases[working_index] == current_working_test_case
-							debug.trace(createLilacDebugMessage(INFO, CreateStepFailureMessage(working_index)))
+							Debug.Trace(CreateLilacDebugMessage(INFO, CreateStepFailureMessage(working_index)))
 							working_index += 1
 						Else
 							processing_steps = false
@@ -246,9 +257,11 @@ Function ShowTestFailureLog()
 	EndWhile
 EndFunction
 
+
 Function ShowTestSummary()
-	debug.trace(createLilacDebugMessage(INFO, "  " + testsRun + " total  " + testsPassed + " passed  " + testsFailed + " failed"))
+	Debug.Trace(CreateLilacDebugMessage(INFO, "  " + testsRun + " total  " + testsPassed + " passed  " + testsFailed + " failed"))
 EndFunction
+
 
 string Function CreateStepFailureMessage(int index)
 	bool cdtn_val = failedConditions[index]
@@ -259,7 +272,7 @@ string Function CreateStepFailureMessage(int index)
 
 	string header = "        - Expect " + expectnumber_val + ": expected"
 
-	;debug.trace("Creating step failure message from index " + index + " " + cdtn_val  + " " + matcher_val + " " + actual_val + " " + expected_val)
+	;Debug.Trace("Creating step failure message from index " + index + " " + cdtn_val  + " " + matcher_val + " " + actual_val + " " + expected_val)
 
 	string cdtn
 	If failedConditions[index] == true
@@ -269,7 +282,7 @@ string Function CreateStepFailureMessage(int index)
 	EndIf
 
 	string matcher
-	If matcher_val == beEqualTo
+	If matcher_val == BeEqualTo
 		matcher = "be equal to"
 	ElseIf matcher_val == beLessThan
 		matcher = "be less than"
@@ -298,6 +311,7 @@ string Function CreateStepFailureMessage(int index)
 	return msg
 EndFunction
 
+
 string Function CreateVerboseStepMessage(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected, int aiNumber)
 	bool cdtn_val = abCondition
 	int matcher_val = aiMatcher
@@ -322,7 +336,7 @@ string Function CreateVerboseStepMessage(bool abResult, string asActual, bool ab
 	EndIf
 
 	string matcher
-	If matcher_val == beEqualTo
+	If matcher_val == BeEqualTo
 		matcher = "be equal to"
 	ElseIf matcher_val == beLessThan
 		matcher = "be less than"
@@ -352,26 +366,51 @@ string Function CreateVerboseStepMessage(bool abResult, string asActual, bool ab
 EndFunction
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ; Unit Test Composition ===========================================================================
 
-; Conditions
-bool Property to 					= true 	AutoReadOnly
-bool Property notTo					= false	AutoReadOnly
-
-; Matchers
-int Property beEqualTo 				= 0		AutoReadOnly
-int Property beLessThan 			= 1		AutoReadOnly
-int Property beLessThanOrEqualTo 	= 2		AutoReadOnly
-int Property beGreaterThan 			= 3		AutoReadOnly
-int Property beGreaterThanOrEqualTo	= 4		AutoReadOnly
-int Property beTruthy 				= 5		AutoReadOnly
-int Property beFalsy 				= 6		AutoReadOnly
-int Property beNone					= 7		AutoReadOnly
-
+Group Conditions
+	bool Property To 					= true 	AutoReadOnly
+	bool Property NotTo					= false	AutoReadOnly
+EndGroup
+Group Matchers
+	int Property BeEqualTo 				= 0		AutoReadOnly
+	int Property beLessThan 			= 1		AutoReadOnly
+	int Property beLessThanOrEqualTo 	= 2		AutoReadOnly
+	int Property beGreaterThan 			= 3		AutoReadOnly
+	int Property beGreaterThanOrEqualTo	= 4		AutoReadOnly
+	int Property beTruthy 				= 5		AutoReadOnly
+	int Property beFalsy 				= 6		AutoReadOnly
+	int Property beNone					= 7		AutoReadOnly
+EndGroup
+Group ErrorLevel
 ; Log level enum
 int Property INFO 					= 0 	AutoReadOnly
 int Property WARN 					= 1 	AutoReadOnly
 int Property ERROR 					= 2 	AutoReadOnly
+EndGroup
+
+
 
 ;/********f* Lilac/Describe
 * API VERSION ADDED
@@ -383,14 +422,14 @@ int Property ERROR 					= 2 	AutoReadOnly
 * SYNTAX
 */;
 Function Describe(string asTestSuiteName, bool abTestCases)
-;/*
-* PARAMETERS
-* * asTestSuiteName: The name of the test suite.
-* * abTestCases: A Function that implements this suite's test cases.
-*
-* EXAMPLES
-Describe("A test suite", myTestSuite())
-;*********/;
+	;/*
+	* PARAMETERS
+	* * asTestSuiteName: The name of the test suite.
+	* * abTestCases: A Function that implements this suite's test cases.
+	*
+	* EXAMPLES
+	Describe("A test suite", myTestSuite())
+	;*********/;
 	current_test_suite = asTestSuiteName
 	LogFailedTestSuites()
 EndFunction
@@ -404,15 +443,15 @@ EndFunction
 *
 * SYNTAX
 */;
-Function it(string asTestCaseName, bool abTestSteps)
-;/*
-* PARAMETERS
-* * asTestCaseName: The name of the test case.
-* * abTestSteps: A Function that implements this suite's test steps.
-*
-* EXAMPLES
-it("should do something", myTestCase())
-;*********/;
+Function It(string asTestCaseName, bool abTestSteps)
+	;/*
+	* PARAMETERS
+	* * asTestCaseName: The name of the test case.
+	* * abTestSteps: A Function that implements this suite's test steps.
+	*
+	* EXAMPLES
+	it("should do something", myTestCase())
+	;*********/;
 	current_test_case = asTestCaseName
 	LogFailedTestCases()
 
@@ -431,15 +470,15 @@ it("should do something", myTestCase())
 
 	If testsFailed > 0
 		If warn_on_long_duration && deltaTimeSecs > warning_threshold
-			debug.trace(createLilacDebugMessage(WARN, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (slow: " + deltaTimeSecs + " secs)"))
+			Debug.Trace(CreateLilacDebugMessage(WARN, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (slow: " + deltaTimeSecs + " secs)"))
 		Else
-			debug.trace(createLilacDebugMessage(INFO, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (" + deltaTimeSecs + " secs)"))
+			Debug.Trace(CreateLilacDebugMessage(INFO, "Executed " + testsRun + " (" + testsFailed + " FAILED)" + resultString + " (" + deltaTimeSecs + " secs)"))
 		EndIf
 	Else
 		If warn_on_long_duration && deltaTimeSecs > warning_threshold
-			debug.trace(createLilacDebugMessage(WARN, "Executed " + testsRun + resultString + " (slow: " + deltaTimeSecs + " secs)"))
+			Debug.Trace(CreateLilacDebugMessage(WARN, "Executed " + testsRun + resultString + " (slow: " + deltaTimeSecs + " secs)"))
 		Else
-			debug.trace(createLilacDebugMessage(INFO, "Executed " + testsRun + resultString + " (" + deltaTimeSecs + " secs)"))
+			Debug.Trace(CreateLilacDebugMessage(INFO, "Executed " + testsRun + resultString + " (" + deltaTimeSecs + " secs)"))
 		EndIf
 	EndIf
 	last_current_time = this_current_time
@@ -461,17 +500,17 @@ EndFunction
 * SYNTAX
 */;
 Function beforeAll()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-;Make sure the quest isn't running and is on stage 12 before every test.
-Function beforeAll()
-	TheQuest.Stop()
-	TheQuest.SetStage(12)
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	;Make sure the quest isn't running and is on stage 12 before every test.
+	Function beforeAll()
+		TheQuest.Stop()
+		TheQuest.SetStage(12)
+	EndFunction
+	;*********/;
 EndFunction
 
 ;/********f* Lilac/afterAll
@@ -484,17 +523,17 @@ EndFunction
 * SYNTAX
 */;
 Function afterAll()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-;Make sure the quest isn't running and is on stage 12 after every test.
-Function afterAll()
-	TheQuest.Stop()
-	TheQuest.SetStage(12)
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	;Make sure the quest isn't running and is on stage 12 after every test.
+	Function afterAll()
+		TheQuest.Stop()
+		TheQuest.SetStage(12)
+	EndFunction
+	;*********/;
 EndFunction
 
 ;/********f* Lilac/beforeEach
@@ -507,16 +546,16 @@ EndFunction
 * SYNTAX
 */;
 Function beforeEach()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-;Make sure the storm trooper is reset before every test.
-Function beforeEach()
-	stormtrooper.Reset()
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	;Make sure the storm trooper is reset before every test.
+	Function beforeEach()
+		stormtrooper.Reset()
+	EndFunction
+	;*********/;
 EndFunction
 
 ;/********f* Lilac/afterEach
@@ -529,28 +568,28 @@ EndFunction
 * SYNTAX
 */;
 Function afterEach()
-;/*
-* PARAMETERS
-* None
-*
-* EXAMPLES
-;Make sure the star destroyer is deleted after every test.
-Function afterEach()
-	destroyer.Disable()
-	destroyer.Delete()
-EndFunction
-;*********/;
+	;/*
+	* PARAMETERS
+	* None
+	*
+	* EXAMPLES
+	;Make sure the star destroyer is deleted after every test.
+	Function afterEach()
+		destroyer.Disable()
+		destroyer.Delete()
+	EndFunction
+	;*********/;
 EndFunction
 
 Function LogFailedTestSuites()
 	int end_index = ArrayCountString(failedActuals) - 1
-	If end_index == -1
+	If (end_index == -1)
 		return
 	EndIf
 	int start_index = ArrayCountString(failedTestSuites)
 
 	int i = start_index
-	While i <= end_index
+	While (i <= end_index)
 		failedTestSuites[i] = current_test_suite
 		i += 1
 	EndWhile
@@ -558,17 +597,24 @@ EndFunction
 
 Function LogFailedTestCases()
 	int end_index = ArrayCountString(failedActuals) - 1
-	If end_index == -1
+	If (end_index == -1)
 		return
 	EndIf
 	int start_index = ArrayCountString(failedTestCases)
 
 	int i = start_index
-	While i <= end_index
+	While (i <= end_index)
 		failedTestCases[i] = current_test_case
 		i += 1
 	EndWhile
 EndFunction
+
+
+
+
+
+
+
 
 ;/********f* Lilac/expect
 * API VERSION ADDED
@@ -580,38 +626,38 @@ EndFunction
 * SYNTAX
 */;
 Function expect(var akActual, bool abCondition, int aiMatcher, var akExpected = None)
-;/*
-* PARAMETERS
-* * akActual: The value under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expect(MyArmor, to, beEqualTo, PowerArmor)
-expect(5, to, beEqualTo, 5)
-expect(5, notTo, beEqualTo, 1.4)
-expect(True, to, beTruthy)
-expect(0, to, beFalsy)
-expect("Preston", to, beEqualTo, "Preston")
-* NOTES
-* This is a type-independent version of the individual expect* functions and can be used in place of them.
-* You must use a valid matcher for the type of Actual and Expected. For instance, you cannot check If a Form is "less than" another Form.
-* The Actual and Expected must be of the exact same supported type (Form, ObjectReference, Int, Float, Bool, or String).
-* Using 'beTruthy', 'beFalsy', or 'beNone' matcher and not supplying akExpected can produce a (harmless) Papyrus error. If this becomes an issue, use 'to beEqualTo true', or similar, instead.
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beLessThan
-* * beGreaterThan
-* * beLessThanOrEqualTo
-* * beGreaterThanOrEqualTo
-* * beTruthy
-* * beFalsy
-* * beNone
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The value under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expect(MyArmor, to, beEqualTo, PowerArmor)
+	expect(5, to, beEqualTo, 5)
+	expect(5, notTo, beEqualTo, 1.4)
+	expect(True, to, beTruthy)
+	expect(0, to, beFalsy)
+	expect("Preston", to, beEqualTo, "Preston")
+	* NOTES
+	* This is a type-independent version of the individual expect* functions and can be used in place of them.
+	* You must use a valid matcher for the type of Actual and Expected. For instance, you cannot check If a Form is "less than" another Form.
+	* The Actual and Expected must be of the exact same supported type (Form, ObjectReference, Int, Float, Bool, or String).
+	* Using 'beTruthy', 'beFalsy', or 'beNone' matcher and not supplying akExpected can produce a (harmless) Papyrus error. If this becomes an issue, use 'to beEqualTo true', or similar, instead.
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beLessThan
+	* * beGreaterThan
+	* * beLessThanOrEqualTo
+	* * beGreaterThanOrEqualTo
+	* * beTruthy
+	* * beFalsy
+	* * beNone
+	;*********/;
 
 	If akActual is Form
-		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+		If aiMatcher == BeEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
 			If aiMatcher >= 5 ; beTruthy, beFalsy, beNone
 				expectForm(akActual as Form, abCondition, aiMatcher)
 			ElseIf akExpected is Form
@@ -623,7 +669,7 @@ expect("Preston", to, beEqualTo, "Preston")
 			RaiseException_InvalidMatcher(aiMatcher)
 		EndIf
 	ElseIf akActual is ObjectReference
-		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+		If aiMatcher == BeEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
 			If aiMatcher >= 5 ; beTruthy, beFalsy, beNone
 				expectRef(akActual as ObjectReference, abCondition, aiMatcher)
 			ElseIf akExpected is ObjectReference
@@ -659,7 +705,7 @@ expect("Preston", to, beEqualTo, "Preston")
 			RaiseException_InvalidMatcher(aiMatcher)
 		EndIf
 	ElseIf akActual is Bool
-		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+		If aiMatcher == BeEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
 			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectBool(akActual as Bool, abCondition, aiMatcher)
 			ElseIf akExpected is Bool
@@ -671,7 +717,7 @@ expect("Preston", to, beEqualTo, "Preston")
 			RaiseException_InvalidMatcher(aiMatcher)
 		EndIf
 	ElseIf akActual is String
-		If aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+		If aiMatcher == BeEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
 			If aiMatcher >= 5 ; beTruthy, beFalsy
 				expectString(akActual as String, abCondition, aiMatcher)
 			ElseIf akExpected is String
@@ -697,25 +743,25 @@ EndFunction
 * SYNTAX
 */;
 Function expectForm(Form akActual, bool abCondition, int aiMatcher, Form akExpected = None)
-;/*
-* PARAMETERS
-* * akActual: The form under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectForm(MyArmor, to, beEqualTo, PowerArmor)
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beTruthy
-* * beFalsy
-* * beNone
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The form under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectForm(MyArmor, to, beEqualTo, PowerArmor)
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beTruthy
+	* * beFalsy
+	* * beNone
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = akActual == (akExpected as Form)
 		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == true
@@ -728,7 +774,7 @@ expectForm(MyArmor, to, beEqualTo, PowerArmor)
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = akActual != (akExpected as Form)
 		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == false
@@ -754,25 +800,25 @@ EndFunction
 * SYNTAX
 */;
 Function expectRef(ObjectReference akActual, bool abCondition, int aiMatcher, ObjectReference akExpected = None)
-;/*
-* PARAMETERS
-* * akActual: The reference under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectRef(FalmerRef, to, beEqualTo, BossFalmerRef)
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beTruthy
-* * beFalsy
-* * beNone
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The reference under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectRef(FalmerRef, to, beEqualTo, BossFalmerRef)
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beTruthy
+	* * beFalsy
+	* * beNone
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = akActual == (akExpected as ObjectReference)
 		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == true
@@ -785,7 +831,7 @@ expectRef(FalmerRef, to, beEqualTo, BossFalmerRef)
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = akActual != (akExpected as ObjectReference)
 		ElseIf aiMatcher == beTruthy
 			result = (akActual as bool) == false
@@ -811,28 +857,28 @@ EndFunction
 * SYNTAX
 */;
 Function expectInt(int aiActual, bool abCondition, int aiMatcher, int aiExpected = -1)
-;/*
-* PARAMETERS
-* * akActual: The integer under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectInt(counter, to, beLessThan, 40)
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beLessThan
-* * beGreaterThan
-* * beLessThanOrEqualTo
-* * beGreaterThanOrEqualTo
-* * beTruthy
-* * beFalsy
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The integer under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectInt(counter, to, beLessThan, 40)
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beLessThan
+	* * beGreaterThan
+	* * beLessThanOrEqualTo
+	* * beGreaterThanOrEqualTo
+	* * beTruthy
+	* * beFalsy
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = aiActual == aiExpected
 		ElseIf aiMatcher == beLessThan
 			result = aiActual < aiExpected
@@ -851,7 +897,7 @@ expectInt(counter, to, beLessThan, 40)
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = aiActual != aiExpected
 		ElseIf aiMatcher == beLessThan
 			result = aiActual >= aiExpected
@@ -883,28 +929,28 @@ EndFunction
 * SYNTAX
 */;
 Function expectFloat(float afActual, bool abCondition, int aiMatcher, float afExpected = -1.0)
-;/*
-* PARAMETERS
-* * akActual: The float under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectFloat(GameHour.GetValue(), to, beGreaterThan, 19.0)
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beLessThan
-* * beGreaterThan
-* * beLessThanOrEqualTo
-* * beGreaterThanOrEqualTo
-* * beTruthy
-* * beFalsy
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The float under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectFloat(GameHour.GetValue(), to, beGreaterThan, 19.0)
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beLessThan
+	* * beGreaterThan
+	* * beLessThanOrEqualTo
+	* * beGreaterThanOrEqualTo
+	* * beTruthy
+	* * beFalsy
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = afActual == afExpected
 		ElseIf aiMatcher == beLessThan
 			result = afActual < afExpected
@@ -923,7 +969,7 @@ expectFloat(GameHour.GetValue(), to, beGreaterThan, 19.0)
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = afActual != afExpected
 		ElseIf aiMatcher == beLessThan
 			result = afActual >= afExpected
@@ -955,24 +1001,24 @@ EndFunction
 * SYNTAX
 */;
 Function expectBool(bool abActual, bool abCondition, int aiMatcher, bool abExpected = false)
-;/*
-* PARAMETERS
-* * akActual: The boolean under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectBool(Follower.IsEssential(), to, beTruthy)
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beTruthy
-* * beFalsy
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The boolean under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectBool(Follower.IsEssential(), to, beTruthy)
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beTruthy
+	* * beFalsy
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = abActual == abExpected
 		ElseIf aiMatcher == beTruthy
 			result = abActual == true
@@ -983,7 +1029,7 @@ expectBool(Follower.IsEssential(), to, beTruthy)
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = abActual != abExpected
 		ElseIf aiMatcher == beTruthy
 			result = abActual != true
@@ -1007,25 +1053,25 @@ EndFunction
 * SYNTAX
 */;
 Function expectString(string asActual, bool abCondition, int aiMatcher, string asExpected = "")
-;/*
-* PARAMETERS
-* * akActual: The string under test.
-* * abCondition: The condition (to or notTo).
-* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
-* * akExpected: The expected value.
-*
-* EXAMPLES
-expectString("Preston", to, beEqualTo, "Preston")
-* NOTES
-* Valid matchers for this expectation:
-* * beEqualTo
-* * beTruthy
-* * beFalsy
-* The Fallout 4 version of Lilac does not support the "contain" matcher.
-;*********/;
+	;/*
+	* PARAMETERS
+	* * akActual: The string under test.
+	* * abCondition: The condition (to or notTo).
+	* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+	* * akExpected: The expected value.
+	*
+	* EXAMPLES
+	expectString("Preston", to, beEqualTo, "Preston")
+	* NOTES
+	* Valid matchers for this expectation:
+	* * beEqualTo
+	* * beTruthy
+	* * beFalsy
+	* The Fallout 4 version of Lilac does not support the "contain" matcher.
+	;*********/;
 	bool result
-	If abCondition == to
-		If aiMatcher == beEqualTo
+	If abCondition == To
+		If aiMatcher == BeEqualTo
 			result = asActual == asExpected
 		ElseIf aiMatcher == beTruthy
 			result = (asActual as bool) == true
@@ -1036,7 +1082,7 @@ expectString("Preston", to, beEqualTo, "Preston")
 			result = false
 		EndIf
 	Else ; notTo
-		If aiMatcher == beEqualTo
+		If aiMatcher == BeEqualTo
 			result = asActual != asExpected
 		ElseIf aiMatcher == beTruthy
 			result = (asActual as bool) != true
@@ -1072,7 +1118,7 @@ Function RaiseResult(bool abResult, string asActual, bool abCondition, int aiMat
 		EndIf
 	EndIf
 	If verbose_logging
-		debug.trace(createLilacDebugMessage(INFO, CreateVerboseStepMessage(abResult, asActual, abCondition, aiMatcher, asExpected, expectCount)))
+		Debug.Trace(CreateLilacDebugMessage(INFO, CreateVerboseStepMessage(abResult, asActual, abCondition, aiMatcher, asExpected, expectCount)))
 	EndIf
 EndFunction
 
@@ -1096,18 +1142,18 @@ Function RaiseException_InvalidMatcher(int aiMatcher)
 		matcher = "beNone"
 	EndIf
 
-	debug.trace(createLilacDebugMessage(ERROR, "Invalid matcher '" + matcher + "' used."))
+	Debug.Trace(CreateLilacDebugMessage(ERROR, "Invalid matcher '" + matcher + "' used."))
 EndFunction
 
 Function RaiseException_InvalidType(var akActual)
-	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " was not a Form, ObjectReference, Int, Float, Bool, or String."))
+	Debug.Trace(CreateLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " was not a Form, ObjectReference, Int, Float, Bool, or String."))
 EndFunction
 
 Function RaiseException_NonMatchingType(var akActual, var akExpected)
-	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " did not match the type of Expected " + (akExpected as String)))
+	Debug.Trace(CreateLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " did not match the type of Expected " + (akExpected as String)))
 EndFunction
 
-string Function createLilacDebugMessage(int aiLogLevel, string asMessage)
+string Function CreateLilacDebugMessage(int aiLogLevel, string asMessage)
 	string level
 	return "[" + SystemName + "] " + getLogLevel(aiLogLevel) + asMessage
 EndFunction
@@ -1140,7 +1186,7 @@ int Function ArrayAddString(string[] myArray, string myKey)
 EndFunction
 
 int Function ArrayCountString(String[] myArray)
-;Counts the number of indices in this array that do not have a "none" type.
+	;Counts the number of indices in this array that do not have a "none" type.
     ;       int myCount = number of indicies that are not "none"
 
     int i = 0

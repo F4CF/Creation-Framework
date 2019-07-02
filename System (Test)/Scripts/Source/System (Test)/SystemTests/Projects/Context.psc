@@ -23,12 +23,12 @@ EndFunction
 
 bool Function ImplementationSuite()
 	WriteLine(self, "Implementation Suite.")
-	it("should not be none", instanceTestCase())
-	it("should have a valid title", titleTestCase())
-	it("should not have a none authors array, but it may be empty", authorsTestCase())
-	it("should have a valid filename and extension to its plugin", filenameTestCase())
-	it("should have a valid FormID which matches the attached Quest", formidTestCase())
-	it("should have a valid release version greater than zero", versionTestCase())
+	It("should not be none", instanceTestCase())
+	It("should have a valid title", titleTestCase())
+	It("should not have a none authors array, but it may be empty", authorsTestCase())
+	It("should have a valid filename and extension to its plugin", filenameTestCase())
+	It("should have a valid FormID which matches the attached Quest", formidTestCase())
+	It("should have a valid release version greater than zero", versionTestCase())
 	return Done
 EndFunction
 
@@ -41,7 +41,7 @@ bool Function instanceTestCase()
 	; expectations
 	; -is not none
 	expectIsNotNone(Context)
-	expect(Context is Quest, to, beTruthy)
+	expect(Context is Quest, To, beTruthy)
 	return Done
 EndFunction
 
@@ -59,7 +59,7 @@ bool Function authorsTestCase()
 	WriteLine(self, "authorsTestCase")
 	; expectations
 	; -is not none
-	expect(Context.Authors as bool, to, beTruthy)
+	expect(Context.Authors as bool, To, beTruthy)
 	return Done
 EndFunction
 
@@ -80,7 +80,7 @@ bool Function formidTestCase()
 	; -the attached quest must match this FormID
 	int actualFormID = (Context as Quest).GetFormID()
 	int expectedFormID = Context.FormID
-	expect(expectedFormID, to, beEqualTo, actualFormID)
+	expect(expectedFormID, To, BeEqualTo, actualFormID)
 	return Done
 EndFunction
 
@@ -90,7 +90,7 @@ bool Function versionTestCase()
 	; expectations
 	; -the context version to be greater than a new version (new default 0.0.0.0, false)
 	expectIsNotNone(Context.Release)
-	expect(VersionGreaterThan(Context.Release, new Version), to, beTruthy)
+	expect(VersionGreaterThan(Context.Release, new Version), To, beTruthy)
 	return Done
 EndFunction
 

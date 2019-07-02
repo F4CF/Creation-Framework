@@ -19,7 +19,7 @@ EndFunction
 int Property mockItCallCount = 0 Auto
 Function it(string asTestCaseName, bool abTestSteps)
 	mockItCallCount += 1
-	parent.it(asTestCaseName, abTestSteps)
+	parent.It(asTestCaseName, abTestSteps)
 EndFunction
 
 int Property mockBeforeEachCallCount = 0 Auto
@@ -45,12 +45,12 @@ EndFunction
 
 bool Function LilacTesting_TestCase1()
 	debug.trace(createLilacDebugMessage(INFO, "Ran test case 1"))
-	expectBool(true, to, beTruthy)
+	expectBool(true, To, beTruthy)
 	return true ; Done
 EndFunction
 
 bool Function LilacTesting_TestCase2()
 	debug.trace(createLilacDebugMessage(INFO, "Ran test case 2"))
-	expectBool(false, to, beFalsy)
+	expectBool(false, To, beFalsy)
 	return true ; Done
 EndFunction

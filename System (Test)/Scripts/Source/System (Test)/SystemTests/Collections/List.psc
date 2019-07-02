@@ -74,12 +74,12 @@ EndFunction
 
 
 Function IndexOf_IT(var object, int expected)
-	it("should return the expected index of '"+expected+"' for the '"+object+"' object.", IndexOf_Expect(object, expected))
+	It("should return the expected index of '"+expected+"' for the '"+object+"' object.", IndexOf_Expect(object, expected))
 EndFunction
 
 
 bool Function IndexOf_Expect(var object, int expected)
-	expect(MyList.IndexOf(object), to, beEqualTo, expected)
+	expect(MyList.IndexOf(object), To, BeEqualTo, expected)
 	return Done
 EndFunction
 
