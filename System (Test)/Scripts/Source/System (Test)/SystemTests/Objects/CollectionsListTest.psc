@@ -1,5 +1,4 @@
 ScriptName SystemTests:Objects:CollectionsListTest Extends System:Diagnostics:Lilac
-import System:Collections
 import System:Log
 
 
@@ -14,7 +13,7 @@ EndFunction
 
 Function TestSuites()
 	WriteLine("SystemTests:Objects:CollectionsListTest", "Executing the TestSuites function.")
-	describe("List IndexOf", IndexOfSuite())
+	Describe("List IndexOf", IndexOfSuite())
 EndFunction
 
 
@@ -107,7 +106,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Actuals
-	List Property MyList Auto Const Mandatory
+	System:Collections:List Property MyList Auto Const Mandatory
 EndGroup
 
 Group Properties
