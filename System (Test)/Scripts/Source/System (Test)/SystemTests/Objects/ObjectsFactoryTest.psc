@@ -1,19 +1,9 @@
-Scriptname Papyrus_Test:ObjectsFactoryTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:Collections
-import Papyrus:Log
+ScriptName SystemTests:Objects:ObjectsFactoryTest Extends System:Diagnostics:Lilac
+import System:Collections
+import System:Log
 
 
-UserLog Log
-List MyList
-
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
+System:Collections:List MyList
 
 
 ; Lilac
@@ -21,13 +11,13 @@ EndEvent
 
 
 Function Setup()
-	WriteLine(Log, "Setup")
+	WriteLine("SystemTests:Objects:ObjectsFactoryTest", "Setup")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("SystemTests:Objects:ObjectsFactoryTest", "Executing the TestSuites function.")
 ;	describe("New List", NewListSuite())
 EndFunction
 
@@ -48,10 +38,8 @@ Function AfterAll()
 EndFunction
 
 
-
-
 Function Foo()
-	MyList = Papyrus:Collections:List.Init()
+	MyList = System:Collections:List.Init()
 	If (MyList)
 		MyList.Add("One")
 		MyList.Add("Two")

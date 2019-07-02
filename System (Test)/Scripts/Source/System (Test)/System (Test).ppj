@@ -1,19 +1,23 @@
 <?xml version='1.0'?>
-	<!-- Scripting -->
-	<!-- http://www.creationkit.com/fallout4/index.php?title=Papyrus_Projects -->
-	<PapyrusProject
-		xmlns="PapyrusProject.xsd"
-		Flags="Institute_Papyrus_Flags.flg"
-		Output="..\..\"
-		Asm="Discard"
-		Optimize="false"
-		Release="false"
-		Final="false"
-	>
+<!-- System (Test) -->
+<!-- http://www.creationkit.com/fallout4/index.php?title=Papyrus_Projects -->
+<PapyrusProject
+	xmlns="PapyrusProject.xsd"
+	Flags="Institute_Papyrus_Flags.flg"
+	Output="..\..\"
+	Asm="Discard"
+	Optimize="false"
+	Release="false"
+	Final="false"
+>
 	<Imports>
 		<Import>.</Import>
-		<Import>..\Scripting</Import>
-		<Import>..\Lilac</Import>
+		<Import>..\System</Import>
+		<Import>..\System.Diagnostics</Import>
+		<Import>..\System.Objects</Import>
+		<Import>..\System.Projects</Import>
+		<Import>..\System.XSE</Import>
+		<Import>..\F4SE</Import>
 		<Import>..\Base</Import>
 	</Imports>
 	<Folders>

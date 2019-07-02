@@ -1,31 +1,19 @@
-ScriptName Papyrus_Test:ArrayTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:Array
-import Papyrus:Log
-
-
-UserLog Log
-
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
+ScriptName SystemTests:ArrayTest Extends System:Diagnostics:Lilac
+import System:Array
+import System:Log
 
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(Log, "Executing the Setup function.")
+	WriteLine("Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("Executing the TestSuites function.")
 	describe("Array Capacity", CapacitySuite())
 	describe("Array Distinct", DistinctSuite())
 EndFunction
@@ -35,7 +23,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function CapacitySuite()
-	WriteLine(Log, "Capacity Suite.")
+	WriteLine("Capacity Suite.")
 	it("should have a created length of 0", CapacityTest(0))
 	it("should have a created length of 64", CapacityTest(64))
 	it("should have a created length of 128", CapacityTest(128))
@@ -47,7 +35,7 @@ EndFunction
 
 
 bool Function CapacityTest(int aSize)
-	WriteLine(Log, "CapacityTest "+aSize)
+	WriteLine("CapacityTest "+aSize)
 	var[] array = new var[aSize]
 	expect(array.Length, beEqualTo, aSize)
 	return Done
@@ -58,7 +46,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function DistinctSuite()
-	WriteLine(Log, "Distinct Suite.")
+	WriteLine("Distinct Suite.")
 	it("should return a distinct array of booleans", DistinctBooleanCase())
 	it("should return a distinct array of integers", DistinctIntegerCase())
 	it("should return a distinct array of floating points", DistinctFloatingCase())
@@ -69,7 +57,7 @@ EndFunction
 
 
 bool Function DistinctBooleanCase()
-	WriteLine(Log, "DistinctBooleanCase")
+	WriteLine("DistinctBooleanCase")
 	var[] array = new var[0]
 	array.Add(true)
 	array.Add(true)
@@ -84,7 +72,7 @@ EndFunction
 
 
 bool Function DistinctIntegerCase()
-	WriteLine(Log, "DistinctIntegerCase")
+	WriteLine("DistinctIntegerCase")
 	var[] array = new var[0]
 	array.Add(1)
 	array.Add(1)
@@ -102,7 +90,7 @@ EndFunction
 
 
 bool Function DistinctFloatingCase()
-	WriteLine(Log, "DistinctFloatingCase")
+	WriteLine("DistinctFloatingCase")
 	var[] array = new var[0]
 	array.Add(1.0)
 	array.Add(1.0)
@@ -127,7 +115,7 @@ EndFunction
 
 
 bool Function DistinctStringCase()
-	WriteLine(Log, "DistinctStringCase")
+	WriteLine("DistinctStringCase")
 	var[] array = new var[0]
 	array.Add("")
 	array.Add("")
@@ -142,7 +130,7 @@ EndFunction
 
 
 bool Function DistinctElementsCase()
-	WriteLine(Log, "DistinctElementsCase")
+	WriteLine("DistinctElementsCase")
 	var[] array = new var[0]
 	array.Add(none)
 	array.Add(1)

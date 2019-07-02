@@ -1,22 +1,22 @@
-scriptname Lilac_Test extends Lilac
+ScriptName SystemTests:Diagnostics:Lilac_Test Extends System:Diagnostics:Lilac
 
 
-function TestSuites()
+Function TestSuites()
 	describe("Conditions", ConditionTestCases())
 	describe("Matchers", MatcherTestCases())
 	describe("Test Cases", TestCaseTestCases())
 	describe("Messages", MessageTestCases())
-endFunction
+EndFunction
 
 
 ; Test Suites =================================================================
 
-function ConditionTestCases()
+bool Function ConditionTestCases()
 	it("'to' should be true", case_condition_to())
 	it("'notTo' should be false", case_condition_notTo())
-endFunction
+EndFunction
 
-function MatcherTestCases()
+bool Function MatcherTestCases()
 	it("'beEqualTo' should evaluate equality", case_matcher_beEqualTo())
 	it("'beLessThan' should evaluate less than", case_matcher_beLessThan())
 	it("'beLessThanOrEqualTo' should evaluate less than or equal to", case_matcher_beLessThanOrEqualTo())
@@ -25,17 +25,17 @@ function MatcherTestCases()
 	it("'beTruthy' should evaluate truthiness", case_matcher_beTruthy())
 	it("'beFalsy' should evaluate falsiness", case_matcher_beFalsy())
 	it("'beNone' should evaluate None", case_matcher_beNone())
-endFunction
+EndFunction
 
-function TestCaseTestCases()
+bool Function TestCaseTestCases()
 	it("should run beforeEach and afterEach before and after every test case", case_testcase_BeforeAfterEach())
 	it("'describe' should run all test cases in its suite", case_testcase_describe())
-endFunction
+EndFunction
 
-function MessageTestCases()
+bool Function MessageTestCases()
 	it("should create correct step failure messages", case_message_stepfailure())
 	it("should create an invalid matcher message", case_message_invalidmatcher())
-endFunction
+EndFunction
 
 
 ; Test Cases ==================================================================
@@ -45,48 +45,48 @@ Armor ArmorIronCuirass
 ObjectReference TestArmorRef
 Form EmptyForm
 
-function beforeAll()
+Function beforeAll()
 	mockLilacTest = Game.GetFormFromFile(0x12C5, "LilacTestLilac.esp") as mockLilac
 	mockLilacTest.mockLastLilacDebugMessage = ""
 	mockLilacTest.mockLastRaisedResultResult = true
 	ArmorIronCuirass = Game.GetFormFromFile(0x12E49, "Skyrim.esm") as Armor
 	TestArmorRef = Game.GetPlayer().PlaceAtMe(ArmorIronCuirass)
 	EmptyForm = None
-endFunction
+EndFunction
 
-function beforeEach()
+Function beforeEach()
 	mockLilacTest.ResetTestRunner()
 	mockLilacTest.mockBeforeEachCallCount = 0
 	mockLilacTest.mockAfterEachCallCount = 0
 	mockLilacTest.mockItCallCount = 0
-endFunction
+EndFunction
 
-function afterAll()
+Function afterAll()
 	mockLilacTest.mockLastLilacDebugMessage = ""
 	mockLilacTest.mockLastRaisedResultResult = true
 	mockLilacTest = None
 	ArmorIronCuirass = None
 	TestArmorRef.Disable()
 	TestArmorRef.Delete()
-endFunction
+EndFunction
 
-function afterEach()
+Function afterEach()
 	mockLilacTest.ResetTestRunner()
 	mockLilacTest.mockBeforeEachCallCount = 0
 	mockLilacTest.mockAfterEachCallCount = 0
 	mockLilacTest.mockItCallCount = 0
-endFunction
+EndFunction
 
 
-function case_condition_to()
+bool Function case_condition_to()
 	expectBool(self.to, to, beTruthy)
-endFunction
+EndFunction
 
-function case_condition_notTo()
+bool Function case_condition_notTo()
 	expectBool(self.notTo, to, beFalsy)
-endFunction
+EndFunction
 
-function case_matcher_beEqualTo()
+bool Function case_matcher_beEqualTo()
 	expectInt(5, to, beEqualTo, 5)
 	expectInt(5, notTo, beEqualTo, 12)
 
@@ -109,9 +109,9 @@ function case_matcher_beEqualTo()
 	expectRef(TestArmorRef, to, beEqualTo, TestArmorRef)
 	expectRef(TestArmorRef, notTo, beEqualTo, None)
 	expectRef(TestArmorRef, notTo, beEqualTo, Game.GetPlayer())
-endFunction
+EndFunction
 
-function case_matcher_beLessThan()
+bool Function case_matcher_beLessThan()
 	expectInt(3, to, beLessThan, 1000)
 	expectInt(3, to, beLessThan, 4)
 	expectInt(3, notTo, beLessThan, 3)
@@ -137,9 +137,9 @@ function case_matcher_beLessThan()
 	expectFloat(-12.6, notTo, beLessThan, -12.6)
 	expectFloat(-12.6, notTo, beLessThan, -13.0)
 	expectFloat(-12.6, notTo, beLessThan, -100.0)
-endFunction
+EndFunction
 
-function case_matcher_beLessThanOrEqualTo()
+bool Function case_matcher_beLessThanOrEqualTo()
 	expectInt(3, to, beLessThanOrEqualTo, 1000)
 	expectInt(3, to, beLessThanOrEqualTo, 4)
 	expectInt(3, to, beLessThanOrEqualTo, 3)
@@ -165,9 +165,9 @@ function case_matcher_beLessThanOrEqualTo()
 	expectFloat(-12.6, to, beLessThanOrEqualTo, -12.6)
 	expectFloat(-12.6, notTo, beLessThanOrEqualTo, -13.0)
 	expectFloat(-12.6, notTo, beLessThanOrEqualTo, -100.0)
-endFunction
+EndFunction
 
-function case_matcher_beGreaterThan()
+bool Function case_matcher_beGreaterThan()
 	expectInt(7, to, beGreaterThan, 5)
 	expectInt(7, to, beGreaterThan, -6)
 	expectInt(7, to, beGreaterThan, 6)
@@ -196,9 +196,9 @@ function case_matcher_beGreaterThan()
 	expectFloat(-12.6, notTo, beGreaterThan, -12.6)
 	expectFloat(-12.6, notTo, beGreaterThan, -12.5)
 	expectFloat(-12.6, notTo, beGreaterThan, 100.0)
-endFunction
+EndFunction
 
-function case_matcher_beGreaterThanOrEqualTo()
+bool Function case_matcher_beGreaterThanOrEqualTo()
 	expectInt(7, to, beGreaterThanOrEqualTo, 5)
 	expectInt(7, to, beGreaterThanOrEqualTo, -6)
 	expectInt(7, to, beGreaterThanOrEqualTo, 6)
@@ -228,9 +228,9 @@ function case_matcher_beGreaterThanOrEqualTo()
 	expectFloat(-12.6, to, beGreaterThanOrEqualTo, -12.6)
 	expectFloat(-12.6, notTo, beGreaterThanOrEqualTo, -12.5)
 	expectFloat(-12.6, notTo, beGreaterThanOrEqualTo, 100.0)
-endFunction
+EndFunction
 
-function case_matcher_beTruthy()
+bool Function case_matcher_beTruthy()
 	expectInt(1, to, beTruthy)
 	expectInt(0, notTo, beTruthy)
 	expectInt(-1, to, beTruthy)
@@ -252,9 +252,9 @@ function case_matcher_beTruthy()
 
 	expectString("test string", to, beTruthy)
 	expectString("", notTo, beTruthy)
-endFunction
+EndFunction
 
-function case_matcher_beFalsy()
+bool Function case_matcher_beFalsy()
 	expectInt(1, notTo, beFalsy)
 	expectInt(0, to, beFalsy)
 	expectInt(-1, notTo, beFalsy)
@@ -276,18 +276,18 @@ function case_matcher_beFalsy()
 
 	expectString("test string", notTo, beFalsy)
 	expectString("", to, beFalsy)
-endFunction
+EndFunction
 
-function case_matcher_beNone()
+bool Function case_matcher_beNone()
 	expectForm(EmptyForm, to, beNone)
 	expectForm(ArmorIronCuirass, notTo, beNone)
 
 	ObjectReference EmptyRef = None
 	expectRef(EmptyRef, to, beNone)
 	expectRef(TestArmorRef, notTo, beNone)
-endFunction
+EndFunction
 
-function case_message_stepfailure()
+bool Function case_message_stepfailure()
 	int i = 0
 
 	mockLilacTest.failedActuals[i] = "5"
@@ -464,9 +464,9 @@ function case_message_stepfailure()
 	expectString( mockLilacTest.CreateStepFailureMessage(i), to, beEqualTo, \
 		         "        - Expect 16: expected None not to be None")
 
-endFunction
+EndFunction
 
-function case_message_invalidmatcher()
+bool Function case_message_invalidmatcher()
 
 	; expectForm
 	mockLilacTest.mockLastRaisedResultResult = true
@@ -671,19 +671,18 @@ function case_message_invalidmatcher()
 	expectBool(mockLilacTest.mockLastRaisedResultResult, to, beFalsy)
 	expectString(mockLilacTest.mockLastLilacDebugMessage, to, beEqualTo, \
 		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
+EndFunction
 
-endFunction
-
-function case_testcase_BeforeAfterEach()
+bool Function case_testcase_BeforeAfterEach()
 	mockLilacTest.RunTests()
 
 	; There are 2 test cases, but beforeEach and afterEach
 	; are expected to run 3 times.
 	expectInt(mockLilacTest.mockBeforeEachCallCount, to, beEqualTo, 3)
 	expectInt(mockLilacTest.mockAfterEachCallCount, to, beEqualTo, 3)
-endFunction
+EndFunction
 
-function case_testcase_describe()
+bool Function case_testcase_describe()
 	mockLilacTest.RunTests()
 	expectInt(mockLilacTest.mockItCallCount, to, beEqualTo, 2)
-endFunction
+EndFunction

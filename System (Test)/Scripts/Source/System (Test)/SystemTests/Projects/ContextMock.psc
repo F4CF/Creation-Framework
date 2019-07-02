@@ -1,10 +1,10 @@
-ScriptName Papyrus_Test:ContextMock extends Papyrus:Project:Context
-import Papyrus
-import Papyrus:Compatibility:External
-import Papyrus:Log
-import Papyrus:VersionType
+ScriptName SystemTests:Projects:ContextMock Extends Papyrus:Project:Context
+import System
+import System:External
+import System:Log
+import System:VersionType
+import System:Framework:Common
 
-UserLog Log
 Actor Player
 
 
@@ -12,9 +12,6 @@ Actor Player
 ;---------------------------------------------
 
 Event OnInitialize()
-	Log = new UserLog
-	Log.Caller = self
-	Log.FileName = "Lilac" + "_ContextMock"
 	Player = Game.GetPlayer()
 	Required = MQ102
 	RequiredStage = 1
@@ -23,18 +20,18 @@ EndEvent
 
 Event OnContextStartup()
 	If (TryHolotape())
-		WriteLine(Log, "Added a holotape to the player for startup.")
+		WriteLine("Added a holotape to the player for startup.")
 	Else
-		WriteLine(Log, "The player already has a holotape for startup.")
+		WriteLine("The player already has a holotape for startup.")
 	EndIf
 EndEvent
 
 
 Event OnContextShutdown()
 	If (TryHolotape()) ; so player can enable the mod again
-		WriteLine(Log, "Added a holotape to the player for shutdown.")
+		WriteLine("Added a holotape to the player for shutdown.")
 	Else
-		WriteLine(Log, "The player already has a holotape for shutdown.")
+		WriteLine("The player already has a holotape for shutdown.")
 	EndIf
 EndEvent
 

@@ -1,30 +1,19 @@
-ScriptName Papyrus_Test:CollectionsListTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:Collections
-import Papyrus:Log
-
-UserLog Log
-
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
+ScriptName SystemTests:Objects:CollectionsListTest Extends System:Diagnostics:Lilac
+import System:Collections
+import System:Log
 
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(Log, "Executing the Setup function.")
+	WriteLine("SystemTests:Objects:CollectionsListTest", "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("SystemTests:Objects:CollectionsListTest", "Executing the TestSuites function.")
 	describe("List IndexOf", IndexOfSuite())
 EndFunction
 

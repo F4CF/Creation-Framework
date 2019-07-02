@@ -1,8 +1,8 @@
-Scriptname Papyrus:Collections:Stack extends Papyrus:Collections:Collection Default
+Scriptname System:Collections:Stack extends System:Collections:Collection Default
 {Represents a last-in-first-out (LIFO) collection of objects.}
 ; https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx
-import Papyrus
-import Papyrus:Objects:Factory
+import System
+import System:Objects:Factory
 
 var[] Items
 

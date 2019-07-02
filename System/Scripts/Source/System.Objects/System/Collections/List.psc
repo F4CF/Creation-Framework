@@ -1,9 +1,9 @@
-Scriptname Papyrus:Collections:List extends Papyrus:Collections:Collection Default
+Scriptname System:Collections:List extends System:Collections:Collection Default
 {Represents a list of objects that can be accessed by index.}
 ; https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx
-import Papyrus
-import Papyrus:Objects:Factory
-import Papyrus:Log
+import System
+import System:Objects:Factory
+import System:Log
 
 
 var[] Items

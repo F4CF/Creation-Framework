@@ -1,29 +1,18 @@
-ScriptName Papyrus_Test:LogTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:Log
-
-
-UserLog Log
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
+ScriptName SystemTests:Diagnostics:LogTest Extends System:Diagnostics:Lilac
+import System:Log
 
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(Log, "Executing the Setup function.")
+	WriteLine("SystemTests:Diagnostics:LogTest", "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("SystemTests:Diagnostics:LogTest", "Executing the TestSuites function.")
 	describe("The context", Suite1())
 EndFunction
 
@@ -32,6 +21,6 @@ EndFunction
 ;---------------------------------------------
 
 bool Function Suite1()
-	WriteLine(Log, "Executing the Suite1 function.")
+	WriteLine("SystemTests:Diagnostics:LogTest", "Executing the Suite1 function.")
 	return false
 EndFunction

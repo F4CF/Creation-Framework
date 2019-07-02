@@ -1,30 +1,18 @@
-ScriptName Papyrus_Test:BoolTest extends Papyrus_Test:Framework:Lilac
-import Papyrus:BoolType
-import Papyrus:Log
-
-UserLog Log
-
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
-
+ScriptName SystemTests:BoolTest Extends System:Diagnostics:Lilac
+import System:BoolType
+import System:Log
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(Log, "Executing the Setup function.")
+	WriteLine("Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("Executing the TestSuites function.")
 	describe("Boolean To Integer", BoolToIntSuite())
 EndFunction
 
@@ -33,7 +21,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function BoolToIntSuite()
-	WriteLine(Log, "BoolToIntSuite")
+	WriteLine("BoolToIntSuite")
 	it("should be converted to a valid integer", BoolToIntCase())
 	return Done
 EndFunction
@@ -43,7 +31,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function BoolToIntCase()
-	WriteLine(Log, "BoolToIntCase")
+	WriteLine("BoolToIntCase")
 	expect(BoolToInt(true), to, beEqualTo, 1)
 	expect(BoolToInt(false), to, beEqualTo, 0)
 	return Done

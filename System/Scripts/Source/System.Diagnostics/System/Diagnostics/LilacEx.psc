@@ -1,5 +1,5 @@
-ScriptName Papyrus_Test:Framework:LilacEx extends Lilac
-import Papyrus:Log
+ScriptName System:Diagnostics:LilacEx extends System:Diagnostics:Lilac
+import System:Log
 
 ; Overrides
 ;---------------------------------------------
@@ -32,7 +32,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Properties
-	Papyrus_Test:Framework:Common Property Common Auto Const Mandatory
+	System:Diagnostics:Common Property Common Auto Const Mandatory
 EndGroup
 
 Group Constants

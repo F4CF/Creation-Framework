@@ -1,8 +1,8 @@
-Scriptname Papyrus:Collections:Queue extends Papyrus:Collections:Collection Default
+Scriptname System:Collections:Queue extends System:Collections:Collection Default
 {Represents a first-in-first-out (FIFO) collection of objects.}
 ; https://msdn.microsoft.com/en-us/library/7977ey2c(v=vs.110).aspx
-import Papyrus
-import Papyrus:Objects:Factory
+import System
+import System:Objects:Factory
 
 var[] Items
 

@@ -1,8 +1,8 @@
-Scriptname Papyrus:Collections:Dictionary extends Papyrus:Collections:Collection Default
+Scriptname System:Collections:Dictionary extends System:Collections:Collection Default
 {Represents a collection of keys and values.}
 ; https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx
-import Papyrus
-import Papyrus:Objects:Factory
+import System
+import System:Objects:Factory
 
 
 var[] Keys

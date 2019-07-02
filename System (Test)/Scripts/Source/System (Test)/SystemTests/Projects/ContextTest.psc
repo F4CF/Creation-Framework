@@ -1,32 +1,20 @@
-ScriptName Papyrus_Test:ContextTest extends Papyrus_Test:Framework:Lilac
-import Papyrus
-import Papyrus:Compatibility
-import Papyrus:Log
-import Papyrus:VersionType
-
-UserLog Log
-
-
-; Events
-;---------------------------------------------
-
-Event OnInit()
-	Log = LogNew(Common.LogFile, self)
-	parent.OnInit()
-EndEvent
+ScriptName SystemTests:Projects:ContextTest Extends System:Diagnostics:Lilac
+import System
+import System:Log
+import System:VersionType
 
 
 ; Lilac
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(Log, "Executing the Setup function.")
+	WriteLine("Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(Log, "Executing the TestSuites function.")
+	WriteLine("Executing the TestSuites function.")
 	describe("Implementation", ImplementationSuite())
 EndFunction
 
@@ -35,7 +23,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function ImplementationSuite()
-	WriteLine(Log, "Implementation Suite.")
+	WriteLine("Implementation Suite.")
 	it("should not be none", instanceTestCase())
 	it("should have a valid title", titleTestCase())
 	it("should not have a none authors array, but it may be empty", authorsTestCase())
@@ -50,7 +38,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function instanceTestCase()
-	WriteLine(Log, "instanceTestCase")
+	WriteLine("instanceTestCase")
 	; expectations
 	; -is not none
 	expectIsNotNone(Context)
@@ -60,7 +48,7 @@ EndFunction
 
 
 bool Function titleTestCase()
-	WriteLine(Log, "titleTestCase")
+	WriteLine("titleTestCase")
 	; expectations
 	; -string contains text
 	expectStringHasText(Context.Title)
@@ -69,7 +57,7 @@ EndFunction
 
 
 bool Function authorsTestCase()
-	WriteLine(Log, "authorsTestCase")
+	WriteLine("authorsTestCase")
 	; expectations
 	; -is not none
 	expect(Context.Authors as bool, to, beTruthy)
@@ -78,7 +66,7 @@ EndFunction
 
 
 bool Function filenameTestCase()
-	WriteLine(Log, "filenameTestCase")
+	WriteLine("filenameTestCase")
 	; expectations
 	; -string contains text
 	; -string ends with ".esm" or ".esp"
@@ -88,7 +76,7 @@ EndFunction
 
 
 bool Function formidTestCase()
-	WriteLine(Log, "formidTestCase")
+	WriteLine("formidTestCase")
 	; expectations
 	; -the attached quest must match this FormID
 	int actualFormID = (Context as Quest).GetFormID()
@@ -99,7 +87,7 @@ EndFunction
 
 
 bool Function versionTestCase()
-	WriteLine(Log, "versionTestCase")
+	WriteLine("versionTestCase")
 	; expectations
 	; -the context version to be greater than a new version (new default 0.0.0.0, false)
 	expectIsNotNone(Context.Release)

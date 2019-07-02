@@ -1,6 +1,6 @@
-Scriptname Papyrus:Objects:Factory extends Quest Const
-import Papyrus
-import Papyrus:Objects
+Scriptname System:Objects:Factory extends Quest Const
+import System
+import System:Objects
 
 
 ; Functions
@@ -22,12 +22,12 @@ EndFunction
 ;---------------------------------------------
 
 Factory Function GetFactory() Global
-	return Game.GetFormFromFile(0x00000838, Papyrus:Environment.Plugin()) as Factory
+	return Game.GetFormFromFile(0x00000838, System:Environment.Plugin()) as Factory
 EndFunction
 
 
 Activator Function GetType(int aFormID) Global
-	return Game.GetFormFromFile(aFormID, Papyrus:Environment.Plugin()) as Activator
+	return Game.GetFormFromFile(aFormID, System:Environment.Plugin()) as Activator
 EndFunction
 
 

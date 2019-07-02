@@ -38,10 +38,12 @@ string[] property failedExpecteds auto hidden
 int[] property failedExpectNumbers auto hidden
 int property expectCount = 0 auto hidden
 
+int property LILAC_TIMER_ID = 0x212AC auto hidden
+
 Event OnInit()
 	if self.IsRunning()
 		if enabled
-			RegisterForSingleUpdate(1)
+			StartTimer(1, LILAC_TIMER_ID)
 		else
 			debug.trace(createLilacDebugMessage(INFO, "The Lilac test on " + self + " was disabled."))
 			debug.trace(createLilacDebugMessage(INFO, "Set the 'enabled' property of the test script to True in order to run it."))
@@ -50,7 +52,7 @@ Event OnInit()
 	endif
 EndEvent
 
-Event OnUpdate()
+Event OnTimer(int aiTimerID)
 	RunTests()
 EndEvent
 
@@ -561,6 +563,123 @@ function LogFailedTestCases()
 	endWhile
 endFunction
 
+;/********f* Lilac/expect
+* API VERSION ADDED
+* 1 (Fallout 4 only)
+*
+* DESCRIPTION
+* Defines a new expectation, comparing actual and expected values of any supported type.
+*
+* SYNTAX
+*/;
+function expect(var akActual, bool abCondition, int aiMatcher, var akExpected = None)
+;/*
+* PARAMETERS
+* * akActual: The value under test.
+* * abCondition: The condition (to or notTo).
+* * aiMatcher: The matcher. See Notes for a list of valid matchers for this expectation.
+* * akExpected: The expected value.
+*
+* EXAMPLES
+expect(MyArmor, to, beEqualTo, PowerArmor)
+expect(5, to, beEqualTo, 5)
+expect(5, notTo, beEqualTo, 1.4)
+expect(True, to, beTruthy)
+expect(0, to, beFalsy)
+expect("Preston", to, beEqualTo, "Preston")
+* NOTES
+* This is a type-independent version of the individual expect* functions and can be used in place of them.
+* You must use a valid matcher for the type of Actual and Expected. For instance, you cannot check if a Form is "less than" another Form.
+* The Actual and Expected must be of the exact same supported type (Form, ObjectReference, Int, Float, Bool, or String).
+* Using 'beTruthy', 'beFalsy', or 'beNone' matcher and not supplying akExpected can produce a (harmless) Papyrus error. If this becomes an issue, use 'to beEqualTo true', or similar, instead.
+* Valid matchers for this expectation:
+* * beEqualTo
+* * beLessThan
+* * beGreaterThan
+* * beLessThanOrEqualTo
+* * beGreaterThanOrEqualTo
+* * beTruthy
+* * beFalsy
+* * beNone
+;*********/;
+
+	if akActual is Form
+		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+			if aiMatcher >= 5 ; beTruthy, beFalsy, beNone
+				expectForm(akActual as Form, abCondition, aiMatcher)
+			elseif akExpected is Form
+				expectForm(akActual as Form, abCondition, aiMatcher, akExpected as Form)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	elseif akActual is ObjectReference
+		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy || aiMatcher == beNone
+			if aiMatcher >= 5 ; beTruthy, beFalsy, beNone
+				expectRef(akActual as ObjectReference, abCondition, aiMatcher)
+			elseif akExpected is ObjectReference
+				expectRef(akActual as ObjectReference, abCondition, aiMatcher, akExpected as ObjectReference)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	elseif akActual is Int
+		if aiMatcher != beNone
+			if aiMatcher >= 5 ; beTruthy, beFalsy
+				expectInt(akActual as Int, abCondition, aiMatcher)
+			elseif akExpected is Int
+				expectInt(akActual as Int, abCondition, aiMatcher, akExpected as Int)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	elseif akActual is Float
+		if aiMatcher != beNone
+			if aiMatcher >= 5 ; beTruthy, beFalsy
+				expectFloat(akActual as Float, abCondition, aiMatcher)
+			elseif akExpected is Float
+				expectFloat(akActual as Float, abCondition, aiMatcher, akExpected as Float)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	elseif akActual is Bool
+		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+			if aiMatcher >= 5 ; beTruthy, beFalsy
+				expectBool(akActual as Bool, abCondition, aiMatcher)
+			elseif akExpected is Bool
+				expectBool(akActual as Bool, abCondition, aiMatcher, akExpected as Bool)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	elseif akActual is String
+		if aiMatcher == beEqualTo || aiMatcher == beTruthy || aiMatcher == beFalsy
+			if aiMatcher >= 5 ; beTruthy, beFalsy
+				expectString(akActual as String, abCondition, aiMatcher)
+			elseif akExpected is String
+				expectString(akActual as String, abCondition, aiMatcher, akExpected as String)
+			else
+				RaiseException_NonMatchingType(akActual, akExpected)
+			endif
+		else
+			RaiseException_InvalidMatcher(aiMatcher)
+		endif
+	else
+		RaiseException_InvalidType(akActual)
+	endif
+endFunction
+
 ;/********f* Lilac/expectForm
 * API VERSION ADDED
 * 1
@@ -895,6 +1014,7 @@ expectString("Preston", to, beEqualTo, "Preston")
 * * beEqualTo
 * * beTruthy
 * * beFalsy
+* The Fallout 4 version of Lilac does not support the "contain" matcher.
 ;*********/;
 	bool result
 	if abCondition == to
@@ -970,6 +1090,14 @@ function RaiseException_InvalidMatcher(int aiMatcher)
 	endif
 
 	debug.trace(createLilacDebugMessage(ERROR, "Invalid matcher '" + matcher + "' used."))
+endFunction
+
+function RaiseException_InvalidType(var akActual)
+	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " was not a Form, ObjectReference, Int, Float, Bool, or String."))
+endFunction
+
+function RaiseException_NonMatchingType(var akActual, var akExpected)
+	debug.trace(createLilacDebugMessage(ERROR, "Actual " + (akActual as String) + " did not match the type of Expected " + (akExpected as String)))
 endFunction
 
 string function createLilacDebugMessage(int aiLogLevel, string asMessage)
