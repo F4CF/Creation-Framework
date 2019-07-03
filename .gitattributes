@@ -10,3 +10,4 @@
 *.dds filter=lfs diff=lfs merge=lfs -text
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.nif filter=lfs diff=lfs merge=lfs -text
+*.esl filter=lfs diff=lfs merge=lfs -text
