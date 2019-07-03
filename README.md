@@ -12,49 +12,6 @@ The scripting framework assembly `System.esl` is divided into several imports an
 ```
 System.esl
 System - Main.ba2
-|   Array.pex
-|   BoolType.pex
-|   Environment.pex
-|   External.pex
-|   Form.pex
-|   FormEx.pex
-|   Log.pex
-|   ObjectMod.pex
-|   ObjectModEx.pex
-|   PointType.pex
-|   Reference.pex
-|   Script.pex
-|   StringType.pex
-|   Time.pex
-|   VersionType.pex
-|
-+---Collections
-|       Collection.pex
-|       Dictionary.pex
-|       List.pex
-|       Queue.pex
-|       Stack.pex
-|
-+---Diagnostics
-|       Common.pex
-|       Lilac.pex
-|       LilacEx.pex
-|
-+---Objects
-|       Factory.pex
-|
-\---Projects
-    |   Context.pex
-    |   ContextType.pex
-    |   Module.pex
-    |
-    +---Modules
-    |       Optional.pex
-    |       Required.pex
-    |
-    \---Settings
-            ContextActivated.pex
-            ModuleOptionalEnable.pex
 ```
 
 #### Import: `System`
