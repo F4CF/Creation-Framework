@@ -1,9 +1,9 @@
-ScriptName SystemTests:Array Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Array Extends System:Diagnostics:UnitTest
 import System:Array
 import System:Log
 
 
-; Lilac
+; Test Runner
 ;---------------------------------------------
 
 Function Setup()
@@ -34,10 +34,10 @@ bool Function CapacitySuite()
 EndFunction
 
 
-bool Function CapacityTest(int aSize)
-	WriteLine(self, "CapacityTest "+aSize)
-	var[] array = new var[aSize]
-	Expect(array.Length, BeEqualTo, aSize)
+bool Function CapacityTest(int size)
+	WriteLine(self, "CapacityTest "+size)
+	var[] array = new var[size]
+	Expect(array.Length, BeEqualTo, size)
 	return Done
 EndFunction
 

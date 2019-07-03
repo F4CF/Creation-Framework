@@ -1,688 +1,669 @@
-ScriptName SystemTests:Diagnostics:Lilac Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Diagnostics:Lilac Extends System:Diagnostics:UnitTest
 
+; Test Runner
+;---------------------------------------------
 
 Function TestSuites()
-	describe("Conditions", ConditionTestCases())
-	describe("Matchers", MatcherTestCases())
-	describe("Test Cases", TestCaseTestCases())
-	describe("Messages", MessageTestCases())
+	Describe("Conditions", ConditionTestCases())
+	Describe("Matchers", MatcherTestCases())
+	Describe("Test Cases", TestCaseTestCases())
+	Describe("Messages", MessageTestCases())
 EndFunction
 
 
-; Test Suites =================================================================
+; Test Suites
+;---------------------------------------------
 
 bool Function ConditionTestCases()
-	It("'to' should be true", case_condition_to())
-	It("'notTo' should be false", case_condition_notTo())
+	It("'To' should be true", Case_Condition_To())
+	It("'NotTo' should be false", Case_Condition_NotTo())
 EndFunction
+
 
 bool Function MatcherTestCases()
-	It("'beEqualTo' should evaluate equality", case_matcher_beEqualTo())
-	It("'beLessThan' should evaluate less than", case_matcher_beLessThan())
-	It("'beLessThanOrEqualTo' should evaluate less than or equal to", case_matcher_beLessThanOrEqualTo())
-	It("'beGreaterThan' should evaluate greater than", case_matcher_beGreaterThan())
-	It("'beGreaterThanOrEqualTo' should evaluate greater than or equal to", case_matcher_beGreaterThanOrEqualTo())
-	It("'beTruthy' should evaluate truthiness", case_matcher_beTruthy())
-	It("'beFalsy' should evaluate falsiness", case_matcher_beFalsy())
-	It("'beNone' should evaluate None", case_matcher_beNone())
+	It("'BeEqualTo' should evaluate equality", Case_Matcher_BeEqualTo())
+	It("'BeLessThan' should evaluate less than", Case_Matcher_BeLessThan())
+	It("'BeLessThanOrEqualTo' should evaluate less than or equal to", Case_Matcher_BeLessThanOrEqualTo())
+	It("'BeGreaterThan' should evaluate greater than", Case_Matcher_BeGreaterThan())
+	It("'BeGreaterThanOrEqualTo' should evaluate greater than or equal to", Case_Matcher_BeGreaterThanOrEqualTo())
+	It("'BeTruthy' should evaluate truthiness", Case_Matcher_BeTruthy())
+	It("'BeFalsy' should evaluate falsiness", Case_Matcher_BeFalsy())
+	It("'BeNone' should evaluate none", Case_Matcher_BeNone())
 EndFunction
+
 
 bool Function TestCaseTestCases()
-	It("should run beforeEach and afterEach before and after every test case", case_testcase_BeforeAfterEach())
-	It("'describe' should run all test cases in its suite", case_testcase_describe())
+	It("should run `BeforeEach` and `AfterEach` before and after every test case", Case_TestCase_BeforeAfterEach())
+	It("'Describe' should run all test cases in its suite", Case_TestCase_Describe())
 EndFunction
+
 
 bool Function MessageTestCases()
-	It("should create correct step failure messages", case_message_stepfailure())
-	It("should create an invalid matcher message", case_message_invalidmatcher())
+	It("should create correct step failure messages", Case_Message_StepFailure())
+	It("should create an invalid matcher message", Case_Message_InvalidMatcher())
 EndFunction
 
 
-; Test Cases ==================================================================
+; Test Cases
+;---------------------------------------------
 
-SystemTests:Diagnostics:LilacMock mockLilacTest
+SystemTests:Diagnostics:LilacMock MockLilacTest
 Armor ArmorIronCuirass
 ObjectReference TestArmorRef
 Form EmptyForm
 
-Function beforeAll()
-	mockLilacTest = Game.GetFormFromFile(0x12C5, "LilacTestLilac.esp") as SystemTests:Diagnostics:LilacMock
-	mockLilacTest.mockLastLilacDebugMessage = ""
-	mockLilacTest.mockLastRaisedResultResult = true
+
+Function BeforeAll()
+	MockLilacTest = Game.GetFormFromFile(0x12C5, "LilacTestLilac.esp") as SystemTests:Diagnostics:LilacMock
+	MockLilacTest.MockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
 	ArmorIronCuirass = Game.GetFormFromFile(0x12E49, "Skyrim.esm") as Armor
 	TestArmorRef = Game.GetPlayer().PlaceAtMe(ArmorIronCuirass)
-	EmptyForm = None
+	EmptyForm = none
 EndFunction
 
-Function beforeEach()
-	mockLilacTest.ResetTestRunner()
-	mockLilacTest.mockBeforeEachCallCount = 0
-	mockLilacTest.mockAfterEachCallCount = 0
-	mockLilacTest.mockItCallCount = 0
+
+Function BeforeEach()
+	MockLilacTest.ResetTestRunner()
+	MockLilacTest.MockBeforeEachCallCount = 0
+	MockLilacTest.mockAfterEachCallCount = 0
+	MockLilacTest.MockItCallCount = 0
 EndFunction
 
-Function afterAll()
-	mockLilacTest.mockLastLilacDebugMessage = ""
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest = None
-	ArmorIronCuirass = None
+
+Function AfterAll()
+	MockLilacTest.MockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest = none
+	ArmorIronCuirass = none
 	TestArmorRef.Disable()
 	TestArmorRef.Delete()
 EndFunction
 
-Function afterEach()
-	mockLilacTest.ResetTestRunner()
-	mockLilacTest.mockBeforeEachCallCount = 0
-	mockLilacTest.mockAfterEachCallCount = 0
-	mockLilacTest.mockItCallCount = 0
+
+Function AfterEach()
+	MockLilacTest.ResetTestRunner()
+	MockLilacTest.MockBeforeEachCallCount = 0
+	MockLilacTest.mockAfterEachCallCount = 0
+	MockLilacTest.MockItCallCount = 0
 EndFunction
 
 
-bool Function case_condition_to()
-	expectBool(self.To, To, beTruthy)
+bool Function Case_Condition_To()
+	ExpectBool(self.To, To, BeTruthy)
 EndFunction
 
-bool Function case_condition_notTo()
-	expectBool(self.NotTo, To, beFalsy)
+
+bool Function Case_Condition_NotTo()
+	ExpectBool(self.NotTo, To, BeFalsy)
 EndFunction
 
-bool Function case_matcher_beEqualTo()
-	expectInt(5, To, BeEqualTo, 5)
-	expectInt(5, NotTo, BeEqualTo, 12)
 
-	expectFloat(7.0, To, BeEqualTo, 7.0)
-	expectFloat(7.0, NotTo, BeEqualTo, 3.45)
+bool Function Case_Matcher_BeEqualTo()
+	ExpectInt(5, To, BeEqualTo, 5)
+	ExpectInt(5, NotTo, BeEqualTo, 12)
 
-	expectBool(true, To, BeEqualTo, true)
-	expectBool(false, To, BeEqualTo, false)
-	expectBool(true, NotTo, BeEqualTo, false)
-	expectBool(false, NotTo, BeEqualTo, true)
+	ExpectFloat(7.0, To, BeEqualTo, 7.0)
+	ExpectFloat(7.0, NotTo, BeEqualTo, 3.45)
 
-	expectString("test string", To, BeEqualTo, "test string")
-	expectString("test string", NotTo, BeEqualTo, "other string")
-	expectString("", To, BeEqualTo, "")
+	ExpectBool(true, To, BeEqualTo, true)
+	ExpectBool(false, To, BeEqualTo, false)
+	ExpectBool(true, NotTo, BeEqualTo, false)
+	ExpectBool(false, NotTo, BeEqualTo, true)
 
-	expectForm(ArmorIronCuirass, To, BeEqualTo, ArmorIronCuirass)
-	expectForm(ArmorIronCuirass, NotTo, BeEqualTo, None)
-	expectForm(ArmorIronCuirass, NotTo, BeEqualTo, Game.GetPlayer().GetActorBase())
+	ExpectString("test string", To, BeEqualTo, "test string")
+	ExpectString("test string", NotTo, BeEqualTo, "other string")
+	ExpectString("", To, BeEqualTo, "")
 
-	expectRef(TestArmorRef, To, BeEqualTo, TestArmorRef)
-	expectRef(TestArmorRef, NotTo, BeEqualTo, None)
-	expectRef(TestArmorRef, NotTo, BeEqualTo, Game.GetPlayer())
+	ExpectForm(ArmorIronCuirass, To, BeEqualTo, ArmorIronCuirass)
+	ExpectForm(ArmorIronCuirass, NotTo, BeEqualTo, none)
+	ExpectForm(ArmorIronCuirass, NotTo, BeEqualTo, Game.GetPlayer().GetActorBase())
+
+	ExpectRef(TestArmorRef, To, BeEqualTo, TestArmorRef)
+	ExpectRef(TestArmorRef, NotTo, BeEqualTo, none)
+	ExpectRef(TestArmorRef, NotTo, BeEqualTo, Game.GetPlayer())
 EndFunction
 
-bool Function case_matcher_beLessThan()
-	expectInt(3, To, beLessThan, 1000)
-	expectInt(3, To, beLessThan, 4)
-	expectInt(3, NotTo, beLessThan, 3)
-	expectInt(3, NotTo, beLessThan, 1)
 
-	expectInt(-5, To, beLessThan, 1000)
-	expectInt(-5, To, beLessThan, -4)
-	expectInt(-5, NotTo, beLessThan, -5)
-	expectInt(-5, NotTo, beLessThan, -7)
+bool Function Case_Matcher_BeLessThan()
+	ExpectInt(3, To, BeLessThan, 1000)
+	ExpectInt(3, To, BeLessThan, 4)
+	ExpectInt(3, NotTo, BeLessThan, 3)
+	ExpectInt(3, NotTo, BeLessThan, 1)
 
-	expectFloat(4.5, To, beLessThan, 100.0)
-	expectFloat(4.5, To, beLessThan, 5.0)
-	expectFloat(4.5, To, beLessThan, 4.6)
-	expectFloat(4.5, To, beLessThan, 4.51)
-	expectFloat(4.5, NotTo, beLessThan, 4.5)
-	expectFloat(4.5, NotTo, beLessThan, 4.4)
-	expectFloat(4.5, NotTo, beLessThan, 1.0)
+	ExpectInt(-5, To, BeLessThan, 1000)
+	ExpectInt(-5, To, BeLessThan, -4)
+	ExpectInt(-5, NotTo, BeLessThan, -5)
+	ExpectInt(-5, NotTo, BeLessThan, -7)
 
-	expectFloat(-12.6, To, beLessThan, 100.0)
-	expectFloat(-12.6, To, beLessThan, -12.0)
-	expectFloat(-12.6, To, beLessThan, -12.5)
-	expectFloat(-12.6, To, beLessThan, -12.59)
-	expectFloat(-12.6, NotTo, beLessThan, -12.6)
-	expectFloat(-12.6, NotTo, beLessThan, -13.0)
-	expectFloat(-12.6, NotTo, beLessThan, -100.0)
+	ExpectFloat(4.5, To, BeLessThan, 100.0)
+	ExpectFloat(4.5, To, BeLessThan, 5.0)
+	ExpectFloat(4.5, To, BeLessThan, 4.6)
+	ExpectFloat(4.5, To, BeLessThan, 4.51)
+	ExpectFloat(4.5, NotTo, BeLessThan, 4.5)
+	ExpectFloat(4.5, NotTo, BeLessThan, 4.4)
+	ExpectFloat(4.5, NotTo, BeLessThan, 1.0)
+
+	ExpectFloat(-12.6, To, BeLessThan, 100.0)
+	ExpectFloat(-12.6, To, BeLessThan, -12.0)
+	ExpectFloat(-12.6, To, BeLessThan, -12.5)
+	ExpectFloat(-12.6, To, BeLessThan, -12.59)
+	ExpectFloat(-12.6, NotTo, BeLessThan, -12.6)
+	ExpectFloat(-12.6, NotTo, BeLessThan, -13.0)
+	ExpectFloat(-12.6, NotTo, BeLessThan, -100.0)
 EndFunction
 
-bool Function case_matcher_beLessThanOrEqualTo()
-	expectInt(3, To, beLessThanOrEqualTo, 1000)
-	expectInt(3, To, beLessThanOrEqualTo, 4)
-	expectInt(3, To, beLessThanOrEqualTo, 3)
-	expectInt(3, NotTo, beLessThanOrEqualTo, 1)
 
-	expectInt(-5, To, beLessThanOrEqualTo, 1000)
-	expectInt(-5, To, beLessThanOrEqualTo, -4)
-	expectInt(-5, To, beLessThanOrEqualTo, -5)
-	expectInt(-5, NotTo, beLessThanOrEqualTo, -7)
+bool Function Case_Matcher_BeLessThanOrEqualTo()
+	ExpectInt(3, To, BeLessThanOrEqualTo, 1000)
+	ExpectInt(3, To, BeLessThanOrEqualTo, 4)
+	ExpectInt(3, To, BeLessThanOrEqualTo, 3)
+	ExpectInt(3, NotTo, BeLessThanOrEqualTo, 1)
 
-	expectFloat(4.5, To, beLessThanOrEqualTo, 100.0)
-	expectFloat(4.5, To, beLessThanOrEqualTo, 5.0)
-	expectFloat(4.5, To, beLessThanOrEqualTo, 4.6)
-	expectFloat(4.5, To, beLessThanOrEqualTo, 4.51)
-	expectFloat(4.5, To, beLessThanOrEqualTo, 4.5)
-	expectFloat(4.5, NotTo, beLessThanOrEqualTo, 4.4)
-	expectFloat(4.5, NotTo, beLessThanOrEqualTo, 1.0)
+	ExpectInt(-5, To, BeLessThanOrEqualTo, 1000)
+	ExpectInt(-5, To, BeLessThanOrEqualTo, -4)
+	ExpectInt(-5, To, BeLessThanOrEqualTo, -5)
+	ExpectInt(-5, NotTo, BeLessThanOrEqualTo, -7)
 
-	expectFloat(-12.6, To, beLessThanOrEqualTo, 100.0)
-	expectFloat(-12.6, To, beLessThanOrEqualTo, -12.0)
-	expectFloat(-12.6, To, beLessThanOrEqualTo, -12.5)
-	expectFloat(-12.6, To, beLessThanOrEqualTo, -12.59)
-	expectFloat(-12.6, To, beLessThanOrEqualTo, -12.6)
-	expectFloat(-12.6, NotTo, beLessThanOrEqualTo, -13.0)
-	expectFloat(-12.6, NotTo, beLessThanOrEqualTo, -100.0)
+	ExpectFloat(4.5, To, BeLessThanOrEqualTo, 100.0)
+	ExpectFloat(4.5, To, BeLessThanOrEqualTo, 5.0)
+	ExpectFloat(4.5, To, BeLessThanOrEqualTo, 4.6)
+	ExpectFloat(4.5, To, BeLessThanOrEqualTo, 4.51)
+	ExpectFloat(4.5, To, BeLessThanOrEqualTo, 4.5)
+	ExpectFloat(4.5, NotTo, BeLessThanOrEqualTo, 4.4)
+	ExpectFloat(4.5, NotTo, BeLessThanOrEqualTo, 1.0)
+
+	ExpectFloat(-12.6, To, BeLessThanOrEqualTo, 100.0)
+	ExpectFloat(-12.6, To, BeLessThanOrEqualTo, -12.0)
+	ExpectFloat(-12.6, To, BeLessThanOrEqualTo, -12.5)
+	ExpectFloat(-12.6, To, BeLessThanOrEqualTo, -12.59)
+	ExpectFloat(-12.6, To, BeLessThanOrEqualTo, -12.6)
+	ExpectFloat(-12.6, NotTo, BeLessThanOrEqualTo, -13.0)
+	ExpectFloat(-12.6, NotTo, BeLessThanOrEqualTo, -100.0)
 EndFunction
 
-bool Function case_matcher_beGreaterThan()
-	expectInt(7, To, beGreaterThan, 5)
-	expectInt(7, To, beGreaterThan, -6)
-	expectInt(7, To, beGreaterThan, 6)
-	expectInt(7, NotTo, beGreaterThan, 7)
-	expectInt(7, NotTo, beGreaterThan, 8)
 
-	expectInt(-8, To, beGreaterThan, -10)
-	expectInt(-8, To, beGreaterThan, -1000)
-	expectInt(-8, To, beGreaterThan, -9)
-	expectInt(-8, NotTo, beGreaterThan, -8)
-	expectInt(-8, NotTo, beGreaterThan, -7)
-	expectInt(-8, NotTo, beGreaterThan, 12)
+bool Function Case_Matcher_BeGreaterThan()
+	ExpectInt(7, To, BeGreaterThan, 5)
+	ExpectInt(7, To, BeGreaterThan, -6)
+	ExpectInt(7, To, BeGreaterThan, 6)
+	ExpectInt(7, NotTo, BeGreaterThan, 7)
+	ExpectInt(7, NotTo, BeGreaterThan, 8)
 
-	expectFloat(4.5, To, beGreaterThan, 1.0)
-	expectFloat(4.5, To, beGreaterThan, 4.0)
-	expectFloat(4.5, To, beGreaterThan, 4.4)
-	expectFloat(4.5, To, beGreaterThan, 4.45)
-	expectFloat(4.5, To, beGreaterThan, 4.4999)
-	expectFloat(4.5, NotTo, beGreaterThan, 4.5)
-	expectFloat(4.5, NotTo, beGreaterThan, 23.6)
+	ExpectInt(-8, To, BeGreaterThan, -10)
+	ExpectInt(-8, To, BeGreaterThan, -1000)
+	ExpectInt(-8, To, BeGreaterThan, -9)
+	ExpectInt(-8, NotTo, BeGreaterThan, -8)
+	ExpectInt(-8, NotTo, BeGreaterThan, -7)
+	ExpectInt(-8, NotTo, BeGreaterThan, 12)
 
-	expectFloat(-12.6, To, beGreaterThan, -100.0)
-	expectFloat(-12.6, To, beGreaterThan, -14.0)
-	expectFloat(-12.6, To, beGreaterThan, -12.7)
-	expectFloat(-12.6, To, beGreaterThan, -12.61)
-	expectFloat(-12.6, NotTo, beGreaterThan, -12.6)
-	expectFloat(-12.6, NotTo, beGreaterThan, -12.5)
-	expectFloat(-12.6, NotTo, beGreaterThan, 100.0)
+	ExpectFloat(4.5, To, BeGreaterThan, 1.0)
+	ExpectFloat(4.5, To, BeGreaterThan, 4.0)
+	ExpectFloat(4.5, To, BeGreaterThan, 4.4)
+	ExpectFloat(4.5, To, BeGreaterThan, 4.45)
+	ExpectFloat(4.5, To, BeGreaterThan, 4.4999)
+	ExpectFloat(4.5, NotTo, BeGreaterThan, 4.5)
+	ExpectFloat(4.5, NotTo, BeGreaterThan, 23.6)
+
+	ExpectFloat(-12.6, To, BeGreaterThan, -100.0)
+	ExpectFloat(-12.6, To, BeGreaterThan, -14.0)
+	ExpectFloat(-12.6, To, BeGreaterThan, -12.7)
+	ExpectFloat(-12.6, To, BeGreaterThan, -12.61)
+	ExpectFloat(-12.6, NotTo, BeGreaterThan, -12.6)
+	ExpectFloat(-12.6, NotTo, BeGreaterThan, -12.5)
+	ExpectFloat(-12.6, NotTo, BeGreaterThan, 100.0)
 EndFunction
 
-bool Function case_matcher_beGreaterThanOrEqualTo()
-	expectInt(7, To, beGreaterThanOrEqualTo, 5)
-	expectInt(7, To, beGreaterThanOrEqualTo, -6)
-	expectInt(7, To, beGreaterThanOrEqualTo, 6)
-	expectInt(7, To, beGreaterThanOrEqualTo, 7)
-	expectInt(7, NotTo, beGreaterThanOrEqualTo, 8)
 
-	expectInt(-8, To, beGreaterThanOrEqualTo, -10)
-	expectInt(-8, To, beGreaterThanOrEqualTo, -1000)
-	expectInt(-8, To, beGreaterThanOrEqualTo, -9)
-	expectInt(-8, To, beGreaterThanOrEqualTo, -8)
-	expectInt(-8, NotTo, beGreaterThanOrEqualTo, -7)
-	expectInt(-8, NotTo, beGreaterThanOrEqualTo, 12)
+bool Function Case_Matcher_BeGreaterThanOrEqualTo()
+	ExpectInt(7, To, BeGreaterThanOrEqualTo, 5)
+	ExpectInt(7, To, BeGreaterThanOrEqualTo, -6)
+	ExpectInt(7, To, BeGreaterThanOrEqualTo, 6)
+	ExpectInt(7, To, BeGreaterThanOrEqualTo, 7)
+	ExpectInt(7, NotTo, BeGreaterThanOrEqualTo, 8)
 
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 1.0)
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 4.0)
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 4.4)
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 4.45)
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 4.4999)
-	expectFloat(4.5, To, beGreaterThanOrEqualTo, 4.5)
-	expectFloat(4.5, NotTo, beGreaterThanOrEqualTo, 4.51)
-	expectFloat(4.5, NotTo, beGreaterThanOrEqualTo, 23.6)
+	ExpectInt(-8, To, BeGreaterThanOrEqualTo, -10)
+	ExpectInt(-8, To, BeGreaterThanOrEqualTo, -1000)
+	ExpectInt(-8, To, BeGreaterThanOrEqualTo, -9)
+	ExpectInt(-8, To, BeGreaterThanOrEqualTo, -8)
+	ExpectInt(-8, NotTo, BeGreaterThanOrEqualTo, -7)
+	ExpectInt(-8, NotTo, BeGreaterThanOrEqualTo, 12)
 
-	expectFloat(-12.6, To, beGreaterThanOrEqualTo, -100.0)
-	expectFloat(-12.6, To, beGreaterThanOrEqualTo, -14.0)
-	expectFloat(-12.6, To, beGreaterThanOrEqualTo, -12.7)
-	expectFloat(-12.6, To, beGreaterThanOrEqualTo, -12.61)
-	expectFloat(-12.6, To, beGreaterThanOrEqualTo, -12.6)
-	expectFloat(-12.6, NotTo, beGreaterThanOrEqualTo, -12.5)
-	expectFloat(-12.6, NotTo, beGreaterThanOrEqualTo, 100.0)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 1.0)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 4.0)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 4.4)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 4.45)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 4.4999)
+	ExpectFloat(4.5, To, BeGreaterThanOrEqualTo, 4.5)
+	ExpectFloat(4.5, NotTo, BeGreaterThanOrEqualTo, 4.51)
+	ExpectFloat(4.5, NotTo, BeGreaterThanOrEqualTo, 23.6)
+
+	ExpectFloat(-12.6, To, BeGreaterThanOrEqualTo, -100.0)
+	ExpectFloat(-12.6, To, BeGreaterThanOrEqualTo, -14.0)
+	ExpectFloat(-12.6, To, BeGreaterThanOrEqualTo, -12.7)
+	ExpectFloat(-12.6, To, BeGreaterThanOrEqualTo, -12.61)
+	ExpectFloat(-12.6, To, BeGreaterThanOrEqualTo, -12.6)
+	ExpectFloat(-12.6, NotTo, BeGreaterThanOrEqualTo, -12.5)
+	ExpectFloat(-12.6, NotTo, BeGreaterThanOrEqualTo, 100.0)
 EndFunction
 
-bool Function case_matcher_beTruthy()
-	expectInt(1, To, beTruthy)
-	expectInt(0, NotTo, beTruthy)
-	expectInt(-1, To, beTruthy)
 
-	expectFloat(1.0, To, beTruthy)
-	expectFloat(0.001, To, beTruthy)
-	expectFloat(0.0, NotTo, beTruthy)
-	expectFloat(-12.5, To, beTruthy)
+bool Function Case_Matcher_BeTruthy()
+	ExpectInt(1, To, BeTruthy)
+	ExpectInt(0, NotTo, BeTruthy)
+	ExpectInt(-1, To, BeTruthy)
 
-	expectBool(true, To, beTruthy)
-	expectBool(false, NotTo, beTruthy)
+	ExpectFloat(1.0, To, BeTruthy)
+	ExpectFloat(0.001, To, BeTruthy)
+	ExpectFloat(0.0, NotTo, BeTruthy)
+	ExpectFloat(-12.5, To, BeTruthy)
 
-	expectForm(ArmorIronCuirass, To, beTruthy)
-	expectForm(EmptyForm, NotTo, beTruthy)
+	ExpectBool(true, To, BeTruthy)
+	ExpectBool(false, NotTo, BeTruthy)
 
-	ObjectReference EmptyRef = None
-	expectRef(TestArmorRef, To, beTruthy)
-	expectRef(EmptyRef, NotTo, beTruthy)
+	ExpectForm(ArmorIronCuirass, To, BeTruthy)
+	ExpectForm(EmptyForm, NotTo, BeTruthy)
 
-	expectString("test string", To, beTruthy)
-	expectString("", NotTo, beTruthy)
+	ObjectReference EmptyRef = none
+	ExpectRef(TestArmorRef, To, BeTruthy)
+	ExpectRef(EmptyRef, NotTo, BeTruthy)
+
+	ExpectString("test string", To, BeTruthy)
+	ExpectString("", NotTo, BeTruthy)
 EndFunction
 
-bool Function case_matcher_beFalsy()
-	expectInt(1, NotTo, beFalsy)
-	expectInt(0, To, beFalsy)
-	expectInt(-1, NotTo, beFalsy)
 
-	expectFloat(1.0, NotTo, beFalsy)
-	expectFloat(0.001, NotTo, beFalsy)
-	expectFloat(0.0, To, beFalsy)
-	expectFloat(-12.5, NotTo, beFalsy)
+bool Function Case_Matcher_BeFalsy()
+	ExpectInt(1, NotTo, BeFalsy)
+	ExpectInt(0, To, BeFalsy)
+	ExpectInt(-1, NotTo, BeFalsy)
 
-	expectBool(true, NotTo, beFalsy)
-	expectBool(false, To, beFalsy)
+	ExpectFloat(1.0, NotTo, BeFalsy)
+	ExpectFloat(0.001, NotTo, BeFalsy)
+	ExpectFloat(0.0, To, BeFalsy)
+	ExpectFloat(-12.5, NotTo, BeFalsy)
 
-	expectForm(ArmorIronCuirass, NotTo, beFalsy)
-	expectForm(EmptyForm, To, beFalsy)
+	ExpectBool(true, NotTo, BeFalsy)
+	ExpectBool(false, To, BeFalsy)
 
-	ObjectReference EmptyRef = None
-	expectRef(TestArmorRef, NotTo, beFalsy)
-	expectRef(EmptyRef, To, beFalsy)
+	ExpectForm(ArmorIronCuirass, NotTo, BeFalsy)
+	ExpectForm(EmptyForm, To, BeFalsy)
 
-	expectString("test string", NotTo, beFalsy)
-	expectString("", To, beFalsy)
+	ObjectReference EmptyRef = none
+	ExpectRef(TestArmorRef, NotTo, BeFalsy)
+	ExpectRef(EmptyRef, To, BeFalsy)
+
+	ExpectString("test string", NotTo, BeFalsy)
+	ExpectString("", To, BeFalsy)
 EndFunction
 
-bool Function case_matcher_beNone()
-	expectForm(EmptyForm, To, beNone)
-	expectForm(ArmorIronCuirass, NotTo, beNone)
 
-	ObjectReference EmptyRef = None
-	expectRef(EmptyRef, To, beNone)
-	expectRef(TestArmorRef, NotTo, beNone)
+bool Function Case_Matcher_BeNone()
+	ExpectForm(EmptyForm, To, BeNone)
+	ExpectForm(ArmorIronCuirass, NotTo, BeNone)
+
+	ObjectReference EmptyRef = none
+	ExpectRef(EmptyRef, To, BeNone)
+	ExpectRef(TestArmorRef, NotTo, BeNone)
 EndFunction
 
-bool Function case_message_stepfailure()
-	int i = 0
 
-	mockLilacTest.failedActuals[i] = "5"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = BeEqualTo
-	mockLilacTest.failedExpecteds[i] = "76"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+bool Function Case_Message_StepFailure()
+	int index = 0
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 1: expected 5 to be equal to 76")
+	MockLilacTest.failedActuals[index] = "5"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeEqualTo
+	MockLilacTest.failedExpecteds[index] = "76"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 1: expected 5 to be equal to 76")
 
-	mockLilacTest.failedActuals[i] = "5"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = BeEqualTo
-	mockLilacTest.failedExpecteds[i] = "5"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 2: expected 5 not to be equal to 5")
+	MockLilacTest.failedActuals[index] = "5"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeEqualTo
+	MockLilacTest.failedExpecteds[index] = "5"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 2: expected 5 not to be equal to 5")
 
-	mockLilacTest.failedActuals[i] = "98"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beLessThan
-	mockLilacTest.failedExpecteds[i] = "12"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 3: expected 98 to be less than 12")
+	MockLilacTest.failedActuals[index] = "98"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeLessThan
+	MockLilacTest.failedExpecteds[index] = "12"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 3: expected 98 to be less than 12")
 
-	mockLilacTest.failedActuals[i] = "12.65"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beLessThan
-	mockLilacTest.failedExpecteds[i] = "35.97"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 4: expected 12.65 not to be less than 35.97")
+	MockLilacTest.failedActuals[index] = "12.65"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeLessThan
+	MockLilacTest.failedExpecteds[index] = "35.97"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 4: expected 12.65 not to be less than 35.97")
 
-	mockLilacTest.failedActuals[i] = "98"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beLessThanOrEqualTo
-	mockLilacTest.failedExpecteds[i] = "12"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 5: expected 98 to be less than or equal to 12")
+	MockLilacTest.failedActuals[index] = "98"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeLessThanOrEqualTo
+	MockLilacTest.failedExpecteds[index] = "12"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 5: expected 98 to be less than or equal to 12")
 
-	mockLilacTest.failedActuals[i] = "12.65"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beLessThanOrEqualTo
-	mockLilacTest.failedExpecteds[i] = "12.65"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 6: expected 12.65 not to be less than or equal to 12.65")
+	MockLilacTest.failedActuals[index] = "12.65"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeLessThanOrEqualTo
+	MockLilacTest.failedExpecteds[index] = "12.65"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 6: expected 12.65 not to be less than or equal to 12.65")
 
-	mockLilacTest.failedActuals[i] = "12.8"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beGreaterThan
-	mockLilacTest.failedExpecteds[i] = "98.2"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 7: expected 12.8 to be greater than 98.2")
+	MockLilacTest.failedActuals[index] = "12.8"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeGreaterThan
+	MockLilacTest.failedExpecteds[index] = "98.2"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 7: expected 12.8 to be greater than 98.2")
 
-	mockLilacTest.failedActuals[i] = "12.65"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beGreaterThan
-	mockLilacTest.failedExpecteds[i] = "10.333333"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 8: expected 12.65 not to be greater than 10.333333")
+	MockLilacTest.failedActuals[index] = "12.65"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeGreaterThan
+	MockLilacTest.failedExpecteds[index] = "10.333333"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 8: expected 12.65 not to be greater than 10.333333")
 
-	mockLilacTest.failedActuals[i] = "16"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beGreaterThanOrEqualTo
-	mockLilacTest.failedExpecteds[i] = "10356"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 9: expected 16 to be greater than or equal to 10356")
+	MockLilacTest.failedActuals[index] = "16"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeGreaterThanOrEqualTo
+	MockLilacTest.failedExpecteds[index] = "10356"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 9: expected 16 to be greater than or equal to 10356")
 
-	mockLilacTest.failedActuals[i] = "10.333333"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beGreaterThanOrEqualTo
-	mockLilacTest.failedExpecteds[i] = "10.333333"
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 10: expected 10.333333 not to be greater than or equal to 10.333333")
+	MockLilacTest.failedActuals[index] = "10.333333"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeGreaterThanOrEqualTo
+	MockLilacTest.failedExpecteds[index] = "10.333333"
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 10: expected 10.333333 not to be greater than or equal to 10.333333")
 
-	mockLilacTest.failedActuals[i] = "false"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beTruthy
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 11: expected false to be truthy")
+	MockLilacTest.failedActuals[index] = "false"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeTruthy
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 11: expected false to be truthy")
 
-	mockLilacTest.failedActuals[i] = "true"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beTruthy
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 12: expected true not to be truthy")
+	MockLilacTest.failedActuals[index] = "true"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeTruthy
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 12: expected true not to be truthy")
 
-	mockLilacTest.failedActuals[i] = "true"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beFalsy
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 13: expected true to be falsy")
+	MockLilacTest.failedActuals[index] = "true"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeFalsy
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 13: expected true to be falsy")
 
-	mockLilacTest.failedActuals[i] = "false"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beFalsy
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 14: expected false not to be falsy")
+	MockLilacTest.failedActuals[index] = "false"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeFalsy
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 14: expected false not to be falsy")
 
-	mockLilacTest.failedActuals[i] = "WeaponObject"
-	mockLilacTest.failedConditions[i] = To
-	mockLilacTest.failedMatchers[i] = beNone
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 15: expected WeaponObject to be None")
+	MockLilacTest.failedActuals[index] = "WeaponObject"
+	MockLilacTest.failedConditions[index] = To
+	MockLilacTest.failedMatchers[index] = BeNone
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
-	i += 1
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 15: expected WeaponObject to be none")
 
-	mockLilacTest.failedActuals[i] = "None"
-	mockLilacTest.failedConditions[i] = NotTo
-	mockLilacTest.failedMatchers[i] = beNone
-	mockLilacTest.failedExpecteds[i] = ""
-	mockLilacTest.failedExpectNumbers[i] = i + 1
+	index += 1
 
-	expectString( mockLilacTest.CreateStepFailureMessage(i), To, BeEqualTo, \
-		         "        - Expect 16: expected None not to be None")
+	MockLilacTest.failedActuals[index] = "none"
+	MockLilacTest.failedConditions[index] = NotTo
+	MockLilacTest.failedMatchers[index] = BeNone
+	MockLilacTest.failedExpecteds[index] = ""
+	MockLilacTest.failedExpectNumbers[index] = index + 1
 
+	ExpectString(MockLilacTest.CreateStepFailureMessage(index), To, BeEqualTo, "        - Expect 16: expected none not to be none")
 EndFunction
 
-bool Function case_message_invalidmatcher()
 
-	; expectForm
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+bool Function Case_Message_InvalidMatcher()
+	; ExpectForm
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectForm(ArmorIronCuirass, To, beGreaterThan, ArmorIronCuirass)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThan' used.")
+	MockLilacTest.ExpectForm(ArmorIronCuirass, To, BeGreaterThan, ArmorIronCuirass)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectForm(ArmorIronCuirass, To, beGreaterThanOrEqualTo, None)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThanOrEqualTo' used.")
+	MockLilacTest.ExpectForm(ArmorIronCuirass, To, BeGreaterThanOrEqualTo, none)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThanOrEqualTo' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectForm(ArmorIronCuirass, To, beLessThan, ArmorIronCuirass)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
+	MockLilacTest.ExpectForm(ArmorIronCuirass, To, BeLessThan, ArmorIronCuirass)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectForm(ArmorIronCuirass, To, beLessThanOrEqualTo, None)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThanOrEqualTo' used.")
+	MockLilacTest.ExpectForm(ArmorIronCuirass, To, BeLessThanOrEqualTo, none)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectForm(ArmorIronCuirass, NotTo, beGreaterThan, None)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThan' used.")
+	MockLilacTest.ExpectForm(ArmorIronCuirass, NotTo, BeGreaterThan, none)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
 
-	; expectRef
+	; ExpectRef
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.ExpectRef(TestArmorRef, To, BeGreaterThan, TestArmorRef)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
-	mockLilacTest.expectRef(TestArmorRef, To, beGreaterThan, TestArmorRef)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThan' used.")
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.ExpectRef(TestArmorRef, To, BeGreaterThanOrEqualTo, TestArmorRef)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThanOrEqualTo' used.")
 
-	mockLilacTest.expectRef(TestArmorRef, To, beGreaterThanOrEqualTo, TestArmorRef)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThanOrEqualTo' used.")
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.ExpectRef(TestArmorRef, To, BeLessThan, none)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
 
-	mockLilacTest.expectRef(TestArmorRef, To, beLessThan, None)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectRef(TestArmorRef, To, beLessThanOrEqualTo, None)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThanOrEqualTo' used.")
+	MockLilacTest.ExpectRef(TestArmorRef, To, BeLessThanOrEqualTo, none)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
 
 
-	; expectInt
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	; ExpectInt
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectInt(5, To, beNone)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beNone' used.")
+	MockLilacTest.ExpectInt(5, To, BeNone)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeNone' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectInt(5, NotTo, beNone)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beNone' used.")
+	MockLilacTest.ExpectInt(5, NotTo, BeNone)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeNone' used.")
 
 
-	; expectFloat
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	; ExpectFloat
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectFloat(3.4565, To, beNone)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beNone' used.")
-
-
-	; expectBool
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(true, To, beGreaterThan, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThan' used.")
-
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(true, To, beGreaterThanOrEqualTo, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThanOrEqualTo' used.")
-
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(false, To, beLessThan, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
-
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(false, To, beLessThanOrEqualTo, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThanOrEqualTo' used.")
-
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(false, To, beNone)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beNone' used.")
-
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
-
-	mockLilacTest.expectBool(false, NotTo, beLessThanOrEqualTo, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThanOrEqualTo' used.")
+	MockLilacTest.ExpectFloat(3.4565, To, BeNone)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeNone' used.")
 
 
-	; expectString
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	; ExpectBool
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", To, beGreaterThan, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThan' used.")
+	MockLilacTest.ExpectBool(true, To, BeGreaterThan, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", To, beGreaterThanOrEqualTo, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beGreaterThanOrEqualTo' used.")
+	MockLilacTest.ExpectBool(true, To, BeGreaterThanOrEqualTo, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThanOrEqualTo' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", To, beLessThan, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
+	MockLilacTest.ExpectBool(false, To, BeLessThan, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", To, beLessThanOrEqualTo, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThanOrEqualTo' used.")
+	MockLilacTest.ExpectBool(false, To, BeLessThanOrEqualTo, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", To, beNone)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beNone' used.")
+	MockLilacTest.ExpectBool(false, To, BeNone)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeNone' used.")
 
-	mockLilacTest.mockLastRaisedResultResult = true
-	mockLilacTest.mockLastLilacDebugMessage = ""
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
 
-	mockLilacTest.expectString("test string", NotTo, beLessThan, 0)
-	expectBool(mockLilacTest.mockLastRaisedResultResult, To, beFalsy)
-	expectString(mockLilacTest.mockLastLilacDebugMessage, To, BeEqualTo, \
-		         "[Lilac] ERROR - Invalid matcher 'beLessThan' used.")
+	MockLilacTest.ExpectBool(false, NotTo, BeLessThanOrEqualTo, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
+
+
+	; ExpectString
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", To, BeGreaterThan, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
+
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", To, BeGreaterThanOrEqualTo, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThanOrEqualTo' used.")
+
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", To, BeLessThan, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
+
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", To, BeLessThanOrEqualTo, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
+
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", To, BeNone)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeNone' used.")
+
+	MockLilacTest.MockLastRaisedResultResult = true
+	MockLilacTest.MockLastLilacDebugMessage = ""
+
+	MockLilacTest.ExpectString("test string", NotTo, BeLessThan, 0)
+	ExpectBool(MockLilacTest.MockLastRaisedResultResult, To, BeFalsy)
+	ExpectString(MockLilacTest.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
 EndFunction
 
-bool Function case_testcase_BeforeAfterEach()
-	mockLilacTest.RunTests()
+
+bool Function Case_TestCase_BeforeAfterEach()
+	MockLilacTest.RunTests()
 
 	; There are 2 test cases, but beforeEach and afterEach
 	; are expected to run 3 times.
-	expectInt(mockLilacTest.mockBeforeEachCallCount, To, BeEqualTo, 3)
-	expectInt(mockLilacTest.mockAfterEachCallCount, To, BeEqualTo, 3)
+	ExpectInt(MockLilacTest.MockBeforeEachCallCount, To, BeEqualTo, 3)
+	ExpectInt(MockLilacTest.mockAfterEachCallCount, To, BeEqualTo, 3)
 EndFunction
 
-bool Function case_testcase_describe()
-	mockLilacTest.RunTests()
-	expectInt(mockLilacTest.mockItCallCount, To, BeEqualTo, 2)
+
+bool Function Case_TestCase_Describe()
+	MockLilacTest.RunTests()
+	ExpectInt(MockLilacTest.MockItCallCount, To, BeEqualTo, 2)
 EndFunction

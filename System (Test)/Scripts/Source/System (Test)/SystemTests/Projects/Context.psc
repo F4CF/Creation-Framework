@@ -1,9 +1,9 @@
-ScriptName SystemTests:Projects:Context Extends System:Diagnostics:LilacEx
+ScriptName SystemTests:Projects:Context Extends System:Diagnostics:UnitTest
 import System
 import System:Log
 import System:VersionType
 
-; Lilac
+; Test Runner
 ;---------------------------------------------
 
 Function Setup()
@@ -14,7 +14,7 @@ EndFunction
 
 Function TestSuites()
 	WriteLine(self, "Executing the TestSuites function.")
-	describe("Implementation", ImplementationSuite())
+	Describe("Implementation", ImplementationSuite())
 EndFunction
 
 
@@ -23,12 +23,12 @@ EndFunction
 
 bool Function ImplementationSuite()
 	WriteLine(self, "Implementation Suite.")
-	It("should not be none", instanceTestCase())
-	It("should have a valid title", titleTestCase())
-	It("should not have a none authors array, but it may be empty", authorsTestCase())
-	It("should have a valid filename and extension to its plugin", filenameTestCase())
-	It("should have a valid FormID which matches the attached Quest", formidTestCase())
-	It("should have a valid release version greater than zero", versionTestCase())
+	It("should not be none", InstanceTestCase())
+	It("should have a valid title", TitleTestCase())
+	It("should not have a none authors array, but it may be empty", AuthorsTestCase())
+	It("should have a valid filename and extension to its plugin", FileNameTestCase())
+	It("should have a valid FormID which matches the attached Quest", FormIDTestCase())
+	It("should have a valid release version greater than zero", VersionTestCase())
 	return Done
 EndFunction
 
@@ -36,61 +36,61 @@ EndFunction
 ; Cases
 ;---------------------------------------------
 
-bool Function instanceTestCase()
-	WriteLine(self, "instanceTestCase")
+bool Function InstanceTestCase()
+	WriteLine(self, "InstanceTestCase")
 	; expectations
 	; -is not none
-	expectIsNotNone(Context)
-	expect(Context is Quest, To, beTruthy)
+	ExpectIsNotNone(Context)
+	Expect(Context is Quest, To, BeTruthy)
 	return Done
 EndFunction
 
 
-bool Function titleTestCase()
-	WriteLine(self, "titleTestCase")
+bool Function TitleTestCase()
+	WriteLine(self, "TitleTestCase")
 	; expectations
 	; -string contains text
-	expectStringHasText(Context.Title)
+	ExpectStringHasText(Context.Title)
 	return Done
 EndFunction
 
 
-bool Function authorsTestCase()
-	WriteLine(self, "authorsTestCase")
+bool Function AuthorsTestCase()
+	WriteLine(self, "AuthorsTestCase")
 	; expectations
 	; -is not none
-	expect(Context.Authors as bool, To, beTruthy)
+	Expect(Context.Authors as bool, To, BeTruthy)
 	return Done
 EndFunction
 
 
-bool Function filenameTestCase()
-	WriteLine(self, "filenameTestCase")
+bool Function FileNameTestCase()
+	WriteLine(self, "FileNameTestCase")
 	; expectations
 	; -string contains text
 	; -string ends with ".esm" or ".esp"
-	expectStringHasText(Context.FileName)
+	ExpectStringHasText(Context.FileName)
 	return Done
 EndFunction
 
 
-bool Function formidTestCase()
-	WriteLine(self, "formidTestCase")
+bool Function FormIDTestCase()
+	WriteLine(self, "FormIDTestCase")
 	; expectations
 	; -the attached quest must match this FormID
 	int actualFormID = (Context as Quest).GetFormID()
 	int expectedFormID = Context.FormID
-	expect(expectedFormID, To, BeEqualTo, actualFormID)
+	Expect(expectedFormID, To, BeEqualTo, actualFormID)
 	return Done
 EndFunction
 
 
-bool Function versionTestCase()
-	WriteLine(self, "versionTestCase")
+bool Function VersionTestCase()
+	WriteLine(self, "VersionTestCase")
 	; expectations
 	; -the context version to be greater than a new version (new default 0.0.0.0, false)
-	expectIsNotNone(Context.Release)
-	expect(VersionGreaterThan(Context.Release, new Version), To, beTruthy)
+	ExpectIsNotNone(Context.Release)
+	Expect(VersionGreaterThan(Context.Release, new Version), To, BeTruthy)
 	return Done
 EndFunction
 

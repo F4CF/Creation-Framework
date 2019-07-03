@@ -1,56 +1,77 @@
-ScriptName SystemTests:Diagnostics:LilacMock Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Diagnostics:LilacMock Extends System:Diagnostics:TestRunner
 {Test-specific subclass of Lilac.}
 
+; Test Runner
+;---------------------------------------------
+
 Event OnInit()
+	{EMPTY}
 	; pass
 EndEvent
 
-string Property mockLastLilacDebugMessage = "" Auto
-string Function createLilacDebugMessage(int aiLogLevel, string asMessage)
-	mockLastLilacDebugMessage = parent.createLilacDebugMessage(aiLogLevel, asMessage)
-	return "mockLilac createLilacDebugMessage: " + mockLastLilacDebugMessage
+
+Function TestSuites()
+	Describe("Testing Suite", LilacTesting_TestSuite())
 EndFunction
 
-bool Property mockLastRaisedResultResult = true Auto
+
+; Performance Counters
+;---------------------------------------------
+
+string Property MockLastLilacDebugMessage = "" Auto Hidden
+string Function CreateLilacDebugMessage(int aiLogLevel, string asMessage)
+	MockLastLilacDebugMessage = parent.CreateLilacDebugMessage(aiLogLevel, asMessage)
+	return "MockLilac CreateLilacDebugMessage: " + MockLastLilacDebugMessage
+EndFunction
+
+
+bool Property MockLastRaisedResultResult = true Auto Hidden
 Function RaiseResult(bool abResult, string asActual, bool abCondition, int aiMatcher, string asExpected)
-	mockLastRaisedResultResult = abResult
+	MockLastRaisedResultResult = abResult
 EndFunction
 
-int Property mockItCallCount = 0 Auto
-Function it(string asTestCaseName, bool abTestSteps)
-	mockItCallCount += 1
+
+int Property MockItCallCount = 0 Auto Hidden
+Function It(string asTestCaseName, bool abTestSteps)
+	MockItCallCount += 1
 	parent.It(asTestCaseName, abTestSteps)
 EndFunction
 
-int Property mockBeforeEachCallCount = 0 Auto
-Function beforeEach()
-	mockBeforeEachCallCount += 1
-EndFunction
 
-int Property mockAfterEachCallCount = 0 Auto
-Function afterEach()
-	mockAfterEachCallCount += 1
+int Property MockBeforeEachCallCount = 0 Auto Hidden
+Function BeforeEach()
+	MockBeforeEachCallCount += 1
 EndFunction
 
 
-Function TestSuites()
-	describe("Testing Suite", LilacTesting_TestSuite())
+int Property MockAfterEachCallCount = 0 Auto Hidden
+Function AfterEach()
+	MockAfterEachCallCount += 1
 EndFunction
+
+
+; Suites
+;---------------------------------------------
 
 bool Function LilacTesting_TestSuite()
-	it("should run a test case", LilacTesting_TestCase1())
-	it("should run another test case", LilacTesting_TestCase2())
-	return true ; Done
+	It("should run a test case", LilacTesting_TestCase1())
+	It("should run another test case", LilacTesting_TestCase2())
+	return Done
 EndFunction
+
+
+; Cases
+;---------------------------------------------
 
 bool Function LilacTesting_TestCase1()
-	debug.trace(createLilacDebugMessage(INFO, "Ran test case 1"))
-	expectBool(true, To, beTruthy)
-	return true ; Done
+	Debug.Trace(CreateLilacDebugMessage(INFO, "Ran test case 1"))
+	ExpectBool(true, To, BeTruthy)
+	return Done
 EndFunction
 
+
 bool Function LilacTesting_TestCase2()
-	debug.trace(createLilacDebugMessage(INFO, "Ran test case 2"))
-	expectBool(false, To, beFalsy)
-	return true ; Done
+	Debug.Trace(CreateLilacDebugMessage(INFO, "Ran test case 2"))
+	ExpectBool(false, To, BeFalsy)
+	return Done
 EndFunction

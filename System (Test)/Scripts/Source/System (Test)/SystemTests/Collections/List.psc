@@ -1,7 +1,7 @@
-ScriptName SystemTests:Collections:List Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Collections:List Extends System:Diagnostics:UnitTest
 import System:Log
 
-; Lilac
+; Test Runner
 ;---------------------------------------------
 
 Function Setup()
@@ -79,26 +79,19 @@ EndFunction
 
 
 bool Function IndexOf_Expect(var object, int expected)
-	expect(MyList.IndexOf(object), To, BeEqualTo, expected)
+	Expect(MyList.IndexOf(object), To, BeEqualTo, expected)
 	return Done
 EndFunction
 
 
 ; Containing
 ;---------------------------------------------
-
-
 ; Adding
 ;---------------------------------------------
-
-
 ; Inserting
 ;---------------------------------------------
-
-
 ; Removing
 ;---------------------------------------------
-
 
 
 ; Properties

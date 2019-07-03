@@ -1,12 +1,11 @@
-ScriptName SystemTests:Objects:Factory Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Objects:Factory Extends System:Diagnostics:UnitTest
 import System:Log
 
 System:Collections:List MyList
 
 
-; Lilac
+; Test Runner
 ;---------------------------------------------
-
 
 Function Setup()
 	WriteLine(self, "Setup")
@@ -16,7 +15,7 @@ EndFunction
 
 Function TestSuites()
 	WriteLine(self, "Executing the TestSuites function.")
-;	describe("New List", NewListSuite())
+;	Describe("New List", NewListSuite())
 EndFunction
 
 

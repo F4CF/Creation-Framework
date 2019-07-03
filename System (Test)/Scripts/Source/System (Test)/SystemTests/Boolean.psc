@@ -1,8 +1,8 @@
-ScriptName SystemTests:Boolean Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Boolean Extends System:Diagnostics:UnitTest
 import System:BoolType
 import System:Log
 
-; Lilac
+; Test Runner
 ;---------------------------------------------
 
 Function Setup()

@@ -1,4 +1,4 @@
-ScriptName SystemTests:Diagnostics:Log Extends System:Diagnostics:Lilac
+ScriptName SystemTests:Diagnostics:Log Extends System:Diagnostics:UnitTest
 import System:Log
 
 
@@ -13,7 +13,7 @@ EndFunction
 
 Function TestSuites()
 	WriteLine(self, "Executing the TestSuites function.")
-	describe("The context", Suite1())
+	Describe("The context", Suite1())
 EndFunction
 
 
