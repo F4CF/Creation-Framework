@@ -28,12 +28,15 @@ The namespace includes classes that provide common patterns for projects.
 
 
 
-# Assembly: `System.UI.esl`
-The scripting framework assembly `System.UI.esl` provides classes for interacting with the Scaleform user interface.
+# Assembly: `System.XSE.esl`
+The scripting framework assembly `System.XSE.esl` provides classes for interacting with XSE.
 ```
-System.UI.esl
-System.UI - Main.ba2
+System.XSE.esl
+System.XSE - Main.ba2
 ```
+
+#### Import: `System.XSE`
+The namespace includes classes that provide extension methods for XSE functions and data types.
 
 #### Import: `System.UI`
 The namespace includes classes that allow for interacting with the Scaleform user interface.
