@@ -13,7 +13,6 @@ The scripting framework assembly `System.esl` is divided into several imports an
 System.esl
 System - Main.ba2
 ```
-
 #### Import: `System`
 The namespace contains fundamental classes and base classes that define commonly-used functions and data types.
 
@@ -23,10 +22,6 @@ The namespace includes classes that allow you to interact with papyrus logs, per
 #### Import: `System.Objects`
 The namespace includes classes that allow you to programmatically instantiate `new` Papyrus script instances.
 
-#### Import: `System.Projects`
-The namespace includes classes that provide common patterns for projects.
-
-
 
 # Assembly: `System.XSE.esl`
 The scripting framework assembly `System.XSE.esl` provides classes for interacting with XSE.
@@ -34,7 +29,6 @@ The scripting framework assembly `System.XSE.esl` provides classes for interacti
 System.XSE.esl
 System.XSE - Main.ba2
 ```
-
 #### Import: `System.XSE`
 The namespace includes classes that provide extension methods for XSE functions and data types.
 
@@ -65,3 +59,5 @@ The scripting framework assembly `Scripting.esl` contains highly reusable and co
 Scripting.esl
 Scripting - Main.ba2
 ```
+#### Import: `Scripting`
+The namespace includes classes that provide common patterns for projects.
