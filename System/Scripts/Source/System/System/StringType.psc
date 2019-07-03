@@ -8,11 +8,11 @@ Scriptname System:StringType Const Native Hidden
 ; Copy(String)
 ; Creates a new instance of String with the same value as a specified String.
 
-
-bool Function StringIsNoneOrEmpty(string value) Global
-	{Indicates whether the specified string is none or an empty string.}
-	return !(value) || value == ""
-EndFunction
+; TODO: OBSOLETE
+; bool Function StringIsNoneOrEmpty(string value) Global
+; 	{Indicates whether the specified string is none or an empty string.}
+; 	return !(value) || value == ""
+; EndFunction
 
 
 ; IsNullOrWhiteSpace(String)
