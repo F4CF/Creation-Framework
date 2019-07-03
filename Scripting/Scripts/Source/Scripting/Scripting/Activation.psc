@@ -1,4 +1,4 @@
-ScriptName Scripting:Activation extends Quest Default
+ScriptName Scripting:Activation Extends Quest Default
 import System
 import System:Log
 import System:Script
@@ -85,7 +85,7 @@ EndEvent
 
 bool Function Show(ObjectReference aReference, Perk aMenu)
 	{Shows the activation menu for the given reference.}
-	If (TaskRunning(self))
+	If (StateRunning(self))
 		WriteLine(self, "Activation menu is already shown.")
 		return Incomplete
 	Else
@@ -94,7 +94,7 @@ bool Function Show(ObjectReference aReference, Perk aMenu)
 				Data = new ActivationData
 				Data.Menu = aMenu
 				Data.Reference = aReference
-				return TaskAwait(self)
+				return AwaitState(self)
 			Else
 				WriteLine(self, "Cannot show a none activate menu perk.")
 				return Incomplete
@@ -109,7 +109,7 @@ EndFunction
 
 Function Accept()
 	{Clears the activation menu on the given reference.}
-	TaskEnd(self)
+	ClearState(self)
 EndFunction
 
 
