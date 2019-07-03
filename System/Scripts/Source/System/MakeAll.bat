@@ -1,7 +1,5 @@
 @ECHO OFF
-CALL "..\System\Build.bat"
-CALL "..\System.Diagnostics\Build.bat"
-CALL "..\System.Objects\Build.bat"
-CALL "..\System.Projects\Build.bat"
-CALL "..\System.XSE\Build.bat"
+CALL "..\System\Make.bat"
 CALL "..\System (Test)\Build.bat"
+CALL "..\System.XSE (Test)\Build.bat"
+CALL "..\Scripting (Test)\Build.bat"
