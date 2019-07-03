@@ -1,8 +1,8 @@
-ScriptName System:Projects:Module extends Form Native Const Hidden
+ScriptName Scripting:Projects:Module extends Form Native Const Hidden
 import System
 import System:Log
 import System:VersionType
-
+import Scripting
 
 ; Module
 ;---------------------------------------------
@@ -34,15 +34,15 @@ EndFunction
 ; Events
 ;---------------------------------------------
 
-Event System:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
 	OnEvent(StartupEvent, akSender, arguments)
 EndEvent
 
-Event System:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
 	OnEvent(ShutdownEvent, akSender, arguments)
 EndEvent
 
-Event System:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
 	OnEvent(UpgradeEvent, akSender, arguments)
 EndEvent
 

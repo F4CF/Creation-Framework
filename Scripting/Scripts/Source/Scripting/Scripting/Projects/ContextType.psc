@@ -1,4 +1,4 @@
-ScriptName System:Projects:ContextType extends Quest Native Const Hidden
+ScriptName Scripting:Projects:ContextType extends Quest Native Const Hidden
 import System
 import System:External
 import System:Log

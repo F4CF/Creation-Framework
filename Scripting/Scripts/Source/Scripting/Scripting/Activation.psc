@@ -1,8 +1,8 @@
-ScriptName Games:Shared:Activation extends Quest Default
-import Games
-import Games:Papyrus:Log
-import Games:Papyrus:Script
-import Games:Shared
+ScriptName Scripting:Activation extends Quest Default
+import System
+import System:Log
+import System:Script
+
 
 ;/ TODO:
 - The argument auiEntryID, is this an index or ID?
@@ -136,7 +136,7 @@ State Busy
 	EndEvent
 
 
-	Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
+	Event Scripting:Activation.OnSelected(Scripting:Activation akSender, var[] arguments)
 		WriteLine(self, "Selected "+akSender.Selected)
 	EndEvent
 
@@ -157,7 +157,7 @@ Event Perk.OnEntryRun(Perk akSender, int auiEntryID, ObjectReference akTarget, A
 	{EMPTY}
 EndEvent
 
-Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
+Event Scripting:Activation.OnSelected(Scripting:Activation akSender, var[] arguments)
 	{EMPTY}
 EndEvent
 

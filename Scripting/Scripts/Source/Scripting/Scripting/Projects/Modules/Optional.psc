@@ -1,8 +1,9 @@
-ScriptName System:Projects:Modules:Optional Extends System:Projects:Module Hidden
+ScriptName Scripting:Projects:Modules:Optional Extends Scripting:Projects:Module Hidden
 import System
 import System:Log
 import System:VersionType
 import System:Script
+import Scripting
 
 bool EnabledValue
 Actor PlayerReference
@@ -21,29 +22,29 @@ Event OnEvent(int aEvent, Projects:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (SetActive(self))
 			self.OnEnable()
-			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnStartup event.")
+			WriteLine(self, "The module has finished the OnStartup event.")
 		Else
-			WriteLine("System:Projects:Modules:Optional", "The module could not finish the OnStartup event.")
+			WriteLine(self, "The module could not finish the OnStartup event.")
 		EndIf
 	ElseIf (aEvent == ShutdownEvent)
 		If (SetActive(self, false))
 			self.OnDisable()
-			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnShutdown event.")
+			WriteLine(self, "The module has finished the OnShutdown event.")
 		Else
-			WriteLine("System:Projects:Modules:Optional", "The module could not finish the OnShutdown event.")
+			WriteLine(self, "The module could not finish the OnShutdown event.")
 		EndIf
 	ElseIf (aEvent == UpgradeEvent)
 		If (Enabled)
 			Version newVersion = arguments[0] as Version
 			Version oldVersion = arguments[1] as Version
 			self.OnUpgrade(newVersion, oldVersion)
-			WriteLine("System:Projects:Modules:Optional", "The module has finished the OnUpgrade event. " \
+			WriteLine(self, "The module has finished the OnUpgrade event. " \
 				+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
 		Else
-			WriteLine("System:Projects:Modules:Optional", "Ignoring the OnUpgrade event, module is not enabled.")
+			WriteLine(self, "Ignoring the OnUpgrade event, module is not enabled.")
 		EndIf
 	Else
-		WriteLine("System:Projects:Modules:Optional", "The module has received and unhandled event.")
+		WriteLine(self, "The module has received and unhandled event.")
 	EndIf
 EndEvent
 
@@ -95,7 +96,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Module
-	Projects:Context Property Context Auto Const Mandatory
+	Scripting:Projects:Context Property Context Auto Const Mandatory
 
 	bool Property IsReady Hidden
 		bool Function Get()
@@ -110,10 +111,10 @@ Group Module
 		Function Set(bool aValue)
 			If (aValue != EnabledValue)
 				EnabledValue = aValue
-				WriteChangedValue("System:Projects:Modules:Optional", "Enabled", !aValue, aValue)
+				WriteChangedValue(self, "Enabled", !aValue, aValue)
 				SetActive(self, aValue)
 			Else
-				WriteLine("System:Projects:Modules:Optional", "The module's Enabled property already equals '"+aValue+"'.")
+				WriteLine(self, "The module's Enabled property already equals '"+aValue+"'.")
 			EndIf
 		EndFunction
 	EndProperty

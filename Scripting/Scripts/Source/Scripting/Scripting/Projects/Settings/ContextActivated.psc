@@ -1,4 +1,4 @@
-Scriptname System:Projects:Settings:ModuleOptionalEnable extends Terminal
+Scriptname Scripting:Projects:Settings:ContextActivated extends Terminal
 import System
 import System:Log
 
@@ -6,11 +6,11 @@ import System:Log
 ;---------------------------------------------
 
 Event OnMenuItemRun(int menuItemID, ObjectReference terminalReference)
-	WriteLine("System:Projects:Settings:ModuleOptionalEnable", "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
+	WriteLine(self, "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
 	If (menuItemID == OptionStartup)
-		Optional.Enabled = true
+		Context.IsActivated = true
 	ElseIf (menuItemID == OptionShutdown)
-		Optional.Enabled = false
+		Context.IsActivated = false
 	EndIf
 EndEvent
 
@@ -19,7 +19,7 @@ EndEvent
 ;---------------------------------------------
 
 Group Properties
-	Projects:Modules:Optional Property Optional Auto Const Mandatory
+	Scripting:Projects:Context Property Context Auto Const Mandatory
 EndGroup
 
 Group Options

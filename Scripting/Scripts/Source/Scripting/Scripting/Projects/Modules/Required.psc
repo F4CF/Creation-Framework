@@ -1,4 +1,4 @@
-ScriptName System:Projects:Modules:Required extends System:Projects:Module Hidden
+ScriptName Scripting:Projects:Modules:Required extends Scripting:Projects:Module Hidden
 import System
 
 Actor PlayerReference
@@ -16,7 +16,7 @@ EndEvent
 ;---------------------------------------------
 
 Group Module
-	Projects:Context Property Context Auto Const Mandatory
+	Scripting:Projects:Context Property Context Auto Const Mandatory
 EndGroup
 
 Group Properties
