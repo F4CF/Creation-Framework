@@ -1,1 +1,1 @@
-Open the in game developer console a use `bat "CMD\MyCommandName"`
+Open the in game developer console to use `bat "CMD\MyCommandName"`
