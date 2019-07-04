@@ -1,6 +1,8 @@
 Scriptname System:Type Extends Quest Native Const Hidden
 {The generic base type for all scripts which instantiate long running instances via `Quest` forms.}
 
+; TODO: These kinds of scripts run like a "service". Maybe a "System.Services" import.
+
 ; OnGameReload
 ;---------------------------------------------
 

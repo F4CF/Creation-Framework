@@ -20,7 +20,7 @@ ScriptName SystemTests:Assembly Extends Quest
 ;---------------------------------------------
 
 Assembly Function GetAssembly() Global
-	return System:External.Read("System (Test).esp", 0x020044D1) as Assembly
+	return System:External.Read("SystemTests.esp", 0x020044D1) as Assembly
 EndFunction
 
 
@@ -31,7 +31,7 @@ Group Assembly
 	string Property Name Hidden
 		{The plugin name.}
 		string Function Get()
-			return "System (Test)"
+			return "SystemTests"
 		EndFunction
 	EndProperty
 	string Property Extension Hidden

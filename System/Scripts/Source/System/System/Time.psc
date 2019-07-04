@@ -4,6 +4,13 @@ Scriptname System:Time Const Native Hidden
 ; https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx
 
 
+; TODO: Talk to Rasikko about this project and his time related scripts.
+; https://www.creationkit.com/index.php?title=User:Rasikko
+
+;/
+https://www.creationkit.com/index.php?title=Complete_Example_Scripts#A_helper_script_with_functions_to_get_the_current_moonphase.2C_sync_between_the_two_moons_and_day_of_the_week
+/;
+
 ; DateTime
 ;---------------------------------------------
 
