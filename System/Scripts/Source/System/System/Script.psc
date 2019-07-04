@@ -64,7 +64,7 @@ EndFunction
 bool Function StateRunning(ScriptObject this) Global
 	{Return true if the given script has any state other than the default empty state.}
 	If (this)
-		return this.GetState() != ""
+		return this.GetState() != EmptyState()
 	Else
 		WriteUnexpectedValue("System:Script", "StateRunning", "this", "The script cannot be none.")
 		return false
@@ -75,7 +75,7 @@ EndFunction
 bool Function ClearState(ScriptObject this) Global
 	{Ends any running state on the given script.}
 	If (this)
-		If (ChangeState(this, ""))
+		If (ChangeState(this, EmptyState()))
 			return true
 		Else
 			WriteUnexpected(this, "ClearState", "Unable to change the scripts state to empty.")
@@ -105,19 +105,11 @@ bool Function ChangeState(ScriptObject this, string statename) Global
 EndFunction
 
 
-; States
-;---------------------------------------------
-
-bool Function HasState(ScriptObject script) Global
-	{Return true if the given script has any state other than the default empty state.}
-	return script.GetState() != EmptyState()
-EndFunction
-
-
 string Function EmptyState() Global
 	{The default papyrus script state is the empty state.}
 	return ""
 EndFunction
+
 
 string Function BusyState() Global
 	{The default busy state is the busy state.}

@@ -49,7 +49,6 @@ Event OnEvent(int aEvent, Projects:Context sender, var[] arguments)
 EndEvent
 
 
-
 ; Functions
 ;---------------------------------------------
 
@@ -59,7 +58,7 @@ bool Function SetActive(Optional aOptional, bool abActive = true) Global
 
 	If (aOptional)
 		If (abActive) ; requested active state
-			If (HasState(aOptional)) ; already activated
+			If (StateRunning(aOptional)) ; already activated
 				Write(none, "Ignoring request for ActiveState, module is already active.")
 				return false
 			Else
@@ -100,7 +99,7 @@ Group Module
 
 	bool Property IsReady Hidden
 		bool Function Get()
-			return EnabledValue && HasState(self)
+			return EnabledValue && StateRunning(self)
 		EndFunction
 	EndProperty
 
