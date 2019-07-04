@@ -1,6 +1,24 @@
 Scriptname System:XSE:ObjectMod extends System:ObjectMod Native Const Hidden
 import System:Log
 
+
+Group IsScope
+	Keyword Property HasScope Auto Const Mandatory
+	Keyword Property HasScopeRecon  Auto Const Mandatory
+EndGroup
+
+bool Function IsScope(ObjectMod omod)
+	int Invalid = -1 const
+	If (omod)
+		ObjectMod:PropertyModifier[] properties = omod.GetPropertyModifiers()
+		bool bHasScope = properties.FindStruct("object", HasScope) > Invalid
+		return bHasScope || properties.FindStruct("object", HasScopeRecon) > Invalid
+	Else
+		return false
+	EndIf
+EndFunction
+
+
 ; Debug
 ;---------------------------------------------
 
