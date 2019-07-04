@@ -1,7 +1,7 @@
-ScriptName GamesTest:Shared_Activation extends GamesTest:Framework:Lilac
-import Games
-import Games:Papyrus:Log
-import Games:Shared
+ScriptName ScriptingTests:Activation extends GamesTest:Framework:Lilac
+import System
+import System:Log
+
 
 ; Events
 ;---------------------------------------------

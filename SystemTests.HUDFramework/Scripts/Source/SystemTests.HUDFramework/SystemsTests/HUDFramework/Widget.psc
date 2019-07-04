@@ -1,6 +1,6 @@
-Scriptname Papyrus_Test:Widget extends Papyrus:GUI:HUDWidget
-import Papyrus:Log
-import Papyrus:PointType
+Scriptname SystemTests:HUDFramework:Widget extends Papyrus:GUI:HUDWidget
+import System:Log
+import System:PointType
 
 UserLog Log
 string WidgetID = "TestWidget.swf" const
