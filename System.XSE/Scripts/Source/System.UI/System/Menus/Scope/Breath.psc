@@ -5,10 +5,10 @@ import System:Menus:Scope:Menu
 ;---------------------------------------------
 
 Event OnEffectStart(Actor akTarget, Actor akCaster)
-	If (Internal.IsBreathKeyDown)
+	If (Type.IsBreathKeyDown)
 		BreathEventArgs e = new BreathEventArgs
-		e.Breath = Internal.BreathInterrupted
-		Internal.SendBreathEvent(e)
+		e.Breath = Type.BreathInterrupted
+		Type.SendBreathEvent(e)
 	EndIf
 EndEvent
 
@@ -16,5 +16,5 @@ EndEvent
 ;---------------------------------------------
 
 Group Properties
-	System:Menus:Scope:Internal Property Internal Auto Const Mandatory
+	System:Menus:Scope:Type Property Type Auto Const Mandatory
 EndGroup
