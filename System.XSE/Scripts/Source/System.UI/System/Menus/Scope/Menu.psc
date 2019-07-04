@@ -1,4 +1,4 @@
-Scriptname System:Menus:Scope:Menu extends Quest
+Scriptname System:Menus:Scope:Menu extends System:Type
 import System:Log
 
 
@@ -119,18 +119,6 @@ string Function GetMember(string member)
 		EndIf
 	Else
 		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
-		return none
-	EndIf
-EndFunction
-
-
-; TODO: Separate the client from the vanilla "Menu.psc".
-; Clients will be adapted into runtime injected loaders for vanilla menus in general.
-string Function GetClient()
-	If (IsOpen)
-		return UI.Invoke(Name, GetMember("GetClient"))
-	Else
-		WriteUnexpected(self, "GetClient", ToString()+" is not open.")
 		return none
 	EndIf
 EndFunction

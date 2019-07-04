@@ -1,4 +1,4 @@
-ScriptName System:Menus:Scope:Type Extends System:Type
+ScriptName System:Menus:Scope:Service Extends System:Type
 {The scope menu service provides backend for the user facing code.}
 import System:Log
 import System:Menus:Scope:Menu
@@ -6,7 +6,6 @@ import System:Menus:Scope:Menu
 Actor Player
 bool BreathPressed = false
 bool Interrupted = false
-
 
 
 ; Events
@@ -99,13 +98,13 @@ EndFunction
 
 Group Scopes
 	System:Menus:Scope:Menu Property Menu Auto Const Mandatory
-
-	System:Menus:Scope:Client Property Client Auto Const Mandatory
-	{ TODO: Separate the client from the vanilla "Menu.psc".
-	  Clients will be adapted into runtime injected loaders.}
 EndGroup
 
 Group Breath
+	int Property BreathHeld = 0 AutoReadOnly
+	int Property BreathReleased = 1 AutoReadOnly
+	int Property BreathInterrupted = 2 AutoReadOnly
+
 	ActorValue Property ActionPoints Auto Const Mandatory
 
 	int Property BreathKey = 164 AutoReadOnly
@@ -121,10 +120,4 @@ Group Breath
 			return Player.GetValue(ActionPoints) > 0
 		EndFunction
 	EndProperty
-EndGroup
-
-Group Breath
-	int Property BreathHeld = 0 AutoReadOnly
-	int Property BreathReleased = 1 AutoReadOnly
-	int Property BreathInterrupted = 2 AutoReadOnly
 EndGroup

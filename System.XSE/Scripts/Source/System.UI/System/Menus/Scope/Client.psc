@@ -19,10 +19,22 @@ EndEvent
 ; Methods
 ;---------------------------------------------
 
+; TODO: Separate the client from the vanilla "Menu.psc".
+; Clients will be adapted into runtime injected loaders for vanilla menus in general.
+string Function GetClient()
+	If (Menu.IsOpen)
+		return UI.Invoke(Menu.Name, GetMember("GetClient"))
+	Else
+		WriteUnexpected(self, "GetClient", ToString()+" is not open.")
+		return none
+	EndIf
+EndFunction
+
+
 string Function GetMember(string member)
 	{Provides the instance member's variable path for the loaded client.}
 	If (member)
-		return Menu.GetClient()+"."+member
+		return GetClient()+"."+member
 	Else
 		WriteUnexpectedValue(self, "GetMember", "member", "The value cannot be none or empty.")
 		return ""
