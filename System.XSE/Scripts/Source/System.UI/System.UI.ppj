@@ -12,8 +12,8 @@
 	>
 	<Imports>
 		<Import>.</Import>
-		<Import>..\System.Diagnostics</Import>
 		<Import>..\System.XSE</Import>
+		<Import>..\System.Diagnostics</Import>
 		<Import>..\System</Import>
 		<Import>..\F4SE</Import>
 		<Import>..\Base</Import>
