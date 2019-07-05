@@ -5,6 +5,7 @@ import System:Script
 
 Button[] Buttons
 Button SelectedButton
+
 CustomEvent OnShown
 CustomEvent OnSelected
 
@@ -36,7 +37,6 @@ Event OnGameReload()
 	Buttons = new Button[0]
 	Register()
 EndEvent
-
 
 
 ; Display

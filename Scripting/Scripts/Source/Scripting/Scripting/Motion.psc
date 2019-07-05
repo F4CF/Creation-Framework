@@ -168,28 +168,28 @@ State Translating
 
 	Function Translate(ObjectReference from, ObjectReference to, float speed = 100.0)
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Translating.Translate", "The member is not implemented in the '"+StateName+"' state.")
+		System:Exception.NotImplemented(ToString(), "Translating.Translate", "The member is not implemented in the '"+StateName+"' state.")
 	EndFunction
 
 	Function TranslateEach(ObjectReference[] values, ObjectReference to, float speed = 100.0)
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Translating.TranslateEach", "The member is not implemented in the '"+StateName+"' state.")
+		System:Exception.NotImplemented(ToString(), "Translating.TranslateEach", "The member is not implemented in the '"+StateName+"' state.")
 	EndFunction
 EndState
 
 
 Event ObjectReference.OnTranslationComplete(ObjectReference sender)
 	{EMPTY}
-	WriteNotImplemented(ToString(), "ObjectReference.OnTranslationComplete", "The member is not implemented in the empty state.")
+	System:Exception.NotImplemented(ToString(), "ObjectReference.OnTranslationComplete", "The member is not implemented in the empty state.")
 EndEvent
 
 Event ObjectReference.OnTranslationFailed(ObjectReference sender)
 	{EMPTY}
-	WriteNotImplemented(ToString(), "ObjectReference.OnTranslationFailed", "The member is not implemented in the empty state.")
+	System:Exception.NotImplemented(ToString(), "ObjectReference.OnTranslationFailed", "The member is not implemented in the empty state.")
 EndEvent
 
 bool Function MoveNext()
 	{EMPTY}
-	WriteNotImplemented(ToString(), "MoveNext", "The member is not implemented in the empty state.")
+	System:Exception.NotImplemented(ToString(), "MoveNext", "The member is not implemented in the empty state.")
 	return false
 EndFunction

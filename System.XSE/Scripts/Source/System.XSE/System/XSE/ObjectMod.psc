@@ -1,16 +1,17 @@
-Scriptname System:XSE:ObjectMod extends System:ObjectMod Native Const Hidden
+Scriptname System:XSE:ObjectMod Extends System:ObjectMod Native Const Hidden
 import System:Log
 
+; TODO: Avoid dependency on non-system data files.
+bool Function IsScope(ObjectMod this)
+	If (this)
+		int Invalid = -1 const
 
-Group IsScope
-	Keyword Property HasScope Auto Const Mandatory
-	Keyword Property HasScopeRecon  Auto Const Mandatory
-EndGroup
+		; HasScope [KYWD:0009F425]
+		Keyword HasScope = Game.GetFormFromFile(0x0009F425, "Fallout4.esm") as Keyword
+		; HasScopeRecon [KYWD:00184C55]
+		Keyword HasScopeRecon = Game.GetFormFromFile(0x00184C55, "Fallout4.esm") as Keyword
 
-bool Function IsScope(ObjectMod omod)
-	int Invalid = -1 const
-	If (omod)
-		ObjectMod:PropertyModifier[] properties = omod.GetPropertyModifiers()
+		ObjectMod:PropertyModifier[] properties = this.GetPropertyModifiers()
 		bool bHasScope = properties.FindStruct("object", HasScope) > Invalid
 		return bHasScope || properties.FindStruct("object", HasScopeRecon) > Invalid
 	Else
@@ -24,7 +25,7 @@ EndFunction
 
 bool Function TracePropertyModifiers(ObjectMod this) Global DebugOnly
 	{Traces each property modifier on the given ObjectMod type.}
-	string prefix = "[ObjectModEx.psc (TracePropertyModifiers)]" const
+	string prefix = "[System:XSE:ObjectMod (TracePropertyModifiers)]" const
 	If (this)
 		ObjectMod:PropertyModifier[] array = this.GetPropertyModifiers()
 		If (array)

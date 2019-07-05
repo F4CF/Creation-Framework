@@ -5,31 +5,31 @@ import System:PointType
 ; References
 ;---------------------------------------------
 
-Point Function ToPosition(ObjectReference reference) Global
+Point Function ToPosition(ObjectReference this) Global
 	Point result = new Point
-	If (reference)
-		result.X = reference.X
-		result.Y = reference.Y
-		result.Z = reference.Z
+	If (this)
+		result.X = this.X
+		result.Y = this.Y
+		result.Z = this.Z
 	EndIf
 	return result
 EndFunction
 
 
-Point Function ToAngle(ObjectReference reference) Global
+Point Function ToAngle(ObjectReference this) Global
 	Point result = new Point
-	If (reference)
-		result.X = reference.GetAngleX()
-		result.Y = reference.GetAngleY()
-		result.Z = reference.GetAngleZ()
+	If (this)
+		result.X = this.GetAngleX()
+		result.Y = this.GetAngleY()
+		result.Z = this.GetAngleZ()
 	EndIf
 	return result
 EndFunction
 
 
-Function SetPoint(ObjectReference reference, Point position, Point angle) Global
-	If (reference)
-		reference.SetPosition(position.X, position.Y, position.Z)
-		reference.SetAngle(angle.X, angle.Y, angle.Z)
+Function SetPoint(ObjectReference this, Point position, Point angle) Global
+	If (this)
+		this.SetPosition(position.X, position.Y, position.Z)
+		this.SetAngle(angle.X, angle.Y, angle.Z)
 	EndIf
 EndFunction
