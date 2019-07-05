@@ -1,5 +1,5 @@
 ScriptName System:Menus:Scope:Service Extends System:Type
-{The scope menu service provides backend for the user facing code.}
+{The scope menu service provides backend for the scope menu.}
 import System:Log
 import System:Menus:Scope:Menu
 
@@ -89,7 +89,7 @@ EndFunction
 
 string Function ToString()
 	{The string representation of this type.}
-	return "[System:Menus:Scope:Type]"
+	return "[System:Menus:Scope:Service]"
 EndFunction
 
 

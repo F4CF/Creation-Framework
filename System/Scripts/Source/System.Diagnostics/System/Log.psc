@@ -1,5 +1,4 @@
 Scriptname System:Log Hidden Const DebugOnly
-import System:StringType
 
 ; Logging
 ;---------------------------------------------
@@ -56,13 +55,6 @@ EndFunction
 bool Function WriteUnexpectedValue(var script, string member, string variable, string text = "") Global DebugOnly
 	{The script had and unexpected value.}
 	return Write(script+"["+member+"."+variable+"]", "The member '"+member+"' with variable '"+variable+"' had an unexpected operation. "+text)
-EndFunction
-
-
-bool Function WriteNotImplemented(var script, string member, string text = "") Global DebugOnly
-	{The exception that is thrown when a requested method or operation is not implemented.}
-	; The exception is thrown when a particular method, get accessors, or set accessors is present as a member of a type but is not implemented.
-	return Write(script, member+": The member '"+member+"' was not implemented. "+text)
 EndFunction
 
 

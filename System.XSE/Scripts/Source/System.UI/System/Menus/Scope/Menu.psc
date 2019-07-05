@@ -1,6 +1,5 @@
-Scriptname System:Menus:Scope:Menu extends System:Type
+Scriptname System:Menus:Scope:Menu extends System:Menus:MenuType
 import System:Log
-
 
 ; Open/Close Event
 ;---------------------------------------------
@@ -92,7 +91,7 @@ bool Function SetOverlay(int identifier)
 		If (identifier >= Default && identifier <= Empty)
 			var[] arguments = new var[1]
 			arguments[0] = identifier
-			UI.Invoke(Name, GetMember("SetOverlay"), arguments)
+			UI.Invoke(Name, GetMember("SetOverlay", Instance), arguments)
 			WriteLine(self, "SetOverlay", identifier)
 			return true
 		Else
@@ -109,66 +108,30 @@ EndFunction
 ; Methods
 ;---------------------------------------------
 
-string Function GetMember(string member)
-	If (IsOpen)
-		If (member)
-			return Instance+"."+member
-		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
-			return none
-		EndIf
-	Else
-		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
-		return none
-	EndIf
-EndFunction
-
-
 string Function ToString()
 	{The string representation of this type.}
-	return "[Name:"+Name+", Path:"+Path+", Instance:"+Instance+"]"
+	return parent.ToString()+"[Instance:"+Instance+"]"
 EndFunction
 
 
 ; Properties
 ;---------------------------------------------
 
-Group Properties
-	string Property Name Hidden
-		string Function Get()
-			{The name of this menu.}
-			return "ScopeMenu"
-		EndFunction
-	EndProperty
+; @override
+string Function GetName()
+	return "ScopeMenu"
+EndFunction
 
-	string Property Path Hidden
-		string Function Get()
-			{The swf file path of this menu without the file extension. The root directory is "Data\Interface".}
-			return "ScopeMenu"
-		EndFunction
-	EndProperty
+; @override
+string Function GetFile()
+	return "ScopeMenu"
+EndFunction
 
-	string Property Root Hidden
-		string Function Get()
-			{The top-level MovieClip that is not the stage.}
-			return "root1"
-		EndFunction
-	EndProperty
+; @override
+string Function GetInstance()
+	return ".ScopeMenuInstance"
+EndFunction
 
-	string Property Instance Hidden
-		string Function Get()
-			{The instance variable of this menu.}
-			return Root+".ScopeMenuInstance"
-		EndFunction
-	EndProperty
-
-	bool Property IsOpen Hidden
-		bool Function Get()
-			{Returns true if this menu is open.}
-			return UI.IsMenuOpen(Name)
-		EndFunction
-	EndProperty
-EndGroup
 
 Group Identifiers
 	int Property Default = 0 AutoReadOnly

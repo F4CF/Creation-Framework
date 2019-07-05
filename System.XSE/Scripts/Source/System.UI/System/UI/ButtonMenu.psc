@@ -3,7 +3,6 @@ import System
 import System:Log
 import System:Script
 
-
 Button[] Buttons
 Button SelectedButton
 CustomEvent OnShown
@@ -102,28 +101,28 @@ State Shown
 
 	bool Function Show()
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Shown.Show", "Not implemented in the '"+GetState()+"' state.")
+		System:Exception.NotImplemented(ToString(), "Shown.Show", "Not implemented in the '"+GetState()+"' state.")
 		return false
 	EndFunction
 
 
 	bool Function Add(Button value)
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Shown.Add", "Not implemented in the '"+GetState()+"' state.")
+		System:Exception.NotImplemented(ToString(), "Shown.Add", "Not implemented in the '"+GetState()+"' state.")
 		return false
 	EndFunction
 
 
 	bool Function Remove(Button value)
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Shown.Remove", "Not implemented in the '"+GetState()+"' state.")
+		System:Exception.NotImplemented(ToString(), "Shown.Remove", "Not implemented in the '"+GetState()+"' state.")
 		return false
 	EndFunction
 
 
 	bool Function Clear()
 		{EMPTY}
-		WriteNotImplemented(ToString(), "Shown.Clear", "Not implemented in the '"+GetState()+"' state.")
+		System:Exception.NotImplemented(ToString(), "Shown.Clear", "Not implemented in the '"+GetState()+"' state.")
 		return false
 	EndFunction
 
