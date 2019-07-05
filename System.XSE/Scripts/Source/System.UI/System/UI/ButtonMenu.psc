@@ -1,4 +1,4 @@
-ScriptName System:UI:ButtonMenu extends System:UI:Menu Default
+ScriptName System:UI:ButtonMenu Extends System:UI:CustomType Default
 import System
 import System:Log
 import System:Script
@@ -18,18 +18,29 @@ Struct Button
 EndStruct
 
 
-; Display
+; Events
 ;---------------------------------------------
 
-DisplayData Function NewDisplay()
-	DisplayData display = new DisplayData
-	display.Menu = "SystemButtonMenu"
-	display.Asset = "SystemButtonMenu"
-	display.Root = "root1.Menu"
-	Buttons = new Button[0]
-	return display
-EndFunction
+Event OnQuestInit()
+	OnGameReload()
+	RegisterForGameReload(self)
+EndEvent
 
+
+Event OnQuestShutdown()
+	UnregisterForGameReload(self)
+EndEvent
+
+
+Event OnGameReload()
+	Buttons = new Button[0]
+	Register()
+EndEvent
+
+
+
+; Display
+;---------------------------------------------
 
 bool Function Show()
 	{Begin the shown state.}
@@ -59,7 +70,7 @@ State Shown
 				EndWhile
 
 				string member = GetMember("SetButtons")
-				UI.Invoke(Menu, member, arguments)
+				UI.Invoke(Name, member, arguments)
 
 				ShownEventArgs e = new ShownEventArgs
 				e.Showing = true
@@ -67,7 +78,7 @@ State Shown
 				shownArguments[0] = e
 				SendCustomEvent("OnShown", shownArguments)
 
-				WriteLine(ToString(), "Showing button press hints. Invoke:"+member+"("+arguments+") @"+Menu)
+				WriteLine(ToString(), "Showing button press hints. Invoke:"+member+"("+arguments+") @"+Name)
 			Else
 				WriteUnexpectedValue(ToString(), "Shown.OnBeginState", "Buttons", "The button array is none or empty.")
 				ClearState(self)
@@ -302,6 +313,29 @@ EndFunction
 
 ; Properties
 ;---------------------------------------------
+
+; @overrides
+string Function GetName()
+	return "SystemButtonMenu"
+EndFunction
+
+; @overrides
+string Function GetFile()
+	return "SystemButtonMenu"
+EndFunction
+
+; @overrides
+string Function GetInstance()
+	return ".Menu"
+EndFunction
+
+; @overrides
+UI:MenuData Function GetInitialization()
+	UI:MenuData value = new UI:MenuData
+	value.MenuFlags = FlagNone
+	value.ExtendedFlags = FlagInheritColors + FlagCheckForGamepad
+	return value
+EndFunction
 
 Group ButtonHint
 	int Property Count Hidden

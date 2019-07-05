@@ -1,7 +1,7 @@
-ScriptName System:Menus:Scope:Service Extends System:Type
+ScriptName System:UI:Scope:Service Extends System:Type
 {The scope menu service provides backend for the scope menu.}
 import System:Log
-import System:Menus:Scope:Menu
+import System:UI:Scope:Menu
 
 Actor Player
 bool BreathPressed = false
@@ -89,7 +89,7 @@ EndFunction
 
 string Function ToString()
 	{The string representation of this type.}
-	return "[System:Menus:Scope:Service]"
+	return "[System:UI:Scope:Service]"
 EndFunction
 
 
@@ -97,7 +97,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Scopes
-	System:Menus:Scope:Menu Property Menu Auto Const Mandatory
+	System:UI:Scope:Menu Property Menu Auto Const Mandatory
 EndGroup
 
 Group Breath

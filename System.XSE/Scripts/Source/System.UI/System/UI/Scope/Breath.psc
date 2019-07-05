@@ -1,5 +1,5 @@
-ScriptName System:Menus:Scope:Breath Extends ActiveMagicEffect
-import System:Menus:Scope:Menu
+ScriptName System:UI:Scope:Breath Extends ActiveMagicEffect
+import System:UI:Scope:Menu
 
 ; Events
 ;---------------------------------------------
@@ -16,5 +16,5 @@ EndEvent
 ;---------------------------------------------
 
 Group Properties
-	System:Menus:Scope:Service Property Service Auto Const Mandatory
+	System:UI:Scope:Service Property Service Auto Const Mandatory
 EndGroup

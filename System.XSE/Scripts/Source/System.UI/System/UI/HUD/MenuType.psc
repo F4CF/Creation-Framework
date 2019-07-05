@@ -1,4 +1,4 @@
-ScriptName System:Menus:HUD:MenuType Extends System:Menus:MenuType Native Const Hidden
+ScriptName System:UI:HUD:MenuType Extends System:UI:MenuType Native Const Hidden
 
 ; Properties
 ;---------------------------------------------

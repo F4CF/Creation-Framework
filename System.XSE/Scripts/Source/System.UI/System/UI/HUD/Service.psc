@@ -1,6 +1,6 @@
-ScriptName System:Menus:HUD:Service Extends System:Type
+ScriptName System:UI:HUD:Service Extends System:Type
 import System:Log
-import System:Menus:HUD:Menu
+import System:UI:HUD:Menu
 
 ; Events
 ;---------------------------------------------
@@ -44,7 +44,7 @@ EndFunction
 
 string Function ToString()
 	{The string representation of this type.}
-	return "[System:Menus:HUD:Service]"
+	return "[System:UI:HUD:Service]"
 EndFunction
 
 
@@ -52,5 +52,5 @@ EndFunction
 ;---------------------------------------------
 
 Group Scopes
-	System:Menus:HUD:Menu Property Menu Auto Const Mandatory
+	System:UI:HUD:Menu Property Menu Auto Const Mandatory
 EndGroup

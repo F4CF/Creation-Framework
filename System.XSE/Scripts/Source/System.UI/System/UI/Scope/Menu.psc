@@ -1,4 +1,4 @@
-Scriptname System:Menus:Scope:Menu extends System:Menus:MenuType
+Scriptname System:UI:Scope:Menu extends System:UI:MenuType
 import System:Log
 
 ; Open/Close Event

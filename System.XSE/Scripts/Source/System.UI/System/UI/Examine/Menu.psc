@@ -1,4 +1,4 @@
-ScriptName System:Menus:Examine:Menu Extends System:Menus:MenuType
+ScriptName System:UI:Examine:Menu Extends System:UI:MenuType
 {Injects AS3 code into the vanilla Examine menu.}
 import System:Log
 

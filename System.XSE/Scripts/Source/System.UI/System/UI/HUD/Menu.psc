@@ -1,4 +1,4 @@
-ScriptName System:Menus:HUD:Menu Extends System:Menus:HUD:MenuType
+ScriptName System:UI:HUD:Menu Extends System:UI:HUD:MenuType
 import System:Log
 
 

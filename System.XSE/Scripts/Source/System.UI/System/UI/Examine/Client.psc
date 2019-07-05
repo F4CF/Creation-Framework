@@ -1,4 +1,4 @@
-ScriptName System:Menus:Examine:Client Extends System:Menus:Examine:ClientType
+ScriptName System:UI:Examine:Client Extends System:UI:Examine:ClientType
 {Injects AS3 code into the vanilla Examine menu.}
 import System:Log
 
@@ -194,5 +194,5 @@ Group Properties
 EndGroup
 
 Group Menu
-	System:Menus:Examine:Menu Property Menu Auto Const Mandatory
+	System:UI:Examine:Menu Property Menu Auto Const Mandatory
 EndGroup
