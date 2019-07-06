@@ -1,4 +1,4 @@
-ScriptName SystemTests:Diagnostics:LilacMock Extends System:Diagnostics:TestRunner
+ScriptName SystemTests:Diagnostics:TestRunnerMock Extends System:Diagnostics:TestRunner
 {Test-specific subclass of Lilac.}
 
 ; Test Runner

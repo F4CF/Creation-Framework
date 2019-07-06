@@ -1,4 +1,4 @@
-ScriptName SystemTests:UI:Menu extends System:UI:Menu
+ScriptName SystemTests:UI:Menu extends System:UI:CustomType
 import System
 import System:Log
 

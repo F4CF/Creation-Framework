@@ -12,8 +12,6 @@ ScriptName SystemTests:Assembly Extends Quest
 	0x0200266B SystemTests_CollectionsList
 	0x02001737 SystemTests_Log
 	0x02002E05 SystemTests_ObjectsFactory
-	0x02001736 SystemTests_ProjectsContext
-	0x02000F99 SystemTests_ProjectsContextMock
 /;
 
 ; Methods
@@ -44,6 +42,14 @@ Group Assembly
 		{The plugin file.}
 		string Function Get()
 			return Name+"."+Extension
+		EndFunction
+	EndProperty
+EndGroup
+
+Group QUST
+	int Property SystemTests_DiagnosticsTestRunner Hidden
+		int Function Get()
+			return 0x00004C6B
 		EndFunction
 	EndProperty
 EndGroup
