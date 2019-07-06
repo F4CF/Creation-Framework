@@ -1,4 +1,4 @@
-ScriptName System:UI:Scope:Service Extends System:Type
+ScriptName System:UI:Scope:Service Extends System:UI:Scope:ServiceType
 {The scope menu service provides backend for the scope menu.}
 import System:Log
 import System:UI:Scope:Menu
@@ -14,7 +14,17 @@ bool Interrupted = false
 ; TODO: Use the game reload event
 Event OnQuestInit()
 	Player = Game.GetPlayer()
+	Player.AddSpell(SystemXSE_UI_ScopeBreathEvent)
 	RegisterForMenuOpenCloseEvent(Menu.Name)
+
+	RegisterForGameReload(self)
+	OnGameReload()
+EndEvent
+
+
+Event OnGameReload()
+	RegisterForMenuOpenCloseEvent(Menu.Name)
+	WriteLine(ToString(), "OnGameReload")
 EndEvent
 
 
@@ -101,11 +111,12 @@ Group Scopes
 EndGroup
 
 Group Breath
+	Spell Property SystemXSE_UI_ScopeBreathEvent Auto Const Mandatory
+	ActorValue Property ActionPoints Auto Const Mandatory
+
 	int Property BreathHeld = 0 AutoReadOnly
 	int Property BreathReleased = 1 AutoReadOnly
 	int Property BreathInterrupted = 2 AutoReadOnly
-
-	ActorValue Property ActionPoints Auto Const Mandatory
 
 	int Property BreathKey = 164 AutoReadOnly
 

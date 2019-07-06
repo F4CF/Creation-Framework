@@ -1,14 +1,44 @@
-ScriptName System:UI:Examine:Menu Extends System:UI:MenuType
-{Injects AS3 code into the vanilla Examine menu.}
+ScriptName System:UI:Examine:Menu Extends System:UI:Examine:MenuType
 import System:Log
 
-
-; Methods
+; Open/Close Event
 ;---------------------------------------------
 
-string Function ToString()
-	{The string representation of this type.}
-	return parent.ToString()+"[Instance:"+Instance+"]"
+CustomEvent OpenCloseEvent
+
+Struct OpenCloseEventArgs
+	bool Opening = false
+EndStruct
+
+
+bool Function RegisterForOpenCloseEvent(ScriptObject script)
+	If (script)
+		script.RegisterForCustomEvent(self, "OpenCloseEvent")
+		return true
+	Else
+		WriteUnexpectedValue(self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
+		return false
+	EndIf
+EndFunction
+
+
+bool Function UnregisterForOpenCloseEvent(ScriptObject script)
+	If (script)
+		script.UnregisterForCustomEvent(self, "OpenCloseEvent")
+		return true
+	Else
+		WriteUnexpectedValue(self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
+		return false
+	EndIf
+EndFunction
+
+
+OpenCloseEventArgs Function GetOpenCloseEventArgs(var[] arguments)
+	If (arguments)
+		return arguments[0] as OpenCloseEventArgs
+	Else
+		return none
+	EndIf
 EndFunction
 
 
