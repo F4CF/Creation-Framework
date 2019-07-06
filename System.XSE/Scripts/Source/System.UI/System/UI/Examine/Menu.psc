@@ -50,6 +50,11 @@ string Function GetName()
 	return "ExamineMenu"
 EndFunction
 
+; @overrides
+string Function GetFile()
+	return "ExamineMenu"
+EndFunction
+
 ; @override
 string Function GetInstance()
 	return ".BaseInstance"

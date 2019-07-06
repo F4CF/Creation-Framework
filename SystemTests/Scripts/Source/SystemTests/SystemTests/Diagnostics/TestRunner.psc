@@ -1,9 +1,19 @@
 ScriptName SystemTests:Diagnostics:TestRunner Extends System:Diagnostics:UnitTest
 
+
+
+
+SystemTests:Assembly Assembly
 SystemTests:Diagnostics:TestRunnerMock TestRunnerMock
-Armor ArmorIronCuirass
+
+Armor Armor_Vault111_Underwear
 ObjectReference TestArmorRef
 Form EmptyForm
+
+
+Event OnQuestInit()
+	Assembly = SystemTests:Assembly.GetAssembly()
+EndEvent
 
 
 ; Test Runner
@@ -54,11 +64,12 @@ EndFunction
 ;---------------------------------------------
 
 Function BeforeAll()
-	TestRunnerMock = Game.GetFormFromFile(0x12C5, "SystemTests.XSE.esp") as SystemTests:Diagnostics:TestRunnerMock
+	TestRunnerMock = System:External.Read(Assembly.File, Assembly.SystemTests_DiagnosticsTestRunner) as SystemTests:Diagnostics:TestRunnerMock
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 	TestRunnerMock.MockLastRaisedResultResult = true
-	ArmorIronCuirass = Game.GetFormFromFile(0x12E49, "Skyrim.esm") as Armor
-	TestArmorRef = Game.GetPlayer().PlaceAtMe(ArmorIronCuirass)
+
+	Armor_Vault111_Underwear = System:External.Read(Assembly.Fallout, Assembly.Armor_Vault111_Underwear) as Armor
+	TestArmorRef = Game.GetPlayer().PlaceAtMe(Armor_Vault111_Underwear)
 	EmptyForm = none
 EndFunction
 
@@ -66,7 +77,7 @@ EndFunction
 Function BeforeEach()
 	TestRunnerMock.ResetTestRunner()
 	TestRunnerMock.MockBeforeEachCallCount = 0
-	TestRunnerMock.mockAfterEachCallCount = 0
+	TestRunnerMock.MockAfterEachCallCount = 0
 	TestRunnerMock.MockItCallCount = 0
 EndFunction
 
@@ -75,7 +86,7 @@ Function AfterAll()
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock = none
-	ArmorIronCuirass = none
+	Armor_Vault111_Underwear = none
 	TestArmorRef.Disable()
 	TestArmorRef.Delete()
 EndFunction
@@ -84,7 +95,7 @@ EndFunction
 Function AfterEach()
 	TestRunnerMock.ResetTestRunner()
 	TestRunnerMock.MockBeforeEachCallCount = 0
-	TestRunnerMock.mockAfterEachCallCount = 0
+	TestRunnerMock.MockAfterEachCallCount = 0
 	TestRunnerMock.MockItCallCount = 0
 EndFunction
 
@@ -115,9 +126,9 @@ bool Function Case_Matcher_BeEqualTo()
 	ExpectString("test string", NotTo, BeEqualTo, "other string")
 	ExpectString("", To, BeEqualTo, "")
 
-	ExpectForm(ArmorIronCuirass, To, BeEqualTo, ArmorIronCuirass)
-	ExpectForm(ArmorIronCuirass, NotTo, BeEqualTo, none)
-	ExpectForm(ArmorIronCuirass, NotTo, BeEqualTo, Game.GetPlayer().GetActorBase())
+	ExpectForm(Armor_Vault111_Underwear, To, BeEqualTo, Armor_Vault111_Underwear)
+	ExpectForm(Armor_Vault111_Underwear, NotTo, BeEqualTo, none)
+	ExpectForm(Armor_Vault111_Underwear, NotTo, BeEqualTo, Game.GetPlayer().GetActorBase())
 
 	ExpectRef(TestArmorRef, To, BeEqualTo, TestArmorRef)
 	ExpectRef(TestArmorRef, NotTo, BeEqualTo, none)
@@ -261,7 +272,7 @@ bool Function Case_Matcher_BeTruthy()
 	ExpectBool(true, To, BeTruthy)
 	ExpectBool(false, NotTo, BeTruthy)
 
-	ExpectForm(ArmorIronCuirass, To, BeTruthy)
+	ExpectForm(Armor_Vault111_Underwear, To, BeTruthy)
 	ExpectForm(EmptyForm, NotTo, BeTruthy)
 
 	ObjectReference EmptyRef = none
@@ -286,7 +297,7 @@ bool Function Case_Matcher_BeFalsy()
 	ExpectBool(true, NotTo, BeFalsy)
 	ExpectBool(false, To, BeFalsy)
 
-	ExpectForm(ArmorIronCuirass, NotTo, BeFalsy)
+	ExpectForm(Armor_Vault111_Underwear, NotTo, BeFalsy)
 	ExpectForm(EmptyForm, To, BeFalsy)
 
 	ObjectReference EmptyRef = none
@@ -300,7 +311,7 @@ EndFunction
 
 bool Function Case_Matcher_BeNone()
 	ExpectForm(EmptyForm, To, BeNone)
-	ExpectForm(ArmorIronCuirass, NotTo, BeNone)
+	ExpectForm(Armor_Vault111_Underwear, NotTo, BeNone)
 
 	ObjectReference EmptyRef = none
 	ExpectRef(EmptyRef, To, BeNone)
@@ -476,35 +487,35 @@ bool Function Case_Message_InvalidMatcher()
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 
-	TestRunnerMock.ExpectForm(ArmorIronCuirass, To, BeGreaterThan, ArmorIronCuirass)
+	TestRunnerMock.ExpectForm(Armor_Vault111_Underwear, To, BeGreaterThan, Armor_Vault111_Underwear)
 	ExpectBool(TestRunnerMock.MockLastRaisedResultResult, To, BeFalsy)
 	ExpectString(TestRunnerMock.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 
-	TestRunnerMock.ExpectForm(ArmorIronCuirass, To, BeGreaterThanOrEqualTo, none)
+	TestRunnerMock.ExpectForm(Armor_Vault111_Underwear, To, BeGreaterThanOrEqualTo, none)
 	ExpectBool(TestRunnerMock.MockLastRaisedResultResult, To, BeFalsy)
 	ExpectString(TestRunnerMock.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThanOrEqualTo' used.")
 
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 
-	TestRunnerMock.ExpectForm(ArmorIronCuirass, To, BeLessThan, ArmorIronCuirass)
+	TestRunnerMock.ExpectForm(Armor_Vault111_Underwear, To, BeLessThan, Armor_Vault111_Underwear)
 	ExpectBool(TestRunnerMock.MockLastRaisedResultResult, To, BeFalsy)
 	ExpectString(TestRunnerMock.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThan' used.")
 
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 
-	TestRunnerMock.ExpectForm(ArmorIronCuirass, To, BeLessThanOrEqualTo, none)
+	TestRunnerMock.ExpectForm(Armor_Vault111_Underwear, To, BeLessThanOrEqualTo, none)
 	ExpectBool(TestRunnerMock.MockLastRaisedResultResult, To, BeFalsy)
 	ExpectString(TestRunnerMock.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeLessThanOrEqualTo' used.")
 
 	TestRunnerMock.MockLastRaisedResultResult = true
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 
-	TestRunnerMock.ExpectForm(ArmorIronCuirass, NotTo, BeGreaterThan, none)
+	TestRunnerMock.ExpectForm(Armor_Vault111_Underwear, NotTo, BeGreaterThan, none)
 	ExpectBool(TestRunnerMock.MockLastRaisedResultResult, To, BeFalsy)
 	ExpectString(TestRunnerMock.MockLastLilacDebugMessage, To, BeEqualTo, "[Lilac] ERROR - Invalid matcher 'BeGreaterThan' used.")
 
@@ -659,7 +670,7 @@ bool Function Case_TestCase_BeforeAfterEach()
 	; There are 2 test cases, but beforeEach and afterEach
 	; are expected to run 3 times.
 	ExpectInt(TestRunnerMock.MockBeforeEachCallCount, To, BeEqualTo, 3)
-	ExpectInt(TestRunnerMock.mockAfterEachCallCount, To, BeEqualTo, 3)
+	ExpectInt(TestRunnerMock.MockAfterEachCallCount, To, BeEqualTo, 3)
 EndFunction
 
 
