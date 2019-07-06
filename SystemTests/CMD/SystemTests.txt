@@ -1,0 +1,6 @@
+StartQuest SystemTests_DiagnosticsTestRunner
+StartQuest SystemTests_Log
+StartQuest SystemTests_Array
+StartQuest SystemTests_Boolean
+StartQuest SystemTests_ObjectsFactory
+StartQuest SystemTests_CollectionsList
