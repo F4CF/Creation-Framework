@@ -1,4 +1,4 @@
-Scriptname System:BoolType Const Native Hidden
+Scriptname System:BoolType Extends System:Object Native Const Hidden
 
 ; Boolean
 ;---------------------------------------------

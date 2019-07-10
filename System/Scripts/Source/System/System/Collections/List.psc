@@ -3,6 +3,7 @@ Scriptname System:Collections:List extends System:Collections:Collection Default
 https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx}
 import System
 import System:Log
+import System:Activator
 
 var[] Items
 
@@ -10,8 +11,8 @@ var[] Items
 ; Constructor
 ;---------------------------------------------
 
-List Function Init() Global
-	return System:Object.Type().Initialize(0x0000083A) as List
+List Function Type() Global
+	return This().Type(0x0000083A) as List
 EndFunction
 
 
@@ -26,37 +27,37 @@ EndEvent
 ; Methods
 ;---------------------------------------------
 
-int Function IndexOf(var object)
+int Function IndexOf(var value)
 	{Determines the index of a specific item in the IList.}
-	If (object)
-		return Items.Find(object)
+	If (value)
+		return Items.Find(value)
 	Else
 		return Invalid
 	EndIf
 EndFunction
 
 
-bool Function Contains(var object)
+bool Function Contains(var value)
 	{Determines whether an element is in the IList.}
-	return IndexOf(object) > Invalid
+	return IndexOf(value) > Invalid
 EndFunction
 
 
-Function Add(var object)
+Function Add(var value)
 	{Calling this method always throws a NotSupportedException exception.}
-	Items.Add(object)
+	Items.Add(value)
 EndFunction
 
 
-Function Insert(int index, var object)
+Function Insert(int index, var value)
 	{Inserts an item to the IList at the specified index.}
-	Items.Insert(object, index)
+	Items.Insert(value, index)
 EndFunction
 
 
-Function Remove(var object)
-	{Removes the first occurrence of a specific object from the IList.}
-	int index = IndexOf(object)
+Function Remove(var value)
+	{Removes the first occurrence of a specific value from the IList.}
+	int index = IndexOf(value)
 	Items.Remove(index)
 EndFunction
 

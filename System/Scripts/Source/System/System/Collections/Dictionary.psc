@@ -2,6 +2,7 @@ Scriptname System:Collections:Dictionary extends System:Collections:Collection D
 {Represents a collection of keys and values.
 https://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx}
 import System
+import System:Activator
 
 var[] Keys
 var[] Values
@@ -10,8 +11,8 @@ var[] Values
 ; Constructor
 ;---------------------------------------------
 
-Dictionary Function Init() Global
-	return System:Object.Type().Initialize(0x0000083B) as Dictionary
+Dictionary Function Type() Global
+	return This().Type(0x0000083B) as Dictionary
 EndFunction
 
 

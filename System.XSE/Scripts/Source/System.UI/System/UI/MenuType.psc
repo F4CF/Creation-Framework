@@ -1,4 +1,4 @@
-ScriptName System:UI:MenuType Extends System:Type Native Const Hidden
+ScriptName System:UI:MenuType Extends System:Object Native Const Hidden
 import System:Exception
 import System:Log
 

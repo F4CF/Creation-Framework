@@ -2,6 +2,7 @@ Scriptname System:Collections:Stack extends System:Collections:Collection Defaul
 {Represents a last-in-first-out (LIFO) collection of objects.
 https://msdn.microsoft.com/en-us/library/3278tedw(v=vs.110).aspx}
 import System
+import System:Activator
 
 var[] Items
 
@@ -9,8 +10,8 @@ var[] Items
 ; Constructor
 ;---------------------------------------------
 
-Stack Function Init() Global
-	return System:Object.Type().Initialize(0x0000083D) as Stack
+Stack Function Type() Global
+	return This().Type(0x0000083D) as Stack
 EndFunction
 
 

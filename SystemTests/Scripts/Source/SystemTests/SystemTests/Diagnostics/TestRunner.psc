@@ -1,8 +1,5 @@
 ScriptName SystemTests:Diagnostics:TestRunner Extends System:Diagnostics:UnitTest
 
-
-
-
 SystemTests:Assembly Assembly
 SystemTests:Diagnostics:TestRunnerMock TestRunnerMock
 

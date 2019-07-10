@@ -1,4 +1,4 @@
-Scriptname System:PointType Const Native Hidden
+Scriptname System:PointType Extends System:Object Native Const Hidden
 ; https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx
 ; https://msdn.microsoft.com/en-us/library/system.windows.media.media3d.vector3d(v=vs.110).aspx
 ; https://msdn.microsoft.com/en-us/library/system.windows.media.media3d.point3d(v=vs.110).aspx

@@ -1,5 +1,4 @@
-Scriptname System:Collections:Collection extends ObjectReference Const Native Hidden
-
+Scriptname System:Collections:Collection extends System:Object Const Native Hidden
 
 ; Observable
 ;---------------------------------------------
@@ -36,6 +35,5 @@ EndGroup
 ;---------------------------------------------
 
 Group Collection
-	int Property Invalid = -1 AutoReadOnly
 	int Property Maximum = 128 AutoReadOnly
 EndGroup

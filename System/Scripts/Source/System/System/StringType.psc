@@ -1,4 +1,4 @@
-Scriptname System:StringType Const Native Hidden
+Scriptname System:StringType Extends System:Object Native Const Hidden
 ; https://msdn.microsoft.com/en-us/library/system.string(v=vs.110).aspx
 
 

@@ -1,0 +1,420 @@
+// https://www.graphviz.org/doc/info/lang.html
+// https://www.graphviz.org/doc/info/attrs.htm
+// https://en.wikipedia.org/wiki/DOT_(graph_description_language)
+// https://graphs.grevian.org/example
+
+/* shape
+A string specifying the shape of a node.
+There are three main types of shapes : polygon-based, record-based and user-defined.
+The record-based shape has largely been superseded and greatly generalized by HTML-like labels.
+That is, instead of using shape=record, one might consider using shape=none and an HTML-like label.
+*/
+
+/* rankType
+"same", "min", "source", "max", "sink"
+*/
+
+digraph "CreationFramework"
+{
+	label = "The Creation Framework";
+	rankdir = "LR"; // {"TB"}, "LR", "BT", "RL"
+	// ranksep = "0.25"
+	// size="10";
+	// ratio="compress"
+	clusterrank = "none" // {"local"}, "none"
+	node
+	[
+		shape = "record", // {"ellipse"}, "record"
+	];
+	edge
+	[
+		dir = "forward"
+		arrowhead = "empty",
+	];
+
+	//---------------------------------------------
+	subgraph "cluster_CreationEngine"
+	{
+		label = "Creation Engine";
+
+		ScriptObject
+		[label = "ScriptObject|Flags: Native, Hidden"];
+
+		Form
+		[label = "Form|Flags: Native, Hidden"]
+		{"ScriptObject" -> "Form"};
+
+		DefaultObject
+		[label = "DefaultObject|Flags: Native, Hidden"]
+		{"Form" -> "DefaultObject"};
+
+		Quest
+		[label = "Quest|Flags: Native, Hidden"]
+		{"Form" -> "Quest"};
+
+		Activator
+		[label = "Activator|Flags: Native, Hidden"]
+		{"Form" -> "Activator"};
+
+		Alias
+		[label = "Alias|Flags: Native, Hidden"]
+		{"Form" -> "Alias"};
+
+		ReferenceAlias
+		[label = "ReferenceAlias|Flags: Native, Hidden"]
+		{"Alias" -> "ReferenceAlias"};
+
+		Actor
+		[label = "Actor|Flags: Native, Hidden"]
+		{"ObjectReference" -> "Actor"};
+
+		Armor
+		[label = "Armor|Flags: Native, Hidden"]
+		{"Form" -> "Armor"};
+
+		ObjectMod
+		[label = "ObjectMod|Flags: Native, Hidden"]
+		{"Form" -> "ObjectMod"};
+
+		ObjectReference
+		[label = "ObjectReference|Flags: Native, Hidden"]
+		{"Form" -> "ObjectReference"};
+
+		ActiveMagicEffect
+		[label = "ActiveMagicEffect|Flags: Native, Hidden"]
+		{"ScriptObject" -> "ActiveMagicEffect"};
+	}
+
+	//---------------------------------------------
+	subgraph "cluster_XSE"
+	{
+		label = "Script Extender (XSE)";
+		style=filled;
+		color=white;
+		node
+		[
+			color=orange
+		];
+		edge
+		[
+			color=orange
+		];
+		subgraph "cluster_XSE_Base"
+		{
+			label = "Overwrites";
+			node
+			[
+				color=red
+			];
+			edge
+			[
+				label="Overwrite",
+				color="red",
+				penwidth="5",
+				arrowhead="none",
+				color="red"
+			];
+
+			XSE_ScriptObject
+			[label = "ScriptObject|Flags: Native, Hidden"]
+			{"ScriptObject" -> "XSE_ScriptObject"};
+
+			XSE_Form
+			[label = "Form|Flags: Native, Hidden"]
+			{
+				"Form" -> "XSE_Form"
+			};
+
+			XSE_Actor
+			[label = "Actor|Flags: Native, Hidden"]
+			{"Actor" -> "XSE_Actor"};
+
+			XSE_Armor
+			[label = "Armor|Flags: Native, Hidden"]
+			{"Armor" -> "XSE_Armor"};
+
+			XSE_ObjectMod
+			[label = "ObjectMod|Flags: Native, Hidden"]
+			{"ObjectMod" -> "XSE_ObjectMod"};
+
+			XSE_ObjectReference
+			[label = "ObjectReference|Flags: Native, Hidden"]
+			{"ObjectReference" -> "XSE_ObjectReference"};
+		}
+		subgraph "cluster_XSE_Classes"
+		{
+			label = "Classes";
+			XSE_F4SE
+			[label = "F4SE|Flags: Native, Hidden"]
+			{"XSE_ScriptObject" -> "XSE_F4SE"};
+
+			XSE_UI
+			[label = "UI|Flags: Native, Hidden"]
+			{"XSE_ScriptObject" -> "XSE_UI"};
+		}
+	}
+
+	//---------------------------------------------
+	subgraph "cluster_CreationFramework"
+	{
+		label = "Creation Framework";
+		color="blue";
+		node
+		[
+			color="blue"
+		];
+		edge
+		[
+			color="blue"
+		];
+
+
+		subgraph "cluster_System-ESL"
+		{
+			subgraph "cluster_System"
+			{
+				label = "System";
+				color="blue"
+
+				"System:Object"
+				[label = "System:Object|Flags: Native, Hidden"]
+				{"Form" -> "System:Object"};
+
+				"System:Type"
+				[label = "System:Type|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Type"};
+
+				"System:Array"
+				[label = "System:Array|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Array"};
+
+				"System:BoolType"
+				[label = "System:BoolType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:BoolType"};
+
+				"System:PointType"
+				[label = "System:PointType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:PointType"};
+
+				"System:StringType"
+				[label = "System:StringType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:StringType"};
+
+				"System:VersionType"
+				[label = "System:VersionType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:VersionType"};
+
+				"System:Time"
+				[label = "System:Time|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Time"};
+			}
+
+			subgraph "cluster_System_Base"
+			{
+				label = "System Base";
+
+				"System:Reference"
+				[label = "System:Reference|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Reference"};
+
+				"System:Actor"
+				[label = "System:Reference|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Reference"};
+
+				"System:ActiveMagicEffect"
+				[label = "System:ActiveMagicEffect|Flags: Native, Hidden"]
+				{"System:Object" -> "System:ActiveMagicEffect"};
+
+				"System:GlobalVariable"
+				[label = "System:GlobalVariable|Flags: Native, Hidden"]
+				{"System:Object" -> "System:GlobalVariable"};
+
+				"System:ObjectMod"
+				[label = "System:ObjectMod|Flags: Native, Hidden"]
+				{"System:Object" -> "System:ObjectMod"};
+
+				"System:Quest"
+				[label = "System:Time|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Quest"};
+
+				"System:Activator"
+				[label = "System:Activator|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Activator"};
+			}
+
+
+			subgraph "cluster_System_Properties"
+			{
+				label = "System:Properties";
+
+				"System:Properties:Assemby"
+				[label = "System:Properties:Assemby|Flags: Native, Hidden"]
+				{"System:Type" -> "System:Properties:Assemby"};
+
+				"System:Properties:Log"
+				[label = "System:Properties:Log|Flags: Native, Hidden"]
+				{"System:Log"      -> "System:Properties:Log"};
+			}
+
+			subgraph "cluster_System_Diagnostics"
+			{
+				label = "System:Diagnostics";
+
+				"System:Log"
+				[label = "System:Log|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Log"};
+
+				"System:Exception"
+				[label = "System:Exception|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Exception"};
+
+				"System:Debug"
+				[label = "System:Debug|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Debug"};
+
+				"System:Diagnostics:TestResult"
+				[label = "System:Diagnostics:TestResult|Flags: Native, Hidden"]
+				{"System:Log" -> "System:Diagnostics:TestResult"};
+
+				"System:Diagnostics:TestRunnerType"
+				[label = "System:Diagnostics:TestRunnerType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Diagnostics:TestRunnerType"};
+
+				"System:Diagnostics:TestRunner"
+				[label = "System:Diagnostics:TestRunner|Flags: Native, Hidden"]
+				{"System:Diagnostics:TestRunnerType" -> "System:Diagnostics:TestRunner"};
+
+				"System:Diagnostics:UnitTest"
+				[label = "System:Diagnostics:UnitTest|Flags: Native, Hidden"]
+				{"System:Diagnostics:TestRunner" -> "System:Diagnostics:UnitTest"};
+			}
+
+			subgraph "cluster_System_Collections"
+			{
+				label = "System:Collections";
+
+				"System:Collections:Collection"
+				[label = "System:Collections:Collection|Flags: Native, Hidden"]
+				{"ObjectReference" -> "System:Collections:Collection"};
+
+				"System:Collections:Dictionary"
+				[label = "System:Collections:Dictionary|Flags: Native, Hidden"]
+				{"System:Collections:Collection" -> "System:Collections:Dictionary"};
+
+				"System:Collections:List"
+				[label = "System:Collections:List|Flags: Native, Hidden"]
+				{"System:Collections:Collection" -> "System:Collections:List"};
+
+				"System:Collections:Queue"
+				[label = "System:Collections:Queue|Flags: Native, Hidden"]
+				{"System:Collections:Collection" -> "System:Collections:Queue"};
+
+				"System:Collections:Stack"
+				[label = "System:Collections:Stack|Flags: Native, Hidden"]
+				{"System:Collections:Collection" -> "System:Collections:Stack"};
+			}
+		}
+
+
+		subgraph "cluster_System_XSE-ESL"
+		{
+			subgraph "cluster_System_XSE"
+			{
+				label = "System:XSE";
+
+				"System:Input"
+				[label = "System:Input|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Input"};
+
+				"System:XSE:Actor"
+				[label = "System:XSE:Actor|Flags: Native, Hidden"]
+				{"XSE_Actor" -> "System:XSE:Actor"};
+
+				"System:XSE:Armor"
+				[label = "System:XSE:Armor|Flags: Native, Hidden"]
+				{"XSE_Armor" -> "System:XSE:Armor"};
+
+				"System:XSE:Form"
+				[label = "System:XSE:Form|Flags: Native, Hidden"]
+				{"XSE_Form" -> "System:XSE:Form"};
+
+				"System:XSE:ObjectMod"
+				[label = "System:XSE:ObjectMod|Flags: Native, Hidden"]
+				{"XSE_ObjectMod" -> "System:XSE:ObjectMod"};
+
+				"System:XSE:UI"
+				[label = "System:XSE:UI|Flags: Native, Hidden"]
+				{"XSE_UI" -> "System:XSE:UI"};
+			}
+
+
+
+			subgraph "cluster_System_UI"
+			{
+				label = "System:UI";
+
+				"System:UI:MenuType"
+				[label = "System:UI:MenuType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:UI:MenuType"};
+
+				"System:UI:CustomType"
+				[label = "System:UI:CustomType|Flags: Native, Hidden"]
+				{"System:UI:MenuType" -> "System:UI:CustomType"};
+
+				"System:UI:ButtonMenu"
+				[label = "System:UI:ButtonMenu|Flags: Native, Hidden"]
+				{"System:UI:CustomType" -> "System:UI:ButtonMenu"};
+
+				"System:UI:Examine:MenuType"
+				[label = "System:UI:Examine:MenuType|Flags: Native, Hidden"]
+				{"System:UI:MenuType" -> "System:UI:Examine:MenuType"};
+
+				"System:UI:Examine:Menu"
+				[label = "System:UI:Examine:Menu|Flags: Native, Hidden"]
+				{"System:UI:Examine:MenuType" -> "System:UI:Examine:Menu"};
+
+				"System:UI:Examine:ServiceType"
+				[label = "System:UI:Examine:ServiceType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:UI:Examine:ServiceType"};
+
+				"System:UI:Examine:Service"
+				[label = "System:UI:Examine:Service|Flags: Native, Hidden"]
+				{"System:UI:Examine:ServiceType" -> "System:UI:Examine:Service"};
+
+				"System:UI:HUD:MenuType"
+				[label = "System:UI:HUD:MenuType|Flags: Native, Hidden"]
+				{"System:UI:MenuType" -> "System:UI:HUD:MenuType"};
+
+				"System:UI:HUD:Menu"
+				[label = "System:UI:HUD:Menu|Flags: Native, Hidden"]
+				{"System:UI:HUD:MenuType" -> "System:UI:HUD:Menu"};
+
+				"System:UI:HUD:ServiceType"
+				[label = "System:UI:HUD:ServiceType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:UI:HUD:ServiceType"};
+
+				"System:UI:HUD:Service"
+				[label = "System:UI:HUD:Service|Flags: Native, Hidden"]
+				{"System:UI:HUD:ServiceType" -> "System:UI:HUD:Service"};
+
+				"System:UI:Scope:MenuType"
+				[label = "System:UI:Scope:MenuType|Flags: Native, Hidden"]
+				{"System:UI:MenuType" -> "System:UI:Scope:MenuType"};
+
+				"System:UI:Scope:Menu"
+				[label = "System:UI:Scope:Menu|Flags: Native, Hidden"]
+				{"System:UI:Scope:MenuType" -> "System:UI:Scope:Menu"};
+
+				"System:UI:Scope:ServiceType"
+				[label = "System:UI:Scope:ServiceType|Flags: Native, Hidden"]
+				{"System:Object" -> "System:UI:Scope:ServiceType"};
+
+				"System:UI:Scope:Service"
+				[label = "System:UI:Scope:Service|Flags: Native, Hidden"]
+				{"System:UI:Scope:ServiceType" -> "System:UI:Scope:Service"};
+			}
+		}
+
+
+	}
+}

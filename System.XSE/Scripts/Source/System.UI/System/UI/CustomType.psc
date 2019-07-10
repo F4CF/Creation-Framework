@@ -2,14 +2,6 @@ Scriptname System:UI:CustomType extends System:UI:MenuType Hidden Native Const
 {A base script for custom menu types.}
 import System:Log
 
-; Virtual
-;---------------------------------------------
-
-UI:MenuData Function GetInitialization()
-	{Property}
-	return new UI:MenuData
-EndFunction
-
 
 ; Methods
 ;---------------------------------------------
@@ -47,6 +39,13 @@ EndFunction
 
 ; Properties
 ;---------------------------------------------
+
+; @virtual
+UI:MenuData Function GetInitialization()
+	{Property}
+	return new UI:MenuData
+EndFunction
+
 
 Group Properties
 	UI:MenuData Property Initialization Hidden

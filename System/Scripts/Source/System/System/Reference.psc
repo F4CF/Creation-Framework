@@ -1,5 +1,21 @@
-Scriptname System:Reference Const Native Hidden
+ScriptName System:Reference Extends System:Object Native Const Hidden
 import System:PointType
+
+; Instance
+;---------------------------------------------
+
+ObjectReference Property REF Hidden
+	ObjectReference Function Get()
+		return REF()
+	EndFunction
+EndProperty
+
+; @virtual
+ObjectReference Function REF()
+	ObjectReference this = System:Type.AsReference(self)
+	System:Debug.Assert(this, "Exception: Invalid Object! This must be of the `ObjectReference` type.")
+	return this
+EndFunction
 
 
 ; References

@@ -50,7 +50,7 @@ EndGroup
 ;---------------------------------------------
 
 Event OnInit()
-	If (self.IsRunning())
+	If (QUST.IsRunning())
 		If (Enabled)
 			StartTimer(1, LILAC_TIMER_ID)
 		Else
@@ -108,7 +108,7 @@ Function RunTests()
 	; Tear down
 	AfterEach()
 	AfterAll()
-	self.Stop()
+	QUST.Stop()
 EndFunction
 
 

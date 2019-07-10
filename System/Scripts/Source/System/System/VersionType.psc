@@ -1,4 +1,4 @@
-Scriptname System:VersionType Const Native Hidden
+Scriptname System:VersionType Extends System:Object Native Const Hidden
 import System:BoolType
 ; https://msdn.microsoft.com/en-us/library/system.version(v=vs.110).aspx
 

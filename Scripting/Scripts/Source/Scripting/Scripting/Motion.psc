@@ -1,4 +1,4 @@
-ScriptName Scripting:Motion extends System:Type Default
+ScriptName Scripting:Motion extends System:Object Default
 import System
 import System:Log
 import System:Script

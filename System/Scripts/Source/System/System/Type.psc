@@ -1,71 +1,190 @@
-Scriptname System:Type Extends Quest Native Const Hidden
-{The generic base type for all scripts which instantiate long running instances via `Quest` forms.}
+ScriptName System:Type Extends System:Object Native Const Hidden
+{Represents type declarations.
 
-; OnGameReload
+**See Also**
+* https://docs.microsoft.com/en-us/dotnet/api/system.type
+* https://docs.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo
+* https://docs.microsoft.com/en-us/dotnet/api/system.reflection.propertyinfo
+* https://docs.microsoft.com/en-us/dotnet/api/system.reflection.typeinfo
+}
+
+
+; Properties
 ;---------------------------------------------
 
-Event OnGameReload() Native
-{Event occurs when the game has been reloaded.}
+Group Assembly
+	string Property FileName Hidden
+		{The data file plugin name.}
+		string Function Get()
+			return GetFileName()
+		EndFunction
+	EndProperty
+	string Property FileExtension Hidden
+		{The data file plugin name.}
+		string Function Get()
+			return GetFileExtension()
+		EndFunction
+	EndProperty
+	string Property File Hidden
+		{The data file plugin.}
+		string Function Get()
+			return GetFile()
+		EndFunction
+	EndProperty
+EndGroup
 
-
-Event Actor.OnPlayerLoadGame(Actor sender)
-	{The remote player actor event for game reloading.}
-	OnGameReload()
-EndEvent
-
-
-bool Function RegisterForGameReload(ScriptObject this)
-	{Register this script oject for game reload events.}
-	return this.RegisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+; @virtual
+; The data file plugin name.
+string Function GetFileName()
+	{Property}
+	return "Fallout4"
 EndFunction
 
+; @virtual
+; The data file plugin extension.
+string Function GetFileExtension()
+	{Property}
+	return "esm"
+EndFunction
 
-Function UnregisterForGameReload(ScriptObject this)
-	{Unregister this script oject for game reload events.}
-	this.UnregisterForRemoteEvent(Game.GetPlayer(), "OnPlayerLoadGame")
+; @virtual
+; The data file plugin.
+string Function GetFile()
+	{Property}
+	return FileName+"."+FileExtension
 EndFunction
 
 
 ; Methods
 ;---------------------------------------------
 
-string Function ToString()
-	{The string representation of this script.}
-	If (IsEmptyState)
-		return self
+bool Function Exists(string filename) Global
+	return Game.IsPluginInstalled(filename)
+EndFunction
+
+
+Form Function Read(string filename, int formID) Global
+	return Game.GetFormFromFile(formID, filename)
+EndFunction
+
+;---------------------------------------------
+
+ScriptObject Function Cast(System:Type this, ScriptObject object, string script) Global
+	return this.CastAs(script)
+EndFunction
+
+
+var Function GetProperty(System:Type this, ScriptObject object, string member) Global
+	return this.GetPropertyValue(member)
+EndFunction
+
+
+bool Function SetProperty(System:Type this, ScriptObject object, string member, var value) Global
+	this.SetPropertyValue(member, value)
+	return true
+EndFunction
+
+
+bool Function SetPropertyNoWait(System:Type this, ScriptObject object, string member, var value) Global
+	this.SetPropertyValueNoWait(member, value)
+	return true
+EndFunction
+
+
+var Function Call(System:Type this, ScriptObject object, string member, var[] parameters) Global
+	return this.CallFunction(member, parameters)
+EndFunction
+
+
+bool Function CallNoWait(System:Type this, ScriptObject object, string member, var[] parameters) Global
+	this.CallFunctionNoWait(member, parameters)
+	return true
+EndFunction
+
+
+var Function CallGlobal(string script, string member, var[] parameters) Global
+	return Utility.CallGlobalFunction(script, member, parameters)
+EndFunction
+
+
+bool Function CallGlobalNoWait(string script, string member, var[] parameters) Global
+	Utility.CallGlobalFunctionNoWait(script, member, parameters)
+	return true
+EndFunction
+
+
+;---------------------------------------------
+
+Struct FormType
+	string File
+	int FormID
+	Form Object
+EndStruct
+
+; Struct ArmorType
+; 	string File
+; 	int FormID
+; 	Armor Object
+; EndStruct
+
+; Struct WeaponType
+; 	string File
+; 	int FormID
+; 	Armor Object
+; EndStruct
+
+
+FormType Function NewForm(string file, int formID) Global
+	FormType value = new FormType
+	value.File = file
+	value.FormID = formID
+	return value
+EndFunction
+
+bool Function ReadForm(FormType value) Global
+	If (Exists(value.File))
+		value.Object = Read(value.File, value.FormID)
+		return value.Object
 	Else
-		return self+"["+StateName+"]"
+		return false
 	EndIf
 EndFunction
 
 
-; Properties
+; Objects
 ;---------------------------------------------
 
-Group Properties
-	int Property Invalid = -1 AutoReadOnly
-	{A generic invalid integer value.}
-EndGroup
+; Casts a variable into it's concrete object type.
+ObjectReference Function AsReference(var this) Global
+	return this as ObjectReference
+EndFunction
 
-Group States
-	string Property StateName Hidden
-		{A property alias for the GetState function.}
-		string Function Get()
-			return GetState()
-		EndFunction
-	EndProperty
+; Casts a variable into it's concrete object type.
+Actor Function AsActor(var this) Global
+	return this as Actor
+EndFunction
 
-	bool Property IsEmptyState Hidden
-		{Returns true if this script has the empty state.}
-		bool Function Get()
-			return StateName == EmptyState
-		EndFunction
-	EndProperty
+; Casts a variable into it's concrete object type.
+ActiveMagicEffect Function AsActiveMagicEffect(var this) Global
+	return this as ActiveMagicEffect
+EndFunction
 
-	string Property EmptyState Hidden
-		{The default papyrus script state is represented as an empty string.}
-		string Function Get()
-			return ""
-		EndFunction
-	EndProperty
-EndGroup
+; Casts a variable into it's concrete object type.
+Quest Function AsQuest(var this) Global
+	return this as Quest
+EndFunction
+
+; Casts a variable into it's concrete object type.
+ObjectMod Function AsObjectMod(var this) Global
+	return this as ObjectMod
+EndFunction
+
+; Casts a variable into it's concrete object type.
+GlobalVariable Function AsGlobalVariable(var this) Global
+	return this as GlobalVariable
+EndFunction
+
+; Casts a variable into it's concrete object type.
+Activator Function AsActivator(var this) Global
+	return this as Activator
+EndFunction

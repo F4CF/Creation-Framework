@@ -1,4 +1,4 @@
-Scriptname System:Time Const Native Hidden
+ScriptName System:Time Extends System:Object Native Const Hidden
 ; http://www.creationkit.com/fallout4/index.php?title=GameTimeToString_-_Utility
 ; https://msdn.microsoft.com/en-us/library/system.datetime(v=vs.110).aspx
 ; https://msdn.microsoft.com/en-us/library/system.timespan(v=vs.110).aspx

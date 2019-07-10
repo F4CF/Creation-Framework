@@ -1,15 +1,16 @@
-Scriptname System:Collections:Queue extends System:Collections:Collection Default
+ScriptName System:Collections:Queue Extends System:Collections:Collection Default
 {Represents a first-in-first-out (FIFO) collection of objects.
 https://msdn.microsoft.com/en-us/library/7977ey2c(v=vs.110).aspx}
 import System
+import System:Activator
 
 var[] Items
 
 ; Constructor
 ;---------------------------------------------
 
-Queue Function Init() Global
-	return System:Object.Type().Initialize(0x0000083E) as Queue
+Queue Function Type() Global
+	return This().Type(0x0000083E) as Queue
 EndFunction
 
 

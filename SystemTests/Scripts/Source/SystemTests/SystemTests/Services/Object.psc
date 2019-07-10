@@ -1,7 +1,19 @@
-ScriptName SystemTests:Objects:Factory Extends System:Diagnostics:UnitTest
+ScriptName SystemTests:Services:Object Extends System:Diagnostics:UnitTest
 import System:Log
 
 System:Collections:List MyList
+
+Function Foo()
+	MyList = System:Collections:List.Type()
+	If (MyList)
+		MyList.Add("One")
+		MyList.Add("Two")
+		MyList.Add("Three")
+		Write(self, "[Factory] MyList contains '"+MyList.Count+"' elements..")
+	Else
+		Write(self, "[Factory] MyList is none.")
+	EndIf
+EndFunction
 
 
 ; Test Runner
@@ -32,17 +44,4 @@ EndFunction
 
 
 Function AfterAll()
-EndFunction
-
-
-Function Foo()
-	MyList = System:Collections:List.Init()
-	If (MyList)
-		MyList.Add("One")
-		MyList.Add("Two")
-		MyList.Add("Three")
-		Write(self, "[Factory] MyList contains '"+MyList.Count+"' elements..")
-	Else
-		Write(self, "[Factory] MyList is none.")
-	EndIf
 EndFunction
