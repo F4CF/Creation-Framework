@@ -1,4 +1,4 @@
-ScriptName System:XSE:Armor Native Const Hidden
+ScriptName System:XSE:Armor Extends System:Armor Native Const Hidden
 
 
 bool Function HasEyeSlot(Armor this) Global

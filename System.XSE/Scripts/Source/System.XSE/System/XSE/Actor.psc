@@ -1,9 +1,17 @@
-ScriptName System:XSE:Actor Native Const Hidden
+ScriptName System:XSE:Actor Extends System:Actor Native Const Hidden
 import System:Log
 import System:XSE:Armor
 
+
 ; Scans down the highest slot of an armor.
-; Example: The biped eyes are slot index 17, `GetWorn(self, 17)`.
+; Only the highest slot within a slot mask contains a valid form.
+; Even though an armor may cover multiple slots, the lower ones dont hold valid form data.
+;
+; **TODO**
+; * This has not been made fully generic yet.
+;
+; **Example**
+; The biped eyes are slot index 17, `GetWorn(self, 17)`.
 Actor:WornItem Function GetWorn(Actor this, int slotIndex) Global
 	bool ThirdPerson = false const
 	int slot = 0

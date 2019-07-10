@@ -18,7 +18,7 @@ digraph "CreationFramework"
 {
 	label = "The Creation Framework";
 	rankdir = "LR"; // {"TB"}, "LR", "BT", "RL"
-	// ranksep = "0.25"
+	 ranksep = "0.25"
 	// size="10";
 	// ratio="compress"
 	clusterrank = "none" // {"local"}, "none"
@@ -171,6 +171,8 @@ digraph "CreationFramework"
 
 		subgraph "cluster_System-ESL"
 		{
+			label = "System.esl";
+
 			subgraph "cluster_System"
 			{
 				label = "System";
@@ -218,8 +220,8 @@ digraph "CreationFramework"
 				{"System:Object" -> "System:Reference"};
 
 				"System:Actor"
-				[label = "System:Reference|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Reference"};
+				[label = "System:Actor|Flags: Native, Hidden"]
+				{"System:Reference" -> "System:Actor"};
 
 				"System:ActiveMagicEffect"
 				[label = "System:ActiveMagicEffect|Flags: Native, Hidden"]
@@ -228,6 +230,10 @@ digraph "CreationFramework"
 				"System:GlobalVariable"
 				[label = "System:GlobalVariable|Flags: Native, Hidden"]
 				{"System:Object" -> "System:GlobalVariable"};
+
+				"System:Armor"
+				[label = "Armor|Flags: Native, Hidden"]
+				{"System:Object" -> "System:Armor"};
 
 				"System:ObjectMod"
 				[label = "System:ObjectMod|Flags: Native, Hidden"]
@@ -240,20 +246,6 @@ digraph "CreationFramework"
 				"System:Activator"
 				[label = "System:Activator|Flags: Native, Hidden"]
 				{"System:Object" -> "System:Activator"};
-			}
-
-
-			subgraph "cluster_System_Properties"
-			{
-				label = "System:Properties";
-
-				"System:Properties:Assemby"
-				[label = "System:Properties:Assemby|Flags: Native, Hidden"]
-				{"System:Type" -> "System:Properties:Assemby"};
-
-				"System:Properties:Log"
-				[label = "System:Properties:Log|Flags: Native, Hidden"]
-				{"System:Log"      -> "System:Properties:Log"};
 			}
 
 			subgraph "cluster_System_Diagnostics"
@@ -295,7 +287,7 @@ digraph "CreationFramework"
 
 				"System:Collections:Collection"
 				[label = "System:Collections:Collection|Flags: Native, Hidden"]
-				{"ObjectReference" -> "System:Collections:Collection"};
+				{"System:Object" -> "System:Collections:Collection"};
 
 				"System:Collections:Dictionary"
 				[label = "System:Collections:Dictionary|Flags: Native, Hidden"]
@@ -313,11 +305,26 @@ digraph "CreationFramework"
 				[label = "System:Collections:Stack|Flags: Native, Hidden"]
 				{"System:Collections:Collection" -> "System:Collections:Stack"};
 			}
+
+			subgraph "cluster_System_Properties"
+			{
+				label = "System:Properties";
+
+				"System:Properties:Assemby"
+				[label = "System:Properties:Assemby|Flags: Native, Hidden"]
+				{"System:Type" -> "System:Properties:Assemby"};
+
+				"System:Properties:Log"
+				[label = "System:Properties:Log|Flags: Native, Hidden"]
+				{"System:Log"      -> "System:Properties:Log"};
+			}
 		}
 
 
 		subgraph "cluster_System_XSE-ESL"
 		{
+			label = "System.XSE.esl";
+
 			subgraph "cluster_System_XSE"
 			{
 				label = "System:XSE";
@@ -328,26 +335,24 @@ digraph "CreationFramework"
 
 				"System:XSE:Actor"
 				[label = "System:XSE:Actor|Flags: Native, Hidden"]
-				{"XSE_Actor" -> "System:XSE:Actor"};
+				{"System:Actor" -> "System:XSE:Actor"};
 
 				"System:XSE:Armor"
 				[label = "System:XSE:Armor|Flags: Native, Hidden"]
-				{"XSE_Armor" -> "System:XSE:Armor"};
+				{"System:Armor" -> "System:XSE:Armor"};
 
 				"System:XSE:Form"
 				[label = "System:XSE:Form|Flags: Native, Hidden"]
-				{"XSE_Form" -> "System:XSE:Form"};
+				{"System:Object" -> "System:XSE:Form"};
 
 				"System:XSE:ObjectMod"
 				[label = "System:XSE:ObjectMod|Flags: Native, Hidden"]
-				{"XSE_ObjectMod" -> "System:XSE:ObjectMod"};
+				{"System:ObjectMod" -> "System:XSE:ObjectMod"};
 
 				"System:XSE:UI"
 				[label = "System:XSE:UI|Flags: Native, Hidden"]
-				{"XSE_UI" -> "System:XSE:UI"};
+				{"System:Object" -> "System:XSE:UI"};
 			}
-
-
 
 			subgraph "cluster_System_UI"
 			{

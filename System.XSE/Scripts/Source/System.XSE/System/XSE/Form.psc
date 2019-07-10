@@ -1,4 +1,4 @@
-Scriptname System:XSE:Form extends System:Form Native Const Hidden
+Scriptname System:XSE:Form extends System:Object Native Const Hidden
 import System:Log
 
 ; Debug
