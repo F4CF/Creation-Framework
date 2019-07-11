@@ -1,5 +1,5 @@
 // https://www.graphviz.org/doc/info/lang.html
-// https://www.graphviz.org/doc/info/attrs.htm
+// https://www.graphviz.org/doc/info/attrs.html
 // https://en.wikipedia.org/wiki/DOT_(graph_description_language)
 // https://graphs.grevian.org/example
 
@@ -17,11 +17,11 @@ That is, instead of using shape=record, one might consider using shape=none and 
 digraph "CreationFramework"
 {
 	label = "The Creation Framework";
-	rankdir = "LR"; // {"TB"}, "LR", "BT", "RL"
-	 ranksep = "0.25"
+	rankdir = "RL"; // {"TB"}, "LR", "BT", "RL"
+	// ranksep = "0.25";
 	// size="10";
-	// ratio="compress"
-	clusterrank = "none" // {"local"}, "none"
+	// ratio="compress";
+	clusterrank = "none"; // {"local"}, "none"
 	node
 	[
 		shape = "record", // {"ellipse"}, "record"
@@ -42,47 +42,47 @@ digraph "CreationFramework"
 
 		Form
 		[label = "Form|Flags: Native, Hidden"]
-		{"ScriptObject" -> "Form"};
+		{"Form" -> "ScriptObject"};
 
 		DefaultObject
 		[label = "DefaultObject|Flags: Native, Hidden"]
-		{"Form" -> "DefaultObject"};
+		{"DefaultObject" -> "Form"};
 
 		Quest
 		[label = "Quest|Flags: Native, Hidden"]
-		{"Form" -> "Quest"};
+		{"Quest" -> "Form"};
 
 		Activator
 		[label = "Activator|Flags: Native, Hidden"]
-		{"Form" -> "Activator"};
+		{"Activator" -> "Form"};
 
 		Alias
 		[label = "Alias|Flags: Native, Hidden"]
-		{"Form" -> "Alias"};
+		{"Alias" -> "Form"};
 
 		ReferenceAlias
 		[label = "ReferenceAlias|Flags: Native, Hidden"]
-		{"Alias" -> "ReferenceAlias"};
+		{"ReferenceAlias" -> "Alias"};
 
 		Actor
 		[label = "Actor|Flags: Native, Hidden"]
-		{"ObjectReference" -> "Actor"};
+		{"Actor" -> "ObjectReference"};
 
 		Armor
 		[label = "Armor|Flags: Native, Hidden"]
-		{"Form" -> "Armor"};
+		{"Armor" -> "Form"};
 
 		ObjectMod
 		[label = "ObjectMod|Flags: Native, Hidden"]
-		{"Form" -> "ObjectMod"};
+		{"ObjectMod" -> "Form"};
 
 		ObjectReference
 		[label = "ObjectReference|Flags: Native, Hidden"]
-		{"Form" -> "ObjectReference"};
+		{"ObjectReference" -> "Form"};
 
 		ActiveMagicEffect
 		[label = "ActiveMagicEffect|Flags: Native, Hidden"]
-		{"ScriptObject" -> "ActiveMagicEffect"};
+		{"ActiveMagicEffect" -> "ScriptObject"};
 	}
 
 	//---------------------------------------------
@@ -121,36 +121,34 @@ digraph "CreationFramework"
 
 			XSE_Form
 			[label = "Form|Flags: Native, Hidden"]
-			{
-				"Form" -> "XSE_Form"
-			};
+			{"XSE_Form" -> "Form"};
 
 			XSE_Actor
 			[label = "Actor|Flags: Native, Hidden"]
-			{"Actor" -> "XSE_Actor"};
+			{"XSE_Actor" -> "Actor"};
 
 			XSE_Armor
 			[label = "Armor|Flags: Native, Hidden"]
-			{"Armor" -> "XSE_Armor"};
+			{"XSE_Armor" -> "Armor"};
 
 			XSE_ObjectMod
 			[label = "ObjectMod|Flags: Native, Hidden"]
-			{"ObjectMod" -> "XSE_ObjectMod"};
+			{"XSE_ObjectMod" -> "ObjectMod"};
 
 			XSE_ObjectReference
 			[label = "ObjectReference|Flags: Native, Hidden"]
-			{"ObjectReference" -> "XSE_ObjectReference"};
+			{"XSE_ObjectReference" -> "ObjectReference"};
 		}
 		subgraph "cluster_XSE_Classes"
 		{
 			label = "Classes";
 			XSE_F4SE
 			[label = "F4SE|Flags: Native, Hidden"]
-			{"XSE_ScriptObject" -> "XSE_F4SE"};
+			{"XSE_F4SE" -> "XSE_ScriptObject"};
 
 			XSE_UI
 			[label = "UI|Flags: Native, Hidden"]
-			{"XSE_ScriptObject" -> "XSE_UI"};
+			{"XSE_UI" -> "XSE_ScriptObject"};
 		}
 	}
 
@@ -180,35 +178,35 @@ digraph "CreationFramework"
 
 				"System:Object"
 				[label = "System:Object|Flags: Native, Hidden"]
-				{"Form" -> "System:Object"};
+				{"System:Object" -> "Form"};
 
 				"System:Type"
 				[label = "System:Type|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Type"};
+				{"System:Type" -> "System:Object"};
 
 				"System:Array"
 				[label = "System:Array|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Array"};
+				{"System:Array" -> "System:Object"};
 
 				"System:BoolType"
 				[label = "System:BoolType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:BoolType"};
+				{"System:BoolType" -> "System:Object"};
 
 				"System:PointType"
 				[label = "System:PointType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:PointType"};
+				{"System:PointType" -> "System:Object"};
 
 				"System:StringType"
 				[label = "System:StringType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:StringType"};
+				{"System:StringType" -> "System:Object"};
 
 				"System:VersionType"
 				[label = "System:VersionType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:VersionType"};
+				{"System:VersionType" -> "System:Object"};
 
 				"System:Time"
 				[label = "System:Time|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Time"};
+				{"System:Time" -> "System:Object"};
 			}
 
 			subgraph "cluster_System_Base"
@@ -217,35 +215,35 @@ digraph "CreationFramework"
 
 				"System:Reference"
 				[label = "System:Reference|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Reference"};
+				{"System:Reference" -> "System:Object"};
 
 				"System:Actor"
 				[label = "System:Actor|Flags: Native, Hidden"]
-				{"System:Reference" -> "System:Actor"};
+				{"System:Actor" -> "System:Reference"};
 
 				"System:ActiveMagicEffect"
 				[label = "System:ActiveMagicEffect|Flags: Native, Hidden"]
-				{"System:Object" -> "System:ActiveMagicEffect"};
+				{"System:ActiveMagicEffect" -> "System:Object"};
 
 				"System:GlobalVariable"
 				[label = "System:GlobalVariable|Flags: Native, Hidden"]
-				{"System:Object" -> "System:GlobalVariable"};
+				{"System:GlobalVariable" -> "System:Object"};
 
 				"System:Armor"
 				[label = "Armor|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Armor"};
+				{"System:Armor" -> "System:Object"};
 
 				"System:ObjectMod"
 				[label = "System:ObjectMod|Flags: Native, Hidden"]
-				{"System:Object" -> "System:ObjectMod"};
+				{"System:ObjectMod" -> "System:Object"};
 
 				"System:Quest"
 				[label = "System:Time|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Quest"};
+				{"System:Quest" -> "System:Object"};
 
 				"System:Activator"
 				[label = "System:Activator|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Activator"};
+				{"System:Activator" -> "System:Object"};
 			}
 
 			subgraph "cluster_System_Diagnostics"
@@ -254,31 +252,31 @@ digraph "CreationFramework"
 
 				"System:Log"
 				[label = "System:Log|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Log"};
+				{"System:Log" -> "System:Object"};
 
 				"System:Exception"
 				[label = "System:Exception|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Exception"};
+				{"System:Exception" -> "System:Object"};
 
 				"System:Debug"
 				[label = "System:Debug|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Debug"};
+				{"System:Debug" -> "System:Object"};
 
 				"System:Diagnostics:TestResult"
 				[label = "System:Diagnostics:TestResult|Flags: Native, Hidden"]
-				{"System:Log" -> "System:Diagnostics:TestResult"};
+				{"System:Diagnostics:TestResult" -> "System:Log"};
 
 				"System:Diagnostics:TestRunnerType"
 				[label = "System:Diagnostics:TestRunnerType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Diagnostics:TestRunnerType"};
+				{"System:Diagnostics:TestRunnerType" -> "System:Object"};
 
 				"System:Diagnostics:TestRunner"
 				[label = "System:Diagnostics:TestRunner|Flags: Native, Hidden"]
-				{"System:Diagnostics:TestRunnerType" -> "System:Diagnostics:TestRunner"};
+				{"System:Diagnostics:TestRunner" -> "System:Diagnostics:TestRunnerType"};
 
 				"System:Diagnostics:UnitTest"
 				[label = "System:Diagnostics:UnitTest|Flags: Native, Hidden"]
-				{"System:Diagnostics:TestRunner" -> "System:Diagnostics:UnitTest"};
+				{"System:Diagnostics:UnitTest" -> "System:Diagnostics:TestRunner"};
 			}
 
 			subgraph "cluster_System_Collections"
@@ -287,23 +285,23 @@ digraph "CreationFramework"
 
 				"System:Collections:Collection"
 				[label = "System:Collections:Collection|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Collections:Collection"};
+				{"System:Collections:Collection" -> "System:Object"};
 
 				"System:Collections:Dictionary"
 				[label = "System:Collections:Dictionary|Flags: Native, Hidden"]
-				{"System:Collections:Collection" -> "System:Collections:Dictionary"};
+				{"System:Collections:Dictionary" -> "System:Collections:Collection"};
 
 				"System:Collections:List"
 				[label = "System:Collections:List|Flags: Native, Hidden"]
-				{"System:Collections:Collection" -> "System:Collections:List"};
+				{"System:Collections:List" -> "System:Collections:Collection"};
 
 				"System:Collections:Queue"
 				[label = "System:Collections:Queue|Flags: Native, Hidden"]
-				{"System:Collections:Collection" -> "System:Collections:Queue"};
+				{"System:Collections:Queue" -> "System:Collections:Collection"};
 
 				"System:Collections:Stack"
 				[label = "System:Collections:Stack|Flags: Native, Hidden"]
-				{"System:Collections:Collection" -> "System:Collections:Stack"};
+				{"System:Collections:Stack" -> "System:Collections:Collection"};
 			}
 
 			subgraph "cluster_System_Properties"
@@ -312,11 +310,11 @@ digraph "CreationFramework"
 
 				"System:Properties:Assemby"
 				[label = "System:Properties:Assemby|Flags: Native, Hidden"]
-				{"System:Type" -> "System:Properties:Assemby"};
+				{"System:Properties:Assemby" -> "System:Type"};
 
 				"System:Properties:Log"
 				[label = "System:Properties:Log|Flags: Native, Hidden"]
-				{"System:Log"      -> "System:Properties:Log"};
+				{"System:Properties:Log" -> "System:Log"};
 			}
 		}
 
@@ -331,27 +329,27 @@ digraph "CreationFramework"
 
 				"System:Input"
 				[label = "System:Input|Flags: Native, Hidden"]
-				{"System:Object" -> "System:Input"};
+				{"System:Input" -> "System:Object"};
 
 				"System:XSE:Actor"
 				[label = "System:XSE:Actor|Flags: Native, Hidden"]
-				{"System:Actor" -> "System:XSE:Actor"};
+				{"System:XSE:Actor" -> "System:Actor"};
 
 				"System:XSE:Armor"
 				[label = "System:XSE:Armor|Flags: Native, Hidden"]
-				{"System:Armor" -> "System:XSE:Armor"};
+				{"System:XSE:Armor" -> "System:Armor"};
 
 				"System:XSE:Form"
 				[label = "System:XSE:Form|Flags: Native, Hidden"]
-				{"System:Object" -> "System:XSE:Form"};
+				{"System:XSE:Form" -> "System:Object"};
 
 				"System:XSE:ObjectMod"
 				[label = "System:XSE:ObjectMod|Flags: Native, Hidden"]
-				{"System:ObjectMod" -> "System:XSE:ObjectMod"};
+				{"System:XSE:ObjectMod" -> "System:ObjectMod"};
 
 				"System:XSE:UI"
 				[label = "System:XSE:UI|Flags: Native, Hidden"]
-				{"System:Object" -> "System:XSE:UI"};
+				{"System:XSE:UI" -> "System:Object"};
 			}
 
 			subgraph "cluster_System_UI"
@@ -360,63 +358,63 @@ digraph "CreationFramework"
 
 				"System:UI:MenuType"
 				[label = "System:UI:MenuType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:UI:MenuType"};
+				{"System:UI:MenuType" -> "System:Object"};
 
 				"System:UI:CustomType"
 				[label = "System:UI:CustomType|Flags: Native, Hidden"]
-				{"System:UI:MenuType" -> "System:UI:CustomType"};
+				{"System:UI:CustomType" -> "System:UI:MenuType"};
 
 				"System:UI:ButtonMenu"
 				[label = "System:UI:ButtonMenu|Flags: Native, Hidden"]
-				{"System:UI:CustomType" -> "System:UI:ButtonMenu"};
+				{"System:UI:ButtonMenu" -> "System:UI:CustomType"};
 
 				"System:UI:Examine:MenuType"
 				[label = "System:UI:Examine:MenuType|Flags: Native, Hidden"]
-				{"System:UI:MenuType" -> "System:UI:Examine:MenuType"};
+				{"System:UI:Examine:MenuType" -> "System:UI:MenuType"};
 
 				"System:UI:Examine:Menu"
 				[label = "System:UI:Examine:Menu|Flags: Native, Hidden"]
-				{"System:UI:Examine:MenuType" -> "System:UI:Examine:Menu"};
+				{"System:UI:Examine:Menu" -> "System:UI:Examine:MenuType"};
 
 				"System:UI:Examine:ServiceType"
 				[label = "System:UI:Examine:ServiceType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:UI:Examine:ServiceType"};
+				{"System:UI:Examine:ServiceType" -> "System:Object"};
 
 				"System:UI:Examine:Service"
 				[label = "System:UI:Examine:Service|Flags: Native, Hidden"]
-				{"System:UI:Examine:ServiceType" -> "System:UI:Examine:Service"};
+				{"System:UI:Examine:Service" -> "System:UI:Examine:ServiceType"};
 
 				"System:UI:HUD:MenuType"
 				[label = "System:UI:HUD:MenuType|Flags: Native, Hidden"]
-				{"System:UI:MenuType" -> "System:UI:HUD:MenuType"};
+				{"System:UI:HUD:MenuType" -> "System:UI:MenuType"};
 
 				"System:UI:HUD:Menu"
 				[label = "System:UI:HUD:Menu|Flags: Native, Hidden"]
-				{"System:UI:HUD:MenuType" -> "System:UI:HUD:Menu"};
+				{"System:UI:HUD:Menu" -> "System:UI:HUD:MenuType"};
 
 				"System:UI:HUD:ServiceType"
 				[label = "System:UI:HUD:ServiceType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:UI:HUD:ServiceType"};
+				{"System:UI:HUD:ServiceType" -> "System:Object"};
 
 				"System:UI:HUD:Service"
 				[label = "System:UI:HUD:Service|Flags: Native, Hidden"]
-				{"System:UI:HUD:ServiceType" -> "System:UI:HUD:Service"};
+				{"System:UI:HUD:Service" -> "System:UI:HUD:ServiceType"};
 
 				"System:UI:Scope:MenuType"
 				[label = "System:UI:Scope:MenuType|Flags: Native, Hidden"]
-				{"System:UI:MenuType" -> "System:UI:Scope:MenuType"};
+				{"System:UI:Scope:MenuType" -> "System:UI:MenuType"};
 
 				"System:UI:Scope:Menu"
 				[label = "System:UI:Scope:Menu|Flags: Native, Hidden"]
-				{"System:UI:Scope:MenuType" -> "System:UI:Scope:Menu"};
+				{"System:UI:Scope:Menu" -> "System:UI:Scope:MenuType"};
 
 				"System:UI:Scope:ServiceType"
 				[label = "System:UI:Scope:ServiceType|Flags: Native, Hidden"]
-				{"System:Object" -> "System:UI:Scope:ServiceType"};
+				{"System:UI:Scope:ServiceType" -> "System:Object"};
 
 				"System:UI:Scope:Service"
 				[label = "System:UI:Scope:Service|Flags: Native, Hidden"]
-				{"System:UI:Scope:ServiceType" -> "System:UI:Scope:Service"};
+				{"System:UI:Scope:Service" -> "System:UI:Scope:ServiceType"};
 			}
 		}
 
