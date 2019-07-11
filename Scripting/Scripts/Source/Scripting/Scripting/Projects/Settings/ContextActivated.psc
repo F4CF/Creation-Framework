@@ -1,12 +1,11 @@
-Scriptname Scripting:Projects:Settings:ContextActivated extends Terminal
-import System
+ScriptName Scripting:Projects:Settings:ContextActivated Extends Terminal
 import System:Log
 
 ; Events
 ;---------------------------------------------
 
 Event OnMenuItemRun(int menuItemID, ObjectReference terminalReference)
-	WriteLine(self, "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
+	WriteLine("Scripting", self, "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
 	If (menuItemID == OptionStartup)
 		Context.IsActivated = true
 	ElseIf (menuItemID == OptionShutdown)

@@ -1,7 +1,5 @@
 ScriptName ScriptingTests:Activation Extends System:Diagnostics:UnitTest
-import System
 import System:Log
-
 
 ; Events
 ;---------------------------------------------

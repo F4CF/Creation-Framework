@@ -1,8 +1,6 @@
 ScriptName Scripting:Projects:Modules:Optional Extends Scripting:Projects:Module Hidden
-import System
 import System:Log
 import System:VersionType
-import System:Script
 import Scripting
 
 bool EnabledValue
@@ -22,29 +20,29 @@ Event OnEvent(int aEvent, Projects:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (SetActive(self))
 			self.OnEnable()
-			WriteLine(self, "The module has finished the OnStartup event.")
+			WriteLine("Scripting", self, "The module has finished the OnStartup event.")
 		Else
-			WriteLine(self, "The module could not finish the OnStartup event.")
+			WriteLine("Scripting", self, "The module could not finish the OnStartup event.")
 		EndIf
 	ElseIf (aEvent == ShutdownEvent)
 		If (SetActive(self, false))
 			self.OnDisable()
-			WriteLine(self, "The module has finished the OnShutdown event.")
+			WriteLine("Scripting", self, "The module has finished the OnShutdown event.")
 		Else
-			WriteLine(self, "The module could not finish the OnShutdown event.")
+			WriteLine("Scripting", self, "The module could not finish the OnShutdown event.")
 		EndIf
 	ElseIf (aEvent == UpgradeEvent)
 		If (Enabled)
 			Version newVersion = arguments[0] as Version
 			Version oldVersion = arguments[1] as Version
 			self.OnUpgrade(newVersion, oldVersion)
-			WriteLine(self, "The module has finished the OnUpgrade event. " \
+			WriteLine("Scripting", self, "The module has finished the OnUpgrade event. " \
 				+"New '"+VersionToString(newVersion)+"', Old '"+VersionToString(oldVersion)+"'.")
 		Else
-			WriteLine(self, "Ignoring the OnUpgrade event, module is not enabled.")
+			WriteLine("Scripting", self, "Ignoring the OnUpgrade event, module is not enabled.")
 		EndIf
 	Else
-		WriteLine(self, "The module has received and unhandled event.")
+		WriteLine("Scripting", self, "The module has received and unhandled event.")
 	EndIf
 EndEvent
 
@@ -58,11 +56,11 @@ bool Function SetActive(Optional aOptional, bool abActive = true) Global
 
 	If (aOptional)
 		If (abActive) ; requested active state
-			If (StateRunning(aOptional)) ; already activated
+			If (System:Object.StateRunning(aOptional)) ; already activated
 				Write(none, "Ignoring request for ActiveState, module is already active.")
 				return false
 			Else
-				If (ChangeState(aOptional, sActiveState))
+				If (System:Object.ChangeState(aOptional, sActiveState))
 					Write(none, "The module has finished enabling.")
 					return true
 				Else
@@ -75,7 +73,7 @@ bool Function SetActive(Optional aOptional, bool abActive = true) Global
 				Write(none, "Ignoring request for EmptyState, module is already deactivated.")
 				return false
 			Else
-				If (ChangeState(aOptional, sEmptyState))
+				If (System:Object.ChangeState(aOptional, sEmptyState))
 					Write(none, "The module has finished disabling.")
 					return true
 				Else
@@ -99,7 +97,7 @@ Group Module
 
 	bool Property IsReady Hidden
 		bool Function Get()
-			return EnabledValue && StateRunning(self)
+			return EnabledValue && System:Object.StateRunning(self)
 		EndFunction
 	EndProperty
 
@@ -110,10 +108,10 @@ Group Module
 		Function Set(bool aValue)
 			If (aValue != EnabledValue)
 				EnabledValue = aValue
-				WriteChangedValue(self, "Enabled", !aValue, aValue)
+				WriteChangedValue("Scripting", self, "Enabled", !aValue, aValue)
 				SetActive(self, aValue)
 			Else
-				WriteLine(self, "The module's Enabled property already equals '"+aValue+"'.")
+				WriteLine("Scripting", self, "The module's Enabled property already equals '"+aValue+"'.")
 			EndIf
 		EndFunction
 	EndProperty

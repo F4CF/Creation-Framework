@@ -1,5 +1,4 @@
-ScriptName Scripting:Projects:Modules:Required extends Scripting:Projects:Module Hidden
-import System
+ScriptName Scripting:Projects:Modules:Required Extends Scripting:Projects:Module Hidden
 
 Actor PlayerReference
 

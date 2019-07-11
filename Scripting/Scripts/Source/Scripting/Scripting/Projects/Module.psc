@@ -1,5 +1,4 @@
-ScriptName Scripting:Projects:Module extends Form Native Const Hidden
-import System
+ScriptName Scripting:Projects:Module Extends Form Native Const Hidden
 import System:Log
 import System:VersionType
 import Scripting

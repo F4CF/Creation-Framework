@@ -1,5 +1,4 @@
-ScriptName SystemTests:Projects:Context Extends System:Diagnostics:UnitTest
-import System
+ScriptName ScriptingTests:Projects:Context Extends System:Diagnostics:UnitTest
 import System:Log
 import System:VersionType
 
@@ -7,13 +6,13 @@ import System:VersionType
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Executing the Setup function.")
+	WriteLine("Scripting", self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("Scripting", self, "Executing the TestSuites function.")
 	Describe("Implementation", ImplementationSuite())
 EndFunction
 
@@ -22,7 +21,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function ImplementationSuite()
-	WriteLine(self, "Implementation Suite.")
+	WriteLine("Scripting", self, "Implementation Suite.")
 	It("should not be none", InstanceTestCase())
 	It("should have a valid title", TitleTestCase())
 	It("should not have a none authors array, but it may be empty", AuthorsTestCase())
@@ -37,7 +36,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function InstanceTestCase()
-	WriteLine(self, "InstanceTestCase")
+	WriteLine("Scripting", self, "InstanceTestCase")
 	; expectations
 	; -is not none
 	ExpectIsNotNone(Context)
@@ -47,7 +46,7 @@ EndFunction
 
 
 bool Function TitleTestCase()
-	WriteLine(self, "TitleTestCase")
+	WriteLine("Scripting", self, "TitleTestCase")
 	; expectations
 	; -string contains text
 	ExpectStringHasText(Context.Title)
@@ -56,7 +55,7 @@ EndFunction
 
 
 bool Function AuthorsTestCase()
-	WriteLine(self, "AuthorsTestCase")
+	WriteLine("Scripting", self, "AuthorsTestCase")
 	; expectations
 	; -is not none
 	Expect(Context.Authors as bool, To, BeTruthy)
@@ -65,7 +64,7 @@ EndFunction
 
 
 bool Function FileNameTestCase()
-	WriteLine(self, "FileNameTestCase")
+	WriteLine("Scripting", self, "FileNameTestCase")
 	; expectations
 	; -string contains text
 	; -string ends with ".esm" or ".esp"
@@ -75,7 +74,7 @@ EndFunction
 
 
 bool Function FormIDTestCase()
-	WriteLine(self, "FormIDTestCase")
+	WriteLine("Scripting", self, "FormIDTestCase")
 	; expectations
 	; -the attached quest must match this FormID
 	int actualFormID = (Context as Quest).GetFormID()
@@ -86,7 +85,7 @@ EndFunction
 
 
 bool Function VersionTestCase()
-	WriteLine(self, "VersionTestCase")
+	WriteLine("Scripting", self, "VersionTestCase")
 	; expectations
 	; -the context version to be greater than a new version (new default 0.0.0.0, false)
 	ExpectIsNotNone(Context.Release)
@@ -99,5 +98,5 @@ EndFunction
 ;---------------------------------------------
 
 Group Actual
-	Projects:Context Property Context Auto Const Mandatory
+	Scripting:Projects:Context Property Context Auto Const Mandatory
 EndGroup

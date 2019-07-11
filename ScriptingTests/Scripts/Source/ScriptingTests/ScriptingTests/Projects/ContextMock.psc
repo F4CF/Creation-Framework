@@ -1,8 +1,7 @@
-ScriptName SystemTests:Projects:ContextMock Extends System:Projects:Context
-import System
-import System:External
+ScriptName ScriptingTests:Projects:ContextMock Extends Scripting:Projects:Context
 import System:Log
 import System:VersionType
+import System:Type
 
 Actor Player
 
@@ -19,18 +18,18 @@ EndEvent
 
 Event OnContextStartup()
 	If (TryHolotape())
-		WriteLine(self, "Added a holotape to the player for startup.")
+		WriteLine("Scripting", self, "Added a holotape to the player for startup.")
 	Else
-		WriteLine(self, "The player already has a holotape for startup.")
+		WriteLine("Scripting", self, "The player already has a holotape for startup.")
 	EndIf
 EndEvent
 
 
 Event OnContextShutdown()
 	If (TryHolotape()) ; so player can enable the mod again
-		WriteLine(self, "Added a holotape to the player for shutdown.")
+		WriteLine("Scripting", self, "Added a holotape to the player for shutdown.")
 	Else
-		WriteLine(self, "The player already has a holotape for shutdown.")
+		WriteLine("Scripting", self, "The player already has a holotape for shutdown.")
 	EndIf
 EndEvent
 
@@ -53,8 +52,8 @@ Version Function GetVersion()
 EndFunction
 
 
-ExternalForm Function Context()
-	return new ExternalForm
+FormType Function Context()
+	return new FormType
 EndFunction
 
 

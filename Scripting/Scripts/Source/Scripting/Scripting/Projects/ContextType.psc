@@ -1,7 +1,6 @@
-ScriptName Scripting:Projects:ContextType extends Quest Native Const Hidden
-import System
-import System:External
+ScriptName Scripting:Projects:ContextType Extends Quest Native Const Hidden
 import System:Log
+import System:Type
 import System:VersionType
 
 
@@ -59,7 +58,7 @@ Version Function GetVersion()
 EndFunction
 
 
-ExternalForm Function Context()
+FormType Function Context()
 	Write(none, self + ", The Context function has not been implemented on a child script.")
 	return none
 EndFunction
@@ -83,7 +82,7 @@ Group Context
 
 	string Property FileName Hidden
 		string Function Get()
-			return Context().FileName
+			return Context().File
 		EndFunction
 	EndProperty
 

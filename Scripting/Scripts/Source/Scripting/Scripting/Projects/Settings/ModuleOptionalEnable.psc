@@ -1,12 +1,11 @@
-Scriptname Scripting:Projects:Settings:ModuleOptionalEnable extends Terminal
-import System
+ScriptName Scripting:Projects:Settings:ModuleOptionalEnable Extends Terminal
 import System:Log
 
 ; Events
 ;---------------------------------------------
 
 Event OnMenuItemRun(int menuItemID, ObjectReference terminalReference)
-	WriteLine("System:Projects:Settings:ModuleOptionalEnable", "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
+	WriteLine("Scripting", "System:Projects:Settings:ModuleOptionalEnable", "OnMenuItemRun :: menuItemID="+menuItemID + ", terminalReference="+terminalReference)
 	If (menuItemID == OptionStartup)
 		Optional.Enabled = true
 	ElseIf (menuItemID == OptionShutdown)
