@@ -1,4 +1,4 @@
-ScriptName ScriptingTests:Activation extends GamesTest:Framework:Lilac
+ScriptName ScriptingTests:Activation Extends System:Diagnostics:UnitTest
 import System
 import System:Log
 
@@ -20,8 +20,8 @@ State Wagering
 		; waits for result
 	EndFunction
 
-	Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
-		If (akSender.Menu == Games_Blackjack_Activate_Wager)
+	Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
+		If (sender.Menu == Games_Blackjack_Activate_Wager)
 			; |   [3]   |
 			; | [2] [1] |
 			; |   [0]   |
@@ -31,16 +31,16 @@ State Wagering
 
 			int value = 5 const
 
-			If (akSender.Selected == OptionIncrease)
+			If (sender.Selected == OptionIncrease)
 				; IncreaseWager(value)
 			EndIf
 
-			If (akSender.Selected == OptionDecrease)
+			If (sender.Selected == OptionDecrease)
 				; DecreaseWager(value)
 			EndIf
 
-			If (akSender.Selected == OptionAccept)
-				; akSender.Accept()
+			If (sender.Selected == OptionAccept)
+				; sender.Accept()
 			EndIf
 		EndIf
 	EndEvent
@@ -53,9 +53,9 @@ State Playing
 		int result = Activation.Selected
 	EndFunction
 
-	Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
-		If (akSender.Menu == Games_Blackjack_Activate_Turn)
-			akSender.Accept()
+	Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
+		If (sender.Menu == Games_Blackjack_Activate_Turn)
+			sender.Accept()
 		EndIf
 	EndEvent
 EndState
@@ -68,19 +68,19 @@ State Scoring
 		int OptionYes = 1 const
 
 		If (Activation.Selected == OptionNo)
-			WriteMessage(self, "Selected", "Replay No")
+			WriteMessage("Scripting", self, "Selected", "Replay No")
 			; TODO: does nothing
 		EndIf
 
 		If (Activation.Selected == OptionYes)
-			WriteMessage(self, "Selected", "Replay Yes")
+			WriteMessage("Scripting", self, "Selected", "Replay Yes")
 			; TODO: does nothing
 		EndIf
 	EndFunction
 
-	Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
-		If (akSender.Menu == Games_Blackjack_Activate_Replay)
-			akSender.Accept()
+	Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
+		If (sender.Menu == Games_Blackjack_Activate_Replay)
+			sender.Accept()
 		EndIf
 	EndEvent
 EndState
@@ -90,7 +90,7 @@ Function Try()
 	{EMPTY}
 EndFunction
 
-Event Games:Shared:Activation.OnSelected(Shared:Activation akSender, var[] arguments)
+Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
 	{EMPTY}
 EndEvent
 
@@ -99,7 +99,7 @@ EndEvent
 ;---------------------------------------------
 
 Group Activation
-	Shared:Activation Property Activation Auto Const Mandatory
+	Scripting:Activation Property Activation Auto Const Mandatory
 
 	ObjectReference Property Games_Blackjack_ActivateMenu Auto Const Mandatory
 	Perk Property Games_Blackjack_Activate_Replay Auto Const Mandatory

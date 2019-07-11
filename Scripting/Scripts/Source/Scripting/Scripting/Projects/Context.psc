@@ -1,5 +1,4 @@
-ScriptName Scripting:Projects:Context extends Scripting:Projects:ContextType Hidden Conditional
-import System
+ScriptName Scripting:Projects:Context Extends Scripting:Projects:ContextType Hidden Conditional
 import System:Log
 import System:VersionType
 import Scripting
@@ -31,40 +30,40 @@ EndEvent
 
 
 Event OnQuestInit()
-	WriteLine(self, "OnQuestInit")
+	WriteLine("Scripting", self, "OnQuestInit")
 	IsActivated = true
 EndEvent
 
 
 Event OnQuestShutdown()
-	WriteLine(self, "OnQuestShutdown")
+	WriteLine("Scripting", self, "OnQuestShutdown")
 	IsActivated = false
 EndEvent
 
 
-Event Actor.OnPlayerLoadGame(Actor akSender)
-	WriteLine(self, "Reloaded "+Title+" version "+VersionToString(Release))
+Event Actor.OnPlayerLoadGame(Actor sender)
+	WriteLine("Scripting", self, "Reloaded "+Title+" version "+VersionToString(Release))
 	Version versionNew = Release
 	Version versionPrevious = LastVersion
 
 	If (VersionGreaterThan(versionNew, versionPrevious))
-		WriteChangedValue(self, "Version", versionPrevious, versionNew)
+		WriteChangedValue("Scripting", self, "Version", versionPrevious, versionNew)
 		LastVersion = versionNew
 		var[] arguments = new var[2]
 		arguments[0] = versionNew
 		arguments[1] = versionPrevious
 		SendCustomEvent("OnUpgrade", arguments)
 	Else
-		WriteLine(self, "No version change with game reload.")
+		WriteLine("Scripting", self, "No version change with game reload.")
 	EndIf
 
 	self.OnGameReload()
 EndEvent
 
 
-Event Quest.OnStageSet(Quest akSender, int auiStageID, int auiItemID)
-	WriteLine(self, "Remote (Quest.OnStageSet) "+akSender)
-	If (akSender == Required)
+Event Quest.OnStageSet(Quest sender, int stageID, int itemID)
+	WriteLine("Scripting", self, "Remote (Quest.OnStageSet) "+sender)
+	If (sender == Required)
 		IsActivated = true
 	EndIf
 EndEvent
@@ -73,25 +72,25 @@ EndEvent
 ; Custom Events
 ;---------------------------------------------
 
-Event Scripting:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnStartup(Projects:Context sender, var[] arguments)
 	self.OnContextStartup()
 	HasActivated = true
-	Write(akSender.Title, "The context has finished the OnStartup event.")
+	Write(sender.Title, "The context has finished the OnStartup event.")
 EndEvent
 
 
-Event Scripting:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnShutdown(Projects:Context sender, var[] arguments)
 	self.OnContextShutdown()
 	HasActivated = false
-	Write(akSender.Title, "The context has finished the OnShutdown event.")
+	Write(sender.Title, "The context has finished the OnShutdown event.")
 EndEvent
 
 
-Event Scripting:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
+Event Scripting:Projects:Context.OnUpgrade(Projects:Context sender, var[] arguments)
 	Version newVersion = arguments[0] as Version
 	Version oldVersion = arguments[1] as Version
 	self.OnContextUpgrade(newVersion, oldVersion)
-	Write(akSender.Title, \
+	Write(sender.Title, \
 		"The context has finished the OnUpgrade event. "+\
 		"New '"+VersionToString(newVersion)+"', "+\
 		"Old '"+VersionToString(oldVersion)+"'.")
@@ -133,21 +132,21 @@ Group Context
 		EndFunction
 		Function Set(bool value)
 			If (Activated == value)
-				WriteLine(self, "Activated is already equal to "+value)
+				WriteLine("Scripting", self, "Activated is already equal to "+value)
 				return
 			Else
 				If (IsReady)
 					Activated = value
 					If (value)
-						WriteLine(self, Title+" is starting..")
+						WriteLine("Scripting", self, Title+" is starting..")
 						SendCustomEvent("OnStartup")
 					Else
-						WriteLine(self, Title+" is shutting down.")
+						WriteLine("Scripting", self, Title+" is shutting down.")
 						SendCustomEvent("OnShutdown")
 					EndIf
 					UnregisterForRemoteEvent(Required, "OnStageSet")
 				Else
-					WriteLine(self, Title+" is not ready.")
+					WriteLine("Scripting", self, Title+" is not ready.")
 					RegisterForRemoteEvent(Required, "OnStageSet")
 				EndIf
 			EndIf

@@ -12,8 +12,8 @@
 >
 	<Imports>
 		<Import>.</Import>
+		<Import>..\Scripting</Import>
 		<Import>..\System</Import>
-		<Import>..\System.Diagnostics</Import>
 		<Import>..\Base</Import>
 	</Imports>
 	<Folders>

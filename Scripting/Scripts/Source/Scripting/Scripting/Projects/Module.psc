@@ -34,16 +34,16 @@ EndFunction
 ; Events
 ;---------------------------------------------
 
-Event Scripting:Projects:Context.OnStartup(Projects:Context akSender, var[] arguments)
-	OnEvent(StartupEvent, akSender, arguments)
+Event Scripting:Projects:Context.OnStartup(Projects:Context sender, var[] arguments)
+	OnEvent(StartupEvent, sender, arguments)
 EndEvent
 
-Event Scripting:Projects:Context.OnShutdown(Projects:Context akSender, var[] arguments)
-	OnEvent(ShutdownEvent, akSender, arguments)
+Event Scripting:Projects:Context.OnShutdown(Projects:Context sender, var[] arguments)
+	OnEvent(ShutdownEvent, sender, arguments)
 EndEvent
 
-Event Scripting:Projects:Context.OnUpgrade(Projects:Context akSender, var[] arguments)
-	OnEvent(UpgradeEvent, akSender, arguments)
+Event Scripting:Projects:Context.OnUpgrade(Projects:Context sender, var[] arguments)
+	OnEvent(UpgradeEvent, sender, arguments)
 EndEvent
 
 

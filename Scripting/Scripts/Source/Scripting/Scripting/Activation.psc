@@ -1,7 +1,5 @@
-ScriptName Scripting:Activation Extends Quest Default
-import System
+ScriptName Scripting:Activation Extends System:Quest Default
 import System:Log
-import System:Script
 
 
 ;/ TODO:
@@ -83,24 +81,24 @@ EndEvent
 ; Methods
 ;---------------------------------------------
 
-bool Function Show(ObjectReference aReference, Perk aMenu)
+bool Function Show(ObjectReference object, Perk perkMenu)
 	{Shows the activation menu for the given reference.}
-	If (StateRunning(self))
-		WriteLine(self, "Activation menu is already shown.")
+	If (System:Object.StateRunning(self))
+		WriteLine("System", self, "Activation menu is already shown.")
 		return Incomplete
 	Else
-		If (aReference)
-			If (aMenu)
+		If (object)
+			If (perkMenu)
 				Data = new ActivationData
-				Data.Menu = aMenu
-				Data.Reference = aReference
-				return AwaitState(self)
+				Data.Menu = perkMenu
+				Data.Reference = object
+				return System:Object.AwaitState(self)
 			Else
-				WriteLine(self, "Cannot show a none activate menu perk.")
+				WriteLine("System", self, "Cannot show a none activate menu perk.")
 				return Incomplete
 			EndIf
 		Else
-			WriteLine(self, "Cannot show activate menu on a none reference.")
+			WriteLine("System", self, "Cannot show activate menu on a none reference.")
 			return Incomplete
 		EndIf
 	EndIf
@@ -109,7 +107,7 @@ EndFunction
 
 Function Accept()
 	{Clears the activation menu on the given reference.}
-	ClearState(self)
+	System:Object.ClearState(self)
 EndFunction
 
 
@@ -117,31 +115,31 @@ EndFunction
 ;---------------------------------------------
 
 State Busy
-	Event OnBeginState(string asOldState)
+	Event OnBeginState(string oldState)
 		RegisterForRemoteEvent(Reference, "OnActivate")
 		RegisterForRemoteEvent(Menu, "OnEntryRun")
 		Player.AddPerk(Menu)
 	EndEvent
 
 
-	Event ObjectReference.OnActivate(ObjectReference akSender, ObjectReference akActionRef)
+	Event ObjectReference.OnActivate(ObjectReference sender, ObjectReference actionRef)
 		Data.Selected = 0
 		SendCustomEvent("OnSelected")
 	EndEvent
 
 
-	Event Perk.OnEntryRun(Perk akSender, int auiEntryID, ObjectReference akTarget, Actor akOwner)
-		Data.Selected = auiEntryID
+	Event Perk.OnEntryRun(Perk sender, int entryID, ObjectReference target, Actor owner)
+		Data.Selected = entryID
 		SendCustomEvent("OnSelected")
 	EndEvent
 
 
-	Event Scripting:Activation.OnSelected(Scripting:Activation akSender, var[] arguments)
-		WriteLine(self, "Selected "+akSender.Selected)
+	Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
+		WriteLine("System", self, "Selected "+sender.Selected)
 	EndEvent
 
 
-	Event OnEndState(string asNewState)
+	Event OnEndState(string newState)
 		UnregisterForRemoteEvent(Reference, "OnActivate")
 		UnregisterForRemoteEvent(Menu, "OnEntryRun")
 		Player.RemovePerk(Menu)
@@ -149,15 +147,15 @@ State Busy
 EndState
 
 
-Event ObjectReference.OnActivate(ObjectReference akSender, ObjectReference akActionRef)
+Event ObjectReference.OnActivate(ObjectReference sender, ObjectReference actionRef)
 	{EMPTY}
 EndEvent
 
-Event Perk.OnEntryRun(Perk akSender, int auiEntryID, ObjectReference akTarget, Actor akOwner)
+Event Perk.OnEntryRun(Perk sender, int entryID, ObjectReference target, Actor owner)
 	{EMPTY}
 EndEvent
 
-Event Scripting:Activation.OnSelected(Scripting:Activation akSender, var[] arguments)
+Event Scripting:Activation.OnSelected(Scripting:Activation sender, var[] arguments)
 	{EMPTY}
 EndEvent
 

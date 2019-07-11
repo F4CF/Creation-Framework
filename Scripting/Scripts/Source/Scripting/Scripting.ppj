@@ -12,7 +12,6 @@
 >
 	<Imports>
 		<Import>.</Import>
-		<Import>..\System.Diagnostics</Import>
 		<Import>..\System</Import>
 		<Import>..\Base</Import>
 	</Imports>
