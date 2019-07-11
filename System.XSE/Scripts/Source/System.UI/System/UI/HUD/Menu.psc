@@ -22,7 +22,7 @@ bool Function RegisterForOpenCloseEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
+		WriteUnexpectedValue("System", self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -33,7 +33,7 @@ bool Function UnregisterForOpenCloseEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
+		WriteUnexpectedValue("System", self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction

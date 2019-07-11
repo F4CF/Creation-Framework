@@ -1,1 +1,1 @@
-ScriptName System:UI:Scope:ServiceType Extends System:Object Const Native Hidden
+ScriptName System:UI:Scope:ServiceType Extends System:Quest Native Const Hidden

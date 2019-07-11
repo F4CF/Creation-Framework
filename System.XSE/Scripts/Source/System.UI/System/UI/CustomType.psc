@@ -8,10 +8,10 @@ import System:Log
 
 bool Function Register()
 	If (UI.RegisterCustomMenu(Name, File, Root, Initialization))
-		WriteLine(ToString(), "Registered as a custom menu.")
+		WriteLine("System", ToString(), "Registered as a custom menu.")
 		return true
 	Else
-		WriteUnexpected(ToString(), "Register", "Failed to register as a custom menu.")
+		WriteUnexpected("System", ToString(), "Register", "Failed to register as a custom menu.")
 		return false
 	EndIf
 EndFunction
@@ -21,7 +21,7 @@ bool Function GetVisible()
 	If (UI.IsMenuOpen(Name))
 		return UI.Get(Name, GetMember("Visible")) as bool
 	Else
-		WriteUnexpected(ToString(), "GetVisible", "The menu is not open.")
+		WriteUnexpected("System", ToString(), "GetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -31,7 +31,7 @@ bool Function SetVisible(bool value)
 	If (UI.IsMenuOpen(Name))
 		return UI.Set(Name, GetMember("Visible"), value)
 	Else
-		WriteUnexpected(ToString(), "SetVisible", "The menu is not open.")
+		WriteUnexpected("System", ToString(), "SetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction

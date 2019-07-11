@@ -1,4 +1,4 @@
-ScriptName SystemTests:Services:Object Extends System:Diagnostics:UnitTest
+ScriptName SystemTests:Type Extends System:Diagnostics:UnitTest
 import System:Log
 
 System:Collections:List MyList
@@ -20,13 +20,13 @@ EndFunction
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Setup")
+	WriteLine("System", self, "Setup")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("System", self, "Executing the TestSuites function.")
 ;	Describe("New List", NewListSuite())
 EndFunction
 

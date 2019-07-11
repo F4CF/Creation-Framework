@@ -6,13 +6,13 @@ import System:Log
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Executing the Setup function.")
+	WriteLine("System", self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("System", self, "Executing the TestSuites function.")
 	Describe("Boolean To Integer", BoolToIntSuite())
 EndFunction
 
@@ -21,7 +21,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function BoolToIntSuite()
-	WriteLine(self, "BoolToIntSuite")
+	WriteLine("System", self, "BoolToIntSuite")
 	It("should be converted to a valid integer", BoolToIntCase())
 	return Done
 EndFunction
@@ -31,7 +31,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function BoolToIntCase()
-	WriteLine(self, "BoolToIntCase")
+	WriteLine("System", self, "BoolToIntCase")
 	Expect(BoolToInt(true), To, BeEqualTo, 1)
 	Expect(BoolToInt(false), To, BeEqualTo, 0)
 	return Done

@@ -1,4 +1,4 @@
-Scriptname System:UI:Scope:Menu extends System:UI:Scope:MenuType
+ScriptName System:UI:Scope:Menu Extends System:UI:Scope:MenuType
 import System:Log
 
 ; Open/Close Event
@@ -16,7 +16,7 @@ bool Function RegisterForOpenCloseEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
+		WriteUnexpectedValue("System", self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -27,7 +27,7 @@ bool Function UnregisterForOpenCloseEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
+		WriteUnexpectedValue("System", self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -57,7 +57,7 @@ bool Function RegisterForBreathEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "BreathEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "RegisterForBreathEvent", "script", "Cannot register a none script for events.")
+		WriteUnexpectedValue("System", self, "RegisterForBreathEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -68,7 +68,7 @@ bool Function UnregisterForBreathEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "BreathEvent")
 		return true
 	Else
-		WriteUnexpectedValue(self, "UnregisterForBreathEvent", "script", "Cannot unregister a none script for events.")
+		WriteUnexpectedValue("System", self, "UnregisterForBreathEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -92,10 +92,10 @@ bool Function SetOverlay(int identifier)
 			var[] arguments = new var[1]
 			arguments[0] = identifier
 			UI.Invoke(Name, GetMember("SetOverlay", Instance), arguments)
-			WriteLine(self, "SetOverlay", identifier)
+			WriteLine("System", self, "SetOverlay", identifier)
 			return true
 		Else
-			WriteUnexpectedValue(self, "SetOverlay", "identifier", "The value of "+identifier+" is out of range.")
+			WriteUnexpectedValue("System", self, "SetOverlay", "identifier", "The value of "+identifier+" is out of range.")
 			return false
 		EndIf
 	Else

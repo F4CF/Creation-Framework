@@ -6,13 +6,13 @@ import System:Log
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Executing the Setup function.")
+	WriteLine("System", self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("System", self, "Executing the TestSuites function.")
 	Describe("The context", Suite1())
 EndFunction
 
@@ -21,6 +21,6 @@ EndFunction
 ;---------------------------------------------
 
 bool Function Suite1()
-	WriteLine(self, "Executing the Suite1 function.")
+	WriteLine("System", self, "Executing the Suite1 function.")
 	return false
 EndFunction

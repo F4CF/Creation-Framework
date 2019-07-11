@@ -5,6 +5,12 @@ import System:UI:HUD:Menu
 ; Events
 ;---------------------------------------------
 
+Event OnInit() ; TODO: This only happens once per object life time.
+	RegisterForQuestInit(QUST)
+	RegisterForQuestShutdown(QUST)
+EndEvent
+
+
 Event OnQuestInit()
 	RegisterForGameReload(self)
 	OnGameReload()
@@ -37,7 +43,7 @@ Function SendOpenCloseEvent(OpenCloseEventArgs e)
 		arguments[0] = e
 		Menu.SendCustomEvent("OpenCloseEvent", arguments)
 	Else
-		WriteUnexpectedValue(self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
+		WriteUnexpectedValue("System", self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
 	EndIf
 EndFunction
 

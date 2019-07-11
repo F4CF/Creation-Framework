@@ -7,13 +7,13 @@ import System:Log
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Executing the Setup function.")
+	WriteLine("System", self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("System", self, "Executing the TestSuites function.")
 	Describe("Array Capacity", CapacitySuite())
 	Describe("Array Distinct", DistinctSuite())
 EndFunction
@@ -23,7 +23,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function CapacitySuite()
-	WriteLine(self, "Capacity Suite.")
+	WriteLine("System", self, "Capacity Suite.")
 	It("should have a created length of 0", CapacityTest(0))
 	It("should have a created length of 64", CapacityTest(64))
 	It("should have a created length of 128", CapacityTest(128))
@@ -35,7 +35,7 @@ EndFunction
 
 
 bool Function CapacityTest(int size)
-	WriteLine(self, "CapacityTest "+size)
+	WriteLine("System", self, "CapacityTest "+size)
 	var[] array = new var[size]
 	Expect(array.Length, BeEqualTo, size)
 	return Done
@@ -46,7 +46,7 @@ EndFunction
 ;---------------------------------------------
 
 bool Function DistinctSuite()
-	WriteLine(self, "Distinct Suite.")
+	WriteLine("System", self, "Distinct Suite.")
 	It("should return a distinct array of booleans", DistinctBooleanCase())
 	It("should return a distinct array of integers", DistinctIntegerCase())
 	It("should return a distinct array of floating points", DistinctFloatingCase())
@@ -57,7 +57,7 @@ EndFunction
 
 
 bool Function DistinctBooleanCase()
-	WriteLine(self, "DistinctBooleanCase")
+	WriteLine("System", self, "DistinctBooleanCase")
 	var[] array = new var[0]
 	array.Add(true)
 	array.Add(true)
@@ -72,7 +72,7 @@ EndFunction
 
 
 bool Function DistinctIntegerCase()
-	WriteLine(self, "DistinctIntegerCase")
+	WriteLine("System", self, "DistinctIntegerCase")
 	var[] array = new var[0]
 	array.Add(1)
 	array.Add(1)
@@ -90,7 +90,7 @@ EndFunction
 
 
 bool Function DistinctFloatingCase()
-	WriteLine(self, "DistinctFloatingCase")
+	WriteLine("System", self, "DistinctFloatingCase")
 	var[] array = new var[0]
 	array.Add(1.0)
 	array.Add(1.0)
@@ -115,7 +115,7 @@ EndFunction
 
 
 bool Function DistinctStringCase()
-	WriteLine(self, "DistinctStringCase")
+	WriteLine("System", self, "DistinctStringCase")
 	var[] array = new var[0]
 	array.Add("")
 	array.Add("")
@@ -130,7 +130,7 @@ EndFunction
 
 
 bool Function DistinctElementsCase()
-	WriteLine(self, "DistinctElementsCase")
+	WriteLine("System", self, "DistinctElementsCase")
 	var[] array = new var[0]
 	array.Add(none)
 	array.Add(1)

@@ -1,4 +1,4 @@
-ScriptName SystemTests:Assembly Extends Quest
+ScriptName SystemTests:Properties:Assembly Extends System:Type
 {The documentation string.}
 
 ;/ SystemTests.esp
@@ -19,33 +19,26 @@ ScriptName SystemTests:Assembly Extends Quest
 ;---------------------------------------------
 
 Assembly Function GetAssembly() Global
-	return System:External.Read("SystemTests.esp", 0x020044D1) as Assembly
+	return System:Type.Read("SystemTests.esp", 0x020044D1) as Assembly
 EndFunction
 
 
 ; Properties
 ;---------------------------------------------
 
-Group Assembly
-	string Property Name Hidden
-		{The plugin name.}
-		string Function Get()
-			return "SystemTests"
-		EndFunction
-	EndProperty
-	string Property Extension Hidden
-		{The plugin name.}
-		string Function Get()
-			return "esp"
-		EndFunction
-	EndProperty
-	string Property File Hidden
-		{The plugin file.}
-		string Function Get()
-			return Name+"."+Extension
-		EndFunction
-	EndProperty
-EndGroup
+; @overrides
+; The data file plugin name.
+string Function GetFileName()
+	{Property}
+	return "SystemTests"
+EndFunction
+
+; @overrides
+; The data file plugin extension.
+string Function GetFileExtension()
+	{Property}
+	return "esp"
+EndFunction
 
 Group QUST
 	int Property SystemTests_DiagnosticsTestRunner Hidden

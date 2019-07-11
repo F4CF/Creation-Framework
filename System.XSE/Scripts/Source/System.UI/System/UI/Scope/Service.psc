@@ -11,6 +11,12 @@ bool Interrupted = false
 ; Events
 ;---------------------------------------------
 
+Event OnInit() ; TODO: This only happens once per object life time.
+	RegisterForQuestInit(QUST)
+	RegisterForQuestShutdown(QUST)
+EndEvent
+
+
 ; TODO: Use the game reload event
 Event OnQuestInit()
 	Player = Game.GetPlayer()
@@ -24,7 +30,7 @@ EndEvent
 
 Event OnGameReload()
 	RegisterForMenuOpenCloseEvent(Menu.Name)
-	WriteLine(ToString(), "OnGameReload")
+	WriteLine("System", ToString(), "OnGameReload")
 EndEvent
 
 
@@ -76,7 +82,7 @@ Function SendOpenCloseEvent(OpenCloseEventArgs e)
 		arguments[0] = e
 		Menu.SendCustomEvent("OpenCloseEvent", arguments)
 	Else
-		WriteUnexpectedValue(self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
+		WriteUnexpectedValue("System", self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
 	EndIf
 EndFunction
 
@@ -91,7 +97,7 @@ Function SendBreathEvent(BreathEventArgs e)
 			arguments[0] = e
 			Menu.SendCustomEvent("BreathEvent", arguments)
 		Else
-			WriteUnexpectedValue(self, "SendBreathEvent", "e", "The argument cannot be none.")
+			WriteUnexpectedValue("System", self, "SendBreathEvent", "e", "The argument cannot be none.")
 		EndIf
 	EndIf
 EndFunction

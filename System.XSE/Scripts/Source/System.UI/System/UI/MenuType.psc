@@ -1,4 +1,4 @@
-ScriptName System:UI:MenuType Extends System:Object Native Const Hidden
+ScriptName System:UI:MenuType Extends System:Quest Native Const Hidden
 import System:Exception
 import System:Log
 
@@ -7,14 +7,14 @@ import System:Log
 
 string Function GetName()
 	{Property}
-	NotImplemented(self, "GetName", "This member must be overridden with an extending script.")
+	ThrowNotImplemented(self, "GetName", "This member must be overridden with an extending script.")
 	return ""
 EndFunction
 
 
 string Function GetFile()
 	{Property}
-	NotImplemented(self, "GetFile", "This member must be overridden with an extending script.")
+	ThrowNotImplemented(self, "GetFile", "This member must be overridden with an extending script.")
 	return ""
 EndFunction
 
@@ -35,7 +35,7 @@ bool Function Open()
 	If (IsRegistered)
 		return UI.OpenMenu(Name)
 	Else
-		WriteUnexpected(ToString(), "Open", "The menu is not registered.")
+		WriteUnexpected("System", ToString(), "Open", "The menu is not registered.")
 		return false
 	EndIf
 EndFunction
@@ -45,7 +45,7 @@ bool Function Close()
 	If (IsRegistered)
 		return UI.CloseMenu(Name)
 	Else
-		WriteUnexpected(ToString(), "Close", "The menu is not registered.")
+		WriteUnexpected("System", ToString(), "Close", "The menu is not registered.")
 		return false
 	EndIf
 EndFunction
@@ -57,11 +57,11 @@ var Function Get(string member)
 		If (member)
 			return UI.Get(Name, GetMember(member))
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
+			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
+		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -77,7 +77,7 @@ bool Function Set(string member, var argument)
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
+		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -89,11 +89,11 @@ var Function Invoke(string member, var[] arguments = none)
 		If (member)
 			return UI.Invoke(Name, GetMember(member), arguments)
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
+			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
+		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -109,11 +109,11 @@ string Function GetMember(string member, string variable = "")
 				return Root+"."+member
 			EndIf
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
+			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+" is not open.")
+		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction

@@ -1,6 +1,6 @@
 ScriptName SystemTests:Diagnostics:TestRunner Extends System:Diagnostics:UnitTest
 
-SystemTests:Assembly Assembly
+SystemTests:Properties:Assembly Assembly
 SystemTests:Diagnostics:TestRunnerMock TestRunnerMock
 
 Armor Armor_Vault111_Underwear
@@ -9,7 +9,7 @@ Form EmptyForm
 
 
 Event OnQuestInit()
-	Assembly = SystemTests:Assembly.GetAssembly()
+	Assembly = SystemTests:Properties:Assembly.GetAssembly()
 EndEvent
 
 
@@ -61,11 +61,11 @@ EndFunction
 ;---------------------------------------------
 
 Function BeforeAll()
-	TestRunnerMock = System:External.Read(Assembly.File, Assembly.SystemTests_DiagnosticsTestRunner) as SystemTests:Diagnostics:TestRunnerMock
+	TestRunnerMock = System:Type.Read(Assembly.File, Assembly.SystemTests_DiagnosticsTestRunner) as SystemTests:Diagnostics:TestRunnerMock
 	TestRunnerMock.MockLastLilacDebugMessage = ""
 	TestRunnerMock.MockLastRaisedResultResult = true
 
-	Armor_Vault111_Underwear = System:External.Read(Assembly.Fallout, Assembly.Armor_Vault111_Underwear) as Armor
+	Armor_Vault111_Underwear = System:Type.Read(Assembly.Fallout, Assembly.Armor_Vault111_Underwear) as Armor
 	TestArmorRef = Game.GetPlayer().PlaceAtMe(Armor_Vault111_Underwear)
 	EmptyForm = none
 EndFunction

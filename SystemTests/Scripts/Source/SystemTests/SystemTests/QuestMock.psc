@@ -1,5 +1,4 @@
 ScriptName SystemTests:QuestMock Extends System:Quest
-import System:Services:Object
 import System:Exception
 
 
@@ -25,10 +24,10 @@ EndFunction
 ;---------------------------------------------
 
 Event OnQuestInit()
-	System:Log.WriteLine("SystemTests", self, "OnQuestInit")
+	System:Log.WriteLine("System", self, "OnQuestInit")
 EndEvent
 
 
 Event OnQuestShutdown()
-	System:Log.WriteLine("SystemTests", self, "OnQuestShutdown")
+	System:Log.WriteLine("System", self, "OnQuestShutdown")
 EndEvent

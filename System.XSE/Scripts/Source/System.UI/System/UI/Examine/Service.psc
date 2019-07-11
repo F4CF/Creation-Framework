@@ -12,27 +12,33 @@ string EditorOpenedEvent = "System_ExamineMenu_OnEditorOpened" const
 ; Events
 ;---------------------------------------------
 
+Event OnInit() ; TODO: This only happens once per object life time.
+	RegisterForQuestInit(QUST)
+	RegisterForQuestShutdown(QUST)
+EndEvent
+
+
 Event OnQuestInit()
 	RegisterForGameReload(self)
 	OnGameReload()
-	WriteLine(ToString(), "OnQuestInit")
+	WriteLine("System", ToString(), "OnQuestInit")
 EndEvent
 
 
 Event OnGameReload()
 	RegisterForMenuOpenCloseEvent(Menu.Name)
-	WriteLine(ToString(), "OnGameReload")
+	WriteLine("System", ToString(), "OnGameReload")
 EndEvent
 
 
 Event OnQuestShutdown()
 	UnregisterForAllEvents()
-	WriteLine(ToString(), "OnQuestShutdown")
+	WriteLine("System", ToString(), "OnQuestShutdown")
 EndEvent
 
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	WriteLine(ToString(), "OnMenuOpenCloseEvent(menuName:"+menuName+", opening:"+opening+")")
+	WriteLine("System", ToString(), "OnMenuOpenCloseEvent(menuName:"+menuName+", opening:"+opening+")")
 	If (opening)
 		UI.Load(Menu.Name, Menu.Root, File, self, "OnLoadComplete")
 		RegisterForExternalEvent(ModChangedEvent, "OnModChanged")
@@ -52,9 +58,9 @@ EndEvent
 ; @XSE
 Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
 	{The UI loaded callback.}
-	WriteLine(ToString(), "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")")
+	WriteLine("System", ToString(), "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")")
 	If (!success)
-		WriteUnexpectedValue(ToString(), "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.")
+		WriteUnexpectedValue("System", ToString(), "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.")
 	EndIf
 	AssetValue = assetInstance
 	Loaded = success
@@ -63,7 +69,7 @@ EndEvent
 
 ; @Scaleform
 Event OnModChanged(int selected)
-	WriteLine(ToString(), "OnModChanged", "argument:"+selected)
+	WriteLine("System", ToString(), "OnModChanged", "argument:"+selected)
 	If (selected > Invalid)
 		; Emblems:Preset preset = Editor.GetPreset(selected)
 		; Update(Editor, preset)
@@ -73,7 +79,7 @@ EndEvent
 
 ; @Scaleform
 Event OnEditorOpened()
-	WriteLine(ToString(), "OnEditorOpened")
+	WriteLine("System", ToString(), "OnEditorOpened")
 EndEvent
 
 
@@ -86,7 +92,7 @@ Function SendOpenCloseEvent(OpenCloseEventArgs e)
 		arguments[0] = e
 		Menu.SendCustomEvent("OpenCloseEvent", arguments)
 	Else
-		WriteUnexpectedValue(self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
+		WriteUnexpectedValue("System", self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
 	EndIf
 EndFunction
 
@@ -95,7 +101,7 @@ bool Function GetVisible()
 	If (Menu.IsOpen)
 		return UI.Get(Menu.Name, Asset+".Visible") as bool
 	Else
-		WriteUnexpected(ToString(), "GetVisible", "The menu is not open.")
+		WriteUnexpected("System", ToString(), "GetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -105,7 +111,7 @@ bool Function SetVisible(bool value)
 	If (Menu.IsOpen)
 		return UI.Set(Menu.Name, Asset+".Visible", value)
 	Else
-		WriteUnexpected(ToString(), "SetVisible", "The menu is not open.")
+		WriteUnexpected("System", ToString(), "SetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -119,18 +125,18 @@ bool Function SetPrimary(string filepath, int color)
 				arguments[0] = filepath
 				arguments[1] = color
 				UI.Invoke(Menu.Name, Asset+".Viewer.SetPrimary", arguments)
-				WriteLine(ToString(), "SetPrimary", arguments)
+				WriteLine("System", ToString(), "SetPrimary", arguments)
 				return true
 			Else
-				WriteUnexpectedValue(ToString(), "SetPrimary", "filepath", "The filepath cannot be none or empty.")
+				WriteUnexpectedValue("System", ToString(), "SetPrimary", "filepath", "The filepath cannot be none or empty.")
 				return false
 			EndIf
 		Else
-			WriteUnexpectedValue(ToString(), "SetPrimary", "IsLoaded", "The menu asset must be loaded.")
+			WriteUnexpectedValue("System", ToString(), "SetPrimary", "IsLoaded", "The menu asset must be loaded.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue(ToString(), "SetPrimary", "IsOpen", "The menu must be open.")
+		WriteUnexpectedValue("System", ToString(), "SetPrimary", "IsOpen", "The menu must be open.")
 		return false
 	EndIf
 EndFunction
@@ -143,14 +149,14 @@ bool Function SetSecondary(string filepath, int color)
 			arguments[0] = filepath
 			arguments[1] = color
 			UI.Invoke(Menu.Name, Asset+".Viewer.SetSecondary", arguments)
-			WriteLine(ToString(), "SetSecondary", arguments)
+			WriteLine("System", ToString(), "SetSecondary", arguments)
 			return true
 		Else
-			WriteUnexpectedValue(ToString(), "SetSecondary", "filepath", "The filepath cannot be none or empty.")
+			WriteUnexpectedValue("System", ToString(), "SetSecondary", "filepath", "The filepath cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected(ToString(), "SetSecondary", ToString()+" is not open.")
+		WriteUnexpected("System", ToString(), "SetSecondary", ToString()+" is not open.")
 		return false
 	EndIf
 EndFunction
@@ -163,14 +169,14 @@ bool Function SetBackground(string filepath, int color)
 			arguments[0] = filepath
 			arguments[1] = color
 			UI.Invoke(Menu.Name, Asset+".Viewer.SetBackground", arguments)
-			WriteLine(ToString(), "SetBackground", arguments)
+			WriteLine("System", ToString(), "SetBackground", arguments)
 			return true
 		Else
-			WriteUnexpectedValue(ToString(), "SetBackground", "filepath", "The filepath cannot be none or empty.")
+			WriteUnexpectedValue("System", ToString(), "SetBackground", "filepath", "The filepath cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected(ToString(), "SetBackground", ToString()+" is not open.")
+		WriteUnexpected("System", ToString(), "SetBackground", ToString()+" is not open.")
 		return false
 	EndIf
 EndFunction

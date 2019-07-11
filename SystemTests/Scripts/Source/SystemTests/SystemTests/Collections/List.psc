@@ -5,13 +5,13 @@ import System:Log
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine(self, "Executing the Setup function.")
+	WriteLine("System", self, "Executing the Setup function.")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine(self, "Executing the TestSuites function.")
+	WriteLine("System", self, "Executing the TestSuites function.")
 	Describe("List IndexOf", IndexOfSuite())
 EndFunction
 

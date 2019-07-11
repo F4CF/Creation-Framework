@@ -1,10 +1,14 @@
-ScriptName System:UI:Scope:Breath Extends ActiveMagicEffect
+ScriptName System:UI:Scope:Breath Extends System:ActiveMagicEffect
 import System:UI:Scope:Menu
 
 ; Events
 ;---------------------------------------------
 
-Event OnEffectStart(Actor akTarget, Actor akCaster)
+Event OnInit()
+	RegisterForEffectStart(AME)
+EndEvent
+
+Event OnEffectStart(Actor target, Actor caster)
 	If (Service.IsBreathKeyDown)
 		BreathEventArgs e = new BreathEventArgs
 		e.Breath = Service.BreathInterrupted
