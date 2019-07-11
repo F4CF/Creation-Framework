@@ -1,7 +1,7 @@
-Scriptname Games:Shared:HUD:Framework Native Const Hidden
-import Games:Papyrus:Log
-import Games:Papyrus:StringType
-import Games:Shared:HUD:WidgetType
+ScriptName System:HUDFramework:Framework Native Const Hidden
+import System:Log
+import System:StringType
+import System:HUDFramework:WidgetType
 
 
 ; HUD
@@ -9,14 +9,14 @@ import Games:Shared:HUD:WidgetType
 
 Function AS3(HudFramework framework, string expression) Global
 	If (framework)
-		If (StringIsNoneOrEmpty(expression))
+		If (expression)
 			framework.Eval(expression)
-			WriteLine("HUD", "Sent the AS3 expression '"+expression+"' to the HUD.")
+			WriteLine("System", "HUD", "Sent the AS3 expression '"+expression+"' to the HUD.")
 		Else
-			WriteLine("HUD", "Cannot evaluate a none or empty AS3 expression.")
+			WriteLine("System", "HUD", "Cannot evaluate a none or empty AS3 expression.")
 		EndIf
 	Else
-		WriteLine("HUD", "HUD Framework is none, cannot evaluate the '"+expression+"' expression.")
+		WriteLine("System", "HUD", "HUD Framework is none, cannot evaluate the '"+expression+"' expression.")
 	EndIf
 EndFunction
 
@@ -30,11 +30,11 @@ bool Function WidgetRegister(HudFramework framework, WidgetData data, Widget ins
 		If (framework.IsWidgetRegistered(data.ID))
 			return true
 		Else
-			WriteLine("HUD", "HUD Framework could not register the '"+data.ID+"' widget.")
+			WriteLine("System", "HUD", "HUD Framework could not register the '"+data.ID+"' widget.")
 			return false
 		EndIf
 	Else
-		WriteLine("HUD", "HUD Framework is none, cannot register the '"+data.ID+"' widget.")
+		WriteLine("System", "HUD", "HUD Framework is none, cannot register the '"+data.ID+"' widget.")
 		return false
 	EndIf
 EndFunction
@@ -46,11 +46,11 @@ bool Function WidgetUnregister(HudFramework framework, WidgetData data) Global
 		If !(framework.IsWidgetRegistered(data.ID))
 			return true
 		Else
-			WriteLine("HUD", "HUD Framework could not unregister the '"+data.ID+"' widget.")
+			WriteLine("System", "HUD", "HUD Framework could not unregister the '"+data.ID+"' widget.")
 			return false
 		EndIf
 	Else
-		WriteLine("HUD", "HUD Framework is none, cannot unregister the '"+data.ID+"' widget.")
+		WriteLine("System", "HUD", "HUD Framework is none, cannot unregister the '"+data.ID+"' widget.")
 		return false
 	EndIf
 EndFunction
@@ -63,15 +63,15 @@ bool Function WidgetLoad(HudFramework framework, WidgetData data) Global
 			If (framework.IsWidgetLoaded(data.ID))
 				return true
 			Else
-				WriteLine("HUD", "HUD Framework could not load the '"+data.ID+"' widget.")
+				WriteLine("System", "HUD", "HUD Framework could not load the '"+data.ID+"' widget.")
 				return false
 			EndIf
 		Else
-			WriteLine("HUD", "HUD Framework cannot load the '"+data.ID+"' widget without registering first.")
+			WriteLine("System", "HUD", "HUD Framework cannot load the '"+data.ID+"' widget without registering first.")
 			return false
 		EndIf
 	Else
-		WriteLine("HUD", "HUD Framework is none, cannot load the '"+data.ID+"' widget.")
+		WriteLine("System", "HUD", "HUD Framework is none, cannot load the '"+data.ID+"' widget.")
 		return false
 	EndIf
 EndFunction
@@ -84,15 +84,15 @@ bool Function WidgetUnload(HudFramework framework, WidgetData data) Global
 			If !(framework.IsWidgetLoaded(data.ID))
 				return true
 			Else
-				WriteLine("HUD", "HUD Framework could not unload the '"+data.ID+"' widget.")
+				WriteLine("System", "HUD", "HUD Framework could not unload the '"+data.ID+"' widget.")
 				return false
 			EndIf
 		Else
-			WriteLine("HUD", "HUD Framework cannot unload the '"+data.ID+"' widget without registering first.")
+			WriteLine("System", "HUD", "HUD Framework cannot unload the '"+data.ID+"' widget without registering first.")
 			return false
 		EndIf
 	Else
-		WriteLine("HUD", "HUD Framework is none, cannot unload the '"+data.ID+"' widget.")
+		WriteLine("System", "HUD", "HUD Framework is none, cannot unload the '"+data.ID+"' widget.")
 		return false
 	EndIf
 EndFunction

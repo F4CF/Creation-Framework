@@ -1,11 +1,8 @@
-Scriptname Papyrus:GUI:HUDWidget extends Papyrus:GUI:HUD Hidden
-import Papyrus
-import Papyrus:Log
-import Papyrus:PointType
-import Papyrus:StringType
-import Papyrus:VersionType
-
-UserLog Log
+ScriptName System:HUDFramework:HUDWidget Extends System:HUDFramework:HUD Hidden
+import System:Log
+import System:PointType
+import System:StringType
+import System:VersionType
 
 HUDFramework HUD
 WidgetData Widget
@@ -38,7 +35,6 @@ Struct WidgetData
 EndStruct
 
 
-
 ; Widget
 ;---------------------------------------------
 
@@ -50,12 +46,12 @@ Function Widget()
 		WidgetData created = Create()
 		If (created)
 			Widget = created
-			WriteLine(Log, "The '"+WidgetToString(created)+"' widget was created.")
+			WriteLine("System", "MEMBER", "The '"+WidgetToString(created)+"' widget was created.")
 		Else
-			WriteLine(Log, "The created widget is equal to none.")
+			WriteLine("System", "MEMBER", "The created widget is equal to none.")
 		EndIf
 	Else
-		WriteLine(Log, "Could not get and instance to the HUD Framework.")
+		WriteLine("System", "MEMBER", "Could not get and instance to the HUD Framework.")
 	EndIf
 EndFunction
 
@@ -64,34 +60,33 @@ EndFunction
 ;---------------------------------------------
 
 Event OnInit()
-	Log = LogNew(Context.Title, self)
 	Widget()
 	Initialize(Context)
 EndEvent
 
 
-Event OnEvent(int aEvent, Project:Context sender, var[] arguments)
+Event OnEvent(int aEvent, Scripting:Projects:Context sender, var[] arguments)
 	If (aEvent == StartupEvent)
 		If (WidgetRegister(HUD, Widget, self))
 			self.OnEnable()
-			WriteLine(Log, "The widget has enabled with the 'OnStartup' event.")
+			WriteLine("System", "MEMBER", "The widget has enabled with the 'OnStartup' event.")
 		EndIf
 	ElseIf (aEvent == ShutdownEvent)
 		If (WidgetUnregister(HUD, Widget))
 			self.OnDisable()
-			WriteLine(Log, "The widget has disabled with the 'OnShutdown' event.")
+			WriteLine("System", "MEMBER", "The widget has disabled with the 'OnShutdown' event.")
 		EndIf
 	ElseIf (aEvent == UpgradeEvent)
 		Version newVersion = arguments[0] as Version
 		Version oldVersion = arguments[1] as Version
 		Widget()
 		self.OnUpgrade(newVersion, oldVersion)
-		WriteLine(Log, \
+		WriteLine("System", "MEMBER", \
 			"The widget has upgraded to version '"+\
 			VersionToString(newVersion)+"' from '"+\
 			VersionToString(oldVersion)+"' with the 'OnUpgrade' event.")
 	Else
-		WriteLine(Log, "The module has received and unhandled event.")
+		WriteLine("System", "MEMBER", "The module has received and unhandled event.")
 	EndIf
 EndEvent
 
@@ -103,7 +98,7 @@ EndEvent
 Function HUD_WidgetLoaded(string asWidgetID)
 	If (asWidgetID == Widget.ID)
 		self.OnWidgetLoaded()
-		WriteLine(Log, "HUD Framework has loaded the '"+asWidgetID+"' widget.")
+		WriteLine("System", "MEMBER", "HUD Framework has loaded the '"+asWidgetID+"' widget.")
 	EndIf
 EndFunction
 
@@ -139,9 +134,9 @@ Function SendNumber(int aiCommand, float afArgument)
 	If (IsLoaded)
 		If (aiCommand != -1)
 			HUD.SendMessage(Widget.ID, aiCommand, afArgument)
-			WriteLine(Log, "Sent the '"+aiCommand+"' number command with the '"+afArgument+"' argument.")
+			WriteLine("System", "MEMBER", "Sent the '"+aiCommand+"' number command with the '"+afArgument+"' argument.")
 		Else
-			WriteLine(Log, "Cannot send an invalid '-1' number command.")
+			WriteLine("System", "MEMBER", "Cannot send an invalid '-1' number command.")
 		EndIf
 	EndIf
 EndFunction
@@ -151,9 +146,9 @@ Function SendText(string asCommand, string asArgument)
 	If (IsLoaded)
 		If (asCommand)
 			HUD.SendMessageString(Widget.ID, asCommand, asArgument)
-			WriteLine(Log, "Sent the '"+asCommand+"' text command with the '"+asArgument+"' argument.")
+			WriteLine("System", "MEMBER", "Sent the '"+asCommand+"' text command with the '"+asArgument+"' argument.")
 		Else
-			WriteLine(Log, "Cannot send a none string command.")
+			WriteLine("System", "MEMBER", "Cannot send a none string command.")
 		EndIf
 	EndIf
 EndFunction
@@ -163,9 +158,9 @@ Function SendCustom(Message akMessage)
 	If (IsLoaded)
 		If (akMessage)
 			HUD.SendCustomMessage(akMessage)
-			WriteLine(Log, "Sent the '"+akMessage+"' custom message form.")
+			WriteLine("System", "MEMBER", "Sent the '"+akMessage+"' custom message form.")
 		Else
-			WriteLine(Log, "Cannot send a none Message form.")
+			WriteLine("System", "MEMBER", "Cannot send a none Message form.")
 		EndIf
 	EndIf
 EndFunction
@@ -173,11 +168,11 @@ EndFunction
 
 Function AS3(string asExpression)
 	If (IsReady)
-		If (StringIsNoneOrEmpty(asExpression))
+		If (asExpression)
 			HUD.Eval(asExpression)
-			WriteLine(Log, "Sent the AS3 expression '"+asExpression+"' to the HUD.")
+			WriteLine("System", "MEMBER", "Sent the AS3 expression '"+asExpression+"' to the HUD.")
 		Else
-			WriteLine(Log, "Cannot evaluate a none or empty AS3 expression.")
+			WriteLine("System", "MEMBER", "Cannot evaluate a none or empty AS3 expression.")
 		EndIf
 	EndIf
 EndFunction
@@ -272,7 +267,7 @@ EndFunction
 
 WidgetData Function Create()
 	{VIRTUAL}
-	WriteLine(Log, "The widget has not implemented the virtual 'Create' method.")
+	WriteLine("System", "MEMBER", "The widget has not implemented the virtual 'Create' method.")
 	return new WidgetData
 EndFunction
 
@@ -281,7 +276,7 @@ EndFunction
 ;---------------------------------------------
 
 Group Widget
-	Project:Context Property Context Auto Const Mandatory
+	Scripting:Projects:Context Property Context Auto Const Mandatory
 
 
 	bool Property IsReady Hidden
@@ -290,11 +285,11 @@ Group Widget
 				If (HUD.IsWidgetRegistered(Widget.ID))
 					return true
 				Else
-					WriteLine(Log, "The '"+Widget.ID+"' widget is not ready, must register with HUD Framework.")
+					WriteLine("System", "MEMBER", "The '"+Widget.ID+"' widget is not ready, must register with HUD Framework.")
 					return false
 				EndIf
 			Else
-				WriteLine(Log, "The '"+Widget.ID+"' widget is not ready, HUD Framework is none.")
+				WriteLine("System", "MEMBER", "The '"+Widget.ID+"' widget is not ready, HUD Framework is none.")
 				return false
 			EndIf
 		EndFunction
@@ -307,11 +302,11 @@ Group Widget
 				If (Hud.IsWidgetLoaded(Widget.ID))
 					return true
 				Else
-					WriteLine(Log, "The widget '"+Widget.ID+"' is not loaded right now.")
+					WriteLine("System", "MEMBER", "The widget '"+Widget.ID+"' is not loaded right now.")
 					return false
 				EndIf
 			Else
-				WriteLine(Log, "The '"+Widget.ID+"' widget is not loaded, HUD Framework is none.")
+				WriteLine("System", "MEMBER", "The '"+Widget.ID+"' widget is not loaded, HUD Framework is none.")
 				return false
 			EndIf
 		EndFunction

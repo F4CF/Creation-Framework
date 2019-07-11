@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-	<!-- Scripting Widgets -->
+	<!-- System.HUDFramework -->
 	<!-- http://www.creationkit.com/fallout4/index.php?title=Papyrus_Projects -->
 	<PapyrusProject
 		xmlns="PapyrusProject.xsd"
@@ -12,8 +12,9 @@
 	>
 	<Imports>
 		<Import>.</Import>
-		<Import>..\FO4_Scripting</Import>
 		<Import>..\HUD_FRAMEWORK</Import>
+		<Import>..\Scripting</Import>
+		<Import>..\System</Import>
 		<Import>..\F4SE</Import>
 		<Import>..\Base</Import>
 	</Imports>

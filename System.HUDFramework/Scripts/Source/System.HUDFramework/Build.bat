@@ -1,1 +1,1 @@
-CALL "..\..\..\..\Papyrus Compiler\PapyrusCompiler" "..\System\System.HUDFramework.ppj"
+CALL "..\..\..\..\Papyrus Compiler\PapyrusCompiler" "..\System.HUDFramework\System.HUDFramework.ppj"

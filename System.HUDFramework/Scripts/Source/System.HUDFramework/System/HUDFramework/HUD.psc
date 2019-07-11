@@ -1,6 +1,5 @@
-Scriptname Papyrus:GUI:HUD extends Papyrus:Project:Module Native Const Hidden
-import Papyrus:Log
-
+ScriptName System:HUDFramework:HUD Extends Scripting:Projects:Module Native Const Hidden
+import System:Log
 
 ; Virtual
 ;---------------------------------------------
