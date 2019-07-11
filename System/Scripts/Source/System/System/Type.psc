@@ -188,3 +188,8 @@ EndFunction
 Activator Function AsActivator(var this) Global
 	return this as Activator
 EndFunction
+
+; Casts a variable into it's concrete object type.
+Armor Function AsArmor(var this) Global
+	return this as Armor
+EndFunction

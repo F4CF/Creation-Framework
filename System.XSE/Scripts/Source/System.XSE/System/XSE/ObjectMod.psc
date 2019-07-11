@@ -4,7 +4,7 @@ import System:Log
 ; TODO: Avoid dependency on non-system data files.
 bool Function IsScope(ObjectMod this)
 	If (this)
-		int Invalid = -1 const
+		; int Invalid = -1 const
 
 		; HasScope [KYWD:0009F425]
 		Keyword HasScope = Game.GetFormFromFile(0x0009F425, "Fallout4.esm") as Keyword
@@ -31,16 +31,16 @@ bool Function TracePropertyModifiers(ObjectMod this) Global DebugOnly
 		If (array)
 			int index = 0
 			While (index < array.Length)
-				WriteLine(prefix, this+" has PropertyModifier: "+array[index]+", @"+index)
+				WriteLine("System", prefix, this+" has PropertyModifier: "+array[index]+", @"+index)
 				index += 1
 			EndWhile
 			return true
 		Else
-			WriteLine(prefix, this+" has no property modifiers.")
+			WriteLine("System", prefix, this+" has no property modifiers.")
 			return false
 		EndIf
 	Else
-		WriteLine(prefix, "Cannot trace property modifiers on none ObjectMod.")
+		WriteLine("System", prefix, "Cannot trace property modifiers on none ObjectMod.")
 		return false
 	EndIf
 EndFunction
