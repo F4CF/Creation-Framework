@@ -1,8 +1,7 @@
-Scriptname SystemTests:HUDFramework:Widget extends Papyrus:GUI:HUDWidget
+ScriptName SystemTests:HUDFramework:Widget Extends System:HUDFramework:HUDWidget
 import System:Log
 import System:PointType
 
-UserLog Log
 string WidgetID = "TestWidget.swf" const
 int Step = 10 const
 
@@ -22,8 +21,6 @@ int Right = 102 const
 ; Num4  100
 ; Num6  102
 
-
-
 ; Widget
 ;---------------------------------------------
 
@@ -42,34 +39,33 @@ EndFunction
 ;---------------------------------------------
 
 Event OnInitialize()
-	Log = LogNew(Context.Title, self)
-	WriteLine(Log, "OnInitialize")
+	WriteLine("System", self, "OnInitialize")
 EndEvent
 
 
 Event OnEnable()
 	Load()
 	RegisterForKeys()
-	WriteLine(Log, "OnEnable")
+	WriteLine("System", self, "OnEnable")
 EndEvent
 
 
 Event OnDisable()
 	Unload()
 	RegisterForKeys()
-	WriteLine(Log, "OnDisable")
+	WriteLine("System", self, "OnDisable")
 EndEvent
 
 
 Event OnWidgetLoaded()
 	SendText("Command", "Value")
 	RegisterForKeys()
-	WriteLine(Log, "OnWidgetLoaded")
+	WriteLine("System", self, "OnWidgetLoaded")
 EndEvent
 
 
 Event OnKeyDown(int keyCode)
-	WriteNotification(Log, "Pressed the '"+keyCode+"' key.")
+	WriteNotification("System", self, "Pressed the '"+keyCode+"' key.")
 
 	If (keyCode == Up)
 		Position = PointAddition(Position, PointMultiply(Down(), Step))
@@ -84,7 +80,7 @@ Event OnKeyDown(int keyCode)
 		Position = PointAddition(Position, PointMultiply(Right(), Step))
 
 	Else
-		WriteNotification(Log, "Unhandled key '"+keyCode+"' has been pressed.")
+		WriteNotification("System", self, "Unhandled key '"+keyCode+"' has been pressed.")
 	EndIf
 EndEvent
 

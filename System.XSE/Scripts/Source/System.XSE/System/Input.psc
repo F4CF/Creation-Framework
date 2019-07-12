@@ -1,4 +1,4 @@
-ScriptName System:Input Extends System:Object Native Const
+ScriptName System:Input Extends System:Object Native
 {
 Provides properties for DirectX keyboard scan code values.
 https://www.creationkit.com/fallout4/index.php?title=DirectX_Scan_Codes

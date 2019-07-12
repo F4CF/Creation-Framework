@@ -3,4 +3,9 @@ CALL "..\SystemTests\Build.bat"
 
 REM SystemTests.XSE.esp
 CALL "..\SystemTests.XSE\Build.bat"
-CALL "..\SystemTests.UI\Build.bat"
+
+REM SystemTests.MCM.esp
+CALL "..\SystemTests.MCM\Build.bat"
+
+REM SystemTests.HUDFramework.esp
+CALL "..\SystemTests.HUDFramework\Build.bat"

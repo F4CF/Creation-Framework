@@ -160,7 +160,7 @@ Group Properties
 
 	string Property Instance Hidden
 		string Function Get()
-			{The menu instance variable. This is typically the same as root.}
+			{The menu instance variable with dot accessor. This is typically the same as root.}
 			return Root+GetInstance()
 		EndFunction
 	EndProperty

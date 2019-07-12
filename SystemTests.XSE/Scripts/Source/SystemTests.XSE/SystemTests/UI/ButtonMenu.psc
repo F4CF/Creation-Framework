@@ -192,8 +192,8 @@ bool Function ShownNoButtonTest()
 	return Done
 EndFunction
 State ShownNoButtonTest
-	Event System:UI:ButtonMenu.OnShown(UI:ButtonMenu sender, var[] arguments)
-		WriteLine(self, "ShownNoButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
+	Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
+		WriteLine("System", self, "ShownNoButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
 		sender.Hide()
 	EndEvent
 EndState
@@ -212,8 +212,8 @@ bool Function ShownButtonTest()
 	return Done
 EndFunction
 State ShownButtonTest
-	Event System:UI:ButtonMenu.OnShown(UI:ButtonMenu sender, var[] arguments)
-		WriteLine(self, "ShownButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
+	Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
+		WriteLine("System", self, "ShownButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
 		sender.Hide()
 	EndEvent
 EndState
@@ -222,7 +222,7 @@ EndState
 ; Empty
 ;---------------------------------------------
 
-Event System:UI:ButtonMenu.OnShown(UI:ButtonMenu sender, var[] arguments)
+Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
 	{EMPTY}
 EndEvent
 
@@ -231,6 +231,6 @@ EndEvent
 ;---------------------------------------------
 
 Group ButtonMenu
-	UI:ButtonMenu Property ButtonMenu Auto Const Mandatory
-	Shared:Keyboard Property Keyboard Auto Const Mandatory
+	System:UI:ButtonMenu Property ButtonMenu Auto Const Mandatory
+	System:Input Property Keyboard Auto Const Mandatory
 EndGroup
