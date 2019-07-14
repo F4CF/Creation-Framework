@@ -1,21 +1,19 @@
 package Shared.AS3
 {
-	import Shared.AS3.Debug;
-
 	public class BSScrollingListFadeEntry extends BSScrollingListEntry
 	{
+		 
+		
 		const fUnselectedBorderAlpha:Number = 0.5;
-
-
+		
 		public function BSScrollingListFadeEntry()
 		{
 			super();
 		}
-
-		override public function SetEntryText(object:Object, textOption:String) : *
+		
+		override public function SetEntryText(param1:Object, param2:String) : *
 		{
-			Debug.WriteLine("[Shared.AS3]", "[BSScrollingListFadeEntry]", "(SetEntryText)", "textOption:"+textOption);
-			super.SetEntryText(object, textOption);
+			super.SetEntryText(param1,param2);
 			var _loc3_:* = stage.focus == this.parent;
 			if(!_loc3_ && this.parent != null)
 			{
@@ -26,7 +24,5 @@ package Shared.AS3
 				border.alpha = this.fUnselectedBorderAlpha;
 			}
 		}
-
-
 	}
 }
