@@ -1,0 +1,71 @@
+{
+	"modName": "Overlays",
+	"displayName": "Overlays Framework",
+	"minMcmVersion": 3,
+	"content":
+	[
+		{
+			"text": "Transparency",
+			"type": "slider",
+			"help": "Applies transparency to overlays. Range: 0-1, Step: 0.01.",
+			"valueOptions":
+			{
+				"sourceType": "GlobalValue",
+				"sourceForm": "Overlays.esm|5B95",
+				"min": 0.0,
+				"max": 1.0,
+				"step": 0.01
+			},
+			"action":
+			{
+				"type": "CallFunction",
+				"form": "Overlays.esm|F99",
+				"function": "SetAlpha",
+				"params": ["{value}"],
+				"scriptName": "Fallout:Overlays:Configuration"
+			}
+		},
+		{
+			"text": "Transparency Transition Duration",
+			"type": "slider",
+			"help": "Transitions the overlay transparency over the given duration in seconds. Range: 0-10, Step: 0.25.",
+			"valueOptions":
+			{
+				"sourceType": "GlobalValue",
+				"sourceForm": "Overlays.esm|632F",
+				"min": 0.0,
+				"max": 5.0,
+				"step": 0.25
+			},
+			"action":
+			{
+				"type": "CallFunction",
+				"form": "Overlays.esm|F99",
+				"function": "SetScopeAlpha",
+				"params": ["{value}"],
+				"scriptName": "Fallout:Overlays:Configuration"
+			}
+		},
+		{
+			"text": "Scope Menu - Transparency",
+			"type": "slider",
+			"help": "Applies transparency to overlays when zoomed in the scope menu. Range: 0-1, Step: 0.01.",
+			"valueOptions":
+			{
+				"sourceType": "GlobalValue",
+				"sourceForm": "Overlays.esm|7263",
+				"min": 0.0,
+				"max": 1.0,
+				"step": 0.01
+			},
+			"action":
+			{
+				"type": "CallFunction",
+				"form": "Overlays.esm|F99",
+				"function": "SetScopeAlpha",
+				"params": ["{value}"],
+				"scriptName": "Fallout:Overlays:Configuration"
+			}
+		}
+	]
+}

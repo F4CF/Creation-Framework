@@ -1,8 +1,7 @@
-ScriptName System:Input Extends System:Object Native
+ScriptName System:Input Extends System:Object Native Default
 {
 Provides properties for DirectX keyboard scan code values.
 https://www.creationkit.com/fallout4/index.php?title=DirectX_Scan_Codes
-* Editor: `QUST`
 }
 
 Group Devices

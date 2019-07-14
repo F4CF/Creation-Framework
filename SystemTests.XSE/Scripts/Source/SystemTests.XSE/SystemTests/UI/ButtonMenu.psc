@@ -1,8 +1,18 @@
 ScriptName SystemTests:UI:ButtonMenu extends System:Diagnostics:UnitTest
 import System:Log
-import System:UI:ButtonMenu
+import System:UI:Buttons:Menu
 
 ; Console Command: StartQuest GamesTest_SharedUIButtonMenu
+
+
+; Properties
+;---------------------------------------------
+
+Group ButtonMenu
+	System:UI:Buttons:Menu Property ButtonMenu Auto Const Mandatory
+	System:Input Property Keyboard Auto Const Mandatory
+EndGroup
+
 
 ; Unit Test
 ;---------------------------------------------
@@ -226,11 +236,3 @@ Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
 	{EMPTY}
 EndEvent
 
-
-; Properties
-;---------------------------------------------
-
-Group ButtonMenu
-	System:UI:ButtonMenu Property ButtonMenu Auto Const Mandatory
-	System:Input Property Keyboard Auto Const Mandatory
-EndGroup
