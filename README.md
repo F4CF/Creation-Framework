@@ -1,4 +1,4 @@
-# Fallout 4 Scripting Framework
+# Fallout 4 Creation Framework
 A general purpose scripting library and framework for Fallout 4 which provides support for Actionscript 3.0 and Papyrus.
 These libraries and frameworks are heavily inspired by Microsoft's .NET Framework.
 
