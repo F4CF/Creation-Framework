@@ -19,7 +19,7 @@ import System:Log
 ; 	If (member)
 ; 		return Menu.GetMember(Menu.Client+"."+member)
 ; 	Else
-; 		WriteUnexpectedValue("System", self, "GetMember", "member", "The value cannot be none or empty.")
+; 		System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The value cannot be none or empty.")
 ; 		return ""
 ; 	EndIf
 ; EndFunction
@@ -55,7 +55,7 @@ bool Function RegisterForOpenCloseEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
+		System:Debug.WriteUnexpectedValue("System", self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -66,7 +66,7 @@ bool Function UnregisterForOpenCloseEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
+		System:Debug.WriteUnexpectedValue("System", self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -97,7 +97,7 @@ bool Function RegisterForLoadedEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "LoadedEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "RegisterForLoadedEvent", "script", "Cannot register a none script for events.")
+		System:Debug.WriteUnexpectedValue("System", self, "RegisterForLoadedEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -108,7 +108,7 @@ bool Function UnregisterForLoadedEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "LoadedEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "UnregisterForLoadedEvent", "script", "Cannot unregister a none script for events.")
+		System:Debug.WriteUnexpectedValue("System", self, "UnregisterForLoadedEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction

@@ -1,5 +1,7 @@
-ScriptName System:Properties:Assembly Extends System:Type
+ScriptName System:Assembly:SYS Extends System:Type
 {Provides information about this assembly.}
+import System:Log
+
 ;/ System.esl
 ACTI
   0000083B System_CollectionsDictionary
@@ -14,14 +16,21 @@ QUST
   00000838 System
 /;
 
+; TODO: An upgrade mechanism for object `OnInit()` events.
 
-; Constructor
+
+; Type
 ;---------------------------------------------
 
 ; A singleton script constructor provides an object instance.
 ; https://en.wikipedia.org/wiki/Singleton_pattern
-System:Properties:Assembly Function Type() Global
-	return System:Type.Read(FileName()+"."+FileExtension(), FormID()) as System:Properties:Assembly
+System:Assembly:SYS Function Type() Global
+	return System:Type.Read(File(), FormID()) as System:Assembly:SYS
+EndFunction
+
+string Function File() Global
+	{Static Property}
+	return FileName()+"."+FileExtension()
 EndFunction
 
 string Function FileName() Global
@@ -45,23 +54,30 @@ EndFunction
 
 ; @overrides
 ; The data file plugin name.
+string Function GetFile()
+	{Property}
+	return System:Assembly:SYS.File()
+EndFunction
+
+; @overrides
+; The data file plugin name.
 string Function GetFileName()
 	{Property}
-	return System:Properties:Assembly.FileName()
+	return System:Assembly:SYS.FileName()
 EndFunction
 
 ; @overrides
 ; The data file plugin extension.
 string Function GetFileExtension()
 	{Property}
-	return System:Properties:Assembly.FileExtension()
+	return System:Assembly:SYS.FileExtension()
 EndFunction
 
 
 Group QUST
 	int Property System Hidden
 		int Function Get()
-			return System:Properties:Assembly.FormID()
+			return System:Assembly:SYS.FormID()
 		EndFunction
 	EndProperty
 EndGroup
@@ -85,6 +101,15 @@ Group ACTI
 	int Property System_CollectionsStack Hidden
 		int Function Get()
 			return 0x0000083D
+		EndFunction
+	EndProperty
+EndGroup
+
+Group FLST
+	int Property System_Activation Hidden
+		{Contains}
+		int Function Get()
+			return 0x0000084B
 		EndFunction
 	EndProperty
 EndGroup

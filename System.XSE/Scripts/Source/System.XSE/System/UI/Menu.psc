@@ -100,7 +100,7 @@ bool Function Open()
 	If (IsRegistered)
 		return UI.OpenMenu(Name)
 	Else
-		WriteUnexpected("System", ToString(), "Open", "The menu is not registered.")
+		System:Debug.WriteUnexpected("System", ToString(), "Open", "The menu is not registered.")
 		return false
 	EndIf
 EndFunction
@@ -110,7 +110,7 @@ bool Function Close()
 	If (IsRegistered)
 		return UI.CloseMenu(Name)
 	Else
-		WriteUnexpected("System", ToString(), "Close", "The menu is not registered.")
+		System:Debug.WriteUnexpected("System", ToString(), "Close", "The menu is not registered.")
 		return false
 	EndIf
 EndFunction
@@ -118,13 +118,13 @@ EndFunction
 
 ; bool Function Open()
 ; 	If (IsOpen)
-; 		WriteUnexpected("System", self, "Open", ToString()+" is already open.")
+; 		System:Debug.WriteUnexpected("System", self, "Open", ToString()+" is already open.")
 ; 		return true
 ; 	Else
 ; 		If (IsRegistered)
 ; 			return UI.OpenMenu(Name)
 ; 		Else
-; 			WriteUnexpected("System", self, "Open", ToString()+" is not registered.")
+; 			System:Debug.WriteUnexpected("System", self, "Open", ToString()+" is not registered.")
 ; 			return false
 ; 		EndIf
 ; 	EndIf
@@ -133,13 +133,13 @@ EndFunction
 
 ; bool Function Close()
 ; 	If (!IsOpen)
-; 		WriteUnexpected("System", self, "Close", ToString()+" is already closed.")
+; 		System:Debug.WriteUnexpected("System", self, "Close", ToString()+" is already closed.")
 ; 		return true
 ; 	Else
 ; 		If (IsRegistered)
 ; 			return UI.CloseMenu(Name)
 ; 		Else
-; 			WriteUnexpected("System", self, "Close", ToString()+" is not registered.")
+; 			System:Debug.WriteUnexpected("System", self, "Close", ToString()+" is not registered.")
 ; 			return false
 ; 		EndIf
 ; 	EndIf
@@ -152,11 +152,11 @@ var Function Get(string member)
 		If (member)
 			return UI.Get(Name, GetMember(member))
 		Else
-			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -168,11 +168,11 @@ bool Function Set(string member, var argument)
 		If (member)
 			return UI.Set(Name, GetMember(member), argument)
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -184,11 +184,11 @@ var Function Invoke(string member, var[] arguments = none)
 		If (member)
 			return UI.Invoke(Name, GetMember(member), arguments)
 		Else
-			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -205,11 +205,11 @@ string Function GetMember(string member, string variable = "")
 				return Root+"."+member
 			EndIf
 		Else
-			WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -219,10 +219,10 @@ EndFunction
 
 ; string Function GetMember(string member)
 ; 	If !(member)
-; 		WriteUnexpectedValue("System", self, "GetMember", "member", "The value cannot be none or empty.")
+; 		System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The value cannot be none or empty.")
 ; 		return ""
 ; 	ElseIf !(Root)
-; 		WriteUnexpectedValue("System", self, "GetMember", "Root", "The value cannot be none or empty.")
+; 		System:Debug.WriteUnexpectedValue("System", self, "GetMember", "Root", "The value cannot be none or empty.")
 ; 		return ""
 ; 	Else
 ; 		return Root+"."+member

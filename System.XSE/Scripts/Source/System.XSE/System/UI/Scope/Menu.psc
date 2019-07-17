@@ -1,6 +1,6 @@
 ScriptName System:UI:Scope:Menu Extends System:UI:Scope:MenuType
 import System:Log
-
+import System:Debug
 
 ; Properties
 ;---------------------------------------------

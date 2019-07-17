@@ -2,6 +2,7 @@ ScriptName System:UI:Visor:Menu Extends System:UI:Visor:MenuType
 {Provides an abstraction for interacting with the visor menu.}
 import System:UI:Client
 import System:Log
+import System:Debug
 
 string ClientInstance
 string ClientLoadedCallback = "System_UI_VisorMenu_ClientLoadedCallback" const

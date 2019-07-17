@@ -8,7 +8,6 @@ ScriptName System:Type Extends System:Object Native Const Hidden
 * https://docs.microsoft.com/en-us/dotnet/api/system.reflection.typeinfo
 }
 
-
 ; Properties
 ;---------------------------------------------
 
@@ -58,13 +57,18 @@ EndFunction
 ; Methods
 ;---------------------------------------------
 
-bool Function Exists(string filename) Global
-	return Game.IsPluginInstalled(filename)
+bool Function Exists(string file) Global
+	return Game.IsPluginInstalled(file)
 EndFunction
 
 
-Form Function Read(string filename, int formID) Global
-	return Game.GetFormFromFile(formID, filename)
+Form Function Read(string file, int formID) Global
+	If (Exists(file))
+		return Game.GetFormFromFile(formID, file)
+	Else
+		System:Exception.Throw("System:Type", "Read", "The data file dependency "+file+" cannot be found.")
+		return none
+	EndIf
 EndFunction
 
 ;---------------------------------------------
@@ -113,45 +117,30 @@ bool Function CallGlobalNoWait(string script, string member, var[] parameters) G
 EndFunction
 
 
+; Objects
 ;---------------------------------------------
 
-Struct FormType
-	string File
-	int FormID
-	Form Object
-EndStruct
-
-; Struct ArmorType
-; 	string File
-; 	int FormID
-; 	Armor Object
-; EndStruct
-
-; Struct WeaponType
-; 	string File
-; 	int FormID
-; 	Armor Object
-; EndStruct
-
-
-FormType Function NewForm(string file, int formID) Global
-	FormType value = new FormType
-	value.File = file
-	value.FormID = formID
-	return value
-EndFunction
-
-bool Function ReadForm(FormType value) Global
-	If (Exists(value.File))
-		value.Object = Read(value.File, value.FormID)
-		return value.Object
+ActorValue Function ReadActorValue(string file, int formID) Global
+	ActorValue value = Read(file, formID) as ActorValue
+	If (value)
+		return value
 	Else
-		return false
+		System:Exception.Throw("System:Type", "ReadActorValue", "The data file dependency "+file+" cannot resolve "+formID+" as ActorValue.")
+		return none
 	EndIf
 EndFunction
 
 
-; Objects
+Keyword Function ReadKeyword(string file, int formID) Global
+	Keyword value = Read(file, formID) as Keyword
+	If (value)
+		return value
+	Else
+		System:Exception.Throw("System:Type", "ReadKeyword", "The data file dependency "+file+" cannot resolve "+formID+" as Keyword.")
+		return none
+	EndIf
+EndFunction
+
 ;---------------------------------------------
 
 ; Casts a variable into it's concrete object type.
@@ -162,11 +151,6 @@ EndFunction
 ; Casts a variable into it's concrete object type.
 Actor Function AsActor(var this) Global
 	return this as Actor
-EndFunction
-
-; Casts a variable into it's concrete object type.
-ActiveMagicEffect Function AsActiveMagicEffect(var this) Global
-	return this as ActiveMagicEffect
 EndFunction
 
 ; Casts a variable into it's concrete object type.

@@ -1,10 +1,12 @@
 ScriptName System:UI:Visor:Service Extends System:Quest
 {The framework is used to track equipment changes on the player.}
+import System:Debug
 import System:Log
 import System:UI:Client
 
 
 Actor Player
+Keyword ArmorBodyPartEyes
 ;---------------------------------------------
 string File
 string EquippedState = "Equipped" const
@@ -16,12 +18,9 @@ string ExamineMenu = "ExamineMenu" const
 string ScopeMenu = "ScopeMenu" const
 
 
+
 ; Properties
 ;---------------------------------------------
-
-Group Properties
-	Keyword Property ArmorBodyPartEyes Auto Const Mandatory
-EndGroup
 
 Group Overlay
 	System:UI:Visor:Menu Property Menu Auto Const Mandatory
@@ -41,16 +40,32 @@ EndGroup
 ; Events
 ;---------------------------------------------
 
+; TODO: This only happens once per object life time.
+Event OnInit()
+	RegisterForQuestInit(QUST)
+	RegisterForQuestShutdown(QUST)
+EndEvent
+
+
 Event OnQuestInit()
 	Player = Game.GetPlayer()
 	RegisterForRemoteEvent(Player, "OnItemEquipped")
 	RegisterForRemoteEvent(Player, "OnItemUnequipped")
+	RegisterForGameReload(self)
+	OnGameReload()
+EndEvent
+
+
+Event OnGameReload()
+	Reload()
 EndEvent
 
 
 Event OnQuestShutdown()
+	UnregisterForRemoteEvent(Player, "OnItemEquipped")
+	UnregisterForRemoteEvent(Player, "OnItemUnequipped")
+	UnregisterForGameReload(self)
 	System:Object.ClearState(self)
-	UnregisterForAllEvents()
 EndEvent
 
 
@@ -71,6 +86,12 @@ EndEvent
 
 ; Methods
 ;---------------------------------------------
+
+Function Reload()
+	System:Assembly:Fallout fallout = System:Assembly:Fallout.Type()
+	ArmorBodyPartEyes = System:Type.ReadKeyword(fallout.File, fallout.ArmorBodyPartEyes)
+EndFunction
+
 
 bool Function ItemFilter(Form item)
 	{Returns true if the given Form is of type Armor and occupies the Eye slot.}
@@ -184,7 +205,6 @@ State Equipped
 		RegisterForMenuOpenCloseEvent(Menu.Name)
 		RegisterForMenuOpenCloseEvent(ExamineMenu)
 		RegisterForMenuOpenCloseEvent(ScopeMenu)
-		RegisterForGameReload(self)
 		Menu.Open()
 	EndEvent
 
@@ -192,6 +212,7 @@ State Equipped
 
 	Event OnGameReload()
 		WriteLine("System", self, "Equipped.OnGameReload")
+		Reload()
 		Menu.Open()
 	EndEvent
 
@@ -265,8 +286,9 @@ State Equipped
 	Event OnEndState(string newState)
 		WriteLine("System", self, "Equipped.OnEndState")
 		UnregisterForCameraState()
-		UnregisterForAllMenuOpenCloseEvents()
-		UnregisterForGameReload(self)
+		UnregisterForMenuOpenCloseEvent(Menu.Name)
+		UnregisterForMenuOpenCloseEvent(ExamineMenu)
+		UnregisterForMenuOpenCloseEvent(ScopeMenu)
 		Menu.Close()
 	EndEvent
 EndState

@@ -1,5 +1,6 @@
 ScriptName System:UI:HUD:Menu Extends System:UI:HUD:MenuType
 import System:Log
+import System:Debug
 
 
 string HUDNotificationsGroup = "HUDNotificationsGroup_mc" const

@@ -1,5 +1,6 @@
 ScriptName System:UI:Examine:Menu Extends System:UI:Examine:MenuType
 import System:Log
+import System:Debug
 
 ; Open/Close Event
 ;---------------------------------------------

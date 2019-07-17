@@ -2,8 +2,11 @@ ScriptName System:UI:Scope:Service Extends System:UI:Scope:ServiceType
 {The scope menu service provides backend for the scope menu.}
 import System:Log
 import System:UI:Scope:Menu
+import System:Debug
 
 Actor Player
+ActorValue ActionPoints
+
 bool BreathPressed = false
 bool Interrupted = false
 
@@ -11,24 +14,26 @@ bool Interrupted = false
 ; Events
 ;---------------------------------------------
 
-Event OnInit() ; TODO: This only happens once per object life time.
+; TODO: This only happens once per object life time.
+Event OnInit()
 	RegisterForQuestInit(QUST)
 	RegisterForQuestShutdown(QUST)
 EndEvent
 
 
-; TODO: Use the game reload event
 Event OnQuestInit()
 	Player = Game.GetPlayer()
 	Player.AddSpell(SystemXSE_UI_ScopeBreathEvent)
 	RegisterForMenuOpenCloseEvent(Menu.Name)
-
 	RegisterForGameReload(self)
 	OnGameReload()
 EndEvent
 
 
 Event OnGameReload()
+	System:Assembly:Fallout fallout = System:Assembly:Fallout.Type()
+	ActionPoints = System:Type.ReadActorValue(fallout.File, fallout.ActionPoints)
+
 	RegisterForMenuOpenCloseEvent(Menu.Name)
 	WriteLine("System", ToString(), "OnGameReload")
 EndEvent
@@ -118,7 +123,6 @@ EndGroup
 
 Group Breath
 	Spell Property SystemXSE_UI_ScopeBreathEvent Auto Const Mandatory
-	ActorValue Property ActionPoints Auto Const Mandatory
 
 	int Property BreathHeld = 0 AutoReadOnly
 	int Property BreathReleased = 1 AutoReadOnly

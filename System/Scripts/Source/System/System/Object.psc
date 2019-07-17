@@ -1,22 +1,20 @@
-Scriptname System:Object Extends Form Native Const Hidden
+ScriptName System:Object Extends Form Native Const Hidden
 {Provides methods for working with states, such as running, awaiting, or clearing script states.
 
 **See Also**
 * https://docs.microsoft.com/en-us/dotnet/api/system.object
+* https://docs.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo
 }
 import System:Exception
 import System:Log
 
 
+; Properties
+;---------------------------------------------
+
 Group Properties
 	int Property Invalid = -1 AutoReadOnly
 	{A generic invalid integer value.}
-
-	int Property FormID Hidden
-		int Function Get()
-			return GetFormID()
-		EndFunction
-	EndProperty
 EndGroup
 
 Group States
@@ -103,7 +101,7 @@ bool Function NewState(ScriptObject this, int stateID) Global
 		this.StartTimer(0.1, stateID)
 		return true
 	Else
-		WriteUnexpectedValue("System:Object", "NewState", "this", "Cannot request state ID "+stateID+" on a none script.")
+		System:Debug.WriteUnexpectedValue("System:Object", "NewState", "this", "Cannot request state ID "+stateID+" on a none script.")
 		return false
 	EndIf
 EndFunction
@@ -118,11 +116,11 @@ bool Function AwaitState(ScriptObject this, string statename = "Busy") Global
 			EndWhile
 			return true
 		Else
-			WriteUnexpected(this, "AwaitState", "Could not await the '"+statename+"' state.")
+			System:Debug.WriteUnexpected(this, "AwaitState", "Could not await the '"+statename+"' state.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System:Object", "AwaitState", "this", "The script cannot be none.")
+		System:Debug.WriteUnexpectedValue("System:Object", "AwaitState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
@@ -132,23 +130,23 @@ EndFunction
 bool Function BeginState(ScriptObject this, string statename = "Busy") Global
 	If (this)
 		If (StateRunning(this))
-			WriteUnexpected(this, "BeginState", "Cannot start the '"+statename+"' state while '"+this.GetState()+"' state is running.")
+			System:Debug.WriteUnexpected(this, "BeginState", "Cannot start the '"+statename+"' state while '"+this.GetState()+"' state is running.")
 			return false
 		Else
 			If (statename)
 				If (ChangeState(this, statename))
 					return true
 				Else
-					WriteUnexpected(this, "BeginState", "Start state cannot change state for the '"+statename+"' state.")
+					System:Debug.WriteUnexpected(this, "BeginState", "Start state cannot change state for the '"+statename+"' state.")
 					return false
 				EndIf
 			Else
-				WriteUnexpectedValue(this, "BeginState", "statename", "Cannot operate on a none or empty state.")
+				System:Debug.WriteUnexpectedValue(this, "BeginState", "statename", "Cannot operate on a none or empty state.")
 				return false
 			EndIf
 		EndIf
 	Else
-		WriteUnexpectedValue("System:Object", "BeginState", "this", "The script cannot be none.")
+		System:Debug.WriteUnexpectedValue("System:Object", "BeginState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
@@ -159,7 +157,7 @@ bool Function StateRunning(ScriptObject this) Global
 	If (this)
 		return this.GetState() != EmptyState()
 	Else
-		WriteUnexpectedValue("System:Object", "StateRunning", "this", "The script cannot be none.")
+		System:Debug.WriteUnexpectedValue("System:Object", "StateRunning", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
@@ -170,11 +168,11 @@ bool Function ClearState(ScriptObject this) Global
 		If (ChangeState(this, EmptyState()))
 			return true
 		Else
-			WriteUnexpected(this, "ClearState", "Unable to change the scripts state to empty.")
+			System:Debug.WriteUnexpected(this, "ClearState", "Unable to change the scripts state to empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System:Object", "ClearState", "this", "The script cannot be none.")
+		System:Debug.WriteUnexpectedValue("System:Object", "ClearState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction
@@ -186,11 +184,11 @@ bool Function ChangeState(ScriptObject this, string statename) Global
 			this.GoToState(statename)
 			return true
 		Else
-			WriteUnexpectedValue(this, "ChangeState", "statename", "The script is already in the '"+statename+"' state.")
+			System:Debug.WriteUnexpectedValue(this, "ChangeState", "statename", "The script is already in the '"+statename+"' state.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System:Object", "ChangeState", "this", "The script cannot be none.")
+		System:Debug.WriteUnexpectedValue("System:Object", "ChangeState", "this", "The script cannot be none.")
 		return false
 	EndIf
 EndFunction

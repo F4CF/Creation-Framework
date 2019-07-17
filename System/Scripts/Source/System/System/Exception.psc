@@ -1,20 +1,63 @@
-Scriptname System:Exception Extends System:Object Const Native Hidden DebugOnly
+ScriptName System:Exception Extends System:Object Const Native Hidden DebugOnly
 {Serves as the base class for system exceptions namespace.
 
 **Remarks**
 This class is provided as a means to differentiate between system exceptions and application exceptions.
 
 **See Also**
+* https://docs.microsoft.com/en-us/dotnet/api/system.exception
+* https://docs.microsoft.com/en-us/dotnet/api/system.exception.innerexception
 * https://docs.microsoft.com/en-us/dotnet/api/system.systemexception
+* https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase
 }
 import System:Log
+
+; ; Represents errors that occur during application execution.
+; Struct ExceptionInfo
+; 	string Source = "" ; `Source` Gets or sets the name of the application or the object that causes the error.
+; 	string Site = ""   ; `TargetSite` Gets the method that throws the current exception.
+; 	string Text = ""   ; `Message` Gets a message that describes the current exception.
+; 	string Help = ""   ; `HelpLink` Gets or sets a link to the help file associated with this exception.
+; EndStruct
+
+; ExceptionInfo Function NewException(string source = "", string site = "", string text = "", string help = "") Global
+; 	ExceptionInfo exception = new ExceptionInfo
+; 	exception.Source = source
+; 	exception.Site = site
+; 	exception.Text = text
+; 	exception.Help = help
+; 	return exception
+; EndFunction
+
+; string Function ExceptionToString(ExceptionInfo value) Global
+; 	return value
+; EndFunction
+
+
+; Methods
+;---------------------------------------------
+
+bool Function Throw(string script, string member, string text = "") Global DebugOnly
+	return System:Debug.WriteMessage(script, member, text)
+EndFunction
 
 
 ; Exceptions
 ;---------------------------------------------
 
-bool Function Throw(var script, string member, string text = "") Global DebugOnly
-	return WriteMessage(script, member, text)
+; Members marked as abstract must be implemented by extending classes.
+;
+; **Remarks**
+; The abstract modifier indicates that the member being modified has a missing or incomplete implementation.
+; The abstract modifier can be used within functions, events, and full properties.
+;
+; **See Also**
+; * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract
+bool Function Abstract(ScriptObject script, string member, string text = "") Global DebugOnly
+	; First parameter is a `ScriptObject` because an instance is required for abstract.
+	; Global functions cannot be overriden, thus `Abstract` is not allowed.
+	string help = "This member must be overridden with an extending script."
+	return Throw(script, "Exception: Abstraction Not Implemented!", member+": The member '"+member+"' MUST be implemented. "+text)
 EndFunction
 
 
@@ -29,7 +72,7 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception
-bool Function ThrowNotImplemented(var script, string member, string text = "") Global DebugOnly
+bool Function ThrowNotImplemented(string script, string member, string text = "") Global DebugOnly
 	return Throw(script, "Exception: Not Implemented!", member+": The member '"+member+"' is not implemented yet. "+text)
 EndFunction
 
@@ -42,7 +85,7 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.invalidoperationexception
-bool Function ThrowInvalidOperation(var script, string member, string text = "") Global DebugOnly
+bool Function ThrowInvalidOperation(string script, string member, string text = "") Global DebugOnly
 	return Throw(script, "Exception: Invalid Operation!", member+": The operation within member '"+member+"' is invalid. "+text)
 EndFunction
 
@@ -55,22 +98,6 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.notsupportedexception
-bool Function ThrowNotSupported(var script, string member, string text = "") Global DebugOnly
+bool Function ThrowNotSupported(string script, string member, string text = "") Global DebugOnly
 	return Throw(script, member, text)
-EndFunction
-
-
-; Language
-;---------------------------------------------
-
-; Members marked as abstract must be implemented by extending classes.
-;
-; **Remarks**
-; The abstract modifier indicates that the member being modified has a missing or incomplete implementation.
-; The abstract modifier can be used within functions, events, and full properties.
-;
-; **See Also**
-; * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract
-bool Function Abstract(var script, string member, string text = "") Global DebugOnly
-	return Throw(script, "Exception: Abstraction Not Implemented!", member+": The member '"+member+"' MUST be implemented. "+text)
 EndFunction

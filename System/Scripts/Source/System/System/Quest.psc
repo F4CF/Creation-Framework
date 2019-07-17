@@ -19,6 +19,7 @@ Scriptname System:Quest Extends System:Object Native Const Hidden
 ; If a Quest is set to run on game startup and doesn't have the "Run Once" flag ticked, its OnInit event will fire twice when it starts.
 ; Ticking the "Run Once" flag, however, prevents the Quest from being reset when it starts, so in this case its OnInit event will only fire once.
 
+
 ; Instance
 ;---------------------------------------------
 

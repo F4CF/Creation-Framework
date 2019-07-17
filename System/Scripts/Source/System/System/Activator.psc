@@ -40,13 +40,13 @@ EndFunction
 ;---------------------------------------------
 
 System:Activator Function This() Global
-	Properties:Assembly assembly = System:Properties:Assembly.Type()
+	System:Assembly:SYS assembly = System:Assembly:SYS.Type()
 	return System:Type.Read(assembly.File, assembly.System) as System:Activator
 EndFunction
 
 
 Activator Function GetType(int formID) Global
-	Properties:Assembly assembly = System:Properties:Assembly.Type()
+	System:Assembly:SYS assembly = System:Assembly:SYS.Type()
 	return System:Type.Read(assembly.File, formID) as Activator
 EndFunction
 
@@ -57,15 +57,18 @@ var Function Type(int aFormID)
 EndFunction
 
 
-ObjectReference Function Initialize(Activator aActivator)
-	return Factory.PlaceAtMe(aActivator)
+ObjectReference Function Initialize(Activator object)
+	System:Assembly:SYS assembly = System:Assembly:SYS.Type()
+	FormList activation = System:Type.Read(assembly.File, assembly.System_Activation) as FormList
+	ObjectReference factory = activation.GetAt(0) as ObjectReference
+	return factory.PlaceAtMe(object)
 EndFunction
 
 
 ; Properties
 ;---------------------------------------------
 
-Group Objects
-	ObjectReference Property Factory Auto Const Mandatory
-	{A "COC Marker Heading" placed within the `SystemCell`.}
-EndGroup
+; Group Objects
+; 	ObjectReference Property Factory Auto Const Mandatory
+; 	{A "COC Marker Heading" placed within the `SystemCell`.}
+; EndGroup

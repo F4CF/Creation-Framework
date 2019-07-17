@@ -6,6 +6,7 @@ ScriptName System:UI:Buttons:Menu Extends System:UI:MenuCustom Default
 import System
 import System:Log
 import System:Object
+import System:Debug
 
 Button[] Buttons
 Button SelectedButton

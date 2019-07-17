@@ -45,7 +45,7 @@ bool Function Register()
 		WriteLine("System", ToString(), "Registered as a custom menu.")
 		return true
 	Else
-		WriteUnexpected("System", ToString(), "Register", "Failed to register as a custom menu.")
+		System:Debug.WriteUnexpected("System", ToString(), "Register", "Failed to register as a custom menu.")
 		return false
 	EndIf
 EndFunction
@@ -55,7 +55,7 @@ bool Function GetVisible()
 	If (IsOpen)
 		return UI.Get(Name, GetMember("Visible")) as bool
 	Else
-		WriteUnexpected("System", ToString(), "GetVisible", "The menu is not open.")
+		System:Debug.WriteUnexpected("System", ToString(), "GetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -66,7 +66,7 @@ bool Function SetVisible(bool value)
 		WriteLine("System", self, ToString()+" setting visible to "+value)
 		return UI.Set(Name, GetMember("Visible"), value)
 	Else
-		WriteUnexpected("System", ToString(), "SetVisible", "The menu is not open.")
+		System:Debug.WriteUnexpected("System", ToString(), "SetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction

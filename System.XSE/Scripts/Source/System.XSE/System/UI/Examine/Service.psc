@@ -2,6 +2,7 @@ ScriptName System:UI:Examine:Service Extends System:UI:Examine:ServiceType
 {Injects AS3 code into the vanilla Examine menu.}
 import System:Log
 import System:UI:Examine:Menu
+import System:Debug
 
 bool Loaded = false
 string AssetValue = "" ; the loader's instance variable
