@@ -1,9 +1,7 @@
 ScriptName System:UI:Visor:Client Extends System:UI:Client
 import System:Log
 
-
 Actor Player
-
 
 ; Events
 ;---------------------------------------------
@@ -16,9 +14,6 @@ EndEvent
 Event OnQuestInit()
 	Player = Game.GetPlayer()
 EndEvent
-
-
-
 
 
 ; Properties

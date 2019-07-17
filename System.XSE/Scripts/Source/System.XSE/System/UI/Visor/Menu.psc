@@ -39,17 +39,18 @@ Event OnGameReload()
 	If (Register())
 		RegisterForExternalEvent(ClientLoadedCallback, "OnClientLoaded")
 	EndIf
+	WriteLine("System", self, "OnGameReload", ToString())
 EndEvent
 
 
 Event OnClientLoaded(bool success, string instance)
-	WriteLine("System", self, "OnClientLoaded", "success:"+success+", instance:"+instance)
+	WriteLine("System", self, "OnClientLoaded", ToString()+":(success:"+success+", instance:"+instance+")")
 	If (success)
 		ClientInstance = instance
 	Else
 		ClientInstance = ""
 	EndIf
-	LoadedEventArgs e = new LoadedEventArgs
+	System:UI:Client:LoadedEventArgs e = new System:UI:Client:LoadedEventArgs
 	e.Success = success
 	e.Instance = instance
 	Service.SendLoadedEvent(e)
@@ -85,15 +86,16 @@ bool Function Load(string value)
 		If (value)
 			var[] arguments = new var[1]
 			arguments[0] = value
-			UI.Invoke(Name, GetMember("Load"), arguments)
-			WriteLine("System", self, "Load:"+value)
-			return true
+			string member = GetMember("Load")
+			bool success = UI.Invoke(Name, member, arguments) as bool
+			WriteLine("System", self, "Load", ToString()+":(value:"+value+", success:"+success+", member:"+member+")")
+			return success
 		Else
-			WriteUnexpectedValue("System", self, "Load", "value", "The value cannot be none or empty.")
+			WriteUnexpectedValue("System", self, "Load", "value", ToString()+":The value cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected("System", self, "Load", ToString()+" is not open.")
+		WriteUnexpected("System", self, "Load", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -103,7 +105,7 @@ bool Function SetAlpha(float value)
 	If (IsOpen)
 		return UI.Set(Name, GetMember("Alpha"), value)
 	Else
-		WriteUnexpected("System", self, "SetAlpha", ToString()+" is not open.")
+		WriteUnexpected("System", self, "SetAlpha", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -114,11 +116,11 @@ bool Function AlphaTo(float value, float duration)
 		var[] arguments = new var[2]
 		arguments[0] = value
 		arguments[1] = duration
-		UI.Invoke(Name, GetMember("AlphaTo"), arguments)
-		WriteLine("System", self, "AlphaTo", "value:"+value+", duration:"+duration)
-		return true
+		bool success = UI.Invoke(Name, GetMember("AlphaTo"), arguments) as bool
+		WriteLine("System", self, "AlphaTo", ToString()+":(value:"+value+", duration:"+duration+", success:"+success+")")
+		return success
 	Else
-		WriteUnexpected("System", self, "AlphaTo", ToString()+" is not open.")
+		WriteUnexpected("System", self, "AlphaTo", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -127,5 +129,5 @@ EndFunction
 ; @overrides
 string Function ToString()
 	{The string representation of this type.}
-	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Client:"+Client+"]"
+	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+", Flags:"+Flags+", Client:"+Client+"]"
 EndFunction

@@ -1,11 +1,11 @@
 package System
 {
-	import flash.display.DisplayObject;
-	import flash.display.MovieClip;
-	import flash.events.Event;
 	import Shared.IMenu;
 	import System.Diagnostics.Debug;
 	import System.Display;
+	import flash.display.DisplayObject;
+	import flash.display.MovieClip;
+	import flash.events.Event;
 
 	public class Menu extends IMenu
 	{

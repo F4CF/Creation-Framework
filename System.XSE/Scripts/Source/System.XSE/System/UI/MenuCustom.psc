@@ -42,10 +42,10 @@ EndFunction
 
 bool Function Register()
 	If (UI.RegisterCustomMenu(Name, File, Root, Flags))
-		WriteLine("System", ToString(), "Registered as a custom menu.")
+		WriteLine("System", self, "Register", ToString()+":Registered as a custom menu.")
 		return true
 	Else
-		System:Debug.WriteUnexpected("System", ToString(), "Register", "Failed to register as a custom menu.")
+		System:Debug.WriteUnexpected("System", self, "Register", ToString()+":Failed to register as a custom menu.")
 		return false
 	EndIf
 EndFunction
@@ -55,7 +55,7 @@ bool Function GetVisible()
 	If (IsOpen)
 		return UI.Get(Name, GetMember("Visible")) as bool
 	Else
-		System:Debug.WriteUnexpected("System", ToString(), "GetVisible", "The menu is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetVisible", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -66,7 +66,13 @@ bool Function SetVisible(bool value)
 		WriteLine("System", self, ToString()+" setting visible to "+value)
 		return UI.Set(Name, GetMember("Visible"), value)
 	Else
-		System:Debug.WriteUnexpected("System", ToString(), "SetVisible", "The menu is not open.")
+		System:Debug.WriteUnexpected("System", self, "SetVisible", ToString()+":The menu is not open.")
 		return false
 	EndIf
+EndFunction
+
+; @overrides
+string Function ToString()
+	{The string representation of this type.}
+	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+", Flags:"+Flags+"]"
 EndFunction

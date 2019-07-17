@@ -97,53 +97,33 @@ EndFunction
 
 ; Opens this menu.
 bool Function Open()
-	If (IsRegistered)
-		return UI.OpenMenu(Name)
+	If (IsOpen)
+		System:Debug.WriteUnexpected("System", self, "Open", ToString()+":The menu is already open.")
+		return true
 	Else
-		System:Debug.WriteUnexpected("System", ToString(), "Open", "The menu is not registered.")
-		return false
+		If (IsRegistered)
+			return UI.OpenMenu(Name)
+		Else
+			System:Debug.WriteUnexpected("System", self, "Open", ToString()+":The menu is not registered.")
+			return false
+		EndIf
 	EndIf
 EndFunction
 
 ; Closes this menu.
 bool Function Close()
-	If (IsRegistered)
-		return UI.CloseMenu(Name)
+	If (!IsOpen)
+		System:Debug.WriteUnexpected("System", self, "Close", ToString()+":The menu is already closed.")
+		return true
 	Else
-		System:Debug.WriteUnexpected("System", ToString(), "Close", "The menu is not registered.")
-		return false
+		If (IsRegistered)
+			return UI.CloseMenu(Name)
+		Else
+			System:Debug.WriteUnexpected("System", self, "Close", ToString()+":The menu is not registered.")
+			return false
+		EndIf
 	EndIf
 EndFunction
-
-
-; bool Function Open()
-; 	If (IsOpen)
-; 		System:Debug.WriteUnexpected("System", self, "Open", ToString()+" is already open.")
-; 		return true
-; 	Else
-; 		If (IsRegistered)
-; 			return UI.OpenMenu(Name)
-; 		Else
-; 			System:Debug.WriteUnexpected("System", self, "Open", ToString()+" is not registered.")
-; 			return false
-; 		EndIf
-; 	EndIf
-; EndFunction
-
-
-; bool Function Close()
-; 	If (!IsOpen)
-; 		System:Debug.WriteUnexpected("System", self, "Close", ToString()+" is already closed.")
-; 		return true
-; 	Else
-; 		If (IsRegistered)
-; 			return UI.CloseMenu(Name)
-; 		Else
-; 			System:Debug.WriteUnexpected("System", self, "Close", ToString()+" is not registered.")
-; 			return false
-; 		EndIf
-; 	EndIf
-; EndFunction
 
 
 var Function Get(string member)
@@ -152,11 +132,11 @@ var Function Get(string member)
 		If (member)
 			return UI.Get(Name, GetMember(member))
 		Else
-			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", ToString()+":The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+":The menu is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -168,11 +148,11 @@ bool Function Set(string member, var argument)
 		If (member)
 			return UI.Set(Name, GetMember(member), argument)
 		Else
-			System:Debug.WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue(self, "Set", "member", ToString()+":The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "Set", ToString()+":The menu is not open.")
 		return ""
 	EndIf
 EndFunction
@@ -184,18 +164,18 @@ var Function Invoke(string member, var[] arguments = none)
 		If (member)
 			return UI.Invoke(Name, GetMember(member), arguments)
 		Else
-			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "Invoke", "member", ToString()+":The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "Invoke", ToString()+":The menu is not open.")
 		return ""
 	EndIf
 EndFunction
 
 
 ; Returns the full AS3 instance path for the given member name.
-; TODO: Maybe dont check for IsOpen, only handle static string concate.
+; TODO:Maybe dont check for IsOpen, only handle static string concate.
 string Function GetMember(string member, string variable = "")
 	If (IsOpen)
 		If (member)
@@ -205,33 +185,18 @@ string Function GetMember(string member, string variable = "")
 				return Root+"."+member
 			EndIf
 		Else
-			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The argument cannot be none or empty.")
+			System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", ToString()+":The argument cannot be none or empty.")
 			return ""
 		EndIf
 	Else
-		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+" is not open.")
+		System:Debug.WriteUnexpected("System", self, "GetMember", ToString()+":The menu is not open.")
 		return ""
 	EndIf
 EndFunction
 
 
-; Below is from visor menu. Should I even check for IsOpen?
-
-; string Function GetMember(string member)
-; 	If !(member)
-; 		System:Debug.WriteUnexpectedValue("System", self, "GetMember", "member", "The value cannot be none or empty.")
-; 		return ""
-; 	ElseIf !(Root)
-; 		System:Debug.WriteUnexpectedValue("System", self, "GetMember", "Root", "The value cannot be none or empty.")
-; 		return ""
-; 	Else
-; 		return Root+"."+member
-; 	EndIf
-; EndFunction
-
-
 ; @overrides
 string Function ToString()
 	{The string representation of this type.}
-	return "[Name:"+Name+", File:"+File+"]"
+	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+"]"
 EndFunction

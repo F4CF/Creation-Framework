@@ -10,8 +10,9 @@
 	import flash.events.IOErrorEvent;
 	import System.Diagnostics.Debug;
 	import System.Diagnostics.Utility;
+	import System.Menu;
 
-	public class VisorMenu extends MovieClip implements F4SE.ICodeObject
+	public class VisorMenu extends Menu implements F4SE.ICodeObject
 	{
 		// Stage
 		public var Controller:MovieClip;
@@ -81,17 +82,19 @@
 		// Methods
 		//---------------------------------------------
 
-		public function Load(filepath:String):void
+		public function Load(filepath:String):Boolean
 		{
 			Debug.WriteLine("[VisorMenu]", "(Load)", "Setting the filepath to '"+filepath+"'.");
 			Overlay.Load(filepath);
+			return true;
 		}
 
 
-		public function AlphaTo(value:Number, duration:Number):void
+		public function AlphaTo(value:Number, duration:Number):Boolean
 		{
 			Debug.WriteLine("[VisorMenu]", "(AlphaTo)", "Alpha is tweening from "+alpha+" to "+value+" over "+duration+" seconds.");
 			TweenMax.to(Controller, duration, {alpha:value});
+			return true;
 		}
 
 
