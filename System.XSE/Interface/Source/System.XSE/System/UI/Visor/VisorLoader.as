@@ -1,4 +1,4 @@
-﻿package System.UI.Visor
+﻿package
 {
 	import Components.PriorityLoader;
 

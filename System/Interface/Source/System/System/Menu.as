@@ -1,21 +1,23 @@
 package System
 {
-	import Shared.IMenu;
-	import System.Diagnostics.Debug;
-	import System.Display;
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
+	import Shared.IMenu;
+	import System.Diagnostics.Debug;
+	import System.Display;
 
 	public class Menu extends IMenu
 	{
-		private var menu:MovieClip;
-		public function get MenuRoot():MovieClip { return menu; }
-
-		// IDisplay
+		public function get Root():MovieClip { return stage.getChildAt(0) as MovieClip; }
+		public function get Instance():String { return Display.GetInstance(this); }
 		public function get Exists():Boolean { return true; }
+
 		public function get Visible():Boolean { return this.visible; }
-		public function set Visible(argument:Boolean):void { this.visible = argument; }
+		public function set Visible(value:Boolean):void { this.visible = value; }
+
+		public function get Alpha():Number { return this.alpha; }
+		public function set Alpha(value:Number):void { this.alpha = value; }
 
 
 		// Menu
@@ -24,14 +26,19 @@ package System
 		public function Menu()
 		{
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
-			Debug.WriteLine("[System.Menu]", "(ctor)", Display.GetInstance(this));
+			Debug.WriteLine("[System.Menu]", "(ctor)", "Root:"+Root, "Instance:"+Instance);
 		}
 
 
-		public function OnAddedToStage(e:Event) : void
+		protected function OnAddedToStage(e:Event) : void
 		{
-			Debug.WriteLine("[System.Menu]", "(OnAddedToStage)", Display.GetInstance(this));
-			menu = stage.getChildAt(0) as MovieClip;
+			Debug.WriteLine("[System.Menu]", "(OnAddedToStage)", "Root:"+Root, "Instance:"+Instance);
+		}
+
+
+		protected function OnRemovedFromStage(e:Event) : void
+		{
+			Debug.WriteLine("[System.Menu]", "(OnRemovedFromStage)");
 		}
 
 

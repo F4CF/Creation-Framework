@@ -1,11 +1,11 @@
-﻿package System.UI.Code
+﻿package
 {
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import F4SE.ICodeObject;
 	import flash.display.MovieClip;
 	import System.Diagnostics.Debug;
 
-	public class Code extends MovieClip implements F4SE.ICodeObject
+	public class Code extends Menu implements F4SE.ICodeObject
 	{
 		// Stage
 		public var Controller:MovieClip;
@@ -28,7 +28,7 @@
 		// @F4SE.ICodeObject
 		public function onF4SEObjCreated(codeObject:*):void
 		{
-			F4SE.Extensions.API = codeObject;
+			F4SE.XSE.API = codeObject;
 			Debug.WriteLine("[Code]", "(onF4SEObjCreated)");
 		}
 

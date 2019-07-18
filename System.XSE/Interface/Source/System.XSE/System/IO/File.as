@@ -1,6 +1,6 @@
 package System.IO
 {
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import System.Diagnostics.Debug;
@@ -28,7 +28,7 @@ package System.IO
 		{
 			var name:String = Path.GetFileName(filepath);
 			var folder:String = Path.GetDirectory(filepath);
-			return F4SE.Extensions.GetDirectoryListing(folder, name, false).length == 1;
+			return F4SE.XSE.GetDirectoryListing(folder, name, false).length == 1;
 		}
 
 
@@ -43,7 +43,7 @@ package System.IO
 		{
 			var name:String = Path.GetFileName(filepath);
 			var folder:String = Path.GetDirectory("Data\\"+archive+"\\"+filepath);
-			return F4SE.Extensions.GetDirectoryListing(folder, name, false).length == 1;
+			return F4SE.XSE.GetDirectoryListing(folder, name, false).length == 1;
 		}
 
 

@@ -1,9 +1,9 @@
-﻿package System.UI.Visor
+﻿package
 {
 	import com.greensock.*;
 	import com.greensock.easing.*;
 	import Components.AssetLoader;
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import F4SE.ICodeObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
@@ -25,39 +25,32 @@
 		// Client
 		private const ClientLoadedCallback:String = "System_UI_VisorMenu_ClientLoadedCallback";
 
-		// Properties
-		public function get Visible():Boolean { return this.visible; }
-		public function set Visible(value:Boolean):void { this.visible = value; }
-
-		public function get Alpha():Number { return this.alpha; }
-		public function set Alpha(value:Number):void { this.alpha = value; }
-
 
 		// Initialize
 		//---------------------------------------------
 
 		public function VisorMenu()
 		{
-			System.Diagnostics.Debug.Prefix = "Visor";
-			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
+			System.Diagnostics.Debug.Prefix = "System:UI:Visor";
+			super();
 			Debug.WriteLine("[VisorMenu]", "(ctor)", "Constructor Code", this.loaderInfo.url);
 		}
 
 
-		private function OnAddedToStage(e:Event):void
+		protected override function OnAddedToStage(e:Event):void
 		{
 			Overlay = new VisorLoader(Name, MountID);
 			Overlay.addEventListener(AssetLoader.LOAD_COMPLETE, this.OnLoadComplete);
 			Overlay.addEventListener(AssetLoader.LOAD_ERROR, this.OnLoadError);
 			Controller.addChild(Overlay);
-			Debug.WriteLine("[VisorMenu]", "(OnAddedToStage)");
+			Debug.WriteLine("[VisorMenu]", "(OnAddedToStage)", "Client:"+GetClient());
 		}
 
 
 		// @F4SE.ICodeObject
 		public function onF4SEObjCreated(codeObject:*):void
 		{
-			F4SE.Extensions.API = codeObject;
+			F4SE.XSE.API = codeObject;
 			Debug.WriteLine("[VisorMenu]", "(onF4SEObjCreated)");
 		}
 
@@ -67,14 +60,14 @@
 		private function OnLoadComplete(e:Event):void
 		{
 			var client:String = GetClient();
-			Extensions.SendExternalEvent(ClientLoadedCallback, true, client);
+			XSE.SendExternalEvent(ClientLoadedCallback, true, client);
 			Debug.WriteLine("[VisorMenu]", "(OnLoadComplete)", "Overlay found at '"+Overlay.FilePath+"' with client instance of '"+client+"'.");
 		}
 
 
 		private function OnLoadError(e:IOErrorEvent):void
 		{
-			Extensions.SendExternalEvent(ClientLoadedCallback, false, null);
+			XSE.SendExternalEvent(ClientLoadedCallback, false, null);
 			Debug.WriteLine("[VisorMenu]", "(OnLoadError)", "No overlay found at '"+Overlay.FilePath+"'.");
 		}
 

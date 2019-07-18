@@ -1,6 +1,6 @@
 package Components
 {
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import flash.display.DisplayObject;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
@@ -167,7 +167,7 @@ package Components
 			{
 				Debug.WriteLine("[Components.AssetLoader]", "(Mount)", "filepath:"+filepath, "MountID: "+MountID);
 				Unmount(filepath);
-				F4SE.Extensions.MountImage(MenuName, filepath, MountID);
+				F4SE.XSE.MountImage(MenuName, filepath, MountID);
 				return true;
 			}
 			else
@@ -227,7 +227,7 @@ package Components
 			{
 				if (Path.GetExtension(filepath) == File.DDS)
 				{
-					F4SE.Extensions.UnmountImage(MenuName, filepath);
+					F4SE.XSE.UnmountImage(MenuName, filepath);
 					Debug.WriteLine("[Components.AssetLoader]", "(Unmount)", "Unmounted the texture '"+filepath+"' from "+MenuName);
 					return true;
 				}

@@ -7,7 +7,7 @@ package F4SE
 	 * https://www.creationkit.com/fallout4/index.php?title=Category:F4SE
 	 * TODO: Add boolean return values for functions.
 	 */
-	public class Extensions
+	public class XSE
 	{
 		/** The F4SE API code object to use. */
 		public static var API:*;
@@ -27,13 +27,13 @@ package F4SE
 				}
 				else
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "API.version", "The 'API.version' object cannot be null.");
+					Debug.WriteLine("[F4SE.XSE]", "(GetVersion)", "API.version", "The 'API.version' object cannot be null.");
 					return null;
 				}
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(GetVersion)", "API", "The 'API' object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(GetVersion)", "API", "The 'API' object cannot be null.");
 				return null;
 			}
 		}
@@ -68,20 +68,20 @@ package F4SE
 					}
 					catch (error:Error)
 					{
-						Debug.WriteLine("[F4SE.Extensions]", "(SendExternalEvent)", "ERROR:", error.toString());
+						Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "ERROR:", error.toString());
 						success = false;
 					}
 					return success;
 				}
 				else
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "SendExternalEvent", "eventID", "The `eventID` cannot be null.");
+					Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "eventID", "The `eventID` cannot be null.");
 					return false;
 				}
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "SendExternalEvent", "API", "The `API` object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "API", "The `API` object cannot be null.");
 				return false;
 			}
 		}
@@ -105,13 +105,13 @@ package F4SE
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(GetDirectoryListing)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(GetDirectoryListing)", "ERROR:", error.toString());
 				}
 				return array;
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(GetDirectoryListing)", "The API object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(GetDirectoryListing)", "The API object cannot be null.");
 				return null;
 			}
 		}
@@ -127,7 +127,7 @@ package F4SE
 		{
 			if (API != null)
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", menuName, mountPath, mountName);
+				Debug.WriteLine("[F4SE.XSE]", "(MountImage)", menuName, mountPath, mountName);
 				var success:Boolean = true;
 				try
 				{
@@ -135,14 +135,14 @@ package F4SE
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(MountImage)", "ERROR:", error.toString());
 					success = false;
 				}
 				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(MountImage)", "The API object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(MountImage)", "The API object cannot be null.");
 				return false;
 			}
 		}
@@ -160,19 +160,19 @@ package F4SE
 				var success:Boolean = true;
 				try
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", menuName, mountPath);
+					Debug.WriteLine("[F4SE.XSE]", "(UnmountImage)", menuName, mountPath);
 					API.UnmountImage(menuName, mountPath);
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(UnmountImage)", "ERROR:", error.toString());
 					success = false;
 				}
 				return success;
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.Extensions]", "(UnmountImage)", "The API object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(UnmountImage)", "The API object cannot be null.");
 				return false;
 			}
 		}
@@ -190,7 +190,7 @@ package F4SE
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "GetMembers", "The API object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.XSE]", "GetMembers", "The API object cannot be null.");
 		// 	}
 		// }
 
@@ -207,7 +207,7 @@ package F4SE
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "CallFunctionNoWait", "The API object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.XSE]", "CallFunctionNoWait", "The API object cannot be null.");
 		// 	}
 		// }
 
@@ -224,7 +224,7 @@ package F4SE
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "AllowTextInput", "The API object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.XSE]", "AllowTextInput", "The API object cannot be null.");
 		// 	}
 		// }
 
@@ -241,7 +241,7 @@ package F4SE
 		// 	}
 		// 	else
 		// 	{
-		// 		Debug.WriteLine("[F4SE.Extensions]", "GetPlugins", "The API object cannot be null.");
+		// 		Debug.WriteLine("[F4SE.XSE]", "GetPlugins", "The API object cannot be null.");
 		// 	}
 		// }
 

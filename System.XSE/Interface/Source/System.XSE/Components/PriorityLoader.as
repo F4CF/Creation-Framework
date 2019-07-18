@@ -1,7 +1,7 @@
 ﻿package Components
 {
 	import Components.AssetLoader;
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import System.Diagnostics.Debug;

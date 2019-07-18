@@ -1,6 +1,6 @@
 package System.IO
 {
-	import F4SE.Extensions;
+	import F4SE.XSE;
 	import System.Diagnostics.Debug;
 
 	public class FileSystem
@@ -25,9 +25,9 @@ package System.IO
 		 */
 		public static function GetListing(path:String, match:String, recursive:Boolean=false):Vector.<FileSystemInfo>
 		{
-			if (F4SE.Extensions.API != null)
+			if (F4SE.XSE.API != null)
 			{
-				var array:Array = F4SE.Extensions.GetDirectoryListing(path, match, recursive);
+				var array:Array = F4SE.XSE.GetDirectoryListing(path, match, recursive);
 				if (array != null)
 				{
 					if(array.length > 0)
