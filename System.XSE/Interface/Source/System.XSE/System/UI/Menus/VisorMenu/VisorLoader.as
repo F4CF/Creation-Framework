@@ -1,6 +1,6 @@
 ﻿package
 {
-	import Components.PriorityLoader;
+	import System.UI.Components.PriorityLoader;
 
 	public dynamic class VisorLoader extends PriorityLoader
 	{

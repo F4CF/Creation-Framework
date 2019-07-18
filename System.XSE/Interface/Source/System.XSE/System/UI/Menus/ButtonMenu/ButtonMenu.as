@@ -1,16 +1,16 @@
 ﻿package
 {
-	import System.Menu;
 	import Shared.AS3.BSButtonHintBar;
 	import Shared.AS3.BSButtonHintData;
 	import Shared.GlobalFunc;
 	import System.Diagnostics.Debug;
 	import System.Diagnostics.Utility;
 	import System.Input;
+	import System.UI.MenuType;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 
-	public class ButtonMenu extends Menu implements IButtonMenu
+	public class ButtonMenu extends MenuType implements IButtonMenu
 	{
 
 		public var ButtonBarHolder:MovieClip;
@@ -21,6 +21,8 @@
 
 		public function ButtonMenu()
 		{
+			System.Diagnostics.Debug.Prefix = "System:UI:ButtonMenu";
+			super();
 			Debug.WriteLine("[ButtonMenu] Constructor");
 			ButtonBarHolder.ButtonHintBar_mc.bRedirectToButtonBarMenu = false;
 		}

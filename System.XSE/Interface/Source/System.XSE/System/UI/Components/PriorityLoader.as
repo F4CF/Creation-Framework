@@ -1,15 +1,15 @@
-﻿package Components
+﻿package System.UI.Components
 {
-	import Components.AssetLoader;
 	import F4SE.XSE;
-	import flash.display.MovieClip;
-	import flash.events.Event;
 	import System.Diagnostics.Debug;
 	import System.Diagnostics.Utility;
 	import System.Display;
 	import System.IO.File;
 	import System.IO.FileSystem;
 	import System.IO.Path;
+	import System.UI.Components.AssetLoader;
+	import flash.display.MovieClip;
+	import flash.events.Event;
 
 	public dynamic class PriorityLoader extends AssetLoader
 	{

@@ -1,13 +1,13 @@
-package System
+package System.UI
 {
-	import flash.display.DisplayObject;
-	import flash.display.MovieClip;
-	import flash.events.Event;
 	import Shared.IMenu;
 	import System.Diagnostics.Debug;
 	import System.Display;
+	import flash.display.DisplayObject;
+	import flash.display.MovieClip;
+	import flash.events.Event;
 
-	public class Menu extends IMenu
+	public class MenuType extends IMenu
 	{
 		public function get Root():MovieClip { return stage.getChildAt(0) as MovieClip; }
 		public function get Instance():String { return Display.GetInstance(this); }
@@ -20,25 +20,26 @@ package System
 		public function set Alpha(value:Number):void { this.alpha = value; }
 
 
-		// Menu
+		// MenuType
 		//---------------------------------------------
 
-		public function Menu()
+		public function MenuType()
 		{
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
-			Debug.WriteLine("[System.Menu]", "(ctor)", "Root:"+Root, "Instance:"+Instance);
+			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
+			Debug.WriteLine("[System.MenuType]", "(ctor)", "Root:"+Root, "Instance:"+Instance);
 		}
 
 
-		protected function OnAddedToStage(e:Event) : void
+		protected function OnAddedToStage(e:Event):void
 		{
-			Debug.WriteLine("[System.Menu]", "(OnAddedToStage)", "Root:"+Root, "Instance:"+Instance);
+			Debug.WriteLine("[System.MenuType]", "(OnAddedToStage)", "Root:"+Root, "Instance:"+Instance);
 		}
 
 
-		protected function OnRemovedFromStage(e:Event) : void
+		protected function OnRemovedFromStage(e:Event):void
 		{
-			Debug.WriteLine("[System.Menu]", "(OnRemovedFromStage)");
+			Debug.WriteLine("[System.MenuType]", "(OnRemovedFromStage)");
 		}
 
 

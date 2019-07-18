@@ -1,17 +1,17 @@
-package Components
+package System.UI.Components
 {
 	import F4SE.XSE;
+	import System.Diagnostics.Debug;
+	import System.Display;
+	import System.IO.File;
+	import System.IO.FileSystem;
+	import System.IO.Path;
 	import flash.display.DisplayObject;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.net.URLRequest;
-	import System.Diagnostics.Debug;
-	import System.Display;
-	import System.IO.File;
-	import System.IO.FileSystem;
-	import System.IO.Path;
 
 	/**
 	 * This class is used to load SWF & DDS files.

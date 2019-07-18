@@ -1,18 +1,18 @@
 ﻿package
 {
+	import F4SE.ICodeObject;
+	import F4SE.XSE;
+	import System.Diagnostics.Debug;
+	import System.Diagnostics.Utility;
+	import System.UI.Components.AssetLoader;
+	import System.UI.MenuType;
 	import com.greensock.*;
 	import com.greensock.easing.*;
-	import Components.AssetLoader;
-	import F4SE.XSE;
-	import F4SE.ICodeObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
-	import System.Diagnostics.Debug;
-	import System.Diagnostics.Utility;
-	import System.Menu;
 
-	public class VisorMenu extends Menu implements F4SE.ICodeObject
+	public class VisorMenu extends MenuType implements F4SE.ICodeObject
 	{
 		// Stage
 		public var Controller:MovieClip;
@@ -37,7 +37,7 @@
 		}
 
 
-		protected override function OnAddedToStage(e:Event):void
+		override protected function OnAddedToStage(e:Event):void
 		{
 			Overlay = new VisorLoader(Name, MountID);
 			Overlay.addEventListener(AssetLoader.LOAD_COMPLETE, this.OnLoadComplete);
