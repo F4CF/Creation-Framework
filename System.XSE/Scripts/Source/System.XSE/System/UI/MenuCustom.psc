@@ -1,16 +1,41 @@
-Scriptname System:UI:MenuCustom extends System:UI:Menu Hidden Native Const
+ScriptName System:UI:MenuCustom Extends System:UI:Menu Hidden Native Const
 {A base script for custom menu types.}
+import System:Exception
 import System:Log
+
+; ICustom
+;---------------------------------------------
+
+; The `ICustom` language interface must be implemented.
+ICustom Function ICustom()
+	Abstract(self, "ICustom", "The language interface must be implemented on a child class.")
+EndFunction
+
+Struct ICustom
+	string File = ""
+	{The swf file path of this menu without the file extension.
+	The root directory is relative to `Data\Interface`.}
+	int MenuFlags = 0x801849D
+	{The menu flags to use.}
+	int MovieFlags = 3
+	{The movie flags to use.}
+	int ExtendedFlags = 3
+	{The extended flags to use.}
+	int Depth = 6
+	{The menu depth to use.}
+EndStruct
 
 
 ; Properties
 ;---------------------------------------------
 
 Group Properties
-	UI:MenuData Property Flags Hidden
-		{@virtual}
-		UI:MenuData Function Get()
-			return GetFlags()
+	; TODO: The `File` is used by custom menus only.
+	string Property File Hidden
+		{The swf file path of this menu without the file extension.
+		The root directory is relative to `Data\Interface`.}
+		string Function Get()
+			return ICustom().File
 		EndFunction
 	EndProperty
 EndGroup
@@ -33,15 +58,14 @@ EndGroup
 ; Methods
 ;---------------------------------------------
 
-; @virtual
-UI:MenuData Function GetFlags()
-	{Property}
-	return new UI:MenuData
-EndFunction
-
 
 bool Function Register()
-	If (UI.RegisterCustomMenu(Name, File, Root, Flags))
+	UI:MenuData flags = new UI:MenuData
+	flags.MenuFlags = ICustom().MenuFlags
+	flags.MovieFlags = ICustom().MovieFlags
+	flags.ExtendedFlags = ICustom().ExtendedFlags
+	flags.Depth = ICustom().Depth
+	If (UI.RegisterCustomMenu(Name, File, Root, flags))
 		WriteLine("System", self, "Register", ToString()+":Registered as a custom menu.")
 		return true
 	Else
@@ -71,8 +95,9 @@ bool Function SetVisible(bool value)
 	EndIf
 EndFunction
 
+
 ; @overrides
 string Function ToString()
 	{The string representation of this type.}
-	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+", Flags:"+Flags+"]"
+	return parent.ToString()+ICustom()
 EndFunction

@@ -1,4 +1,4 @@
-ScriptName System:Log Extends System:Object Native Const Hidden DebugOnly
+ScriptName System:Diagnostics:LogFile Extends System:Object Native Const Hidden DebugOnly
 {Represents the standard output for script information, warnings, and errors.
 
 **See Also**
@@ -43,15 +43,5 @@ bool Function Write(string filename, string text, int severity = 0) Global Debug
 		return Trace(filename, text, severity)
 	Else
 		return false
-	EndIf
-EndFunction
-
-
-; Writes script info as lines in a log file.
-bool Function WriteLine(string filename, string script, string member, string text = "") Global DebugOnly
-	If !(text)
-		return Write(filename, script+"["+member+"]")
-	Else
-		return Write(filename, script+"["+member+"] "+text)
 	EndIf
 EndFunction

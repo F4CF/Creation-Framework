@@ -7,15 +7,25 @@ string HUDNotificationsGroup = "HUDNotificationsGroup_mc" const
 string SafeRect = "SafeRect_mc" const
 string FloatingQuestMarkerBase = "FloatingQuestMarkerBase" const
 
+; Interfaces
+;---------------------------------------------
+
+; @overrides
+IMenu Function IMenu()
+	IMenu this = new IMenu
+	this.Name = "HUDMenu"
+	return this
+EndFunction
+
 
 ; Open/Close Event
 ;---------------------------------------------
 
 CustomEvent OpenCloseEvent
 
-Struct OpenCloseEventArgs
-	bool Opening = false
-EndStruct
+; Struct OpenCloseEventArgs
+; 	bool Opening = false
+; EndStruct
 
 
 bool Function RegisterForOpenCloseEvent(ScriptObject script)
@@ -46,18 +56,4 @@ OpenCloseEventArgs Function GetOpenCloseEventArgs(var[] arguments)
 	Else
 		return none
 	EndIf
-EndFunction
-
-
-; Properties
-;---------------------------------------------
-
-; @overrides
-string Function GetName()
-	return "HUDMenu"
-EndFunction
-
-; @overrides
-string Function GetFile()
-	return "HUDMenu"
 EndFunction

@@ -1,7 +1,7 @@
 ScriptName System:UI:HUD:Service Extends System:UI:HUD:ServiceType
-import System:Log
-import System:UI:HUD:Menu
 import System:Debug
+import System:Log
+import System:UI:Menu
 
 
 ; Events

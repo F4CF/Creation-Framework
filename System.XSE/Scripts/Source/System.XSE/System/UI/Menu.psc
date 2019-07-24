@@ -3,40 +3,53 @@ import System:Exception
 import System:Log
 
 
+; IMenu
+;---------------------------------------------
+
+; The `IMenu` language interface must be implemented.
+IMenu Function IMenu()
+	Abstract(self, "IMenu", "The language interface must be implemented on a child class.")
+EndFunction
+
+Struct IMenu
+	string Name = ""
+	{The name of this menu.}
+
+	string Variable = ""
+	{The menu object variable with dot accessor.
+	By default, this is ignored unless given a value.
+	Some vanilla menus will use `".Menu_mc"`.}
+
+	string Root = "root1"
+	{The root display object is the top-level MovieClip that is not the stage.}
+
+	System:UI:OpenCloseEvent OpenCloseEvent
+	{A custom event delegate for the OpenClose event.}
+EndStruct
+
+
 ; Properties
 ;---------------------------------------------
 
 Group Properties
 	string Property Name Hidden
-		{@abstract
-		The name of this menu.}
+		{The name of this menu.}
 		string Function Get()
-			return GetName()
+			return IMenu().Name
 		EndFunction
 	EndProperty
 
-	string Property File Hidden
-		{@abstract
-		The swf file path of this menu without the file extension.
-		The root directory is relative to `Data\Interface`.}
+	string Property Variable Hidden
+		{The menu instance variable with dot accessor. This is typically the same as root.}
 		string Function Get()
-			return GetFile()
-		EndFunction
-	EndProperty
-
-	string Property Instance Hidden
-		{@virtual
-		The menu instance variable with dot accessor. This is typically the same as root.}
-		string Function Get()
-			return Root+GetInstance()
+			return IMenu().Variable
 		EndFunction
 	EndProperty
 
 	string Property Root Hidden
-		{@virtual
-		The root display object is the top-level MovieClip that is not the stage.}
+		{The root display object is the top-level MovieClip that is not the stage.}
 		string Function Get()
-			return GetRoot()
+			return IMenu().Root
 		EndFunction
 	EndProperty
 
@@ -55,44 +68,19 @@ Group Properties
 	EndProperty
 EndGroup
 
+; Group Events
+; 	System:UI:OpenCloseEvent Property OpenCloseEvent Hidden
+; 		System:UI:OpenCloseEvent Function Get()
+
+; 			; TODO: throw not implemented?
+
+; 			return IMenu().OpenCloseEvent
+; 		EndFunction
+; 	EndProperty
+; EndGroup
+
 
 ; Methods
-;---------------------------------------------
-
-; @abstract
-; The name of this menu.
-string Function GetName()
-	{Property}
-	Abstract(self, "GetName")
-	return ""
-EndFunction
-
-
-; @abstract
-; The swf file path of this menu without the file extension.
-; The root directory is relative to `Data\Interface`.
-string Function GetFile()
-	{Property}
-	Abstract(self, "GetFile")
-	return ""
-EndFunction
-
-
-; @virtual
-; The menu instance variable with dot accessor. This is typically the same as root.
-string Function GetInstance()
-	{Property}
-	return ""
-EndFunction
-
-
-; @virtual
-; The root display object is the top-level MovieClip that is not the stage.
-string Function GetRoot()
-	{Property}
-	return "root1"
-EndFunction
-
 ;---------------------------------------------
 
 ; Opens this menu.
@@ -109,6 +97,7 @@ bool Function Open()
 		EndIf
 	EndIf
 EndFunction
+
 
 ; Closes this menu.
 bool Function Close()
@@ -198,5 +187,5 @@ EndFunction
 ; @overrides
 string Function ToString()
 	{The string representation of this type.}
-	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+"]"
+	return IMenu()+"[IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+"]"
 EndFunction

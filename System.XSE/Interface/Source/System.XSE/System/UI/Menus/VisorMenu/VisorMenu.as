@@ -23,7 +23,7 @@
 		private const MountID:String = "System_UI_VisorMenu_ImageMount";
 
 		// Client
-		private const ClientLoadedCallback:String = "System_UI_VisorMenu_ClientLoadedCallback";
+		private const AssetLoadedEvent:String = "System_UI_VisorMenu_AssetLoadedEvent";
 
 
 		// Initialize
@@ -50,7 +50,7 @@
 		// @F4SE.ICodeObject
 		public function onF4SEObjCreated(codeObject:*):void
 		{
-			F4SE.XSE.API = codeObject;
+			XSE.API = codeObject;
 			Debug.WriteLine("[VisorMenu]", "(onF4SEObjCreated)");
 		}
 
@@ -60,14 +60,14 @@
 		private function OnLoadComplete(e:Event):void
 		{
 			var client:String = GetClient();
-			XSE.SendExternalEvent(ClientLoadedCallback, true, client);
+			XSE.SendExternalEvent(AssetLoadedEvent, true, client);
 			Debug.WriteLine("[VisorMenu]", "(OnLoadComplete)", "Overlay found at '"+Overlay.FilePath+"' with client instance of '"+client+"'.");
 		}
 
 
 		private function OnLoadError(e:IOErrorEvent):void
 		{
-			XSE.SendExternalEvent(ClientLoadedCallback, false, null);
+			XSE.SendExternalEvent(AssetLoadedEvent, false, null);
 			Debug.WriteLine("[VisorMenu]", "(OnLoadError)", "No overlay found at '"+Overlay.FilePath+"'.");
 		}
 

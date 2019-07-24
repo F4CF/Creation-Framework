@@ -1,17 +1,40 @@
 ScriptName System:UI:Visor:Menu Extends System:UI:Visor:MenuType
 {Provides an abstraction for interacting with the visor menu.}
-import System:UI:Client
-import System:Log
 import System:Debug
+import System:Log
+import System:UI:Events
+import System:UI:MenuClient
 
 string ClientInstance
-string ClientLoadedCallback = "System_UI_VisorMenu_ClientLoadedCallback" const
+string AssetLoadedEvent = "System_UI_VisorMenu_AssetLoadedEvent" const
+
+; Interfaces
+;---------------------------------------------
+
+; @overrides
+IMenu Function IMenu()
+	IMenu this = new IMenu
+	this.Name = "SystemVisorMenu"
+	return this
+EndFunction
+
+
+; @overrides
+ICustom Function ICustom()
+	ICustom this = new ICustom
+	this.File = "SystemVisorMenu"
+	this.MenuFlags = FlagDoNotPreventGameSave
+	this.ExtendedFlags = FlagNone
+	return this
+EndFunction
+
 
 ; Properties
 ;---------------------------------------------
 
 Group Properties
 	System:UI:Visor:Service Property Service Auto Const Mandatory
+
 	string Property Client Hidden
 		{The instance path of the client's display object.}
 		string Function Get()
@@ -37,49 +60,28 @@ EndEvent
 
 Event OnGameReload()
 	If (Register())
-		RegisterForExternalEvent(ClientLoadedCallback, "OnClientLoaded")
+		RegisterForExternalEvent(AssetLoadedEvent, "OnAssetLoaded")
 	EndIf
 	WriteLine("System", self, "OnGameReload", ToString())
 EndEvent
 
 
-Event OnClientLoaded(bool success, string instance)
-	WriteLine("System", self, "OnClientLoaded", ToString()+":(success:"+success+", instance:"+instance+")")
+Event OnAssetLoaded(bool success, string instance)
+	WriteLine("System", self, "OnAssetLoaded", ":(success:"+success+", instance:"+instance+")"+ToString())
 	If (success)
 		ClientInstance = instance
 	Else
 		ClientInstance = ""
 	EndIf
-	System:UI:Client:LoadedEventArgs e = new System:UI:Client:LoadedEventArgs
+	LoadedEventArgs e = new LoadedEventArgs
 	e.Success = success
-	e.Instance = instance
+	e.Variable = instance
 	Service.SendLoadedEvent(e)
 EndEvent
 
 
 ; Methods
 ;---------------------------------------------
-
-; @overrides
-string Function GetName()
-	return "SystemVisorMenu"
-EndFunction
-
-
-; @overrides
-string Function GetFile()
-	return "SystemVisorMenu"
-EndFunction
-
-
-; @overrides
-UI:MenuData Function GetFlags()
-	UI:MenuData data = new UI:MenuData
-	data.MenuFlags = FlagDoNotPreventGameSave
-	data.ExtendedFlags = FlagNone
-	return data
-EndFunction
-
 
 bool Function Load(string value)
 	If (IsOpen)
@@ -123,11 +125,4 @@ bool Function AlphaTo(float value, float duration)
 		WriteUnexpected("System", self, "AlphaTo", ToString()+":The menu is not open.")
 		return false
 	EndIf
-EndFunction
-
-
-; @overrides
-string Function ToString()
-	{The string representation of this type.}
-	return "[Name:"+Name+", File:"+File+", Root:"+Root+", Instance:"+Instance+", IsRegistered:"+IsRegistered+", IsOpen:"+IsOpen+", Flags:"+Flags+", Client:"+Client+"]"
 EndFunction

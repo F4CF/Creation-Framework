@@ -1,15 +1,13 @@
 ScriptName System:UI:Scope:Breath Extends ActiveMagicEffect
-import System:UI:Scope:Menu
+import System:UI:Scope:BreathEvent
 
 ; Events
 ;---------------------------------------------
 
 Event OnEffectStart(Actor target, Actor caster)
-	System:Log.WriteLine("System", self, "OnEffectStart")
-	If (Service.IsBreathKeyDown)
-		BreathEventArgs e = new BreathEventArgs
-		e.Breath = Service.BreathInterrupted
-		Service.SendBreathEvent(e)
+	If (Menu.IsBreathKeyDown)
+		System:Log.WriteLine("System", self, "OnEffectStart", "Signaling for the breath depeleted event.")
+		Menu.BreathEvent(Menu.BreathInterrupted)
 	EndIf
 EndEvent
 
@@ -17,5 +15,5 @@ EndEvent
 ;---------------------------------------------
 
 Group Properties
-	System:UI:Scope:Service Property Service Auto Const Mandatory
+	System:UI:Scope:Menu Property Menu Auto Const Mandatory
 EndGroup

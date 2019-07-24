@@ -1,4 +1,4 @@
-ScriptName System:UI:Visor:Client Extends System:UI:Client
+ScriptName System:UI:Visor:Client Extends System:UI:MenuClient
 import System:Log
 
 Actor Player

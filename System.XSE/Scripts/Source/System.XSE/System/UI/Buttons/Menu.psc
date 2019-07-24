@@ -3,10 +3,12 @@ ScriptName System:UI:Buttons:Menu Extends System:UI:MenuCustom Default
 **See Also**
 * https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control
 }
-import System
+import System:Debug
+import System:Exception
 import System:Log
 import System:Object
-import System:Debug
+import System:UI:Menu
+import System:UI:MenuCustom
 
 Button[] Buttons
 Button SelectedButton
@@ -24,31 +26,30 @@ Struct Button
 EndStruct
 
 
-; Properties
+; Interfaces
 ;---------------------------------------------
 
 ; @overrides
-string Function GetName()
-	return "SystemButtonMenu"
+IMenu Function IMenu()
+	IMenu this = new IMenu
+	this.Name = "SystemButtonMenu"
+	this.Variable = ".Menu"
+	return this
 EndFunction
 
-; @overrides
-string Function GetFile()
-	return "SystemButtonMenu"
-EndFunction
 
 ; @overrides
-string Function GetInstance()
-	return ".Menu"
+ICustom Function ICustom()
+	ICustom this = new ICustom
+	this.File = "SystemButtonMenu"
+	this.MenuFlags = FlagNone
+	this.ExtendedFlags = FlagInheritColors + FlagCheckForGamepad
+	return this
 EndFunction
 
-; @overrides
-UI:MenuData Function GetFlags()
-	UI:MenuData value = new UI:MenuData
-	value.MenuFlags = FlagNone
-	value.ExtendedFlags = FlagInheritColors + FlagCheckForGamepad
-	return value
-EndFunction
+
+; Properties
+;---------------------------------------------
 
 Group ButtonHint
 	int Property Count Hidden
@@ -139,20 +140,20 @@ State Shown
 				shownArguments[0] = e
 				SendCustomEvent("OnShown", shownArguments)
 
-				WriteLine("System", ToString(), "Showing button press hints. Invoke:"+member+"("+arguments+") @"+Name)
+				WriteLine("System", self, "Showing button press hints. Invoke:"+member+"("+arguments+") @"+Name)
 			Else
-				WriteUnexpectedValue("System", ToString(), "Shown.OnBeginState", "Buttons", "The button array is none or empty.")
+				WriteUnexpectedValue("System", self, "Shown.OnBeginState", "Buttons", "The button array is none or empty.")
 				System:Object.ClearState(self)
 			EndIf
 		Else
-			WriteUnexpected("System", ToString(), "Shown.OnBeginState", "Could not open menu for '"+GetState()+"' state.")
+			WriteUnexpected("System", self, "Shown.OnBeginState", "Could not open menu for '"+GetState()+"' state.")
 			System:Object.ClearState(self)
 		EndIf
 	EndEvent
 
 
 	Event OnKeyDown(int keyCode)
-		If (!UI.IsMenuOpen("Console"))
+		If (!UI.IsMenuOpen("Console")) ; TODO: Check for input enabled instead!
 			SelectedButton = Buttons[FindByKeyCode(keyCode)]
 
 			var[] arguments = new var[1]
@@ -160,13 +161,13 @@ State Shown
 			SendCustomEvent("OnSelected", arguments)
 
 			If (AutoHide)
-				WriteLine("System", ToString(), "The '"+SelectedButton.Text+"' button was selected. Automatically hiding for select once.")
+				WriteLine("System", self, "The '"+SelectedButton.Text+"' button was selected. Automatically hiding for select once.")
 				System:Object.ClearState(self)
 			Else
-				WriteLine("System", ToString(), "The '"+SelectedButton.Text+"' button was selected.")
+				WriteLine("System", self, "The '"+SelectedButton.Text+"' button was selected.")
 			EndIf
 		Else
-			WriteUnexpected("System", ToString(), "Shown.OnKeyDown", "Ignoring the "+keyCode+" key press for the developer console menu.")
+			WriteUnexpected("System", self, "Shown.OnKeyDown", "Ignoring the "+keyCode+" key press for the developer console menu.")
 		EndIf
 	EndEvent
 
@@ -200,7 +201,7 @@ State Shown
 
 
 	Event OnEndState(string newState)
-		WriteLine("System", ToString(), "Ending the '"+GetState()+"' state.")
+		WriteLine("System", self, "Ending the '"+GetState()+"' state.")
 		Close()
 
 		int index = 0
@@ -229,15 +230,15 @@ bool Function Add(Button value)
 				Buttons.Add(value)
 				return true
 			Else
-				WriteUnexpected("System", ToString(), "Add", "The button array already contains a button with key code '"+value.KeyCode+"'.")
+				WriteUnexpected("System", self, "Add", "The button array already contains a button with key code '"+value.KeyCode+"'.")
 				return false
 			EndIf
 		Else
-			WriteUnexpected("System", ToString(), "Add", "The button array already contains '"+value+"'.")
+			WriteUnexpected("System", self, "Add", "The button array already contains '"+value+"'.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System", ToString(), "Add", "value", "Cannot add a none value to button array.")
+		WriteUnexpectedValue("System", self, "Add", "value", "Cannot add a none value to button array.")
 		return false
 	EndIf
 EndFunction
@@ -250,11 +251,11 @@ bool Function Remove(Button value)
 			Buttons.Remove(IndexOf(value))
 			return true
 		Else
-			WriteUnexpected("System", ToString(), "Remove", "The button array does not contain '"+value+"'.")
+			WriteUnexpected("System", self, "Remove", "The button array does not contain '"+value+"'.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System", ToString(), "Remove", "value", "Cannot remove a none value from button array.")
+		WriteUnexpectedValue("System", self, "Remove", "value", "Cannot remove a none value from button array.")
 		return false
 	EndIf
 EndFunction
@@ -267,7 +268,7 @@ bool Function Clear()
 		Buttons.Clear()
 		return true
 	Else
-		WriteUnexpected("System", ToString(), "Clear", "The button array is already cleared.")
+		WriteUnexpected("System", self, "Clear", "The button array is already cleared.")
 		return false
 	EndIf
 EndFunction
@@ -307,7 +308,7 @@ bool Function RegisterForSelectedEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OnSelected")
 		return true
 	Else
-		WriteUnexpectedValue("System", ToString(), "RegisterForSelectedEvent", "script", "Cannot register a none script for selection events.")
+		WriteUnexpectedValue("System", self, "RegisterForSelectedEvent", "script", "Cannot register a none script for selection events.")
 		return false
 	EndIf
 EndFunction
@@ -318,7 +319,7 @@ bool Function UnregisterForSelectedEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OnSelected")
 		return true
 	Else
-		WriteUnexpectedValue("System", ToString(), "UnregisterForSelectedEvent", "script", "Cannot register a none script for selection events.")
+		WriteUnexpectedValue("System", self, "UnregisterForSelectedEvent", "script", "Cannot register a none script for selection events.")
 		return false
 	EndIf
 EndFunction
@@ -328,7 +329,7 @@ Button Function GetSelectedEventArgs(var[] arguments)
 	If (arguments)
 		return arguments[0] as Button
 	Else
-		WriteUnexpectedValue("System", ToString(), "GetSelectedEventArgs", "arguments", "The selection event arguments are empty or none.")
+		WriteUnexpectedValue("System", self, "GetSelectedEventArgs", "arguments", "The selection event arguments are empty or none.")
 		return none
 	EndIf
 EndFunction
@@ -345,7 +346,7 @@ bool Function RegisterForShownEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OnShown")
 		return true
 	Else
-		WriteUnexpectedValue("System", ToString(), "RegisterForShownEvent", "script", "Cannot register a none script for shown events.")
+		WriteUnexpectedValue("System", self, "RegisterForShownEvent", "script", "Cannot register a none script for shown events.")
 		return false
 	EndIf
 EndFunction
@@ -356,7 +357,7 @@ bool Function UnregisterForShownEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OnShown")
 		return true
 	Else
-		WriteUnexpectedValue("System", ToString(), "UnregisterForShownEvent", "script", "Cannot register a none script for shown events.")
+		WriteUnexpectedValue("System", self, "UnregisterForShownEvent", "script", "Cannot register a none script for shown events.")
 		return false
 	EndIf
 EndFunction
@@ -366,7 +367,7 @@ ShownEventArgs Function GetShownEventArgs(var[] arguments)
 	If (arguments)
 		return arguments[0] as ShownEventArgs
 	Else
-		WriteUnexpectedValue("System", ToString(), "GetShownEventArgs", "arguments", "The shown event arguments are empty or none.")
+		WriteUnexpectedValue("System", self, "GetShownEventArgs", "arguments", "The shown event arguments are empty or none.")
 		return none
 	EndIf
 EndFunction

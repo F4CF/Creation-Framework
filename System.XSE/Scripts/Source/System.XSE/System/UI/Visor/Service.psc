@@ -2,8 +2,8 @@ ScriptName System:UI:Visor:Service Extends System:Quest
 {The framework is used to track equipment changes on the player.}
 import System:Debug
 import System:Log
-import System:UI:Client
-
+import System:UI:Events
+import System:UI:MenuClient
 
 Actor Player
 Keyword ArmorBodyPartEyes
@@ -16,7 +16,6 @@ bool ThirdPerson = false const
 ;---------------------------------------------
 string ExamineMenu = "ExamineMenu" const
 string ScopeMenu = "ScopeMenu" const
-
 
 
 ; Properties
@@ -297,22 +296,22 @@ EndState
 ; Client
 ;---------------------------------------------
 
-Function SendOpenCloseEvent(System:UI:Client:OpenCloseEventArgs e)
+Function SendOpenCloseEvent(OpenCloseEventArgs e)
 	If (e)
 		var[] arguments = new var[1]
 		arguments[0] = e
-		Client.SendCustomEvent("OpenCloseEvent", arguments)
+		; Client.SendCustomEvent("OpenCloseEvent", arguments)
 	Else
 		WriteUnexpectedValue(self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
 	EndIf
 EndFunction
 
 
-Function SendLoadedEvent(System:UI:Client:LoadedEventArgs e)
+Function SendLoadedEvent(LoadedEventArgs e)
 	If (e)
 		var[] arguments = new var[1]
 		arguments[0] = e
-		Client.SendCustomEvent("LoadedEvent", arguments)
+		; Client.SendCustomEvent("LoadedEvent", arguments)
 	Else
 		WriteUnexpectedValue(self, "SendLoadedEvent", "e", "The argument cannot be none.")
 	EndIf

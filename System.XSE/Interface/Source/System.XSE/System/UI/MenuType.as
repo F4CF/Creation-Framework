@@ -9,6 +9,7 @@ package System.UI
 
 	public class MenuType extends IMenu
 	{
+		public function get Url():String { return this.loaderInfo.url; }
 		public function get Root():MovieClip { return stage.getChildAt(0) as MovieClip; }
 		public function get Instance():String { return Display.GetInstance(this); }
 		public function get Exists():Boolean { return true; }
@@ -25,15 +26,15 @@ package System.UI
 
 		public function MenuType()
 		{
+			Debug.WriteLine("[System.MenuType]", "(ctor)");
 			this.addEventListener(Event.ADDED_TO_STAGE, this.OnAddedToStage);
 			this.addEventListener(Event.REMOVED_FROM_STAGE, this.OnRemovedFromStage);
-			Debug.WriteLine("[System.MenuType]", "(ctor)", "Root:"+Root, "Instance:"+Instance);
 		}
 
 
 		protected function OnAddedToStage(e:Event):void
 		{
-			Debug.WriteLine("[System.MenuType]", "(OnAddedToStage)", "Root:"+Root, "Instance:"+Instance);
+			Debug.WriteLine("[System.MenuType]", "(OnAddedToStage)");
 		}
 
 
