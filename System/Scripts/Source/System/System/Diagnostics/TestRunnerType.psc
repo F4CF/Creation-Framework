@@ -1,5 +1,5 @@
 ScriptName System:Diagnostics:TestRunnerType Extends System:Quest Native Const Hidden
-import System:Log
+import System:Debug
 
 ; Test Runner
 ;---------------------------------------------
@@ -79,7 +79,7 @@ EndFunction
 
 string Function CreateLilacDebugMessage(int logLevel, string text)
 	string value = "[" + SystemName + "] " + LogToString(logLevel) + text
-	Write(self, value)
+	WriteLine(self, "CreateLilacDebugMessage", value, SystemName)
 	return value
 EndFunction
 

@@ -1,6 +1,5 @@
 ScriptName System:Assembly:SYS Extends System:Type
 {Provides information about this assembly.}
-import System:Log
 
 ;/ System.esl
 ACTI

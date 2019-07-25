@@ -5,24 +5,45 @@ ScriptName System:Debug Extends System:Object Native Hidden Const DebugOnly
 * https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debug
 }
 import System:Diagnostics:Log
-import System:StringType
+import System:Text
+
+
+; Formatters
+;---------------------------------------------
+
+string Function Script(var caller, string member = "", string text = "") Global DebugOnly
+	string script
+	If !(caller is ScriptObject)
+		script = "["+caller+"]"
+	Else
+		script = caller
+	EndIf
+	If (member)
+		member = "-->"+member+"():"
+	EndIf
+	If (text)
+		text = " "+text
+	EndIf
+	return System:Text.Concat(script, member, text)
+EndFunction
+
 
 ; Methods
 ;---------------------------------------------
 
 ; Writes script info as a line in a log file.
 bool Function WriteLine(string script, string member, string text = "", string filename = "") Global DebugOnly
-	return Writer(Line(Format(script, member, text), filename))
+	return Writer(Line(Script(script, member, text), filename))
 EndFunction
 
 
 ; Writes script info as lines in a log file.
 bool Function WriteLines(string script, string member, var[] texts, string filename = "") Global DebugOnly
 	If (texts)
-		If (Writer(Line(Format(script, member, "..."))), filename)
+		If (Writer(Line(Script(script, member, "..."), filename)))
 			int index = 0
 			While (index < texts.Length)
-				Writer(Line(Format(script, member, ">"+texts[index]), filename))
+				Writer(Line(Script(script, member, ">"+texts[index]), filename))
 				index += 1
 			EndWhile
 			return true
@@ -37,15 +58,17 @@ EndFunction
 
 ; Writes notifications as lines in a log file.
 bool Function WriteNotification(string script, string member, string title, string text = "", string filename = "") Global DebugOnly
-	Debug.Notification(StringConcat(title, text, seperator=": "))
-	return Writer(Line(Format(script, member, text), filename))
+	Debug.Notification(Join(": ", title, text))
+	return Writer(Line(Script(script, member, text), filename))
 EndFunction
 
 
 ; Writes messages as lines in a log file.
+; A convenience function to throw both a message box AND write to the trace log.
+; Since message boxes sometimes stack in weird ways and won't show up reliably.
 bool Function WriteMessage(string script, string member, string title, string text = "", string filename = "") Global DebugOnly
-	Debug.MessageBox(StringConcat(title, text, seperator="\n"))
-	return Writer(Line(Format(script, member, text), filename))
+	Debug.MessageBox(Join("\n", title, text))
+	return Writer(Line(Script(script, member, text), filename))
 EndFunction
 
 
@@ -54,25 +77,19 @@ EndFunction
 
 ; The script had an unexpected operation.
 bool Function WriteUnexpected(var script, string member, string text = "", string filename = "") Global DebugOnly
-	string help = "The member '"+member+"' had an unexpected operation. "
-	string value = Format(script, member, help+" "+text)
-
-	Line this = Line(value, filename)
-	return Writer(this)
+	return Writer(Line(Script(script, member, "The member '"+member+"' had an unexpected operation. "+text), filename))
 EndFunction
+
 
 ; The script had and unexpected value.
 bool Function WriteUnexpectedValue(var script, string member, string variable, string text = "", string filename = "") Global DebugOnly
-	string s1 = script+"["+member+"."+variable+"]"
-	string s2 = "The member '"+member+"' with variable '"+variable+"' had an unexpected operation. "+text
-	return Writer(Line(Format(script, member, text), filename))
+	return Writer(Line(Script(script, member, "The member '"+member+"' with variable '"+variable+"' had an unexpected operation. "+text), filename))
 EndFunction
+
 
 ; The value has changed from one value to another.
 bool Function WriteChangedValue(var script, string variable, var fromValue, var toValue, string filename = "") Global DebugOnly
-	string s1 = script
-	string s2 = "Changing '"+variable+"' from '"+fromValue+"' to '"+toValue+"'."
-	return Writer(Line(Format(script, member, text), filename))
+	return Writer(Line(Script(script, variable, "Changing '"+variable+"' from '"+fromValue+"' to '"+toValue+"'."), filename))
 EndFunction
 
 
@@ -103,3 +120,46 @@ bool Function Assert(bool condition, string text, int severity = 0) Global Debug
 		return true
 	EndIf
 EndFunction
+
+
+; Methods
+;---------------------------------------------
+
+; ; Suppressable Trace
+; ; As Trace() but takes a second parameter bool `condition` (which if false suppresses the message).
+; ; Used to toggle traces that might be otherwise annoying.
+; ; @return: False if the log text was not written.
+; bool Function TraceIf(string text, bool condition, int severity = 0) Global DebugOnly
+; 	If (condition)
+; 		return Trace(text, severity)
+; 	Else
+; 		return false
+; 	EndIf
+; EndFunction
+
+
+; ; Suppressable Trace
+; ; As TraceConditional() but checks to make sure the global exists to avoid error messages in the log.
+; bool Function TraceIfGlobal(string text, GlobalVariable condition, int severity = 0) Global DebugOnly
+; 	If (System:GlobalVariable.ToBoolean(condition))
+; 		return Trace(text, severity)
+; 	Else
+; 		return false
+; 	EndIf
+; EndFunction
+
+
+; ; A convenience function to throw both a message box AND write to the trace log.
+; ; Since message boxes sometimes stack in weird ways and won't show up reliably.
+; bool Function TraceAndBox(string text, int severity = 0) Global DebugOnly
+; 	Debug.MessageBox(text)
+; 	Trace(text, severity)
+; EndFunction
+
+
+; ; A convenient way to trace the script name and optional `member` name as a prefix to the trace string.
+; ; Note, always pass in `self` as the `caller`.
+; bool Function TraceSelf(ScriptObject caller, string member, string text) Global DebugOnly
+; 	Trace(Script(caller, member, text))
+; 	return true
+; EndFunction

@@ -4,7 +4,7 @@ Base script for creating and running "Lilac" unit tests.
 **Must be extended**
 Generally executed by `<pre> StartQuest <MyUnitTestQuest></pre>` from the console.
 https://github.com/chesko256/LilacFO4}
-import System:Log
+import System:Debug
 
 
 ; Properties

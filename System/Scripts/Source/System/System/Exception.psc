@@ -10,27 +10,60 @@ This class is provided as a means to differentiate between system exceptions and
 * https://docs.microsoft.com/en-us/dotnet/api/system.systemexception
 * https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase
 }
-import System:Log
+import System:Diagnostics:Log
+import System:Text
+
+
+; Represents errors that occur during application execution.
+Struct Information
+	string Name = ""
+	{The name of this exception.}
+	string Description = ""
+	{A message that describes the current exception.}
+	string Help = ""
+	{A solution associated with this exception.}
+	string Source = ""
+	{The name of the object that causes the error.}
+	string Site = ""
+	{The method that throws the current exception.}
+	int Severity = 2
+	{Severity is one of the following:
+	0 - Info
+	1 - Warning
+	2 - Error}
+	bool StackTrace = true
+	{Indicates that the immediate frames on the call stack will be traced to `Papyrus.0.log`.}
+	string LogFile = ""
+	{The log file this exception will be written to. An empty string specifies `Papyrus.0.log`.}
+EndStruct
+
+
+Line Function ToLine(Information this) Global DebugOnly
+	; Formatted structure string.
+	return Line(System:Debug.Script(this.Source, this.Site, this.Description), this.LogFile)
+EndFunction
 
 
 ; Methods
 ;---------------------------------------------
 
-bool Function Throw(string script, string member, string text = "") Global DebugOnly
-	string throwTitle = "Exception: "+member
-	string throwMember = text
-	return System:Debug.WriteMessage(script, throwTitle, throwMember)
-EndFunction
-
-
-; TODO: Not Implemented Yet!
-string Function Text(ScriptObject script, string member, string variable = "", string text = "") Global DebugOnly
-	return ""
-EndFunction
-
-; TODO: Not Implemented Yet!
-string Function TextMessage(ScriptObject script, string member, string variable = "", string text = "") Global DebugOnly
-	return ""
+bool Function Throw(Information this) Global DebugOnly
+	Line throw = ToLine(this)
+	If (this.StackTrace)
+		Debug.TraceStack(throw.Text, throw.Severity)
+	EndIf
+	If (Writer(throw))
+		var[] lines = new var[0]
+		lines.Add("Exception: "+this.Name)
+		lines.Add(this.Description)
+		lines.Add(this.Help)
+		lines.Add(this.Source)
+		lines.Add(this.Site)
+		Debug.MessageBox(JoinsAny("\n", lines))
+		return true
+	Else
+		return false
+	EndIf
 EndFunction
 
 
@@ -45,13 +78,14 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract
-bool Function Abstract(ScriptObject script, string member, string text = "") Global DebugOnly
-	; First parameter is a `ScriptObject` because an instance is required for abstract.
-	; Global functions cannot be overriden, thus `Abstract` is not allowed.
-	string throwTitle = "Exception: Abstraction Not Implemented!"
-	string throwMember = member+": The member '"+member+"' MUST be implemented. "+text
-	; string throwHelp = "This member must be overridden with an extending script."
-	return Throw(script, throwTitle, throwMember)
+bool Function Abstract(ScriptObject script, string member, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Abstraction Required"
+	exception.Description = "The member '"+member+"' must be implemented. "+description
+	exception.Help = "Override the '"+member+"' member on an extending child script."
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
 EndFunction
 
 
@@ -66,10 +100,14 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception
-bool Function ThrowNotImplemented(string script, string member, string text = "") Global DebugOnly
-	string throwTitle =
-	string throwMember =
-	return Throw(script, "Exception: Not Implemented!", member+": The member '"+member+"' is not implemented yet. "+text)
+bool Function ThrowNotImplemented(string script, string member, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Not Implemented"
+	exception.Description = "The member '"+member+"' is not implemented yet. "+description
+	exception.Help = "This exception should be synonymous with 'still in development'."
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
 EndFunction
 
 
@@ -81,10 +119,14 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.invalidoperationexception
-bool Function ThrowInvalidOperation(string script, string member, string text = "") Global DebugOnly
-	string throwTitle =
-	string throwMember =
-	return Throw(script, "Exception: Invalid Operation!", member+": The operation within member '"+member+"' is invalid. "+text)
+bool Function ThrowInvalidOperation(string script, string member, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Invalid Operation"
+	exception.Description = "The operation within member '"+member+"' is invalid. "+description
+	exception.Help = ""
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
 EndFunction
 
 
@@ -96,10 +138,14 @@ EndFunction
 ;
 ; **See Also**
 ; * https://docs.microsoft.com/en-us/dotnet/api/system.notsupportedexception
-bool Function ThrowNotSupported(string script, string member, string text = "") Global DebugOnly
-	string throwTitle =
-	string throwMember =
-	return Throw(script, member, text)
+bool Function ThrowNotSupported(string script, string member, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Not Supported"
+	exception.Description = "The operation is not supported. "+description
+	exception.Help = ""
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
 EndFunction
 
 
@@ -107,15 +153,16 @@ EndFunction
 ;
 ; **Remarks**
 ;
-;
 ; **See Also**
 ; https://docs.microsoft.com/en-us/dotnet/api/system.argumentexception
-bool Function ThrowArgument(string script, string member, string argument, string text = "") Global DebugOnly
-	string throwTitle = "Exception: Argument!"
-	string throwMember =
-
-	return Throw(script, throwTitle, member+": The argument within member '"+member+"' is invalid. "+text)
-	return Throw(script, member, text)
+bool Function ThrowArgument(string script, string member, string argument, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Argument"
+	exception.Description = "The argument within member '"+member+"' is invalid. "+description
+	exception.Help = ""
+	exception.Source = script
+	exception.Site = member+"<"+argument+">"
+	return Throw(exception)
 EndFunction
 
 
@@ -123,8 +170,14 @@ EndFunction
 ;
 ; **See Also**
 ; https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception
-bool Function ThrowArgumentNone(string script, string member, string argument, string text = "") Global DebugOnly
-	return Throw(script, member, text)
+bool Function ThrowArgumentNone(string script, string member, string argument, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Argument None or Empty"
+	exception.Description = "The '"+argument+"' argument on member '"+member+"' cannot be none or empty. "+description
+	exception.Help = "Compare the argument with a boolean or none before passing parameters."
+	exception.Source = script
+	exception.Site = member+"<"+argument+">"
+	return Throw(exception)
 EndFunction
 
 
@@ -132,30 +185,38 @@ EndFunction
 ;
 ; **See Also**
 ; https://docs.microsoft.com/en-us/dotnet/api/system.argumentoutofrangeexception
-bool Function ThrowArgumentOutOfRange(string script, string member, string argument, string text = "") Global DebugOnly
-	return Throw(script, member, text)
+bool Function ThrowArgumentOutOfRange(string script, string member, string argument, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Argument Out Of Range"
+	exception.Description = "The '"+argument+"' argument on member '"+member+"' cannot be none or empty. "+description
+	exception.Help = "Compare the argument with a valid range before passing parameters."
+	exception.Source = script
+	exception.Site = member+"<"+argument+">"
+	return Throw(exception)
 EndFunction
 
 
-;---------------------------------------------
+; The exception that is thrown when an attempt to access a file that does not exist on disk fails.
+;
+; **See Also**
+; https://docs.microsoft.com/en-us/dotnet/api/system.io.filenotfoundexception
+bool Function ThrowFileNotFound(string script, string member, string file, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "File Not Found"
+	exception.Description = "The '"+file+"' file could not be found. "+description
+	exception.Help = ""
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
+EndFunction
 
-; ; Represents errors that occur during application execution.
-; Struct ExceptionInfo
-; 	string Source = "" ; `Source` Gets or sets the name of the application or the object that causes the error.
-; 	string Site = ""   ; `TargetSite` Gets the method that throws the current exception.
-; 	string Text = ""   ; `Message` Gets a message that describes the current exception.
-; 	string Help = ""   ; `HelpLink` Gets or sets a link to the help file associated with this exception.
-; EndStruct
 
-; ExceptionInfo Function NewException(string source = "", string site = "", string text = "", string help = "") Global
-; 	ExceptionInfo exception = new ExceptionInfo
-; 	exception.Source = source
-; 	exception.Site = site
-; 	exception.Text = text
-; 	exception.Help = help
-; 	return exception
-; EndFunction
-
-; string Function ExceptionToString(ExceptionInfo value) Global
-; 	return value
-; EndFunction
+bool Function ThrowTypeNotFound(string script, string member, string file, int formID, string type, string description = "") Global DebugOnly
+	Information exception = new Information
+	exception.Name = "Type Not Found"
+	exception.Description = "The data file dependency '"+file+"' cannot resolve '"+formID+"' as '"+type+"'. "+description
+	exception.Help = ""
+	exception.Source = script
+	exception.Site = member
+	return Throw(exception)
+EndFunction

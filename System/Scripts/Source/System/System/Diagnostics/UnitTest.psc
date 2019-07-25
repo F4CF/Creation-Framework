@@ -1,5 +1,4 @@
 ScriptName System:Diagnostics:UnitTest Extends System:Diagnostics:TestRunner
-import System:Log
 
 ; Overrides
 ;---------------------------------------------

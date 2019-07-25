@@ -1,25 +1,32 @@
 ScriptName System:Diagnostics:Log Extends System:Object Native Const Hidden DebugOnly
-{Provides a set of methods and properties that help you trace the execution of your code.}
+{Represents the standard output for script information, warnings, and errors.
+This provides a set of methods that help trace the execution of your code.
+
+**See Also**
+* https://docs.microsoft.com/en-us/dotnet/api/system.console
+* https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics
+* https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace
+}
 
 
 Struct Line
-	string FileName = ""
 	string Text = ""
+	{Gets the line text to write.}
 	int Severity = 0
 	{Severity is one of the following:
 	0 - Info
 	1 - Warning
 	2 - Error}
+	string LogFile = ""
+	{The file name to write this line to. An empty string specifies `Papyrus.0.log`.}
 EndStruct
 
 
-; Methods
-;---------------------------------------------
-
-Line Function Line(string text, string filename = "") Global DebugOnly
+; Instantiates a new log line object.
+Line Function Line(string text, string filename = "", int Severity = 0) Global DebugOnly
 	Line this = new Line
-	this.FileName = filename
 	this.Text = text
+	this.LogFile = filename
 	return this
 EndFunction
 
@@ -27,16 +34,55 @@ EndFunction
 bool Function Writer(Line this) Global DebugOnly
 	If (this)
 		If (this.Text)
-			If (!this.FileName)
-				System:Diagnostics:Log.Trace(this.Text, this.Severity)
+			If (!this.LogFile)
+				Trace(this.Text, this.Severity)
 				return true
 			Else
-				System:Diagnostics:LogFile.Write(this.FileName, this.Text, this.Severity)
+				WriteTo(this.LogFile, this.Text, this.Severity)
 				return true
 			EndIf
 		Else
 			return false
 		EndIf
+	Else
+		return false
+	EndIf
+EndFunction
+
+
+; Methods
+;---------------------------------------------
+
+; Opens a new user log using the given file name.
+; @return: False if the log is already open.
+bool Function Open(string filename) Global DebugOnly
+	return Debug.OpenUserLog(filename)
+EndFunction
+
+
+; Closes the specified user log by file name.
+; @return: True
+bool Function Close(string filename) Global DebugOnly
+	Debug.CloseUserLog(filename)
+	return true
+EndFunction
+
+
+; Outputs the string text to a user log by file name.
+; @return: False if the log has not already been opened.
+bool Function Write(string filename, string text, int severity = 0) Global DebugOnly
+	return Debug.TraceUser(filename, text, severity)
+EndFunction
+
+
+; Outputs the string text to a user log by file name.
+; A log will be opened if one is not already.
+; @return: False if the log could not be opened.
+bool Function WriteTo(string filename, string text, int severity = 0) Global DebugOnly
+	If (Write(filename, text, severity))
+		return true
+	ElseIf (Open(filename))
+		return Write(filename, text, severity)
 	Else
 		return false
 	EndIf
@@ -53,73 +99,3 @@ bool Function Trace(string text, int severity = 0) Global DebugOnly
 	Debug.Trace(text, severity)
 	return true
 EndFunction
-
-
-; Suppressable Trace
-; As Trace() but takes a second parameter bool `condition` (which if false suppresses the message).
-; Used to toggle traces that might be otherwise annoying.
-; @return: False if the log text was not written.
-bool Function TraceIf(string text, bool condition, int severity = 0) Global DebugOnly
-	If (condition)
-		return Trace(text, severity)
-	Else
-		return false
-	EndIf
-EndFunction
-
-; Suppressable Trace
-; As TraceConditional() but checks to make sure the global exists to avoid error messages in the log.
-bool Function TraceIfGlobal(string text, GlobalVariable condition, int severity = 0) Global DebugOnly
-	If (System:GlobalVariable.ToBoolean(condition))
-		return Trace(text, severity)
-	Else
-		return false
-	EndIf
-EndFunction
-
-
-; A convenience function to throw both a message box AND write to the trace log.
-; Since message boxes sometimes stack in weird ways and won't show up reliably.
-bool Function TraceAndBox(string text, int severity = 0) Global DebugOnly
-	Debug.MessageBox(text)
-	Trace(text, severity)
-EndFunction
-
-
-; A convenient way to trace the script name and optional `member` name as a prefix to the trace string.
-; Note, always pass in `self` as the `caller`.
-bool Function TraceSelf(ScriptObject caller, string member, string text) Global DebugOnly
-	Trace(Format(caller, member, text))
-	return true
-EndFunction
-
-
-; Formatters
-;---------------------------------------------
-
-string Function Format(var caller, string member = "", string text = "") Global DebugOnly
-	string script
-	If !(caller)
-	ElseIf !(caller is ScriptObject)
-		script = "["+caller+"]"
-	Else
-		script = caller
-	EndIf
-	If (member)
-		member = "-->"+member+"():"
-	EndIf
-	If (text)
-		text = " "+text
-	EndIf
-	return System:Text.Concat(script, member, text)
-EndFunction
-
-;---------------------------------------------
-
-; string Function Formatter(string title, string text = "", string seperator = " ") Global DebugOnly
-; 	If (text)
-; 		return title+seperator+text
-; 	Else
-; 		return title
-; 	EndIf
-; EndFunction

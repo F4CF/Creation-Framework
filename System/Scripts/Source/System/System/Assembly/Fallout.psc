@@ -1,6 +1,5 @@
 ScriptName System:Assembly:Fallout Extends System:Type
 {Provides information about this assembly.}
-import System:Log
 
 ; Properties
 ;---------------------------------------------

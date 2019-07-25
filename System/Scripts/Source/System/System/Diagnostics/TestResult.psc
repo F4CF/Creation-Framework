@@ -1,4 +1,4 @@
-ScriptName System:Diagnostics:TestResult Extends System:Log DebugOnly
+ScriptName System:Diagnostics:TestResult Extends System:Object DebugOnly
 
 ; Properties
 ;---------------------------------------------

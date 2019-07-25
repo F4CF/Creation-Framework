@@ -88,7 +88,12 @@ string Function Join(string seperator, string this, string other, string a= "", 
 	values[2] = a
 	values[3] = b
 	values[4] = c
-	return JoinAll(seperator, values)
+	return Joins(seperator, values)
+EndFunction
+
+
+string Function Joins(string seperator, string[] this) Global
+	JoinsAny(seperator, this as var[])
 EndFunction
 
 
@@ -105,7 +110,7 @@ EndFunction
 ;
 ; **See Also**
 ; https://docs.microsoft.com/en-us/dotnet/api/system.string.join
-string Function JoinAll(string seperator, string[] this) Global
+string Function JoinsAny(string seperator, var[] this) Global
 	If (this)
 		If (seperator)
 			string result = ""
@@ -127,6 +132,9 @@ string Function JoinAll(string seperator, string[] this) Global
 		return ""
 	EndIf
 EndFunction
+
+
+
 
 
 ; Returns a new string that aligns the characters in this instance by

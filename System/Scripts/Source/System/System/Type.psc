@@ -66,7 +66,7 @@ Form Function Read(string file, int formID) Global
 	If (Exists(file))
 		return Game.GetFormFromFile(formID, file)
 	Else
-		System:Exception.Throw("System:Type", "Read", "The data file dependency "+file+" cannot be found.")
+		System:Exception.ThrowFileNotFound("System:Type", "Read", file, "The data file "+file+" cannot be found.")
 		return none
 	EndIf
 EndFunction
@@ -125,7 +125,7 @@ ActorValue Function ReadActorValue(string file, int formID) Global
 	If (value)
 		return value
 	Else
-		System:Exception.Throw("System:Type", "ReadActorValue", "The data file dependency "+file+" cannot resolve "+formID+" as ActorValue.")
+		; System:Exception.ThrowTypeNotFound("System:Type", "ReadActorValue", file, formID, "ActorValue.")
 		return none
 	EndIf
 EndFunction
@@ -136,7 +136,7 @@ Keyword Function ReadKeyword(string file, int formID) Global
 	If (value)
 		return value
 	Else
-		System:Exception.Throw("System:Type", "ReadKeyword", "The data file dependency "+file+" cannot resolve "+formID+" as Keyword.")
+		; System:Exception.ThrowTypeNotFound("System:Type", "ReadKeyword", file, formID, "Keyword")
 		return none
 	EndIf
 EndFunction
