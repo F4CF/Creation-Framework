@@ -32,18 +32,18 @@ EndFunction
 ;---------------------------------------------
 
 ; Writes script info as a line in a log file.
-bool Function WriteLine(string script, string member, string text = "", string filename = "") Global DebugOnly
-	return Writer(Line(Script(script, member, text), filename))
+bool Function WriteLine(string script, string member, string text = "", string log = "") Global DebugOnly
+	return Writer(Line(Script(script, member, text), log))
 EndFunction
 
 
 ; Writes script info as lines in a log file.
-bool Function WriteLines(string script, string member, var[] texts, string filename = "") Global DebugOnly
+bool Function WriteLines(string script, string member, var[] texts, string log = "") Global DebugOnly
 	If (texts)
-		If (Writer(Line(Script(script, member, "..."), filename)))
+		If (Writer(Line(Script(script, member, "..."), log)))
 			int index = 0
 			While (index < texts.Length)
-				Writer(Line(Script(script, member, ">"+texts[index]), filename))
+				Writer(Line(Script(script, member, ">"+texts[index]), log))
 				index += 1
 			EndWhile
 			return true
@@ -57,18 +57,18 @@ EndFunction
 
 
 ; Writes notifications as lines in a log file.
-bool Function WriteNotification(string script, string member, string title, string text = "", string filename = "") Global DebugOnly
+bool Function WriteNotification(string script, string member, string title, string text = "", string log = "") Global DebugOnly
 	Debug.Notification(Join(": ", title, text))
-	return Writer(Line(Script(script, member, text), filename))
+	return Writer(Line(Script(script, member, text), log))
 EndFunction
 
 
 ; Writes messages as lines in a log file.
 ; A convenience function to throw both a message box AND write to the trace log.
 ; Since message boxes sometimes stack in weird ways and won't show up reliably.
-bool Function WriteMessage(string script, string member, string title, string text = "", string filename = "") Global DebugOnly
+bool Function WriteMessage(string script, string member, string title, string text = "", string log = "") Global DebugOnly
 	Debug.MessageBox(Join("\n", title, text))
-	return Writer(Line(Script(script, member, text), filename))
+	return Writer(Line(Script(script, member, text), log))
 EndFunction
 
 
@@ -76,20 +76,20 @@ EndFunction
 ;---------------------------------------------
 
 ; The script had an unexpected operation.
-bool Function WriteUnexpected(var script, string member, string text = "", string filename = "") Global DebugOnly
-	return Writer(Line(Script(script, member, "The member '"+member+"' had an unexpected operation. "+text), filename))
+bool Function WriteUnexpected(var script, string member, string text = "", string log = "") Global DebugOnly
+	return Writer(Line(Script(script, member, "The member '"+member+"' had an unexpected operation. "+text), log))
 EndFunction
 
 
 ; The script had and unexpected value.
-bool Function WriteUnexpectedValue(var script, string member, string variable, string text = "", string filename = "") Global DebugOnly
-	return Writer(Line(Script(script, member, "The member '"+member+"' with variable '"+variable+"' had an unexpected operation. "+text), filename))
+bool Function WriteUnexpectedValue(var script, string member, string variable, string text = "", string log = "") Global DebugOnly
+	return Writer(Line(Script(script, member, "The member '"+member+"' with variable '"+variable+"' had an unexpected operation. "+text), log))
 EndFunction
 
 
 ; The value has changed from one value to another.
-bool Function WriteChangedValue(var script, string variable, var fromValue, var toValue, string filename = "") Global DebugOnly
-	return Writer(Line(Script(script, variable, "Changing '"+variable+"' from '"+fromValue+"' to '"+toValue+"'."), filename))
+bool Function WriteChangedValue(var script, string variable, var fromValue, var toValue, string log = "") Global DebugOnly
+	return Writer(Line(Script(script, variable, "Changing '"+variable+"' from '"+fromValue+"' to '"+toValue+"'."), log))
 EndFunction
 
 

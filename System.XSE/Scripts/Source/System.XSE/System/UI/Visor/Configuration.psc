@@ -1,5 +1,5 @@
 ScriptName System:UI:Visor:Configuration Extends System:Object
-import System:Log
+import System:Debug
 
 ; Methods
 ;---------------------------------------------

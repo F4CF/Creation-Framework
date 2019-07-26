@@ -1,9 +1,10 @@
 ScriptName System:UI:Visor:Service Extends System:Quest
 {The framework is used to track equipment changes on the player.}
 import System:Debug
-import System:Log
-import System:UI:Events
+import System:UI:LoadedEvent
 import System:UI:MenuClient
+import System:UI:OpenCloseEvent
+
 
 Actor Player
 Keyword ArmorBodyPartEyes
@@ -71,7 +72,7 @@ EndEvent
 Event Actor.OnItemEquipped(Actor sender, Form object, ObjectReference reference)
 	{Evaluates the equipped object.}
 	If (ItemFilter(object))
-		WriteLine("System", self, "Actor.OnItemEquipped", "object="+object)
+		WriteLine(self, "Actor.OnItemEquipped", "object="+object)
 		Equipment()
 	EndIf
 EndEvent
@@ -130,7 +131,7 @@ string Function GetFile()
 				While (index < mods.Length)
 					value = GetLooseMod(mods[index])
 					If (value)
-						WriteLine("System", self, "GetFile", "LooseMod:'"+value+"'")
+						WriteLine(self, "GetFile", "LooseMod:'"+value+"'")
 						return value
 					EndIf
 					index += 1
@@ -139,11 +140,11 @@ string Function GetFile()
 			;---------------------------------------------
 			value = GetWorldModel(worn)
 			If (value)
-				WriteLine("System", self, "GetFile", "WorldModel:'"+value+"'")
+				WriteLine(self, "GetFile", "WorldModel:'"+value+"'")
 				return value
 			Else
 				value = GetModel(worn)
-				WriteLine("System", self, "GetFile", "Model:'"+value+"'")
+				WriteLine(self, "GetFile", "Model:'"+value+"'")
 				return value
 			EndIf
 		EndIf
@@ -184,7 +185,7 @@ EndFunction
 bool Function TryChange(string value)
 	{A none value is valid for TryChange.}
 	If (value != File)
-		WriteChangedValue("System", self, "File", File, value)
+		WriteChangedValue(self, "File", File, value)
 		File = value
 		return true
 	Else
@@ -199,7 +200,7 @@ EndFunction
 
 State Equipped
 	Event OnBeginState(string oldState)
-		WriteLine("System", self, "Equipped.OnBeginState")
+		WriteLine(self, "Equipped.OnBeginState")
 		RegisterForCameraState()
 		RegisterForMenuOpenCloseEvent(Menu.Name)
 		RegisterForMenuOpenCloseEvent(ExamineMenu)
@@ -210,13 +211,13 @@ State Equipped
 	;---------------------------------------------
 
 	Event OnGameReload()
-		WriteLine("System", self, "Equipped.OnGameReload")
+		WriteLine(self, "Equipped.OnGameReload")
 		Reload()
 		Menu.Open()
 	EndEvent
 
 	Event OnMenuOpenCloseEvent(string menuName, bool opening)
-		WriteLine("System", self, "Equipped.OnMenuOpenCloseEvent(menuName="+menuName+", opening="+opening+")")
+		WriteLine(self, "Equipped.OnMenuOpenCloseEvent(menuName="+menuName+", opening="+opening+")")
 		If (menuName == Menu.Name)
 			If (opening)
 				Menu.Load(File)
@@ -244,7 +245,7 @@ State Equipped
 	EndEvent
 
 	Event OnPlayerCameraState(int oldState, int newState)
-		WriteLine("System", self, "Equipped.OnPlayerCameraState(oldState="+oldState+", newState="+newState+") -- IsFirstPerson:"+IsFirstPerson)
+		WriteLine(self, "Equipped.OnPlayerCameraState(oldState="+oldState+", newState="+newState+") -- IsFirstPerson:"+IsFirstPerson)
 		Menu.SetVisible(IsFirstPerson)
 	EndEvent
 
@@ -253,7 +254,7 @@ State Equipped
 	Event Actor.OnItemEquipped(Actor sender, Form object, ObjectReference reference)
 		{Evaluates the equipped object.}
 		If (ItemFilter(object))
-			WriteLine("System", self, "Equipped.Actor.OnItemEquipped", "object="+object)
+			WriteLine(self, "Equipped.Actor.OnItemEquipped", "object="+object)
 			Equipment()
 		EndIf
 	EndEvent
@@ -261,7 +262,7 @@ State Equipped
 	Event Actor.OnItemUnequipped(Actor sender, Form object, ObjectReference reference)
 		{Evaluates the unequipped object.}
 		If (ItemFilter(object))
-			WriteLine("System", self, "Equipped.Actor.OnItemUnequipped", "object="+object)
+			WriteLine(self, "Equipped.Actor.OnItemUnequipped", "object="+object)
 			Equipment()
 		EndIf
 	EndEvent
@@ -283,7 +284,7 @@ State Equipped
 	;---------------------------------------------
 
 	Event OnEndState(string newState)
-		WriteLine("System", self, "Equipped.OnEndState")
+		WriteLine(self, "Equipped.OnEndState")
 		UnregisterForCameraState()
 		UnregisterForMenuOpenCloseEvent(Menu.Name)
 		UnregisterForMenuOpenCloseEvent(ExamineMenu)

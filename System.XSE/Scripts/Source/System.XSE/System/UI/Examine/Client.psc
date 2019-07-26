@@ -1,10 +1,9 @@
 ScriptName System:UI:Examine:Client Extends System:UI:Examine:ClientType
 {Injects AS3 code into the vanilla Examine menu.}
 import System:Debug
-import System:Log
 import System:UI:Menu
 import System:UI:MenuClient
-
+import System:UI:OpenCloseEvent
 
 ; Interfaces
 ;---------------------------------------------
@@ -41,24 +40,24 @@ EndEvent
 Event OnQuestInit()
 	RegisterForGameReload(self)
 	OnGameReload()
-	WriteLine("System", self, "OnQuestInit")
+	WriteLine(self, "OnQuestInit")
 EndEvent
 
 
 Event OnGameReload()
 	RegisterForMenuOpenCloseEvent(Name)
-	WriteLine("System", self, "OnGameReload")
+	WriteLine(self, "OnGameReload")
 EndEvent
 
 
 Event OnQuestShutdown()
 	UnregisterForAllEvents()
-	WriteLine("System", self, "OnQuestShutdown")
+	WriteLine(self, "OnQuestShutdown")
 EndEvent
 
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	WriteLine("System", self, "OnMenuOpenCloseEvent(menuName:"+menuName+", opening:"+opening+")")
+	WriteLine(self, "OnMenuOpenCloseEvent(menuName:"+menuName+", opening:"+opening+")")
 	If (opening)
 		UI.Load(Name, Root, File, self, "OnLoadComplete")
 		RegisterForExternalEvent(ModChangedEvent, "OnModChanged")
@@ -71,16 +70,16 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 
 	OpenCloseEventArgs e = new OpenCloseEventArgs
 	e.Opening = opening
-	self.SendOpenCloseEvent(e)
+	IMenu().OpenCloseEvent.Send(self, e)
 EndEvent
 
 
 ; @XSE
 Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
 	{The UI loaded callback.}
-	WriteLine("System", self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")")
+	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")")
 	If (!success)
-		WriteUnexpectedValue("System", self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.")
+		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.")
 	EndIf
 	IClient().Variable = assetInstance
 	IClient().Loaded = success
@@ -89,7 +88,7 @@ EndEvent
 
 ; @Scaleform
 Event OnModChanged(int selected)
-	WriteLine("System", self, "OnModChanged", "argument:"+selected)
+	WriteLine(self, "OnModChanged", "argument:"+selected)
 	If (selected > Invalid)
 		; Emblems:Preset preset = Editor.GetPreset(selected)
 		; Update(Editor, preset)
@@ -99,7 +98,7 @@ EndEvent
 
 ; @Scaleform
 Event OnEditorOpened()
-	WriteLine("System", self, "OnEditorOpened")
+	WriteLine(self, "OnEditorOpened")
 EndEvent
 
 
@@ -110,7 +109,7 @@ bool Function GetVisible()
 	If (IsOpen)
 		return UI.Get(Name, Variable+".Visible") as bool
 	Else
-		WriteUnexpected("System", self, "GetVisible", "The menu is not open.")
+		WriteUnexpected(self, "GetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -120,7 +119,7 @@ bool Function SetVisible(bool value)
 	If (IsOpen)
 		return UI.Set(Name, Variable+".Visible", value)
 	Else
-		WriteUnexpected("System", self, "SetVisible", "The menu is not open.")
+		WriteUnexpected(self, "SetVisible", "The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -134,18 +133,18 @@ bool Function SetPrimary(string filepath, int color)
 				arguments[0] = filepath
 				arguments[1] = color
 				UI.Invoke(Name, IClient().Variable+".Viewer.SetPrimary", arguments)
-				WriteLine("System", self, "SetPrimary", arguments)
+				WriteLine(self, "SetPrimary", arguments)
 				return true
 			Else
-				WriteUnexpectedValue("System", self, "SetPrimary", "filepath", "The filepath cannot be none or empty.")
+				WriteUnexpectedValue(self, "SetPrimary", "filepath", "The filepath cannot be none or empty.")
 				return false
 			EndIf
 		Else
-			WriteUnexpectedValue("System", self, "SetPrimary", "IsLoaded", "The menu asset must be loaded.")
+			WriteUnexpectedValue(self, "SetPrimary", "IsLoaded", "The menu asset must be loaded.")
 			return false
 		EndIf
 	Else
-		WriteUnexpectedValue("System", self, "SetPrimary", "IsOpen", "The menu must be open.")
+		WriteUnexpectedValue(self, "SetPrimary", "IsOpen", "The menu must be open.")
 		return false
 	EndIf
 EndFunction
@@ -158,14 +157,14 @@ bool Function SetSecondary(string filepath, int color)
 			arguments[0] = filepath
 			arguments[1] = color
 			UI.Invoke(Name, IClient().Variable+".Viewer.SetSecondary", arguments)
-			WriteLine("System", self, "SetSecondary", arguments)
+			WriteLine(self, "SetSecondary", arguments)
 			return true
 		Else
-			WriteUnexpectedValue("System", self, "SetSecondary", "filepath", "The filepath cannot be none or empty.")
+			WriteUnexpectedValue(self, "SetSecondary", "filepath", "The filepath cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected("System", self, "SetSecondary", ToString()+" is not open.")
+		WriteUnexpected(self, "SetSecondary", ToString()+" is not open.")
 		return false
 	EndIf
 EndFunction
@@ -178,14 +177,14 @@ bool Function SetBackground(string filepath, int color)
 			arguments[0] = filepath
 			arguments[1] = color
 			UI.Invoke(Name, IClient().Variable+".Viewer.SetBackground", arguments)
-			WriteLine("System", self, "SetBackground", arguments)
+			WriteLine(self, "SetBackground", arguments)
 			return true
 		Else
-			WriteUnexpectedValue("System", self, "SetBackground", "filepath", "The filepath cannot be none or empty.")
+			WriteUnexpectedValue(self, "SetBackground", "filepath", "The filepath cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected("System", self, "SetBackground", ToString()+" is not open.")
+		WriteUnexpected(self, "SetBackground", ToString()+" is not open.")
 		return false
 	EndIf
 EndFunction

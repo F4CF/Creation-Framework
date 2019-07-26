@@ -1,9 +1,9 @@
 ScriptName System:UI:Visor:Menu Extends System:UI:Visor:MenuType
 {Provides an abstraction for interacting with the visor menu.}
 import System:Debug
-import System:Log
-import System:UI:Events
+import System:UI:LoadedEvent
 import System:UI:MenuClient
+
 
 string ClientInstance
 string AssetLoadedEvent = "System_UI_VisorMenu_AssetLoadedEvent" const
@@ -62,12 +62,12 @@ Event OnGameReload()
 	If (Register())
 		RegisterForExternalEvent(AssetLoadedEvent, "OnAssetLoaded")
 	EndIf
-	WriteLine("System", self, "OnGameReload", ToString())
+	WriteLine(self, "OnGameReload", ToString())
 EndEvent
 
 
 Event OnAssetLoaded(bool success, string instance)
-	WriteLine("System", self, "OnAssetLoaded", ":(success:"+success+", instance:"+instance+")"+ToString())
+	WriteLine(self, "OnAssetLoaded", ":(success:"+success+", instance:"+instance+")"+ToString())
 	If (success)
 		ClientInstance = instance
 	Else
@@ -90,14 +90,14 @@ bool Function Load(string value)
 			arguments[0] = value
 			string member = GetMember("Load")
 			bool success = UI.Invoke(Name, member, arguments) as bool
-			WriteLine("System", self, "Load", ToString()+":(value:"+value+", success:"+success+", member:"+member+")")
+			WriteLine(self, "Load", ToString()+":(value:"+value+", success:"+success+", member:"+member+")")
 			return success
 		Else
-			WriteUnexpectedValue("System", self, "Load", "value", ToString()+":The value cannot be none or empty.")
+			WriteUnexpectedValue(self, "Load", "value", ToString()+":The value cannot be none or empty.")
 			return false
 		EndIf
 	Else
-		WriteUnexpected("System", self, "Load", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "Load", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -107,7 +107,7 @@ bool Function SetAlpha(float value)
 	If (IsOpen)
 		return UI.Set(Name, GetMember("Alpha"), value)
 	Else
-		WriteUnexpected("System", self, "SetAlpha", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "SetAlpha", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -119,10 +119,10 @@ bool Function AlphaTo(float value, float duration)
 		arguments[0] = value
 		arguments[1] = duration
 		bool success = UI.Invoke(Name, GetMember("AlphaTo"), arguments) as bool
-		WriteLine("System", self, "AlphaTo", ToString()+":(value:"+value+", duration:"+duration+", success:"+success+")")
+		WriteLine(self, "AlphaTo", ToString()+":(value:"+value+", duration:"+duration+", success:"+success+")")
 		return success
 	Else
-		WriteUnexpected("System", self, "AlphaTo", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "AlphaTo", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction

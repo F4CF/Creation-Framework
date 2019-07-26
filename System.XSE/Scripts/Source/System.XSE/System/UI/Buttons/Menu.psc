@@ -5,7 +5,6 @@ ScriptName System:UI:Buttons:Menu Extends System:UI:MenuCustom Default
 }
 import System:Debug
 import System:Exception
-import System:Log
 import System:Object
 import System:UI:Menu
 import System:UI:MenuCustom

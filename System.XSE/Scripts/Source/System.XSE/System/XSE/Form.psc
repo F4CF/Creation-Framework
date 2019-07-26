@@ -1,5 +1,5 @@
 Scriptname System:XSE:Form extends System:Object Native Const Hidden
-import System:Log
+import System:Debug
 
 ; Debug
 ;---------------------------------------------

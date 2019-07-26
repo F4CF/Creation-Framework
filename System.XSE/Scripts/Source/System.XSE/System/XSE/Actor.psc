@@ -1,5 +1,5 @@
 ScriptName System:XSE:Actor Extends System:Actor Native Const Hidden
-import System:Log
+import System:Debug
 import System:XSE:Armor
 
 

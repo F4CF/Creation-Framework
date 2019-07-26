@@ -1,7 +1,8 @@
 ScriptName System:UI:MenuCustom Extends System:UI:Menu Hidden Native Const
 {A base script for custom menu types.}
+import System:Debug
 import System:Exception
-import System:Log
+
 
 ; ICustom
 ;---------------------------------------------
@@ -58,7 +59,6 @@ EndGroup
 ; Methods
 ;---------------------------------------------
 
-
 bool Function Register()
 	UI:MenuData flags = new UI:MenuData
 	flags.MenuFlags = ICustom().MenuFlags
@@ -66,10 +66,10 @@ bool Function Register()
 	flags.ExtendedFlags = ICustom().ExtendedFlags
 	flags.Depth = ICustom().Depth
 	If (UI.RegisterCustomMenu(Name, File, Root, flags))
-		WriteLine("System", self, "Register", ToString()+":Registered as a custom menu.")
+		WriteLine(self, "Register", ToString()+":Registered as a custom menu.")
 		return true
 	Else
-		System:Debug.WriteUnexpected("System", self, "Register", ToString()+":Failed to register as a custom menu.")
+		WriteUnexpected(self, "Register", ToString()+":Failed to register as a custom menu.")
 		return false
 	EndIf
 EndFunction
@@ -79,7 +79,7 @@ bool Function GetVisible()
 	If (IsOpen)
 		return UI.Get(Name, GetMember("Visible")) as bool
 	Else
-		System:Debug.WriteUnexpected("System", self, "GetVisible", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "GetVisible", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction
@@ -87,10 +87,10 @@ EndFunction
 
 bool Function SetVisible(bool value)
 	If (IsOpen)
-		WriteLine("System", self, ToString()+" setting visible to "+value)
+		WriteLine(self, ToString()+" setting visible to "+value)
 		return UI.Set(Name, GetMember("Visible"), value)
 	Else
-		System:Debug.WriteUnexpected("System", self, "SetVisible", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "SetVisible", ToString()+":The menu is not open.")
 		return false
 	EndIf
 EndFunction

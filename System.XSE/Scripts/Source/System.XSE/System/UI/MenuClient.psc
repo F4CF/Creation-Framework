@@ -1,5 +1,6 @@
 ScriptName System:UI:MenuClient Extends System:UI:Menu Native Const Hidden
 ; TODO: Check is loader exists on target menu before loading.
+import System:Debug
 import System:Exception
 
 
@@ -60,13 +61,13 @@ EndGroup
 
 ; @F4SE
 Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
-	System:Debug.WriteUnexpected("System", self, "OnLoadComplete", "The event was unhandled.")
+	WriteUnexpected(self, "OnLoadComplete", "The event was unhandled.")
 EndEvent
 
 
 Event OnClientLoaded(bool success, string instance)
 	{The client loaded event.}
-	System:Debug.WriteUnexpected("System", self, "OnClientLoaded", "The event was unhandled.")
+	WriteUnexpected(self, "OnClientLoaded", "The event was unhandled.")
 EndEvent
 
 

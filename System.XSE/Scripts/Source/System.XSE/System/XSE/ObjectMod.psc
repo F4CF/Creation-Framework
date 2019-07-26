@@ -1,5 +1,5 @@
 Scriptname System:XSE:ObjectMod Extends System:ObjectMod Native Const Hidden
-import System:Log
+import System:Debug
 
 ; TODO: Avoid dependency on non-system data files.
 bool Function IsScope(ObjectMod this)

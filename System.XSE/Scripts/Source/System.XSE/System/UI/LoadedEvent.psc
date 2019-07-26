@@ -1,10 +1,9 @@
 ScriptName System:UI:LoadedEvent Extends System:EventType
 import System:Debug
+import System:Exception
 
-; The custom event delegate.
-CustomEvent Delegate
 
-; The custom event arguments.
+; The arguments for this event.
 Struct LoadedEventArgs
 	bool Success = false
 	string Variable = ""
@@ -14,37 +13,34 @@ EndStruct
 ; Event
 ;---------------------------------------------
 
+; @System:EventType.Invoke
+bool Function Send(System:UI:Menu sender, LoadedEventArgs e)
+	If (sender)
+		If (e)
+			var[] delegate = new var[2]
+			delegate[SenderIndex] = sender
+			delegate[ArgumentsIndex] = e
+			return Invoke(delegate)
+		Else
+			ThrowArgumentNoneEmpty(self, "Send", "e", "The argument cannot be none.")
+		EndIf
+	Else
+		ThrowArgumentNoneEmpty(self, "Send", "sender", "The sender cannot be none.")
+		return false
+	EndIf
+EndFunction
+
+
 ; Methods
 ;---------------------------------------------
 
-; @overrides
-bool Function Register(ScriptObject script)
-	If (script)
-		script.RegisterForCustomEvent(self, "Delegate")
-		return true
-	Else
-		System:Debug.WriteUnexpectedValue("System", self, "Register", "script", "Cannot register a none script for events.")
-		return false
-	EndIf
+; @System:EventType.Sender
+System:UI:Menu Function Sender(var[] arguments)
+	return ToSender(arguments) as System:UI:Menu
 EndFunction
 
 
-; @overrides
-bool Function Unregister(ScriptObject script)
-	If (script)
-		script.UnregisterForCustomEvent(self, "Delegate")
-		return true
-	Else
-		System:Debug.WriteUnexpectedValue("System", self, "Unregister", "script", "Cannot unregister a none script for events.")
-		return false
-	EndIf
-EndFunction
-
-
-LoadedEventArgs Function GetLoadedEventArgs(var[] arguments)
-	If (arguments)
-		return arguments[0] as LoadedEventArgs
-	Else
-		return none
-	EndIf
+; @System:EventType.Arguments
+LoadedEventArgs Function Arguments(var[] arguments)
+	return ToArguments(arguments) as LoadedEventArgs
 EndFunction

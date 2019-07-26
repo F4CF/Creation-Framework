@@ -1,6 +1,4 @@
 ScriptName System:Menu Extends System:Object Native Default
-import System:Log
-
 
 Group Menus
 	string Property BarterMenu = "BarterMenu" AutoReadOnly Hidden

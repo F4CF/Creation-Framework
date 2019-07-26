@@ -1,7 +1,6 @@
 ScriptName System:UI:Scope:Menu Extends System:UI:Menu
 {The scope menu service provides backend for the scope menu.}
 import System:Debug
-import System:Log
 import System:UI:OpenCloseEvent
 import System:UI:Scope:BreathEvent
 
@@ -101,7 +100,7 @@ Event OnGameReload()
 	ActionPoints = System:Type.ReadActorValue(fallout.File, fallout.ActionPoints)
 
 	RegisterForMenuOpenCloseEvent(Name)
-	WriteLine("System", ToString(), "OnGameReload")
+	WriteLine(self, "OnGameReload", log="System")
 EndEvent
 
 
@@ -120,7 +119,7 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 
 	OpenCloseEventArgs e = new OpenCloseEventArgs
 	e.Opening = opening
-	IMenu().OpenCloseEvent.SendOpenCloseEvent(e)
+	IMenu().OpenCloseEvent.Send(self, e)
 EndEvent
 
 
@@ -161,14 +160,14 @@ bool Function SetOverlay(int identifier)
 			var[] arguments = new var[1]
 			arguments[0] = identifier
 			UI.Invoke(Name, GetMember("SetOverlay", Variable), arguments)
-			WriteLine("System", self, "SetOverlay", identifier)
+			WriteLine(self, "SetOverlay", identifier, log="System")
 			return true
 		Else
-			WriteUnexpectedValue("System", self, "SetOverlay", "identifier", "The value of "+identifier+" is out of range.")
+			WriteUnexpectedValue(self, "SetOverlay", "identifier", "The value of "+identifier+" is out of range.", log="System")
 			return false
 		EndIf
 	Else
-		WriteUnexpected(self, "SetOverlay", ToString()+" is not open.")
+		WriteUnexpected(self, "SetOverlay", ToString()+" is not open.", log="System")
 		return false
 	EndIf
 EndFunction

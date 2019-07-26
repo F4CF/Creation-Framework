@@ -5,8 +5,6 @@ ScriptName System:Exception Extends System:Object Const Native Hidden DebugOnly
 This class is provided as a means to differentiate between system exceptions and application exceptions.
 
 **See Also**
-* https://docs.microsoft.com/en-us/dotnet/api/system.exception
-* https://docs.microsoft.com/en-us/dotnet/api/system.exception.innerexception
 * https://docs.microsoft.com/en-us/dotnet/api/system.systemexception
 * https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase
 }
@@ -15,6 +13,9 @@ import System:Text
 
 
 ; Represents errors that occur during application execution.
+; **See Also**
+; * https://docs.microsoft.com/en-us/dotnet/api/system.exception
+; * https://docs.microsoft.com/en-us/dotnet/api/system.exception.innerexception
 Struct Information
 	string Name = ""
 	{The name of this exception.}
@@ -26,6 +27,8 @@ Struct Information
 	{The name of the object that causes the error.}
 	string Site = ""
 	{The method that throws the current exception.}
+	string Data = ""
+	{Provides additional user-defined information about the exception.}
 	int Severity = 2
 	{Severity is one of the following:
 	0 - Info
@@ -170,7 +173,7 @@ EndFunction
 ;
 ; **See Also**
 ; https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception
-bool Function ThrowArgumentNone(string script, string member, string argument, string description = "") Global DebugOnly
+bool Function ThrowArgumentNoneEmpty(string script, string member, string argument, string description = "") Global DebugOnly
 	Information exception = new Information
 	exception.Name = "Argument None or Empty"
 	exception.Description = "The '"+argument+"' argument on member '"+member+"' cannot be none or empty. "+description
@@ -211,6 +214,7 @@ bool Function ThrowFileNotFound(string script, string member, string file, strin
 EndFunction
 
 
+; TODO: This may better added to `System:Type` as its not a generic system exception.
 bool Function ThrowTypeNotFound(string script, string member, string file, int formID, string type, string description = "") Global DebugOnly
 	Information exception = new Information
 	exception.Name = "Type Not Found"

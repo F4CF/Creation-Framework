@@ -1,4 +1,5 @@
 ScriptName System:UI:Scope:Breath Extends ActiveMagicEffect
+import System:Debug
 import System:UI:Scope:BreathEvent
 
 ; Events
@@ -6,7 +7,7 @@ import System:UI:Scope:BreathEvent
 
 Event OnEffectStart(Actor target, Actor caster)
 	If (Menu.IsBreathKeyDown)
-		System:Log.WriteLine("System", self, "OnEffectStart", "Signaling for the breath depeleted event.")
+		WriteLine(self, "OnEffectStart", "Signaling for the breath depeleted event.", log="System")
 		Menu.BreathEvent(Menu.BreathInterrupted)
 	EndIf
 EndEvent

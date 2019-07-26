@@ -1,7 +1,6 @@
 ScriptName System:UI:Code:Service Extends System:Quest
 {The framework is used to track equipment changes on the player.}
 import System:Debug
-import System:Log
 
 
 ; Properties
@@ -34,7 +33,7 @@ EndEvent
 
 
 Event OnGameReload()
-	WriteLine("System", self, "OnGameReload")
+	WriteLine(self, "OnGameReload", log="System")
 	UnregisterForAllMenuOpenCloseEvents()
 
 	RegisterForKey(Keyboard.P)
@@ -77,7 +76,7 @@ EndEvent
 
 
 Event OnQuestShutdown()
-	WriteLine("System", self, "OnQuestShutdown")
+	WriteLine(self, "OnQuestShutdown", log="System")
 	UnregisterForGameReload(self)
 EndEvent
 
@@ -88,7 +87,7 @@ EndEvent
 
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	WriteLine("System", self, "OnMenuOpenCloseEvent(Menu.menuName="+menuName+", opening="+opening+")")
+	WriteLine(self, "OnMenuOpenCloseEvent(Menu.menuName="+menuName+", opening="+opening+")", log="System")
 	If (opening)
 		Client.Load(menuName)
 	EndIf

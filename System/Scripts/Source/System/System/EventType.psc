@@ -2,78 +2,87 @@ ScriptName System:EventType Extends System:Object Const Hidden
 {Events enable scripts to notify other scripts when something of interest occurs.
 
 **See Also**
-* https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/
 * https://docs.microsoft.com/en-us/dotnet/api/system.delegate
-* https://docs.microsoft.com/en-us/dotnet/api/system.eventhandler
 * https://docs.microsoft.com/en-us/dotnet/api/system.eventargs
 }
+import System:Debug
 import System:Exception
 
-; The custom event delegate.
+
+; The custom delegate delegate.
 CustomEvent Delegate
 
-;/ Requires
-* The custom event arguments.
-  * bool Send(ScriptObject, var)
-  * bool Register(ScriptObject)
-  * bool Unregister(ScriptObject)
-  * ScriptObject Sender(var[])
-  * var Arguments(var[] arguments)
-/;
+Group Events
+	int Property SenderIndex = 0 AutoReadOnly Hidden
+	int Property ArgumentsIndex = 1 AutoReadOnly Hidden
+EndGroup
 
 
 ; Methods
 ;---------------------------------------------
 
-; @abstract
-bool Function Register(ScriptObject script)
-	Abstract(self, "Register")
-EndFunction
-
-
-; @abstract
-bool Function Unregister(ScriptObject script)
-	Abstract(self, "Unregister")
+bool Function Invoke(var[] delegate)
+	If (delegate)
+		If (delegate[SenderIndex])
+			If (delegate[ArgumentsIndex])
+				self.SendCustomEvent("Delegate", delegate)
+				return true
+			Else
+				ThrowArgumentNoneEmpty(self, "Invoke", "delegate.ArgumentsIndex", "The delegate arguments at index '"+ArgumentsIndex+"' cannot be none or empty.")
+				return false
+			EndIf
+		Else
+			ThrowArgumentNoneEmpty(self, "Invoke", "delegate.SenderIndex", "The delegate sender at index '"+SenderIndex+"' cannot be none.")
+			return false
+		EndIf
+	Else
+		ThrowArgumentNoneEmpty(self, "Invoke", "delegate", "The delegate cannot be none or empty.")
+		return false
+	EndIf
 EndFunction
 
 ;---------------------------------------------
 
-bool Function Send(ScriptObject sender, var e)
-	If (sender)
-		If (e)
-			var[] arguments = new var[1]
-			arguments[0] = sender
-			arguments[1] = e
-			self.SendCustomEvent("Delegate", arguments)
-			return true
-		Else
-			ThrowArgumentNone(self, "Send", "e", "The argument cannot be none.")
-			return false
-		EndIf
+bool Function Register(ScriptObject listener)
+	If (listener)
+		listener.RegisterForCustomEvent(self, "Delegate")
+		return true
 	Else
-		ThrowArgumentNone(self, "Send", "sender", "The argument cannot be none.")
+		ThrowArgumentNoneEmpty(self, "Register", "listener", "Cannot register a none script for an event.")
 		return false
 	EndIf
 EndFunction
 
 
-; @virtual
-ScriptObject Function Sender(var[] arguments)
-	If (arguments)
-		return arguments[0] as ScriptObject
+bool Function Unregister(ScriptObject listener)
+	If (listener)
+		listener.UnregisterForCustomEvent(self, "Delegate")
+		return true
 	Else
-		ThrowArgumentNone(self, "Sender", "var[] arguments")
+		ThrowArgumentNoneEmpty(self, "Unregister", "listener", "Cannot unregister a none script for an event.")
+		return false
+	EndIf
+EndFunction
+
+;---------------------------------------------
+
+; @virtual
+ScriptObject Function ToSender(var[] arguments)
+	If (arguments)
+		return arguments[SenderIndex] as ScriptObject
+	Else
+		ThrowArgumentNoneEmpty(self, "ToSender", "var[] arguments")
 		return none
 	EndIf
 EndFunction
 
 
 ; @virtual
-var Function Arguments(var[] arguments)
+var Function ToArguments(var[] arguments)
 	If (arguments)
-		return arguments[1]
+		return arguments[ArgumentsIndex]
 	Else
-		ThrowArgumentNone(self, "Arguments", "var[] arguments")
+		ThrowArgumentNoneEmpty(self, "ToArguments", "var[] arguments")
 		return none
 	EndIf
 EndFunction

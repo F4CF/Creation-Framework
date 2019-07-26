@@ -134,9 +134,6 @@ string Function JoinsAny(string seperator, var[] this) Global
 EndFunction
 
 
-
-
-
 ; Returns a new string that aligns the characters in this instance by
 ; padding them with spaces on the left or right, for a specified total length.
 ;

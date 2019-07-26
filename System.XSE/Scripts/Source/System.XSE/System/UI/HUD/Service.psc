@@ -1,8 +1,6 @@
 ScriptName System:UI:HUD:Service Extends System:UI:HUD:ServiceType
 import System:Debug
-import System:Log
-import System:UI:Menu
-
+import System:UI:OpenCloseEvent
 
 ; Events
 ;---------------------------------------------

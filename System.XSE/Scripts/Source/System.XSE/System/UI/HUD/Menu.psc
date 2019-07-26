@@ -1,6 +1,6 @@
 ScriptName System:UI:HUD:Menu Extends System:UI:HUD:MenuType
-import System:Log
 import System:Debug
+import System:UI:OpenCloseEvent
 
 
 string HUDNotificationsGroup = "HUDNotificationsGroup_mc" const
@@ -33,7 +33,7 @@ bool Function RegisterForOpenCloseEvent(ScriptObject script)
 		script.RegisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
+		WriteUnexpectedValue(self, "RegisterForOpenCloseEvent", "script", "Cannot register a none script for events.")
 		return false
 	EndIf
 EndFunction
@@ -44,7 +44,7 @@ bool Function UnregisterForOpenCloseEvent(ScriptObject script)
 		script.UnregisterForCustomEvent(self, "OpenCloseEvent")
 		return true
 	Else
-		WriteUnexpectedValue("System", self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
+		WriteUnexpectedValue(self, "UnregisterForOpenCloseEvent", "script", "Cannot unregister a none script for events.")
 		return false
 	EndIf
 EndFunction
