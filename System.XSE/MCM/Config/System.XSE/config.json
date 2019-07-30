@@ -1,6 +1,6 @@
 {
-	"modName": "Overlays",
-	"displayName": "Overlays Framework",
+	"modName": "System.XSE",
+	"displayName": "System",
 	"minMcmVersion": 3,
 	"content":
 	[
@@ -11,7 +11,7 @@
 			"valueOptions":
 			{
 				"sourceType": "GlobalValue",
-				"sourceForm": "Overlays.esm|5B95",
+				"sourceForm": "System.XSE.esl|FA5",
 				"min": 0.0,
 				"max": 1.0,
 				"step": 0.01
@@ -19,10 +19,10 @@
 			"action":
 			{
 				"type": "CallFunction",
-				"form": "Overlays.esm|F99",
-				"function": "SetAlpha",
+				"form": "System.XSE.esl|FA4",
+				"function": "Alpha",
 				"params": ["{value}"],
-				"scriptName": "Fallout:Overlays:Configuration"
+				"scriptName": "System:UI:Visor:Settings"
 			}
 		},
 		{
@@ -32,7 +32,7 @@
 			"valueOptions":
 			{
 				"sourceType": "GlobalValue",
-				"sourceForm": "Overlays.esm|632F",
+				"sourceForm": "System.XSE.esl|FA6",
 				"min": 0.0,
 				"max": 5.0,
 				"step": 0.25
@@ -40,10 +40,10 @@
 			"action":
 			{
 				"type": "CallFunction",
-				"form": "Overlays.esm|F99",
-				"function": "SetScopeAlpha",
+				"form": "System.XSE.esl|FA4",
+				"function": "ScopeAlpha",
 				"params": ["{value}"],
-				"scriptName": "Fallout:Overlays:Configuration"
+				"scriptName": "System:UI:Visor:Settings"
 			}
 		},
 		{
@@ -53,7 +53,7 @@
 			"valueOptions":
 			{
 				"sourceType": "GlobalValue",
-				"sourceForm": "Overlays.esm|7263",
+				"sourceForm": "System.XSE.esl|FA7",
 				"min": 0.0,
 				"max": 1.0,
 				"step": 0.01
@@ -61,10 +61,10 @@
 			"action":
 			{
 				"type": "CallFunction",
-				"form": "Overlays.esm|F99",
-				"function": "SetScopeAlpha",
+				"form": "System.XSE.esl|FA4",
+				"function": "ScopeAlpha",
 				"params": ["{value}"],
-				"scriptName": "Fallout:Overlays:Configuration"
+				"scriptName": "System:UI:Visor:Settings"
 			}
 		}
 	]

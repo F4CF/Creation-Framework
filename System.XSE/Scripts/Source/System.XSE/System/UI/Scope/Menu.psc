@@ -1,8 +1,11 @@
-ScriptName System:UI:Scope:Menu Extends System:UI:Menu
+ScriptName System:UI:Scope:Menu Extends System:UI:Scope:MenuType
 {The scope menu service provides backend for the scope menu.}
 import System:Debug
+import System:UI:MenuClient
 import System:UI:OpenCloseEvent
 import System:UI:Scope:BreathEvent
+
+IClient IClient_
 
 Actor Player
 ActorValue ActionPoints
@@ -13,6 +16,11 @@ bool Interrupted = false
 
 ; Properties
 ;---------------------------------------------
+
+Group Events
+	System:UI:OpenCloseEvent Property OpenClose Auto Const Mandatory
+	{@IMenu}
+EndGroup
 
 Group Breath
 	System:UI:Scope:BreathEvent Property BreathEvent Auto Const Mandatory
@@ -72,15 +80,24 @@ IMenu Function IMenu()
 	IMenu this = new IMenu
 	this.Name = "ScopeMenu"
 	this.Variable = ".ScopeMenuInstance"
+	this.OpenClose = OpenClose
 	return this
 EndFunction
 
+
+
+; @overrides
+IClient Function IClient()
+	return IClient_
+EndFunction
 
 ; Events
 ;---------------------------------------------
 
 ; TODO: This only happens once per object life time.
 Event OnInit()
+	IClient_ = new IClient
+	IClient_.File = "SystemScopeClient"
 	RegisterForQuestInit(QUST)
 	RegisterForQuestShutdown(QUST)
 EndEvent
@@ -119,8 +136,20 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 
 	OpenCloseEventArgs e = new OpenCloseEventArgs
 	e.Opening = opening
-	IMenu().OpenCloseEvent.Send(self, e)
+	IMenu().OpenClose.Send(self, e)
 EndEvent
+
+; @F4SE
+Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
+	{The UI loaded callback.}
+	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")", log="System")
+	If (!success)
+		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.", log="System")
+	EndIf
+	IClient().Variable = assetInstance
+	IClient().Loaded = success
+EndEvent
+
 
 
 Event OnKeyDown(int keyCode)

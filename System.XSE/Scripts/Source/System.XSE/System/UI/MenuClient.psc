@@ -61,13 +61,13 @@ EndGroup
 
 ; @F4SE
 Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
-	WriteUnexpected(self, "OnLoadComplete", "The event was unhandled.")
+	WriteUnexpected(self, "OnLoadComplete", "The event was unhandled.", log="System")
 EndEvent
 
 
 Event OnClientLoaded(bool success, string instance)
 	{The client loaded event.}
-	WriteUnexpected(self, "OnClientLoaded", "The event was unhandled.")
+	WriteUnexpected(self, "OnClientLoaded", "The event was unhandled.", log="System")
 EndEvent
 
 

@@ -44,7 +44,6 @@ Event OnGameReload()
 	; 	RegisterForExternalEvent(ClientLoadedCallback, "OnClientLoaded")
 	; EndIf
 	WriteLine(self, "OnGameReload", ToString(), log="System")
-	WriteMessage("System", self, "UI.IsMenuRegistered('Console')", UI.IsMenuRegistered("Console"), log="System")
 EndEvent
 
 

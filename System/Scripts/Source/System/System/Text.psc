@@ -93,7 +93,7 @@ EndFunction
 
 
 string Function Joins(string seperator, string[] this) Global
-	JoinsAny(seperator, this as var[])
+	return JoinsAny(seperator, this as var[])
 EndFunction
 
 

@@ -13,7 +13,7 @@ EndStruct
 ;---------------------------------------------
 
 ; @System:EventType.Invoke
-bool Function Send(System:UI:Scope:Menu sender, BreathEventArgs e)
+bool Function Send(ScriptObject sender, BreathEventArgs e)
 	If (sender)
 		If (e)
 			var[] delegate = new var[2]
@@ -34,8 +34,8 @@ EndFunction
 ;---------------------------------------------
 
 ; @System:EventType.Sender
-System:UI:Scope:Menu Function Sender(var[] arguments)
-	return ToSender(arguments) as System:UI:Scope:Menu
+ScriptObject Function Sender(var[] arguments)
+	return ToSender(arguments) as ScriptObject
 EndFunction
 
 

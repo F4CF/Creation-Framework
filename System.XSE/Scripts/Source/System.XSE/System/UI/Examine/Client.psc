@@ -70,7 +70,7 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 
 	OpenCloseEventArgs e = new OpenCloseEventArgs
 	e.Opening = opening
-	IMenu().OpenCloseEvent.Send(self, e)
+	IMenu().OpenClose.Send(self, e)
 EndEvent
 
 

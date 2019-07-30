@@ -12,7 +12,7 @@ EndGroup
 
 Group Properties
 	System:Input Property Keyboard Auto Const Mandatory
-	System:Menu Property Menu Auto Const Mandatory
+	System:MenuName Property MenuNames Auto Const Mandatory
 EndGroup
 
 
@@ -38,40 +38,40 @@ Event OnGameReload()
 
 	RegisterForKey(Keyboard.P)
 
-	; RegisterForMenuOpenCloseEvent(Menu.BarterMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.BookMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.ConsoleMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.ConsoleNativeUIMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.ContainerMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.CookingMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.CreditsMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.CursorMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.DialogueMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.ExamineMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.FaderMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.FavoritesMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.GenericMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.HUDMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.LevelUpMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.LoadingMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.LockpickingMenu)
-	RegisterForMenuOpenCloseEvent(Menu.LooksMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.MainMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.MessageBoxMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.MultiActivateMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.PauseMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.PipboyMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.PromptMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.ScopeMenu)
-	RegisterForMenuOpenCloseEvent(Menu.SitWaitMenu)
-	RegisterForMenuOpenCloseEvent(Menu.SleepWaitMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.SPECIALMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.TerminalHolotapeMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.TerminalMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.VATSMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.VignetteMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.WorkshopMenu)
-	; RegisterForMenuOpenCloseEvent(Menu.Workshop_CaravanMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.BarterMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.BookMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.ConsoleMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.ConsoleNativeUIMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.ContainerMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.CookingMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.CreditsMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.CursorMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.DialogueMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.ExamineMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.FaderMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.FavoritesMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.GenericMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.HUDMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.LevelUpMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.LoadingMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.LockpickingMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.LooksMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.MainMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.MessageBoxMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.MultiActivateMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.PauseMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.PipboyMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.PromptMenu)
+	RegisterForMenuOpenCloseEvent(MenuNames.ScopeMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.SitWaitMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.SleepWaitMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.SPECIALMenu)
+	RegisterForMenuOpenCloseEvent(MenuNames.TerminalHolotapeMenu)
+	RegisterForMenuOpenCloseEvent(MenuNames.TerminalMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.VATSMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.VignetteMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.WorkshopMenu)
+	; RegisterForMenuOpenCloseEvent(MenuNames.Workshop_CaravanMenu)
 EndEvent
 
 
@@ -82,12 +82,12 @@ EndEvent
 
 
 Event OnKeyDown(int keyCode)
-	; UI.OpenMenu(Menu.ConsoleNativeUIMenu)
+	UI.OpenMenu(MenuNames.ScopeMenu)
 EndEvent
 
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	WriteLine(self, "OnMenuOpenCloseEvent(Menu.menuName="+menuName+", opening="+opening+")", log="System")
+	WriteLine(self, "OnMenuOpenCloseEvent(MenuNames.menuName="+menuName+", opening="+opening+")", log="System")
 	If (opening)
 		Client.Load(menuName)
 	EndIf

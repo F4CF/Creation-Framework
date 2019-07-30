@@ -14,7 +14,7 @@ EndStruct
 ;---------------------------------------------
 
 ; @System:EventType.Invoke
-bool Function Send(System:UI:Menu sender, LoadedEventArgs e)
+bool Function Send(ScriptObject sender, LoadedEventArgs e)
 	If (sender)
 		If (e)
 			var[] delegate = new var[2]
@@ -35,8 +35,8 @@ EndFunction
 ;---------------------------------------------
 
 ; @System:EventType.Sender
-System:UI:Menu Function Sender(var[] arguments)
-	return ToSender(arguments) as System:UI:Menu
+ScriptObject Function Sender(var[] arguments)
+	return ToSender(arguments) as ScriptObject
 EndFunction
 
 

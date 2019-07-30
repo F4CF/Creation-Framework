@@ -14,18 +14,18 @@ string EquippedState = "Equipped" const
 ;---------------------------------------------
 int BipedEyes = 17 const
 bool ThirdPerson = false const
-;---------------------------------------------
-string ExamineMenu = "ExamineMenu" const
-string ScopeMenu = "ScopeMenu" const
 
 
 ; Properties
 ;---------------------------------------------
 
+Group Properties
+	System:MenuName Property MenuNames Auto Const Mandatory
+EndGroup
+
 Group Overlay
 	System:UI:Visor:Menu Property Menu Auto Const Mandatory
-	System:UI:Visor:Client Property Client Auto Const Mandatory
-	System:UI:Visor:Configuration Property Configuration Auto Const Mandatory
+	System:UI:Visor:Settings Property Settings Auto Const Mandatory
 EndGroup
 
 Group Camera
@@ -58,6 +58,7 @@ EndEvent
 
 Event OnGameReload()
 	Reload()
+	WriteMessage(self, "OnGameReload", "My Title", "My Text", log="System")
 EndEvent
 
 
@@ -72,7 +73,7 @@ EndEvent
 Event Actor.OnItemEquipped(Actor sender, Form object, ObjectReference reference)
 	{Evaluates the equipped object.}
 	If (ItemFilter(object))
-		WriteLine(self, "Actor.OnItemEquipped", "object="+object)
+		WriteLine(self, "Actor.OnItemEquipped", "object="+object, log="System")
 		Equipment()
 	EndIf
 EndEvent
@@ -131,7 +132,7 @@ string Function GetFile()
 				While (index < mods.Length)
 					value = GetLooseMod(mods[index])
 					If (value)
-						WriteLine(self, "GetFile", "LooseMod:'"+value+"'")
+						WriteLine(self, "GetFile", "LooseMod:'"+value+"'", log="System")
 						return value
 					EndIf
 					index += 1
@@ -140,11 +141,11 @@ string Function GetFile()
 			;---------------------------------------------
 			value = GetWorldModel(worn)
 			If (value)
-				WriteLine(self, "GetFile", "WorldModel:'"+value+"'")
+				WriteLine(self, "GetFile", "WorldModel:'"+value+"'", log="System")
 				return value
 			Else
 				value = GetModel(worn)
-				WriteLine(self, "GetFile", "Model:'"+value+"'")
+				WriteLine(self, "GetFile", "Model:'"+value+"'", log="System")
 				return value
 			EndIf
 		EndIf
@@ -185,11 +186,11 @@ EndFunction
 bool Function TryChange(string value)
 	{A none value is valid for TryChange.}
 	If (value != File)
-		WriteChangedValue(self, "File", File, value)
+		WriteChangedValue(self, "File", File, value, log="System")
 		File = value
 		return true
 	Else
-		WriteUnexpectedValue(self, "TryChange", "value", "The File already equals '"+value+"'")
+		WriteUnexpectedValue(self, "TryChange", "value", "The File already equals '"+value+"'", log="System")
 		return false
 	EndIf
 EndFunction
@@ -200,52 +201,52 @@ EndFunction
 
 State Equipped
 	Event OnBeginState(string oldState)
-		WriteLine(self, "Equipped.OnBeginState")
+		WriteLine(self, "Equipped.OnBeginState", log="System")
 		RegisterForCameraState()
 		RegisterForMenuOpenCloseEvent(Menu.Name)
-		RegisterForMenuOpenCloseEvent(ExamineMenu)
-		RegisterForMenuOpenCloseEvent(ScopeMenu)
+		RegisterForMenuOpenCloseEvent(MenuNames.ExamineMenu)
+		RegisterForMenuOpenCloseEvent(MenuNames.ScopeMenu)
 		Menu.Open()
 	EndEvent
 
 	;---------------------------------------------
 
 	Event OnGameReload()
-		WriteLine(self, "Equipped.OnGameReload")
+		WriteLine(self, "Equipped.OnGameReload", log="System")
 		Reload()
 		Menu.Open()
 	EndEvent
 
 	Event OnMenuOpenCloseEvent(string menuName, bool opening)
-		WriteLine(self, "Equipped.OnMenuOpenCloseEvent(menuName="+menuName+", opening="+opening+")")
+		WriteLine(self, "Equipped.OnMenuOpenCloseEvent(menuName="+menuName+", opening="+opening+")", log="System")
 		If (menuName == Menu.Name)
 			If (opening)
 				Menu.Load(File)
-				Menu.SetAlpha(Configuration.Alpha)
+				Menu.SetAlpha(Settings.Alpha)
 				Menu.SetVisible(IsFirstPerson)
 			Else
 				Menu.Open()
 			EndIf
 			OpenCloseEventArgs e = new OpenCloseEventArgs
 			e.Opening = opening
-			SendOpenCloseEvent(e)
+			Menu.IMenu().OpenClose.Send(self, e)
 		EndIf
 
-		If (menuName == ScopeMenu)
+		If (menuName == MenuNames.ScopeMenu)
 			If (opening)
-				Menu.AlphaTo(Configuration.ScopeAlpha, Configuration.AlphaSpeed)
+				Menu.AlphaTo(Settings.ScopeAlpha, Settings.AlphaSpeed)
 			Else
-				Menu.AlphaTo(Configuration.Alpha, Configuration.AlphaSpeed)
+				Menu.AlphaTo(Settings.Alpha, Settings.AlphaSpeed)
 			EndIf
 		EndIf
 
-		If (menuName == ExamineMenu && !opening)
+		If (menuName == MenuNames.ExamineMenu && !opening)
 			Menu.Load(File)
 		EndIf
 	EndEvent
 
 	Event OnPlayerCameraState(int oldState, int newState)
-		WriteLine(self, "Equipped.OnPlayerCameraState(oldState="+oldState+", newState="+newState+") -- IsFirstPerson:"+IsFirstPerson)
+		WriteLine(self, "Equipped.OnPlayerCameraState(oldState="+oldState+", newState="+newState+") -- IsFirstPerson:"+IsFirstPerson, log="System")
 		Menu.SetVisible(IsFirstPerson)
 	EndEvent
 
@@ -254,7 +255,7 @@ State Equipped
 	Event Actor.OnItemEquipped(Actor sender, Form object, ObjectReference reference)
 		{Evaluates the equipped object.}
 		If (ItemFilter(object))
-			WriteLine(self, "Equipped.Actor.OnItemEquipped", "object="+object)
+			WriteLine(self, "Equipped.Actor.OnItemEquipped", "object="+object, log="System")
 			Equipment()
 		EndIf
 	EndEvent
@@ -262,7 +263,7 @@ State Equipped
 	Event Actor.OnItemUnequipped(Actor sender, Form object, ObjectReference reference)
 		{Evaluates the unequipped object.}
 		If (ItemFilter(object))
-			WriteLine(self, "Equipped.Actor.OnItemUnequipped", "object="+object)
+			WriteLine(self, "Equipped.Actor.OnItemUnequipped", "object="+object, log="System")
 			Equipment()
 		EndIf
 	EndEvent
@@ -284,11 +285,11 @@ State Equipped
 	;---------------------------------------------
 
 	Event OnEndState(string newState)
-		WriteLine(self, "Equipped.OnEndState")
+		WriteLine(self, "Equipped.OnEndState", log="System")
 		UnregisterForCameraState()
 		UnregisterForMenuOpenCloseEvent(Menu.Name)
-		UnregisterForMenuOpenCloseEvent(ExamineMenu)
-		UnregisterForMenuOpenCloseEvent(ScopeMenu)
+		UnregisterForMenuOpenCloseEvent(MenuNames.ExamineMenu)
+		UnregisterForMenuOpenCloseEvent(MenuNames.ScopeMenu)
 		Menu.Close()
 	EndEvent
 EndState
@@ -296,28 +297,6 @@ EndState
 
 ; Client
 ;---------------------------------------------
-
-Function SendOpenCloseEvent(OpenCloseEventArgs e)
-	If (e)
-		var[] arguments = new var[1]
-		arguments[0] = e
-		; Client.SendCustomEvent("OpenCloseEvent", arguments)
-	Else
-		WriteUnexpectedValue(self, "SendOpenCloseEvent", "e", "The argument cannot be none.")
-	EndIf
-EndFunction
-
-
-Function SendLoadedEvent(LoadedEventArgs e)
-	If (e)
-		var[] arguments = new var[1]
-		arguments[0] = e
-		; Client.SendCustomEvent("LoadedEvent", arguments)
-	Else
-		WriteUnexpectedValue(self, "SendLoadedEvent", "e", "The argument cannot be none.")
-	EndIf
-EndFunction
-
 
 Actor:WornItem Function GetWorn()
 	{Scans down the highest slot of an eye slot armor.}
@@ -329,7 +308,7 @@ Actor:WornItem Function GetWorn()
 		EndIf
 		slot += 1
 	EndWhile
-	WriteUnexpectedValue(self, "GetWorn", "value", "No biped slot has a valid eyes item.")
+	WriteUnexpectedValue(self, "GetWorn", "value", "No biped slot has a valid eyes item.", log="System")
 	return none
 EndFunction
 

@@ -1,4 +1,4 @@
-ScriptName System:Menu Extends System:Object Native Default
+ScriptName System:MenuName Extends System:Object Native Default
 
 Group Menus
 	string Property BarterMenu = "BarterMenu" AutoReadOnly Hidden

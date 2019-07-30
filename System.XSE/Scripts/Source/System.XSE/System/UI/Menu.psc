@@ -23,7 +23,7 @@ Struct IMenu
 	string Root = "root1"
 	{The root display object is the top-level MovieClip that is not the stage.}
 
-	System:UI:OpenCloseEvent OpenCloseEvent
+	System:UI:OpenCloseEvent OpenClose
 	{A custom event delegate for the OpenClose event.}
 EndStruct
 
@@ -75,13 +75,13 @@ EndGroup
 ; Opens this menu.
 bool Function Open()
 	If (IsOpen)
-		WriteUnexpected(self, "Open", ToString()+":The menu is already open.")
+		WriteUnexpected(self, "Open", "The menu is already open. "+ToString(), log="System")
 		return true
 	Else
 		If (IsRegistered)
 			return UI.OpenMenu(Name)
 		Else
-			WriteUnexpected(self, "Open", ToString()+":The menu is not registered.")
+			WriteUnexpected(self, "Open", "The menu is not registered. "+ToString(), log="System")
 			return false
 		EndIf
 	EndIf
@@ -91,13 +91,13 @@ EndFunction
 ; Closes this menu.
 bool Function Close()
 	If (!IsOpen)
-		WriteUnexpected(self, "Close", ToString()+":The menu is already closed.")
+		WriteUnexpected(self, "Close", "The menu is already closed. "+ToString(), log="System")
 		return true
 	Else
 		If (IsRegistered)
 			return UI.CloseMenu(Name)
 		Else
-			WriteUnexpected(self, "Close", ToString()+":The menu is not registered.")
+			WriteUnexpected(self, "Close", "The menu is not registered. "+ToString(), log="System")
 			return false
 		EndIf
 	EndIf
@@ -110,11 +110,11 @@ var Function Get(string member)
 		If (member)
 			return UI.Get(Name, GetMember(member))
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", ToString()+":The argument cannot be none or empty.")
+			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty. "+ToString(), log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "GetMember", "The menu is not open. "+ToString(), log="System")
 		return ""
 	EndIf
 EndFunction
@@ -126,11 +126,11 @@ bool Function Set(string member, var argument)
 		If (member)
 			return UI.Set(Name, GetMember(member), argument)
 		Else
-			WriteUnexpectedValue(self, "Set", "member", ToString()+":The argument cannot be none or empty.")
+			WriteUnexpectedValue(self, "Set", "member", "The argument cannot be none or empty. "+ToString(), log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "Set", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "Set", "The menu is not open. "+ToString(), log="System")
 		return ""
 	EndIf
 EndFunction
@@ -142,11 +142,11 @@ var Function Invoke(string member, var[] arguments = none)
 		If (member)
 			return UI.Invoke(Name, GetMember(member), arguments)
 		Else
-			WriteUnexpectedValue(self, "Invoke", "member", ToString()+":The argument cannot be none or empty.")
+			WriteUnexpectedValue(self, "Invoke", "member", "The argument cannot be none or empty. "+ToString(), log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "Invoke", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "Invoke", "The menu is not open. "+ToString(), log="System")
 		return ""
 	EndIf
 EndFunction
@@ -163,11 +163,11 @@ string Function GetMember(string member, string variable = "")
 				return Root+"."+member
 			EndIf
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", ToString()+":The argument cannot be none or empty.")
+			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty. "+ToString(), log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "GetMember", "The menu is not open. "+ToString(), log="System")
 		return ""
 	EndIf
 EndFunction

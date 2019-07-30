@@ -16,12 +16,16 @@ Struct ICustom
 	string File = ""
 	{The swf file path of this menu without the file extension.
 	The root directory is relative to `Data\Interface`.}
+
 	int MenuFlags = 0x801849D
 	{The menu flags to use.}
+
 	int MovieFlags = 3
 	{The movie flags to use.}
+
 	int ExtendedFlags = 3
 	{The extended flags to use.}
+
 	int Depth = 6
 	{The menu depth to use.}
 EndStruct
@@ -66,10 +70,10 @@ bool Function Register()
 	flags.ExtendedFlags = ICustom().ExtendedFlags
 	flags.Depth = ICustom().Depth
 	If (UI.RegisterCustomMenu(Name, File, Root, flags))
-		WriteLine(self, "Register", ToString()+":Registered as a custom menu.")
+		WriteLine(self, "Register", "Registered as a custom menu. "+ToString(), log="System")
 		return true
 	Else
-		WriteUnexpected(self, "Register", ToString()+":Failed to register as a custom menu.")
+		WriteUnexpected(self, "Register", "Failed to register as a custom menu. "+ToString(), log="System")
 		return false
 	EndIf
 EndFunction
@@ -79,7 +83,7 @@ bool Function GetVisible()
 	If (IsOpen)
 		return UI.Get(Name, GetMember("Visible")) as bool
 	Else
-		WriteUnexpected(self, "GetVisible", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "GetVisible", " The menu is not open. "+ToString(), log="System")
 		return false
 	EndIf
 EndFunction
@@ -87,10 +91,10 @@ EndFunction
 
 bool Function SetVisible(bool value)
 	If (IsOpen)
-		WriteLine(self, ToString()+" setting visible to "+value)
+		WriteLine(self, "SetVisible", "Setting visible to "+value+". "+ToString(), log="System")
 		return UI.Set(Name, GetMember("Visible"), value)
 	Else
-		WriteUnexpected(self, "SetVisible", ToString()+":The menu is not open.")
+		WriteUnexpected(self, "SetVisible", "The menu is not open. "+ToString(), log="System")
 		return false
 	EndIf
 EndFunction

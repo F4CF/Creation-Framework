@@ -1,27 +1,21 @@
-ScriptName System:UI:Visor:Configuration Extends System:Object
+ScriptName System:UI:Visor:Settings Extends System:Object
 import System:Debug
 
 ; Methods
 ;---------------------------------------------
 
-Function SetAlpha(float value)
-	SystemXSE_UI_Visor_Alpha.SetValue(value)
-	If (Menu.IsOpen)
-		Menu.SetAlpha(value)
-	EndIf
-	WriteLine("System", self, "SetAlpha", value)
+Function Alpha(float value)
+	Alpha = value
 EndFunction
 
 
-Function SetAlphaSpeed(float value)
-	SystemXSE_UI_Visor_AlphaSpeed.SetValue(value)
-	WriteLine("System", self, "SetAlphaSpeed", value)
+Function AlphaSpeed(float value)
+	AlphaSpeed = value
 EndFunction
 
 
-Function SetScopeAlpha(float value)
-	SystemXSE_UI_Visor_Scope_Alpha.SetValue(value)
-	WriteLine("System", self, "SetScopeAlpha", value)
+Function ScopeAlpha(float value)
+	ScopeAlpha = value
 EndFunction
 
 
@@ -41,7 +35,9 @@ Group Settings
 			return SystemXSE_UI_Visor_Alpha.GetValue()
 		EndFunction
 		Function Set(float value)
+			WriteChangedValue(self, "Alpha", Alpha, value)
 			SystemXSE_UI_Visor_Alpha.SetValue(value)
+			Menu.SetAlpha(value)
 		EndFunction
 	EndProperty
 
@@ -50,6 +46,7 @@ Group Settings
 			return SystemXSE_UI_Visor_AlphaSpeed.GetValue()
 		EndFunction
 		Function Set(float value)
+			WriteChangedValue(self, "AlphaSpeed", AlphaSpeed, value)
 			SystemXSE_UI_Visor_AlphaSpeed.SetValue(value)
 		EndFunction
 	EndProperty
@@ -59,6 +56,7 @@ Group Settings
 			return SystemXSE_UI_Visor_Scope_Alpha.GetValue()
 		EndFunction
 		Function Set(float value)
+			WriteChangedValue(self, "ScopeAlpha", ScopeAlpha, value)
 			SystemXSE_UI_Visor_Scope_Alpha.SetValue(value)
 		EndFunction
 	EndProperty

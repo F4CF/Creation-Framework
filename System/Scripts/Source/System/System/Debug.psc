@@ -67,7 +67,8 @@ EndFunction
 ; A convenience function to throw both a message box AND write to the trace log.
 ; Since message boxes sometimes stack in weird ways and won't show up reliably.
 bool Function WriteMessage(string script, string member, string title, string text = "", string log = "") Global DebugOnly
-	Debug.MessageBox(Join("\n", title, text))
+	string joined = Join("\n", title, text, script, member)
+	Debug.MessageBox(joined)
 	return Writer(Line(Script(script, member, text), log))
 EndFunction
 
