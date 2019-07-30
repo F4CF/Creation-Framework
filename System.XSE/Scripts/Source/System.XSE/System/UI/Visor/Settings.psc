@@ -35,7 +35,7 @@ Group Settings
 			return SystemXSE_UI_Visor_Alpha.GetValue()
 		EndFunction
 		Function Set(float value)
-			WriteChangedValue(self, "Alpha", Alpha, value)
+			WriteChangedValue(self, "Alpha", Alpha, value, log="System")
 			SystemXSE_UI_Visor_Alpha.SetValue(value)
 			Menu.SetAlpha(value)
 		EndFunction
@@ -46,7 +46,7 @@ Group Settings
 			return SystemXSE_UI_Visor_AlphaSpeed.GetValue()
 		EndFunction
 		Function Set(float value)
-			WriteChangedValue(self, "AlphaSpeed", AlphaSpeed, value)
+			WriteChangedValue(self, "AlphaSpeed", AlphaSpeed, value, log="System")
 			SystemXSE_UI_Visor_AlphaSpeed.SetValue(value)
 		EndFunction
 	EndProperty
@@ -56,7 +56,7 @@ Group Settings
 			return SystemXSE_UI_Visor_Scope_Alpha.GetValue()
 		EndFunction
 		Function Set(float value)
-			WriteChangedValue(self, "ScopeAlpha", ScopeAlpha, value)
+			WriteChangedValue(self, "ScopeAlpha", ScopeAlpha, value, log="System")
 			SystemXSE_UI_Visor_Scope_Alpha.SetValue(value)
 		EndFunction
 	EndProperty

@@ -75,6 +75,8 @@ EndEvent
 ;---------------------------------------------
 
 bool Function Load(string menuName)
+	WriteLine(self, "Load", "menuName"+menuName, log="System")
+	IMenu().Name = menuName
 	return UI.Load(Name, Root, File+".swf", self, "OnLoadComplete")
 EndFunction
 

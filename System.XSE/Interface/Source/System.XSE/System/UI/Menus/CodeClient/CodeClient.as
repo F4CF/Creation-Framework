@@ -42,6 +42,11 @@
 					Dump();
 					DumpMenu(Root.AnimHolder_mc.Menu_mc);
 				}
+				else if (Root.ScopeMenuInstance != null) // scope menu
+				{
+					Dump();
+					DumpMenu(Root.ScopeMenuInstance);
+				}
 			}
 			catch (error:Error)
 			{
