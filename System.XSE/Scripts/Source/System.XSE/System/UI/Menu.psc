@@ -75,13 +75,13 @@ EndGroup
 ; Opens this menu.
 bool Function Open()
 	If (IsOpen)
-		WriteUnexpected(self, "Open", "The menu is already open. "+ToString(), log="System")
+		WriteUnexpected(self, "Open", "The menu is already open.", log="System")
 		return true
 	Else
 		If (IsRegistered)
 			return UI.OpenMenu(Name)
 		Else
-			WriteUnexpected(self, "Open", "The menu is not registered. "+ToString(), log="System")
+			ThrowInvalidOperation(self, "Open", "The menu is not registered.", log="System")
 			return false
 		EndIf
 	EndIf
@@ -91,13 +91,13 @@ EndFunction
 ; Closes this menu.
 bool Function Close()
 	If (!IsOpen)
-		WriteUnexpected(self, "Close", "The menu is already closed. "+ToString(), log="System")
+		WriteUnexpected(self, "Close", "The menu is already closed.", log="System")
 		return true
 	Else
 		If (IsRegistered)
 			return UI.CloseMenu(Name)
 		Else
-			WriteUnexpected(self, "Close", "The menu is not registered. "+ToString(), log="System")
+			ThrowInvalidOperation(self, "Close", "The menu is not registered.", log="System")
 			return false
 		EndIf
 	EndIf
@@ -110,11 +110,11 @@ var Function Get(string member)
 		If (member)
 			return UI.Get(Name, GetMember(member))
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty. "+ToString(), log="System")
+			ThrowArgumentNoneEmpty(self, "Get", "member", log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", "The menu is not open. "+ToString(), log="System")
+		ThrowInvalidOperation(self, "Get", "The menu is not open.", log="System")
 		return ""
 	EndIf
 EndFunction
@@ -126,11 +126,11 @@ bool Function Set(string member, var argument)
 		If (member)
 			return UI.Set(Name, GetMember(member), argument)
 		Else
-			WriteUnexpectedValue(self, "Set", "member", "The argument cannot be none or empty. "+ToString(), log="System")
+			ThrowArgumentNoneEmpty(self, "Set", "member", log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "Set", "The menu is not open. "+ToString(), log="System")
+		ThrowInvalidOperation(self, "Set", "The menu is not open.", log="System")
 		return ""
 	EndIf
 EndFunction
@@ -142,32 +142,26 @@ var Function Invoke(string member, var[] arguments = none)
 		If (member)
 			return UI.Invoke(Name, GetMember(member), arguments)
 		Else
-			WriteUnexpectedValue(self, "Invoke", "member", "The argument cannot be none or empty. "+ToString(), log="System")
+			ThrowArgumentNoneEmpty(self, "Invoke", "member", log="System")
 			return ""
 		EndIf
 	Else
-		WriteUnexpected(self, "Invoke", "The menu is not open. "+ToString(), log="System")
+		ThrowInvalidOperation(self, "Invoke", "The menu is not open.", log="System")
 		return ""
 	EndIf
 EndFunction
 
 
 ; Returns the full AS3 instance path for the given member name.
-; TODO:Maybe dont check for IsOpen, only handle static string concate.
 string Function GetMember(string member, string variable = "")
-	If (IsOpen)
-		If (member)
-			If (variable)
-				return variable+"."+member
-			Else
-				return Root+"."+member
-			EndIf
+	If (member)
+		If (variable)
+			return variable+"."+member
 		Else
-			WriteUnexpectedValue(self, "GetMember", "member", "The argument cannot be none or empty. "+ToString(), log="System")
-			return ""
+			return Root+"."+member
 		EndIf
 	Else
-		WriteUnexpected(self, "GetMember", "The menu is not open. "+ToString(), log="System")
+		ThrowArgumentNoneEmpty(self, "GetMember", "member", log="System")
 		return ""
 	EndIf
 EndFunction

@@ -13,8 +13,8 @@ import System:Exception
 CustomEvent Delegate
 
 Group Events
-	int Property SenderIndex = 0 AutoReadOnly Hidden
-	int Property ArgumentsIndex = 1 AutoReadOnly Hidden
+	int Property From = 0 AutoReadOnly Hidden
+	int Property With = 1 AutoReadOnly Hidden
 EndGroup
 
 
@@ -23,16 +23,16 @@ EndGroup
 
 bool Function Invoke(var[] delegate)
 	If (delegate)
-		If (delegate[SenderIndex])
-			If (delegate[ArgumentsIndex])
+		If (delegate[From])
+			If (delegate[With])
 				self.SendCustomEvent("Delegate", delegate)
 				return true
 			Else
-				ThrowArgumentNoneEmpty(self, "Invoke", "delegate.ArgumentsIndex", "The delegate arguments at index '"+ArgumentsIndex+"' cannot be none or empty.")
+				ThrowArgumentNoneEmpty(self, "Invoke", "delegate.With", "The delegate With at index '"+With+"' cannot be none or empty.")
 				return false
 			EndIf
 		Else
-			ThrowArgumentNoneEmpty(self, "Invoke", "delegate.SenderIndex", "The delegate sender at index '"+SenderIndex+"' cannot be none.")
+			ThrowArgumentNoneEmpty(self, "Invoke", "delegate.From", "The delegate sender at index '"+From+"' cannot be none.")
 			return false
 		EndIf
 	Else
@@ -69,7 +69,7 @@ EndFunction
 ; @virtual
 ScriptObject Function ToSender(var[] arguments)
 	If (arguments)
-		return arguments[SenderIndex] as ScriptObject
+		return arguments[From] as ScriptObject
 	Else
 		ThrowArgumentNoneEmpty(self, "ToSender", "var[] arguments")
 		return none
@@ -80,7 +80,7 @@ EndFunction
 ; @virtual
 var Function ToArguments(var[] arguments)
 	If (arguments)
-		return arguments[ArgumentsIndex]
+		return arguments[With]
 	Else
 		ThrowArgumentNoneEmpty(self, "ToArguments", "var[] arguments")
 		return none

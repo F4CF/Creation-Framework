@@ -17,7 +17,7 @@ Struct Line
 	0 - Info
 	1 - Warning
 	2 - Error}
-	string LogFile = ""
+	string Log = ""
 	{The file name to write this line to. An empty string specifies `Papyrus.0.log`.}
 EndStruct
 
@@ -26,7 +26,7 @@ EndStruct
 Line Function Line(string text, string filename = "", int Severity = 0) Global DebugOnly
 	Line this = new Line
 	this.Text = text
-	this.LogFile = filename
+	this.Log = filename
 	return this
 EndFunction
 
@@ -34,11 +34,11 @@ EndFunction
 bool Function Writer(Line this) Global DebugOnly
 	If (this)
 		If (this.Text)
-			If (!this.LogFile)
+			If (!this.Log)
 				Trace(this.Text, this.Severity)
 				return true
 			Else
-				WriteTo(this.LogFile, this.Text, this.Severity)
+				WriteTo(this.Log, this.Text, this.Severity)
 				return true
 			EndIf
 		Else

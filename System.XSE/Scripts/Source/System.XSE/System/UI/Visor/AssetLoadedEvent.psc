@@ -1,11 +1,11 @@
-ScriptName System:UI:OpenCloseEvent Extends System:EventType
+Scriptname System:UI:Visor:AssetLoadedEvent extends System:EventType
 import System:Debug
 import System:Exception
 
 
 ; The arguments for this event.
-Struct OpenCloseEventArgs
-	bool Opening = false
+Struct AssetLoadedEventArgs
+	string Root = ""
 EndStruct
 
 
@@ -13,7 +13,7 @@ EndStruct
 ;---------------------------------------------
 
 ; @System:EventType.Invoke
-bool Function Send(ScriptObject sender, OpenCloseEventArgs e)
+bool Function Send(ScriptObject sender, AssetLoadedEventArgs e)
 	If (sender)
 		If (e)
 			var[] delegate = new var[2]
@@ -40,6 +40,6 @@ EndFunction
 
 
 ; @System:EventType.Arguments
-OpenCloseEventArgs Function Arguments(var[] arguments)
-	return ToArguments(arguments) as OpenCloseEventArgs
+AssetLoadedEventArgs Function Arguments(var[] arguments)
+	return ToArguments(arguments) as AssetLoadedEventArgs
 EndFunction

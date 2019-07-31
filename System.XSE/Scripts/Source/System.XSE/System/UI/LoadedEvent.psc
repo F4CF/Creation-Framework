@@ -18,8 +18,8 @@ bool Function Send(ScriptObject sender, LoadedEventArgs e)
 	If (sender)
 		If (e)
 			var[] delegate = new var[2]
-			delegate[SenderIndex] = sender
-			delegate[ArgumentsIndex] = e
+			delegate[From] = sender
+			delegate[With] = e
 			return Invoke(delegate)
 		Else
 			ThrowArgumentNoneEmpty(self, "Send", "e", "The argument cannot be none.")

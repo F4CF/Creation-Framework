@@ -8,18 +8,28 @@ import System:UI:Scope:BreathEvent
 IClient IClient_
 
 Actor Player
-ActorValue ActionPoints
 
+string ScopeAsset
 bool BreathPressed = false
 bool Interrupted = false
 
+string SystemScopeMenu_ClientLoadedCallback = "SystemScopeMenu_ClientLoadedCallback" const
+int BipedWeapon = 41 const
 
 ; Properties
 ;---------------------------------------------
 
-Group Events
+Group Properties
 	System:UI:OpenCloseEvent Property OpenClose Auto Const Mandatory
 	{@IMenu}
+
+	ActorValue Property ActionPoints Auto Const Mandatory
+
+	Keyword Property HasScope Auto Const Mandatory
+	{The keyword an OMOD must add via its property modifiers.}
+
+	Keyword Property HasScopeRecon  Auto Const Mandatory
+	{The keyword an OMOD must add via its property modifiers.}
 EndGroup
 
 Group Breath
@@ -85,7 +95,6 @@ IMenu Function IMenu()
 EndFunction
 
 
-
 ; @overrides
 IClient Function IClient()
 	return IClient_
@@ -106,29 +115,75 @@ EndEvent
 Event OnQuestInit()
 	Player = Game.GetPlayer()
 	Player.AddSpell(SystemXSE_UI_ScopeBreathEvent)
+	RegisterForRemoteEvent(Player, "OnItemEquipped")
+	RegisterForRemoteEvent(Player, "OnPlayerModArmorWeapon")
 	RegisterForMenuOpenCloseEvent(Name)
 	RegisterForGameReload(self)
 	OnGameReload()
 EndEvent
 
 
+Event OnQuestShutdown()
+	Player.RemoveSpell(SystemXSE_UI_ScopeBreathEvent)
+	UnregisterForAllEvents()
+EndEvent
+
+
 Event OnGameReload()
-	System:Assembly:Fallout fallout = System:Assembly:Fallout.Type()
-	ActionPoints = System:Type.ReadActorValue(fallout.File, fallout.ActionPoints)
+	; RegisterForExternalEvent(ClientLoadedCallback, "OnClientLoaded")
 
 	RegisterForMenuOpenCloseEvent(Name)
 	WriteLine(self, "OnGameReload", log="System")
 EndEvent
 
+;---------------------------------------------
 
-Event OnQuestShutdown()
-	UnregisterForAllEvents()
+Event Actor.OnItemEquipped(Actor sender, Form akBaseObject, ObjectReference akReference)
+	If (akBaseObject is Weapon)
+		ScopeAsset = GetModelPath()
+	EndIf
 EndEvent
 
+
+Event Actor.OnPlayerModArmorWeapon(Actor sender, Form akBaseObject, ObjectMod akModBaseObject)
+	If (akBaseObject is Weapon)
+		ScopeAsset = GetModelPath()
+	EndIf
+EndEvent
+
+
+string Function GetModelPath()
+	ObjectMod[] array = Player.GetWornItemMods(BipedWeapon)
+	If (array)
+		int index = 0
+		While (index < array.Length)
+			ObjectMod omod = array[index]
+			If (omod.HasWorldModel() && IsScope(omod))
+				return omod.GetWorldModelPath()
+			EndIf
+			index += 1
+		EndWhile
+		return none
+	EndIf
+EndFunction
+
+
+bool Function IsScope(ObjectMod omod)
+	If (omod)
+		ObjectMod:PropertyModifier[] properties = omod.GetPropertyModifiers()
+		bool bHasScope = properties.FindStruct("object", HasScope) > Invalid
+		return bHasScope || properties.FindStruct("object", HasScopeRecon) > Invalid
+	Else
+		return false
+	EndIf
+EndFunction
+
+;---------------------------------------------
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	BreathPressed = false
 	If (opening)
+		Load(menuName)
 		RegisterForKey(BreathKey)
 	Else
 		UnregisterForKey(BreathKey)
@@ -139,17 +194,28 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	IMenu().OpenClose.Send(self, e)
 EndEvent
 
+
 ; @F4SE
 Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
 	{The UI loaded callback.}
-	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")", log="System")
 	If (!success)
 		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.", log="System")
 	EndIf
 	IClient().Variable = assetInstance
 	IClient().Loaded = success
+	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")", log="System")
 EndEvent
 
+
+Event OnClientLoaded(bool success, string instance)
+	IClient().Loaded = success
+	If (success)
+		IClient().Variable = instance
+	Else
+		IClient().Variable = ""
+	EndIf
+	WriteLine(self, "OnClientLoaded", "(success:"+success+", instance:"+instance+") "+ToString(), log="System")
+EndEvent
 
 
 Event OnKeyDown(int keyCode)
@@ -178,6 +244,25 @@ bool Function BreathEvent(int breath)
 		e.Breath = breath
 		return BreathEvent.Send(self, e)
 	Else
+		return false
+	EndIf
+EndFunction
+
+
+bool Function LoadAsset(string filePath)
+	If (IsOpen)
+		If (filePath)
+			var[] arguments = new var[1]
+			arguments[0] = filePath
+			UI.Invoke(Name, GetMember("Load"), arguments)
+			WriteLine(self, "Load", filePath)
+			return true
+		Else
+			WriteUnexpectedValue(self, "Load", "filepath", "The argument cannot be none or empty.")
+			return false
+		EndIf
+	Else
+		WriteUnexpected(self, "Load", ToString()+" is not open.")
 		return false
 	EndIf
 EndFunction
