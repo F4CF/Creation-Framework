@@ -28,15 +28,15 @@ bool Function Invoke(var[] delegate)
 				self.SendCustomEvent("Delegate", delegate)
 				return true
 			Else
-				ThrowArgumentNoneEmpty(self, "Invoke", "delegate.With", "The delegate With at index '"+With+"' cannot be none or empty.")
+				ThrowArgumentNoneEmpty(self, "Invoke", "delegate.With", "The delegate parameter at index '"+With+"' cannot be none or empty.", log="System")
 				return false
 			EndIf
 		Else
-			ThrowArgumentNoneEmpty(self, "Invoke", "delegate.From", "The delegate sender at index '"+From+"' cannot be none.")
+			ThrowArgumentNoneEmpty(self, "Invoke", "delegate.From", "The delegate sender at index '"+From+"' cannot be none.", log="System")
 			return false
 		EndIf
 	Else
-		ThrowArgumentNoneEmpty(self, "Invoke", "delegate", "The delegate cannot be none or empty.")
+		ThrowArgumentNoneEmpty(self, "Invoke", "delegate", "The delegate cannot be none or empty.", log="System")
 		return false
 	EndIf
 EndFunction
@@ -48,7 +48,7 @@ bool Function Register(ScriptObject listener)
 		listener.RegisterForCustomEvent(self, "Delegate")
 		return true
 	Else
-		ThrowArgumentNoneEmpty(self, "Register", "listener", "Cannot register a none script for an event.")
+		ThrowArgumentNoneEmpty(self, "Register", "listener", "Cannot register a none script for an event.", log="System")
 		return false
 	EndIf
 EndFunction
@@ -59,7 +59,7 @@ bool Function Unregister(ScriptObject listener)
 		listener.UnregisterForCustomEvent(self, "Delegate")
 		return true
 	Else
-		ThrowArgumentNoneEmpty(self, "Unregister", "listener", "Cannot unregister a none script for an event.")
+		ThrowArgumentNoneEmpty(self, "Unregister", "listener", "Cannot unregister a none script for an event.", log="System")
 		return false
 	EndIf
 EndFunction
@@ -71,7 +71,7 @@ ScriptObject Function ToSender(var[] arguments)
 	If (arguments)
 		return arguments[From] as ScriptObject
 	Else
-		ThrowArgumentNoneEmpty(self, "ToSender", "var[] arguments")
+		ThrowArgumentNoneEmpty(self, "ToSender", "arguments", log="System")
 		return none
 	EndIf
 EndFunction
@@ -82,7 +82,7 @@ var Function ToArguments(var[] arguments)
 	If (arguments)
 		return arguments[With]
 	Else
-		ThrowArgumentNoneEmpty(self, "ToArguments", "var[] arguments")
+		ThrowArgumentNoneEmpty(self, "ToArguments", "arguments", log="System")
 		return none
 	EndIf
 EndFunction

@@ -1,9 +1,9 @@
 ScriptName System:UI:Visor:Menu Extends System:UI:Visor:MenuType
 {Provides an abstraction for interacting with the visor menu.}
 import System:Debug
-import System:UI:LoadedEvent
-import System:UI:MenuClient
-
+import System:UI:DynamicLoadEvent
+import System:UI:MenuDynamic
+import System:UI:Visor:AssetLoadedEvent
 
 string ClientInstance
 string AssetLoadedEvent = "System_UI_VisorMenu_AssetLoadedEvent" const
@@ -81,10 +81,11 @@ Event OnAssetLoaded(bool success, string instance)
 	Else
 		ClientInstance = ""
 	EndIf
-	LoadedEventArgs e = new LoadedEventArgs
+
+	AssetLoadedEventArgs e = new AssetLoadedEventArgs
 	e.Success = success
-	e.Variable = instance
-	; Service.SendLoadedEvent(e)
+	e.Instance = instance
+	AssetLoaded.Send(self, e)
 EndEvent
 
 

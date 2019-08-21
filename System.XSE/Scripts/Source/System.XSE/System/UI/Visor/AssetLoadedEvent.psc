@@ -5,7 +5,9 @@ import System:Exception
 
 ; The arguments for this event.
 Struct AssetLoadedEventArgs
-	string Root = ""
+	bool Success = false
+	string File = ""
+	string Instance = ""
 EndStruct
 
 

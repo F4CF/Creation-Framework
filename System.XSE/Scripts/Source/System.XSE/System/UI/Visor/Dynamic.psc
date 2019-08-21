@@ -1,4 +1,4 @@
-ScriptName System:UI:Visor:Client Extends System:UI:MenuClient
+ScriptName System:UI:Visor:Dynamic Extends System:UI:MenuDynamic
 
 Actor Player
 

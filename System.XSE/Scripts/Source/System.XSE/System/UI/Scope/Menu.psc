@@ -1,11 +1,12 @@
 ScriptName System:UI:Scope:Menu Extends System:UI:Scope:MenuType
 {The scope menu service provides backend for the scope menu.}
 import System:Debug
-import System:UI:MenuClient
+import System:UI:MenuDynamic
 import System:UI:OpenCloseEvent
 import System:UI:Scope:BreathEvent
 
-IClient IClient_
+IMenu IMenu_
+IMenuDynamic IMenuDynamic_
 
 Actor Player
 
@@ -13,23 +14,19 @@ string ScopeAsset
 bool BreathPressed = false
 bool Interrupted = false
 
-string SystemScopeMenu_ClientLoadedCallback = "SystemScopeMenu_ClientLoadedCallback" const
 int BipedWeapon = 41 const
+string SystemScopeMenu_ClientLoadedCallback = "SystemScopeMenu_ClientLoadedCallback" const
+
 
 ; Properties
 ;---------------------------------------------
 
-Group Properties
+Group Implementation
 	System:UI:OpenCloseEvent Property OpenClose Auto Const Mandatory
 	{@IMenu}
 
-	ActorValue Property ActionPoints Auto Const Mandatory
-
-	Keyword Property HasScope Auto Const Mandatory
-	{The keyword an OMOD must add via its property modifiers.}
-
-	Keyword Property HasScopeRecon  Auto Const Mandatory
-	{The keyword an OMOD must add via its property modifiers.}
+	System:UI:DynamicLoadEvent Property DynamicLoad Auto Const Mandatory
+	{@IMenuDynamic}
 EndGroup
 
 Group Breath
@@ -81,23 +78,29 @@ Group Identifiers
 	int Property Empty = 21 AutoReadOnly
 EndGroup
 
+Group Properties
+	ActorValue Property ActionPoints Auto Const Mandatory
+	{The actor value for the player's action points.}
+
+	Keyword Property HasScope Auto Const Mandatory
+	{The keyword an OMOD must add via its property modifiers.}
+
+	Keyword Property HasScopeRecon  Auto Const Mandatory
+	{The keyword an OMOD must add via its property modifiers.}
+EndGroup
 
 ; Interfaces
 ;---------------------------------------------
 
 ; @overrides
 IMenu Function IMenu()
-	IMenu this = new IMenu
-	this.Name = "ScopeMenu"
-	this.Variable = ".ScopeMenuInstance"
-	this.OpenClose = OpenClose
-	return this
+	return IMenu_
 EndFunction
 
 
 ; @overrides
-IClient Function IClient()
-	return IClient_
+IMenuDynamic Function IMenuDynamic()
+	return IMenuDynamic_
 EndFunction
 
 ; Events
@@ -105,8 +108,15 @@ EndFunction
 
 ; TODO: This only happens once per object life time.
 Event OnInit()
-	IClient_ = new IClient
-	IClient_.File = "SystemScopeClient"
+	IMenu_ = new IMenu
+	IMenu_.Name = "ScopeMenu"
+	IMenu_.Variable = ".ScopeMenuInstance"
+	IMenu_.OpenClose = OpenClose
+
+	IMenuDynamic_ = new IMenuDynamic
+	IMenuDynamic_.File = "SystemScopeClient"
+	IMenuDynamic_.DynamicLoad = DynamicLoad
+
 	RegisterForQuestInit(QUST)
 	RegisterForQuestShutdown(QUST)
 EndEvent
@@ -134,6 +144,38 @@ Event OnGameReload()
 
 	RegisterForMenuOpenCloseEvent(Name)
 	WriteLine(self, "OnGameReload", log="System")
+EndEvent
+
+;---------------------------------------------
+
+Event OnMenuOpenCloseEvent(string menuName, bool opening)
+	BreathPressed = false
+	If (opening)
+		Load()
+		RegisterForKey(BreathKey)
+	Else
+		UnregisterForKey(BreathKey)
+	EndIf
+
+	OpenCloseEventArgs e = new OpenCloseEventArgs
+	e.Opening = opening
+	IMenu().OpenClose.Send(self, e)
+EndEvent
+
+
+Event OnKeyDown(int keyCode)
+	BreathPressed = true
+	BreathEvent(BreathHeld)
+EndEvent
+
+
+Event OnKeyUp(int keyCode, float time)
+	BreathPressed = false
+	If (Interrupted)
+		Interrupted = false
+	Else
+		BreathEvent(BreathReleased)
+	EndIf
 EndEvent
 
 ;---------------------------------------------
@@ -177,61 +219,6 @@ bool Function IsScope(ObjectMod omod)
 		return false
 	EndIf
 EndFunction
-
-;---------------------------------------------
-
-Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	BreathPressed = false
-	If (opening)
-		Load(menuName)
-		RegisterForKey(BreathKey)
-	Else
-		UnregisterForKey(BreathKey)
-	EndIf
-
-	OpenCloseEventArgs e = new OpenCloseEventArgs
-	e.Opening = opening
-	IMenu().OpenClose.Send(self, e)
-EndEvent
-
-
-; @F4SE
-Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
-	{The UI loaded callback.}
-	If (!success)
-		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.", log="System")
-	EndIf
-	IClient().Variable = assetInstance
-	IClient().Loaded = success
-	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")", log="System")
-EndEvent
-
-
-Event OnClientLoaded(bool success, string instance)
-	IClient().Loaded = success
-	If (success)
-		IClient().Variable = instance
-	Else
-		IClient().Variable = ""
-	EndIf
-	WriteLine(self, "OnClientLoaded", "(success:"+success+", instance:"+instance+") "+ToString(), log="System")
-EndEvent
-
-
-Event OnKeyDown(int keyCode)
-	BreathPressed = true
-	BreathEvent(BreathHeld)
-EndEvent
-
-
-Event OnKeyUp(int keyCode, float time)
-	BreathPressed = false
-	If (Interrupted)
-		Interrupted = false
-	Else
-		BreathEvent(BreathReleased)
-	EndIf
-EndEvent
 
 
 ; Methods

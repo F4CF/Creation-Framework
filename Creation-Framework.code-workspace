@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "--Documents",
+			"path": "E:\\Studio\\Bethesda\\FO4\\Wrye\\Bash Installers\\AutoDoc\\--Documents"
+		},
+		{
 			"name": "Fallout 4",
 			"path": "E:\\Games\\Steam\\steamapps\\common\\Fallout 4"
 		}
@@ -15,11 +19,11 @@
 			"steamapps"
 		],
 		"files.exclude": {
-			"**/.DS_Store": true,
 			"**/.git": true,
-			"**/.hg": true,
 			"**/.svn": true,
+			"**/.hg": true,
 			"**/CVS": true,
+			"**/.DS_Store": true,
 			"**/Creations": true,
 			"**/Data/Bashed Patch, 0.esp": true,
 			"**/Data/LSData": true,
@@ -98,6 +102,7 @@
 			"Data/Fallout4.cdx": true,
 			"Data/Fallout4.esm": true,
 			"Data/Scripts/*.pex": true,
+			"**/*.hkx": true
 		},
 		"explorerExclude.backup": null
 	}

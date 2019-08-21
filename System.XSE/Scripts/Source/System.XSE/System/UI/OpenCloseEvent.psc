@@ -21,10 +21,10 @@ bool Function Send(ScriptObject sender, OpenCloseEventArgs e)
 			delegate[With] = e
 			return Invoke(delegate)
 		Else
-			ThrowArgumentNoneEmpty(self, "Send", "e", "The argument cannot be none.")
+			ThrowArgumentNoneEmpty(self, "Send", "e", "The argument cannot be none.", log="System")
 		EndIf
 	Else
-		ThrowArgumentNoneEmpty(self, "Send", "sender", "The sender cannot be none.")
+		ThrowArgumentNoneEmpty(self, "Send", "sender", "The sender cannot be none.", log="System")
 		return false
 	EndIf
 EndFunction

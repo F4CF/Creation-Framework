@@ -1,8 +1,8 @@
-ScriptName System:UI:Examine:Client Extends System:UI:Examine:ClientType
+ScriptName System:UI:Examine:Menu Extends System:UI:Examine:MenuType
 {Injects AS3 code into the vanilla Examine menu.}
 import System:Debug
 import System:UI:Menu
-import System:UI:MenuClient
+import System:UI:MenuDynamic
 import System:UI:OpenCloseEvent
 
 ; Interfaces
@@ -18,8 +18,8 @@ EndFunction
 
 
 ; @overrides
-IClient Function IClient()
-	IClient this = new IClient
+IMenuDynamic Function IMenuDynamic()
+	IMenuDynamic this = new IMenuDynamic
 	this.File = "System_ExamineMenu"
 	return this
 EndFunction
@@ -65,7 +65,7 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	Else
 		UnregisterForExternalEvent(ModChangedEvent)
 		UnregisterForExternalEvent(EditorOpenedEvent)
-		IClient().Loaded = false
+		IMenuDynamic().HasLoaded = false
 	EndIf
 
 	OpenCloseEventArgs e = new OpenCloseEventArgs
@@ -81,8 +81,8 @@ Event OnLoadComplete(bool success, string menuName, string menuRoot, string asse
 	If (!success)
 		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.")
 	EndIf
-	IClient().Variable = assetInstance
-	IClient().Loaded = success
+	IMenuDynamic().Instance = assetInstance
+	IMenuDynamic().HasLoaded = success
 EndEvent
 
 
@@ -127,12 +127,12 @@ EndFunction
 
 bool Function SetPrimary(string filepath, int color)
 	If (IsOpen)
-		If (IsLoaded)
+		If (HasLoaded)
 			If (filepath)
 				var[] arguments = new var[2]
 				arguments[0] = filepath
 				arguments[1] = color
-				UI.Invoke(Name, IClient().Variable+".Viewer.SetPrimary", arguments)
+				UI.Invoke(Name, Instance+".Viewer.SetPrimary", arguments)
 				WriteLine(self, "SetPrimary", arguments)
 				return true
 			Else
@@ -156,7 +156,7 @@ bool Function SetSecondary(string filepath, int color)
 			var[] arguments = new var[2]
 			arguments[0] = filepath
 			arguments[1] = color
-			UI.Invoke(Name, IClient().Variable+".Viewer.SetSecondary", arguments)
+			UI.Invoke(Name, Instance+".Viewer.SetSecondary", arguments)
 			WriteLine(self, "SetSecondary", arguments)
 			return true
 		Else
@@ -176,7 +176,7 @@ bool Function SetBackground(string filepath, int color)
 			var[] arguments = new var[2]
 			arguments[0] = filepath
 			arguments[1] = color
-			UI.Invoke(Name, IClient().Variable+".Viewer.SetBackground", arguments)
+			UI.Invoke(Name, Instance+".Viewer.SetBackground", arguments)
 			WriteLine(self, "SetBackground", arguments)
 			return true
 		Else

@@ -1,12 +1,15 @@
-ScriptName System:UI:LoadedEvent Extends System:EventType
+ScriptName System:UI:DynamicLoadEvent Extends System:EventType
 import System:Debug
 import System:Exception
 
 
 ; The arguments for this event.
-Struct LoadedEventArgs
+Struct DynamicLoadEventArgs
 	bool Success = false
-	string Variable = ""
+	string MenuName = ""
+	string MenuRoot = ""
+	string Instance = ""
+	string File = ""
 EndStruct
 
 
@@ -14,7 +17,7 @@ EndStruct
 ;---------------------------------------------
 
 ; @System:EventType.Invoke
-bool Function Send(ScriptObject sender, LoadedEventArgs e)
+bool Function Send(ScriptObject sender, DynamicLoadEventArgs e)
 	If (sender)
 		If (e)
 			var[] delegate = new var[2]
@@ -41,6 +44,6 @@ EndFunction
 
 
 ; @System:EventType.Arguments
-LoadedEventArgs Function Arguments(var[] arguments)
-	return ToArguments(arguments) as LoadedEventArgs
+DynamicLoadEventArgs Function Arguments(var[] arguments)
+	return ToArguments(arguments) as DynamicLoadEventArgs
 EndFunction

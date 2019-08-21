@@ -1,18 +1,34 @@
-ScriptName System:UI:Code:Menu Extends System:UI:MenuClient
+ScriptName System:UI:Code:Menu Extends System:UI:Code:MenuType
 {The framework is used to track equipment changes on the player.}
 import System:Debug
 import System:UI:Menu
-import System:UI:MenuClient
+import System:UI:MenuDynamic
 
 IMenu IMenu_
-IClient IClient_
+IMenuDynamic IMenuDynamic_
 
 ; Properties
 ;---------------------------------------------
 
+Group Implementation
+	System:UI:OpenCloseEvent Property OpenClose Auto Const Mandatory
+	{@IMenu}
+
+	System:UI:DynamicLoadEvent Property DynamicLoad Auto Const Mandatory
+	{@IMenuDynamic}
+EndGroup
+
 Group Properties
 	System:MenuName Property MenuNames Auto Const Mandatory
 EndGroup
+
+
+string Property ClientLoadedCallback Hidden
+	{The client loaded external event ID.}
+	string Function Get()
+		return "SystemUI_ClientLoadedCallback"
+	EndFunction
+EndProperty
 
 
 ; Interfaces
@@ -25,8 +41,8 @@ EndFunction
 
 
 ; @overrides
-IClient Function IClient()
-	return IClient_
+IMenuDynamic Function IMenuDynamic()
+	return IMenuDynamic_
 EndFunction
 
 
@@ -37,9 +53,11 @@ EndFunction
 Event OnInit()
 	IMenu_ = new IMenu
 	IMenu_.Name = ""
+	IMenu_.OpenClose = OpenClose
 
-	IClient_ = new IClient
-	IClient_.File = "SystemCodeClient"
+	IMenuDynamic_ = new IMenuDynamic
+	IMenuDynamic_.File = "SystemCodeClient"
+	IMenuDynamic_.DynamicLoad = DynamicLoad
 
 	RegisterForQuestInit(QUST)
 	RegisterForQuestShutdown(QUST)
@@ -68,24 +86,13 @@ Event OnGameReload()
 EndEvent
 
 
-; @F4SE
-Event OnLoadComplete(bool success, string menuName, string menuRoot, string assetInstance, string assetFile)
-	{The UI loaded callback.}
-	WriteLine(self, "OnLoadComplete", "(success:"+success+", menuName:"+menuName+", menuRoot:"+menuRoot+", assetInstance:"+assetInstance+", assetFile:"+assetFile+")", log="System")
-	If (!success)
-		WriteUnexpectedValue(self, "OnLoadComplete", "success", "The `"+assetFile+"` asset could not be loaded into `"+menuName+"`.", log="System")
-	EndIf
-	IClient().Variable = assetInstance
-	IClient().Loaded = success
-EndEvent
-
-
 Event OnClientLoaded(bool success, string instance)
+	{The client loaded event.}
 	WriteLine(self, "OnClientLoaded", ToString()+":(success:"+success+", instance:"+instance+")", log="System")
 	If (success)
-		IClient().Variable = instance
+		IMenuDynamic().Instance = instance
 	Else
-		IClient().Variable = ""
+		IMenuDynamic().Instance = ""
 	EndIf
 EndEvent
 
@@ -93,6 +100,6 @@ EndEvent
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	WriteLine(self, "OnMenuOpenCloseEvent(MenuNames.menuName="+menuName+", opening="+opening+")", log="System")
 	If (opening)
-		Load(menuName)
+		Load()
 	EndIf
 EndEvent

@@ -1,8 +1,8 @@
 ScriptName System:UI:Visor:Service Extends System:Quest
 {The framework is used to track equipment changes on the player.}
 import System:Debug
-import System:UI:LoadedEvent
-import System:UI:MenuClient
+import System:UI:DynamicLoadEvent
+import System:UI:MenuDynamic
 import System:UI:OpenCloseEvent
 
 
