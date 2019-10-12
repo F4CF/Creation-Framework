@@ -23,8 +23,6 @@ package Shared
 		protected static const CLOSE_ENOUGH_EPSILON:Number = 0.001;
 		
 		public static const MAX_TRUNCATED_TEXT_LENGTH = 42;
-		
-		public static const PLAY_FOCUS_SOUND:String = "GlobalFunc::playFocusSound";
 		 
 		
 		public function GlobalFunc()
