@@ -7,3 +7,5 @@ This is the root package directory for AS3 imports. These Flash documents reflec
 * [AS3 Extensions Reference](https://help.autodesk.com/view/SCLFRM/ENU/?guid=__scaleform_help_as3_reference_html)
 
 
+# Issues
+* `Source\Bethesda\Shared\AS3\BSScrollingList.as`:  Figure out which variable(s) are used between `bAllowWheelScrollNoSelectionChange` & `bAllowSelectionDisabledListNav`.
