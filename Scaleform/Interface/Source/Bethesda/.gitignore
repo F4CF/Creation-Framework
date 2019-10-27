@@ -1,10 +1,2 @@
 *.swf
 UI/
-Pipboy/PageData
-Pipboy/PageInv
-Pipboy/PageMap
-Pipboy/PageRadio
-Pipboy/PageStats
-Pipboy/pipboybootsequence
-Pipboy/PipboyMessageBox
-Pipboy/remoteaccess
