@@ -1,0 +1,33 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#666666" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" gridSnapTo="true" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Assets" itemID="5db53a61-00000356" isExpanded="true"/>
+          <DOMFolderItem name="Assets/DamageIcons" itemID="5db5359a-0000020d" isExpanded="true"/>
+     </folders>
+     <symbols>
+          <Include href="Assets/DamageIcons/DamageIcons.xml" itemID="5db53626-0000027a" lastModified="1572156966"/>
+          <Include href="Assets/DamageIcons/DamageIcons_37.xml" loadImmediate="false" itemID="5db53645-00000281" lastModified="1572156997"/>
+          <Include href="Assets/DamageIcons/DamageIcons_39.xml" loadImmediate="false" itemID="5db5364b-00000282" lastModified="1572157003"/>
+          <Include href="Assets/DamageIcons/DamageIcons_41.xml" loadImmediate="false" itemID="5db5364f-00000283" lastModified="1572157007"/>
+          <Include href="Assets/DamageIcons/DamageIcons_43.xml" loadImmediate="false" itemID="5db53653-00000284" lastModified="1572157011"/>
+          <Include href="Assets/DamageIcons/DamageIcons_45.xml" loadImmediate="false" itemID="5db53656-00000285" lastModified="1572157014"/>
+          <Include href="Assets/DamageIcons/DamageIcons_47.xml" loadImmediate="false" itemID="5db5365a-00000286" lastModified="1572157018"/>
+          <Include href="Assets/DamageIcons/DamageIcons_49.xml" loadImmediate="false" itemID="5db5365d-00000287" lastModified="1572157021"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="Empty" color="#4FFF4F" locked="true" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="559" publishTime="1572156747" publishDebug="true"/>
+     </publishHistory>
+</DOMDocument>
