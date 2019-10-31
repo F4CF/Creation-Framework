@@ -1,6 +1,7 @@
 package System
 {
 	import flash.display.DisplayObject;
+	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import System.Diagnostics.Debug;
@@ -17,8 +18,7 @@ package System
 
 		public static function FitToScreen(object:DisplayObject):void
 		{
-			Debug.WriteLine("[System.Display]", "FitToScreen", "Stage.height="+object.stage.height);
-			ScaleToHeight(object, object.stage.height);
+			ScaleToHeight(object, DefaultHeight);
 		}
 
 

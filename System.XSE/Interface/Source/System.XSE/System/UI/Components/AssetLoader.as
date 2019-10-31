@@ -136,7 +136,7 @@ package System.UI.Components
 				}
 				else
 				{
-					Debug.WriteLine("[Components.AssetLoader]", "(Load)", "The file doesnt not exist or is not supported.", "filepath:"+filepath);
+					Debug.WriteLine("[Components.AssetLoader]", "(Load)", "The file does not exist or is not supported.", "filepath:"+filepath);
 					return false;
 				}
 
