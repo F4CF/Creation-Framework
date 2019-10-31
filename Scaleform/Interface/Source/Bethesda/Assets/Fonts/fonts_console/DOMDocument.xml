@@ -1,0 +1,61 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" sharedLibraryURL="fonts_console.swf" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
+     <folders>
+          <DOMFolderItem name="Shared" itemID="5db79e0d-000001fc" isExpanded="true"/>
+          <DOMFolderItem name="Shared/Assets" itemID="5db79e12-00000200" isExpanded="true"/>
+          <DOMFolderItem name="Shared/Assets/Fonts" itemID="5db79e17-00000201" isExpanded="true"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Shared/Assets/Fonts/$DebugTextFont" itemID="5db49e19-000001fc" linkageExportForAS="true" linkageExportForRS="true" linkageClassName="$DebugTextFont" linkageURL="fonts_console.swf" font="Consolas" size="0" id="1" sourceLastImported="1572314669" embeddedCharacters="ˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Shared/Assets/Fonts/$ConsoleFont" itemID="5db49e08-000001fa" linkageExportForAS="true" linkageExportForRS="true" linkageClassName="$ConsoleFont" linkageURL="fonts_console.swf" font="ArialMT" size="0" id="2" sourceLastImported="1572118449" embeddedCharacters="ˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
+     </fonts>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="$DebugTextFont" color="#00FF00" locked="true" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText selected="true" width="286.15" height="169.8" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="327" ty="27"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>abcdefghijklmnopqrs&#xA;tuvwxyzABCDEFGHIJKL&#xA;MNOPQRSTUVWXYZ01234&#xA;56789 !”#$%&amp;’()*+,-&#xA;./:;&lt;=&gt;?@[\]^_`{|}~&#xA;ˆ˜–—‘’‚“”„†‡•…‰‹›€™&#xD;</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="1" size="20" bitmapSize="400" face="$DebugTextFont*" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="$ConsoleFont" color="#FFCC00" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText width="286.15" height="162.45" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="27" ty="27"/>
+                                             </matrix>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>abcdefghijklmnopqrstuv&#xA;wxyzABCDEFGHIJKLM&#xA;NOPQRSTUVWXYZ012&#xA;3456789 !”#$%&amp;’()*+,-&#xA;./:;&lt;=&gt;?@[\]^_`{|}~ˆ˜–—&#xA;‘’‚“”„†‡•…‰‹›€™&#xD;</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="1" size="20" bitmapSize="400" face="$ConsoleFont*" fillColor="#FFFFFF"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>
