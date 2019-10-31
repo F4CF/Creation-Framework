@@ -1,6 +1,51 @@
-# Bethesda Modding
+# https://github.com/github/gitignore
+
+
+# Papyrus
 # =========================
-*.sublime-workspace
+*.pas
+*.pex
+
+
+# Adobe
+# =========================
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+
+# Build and User Settings
+bin/
+bin-debug/
+bin-release/
+obj/
+.settings/
+
+# Adobe Flash & Actionscript
+*.swf
+*.html
+*.air
+*.ipa
+*.apk
+*.cache
+*.tmp
+
+# Adobe Air
+*META-INF*
+*.vch
+*.p12
+*.umlj
+*.mobileprovision
+*.app
+*.epd
+
+
+# Archives
+# =========================
+*.7z
+*.rar
+*.tar
+*.zip
+
 
 # Windows
 # =========================
@@ -9,8 +54,22 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.exe
+*.dll
 *.cab
 *.msi
 *.msm
 *.msp
 *.lnk
+
+# Apple OSX
+# =========================
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.Spotlight-V100
+.Trashes
+.DS_Store
+.AppleDouble
+.LSOverride
