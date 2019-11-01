@@ -22,7 +22,7 @@ OS2Version: 2
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1570245179
-ModificationTime: 1572355099
+ModificationTime: 1572564297
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -79,12 +79,14 @@ ShortTable: maxp 16
 EndShort
 LangName: 1033 "+AKkA Copyright Bethesda Softworks LLC.+AKkA 2010. All Rights Reserved, FFDec v.11.2.0." "" "Regular" "dtype: FFDec v.11.2.0: Controller  Buttons Regular: Version 1.0: Bethesda Softworks LLC.+AKkA 2010. All Rights Reserved" "" "Version 1.0" "" "n/a" "FFDec v.11.2.0"
 Encoding: UnicodeBmp
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 56 8 5
+WidthSeparation: 154
+WinInfo: 0 8 5
 BeginChars: 65539 56
 
 StartChar: .notdef
@@ -578,7 +580,7 @@ EndChar
 
 StartChar: J
 Encoding: 74 74 13
-Width: -683
+Width: 2817
 Flags: W
 HStem: -210 209<359.937 660 864 949 1510 1595 1816 1908 2075 2155.26> 360 254<1591 1754.46> 681 174<359.937 443 709 1103 1510 1796.37 1920 2258.03>
 VStem: 30 328<99.1396 546.025> 443 421<73 606> 949 561<-1 606> 1591 182<378.536 596.495> 1861 214<345.037 604.887> 2160 407<99.1396 546.025>
@@ -739,7 +741,7 @@ SplineSet
  338 858 338 858 558 858 c 2,101,-1
  559 858 l 1,84,85
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: L
@@ -898,7 +900,7 @@ SplineSet
  463 575 463 575 479 559 c 256,90,91
  495 543 495 543 495 507 c 1,80,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: N
@@ -1314,7 +1316,7 @@ SplineSet
  625 579 625 579 625 542 c 2,59,-1
  625 430 l 1,48,49
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: Y
@@ -1359,7 +1361,7 @@ SplineSet
  1356 680 l 1,36,-1
  961 680 l 1,29,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: a
@@ -1800,7 +1802,7 @@ SplineSet
  1651 609 1651 609 1668 592 c 0,75,76
  1685 576 1685 576 1685 539 c 1,65,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: i
@@ -2415,7 +2417,7 @@ SplineSet
  5 590 5 590 138 723 c 0,200,201
  270 855 270 855 457 855 c 1,182,-1
 EndSplineSet
-Validated: 8388609
+Validated: 1
 EndChar
 
 StartChar: q
