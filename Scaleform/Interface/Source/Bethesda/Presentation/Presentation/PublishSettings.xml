@@ -38,8 +38,8 @@
     <VersionInfo>10,0,2,0;12,0,0,0;11,2,0,0;11,1,0,0;10,3,0,0;10,2,152,0;10,1,0,0;9,0,124,0;8,0,24,0;7,0,14,0;6,0,79,0;5,0,58,0;4,0,32,0;3,0,8,0;2,0,1,12;1,0,0,1;</VersionInfo>
     <UsingDefaultContentFilename>1</UsingDefaultContentFilename>
     <UsingDefaultAlternateFilename>1</UsingDefaultAlternateFilename>
-    <ContentFilename>Presentation_content.html</ContentFilename>
-    <AlternateFilename>Presentation_alternate.html</AlternateFilename>
+    <ContentFilename>Presentation.xfl_content.html</ContentFilename>
+    <AlternateFilename>Presentation.xfl_alternate.html</AlternateFilename>
     <UsingOwnAlternateFile>0</UsingOwnAlternateFile>
     <OwnAlternateFilename></OwnAlternateFilename>
     <Width>1280</Width>
@@ -230,7 +230,7 @@
     <qtDefaultName>1</qtDefaultName>
     <rnwkDefaultName>1</rnwkDefaultName>
     <swcDefaultName>1</swcDefaultName>
-    <flashFileName>../../Presentation.swf</flashFileName>
+    <flashFileName>../../../Presentation.swf</flashFileName>
     <projectorWinFileName>Presentation.exe</projectorWinFileName>
     <projectorMacFileName>Presentation.app</projectorMacFileName>
     <htmlFileName>Presentation.html</htmlFileName>
@@ -246,8 +246,8 @@
     <VersionInfo>12,0,0,0;11,2,0,0;11,1,0,0;10,3,0,0;10,2,153,0;10,1,52,0;9,0,124,0;8,0,24,0;7,0,14,0;6,0,79,0;5,0,58,0;4,0,32,0;3,0,8,0;2,0,1,12;1,0,0,1;</VersionInfo>
     <UsingDefaultContentFilename>1</UsingDefaultContentFilename>
     <UsingDefaultAlternateFilename>1</UsingDefaultAlternateFilename>
-    <ContentFilename>Presentation_content.html</ContentFilename>
-    <AlternateFilename>Presentation_alternate.html</AlternateFilename>
+    <ContentFilename>Presentation.xfl_content.html</ContentFilename>
+    <AlternateFilename>Presentation.xfl_alternate.html</AlternateFilename>
     <UsingOwnAlternateFile>0</UsingOwnAlternateFile>
     <OwnAlternateFilename></OwnAlternateFilename>
     <Width>1280</Width>
