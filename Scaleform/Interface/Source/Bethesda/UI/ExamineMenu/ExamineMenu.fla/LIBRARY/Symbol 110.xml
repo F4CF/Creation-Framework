@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 110" itemID="5dc01bf0-00000052" linkageExportForAS="true" linkageClassName="VignetteMenu" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 110">
+      <layers>
+        <DOMLayer name="Layer 1" color="#E0368C" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <RadialGradient>
+                        <matrix>
+                          <Matrix a="0" b="-0.82635498046875" c="1.28848266601563" d="0" tx="640" ty="360"/>
+                        </matrix>
+                        <GradientEntry alpha="0" ratio="0.52156862745098"/>
+                        <GradientEntry ratio="1"/>
+                      </RadialGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!25600 14400|0 14400!0 14400|0 0!0 0|25600 0!25600 0|25600 14400"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

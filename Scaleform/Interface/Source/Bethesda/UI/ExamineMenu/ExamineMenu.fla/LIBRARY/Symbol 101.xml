@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 101" itemID="5dc01bf0-0000004e" linkageExportForAS="true" linkageClassName="Components.ItemCard_ComponentsEntry" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 101">
+      <layers>
+        <DOMLayer name="Layer 1" color="#88BE4A" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 97" name="EntryHolder_mc" centerPoint3DX="-220" centerPoint3DY="-10">
+                  <matrix>
+                    <Matrix tx="-220" ty="-10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

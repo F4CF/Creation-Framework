@@ -1,0 +1,29 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 165" itemID="5dc01bf0-00000072" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 165">
+      <layers>
+        <DOMLayer name="Layer 1" color="#A2B5AA" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="ModDescription_tf" width="282.75" height="71.6" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="4.5" ty="-3"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Short range Magnification with Night Vision.&#xD;&#xA;Improves Accuracy, but degrades AP cost.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="0" lineHeight="17.9" size="16" bitmapSize="320" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
