@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 22" itemID="5dc00f96-00000160" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/DialogueMenu/FadeHolder" itemID="5dc01104-00000161" lastModified="1572869802">
   <timeline>
-    <DOMTimeline name="Symbol 22">
+    <DOMTimeline name="FadeHolder">
       <layers>
-        <DOMLayer name="Layer 1" color="#908283">
+        <DOMLayer name="SpeechChallengeAnim_mc" color="#FFCC00" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 21" name="SpeechChallengeAnim_mc" centerPoint3DX="43.8" centerPoint3DY="64.55">
+                <DOMSymbolInstance libraryItemName="UI/DialogueMenu/SpeechChallenge/SpeechChallenge_Anim" name="SpeechChallengeAnim_mc" selected="true" centerPoint3DX="43.8" centerPoint3DY="64.55">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -15,11 +15,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#A947D3">
+        <DOMLayer name="Positive" color="#A947D3" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 12" name="Positive" centerPoint3DX="87" centerPoint3DY="41.3">
+                <DOMSymbolInstance libraryItemName="UI/DialogueMenu/Button_FadeAnimation/Button_FadeAnim" name="Positive" selected="true" centerPoint3DX="87" centerPoint3DY="41.3">
                   <matrix>
                     <Matrix tx="-13" ty="28.5"/>
                   </matrix>
@@ -31,11 +31,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#7CFB1F">
+        <DOMLayer name="Negative" color="#0066FF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 12" name="Negative" centerPoint3DX="117" centerPoint3DY="13.8">
+                <DOMSymbolInstance libraryItemName="UI/DialogueMenu/Button_FadeAnimation/Button_FadeAnim" name="Negative" selected="true" centerPoint3DX="117" centerPoint3DY="13.8">
                   <matrix>
                     <Matrix tx="17" ty="1"/>
                   </matrix>
@@ -47,11 +47,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 4" color="#33C2FF">
+        <DOMLayer name="Neutral" color="#00CC00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 12" name="Neutral" centerPoint3DX="85" centerPoint3DY="13.8">
+                <DOMSymbolInstance libraryItemName="UI/DialogueMenu/Button_FadeAnimation/Button_FadeAnim" name="Neutral" selected="true" centerPoint3DX="85" centerPoint3DY="13.8">
                   <matrix>
                     <Matrix tx="-15" ty="1"/>
                   </matrix>
@@ -63,11 +63,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 5" color="#FBB7BB" current="true" isSelected="true">
+        <DOMLayer name="Question" color="#CC0000" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 12" name="Question" centerPoint3DX="113" centerPoint3DY="-13.7">
+                <DOMSymbolInstance libraryItemName="UI/DialogueMenu/Button_FadeAnimation/Button_FadeAnim" name="Question" selected="true" centerPoint3DX="113" centerPoint3DY="-13.7">
                   <matrix>
                     <Matrix tx="13" ty="-26.5"/>
                   </matrix>

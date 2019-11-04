@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 10" itemID="5dc00f96-00000159" linkageExportForAS="true" linkageClassName="Shared.AS3.BSButtonHint" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/BSButtonHintBar/BSButtonHint" itemID="5dc016f6-00000190" linkageExportForAS="true" linkageClassName="Shared.AS3.BSButtonHint" lastModified="1572870077">
   <timeline>
-    <DOMTimeline name="Symbol 10">
+    <DOMTimeline name="BSButtonHint">
       <layers>
-        <DOMLayer name="Layer 1" color="#666FF0">
+        <DOMLayer name="IconHolderInstance" color="#666FF0" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 9" name="IconHolderInstance" centerPoint3DX="50" centerPoint3DY="15.9">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/BSButtonHint_IconHolder" name="IconHolderInstance" selected="true" centerPoint3DX="50" centerPoint3DY="15.9">
                   <matrix>
                     <Matrix ty="3.5"/>
                   </matrix>
@@ -18,11 +18,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#D4A0A9">
+        <DOMLayer name="SecondaryIconHolderInstance" color="#FF6600" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 9" name="SecondaryIconHolderInstance" centerPoint3DX="50" centerPoint3DY="15.9">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/BSButtonHint_IconHolder" name="SecondaryIconHolderInstance" selected="true" centerPoint3DX="50" centerPoint3DY="15.9">
                   <matrix>
                     <Matrix ty="3.5"/>
                   </matrix>
@@ -34,11 +34,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#9CD465" current="true" isSelected="true">
+        <DOMLayer name="textField_tf" color="#9CD465" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="textField_tf" width="196" height="21.6" isSelectable="false" renderAsHTML="true" lineType="multiline no wrap">
+                <DOMDynamicText name="textField_tf" selected="true" width="196" height="21.6" isSelectable="false" renderAsHTML="true" lineType="multiline no wrap">
                   <matrix>
                     <Matrix tx="2" ty="5.25"/>
                   </matrix>

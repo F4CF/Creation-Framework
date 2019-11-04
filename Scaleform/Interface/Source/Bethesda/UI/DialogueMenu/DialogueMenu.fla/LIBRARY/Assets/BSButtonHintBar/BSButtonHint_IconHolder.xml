@@ -1,22 +1,22 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 9" itemID="5dc00f96-00000158" linkageExportForAS="true" linkageClassName="DialogueMenu_fla.BSButtonHint_IconHolder_6" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/BSButtonHintBar/BSButtonHint_IconHolder" itemID="5dc016fe-00000191" linkageExportForAS="true" linkageClassName="DialogueMenu_fla.BSButtonHint_IconHolder_6" lastModified="1572870080">
   <timeline>
-    <DOMTimeline name="Symbol 9">
+    <DOMTimeline name="BSButtonHint_IconHolder">
       <layers>
-        <DOMLayer name="Labels Layer" color="#7F42FB">
+        <DOMLayer name="Labels" color="#7F42FB" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" name="Default" labelType="name" keyMode="9728">
               <elements/>
             </DOMFrame>
-            <DOMFrame index="1" name="Flashing" labelType="name" keyMode="9728">
+            <DOMFrame index="1" duration="59" name="Flashing" labelType="name" keyMode="9728">
               <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#1CAFD9" current="true" isSelected="true">
+        <DOMLayer name="IconAnimInstance" color="#1CAFD9" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" selected="true" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -25,7 +25,7 @@
             </DOMFrame>
             <DOMFrame index="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -37,7 +37,7 @@
             </DOMFrame>
             <DOMFrame index="3" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -49,7 +49,7 @@
             </DOMFrame>
             <DOMFrame index="4" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -61,7 +61,7 @@
             </DOMFrame>
             <DOMFrame index="5" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -73,7 +73,7 @@
             </DOMFrame>
             <DOMFrame index="6" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -85,7 +85,7 @@
             </DOMFrame>
             <DOMFrame index="7" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -97,7 +97,7 @@
             </DOMFrame>
             <DOMFrame index="8" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -109,7 +109,7 @@
             </DOMFrame>
             <DOMFrame index="9" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -121,7 +121,7 @@
             </DOMFrame>
             <DOMFrame index="10" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -133,7 +133,7 @@
             </DOMFrame>
             <DOMFrame index="11" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -145,7 +145,7 @@
             </DOMFrame>
             <DOMFrame index="12" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -157,7 +157,7 @@
             </DOMFrame>
             <DOMFrame index="13" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -169,7 +169,7 @@
             </DOMFrame>
             <DOMFrame index="14" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -181,7 +181,7 @@
             </DOMFrame>
             <DOMFrame index="15" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -193,7 +193,7 @@
             </DOMFrame>
             <DOMFrame index="16" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -205,7 +205,7 @@
             </DOMFrame>
             <DOMFrame index="17" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -217,7 +217,7 @@
             </DOMFrame>
             <DOMFrame index="18" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -229,7 +229,7 @@
             </DOMFrame>
             <DOMFrame index="19" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -241,7 +241,7 @@
             </DOMFrame>
             <DOMFrame index="20" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -253,7 +253,7 @@
             </DOMFrame>
             <DOMFrame index="21" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -265,7 +265,7 @@
             </DOMFrame>
             <DOMFrame index="22" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -277,7 +277,7 @@
             </DOMFrame>
             <DOMFrame index="23" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -289,7 +289,7 @@
             </DOMFrame>
             <DOMFrame index="24" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -301,7 +301,7 @@
             </DOMFrame>
             <DOMFrame index="25" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -313,7 +313,7 @@
             </DOMFrame>
             <DOMFrame index="26" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -325,7 +325,7 @@
             </DOMFrame>
             <DOMFrame index="27" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -337,7 +337,7 @@
             </DOMFrame>
             <DOMFrame index="28" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -349,7 +349,7 @@
             </DOMFrame>
             <DOMFrame index="29" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -361,7 +361,7 @@
             </DOMFrame>
             <DOMFrame index="30" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -373,7 +373,7 @@
             </DOMFrame>
             <DOMFrame index="31" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -385,7 +385,7 @@
             </DOMFrame>
             <DOMFrame index="32" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -397,7 +397,7 @@
             </DOMFrame>
             <DOMFrame index="33" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -409,7 +409,7 @@
             </DOMFrame>
             <DOMFrame index="34" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -421,7 +421,7 @@
             </DOMFrame>
             <DOMFrame index="35" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -433,7 +433,7 @@
             </DOMFrame>
             <DOMFrame index="36" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -445,7 +445,7 @@
             </DOMFrame>
             <DOMFrame index="37" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -457,7 +457,7 @@
             </DOMFrame>
             <DOMFrame index="38" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -469,7 +469,7 @@
             </DOMFrame>
             <DOMFrame index="39" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -481,7 +481,7 @@
             </DOMFrame>
             <DOMFrame index="40" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -493,7 +493,7 @@
             </DOMFrame>
             <DOMFrame index="41" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -505,7 +505,7 @@
             </DOMFrame>
             <DOMFrame index="42" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -517,7 +517,7 @@
             </DOMFrame>
             <DOMFrame index="43" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -529,7 +529,7 @@
             </DOMFrame>
             <DOMFrame index="44" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -541,7 +541,7 @@
             </DOMFrame>
             <DOMFrame index="45" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -553,7 +553,7 @@
             </DOMFrame>
             <DOMFrame index="46" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -565,7 +565,7 @@
             </DOMFrame>
             <DOMFrame index="47" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -577,7 +577,7 @@
             </DOMFrame>
             <DOMFrame index="48" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -589,7 +589,7 @@
             </DOMFrame>
             <DOMFrame index="49" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -601,7 +601,7 @@
             </DOMFrame>
             <DOMFrame index="50" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -613,7 +613,7 @@
             </DOMFrame>
             <DOMFrame index="51" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -625,7 +625,7 @@
             </DOMFrame>
             <DOMFrame index="52" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -637,7 +637,7 @@
             </DOMFrame>
             <DOMFrame index="53" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -649,7 +649,7 @@
             </DOMFrame>
             <DOMFrame index="54" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -661,7 +661,7 @@
             </DOMFrame>
             <DOMFrame index="55" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -673,7 +673,7 @@
             </DOMFrame>
             <DOMFrame index="56" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -685,7 +685,7 @@
             </DOMFrame>
             <DOMFrame index="57" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -697,7 +697,7 @@
             </DOMFrame>
             <DOMFrame index="58" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -709,7 +709,7 @@
             </DOMFrame>
             <DOMFrame index="59" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 8" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/IconAnimation" name="IconAnimInstance" centerPoint3DX="50" centerPoint3DY="12.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

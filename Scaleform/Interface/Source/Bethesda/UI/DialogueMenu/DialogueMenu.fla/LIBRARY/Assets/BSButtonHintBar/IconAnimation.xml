@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 8" itemID="5dc00f96-00000157" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/BSButtonHintBar/IconAnimation" itemID="5dc01774-00000195" lastModified="1572870083">
   <timeline>
-    <DOMTimeline name="Symbol 8">
+    <DOMTimeline name="IconAnimation">
       <layers>
-        <DOMLayer name="Layer 1" color="#EEDFAD" current="true" isSelected="true">
+        <DOMLayer name="Icon_tf" color="#FFCC00" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="Icon_tf" width="96" height="22.35" isSelectable="false" renderAsHTML="true">
+                <DOMDynamicText name="Icon_tf" selected="true" width="96" height="22.35" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="2" ty="2"/>
                   </matrix>
