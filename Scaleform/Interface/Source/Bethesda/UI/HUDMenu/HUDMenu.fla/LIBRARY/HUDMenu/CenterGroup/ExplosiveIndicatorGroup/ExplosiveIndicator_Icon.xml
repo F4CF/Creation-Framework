@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicator_Icon" itemID="5dbc8c1e-00000499" linkageExportForAS="true" linkageClassName="HUDMenu_fla.Explosiveindicator_ICON_154" lastModified="1572724209">
+  <timeline>
+    <DOMTimeline name="ExplosiveIndicator_Icon">
+      <layers>
+        <DOMLayer name="ExplosiveIndicatorIcon" color="#B8BD93" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorIcon" centerPoint3DX="11.55" centerPoint3DY="15">
+                  <matrix>
+                    <Matrix tx="-2.25" ty="0.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorCarIcon" centerPoint3DX="149.05" centerPoint3DY="12.4">
+                  <matrix>
+                    <Matrix tx="134.4" ty="-0.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ExplosiveIndicatorSquare" color="#F3A77E" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorSquare" centerPoint3DX="155" centerPoint3DY="20.3" isVisible="false">
+                  <matrix>
+                    <Matrix tx="134.3" ty="-0.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

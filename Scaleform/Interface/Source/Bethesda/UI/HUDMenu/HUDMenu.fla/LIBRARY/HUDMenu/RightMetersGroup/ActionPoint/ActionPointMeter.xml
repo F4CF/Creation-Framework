@@ -1,0 +1,93 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/RightMetersGroup/ActionPoint/ActionPointMeter" itemID="5dbb5753-000004ad" linkageExportForAS="true" linkageClassName="ActionPointMeter" lastModified="1572721498">
+  <timeline>
+    <DOMTimeline name="ActionPointMeter">
+      <layers>
+        <DOMLayer name="Bracket_mc" color="#F2B718" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/Bracket" name="Bracket_mc" centerPoint3DX="-100" centerPoint3DY="4">
+                  <matrix>
+                    <Matrix tx="-202"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ActionPointSegments_mc" color="#9094D4" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/RightMetersGroup/ActionPoint/ActionPointSegments" name="ActionPointSegments_mc" centerPoint3DX="-201.5" centerPoint3DY="2">
+                  <matrix>
+                    <Matrix tx="-202"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="DisplayText_tf" color="#FAE107" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="DisplayText_tf" fontRenderingMode="standard" width="29.1" height="60" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="3.05" ty="-6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>AP</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="0" lineHeight="30" size="25" bitmapSize="500" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="MeterBar_mc" color="#CE468B" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/MeterBar" name="MeterBar_mc" centerPoint3DX="-102" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-202"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Optional_mc" color="#3DC283" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/MeterBar" name="Optional_mc" centerPoint3DX="-102" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-202"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,27 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetCompassMarkerShape" itemID="5dbc952d-00000579" lastModified="1572640045">
+  <timeline>
+    <DOMTimeline name="PlayerSetCompassMarkerShape">
+      <layers>
+        <DOMLayer name="PlayerSetMarkerShape" color="#F32BDD" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!108 -461S1|-108 -461!-108 -461|-108 -678!-108 -678|108 -678!108 -678|108 -461"/>
+                    <Edge fillStyle1="1" edges="!128 -441S2|22 -441!22 -441|22 0!22 0|-22 0!-22 0|-22 -441!-22 -441|-128 -441!-128 -441|-128 -700!-128 -700|128 -700!128 -700|128 -441"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

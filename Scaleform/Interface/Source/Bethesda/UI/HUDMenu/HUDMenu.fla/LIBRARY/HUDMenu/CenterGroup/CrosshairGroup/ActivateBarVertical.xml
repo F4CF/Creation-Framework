@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/CrosshairGroup/ActivateBarVertical" itemID="5dbca6bd-000003c3" lastModified="1572644541">
+  <timeline>
+    <DOMTimeline name="ActivateBarVertical">
+      <layers>
+        <DOMLayer name="CommandBarVertical" color="#A5C2DC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundShape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="0.25" d="1.83331298828125" tx="0.25" ty="5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

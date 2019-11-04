@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/TutorialText" itemID="5dbc3956-00000525" linkageExportForAS="true" linkageClassName="TutorialText" lastModified="1572617310">
+  <timeline>
+    <DOMTimeline name="TutorialText">
+      <layers>
+        <DOMLayer name="TutorialHeads_mc" color="#A5F7A1" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/TutorialHeads" name="TutorialHeads_mc" selected="true" centerPoint3DX="52.5" centerPoint3DY="43.75">
+                  <matrix>
+                    <Matrix a="0.745193481445313" d="0.745147705078125" ty="1.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="TutorialText_tf" color="#B984AF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="TutorialText_tf" fontRenderingMode="standard" width="246" height="180.5" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="82" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Messages and tutorials appear here. Animated quest VB's also appear in this box (which might grow to fit).  &#xD;&#xA;That means you can't have both at &#xD;&#xA;the same time.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" letterSpacing="-0.4" lineSpacing="1.5" lineHeight="22.8" size="19" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

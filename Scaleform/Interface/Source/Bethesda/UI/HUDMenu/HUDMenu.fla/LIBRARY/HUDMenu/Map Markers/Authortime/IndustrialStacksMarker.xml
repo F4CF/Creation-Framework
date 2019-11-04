@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/Map Markers/Authortime/IndustrialStacksMarker" itemID="5dbcadea-00000d09" linkageExportForAS="true" linkageClassName="IndustrialStacksMarker" sourceFlashFilepath="../../../MapMarkers/MapMarkers.fla" sourceLibraryItemHRef="MapMarkers/IndustrialStacksMarker" sourceLastModified="1571441434" lastModified="1571441434" sourceItemID="00000000-ffffffff">
+  <timeline>
+    <DOMTimeline name="IndustrialStacksMarker">
+      <layers>
+        <DOMLayer name="Labels" color="#3CA1FE" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" name="Discovered" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="Undiscovered" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Shapes" color="#4CFCAF" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/Map Markers/ShapeUnused/Factory_Discovered" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/Map Markers/ShapeUnused/Factory_Undiscovered" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorSquare" itemID="5dbc9231-000004f6" lastModified="1572639298">
+  <timeline>
+    <DOMTimeline name="ExplosiveIndicatorSquare">
+      <layers>
+        <DOMLayer name="ExplosiveIndicatorSquare" color="#79C8CF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="0.1" joints="miter">
+                        <fill>
+                          <SolidColor color="#FF0000"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!414 413|-413 413!-413 413|-413 -414!-413 -414|414 -414!414 -414|414 413"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

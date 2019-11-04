@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/ObjectiveIcons" itemID="5dbc471c-000006ba" lastModified="1572620077">
+  <timeline>
+    <DOMTimeline name="ObjectiveIcons">
+      <layers>
+        <DOMLayer name="ObjectiveIconsShape" color="#A96379" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!193 -145S2|-35 191!-35 191|-192 38!-192 38|-137 -19!-137 -19|-48 67!-48 67|127 -190!127 -190|193 -145"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

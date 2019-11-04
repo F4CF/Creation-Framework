@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/HotkeyActiveEffectIcons/HUDActiveEffectClip" itemID="5dbc443a-00000654" linkageExportForAS="true" linkageClassName="HUDActiveEffectClip" lastModified="1572640417">
+  <timeline>
+    <DOMTimeline name="HUDActiveEffectClip">
+      <layers>
+        <DOMLayer name="HotkeyActiveEffectIcons" color="#AE9286" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/HotkeyActiveEffectIcons/HotkeyIcons" name="Icon_mc" selected="true" centerPoint3DX="50.05" centerPoint3DY="51.05">
+                  <matrix>
+                    <Matrix tx="24" ty="24"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ActiveEffectBackground" color="#AAE09E" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/HotkeyActiveEffectIcons/IconBackground" centerPoint3DX="50.5" centerPoint3DY="50.5">
+                  <matrix>
+                    <Matrix a="0.479995727539063" d="0.479995727539063"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

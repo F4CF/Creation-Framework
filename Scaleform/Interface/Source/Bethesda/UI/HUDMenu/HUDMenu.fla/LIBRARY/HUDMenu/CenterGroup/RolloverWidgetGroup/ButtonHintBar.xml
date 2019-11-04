@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/RolloverWidgetGroup/ButtonHintBar" itemID="5dbbe1d3-0000044d" linkageExportForAS="true" linkageClassName="Shared.AS3.BSButtonHintBar" lastModified="1572615790">
+  <timeline>
+    <DOMTimeline name="ButtonHintBar">
+      <layers>
+        <DOMLayer name="ButtonBracket_Left_mc" color="#7B69F3" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/ButtonBracket_Left" name="ButtonBracket_Left_mc" centerPoint3DX="-16.85" centerPoint3DY="16">
+                  <matrix>
+                    <Matrix tx="-20.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ButtonBracket_Right_mc" color="#AA7EB7" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/ButtonBracket_Right" name="ButtonBracket_Right_mc" selected="true" centerPoint3DX="15.55" centerPoint3DY="16">
+                  <matrix>
+                    <Matrix tx="12.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

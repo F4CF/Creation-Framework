@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/HUDNotificationsGroup/XPMeterGroup/LeveUpTextClip" itemID="5dbc3dc2-000005d0" linkageExportForAS="true" linkageClassName="LeftToRightTextAnim" lastModified="1572808732">
+  <timeline>
+    <DOMTimeline name="LeveUpTextClip">
+      <layers>
+        <DOMLayer name="BlinkCursor_mc" color="#D1FDC5" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/HUDNotificationsGroup/XPMeterGroup/BlinkCursor" name="BlinkCursor_mc" centerPoint3DX="12.5" centerPoint3DY="16">
+                  <matrix>
+                    <Matrix a="1.37498474121094" d="1.38890075683594" tx="8.5" ty="7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textField" color="#E5318D" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="textField" fontRenderingMode="standard" width="136" height="39.6" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" letterSpacing="-0.6" lineSpacing="0" lineHeight="36" size="30" bitmapSize="600" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

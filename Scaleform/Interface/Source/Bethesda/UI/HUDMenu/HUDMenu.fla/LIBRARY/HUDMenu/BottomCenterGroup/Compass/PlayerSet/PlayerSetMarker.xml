@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetMarker" itemID="5dbc862f-000003b7" linkageExportForAS="true" linkageClassName="PlayerSetMarker" lastModified="1572636290">
+  <timeline>
+    <DOMTimeline name="PlayerSetMarker">
+      <layers>
+        <DOMLayer name="PlayerSetMarker" color="#BD69A0" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetCompassMarkerShape" selected="true" centerPoint3DX="6.4" centerPoint3DY="17.5">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

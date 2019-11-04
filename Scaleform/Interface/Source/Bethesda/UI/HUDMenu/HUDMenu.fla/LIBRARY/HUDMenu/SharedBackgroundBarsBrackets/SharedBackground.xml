@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/SharedBackgroundBarsBrackets/SharedBackground" itemID="5dbc9c03-0000072d" lastModified="1572641803">
+  <timeline>
+    <DOMTimeline name="SharedBackground">
+      <layers>
+        <DOMLayer name="SharedBackground" color="#E9DCB1" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundShape" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

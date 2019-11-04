@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/RightMetersGroup/AmmoCount/AmmoLineInstance" itemID="5dbb53ca-000004a0" lastModified="1572557829">
+  <timeline>
+    <DOMTimeline name="AmmoLineInstance">
+      <layers>
+        <DOMLayer name="IconSharedBackground" color="#D2B1CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundShape" selected="true" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix a="7.33331298828125" d="0.333328247070313" tx="-22"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

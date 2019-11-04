@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dotLoop" itemID="5dbc9d52-00000767" linkageExportForAS="true" linkageClassName="HUDMenu_fla.dotLoop_79" lastModified="1572816412">
+  <timeline>
+    <DOMTimeline name="dotLoop">
+      <layers>
+        <DOMLayer name="Dot" color="#8B4BC7" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundHolder" centerPoint3DX="1.25" centerPoint3DY="1.25">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/ListItems" itemID="5dbc330f-000003c8" lastModified="1572615014">
+  <timeline>
+    <DOMTimeline name="ListItems">
+      <layers>
+        <DOMLayer name="ItemText0" color="#65B4C9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem" name="ItemText0" centerPoint3DX="129" centerPoint3DY="15.15">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ItemText1" color="#E688DD" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem" name="ItemText1" centerPoint3DX="129" centerPoint3DY="45.15">
+                  <matrix>
+                    <Matrix ty="30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ItemText2" color="#6D918C" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem" name="ItemText2" centerPoint3DX="129" centerPoint3DY="75.15">
+                  <matrix>
+                    <Matrix ty="60"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ItemText3" color="#AF5C95" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem" name="ItemText3" centerPoint3DX="129" centerPoint3DY="105.15">
+                  <matrix>
+                    <Matrix ty="90"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ItemText4" color="#7EDB78" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem" name="ItemText4" selected="true" centerPoint3DX="129" centerPoint3DY="135.15">
+                  <matrix>
+                    <Matrix ty="120"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,33 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/RightMetersGroup/ExplosiveAmmoCount/ExplosiveAmmoIcon" itemID="5dbb5584-000004a3" linkageExportForAS="true" linkageClassName="HUDMenu_fla.ExplosiveAmmoCountIcon_21" lastModified="1572558228">
+  <timeline>
+    <DOMTimeline name="ExplosiveAmmoIcon">
+      <layers>
+        <DOMLayer name="ExplosiveAmmoIconShape" color="#E9CD4B" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/RightMetersGroup/ExplosiveAmmoCount/ExplosiveAmmoIconShape" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/MineIconShape" symbolType="graphic" loop="loop">
+                  <matrix>
+                    <Matrix tx="-0.35" ty="-0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

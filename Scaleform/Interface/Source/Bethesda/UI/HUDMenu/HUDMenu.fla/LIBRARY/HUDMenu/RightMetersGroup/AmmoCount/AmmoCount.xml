@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/RightMetersGroup/AmmoCount/AmmoCount" itemID="5dbb53a5-0000049f" lastModified="1572723755">
+  <timeline>
+    <DOMTimeline name="AmmoCount">
+      <layers>
+        <DOMLayer name="AmmoLineInstance" color="#EF77E4" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/RightMetersGroup/AmmoCount/AmmoLineInstance" name="AmmoLineInstance" centerPoint3DX="22" centerPoint3DY="1">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ClipCount_tf" color="#E4C60E" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="ClipCount_tf" selected="true" fontRenderingMode="standard" width="48" height="81.8" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-47" ty="-38"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>015</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" rotation="true" letterSpacing="-0.7" lineSpacing="5" lineHeight="38.4" size="32" bitmapSize="640" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ReserveCount_tf" color="#D631D9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="ReserveCount_tf" selected="true" width="48" height="81.8" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-47"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>216</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="right" aliasText="false" rotation="true" letterSpacing="-0.7" lineSpacing="5" lineHeight="38.4" size="32" bitmapSize="640" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

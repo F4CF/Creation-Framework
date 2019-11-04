@@ -1,0 +1,103 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/BottomCenterGroup/Compass/QuestDoorMarkerGroup/QuestDoorCompassMarkers" itemID="5dbc4b02-00000836" linkageExportForAS="true" linkageClassName="HUDMenu_fla.QuestDoorCompassMarkers_140" lastModified="1572726146">
+  <timeline>
+    <DOMTimeline name="QuestDoorCompassMarkers" currentFrame="2">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#B4AAA8">
+          <frames>
+            <DOMFrame index="0" name="LevelWithPlayer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="AbovePlayer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="BelowPlayer" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="MarkerShapeArrow" color="#F1F5DA" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Compass/MarkerShapeArrow" centerPoint3DX="6.15" centerPoint3DY="-51.7">
+                  <matrix>
+                    <Matrix a="-1" d="-1" ty="-54.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Compass/MarkerShapeArrow" centerPoint3DX="6.15" centerPoint3DY="-38.7">
+                  <matrix>
+                    <Matrix ty="-41.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Distance_tf" color="#FC07C3" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="Distance_tf" fontRenderingMode="standard" width="27.85" height="21.1" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-13.85" ty="-55.1"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" rotation="true" letterSpacing="-0.3" lineSpacing="5" lineHeight="19.2" size="16" bitmapSize="320" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="Distance_tf" selected="true" fontRenderingMode="standard" width="27.85" height="21.1" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-13.85" ty="-60.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>00</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" rotation="true" letterSpacing="-0.3" lineSpacing="5" lineHeight="19.2" size="16" bitmapSize="320" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="MarkerShape_mc" color="#ACDC94" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/FloatingTargetGroup/FloatingTargetDoor" name="MarkerShape_mc" centerPoint3DX="9" centerPoint3DY="19.25">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

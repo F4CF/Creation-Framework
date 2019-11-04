@@ -1,0 +1,72 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicator" itemID="5dbc4903-00000799" linkageExportForAS="true" linkageClassName="ExplosiveIndicator" lastModified="1572639321">
+  <timeline>
+    <DOMTimeline name="ExplosiveIndicator">
+      <layers>
+        <DOMLayer name="MineIcon_mc" color="#96E555" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/MineIcon" name="MineIcon_mc" centerPoint3DX="1.85" centerPoint3DY="135.5">
+                  <matrix>
+                    <Matrix a="0.9056396484375" d="0.90447998046875" tx="-12.25" ty="121.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CarIcon_mc" color="#B07DBC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/CarIcon" name="CarIcon_mc" centerPoint3DX="1.9" centerPoint3DY="132.45">
+                  <matrix>
+                    <Matrix a="0.9056396484375" d="0.90447998046875" tx="-12.75" ty="120"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Arrow_mc" color="#8253D9" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/Arrow" name="Arrow_mc" centerPoint3DX="4.5" centerPoint3DY="7.4">
+                  <matrix>
+                    <Matrix a="0" b="1" c="-1" d="0" tx="0.35" ty="0.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="GrenadeIcon_mc" color="#E09D27" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicator_Icon" name="GrenadeIcon_mc" selected="true" centerPoint3DX="86.1" centerPoint3DY="154.9">
+                  <matrix>
+                    <Matrix a="0.9056396484375" d="0.90447998046875" tx="0.5" ty="134.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

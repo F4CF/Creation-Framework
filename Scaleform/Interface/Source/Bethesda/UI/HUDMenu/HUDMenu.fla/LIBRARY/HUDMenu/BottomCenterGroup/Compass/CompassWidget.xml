@@ -1,0 +1,86 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/BottomCenterGroup/Compass/CompassWidget" itemID="5dbbd865-000003b6" linkageExportForAS="true" linkageClassName="HUDCompassWidget" lastModified="1572725502">
+  <timeline>
+    <DOMTimeline name="CompassWidget">
+      <layers>
+        <DOMLayer name="CompassBar_mc" color="#F7987E" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Compass/CompassBar" name="CompassBar_mc" centerPoint3DX="152" centerPoint3DY="4">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="QuestMask_mc" color="#53CAD6" autoNamed="false" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Quest/QuestMask" name="QuestMask_mc" selected="true" centerPoint3DX="180" centerPoint3DY="40">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="QuestMarkerHolder_mc" color="#E767AD" parentLayerIndex="1" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Quest/QuestMarkerHolder" name="QuestMarkerHolder_mc">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OtherMask_mc" color="#EA3CEC" autoNamed="false" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/OtherMask/OtherMask" name="OtherMask_mc" centerPoint3DX="170" centerPoint3DY="56">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="OtherMarkerHolder_mc" color="#9C9AAA" parentLayerIndex="3" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Quest/QuestMarkerHolder" name="OtherMarkerHolder_mc">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CompassBGHolder_mc" color="#DEBD9B" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Compass/CompassBGHolder" name="CompassBGHolder_mc" selected="true" centerPoint3DX="150" centerPoint3DY="11">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/TopCenterGroup/TopCenter" itemID="5dbc374a-00000474" lastModified="1572730857">
+  <timeline>
+    <DOMTimeline name="TopCenter">
+      <layers>
+        <DOMLayer name="EnemyHealthMeter_mc" color="#B2DA38" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/TopCenterGroup/EnemyHealthMeter" name="EnemyHealthMeter_mc" selected="true" centerPoint3DX="102" centerPoint3DY="22">
+                  <matrix>
+                    <Matrix ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="StealthMeter_mc" color="#89F4D1" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/StealthMeter" name="StealthMeter_mc" centerPoint3DX="82.9" centerPoint3DY="108">
+                  <matrix>
+                    <Matrix ty="92"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

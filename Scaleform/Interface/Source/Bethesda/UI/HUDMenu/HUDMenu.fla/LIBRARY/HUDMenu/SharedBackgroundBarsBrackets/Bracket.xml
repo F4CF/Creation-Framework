@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/SharedBackgroundBarsBrackets/Bracket" itemID="5dbb5768-000004ae" lastModified="1572591504">
+  <timeline>
+    <DOMTimeline name="Bracket">
+      <layers>
+        <DOMLayer name="BracketShape" color="#EC1F9E" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!4000 0|4000 120!4000 120|0 120!0 120|0 0!0 0|-40 0!-40 0|-40 160!-40 160|4040 160!4040 160|4040 0!4040 0|4000 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

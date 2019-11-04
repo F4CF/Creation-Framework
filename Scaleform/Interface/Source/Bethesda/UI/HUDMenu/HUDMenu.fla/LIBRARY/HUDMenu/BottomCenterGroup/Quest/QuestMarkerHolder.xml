@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/BottomCenterGroup/Quest/QuestMarkerHolder" itemID="5dbbd8d5-000003b9" lastModified="1572591855">
+  <timeline>
+    <DOMTimeline name="QuestMarkerHolder">
+      <layers>
+        <DOMLayer name="QuestMarkerHolderShape" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

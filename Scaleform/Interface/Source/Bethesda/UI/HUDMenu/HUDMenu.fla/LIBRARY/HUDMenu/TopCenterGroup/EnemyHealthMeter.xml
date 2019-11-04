@@ -1,0 +1,109 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/TopCenterGroup/EnemyHealthMeter" itemID="5dbc3769-00000491" lastModified="1572731220">
+  <timeline>
+    <DOMTimeline name="EnemyHealthMeter">
+      <layers>
+        <DOMLayer name="LegendaryIcon_mc" color="#06EC9D" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/TopCenterGroup/LegendaryIcon" name="LegendaryIcon_mc" centerPoint3DX="49.7" centerPoint3DY="18.5">
+                  <matrix>
+                    <Matrix tx="39.75" ty="9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SkullIcon_mc" color="#FFB9D4" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/TopCenterGroup/SkullIcon" name="SkullIcon_mc" centerPoint3DX="75.75" centerPoint3DY="25">
+                  <matrix>
+                    <Matrix a="0.673202514648438" d="0.6875" tx="63.5" ty="9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="DisplayText_tf" color="#88FCA7" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="DisplayText_tf" selected="true" fontRenderingMode="standard" width="75.75" height="55.9" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-37.9" ty="-6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>RAIDER</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" rotation="true" lineSpacing="0" lineHeight="30" size="25" bitmapSize="500" face="$MAIN_Font_Bold*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Bracket_mc" color="#FD40BD" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/Bracket" name="Bracket_mc" centerPoint3DX="2" centerPoint3DY="28">
+                  <matrix>
+                    <Matrix tx="-100" ty="24"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="MeterBar_mc" color="#884EFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/SharedBackgroundBarsBrackets/MeterBar" name="MeterBar_mc" centerPoint3DY="27">
+                  <matrix>
+                    <Matrix tx="-100" ty="24"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Optional_mc" color="#DECA6A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/EnemyHealthOptionalBar" name="Optional_mc" centerPoint3DY="27">
+                  <matrix>
+                    <Matrix tx="-100" ty="24"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

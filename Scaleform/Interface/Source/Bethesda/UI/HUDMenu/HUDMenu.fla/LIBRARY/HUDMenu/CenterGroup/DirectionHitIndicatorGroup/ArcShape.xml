@@ -1,0 +1,151 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="HUDMenu/CenterGroup/DirectionHitIndicatorGroup/ArcShape" itemID="5dbc8f08-000004c1" lastModified="1572638472">
+  <timeline>
+    <DOMTimeline name="ArcShape">
+      <layers>
+        <DOMLayer name="ArcShape" color="#82FE2F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="14" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1874 -1005S2[1984 -794 2046 -558!2046 -558[2124 -268 2119 33!2119 33[2116 335 2031 623!2031 623[1962 856 1847 1065!1847 1065[1758 1225 1662 1338!1662 1338[1580 1435 1573 1418!1573 1418[1565 1413 1632 1309!1632 1309[1728 1162 1787 1027
+!1787 1027[2007 532 2012 33!2012 33[2022 -467 1812 -964!1812 -964[1756 -1102 1666 -1253!1666 -1253[1599 -1359 1607 -1362!1607 -1362[1615 -1379 1695 -1283!1695 -1283[1789 -1168 1874 -1005"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!1731 -1233[1790 -1166 1874 -1005!1874 -1005[1984 -794 2046 -558!2046 -558[2124 -268 2119 33!2119 33[2116 335 2031 623!2031 623[1962 856 1847 1065!1847 1065[1760 1222 1697 1285!1697 1285[1650 1331 1642 1312!1642 1312[1634 1308 1667 1256
+!1667 1256[1728 1161 1787 1027!1787 1027[2007 532 2012 33!2012 33[2022 -467 1812 -964!1812 -964[1758 -1096 1700 -1203!1700 -1203[1669 -1260 1677 -1263!1677 -1263[1686 -1282 1731 -1233"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!1969 -747[2121 -365 2119 33!2119 33[2117 462 1947 827!1947 827[1891 946 1829 1034!1829 1034[1776 1108 1772 1098!1772 1098[1768 1096 1801 1027!1801 1027[1849 926 1883 828!1883 828[2010 469 2012 33!2012 33[2014 -379 1905 -755!1905 -755
+|1834 -967!1834 -967[1806 -1041 1810 -1043!1810 -1043[1815 -1052 1862 -970!1862 -970[1918 -873 1969 -747"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!1862 -942[1866 -951 1906 -885!1906 -885[1952 -806 1994 -696!1994 -696[2119 -364 2119 33!2119 33[2119 429 1979 752!1979 752[1933 858 1881 935!1881 935[1838 999 1834 989!1834 989[1830 987 1856 929!1856 929[1897 840 1925 756!1925 756[2030
+ 438 2030 34!2030 34[2030 -370 1939 -699!1939 -699|1880 -879!1880 -879[1858 -940 1862 -942"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="17" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!1957 -705[1961 -714 1986 -666!1986 -666[2015 -611 2041 -528!2041 -528[2119 -282 2119 33!2119 33[2119 347 2041 583!2041 583[2015 661 1985 713!1985 713[1961 757 1957 749!1957 749[1951 746 1962 706!1962 706|1994 584!1994 584[2045 348 2045
+ 34!2045 34[2045 -280 1994 -529!1994 -529|1957 -705"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!1999 -586[2119 -356 2119 33!2119 33[2119 422 2004 620!2004 620[2001 618 2023 496!2023 496[2056 306 2056 34!2056 34[2056 -239 2020 -446!2020 -446[1996 -585 1999 -586"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!2089 -226[2119 -86 2119 33!2119 33[2119 153 2098 275!2098 275[2078 385 2071 369!2071 369[2060 363 2064 274!2064 274|2071 34!2071 34[2071 -68 2055 -225!2055 -225[2044 -335 2053 -338!2053 -338[2061 -356 2089 -226"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!2097 -166[2119 -71 2119 33!2119 33[2119 137 2104 199!2104 199[2091 252 2084 235!2084 235[2071 229 2070 172!2070 172|2071 34!2071 34|2062 -139!2062 -139[2057 -231 2068 -235!2068 -235[2076 -252 2097 -166"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" duration="44" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#E9E9E9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!2097 -54[2110 -54 2119 -35!2119 -35[2127 -17 2125 3!2125 3[2119 53 2097 57!2097 57[2086 59 2081 30!2081 30|2079 0!2079 0|2081 -27!2081 -27[2086 -54 2097 -54"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
