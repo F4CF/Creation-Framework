@@ -43,6 +43,67 @@ map "$CClub_Font_Bold" = "Eurostile LT Std" Demi
 * `vir2L_Medium.ttf`
 
 
+# Font Libraries
+The fonts displayed in game are stored in a [[Flash File]] font library.
+These font libraries are shared between menus during runtime.
+The current font configuration can be found in `Fallout 4\Data\Interface\FontConfig.txt`
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $MAIN_Font
+* * **Font Family:** Roboto Condensed
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $MAIN_Font_Bold
+* * **Font Family:** Roboto Condensed
+* * **Font Style:** Bold
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $HandwrittenFont
+* * **Font Family:** Handwritten_Institute
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $BRODY
+* * **Font Family:** "Brody"
+* * **Font Style:** Bold
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $Terminal_Font
+* * **Font Family:** Share-TechMono
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $Controller_Buttons
+* * **Font Family:** Controller  Buttons
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $Controller_Buttons_inverted
+* * **Font Family:** Controller  Buttons inverted
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $CClub_Font
+* * **Font Family:** Eurostile LT Std Roman
+* * **Font Style:** None
+
+* **Library:** Interface\fonts_en.swf
+* * **Font Class:** $CClub_Font_Bold
+* * **Font Family:** Eurostile Cyr Std Bold
+* * **Font Style:** None
+
+* **Library:** Interface\fonts_console.swf
+* * **Font Class:** $ConsoleFont
+* * **Font Family:** Arial
+* * **Font Style:** Normal
+
+* **Library:** Interface\fonts_console.swf
+* * **Font Class:** $DebugTextFont
+* * **Font Family:** Consolas
+* * **Font Style:** Normal
+
+
 # Issues
 * The original fonts were damaged by the extraction process.
 * `Source\Bethesda\Shared\AS3\BSScrollingList.as`:  Figure out which variable(s) are used between `bAllowWheelScrollNoSelectionChange` & `bAllowSelectionDisabledListNav`.
