@@ -1,12 +1,19 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 18" itemID="5dbffdbb-0000001d" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/TerminalMenu/BlinkingCursor" itemID="5dc00102-00000159" lastModified="1572864975">
   <timeline>
-    <DOMTimeline name="Symbol 18">
+    <DOMTimeline name="BlinkingCursor">
       <layers>
-        <DOMLayer name="Layer 1" color="#BB6D6E" current="true" isSelected="true">
+        <DOMLayer name="Labels" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" name="Blinking" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="BlinkingCursorClip" color="#BB6D6E" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="5" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 17" centerPoint3DX="303.25" centerPoint3DY="415.2">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursorClip" centerPoint3DX="303.25" centerPoint3DY="415.2">
                   <matrix>
                     <Matrix tx="297" ty="405.95"/>
                   </matrix>
@@ -18,7 +25,7 @@
             </DOMFrame>
             <DOMFrame index="5" duration="5" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 17" centerPoint3DX="303.25" centerPoint3DY="415.2">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursorClip" centerPoint3DX="303.25" centerPoint3DY="415.2">
                   <matrix>
                     <Matrix tx="297" ty="405.95"/>
                   </matrix>

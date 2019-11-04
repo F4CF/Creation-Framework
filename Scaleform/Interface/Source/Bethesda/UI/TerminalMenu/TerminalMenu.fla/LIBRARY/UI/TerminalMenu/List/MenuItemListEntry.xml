@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 4" itemID="5dbffdbb-00000015" linkageExportForAS="true" linkageClassName="MenuItemListEntry" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/TerminalMenu/List/MenuItemListEntry" itemID="5dc00062-00000158" linkageExportForAS="true" linkageClassName="MenuItemListEntry" lastModified="1572864967">
   <timeline>
-    <DOMTimeline name="Symbol 4">
+    <DOMTimeline name="MenuItemListEntry">
       <layers>
-        <DOMLayer name="Layer 1" color="#9B42CE">
+        <DOMLayer name="textField" color="#9B42CE" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="textField" width="707.95" height="34.8" isSelectable="false" renderAsHTML="true">
+                <DOMDynamicText name="textField" selected="true" width="707.95" height="34.8" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="2" ty="3"/>
                   </matrix>
@@ -23,11 +23,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#AECB44" current="true" isSelected="true">
+        <DOMLayer name="border" color="#AECB44" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 2" name="border" centerPoint3DX="228.4" centerPoint3DY="75.5">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/List/Border" name="border" selected="true" centerPoint3DX="228.4" centerPoint3DY="75.5">
                   <matrix>
                     <Matrix a="2.3499755859375" d="0.25"/>
                   </matrix>

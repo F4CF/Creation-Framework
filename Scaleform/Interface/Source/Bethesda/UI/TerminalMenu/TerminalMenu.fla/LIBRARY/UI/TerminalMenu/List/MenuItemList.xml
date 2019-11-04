@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 12" itemID="5dbffdbb-0000001b" linkageExportForAS="true" linkageClassName="MenuItemList" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/TerminalMenu/List/MenuItemList" itemID="5dc00055-00000153" linkageExportForAS="true" linkageClassName="MenuItemList" lastModified="1572864946">
   <timeline>
-    <DOMTimeline name="Symbol 12">
+    <DOMTimeline name="MenuItemList">
       <layers>
-        <DOMLayer name="Layer 1" color="#B16AAD">
+        <DOMLayer name="ScrollDown" color="#B16AAD" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 11" name="ScrollDown" centerPoint3DX="0.35" centerPoint3DY="481.75">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/List/ScrollArrow" name="ScrollDown" selected="true" centerPoint3DX="0.35" centerPoint3DY="481.75">
                   <matrix>
                     <Matrix a="0" b="1.99998474121094" c="-0.571426391601563" d="0" tx="-4" ty="473"/>
                   </matrix>
@@ -18,11 +18,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#9CD465">
+        <DOMLayer name="ScrollUp" color="#9CD465" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 11" name="ScrollUp" centerPoint3DX="-9.65" centerPoint3DY="24.75">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/List/ScrollArrow" name="ScrollUp" selected="true" centerPoint3DX="-9.65" centerPoint3DY="24.75">
                   <matrix>
                     <Matrix a="0" b="-1.99998474121094" c="0.571426391601563" d="0" tx="-14" ty="16"/>
                   </matrix>
@@ -34,11 +34,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#D3D352" current="true" isSelected="true">
+        <DOMLayer name="border" color="#D3D352" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 2" name="border" centerPoint3DX="228.4" centerPoint3DY="75.5">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/List/Border" name="border" selected="true" centerPoint3DX="228.4" centerPoint3DY="75.5">
                   <matrix>
                     <Matrix a="2.3499755859375" d="3.34649658203125"/>
                   </matrix>

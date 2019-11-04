@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 22" itemID="5dbffdbb-0000001e" linkageExportForAS="true" linkageClassName="Terminal" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/TerminalMenu/Terminal" itemID="5dc00051-00000151" linkageExportForAS="true" linkageClassName="Terminal" lastModified="1572864941">
   <timeline>
-    <DOMTimeline name="Symbol 22">
+    <DOMTimeline name="Terminal">
       <layers>
-        <DOMLayer name="Layer 1" color="#F76FB9">
+        <DOMLayer name="HackingGuess5_mc" color="#F76FB9" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="HackingGuess5_mc" centerPoint3DX="587.45" centerPoint3DY="331.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="HackingGuess5_mc" selected="true" centerPoint3DX="587.45" centerPoint3DY="331.45">
                   <matrix>
                     <Matrix tx="432.7" ty="119.25"/>
                   </matrix>
@@ -18,11 +18,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 2" color="#F21CC9">
+        <DOMLayer name="HackingGuess4_mc" color="#F21CC9" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="HackingGuess4_mc" centerPoint3DX="562.45" centerPoint3DY="331.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="HackingGuess4_mc" selected="true" centerPoint3DX="562.45" centerPoint3DY="331.45">
                   <matrix>
                     <Matrix tx="407.7" ty="119.25"/>
                   </matrix>
@@ -34,11 +34,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#8DDB43">
+        <DOMLayer name="HackingGuess3_mc" color="#8DDB43" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="HackingGuess3_mc" centerPoint3DX="537.45" centerPoint3DY="331.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="HackingGuess3_mc" selected="true" centerPoint3DX="537.45" centerPoint3DY="331.45">
                   <matrix>
                     <Matrix tx="382.7" ty="119.25"/>
                   </matrix>
@@ -50,11 +50,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 4" color="#09BDC1">
+        <DOMLayer name="HackingGuess2_mc" color="#09BDC1" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="HackingGuess2_mc" centerPoint3DX="512.45" centerPoint3DY="331.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="HackingGuess2_mc" selected="true" centerPoint3DX="512.45" centerPoint3DY="331.45">
                   <matrix>
                     <Matrix tx="357.7" ty="119.25"/>
                   </matrix>
@@ -66,11 +66,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 5" color="#F161D9">
+        <DOMLayer name="HackingGuess1_mc" color="#F161D9" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="HackingGuess1_mc" centerPoint3DX="487.45" centerPoint3DY="331.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="HackingGuess1_mc" selected="true" centerPoint3DX="487.45" centerPoint3DY="331.45">
                   <matrix>
                     <Matrix tx="332.7" ty="119.25"/>
                   </matrix>
@@ -82,11 +82,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 6" color="#33C2FF">
+        <DOMLayer name="HackingAttempts_tf" color="#33C2FF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="HackingAttempts_tf" width="272" height="29.05" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="HackingAttempts_tf" selected="true" width="272" height="29.05" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="51" ty="115.8"/>
                   </matrix>
@@ -103,11 +103,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 7" color="#8F7EDA">
+        <DOMLayer name="HackingHighlight2_mc" color="#8F7EDA" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 9" name="HackingHighlight2_mc" centerPoint3DX="155.5" centerPoint3DY="176.1">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/HackingHighlight" name="HackingHighlight2_mc" selected="true" centerPoint3DX="155.5" centerPoint3DY="176.1">
                   <matrix>
                     <Matrix tx="49" ty="158.5"/>
                   </matrix>
@@ -119,11 +119,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 8" color="#BDDD59">
+        <DOMLayer name="DisplayImage_mc" color="#BDDD59" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 5" name="DisplayImage_mc" centerPoint3DX="51" centerPoint3DY="119">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/DisplayImage" name="DisplayImage_mc" selected="true" centerPoint3DX="51" centerPoint3DY="119">
                   <matrix>
                     <Matrix tx="51" ty="119"/>
                   </matrix>
@@ -135,11 +135,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 9" color="#CA8E4F">
+        <DOMLayer name="HackingHighlight1_mc" color="#CA8E4F" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 9" name="HackingHighlight1_mc" centerPoint3DX="155.5" centerPoint3DY="176.1">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/HackingHighlight" name="HackingHighlight1_mc" selected="true" centerPoint3DX="155.5" centerPoint3DY="176.1">
                   <matrix>
                     <Matrix tx="49" ty="158.5"/>
                   </matrix>
@@ -151,11 +151,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 10" color="#88F25D">
+        <DOMLayer name="ResponseLog_tf" color="#88F25D" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="ResponseLog_tf" width="26" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="ResponseLog_tf" selected="true" width="26" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="738.95" ty="587.45"/>
                   </matrix>
@@ -172,11 +172,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 11" color="#A64F9D">
+        <DOMLayer name="ResponsePrompt_tf" color="#A64F9D" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="ResponsePrompt_tf" width="26" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="ResponsePrompt_tf" selected="true" width="26" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="51" ty="634.45"/>
                   </matrix>
@@ -193,11 +193,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 12" color="#BEC4D2">
+        <DOMLayer name="BlinkingCursor_mc" color="#FFFF00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 18" name="BlinkingCursor_mc" centerPoint3DX="205.95" centerPoint3DY="248.45">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/BlinkingCursor" name="BlinkingCursor_mc" selected="true" centerPoint3DX="205.95" centerPoint3DY="248.45">
                   <matrix>
                     <Matrix tx="51.2" ty="36.25"/>
                   </matrix>
@@ -209,11 +209,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 13" color="#F5D8AB">
+        <DOMLayer name="ResponseText_tf" color="#FF00FF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="ResponseText_tf" width="684" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="ResponseText_tf" selected="true" width="684" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="83" ty="634.45"/>
                   </matrix>
@@ -230,11 +230,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 14" color="#B0DFF4">
+        <DOMLayer name="MenuItemList_mc" color="#FF9900" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 12" name="MenuItemList_mc" centerPoint3DX="594.2" centerPoint3DY="375.1">
+                <DOMSymbolInstance libraryItemName="UI/TerminalMenu/List/MenuItemList" name="MenuItemList_mc" selected="true" centerPoint3DX="594.2" centerPoint3DY="375.1">
                   <matrix>
                     <Matrix tx="49.85" ty="122.45"/>
                   </matrix>
@@ -246,11 +246,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 15" color="#B3AF88">
+        <DOMLayer name="DisplayText_tf" color="#0066FF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="DisplayText_tf" width="716" height="497.65" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="DisplayText_tf" selected="true" width="716" height="497.65" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="51" ty="119.45"/>
                   </matrix>
@@ -267,11 +267,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 16" color="#C894FC">
+        <DOMLayer name="WelcomeText_tf" color="#00FF00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="WelcomeText_tf" width="716" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                <DOMDynamicText name="WelcomeText_tf" selected="true" width="716" height="31.2" isSelectable="false" renderAsHTML="true" lineType="multiline">
                   <matrix>
                     <Matrix tx="51" ty="72.45"/>
                   </matrix>
@@ -288,11 +288,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 17" color="#894DBE" current="true" isSelected="true">
+        <DOMLayer name="HeaderText_tf" color="#FF0000" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="HeaderText_tf" width="716" height="34.8" isSelectable="false" renderAsHTML="true">
+                <DOMDynamicText name="HeaderText_tf" selected="true" width="716" height="34.8" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="51" ty="33.9"/>
                   </matrix>
