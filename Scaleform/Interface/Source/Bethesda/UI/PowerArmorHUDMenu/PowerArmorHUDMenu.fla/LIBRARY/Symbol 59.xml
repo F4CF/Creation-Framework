@@ -1,0 +1,106 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 59" lastModified="1571730685" linkageClassName="PowerArmorHUDMenu_fla.QuestCompassMarkers_82" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 59">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#4cfcaf">
+          <frames>
+            <DOMFrame index="0" keyMode="9728" name="LevelWithPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" name="AbovePlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728" name="BelowPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#e9c4a0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements/>
+</DOMFrame>
+<DOMFrame index="1" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 57" centerPoint3DX="6.15" centerPoint3DY="-51.7">
+  <matrix>
+    <Matrix tx="0.0" ty="-54.95" a="-1.0" d="-1.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="2" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 57" centerPoint3DX="6.15" centerPoint3DY="-35.6">
+  <matrix>
+    <Matrix tx="0.0" ty="-38.85"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#8af640">
+                         <frames>
+                              <DOMFrame index="0" duration="2" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText fontRenderingMode="standard" name="Distance_tf" width="27.85" height="19.2" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="-11.3" ty="-52.1"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters>00</characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" lineSpacing="5.0" rightMargin="0.0" size="16" bitmapSize="320" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="2" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText fontRenderingMode="standard" name="Distance_tf" width="27.85" height="19.2" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="-11.3" ty="-58.9"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters>00</characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" lineSpacing="5.0" rightMargin="0.0" size="16" bitmapSize="320" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 4" color="#86728d" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="3" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 54" name="MarkerShape_mc" centerPoint3DX="6.35" centerPoint3DY="17.4">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

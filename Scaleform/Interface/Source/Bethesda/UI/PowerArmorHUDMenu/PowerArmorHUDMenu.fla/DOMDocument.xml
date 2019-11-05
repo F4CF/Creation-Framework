@@ -1,0 +1,160 @@
+<DOMDocument xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" currentTimeline="1" xflVersion="2.4" creatorInfo="JPEXS Free Flash Decompiler" platform="Windows" versionInfo="Saved by JPEXS Free Flash Decompiler v.11.2.0" majorVersion="11.2.0" buildNumber="" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true" backgroundColor="#666666" frameRate="30" width="1280" height="720">
+  <fonts>
+    <DOMFontItem name="Font 293" font="Roboto Condensed Bold" size="0" id="293" embedRanges="1|2|3|4|5" embeddedCharacters=" &#13;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼"/>
+    <DOMFontItem name="Font 294" font="Roboto Condensed Regular" size="0" id="294" embedRanges="1|2|3|4|5" embeddedCharacters=" &#13;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼"/>
+    <DOMFontItem name="Font 295" font="Share-TechMono" size="0" id="295" embedRanges="1|2|3|4|5" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЀЁЍАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёѝ–—‘’‚“”„†‡•…‰‹›⁄€™Ω∂∏∑∕√∞∧∫≠≤≥"/>
+    <DOMFontItem name="Font 296" font="Eurostile LT Std Roman" size="0" id="296" embedRanges="1|2|3|4|5" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥"/>
+    <DOMFontItem name="Font 297" font="Brody" size="0" id="297" embedRanges="1|2|3|4|5" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĂăĄąĆćČčĎďĐđĘęĚěĞğİıĹĺĽľŁłŃńŇňŐőŒœŔŕŘřŚśŞşŠšŢţŤťŮůŰűŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜ΔΣΩμπ–—‗‘’‚“”„†‡•…‰‹›‼ⁿ₣™Ω←→∂∏∕√∞∫≠≤≥■"/>
+    <DOMFontItem name="Font 298" font="Controller  Buttons" size="0" id="298" embedRanges="1|2"/>
+    <DOMFontItem name="Font 299" font="Eurostile Cyr Std Bold" size="0" id="299" embedRanges="1|2|3|4|5" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥"/>
+    <DOMFontItem name="Font 300" font="Handwritten_Institute" size="0" id="300" embedRanges="1|2|3" embeddedCharacters="!&quot;#$%&amp;'()*+,-/:;&lt;=&gt;?@[\]^_{|}~¡¢£¤§©«¬®°±²µ¶»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĄąĆćĈĉĔęĜĝĤĥıĴĵŁłŃńŐőŒœŚśŜŝŠšŬŭŰűŸŹźŻżŽžƒμ‘’“”†‡•€™"/>
+    <DOMFontItem name="Font 301" font="Controller  Buttons inverted" size="0" id="301" embedRanges="1|2"/>
+  </fonts>
+  <media>
+    <DOMSoundItem name="sound24.mp3" sourceLastImported="1571730685" externalFileSize="883" href="sound24.mp3" format="22kHz 16bit Mono" exportFormat="5" exportBits="0" sampleCount="576"/>
+    <DOMBitmapItem name="bitmap280.png" sourceLastImported="1571730685" externalFileSize="139" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="bitmap280.png" bitmapDataHRef="M 2 1571730685.dat" frameRight="300" frameBottom="22"/>
+  </media>
+  <symbols>
+    <Include href="Symbol 3.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 5.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 6.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 9.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 12.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 15.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 17.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 18.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 21.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 25.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 28.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 31.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 34.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 37.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 40.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 43.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 46.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 49.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 50.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 51.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 53.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 54.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 56.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 57.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 59.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 60.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 63.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 65.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 66.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 69.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 71.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 72.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 74.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 75.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 76.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 79.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 81.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 82.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 84.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 86.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 89.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 92.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 95.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 98.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 101.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 104.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 107.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 110.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 111.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 112.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 113.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 116.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 119.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 122.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 125.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 128.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 131.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 134.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 137.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 140.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 143.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 146.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 149.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 152.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 155.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 158.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 161.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 164.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 167.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 170.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 173.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 176.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 179.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 182.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 185.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 188.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 191.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 194.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 197.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 200.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 203.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 206.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 209.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 212.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 213.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 214.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 215.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 218.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 221.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 224.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 227.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 230.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 233.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 236.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 239.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 240.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 243.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 246.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 249.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 252.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 255.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 258.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 261.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 264.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 267.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 270.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 273.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 276.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 279.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 282.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 283.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 284.xml" itemIcon="1" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 285.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 286.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 287.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 288.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 289.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 291.xml" loadImmediate="false" lastModified="1571730685"/>
+    <Include href="Symbol 292.xml" loadImmediate="false" lastModified="1571730685"/>
+  </symbols>
+  <timelines>
+    <DOMTimeline name="Scene 1">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#d6ef24" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 292" name="CompassWidget_mc" centerPoint3DX="820.0" centerPoint3DY="731.0">
+  <matrix>
+    <Matrix tx="640.0" ty="675.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timelines>
+</DOMDocument>

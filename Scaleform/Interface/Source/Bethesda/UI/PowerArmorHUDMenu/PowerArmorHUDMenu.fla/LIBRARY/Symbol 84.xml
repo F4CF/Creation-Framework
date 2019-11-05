@@ -1,0 +1,79 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 84" lastModified="1571730685" linkageClassName="DogmeatMarker" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 84">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#bee1fa">
+          <frames>
+            <DOMFrame index="0" keyMode="9728" name="LevelWithPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" name="AbovePlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728" name="BelowPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#d3b46a">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements/>
+</DOMFrame>
+<DOMFrame index="1" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 81" symbolType="graphic" loop="loop">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="2" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 56" symbolType="graphic" loop="loop">
+  <matrix>
+    <Matrix tx="0.0" ty="-16.7"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#d9b746" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="3" keyMode="9728">
+  <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#ffffff"/>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle1="1" edges="!0 0! 76 -126[ 93 -107 93 -84[ 94 -64 81 -47[ 68 -29 44 -34[ 21 -41 18 -88[ 14 -137 40 -142[ 59 -145 76 -126"/>
+    <Edge fillStyle1="1" edges="!76 -126! 22 -190[ 40 -186 46 -164| 34 -165| 22 -164[ 17 -179 22 -190"/>
+    <Edge fillStyle1="1" edges="!22 -190! 85 -23| 102 -26| 119 -24[ 148 -11 139 36[ 128 83 92 74[ 81 72 69 53[ 51 34 51 27[ 50 18 64 -1| 85 -23"/>
+    <Edge fillStyle1="1" edges="!85 -23! 123 -64[ 134 -57 136 -31| 124 -35| 113 -40[ 113 -48 123 -64"/>
+    <Edge fillStyle1="1" edges="!123 -64! 36 78| 61 107[ 79 126 81 137[ 85 153 78 167| 57 186| 25 188| -7 182| -35 186| -62 190[ -81 188 -95 168[ -111 148 -104 128[ -101 119 -78 103| -48 75| -36 47[ -30 32 -9 31[ 12 30 22 45| 36 78"/>
+    <Edge fillStyle1="1" edges="!36 78! -23 -183[ -15 -191 -7 -190[ -5 -170 -9 -164| -33 -164| -23 -183"/>
+    <Edge fillStyle1="1" edges="!-23 -183! -120 -66| -115 -84[ -108 -94 -100 -96[ -95 -87 -95 -70| -108 -70| -120 -66"/>
+    <Edge fillStyle1="1" edges="!-120 -66! -77 -99[ -73 -145 -39 -149[ -3 -153 -5 -97[ -8 -41 -47 -46[ -82 -52 -77 -99"/>
+    <Edge fillStyle1="1" edges="!-77 -99! -69 -24| -57 -6| -51 12| -57 24| -69 36| -77 48[ -82 56 -89 57[ -128 64 -139 9[ -150 -47 -110 -53[ -95 -55 -86 -46| -69 -24"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

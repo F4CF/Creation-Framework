@@ -1,0 +1,34 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 282" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 282">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#eeccb6" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#ffffff"/>
+  </FillStyle>
+  <FillStyle index="2">
+    <BitmapFill bitmapPath="bitmap280.png" bitmapIsClipped="true">
+      <matrix>
+        <Matrix tx="-150.0" ty="-22.0" a="20.0" d="20.0"/>
+      </matrix>
+    </BitmapFill>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle1="2" edges="!0 0! -3000 -440| 3000 -440| 3000 0| -3000 0| -3000 -440"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

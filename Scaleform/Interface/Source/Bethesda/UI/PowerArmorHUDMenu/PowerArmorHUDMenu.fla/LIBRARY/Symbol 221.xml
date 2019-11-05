@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 221" lastModified="1571730685" linkageClassName="HospitalMarker" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 221">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#f5b0a5">
+          <frames>
+            <DOMFrame index="0" keyMode="9728" name="Discovered" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" name="Undiscovered" labelType="name">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#eeb9e6" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#ffffff"/>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle0="1" edges="!0 0! 117 -117[ 165 -68 165 0[ 165 68 117 117[ 68 165 0 165[ -68 165 -116 117[ -165 68 -165 0[ -165 -68 -116 -117[ -68 -166 0 -166[ 68 -166 117 -117"/>
+    <Edge fillStyle0="1" edges="!117 -117! 0 -198[ -82 -198 -140 -140[ -198 -82 -198 0[ -198 82 -140 140[ -82 198 0 198[ 82 198 140 140[ 198 82 198 0[ 198 -82 140 -140[ 82 -198 0 -198"/>
+    <Edge fillStyle0="1" edges="!0 -198! 44 -137| -44 -137| -44 -44| -137 -44| -137 44| -44 44| -44 137| 44 137| 44 44| 137 44| 137 -44| 44 -44| 44 -137"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="1" keyMode="9728">
+  <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#ffffff"/>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle0="1" edges="!0 0! 0 -221[ -92 -221 -157 -156[ -222 -91 -222 1[ -222 92 -157 158[ -92 223 0 223[ 92 223 157 158[ 222 92 222 1[ 222 -91 157 -156[ 92 -221 0 -221"/>
+    <Edge fillStyle0="1" edges="!0 -221! 68 -68| 68 -161| -68 -161| -68 -68| -161 -68| -161 68| -68 68| -68 161| 68 161| 68 68| 161 68| 161 -68| 68 -68"/>
+    <Edge fillStyle0="1" edges="!68 -68! 44 -44| 137 -44| 137 44| 44 44| 44 137| -44 137| -44 44| -137 44| -137 -44| -44 -44| -44 -137| 44 -137| 44 -44"/>
+    <Edge fillStyle0="1" edges="!44 -44! 140 -139[ 198 -81 198 1[ 198 83 140 140[ 82 199 0 199[ -82 199 -140 140[ -198 83 -198 1[ -198 -81 -140 -139[ -82 -197 0 -197[ 82 -197 140 -139"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

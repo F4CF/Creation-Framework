@@ -1,0 +1,104 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 292" lastModified="1571730685" linkageClassName="HUDCompassWidget" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 292">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#a2b5aa">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 291" name="CompassBar_mc" centerPoint3DX="152.0" centerPoint3DY="4.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+        <DOMLayer name="Layer 2" color="#6fd5d8" layerType="mask" locked="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 289" name="QuestMask_mc" centerPoint3DX="180.0" centerPoint3DY="40.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#fb1081" parentLayerIndex="1" locked="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 288" name="QuestMarkerHolder_mc" centerPoint3DX="0.0" centerPoint3DY="0.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+        <DOMLayer name="Layer 4" color="#aafd02" layerType="mask" locked="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 287" name="OtherMask_mc" centerPoint3DX="170.0" centerPoint3DY="56.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 5" color="#3cdb70" parentLayerIndex="3" locked="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 288" name="OtherMarkerHolder_mc" centerPoint3DX="0.0" centerPoint3DY="0.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 6" color="#f710d5" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 283" name="CompassBGHolder_mc" centerPoint3DX="150.0" centerPoint3DY="11.0">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

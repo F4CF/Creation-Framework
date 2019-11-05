@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 113" lastModified="1571730685" linkageClassName="LowRiseMarker" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 113">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#7e28f9">
+          <frames>
+            <DOMFrame index="0" keyMode="9728" name="Discovered" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" name="Undiscovered" labelType="name">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#b6b0be">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 111" symbolType="graphic" loop="loop">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="1" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 112" symbolType="graphic" loop="loop">
+  <matrix>
+    <Matrix tx="0.0" ty="0.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

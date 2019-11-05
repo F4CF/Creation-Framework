@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 75" lastModified="1571730685" linkageClassName="PowerArmorHUDMenu_fla.CompassMarker_Enemy_92" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 75">
+      <layers>
+        <DOMLayer name="Labels Layer" color="#cdad75">
+          <frames>
+            <DOMFrame index="0" keyMode="9728" name="LevelWithPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728" name="AbovePlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728" name="BelowPlayer" labelType="name">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#db5497">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements/>
+</DOMFrame>
+<DOMFrame index="1" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 57" centerPoint3DX="6.15" centerPoint3DY="-19.75">
+  <matrix>
+    <Matrix tx="0.0" ty="-23.0" a="-1.0" d="-1.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+<DOMFrame index="2" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 57" centerPoint3DX="6.15" centerPoint3DY="-3.75">
+  <matrix>
+    <Matrix tx="0.0" ty="-7.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#ab927f" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" duration="3" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 74" name="MarkerShape_mc" centerPoint3DX="3.0" centerPoint3DY="-12.0">
+  <matrix>
+    <Matrix tx="0.0" ty="-15.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
