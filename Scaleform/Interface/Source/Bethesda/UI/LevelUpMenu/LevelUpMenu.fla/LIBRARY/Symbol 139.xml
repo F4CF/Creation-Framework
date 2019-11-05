@@ -1,0 +1,61 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 139" lastModified="1571730685" linkageClassName="Shared.AS3.BSButtonHint" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 139">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#e4e443">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 138" name="IconHolderInstance" centerPoint3DX="50.0" centerPoint3DY="15.9">
+  <matrix>
+    <Matrix tx="0.0" ty="3.5"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#baeccc">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 138" name="SecondaryIconHolderInstance" centerPoint3DX="50.0" centerPoint3DY="15.9">
+  <matrix>
+    <Matrix tx="0.0" ty="3.5"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#edd155" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText name="textField_tf" antiAliasSharpness="0" antiAliasThickness="0" width="196.0" height="21.6" renderAsHTML="true" isSelectable="false" lineType="multiline no wrap">
+  <matrix>
+    <Matrix tx="2.0" ty="5.25"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters>TEXT</characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="left" rotation="true" indent="0.0" leftMargin="0.0" letterSpacing="0.0" lineSpacing="2.0" rightMargin="0.0" size="18" bitmapSize="360" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

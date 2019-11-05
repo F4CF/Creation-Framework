@@ -1,0 +1,2376 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 1928" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 1928">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#edd267">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_6" centerPoint3DX="1910.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#bce5cf">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_5" centerPoint3DX="1671.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#b47272">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_4" centerPoint3DX="1435.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 4" color="#c9407b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_3" centerPoint3DX="1194.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 5" color="#f4d78c">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_2" centerPoint3DX="957.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="767.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 6" color="#4c8eab">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_1" centerPoint3DX="718.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="528.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 7" color="#d16354">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_10_0" centerPoint3DX="478.6" centerPoint3DY="2466.3">
+  <matrix>
+    <Matrix tx="288.0" ty="2448.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 8" color="#5ac69d">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_6" centerPoint3DX="1910.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 9" color="#1698e4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_5" centerPoint3DX="1671.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 10" color="#f4516b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_4" centerPoint3DX="1435.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 11" color="#7db690">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_3" centerPoint3DX="1194.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 12" color="#5facea">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_2" centerPoint3DX="957.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="767.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 13" color="#aa4ca9">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_1" centerPoint3DX="718.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="528.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 14" color="#4ad973">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_9_0" centerPoint3DX="478.6" centerPoint3DY="2251.3">
+  <matrix>
+    <Matrix tx="288.0" ty="2233.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 15" color="#4eb6f4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_6" centerPoint3DX="1910.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 16" color="#ddf332">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_5" centerPoint3DX="1671.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 17" color="#b8af1a">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_4" centerPoint3DX="1435.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 18" color="#ea219d">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_3" centerPoint3DX="1194.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 19" color="#afcff4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_2" centerPoint3DX="957.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="767.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 20" color="#6f56d9">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_1" centerPoint3DX="718.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="528.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 21" color="#e2ffed">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_8_0" centerPoint3DX="478.6" centerPoint3DY="2036.3">
+  <matrix>
+    <Matrix tx="288.0" ty="2018.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 22" color="#26fba7">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_6" centerPoint3DX="1910.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 23" color="#7f50d3">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_5" centerPoint3DX="1671.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 24" color="#518dee">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_4" centerPoint3DX="1435.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 25" color="#f1ba20">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_3" centerPoint3DX="1194.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 26" color="#c7f2a6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_2" centerPoint3DX="957.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="767.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 27" color="#ae07e8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_1" centerPoint3DX="718.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="528.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 28" color="#88dfe2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_7_0" centerPoint3DX="478.6" centerPoint3DY="1823.3">
+  <matrix>
+    <Matrix tx="288.0" ty="1805.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 29" color="#8a42cb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_6" centerPoint3DX="1910.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 30" color="#a8ad6c">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_5" centerPoint3DX="1671.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 31" color="#3182ed">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_4" centerPoint3DX="1435.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 32" color="#c5b0aa">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_3" centerPoint3DX="1194.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 33" color="#82a2a5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_2" centerPoint3DX="957.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="767.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 34" color="#fba664">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_1" centerPoint3DX="718.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="528.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 35" color="#73c9d0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_6_0" centerPoint3DX="478.6" centerPoint3DY="1608.3">
+  <matrix>
+    <Matrix tx="288.0" ty="1590.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 36" color="#9df9f1">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_6" centerPoint3DX="1910.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 37" color="#9738c2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_5" centerPoint3DX="1671.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 38" color="#f55854">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_4" centerPoint3DX="1435.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 39" color="#fbe322">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_3" centerPoint3DX="1194.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 40" color="#5ef189">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_2" centerPoint3DX="957.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="767.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 41" color="#b857a9">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_1" centerPoint3DX="718.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="528.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 42" color="#3eddcb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_5_0" centerPoint3DX="478.6" centerPoint3DY="1393.3">
+  <matrix>
+    <Matrix tx="288.0" ty="1375.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 43" color="#c5afa2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_6" centerPoint3DX="1910.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 44" color="#f3e4d8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_5" centerPoint3DX="1671.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 45" color="#fe8784">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_4" centerPoint3DX="1435.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 46" color="#5ed372">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_3" centerPoint3DX="1194.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 47" color="#ee6548">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_2" centerPoint3DX="957.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="767.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 48" color="#aea885">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_1" centerPoint3DX="718.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="528.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 49" color="#ba23fb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_4_0" centerPoint3DX="478.6" centerPoint3DY="1180.3">
+  <matrix>
+    <Matrix tx="288.0" ty="1162.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 50" color="#a8ec72">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_6" centerPoint3DX="1910.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 51" color="#f6dbfb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_5" centerPoint3DX="1671.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 52" color="#8950c4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_4" centerPoint3DX="1435.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 53" color="#ea5e99">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_3" centerPoint3DX="1194.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 54" color="#92e4aa">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_2" centerPoint3DX="957.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="767.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 55" color="#87bfd1">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_1" centerPoint3DX="718.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="528.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 56" color="#9ef3ae">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_3_0" centerPoint3DX="478.6" centerPoint3DY="964.3">
+  <matrix>
+    <Matrix tx="288.0" ty="946.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 57" color="#d55358">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_6" centerPoint3DX="1910.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 58" color="#ca60b8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_5" centerPoint3DX="1671.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 59" color="#55aade">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_4" centerPoint3DX="1435.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 60" color="#e109be">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_3" centerPoint3DX="1194.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 61" color="#56b0f8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_2" centerPoint3DX="957.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="767.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 62" color="#fc56b0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_1" centerPoint3DX="718.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="528.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 63" color="#d53d90">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_2_0" centerPoint3DX="478.6" centerPoint3DY="750.3">
+  <matrix>
+    <Matrix tx="288.0" ty="732.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 64" color="#cae14c">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_6" centerPoint3DX="1910.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="1720.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 65" color="#3dd3ac">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_5" centerPoint3DX="1671.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="1481.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 66" color="#e86469">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_4" centerPoint3DX="1435.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="1245.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 67" color="#aeb551">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_3" centerPoint3DX="1194.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="1004.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 68" color="#f1d9bb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_2" centerPoint3DX="957.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="767.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 69" color="#f65be1">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_1" centerPoint3DX="718.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="528.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 70" color="#7dd947">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1927" name="StarHolder_1_0" centerPoint3DX="478.6" centerPoint3DY="535.3">
+  <matrix>
+    <Matrix tx="288.0" ty="517.0" a="0.5500030517578125" d="0.546417236328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 71" color="#4b69e2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 164" name="PerkAnim_3_5" centerPoint3DX="1788.1" centerPoint3DY="1197.0">
+  <matrix>
+    <Matrix tx="1569.95" ty="1040.65" a="0.5080108642578125" d="0.5080108642578125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 72" color="#76dce5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 172" name="PerkAnim_6_3" centerPoint3DX="1313.8" centerPoint3DY="1828.7">
+  <matrix>
+    <Matrix tx="1105.3" ty="1680.45" a="0.522369384765625" d="0.522369384765625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 73" color="#ac0af0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 204" name="PerkAnim_10_6" centerPoint3DX="2059.8" centerPoint3DY="2693.7">
+  <matrix>
+    <Matrix tx="1829.0" ty="2532.95" a="0.50054931640625" d="0.50054931640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 74" color="#c7f29b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 214" name="PerkAnim_5_6" centerPoint3DX="2044.8" centerPoint3DY="1601.0">
+  <matrix>
+    <Matrix tx="1842.3" ty="1457.0" a="0.541107177734375" d="0.541107177734375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 75" color="#82d558">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 226" name="PerkAnim_3_3" centerPoint3DX="1306.1" centerPoint3DY="1169.35">
+  <matrix>
+    <Matrix tx="1107.0" ty="1026.0" a="0.5508270263671875" d="0.5508270263671875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 76" color="#8ae943">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 240" name="PerkAnim_6_2" centerPoint3DX="1087.4" centerPoint3DY="1824.5">
+  <matrix>
+    <Matrix tx="884.9" ty="1676.25" a="0.528045654296875" d="0.528045654296875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 77" color="#7d8ea6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 251" name="PerkAnim_9_5" centerPoint3DX="1805.6" centerPoint3DY="2490.3">
+  <matrix>
+    <Matrix tx="1581.85" ty="2334.2" a="0.51336669921875" d="0.51336669921875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 78" color="#def974">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 288" name="PerkAnim_9_4" centerPoint3DX="1564.55" centerPoint3DY="2478.0">
+  <matrix>
+    <Matrix tx="1359.4" ty="2325.5" a="0.518341064453125" d="0.518341064453125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 79" color="#11c9d3">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 314" name="PerkAnim_9_3" centerPoint3DX="1331.95" centerPoint3DY="2496.05">
+  <matrix>
+    <Matrix tx="1104.3" ty="2331.65" a="0.4874725341796875" d="0.4874725341796875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 80" color="#5999fe">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 325" name="PerkAnim_9_0" centerPoint3DX="593.2" centerPoint3DY="2484.0">
+  <matrix>
+    <Matrix tx="390.7" ty="2332.95" a="0.540985107421875" d="0.540985107421875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 81" color="#3fdeae">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 344" name="PerkAnim_7_0" centerPoint3DX="605.55" centerPoint3DY="2044.85">
+  <matrix>
+    <Matrix tx="393.7" ty="1882.55" a="0.5175018310546875" d="0.5175018310546875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 82" color="#b6ed08">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 374" name="PerkAnim_4_4" centerPoint3DX="1577.75" centerPoint3DY="1411.55">
+  <matrix>
+    <Matrix tx="1337.1" ty="1237.1" a="0.4628753662109375" d="0.462799072265625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 83" color="#abae2b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 437" name="PerkAnim_10_0" centerPoint3DX="648.2" centerPoint3DY="2667.2">
+  <matrix>
+    <Matrix tx="382.05" ty="2508.5" a="0.5398101806640625" d="0.5398101806640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 84" color="#a935bf">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 456" name="PerkAnim_3_0" centerPoint3DX="568.85" centerPoint3DY="1154.65">
+  <matrix>
+    <Matrix tx="330.85" ty="972.4" a="0.4454345703125" d="0.446533203125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 85" color="#a758c6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 465" name="PerkAnim_10_3" centerPoint3DX="1321.2" centerPoint3DY="2688.35">
+  <matrix>
+    <Matrix tx="1113.95" ty="2537.65" a="0.5124359130859375" d="0.513031005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 86" color="#d9b5fb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 482" name="PerkAnim_9_6" centerPoint3DX="2041.3" centerPoint3DY="2474.85">
+  <matrix>
+    <Matrix tx="1831.8" ty="2326.5" a="0.52557373046875" d="0.52557373046875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 87" color="#f4942d">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 492" name="PerkAnim_8_6" centerPoint3DX="2036.55" centerPoint3DY="2281.45">
+  <matrix>
+    <Matrix tx="1818.1" ty="2116.0" a="0.482666015625" d="0.482666015625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 88" color="#1eccbe">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 544" name="PerkAnim_7_6" centerPoint3DX="3728.85" centerPoint3DY="2271.7">
+  <matrix>
+    <Matrix tx="1826.25" ty="1892.95" a="0.52557373046875" d="0.52557373046875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 89" color="#f34485">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 575" name="PerkAnim_6_6" centerPoint3DX="2025.9" centerPoint3DY="1825.65">
+  <matrix>
+    <Matrix tx="1826.6" ty="1675.15" a="0.52557373046875" d="0.52557373046875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 90" color="#f1c982">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 597" name="PerkAnim_4_6" centerPoint3DX="2018.8" centerPoint3DY="1396.9">
+  <matrix>
+    <Matrix tx="1807.9" ty="1246.75" a="0.52557373046875" d="0.52557373046875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 91" color="#93e283">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 619" name="PerkAnim_2_6" centerPoint3DX="2026.9" centerPoint3DY="1003.3">
+  <matrix>
+    <Matrix tx="1802.05" ty="833.65" a="0.495513916015625" d="0.495574951171875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 92" color="#b4fc14">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 658" name="PerkAnim_7_5" centerPoint3DX="1820.85" centerPoint3DY="2057.8">
+  <matrix>
+    <Matrix tx="1607.45" ty="1902.0" a="0.525787353515625" d="0.5258636474609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 93" color="#41e564">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 685" name="PerkAnim_10_5" centerPoint3DX="1817.5" centerPoint3DY="2688.4">
+  <matrix>
+    <Matrix tx="1607.5" ty="2537.0" a="0.525787353515625" d="0.5258636474609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 94" color="#eade65">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 721" name="PerkAnim_8_5" centerPoint3DX="1785.25" centerPoint3DY="2256.8">
+  <matrix>
+    <Matrix tx="1584.35" ty="2106.0" a="0.525787353515625" d="0.5258636474609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 95" color="#5ac197">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 813" name="PerkAnim_6_5" centerPoint3DX="1813.65" centerPoint3DY="1848.45">
+  <matrix>
+    <Matrix tx="1581.55" ty="1683.7" a="0.480194091796875" d="0.48065185546875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 96" color="#0ab4da">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 835" name="PerkAnim_5_5" centerPoint3DX="1788.35" centerPoint3DY="1611.4">
+  <matrix>
+    <Matrix tx="1586.65" ty="1463.9" a="0.525787353515625" d="0.5258636474609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 97" color="#95d130">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 849" name="PerkAnim_4_5" centerPoint3DX="1789.25" centerPoint3DY="1406.75">
+  <matrix>
+    <Matrix tx="1587.8" ty="1252.2" a="0.525787353515625" d="0.5258636474609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 98" color="#46cacf">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 859" name="PerkAnim_2_5" centerPoint3DX="1793.15" centerPoint3DY="995.25">
+  <matrix>
+    <Matrix tx="1577.3" ty="838.45" a="0.49139404296875" d="0.491729736328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 99" color="#36d48b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 870" name="PerkAnim_10_4" centerPoint3DX="1553.3" centerPoint3DY="2690.45">
+  <matrix>
+    <Matrix tx="1342.85" ty="2536.65" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 100" color="#1abbfe">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 890" name="PerkAnim_8_4" centerPoint3DX="1566.0" centerPoint3DY="2276.75">
+  <matrix>
+    <Matrix tx="1351.6" ty="2112.1" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 101" color="#78e1f7">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 917" name="PerkAnim_5_4" centerPoint3DX="1583.85" centerPoint3DY="1617.05">
+  <matrix>
+    <Matrix tx="1362.45" ty="1458.0" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 102" color="#a2d3ed">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 976" name="PerkAnim_6_4" centerPoint3DX="1605.9" centerPoint3DY="1834.2">
+  <matrix>
+    <Matrix tx="1377.65" ty="1679.2" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 103" color="#0dbfbc">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1016" name="PerkAnim_7_4" centerPoint3DX="1560.55" centerPoint3DY="2052.5">
+  <matrix>
+    <Matrix tx="1339.0" ty="1892.0" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 104" color="#d78be2">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1034" name="PerkAnim_3_4" centerPoint3DX="1566.45" centerPoint3DY="1213.4">
+  <matrix>
+    <Matrix tx="1344.55" ty="1053.15" a="0.5023956298828125" d="0.5027008056640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 105" color="#cdb120">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1046" name="PerkAnim_2_4" centerPoint3DX="1573.05" centerPoint3DY="966.4">
+  <matrix>
+    <Matrix tx="1360.55" ty="813.9" a="0.51739501953125" d="0.51800537109375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 106" color="#27c5b6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1063" name="PerkAnim_1_4" centerPoint3DX="1604.8" centerPoint3DY="761.2">
+  <matrix>
+    <Matrix tx="1382.3" ty="600.3" a="0.4888153076171875" d="0.4896392822265625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 107" color="#fed4bd">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1071" name="PerkAnim_8_3" centerPoint3DX="1346.9" centerPoint3DY="2265.65">
+  <matrix>
+    <Matrix tx="1119.05" ty="2108.85" a="0.5124359130859375" d="0.513031005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 108" color="#23b9ef">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1105" name="PerkAnim_7_3" centerPoint3DX="1318.7" centerPoint3DY="2051.1">
+  <matrix>
+    <Matrix tx="1107.3" ty="1891.4" a="0.5124359130859375" d="0.513031005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 109" color="#f064d0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1115" name="PerkAnim_5_3" centerPoint3DX="1320.7" centerPoint3DY="1616.5">
+  <matrix>
+    <Matrix tx="1105.7" ty="1463.0" a="0.5124359130859375" d="0.513031005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 110" color="#80d8a5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1132" name="PerkAnim_4_3" centerPoint3DX="1297.45" centerPoint3DY="1399.55">
+  <matrix>
+    <Matrix tx="1087.45" ty="1249.0" a="0.5240631103515625" d="0.52484130859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 111" color="#cda575">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1152" name="PerkAnim_2_3" centerPoint3DX="1319.5" centerPoint3DY="953.55">
+  <matrix>
+    <Matrix tx="1106.5" ty="800.55" a="0.5124359130859375" d="0.513031005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 112" color="#5f5ade">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1168" name="PerkAnim_1_3" centerPoint3DX="1303.3" centerPoint3DY="744.0">
+  <matrix>
+    <Matrix tx="1071.3" ty="579.0" a="0.473541259765625" d="0.4741058349609375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 113" color="#c38592">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1186" name="PerkAnim_10_2" centerPoint3DX="1116.3" centerPoint3DY="2726.95">
+  <matrix>
+    <Matrix tx="893.75" ty="2539.95" a="0.519927978515625" d="0.519927978515625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 114" color="#f810f6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1255" name="PerkAnim_9_2" centerPoint3DX="1619.55" centerPoint3DY="2553.55">
+  <matrix>
+    <Matrix tx="845.35" ty="2356.75" a="0.476715087890625" d="0.476715087890625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 115" color="#6495c8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1272" name="PerkAnim_8_2" centerPoint3DX="1103.35" centerPoint3DY="2278.9">
+  <matrix>
+    <Matrix tx="871.85" ty="2111.4" a="0.476715087890625" d="0.476715087890625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 116" color="#b09ac8">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1280" name="PerkAnim_7_2" centerPoint3DX="1088.0" centerPoint3DY="2051.75">
+  <matrix>
+    <Matrix tx="874.0" ty="1895.45" a="0.511627197265625" d="0.511627197265625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 117" color="#80e249">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1305" name="PerkAnim_5_2" centerPoint3DX="1088.55" centerPoint3DY="1640.55">
+  <matrix>
+    <Matrix tx="868.6" ty="1481.2" a="0.5057220458984375" d="0.5057220458984375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 118" color="#f231a3">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1376" name="PerkAnim_4_2" centerPoint3DX="1077.95" centerPoint3DY="1413.95">
+  <matrix>
+    <Matrix tx="859.45" ty="1257.35" a="0.50799560546875" d="0.50799560546875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 119" color="#fb614b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1392" name="PerkAnim_3_2" centerPoint3DX="1096.0" centerPoint3DY="1193.55">
+  <matrix>
+    <Matrix tx="866.0" ty="1031.55" a="0.476715087890625" d="0.476715087890625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 120" color="#e77e79">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1419" name="PerkAnim_2_2" centerPoint3DX="1112.95" centerPoint3DY="984.05">
+  <matrix>
+    <Matrix tx="872.9" ty="815.65" a="0.476715087890625" d="0.476715087890625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 121" color="#cdf8e6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1445" name="PerkAnim_1_2" centerPoint3DX="1088.4" centerPoint3DY="787.85">
+  <matrix>
+    <Matrix tx="856.9" ty="613.2" a="0.476715087890625" d="0.476715087890625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 122" color="#657ec5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1460" name="PerkAnim_10_1" centerPoint3DX="781.05" centerPoint3DY="2754.4">
+  <matrix>
+    <Matrix tx="573.05" ty="2582.6" a="0.5307464599609375" d="0.531036376953125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 123" color="#b0fd8a">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1500" name="PerkAnim_9_1" centerPoint3DX="840.4" centerPoint3DY="2470.95">
+  <matrix>
+    <Matrix tx="631.85" ty="2312.55" a="0.5447540283203125" d="0.5450439453125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 124" color="#d030d4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1510" name="PerkAnim_8_1" centerPoint3DX="804.8" centerPoint3DY="2283.4">
+  <matrix>
+    <Matrix tx="602.8" ty="2137.9" a="0.5447540283203125" d="0.5450439453125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 125" color="#bc19b0">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1524" name="PerkAnim_8_0" centerPoint3DX="540.1" centerPoint3DY="2171.7">
+  <matrix>
+    <Matrix tx="333.1" ty="2016.45" a="0.531402587890625" d="0.5325164794921875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 126" color="#b3fc37">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1536" name="PerkAnim_7_1" centerPoint3DX="849.1" centerPoint3DY="2048.5">
+  <matrix>
+    <Matrix tx="627.6" ty="1888.0" a="0.492919921875" d="0.493194580078125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 127" color="#ae47f5">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1559" name="PerkAnim_6_1" centerPoint3DX="869.2" centerPoint3DY="1854.95">
+  <matrix>
+    <Matrix tx="647.6" ty="1688.0" a="0.4992218017578125" d="0.499755859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 128" color="#af5c95">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1569" name="PerkAnim_6_0" centerPoint3DX="594.6" centerPoint3DY="1770.35">
+  <matrix>
+    <Matrix tx="358.0" ty="1593.45" a="0.4467010498046875" d="0.447662353515625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 129" color="#d0d914">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1616" name="PerkAnim_5_1" centerPoint3DX="838.75" centerPoint3DY="1645.35">
+  <matrix>
+    <Matrix tx="581.15" ty="1474.05" a="0.5068817138671875" d="0.50714111328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 130" color="#b4f263">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1639" name="PerkAnim_5_0" centerPoint3DX="592.65" centerPoint3DY="1610.55">
+  <matrix>
+    <Matrix tx="329.95" ty="1419.0" a="0.40283203125" d="0.4036865234375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 131" color="#b66699">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1662" name="PerkAnim_4_1" centerPoint3DX="848.55" centerPoint3DY="1399.3">
+  <matrix>
+    <Matrix tx="633.05" ty="1243.3" a="0.5087890625" d="0.509124755859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 132" color="#fa6353">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1679" name="PerkAnim_4_0" centerPoint3DX="638.7" centerPoint3DY="1445.5">
+  <matrix>
+    <Matrix tx="389.0" ty="1255.8" a="0.424041748046875" d="0.425018310546875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 133" color="#7eab63">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1717" name="PerkAnim_3_6" centerPoint3DX="2030.45" centerPoint3DY="1179.35">
+  <matrix>
+    <Matrix tx="1824.95" ty="1026.45" a="0.5384368896484375" d="0.538604736328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 134" color="#79cf70">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1739" name="PerkAnim_3_1" centerPoint3DX="892.15" centerPoint3DY="1193.9">
+  <matrix>
+    <Matrix tx="635.5" ty="1037.35" a="0.5061187744140625" d="0.5066070556640625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 135" color="#8dd553">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1764" name="PerkAnim_2_1" centerPoint3DX="846.55" centerPoint3DY="988.25">
+  <matrix>
+    <Matrix tx="605.05" ty="830.75" a="0.50628662109375" d="0.5065460205078125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 136" color="#b04e9a">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1795" name="PerkAnim_2_0" centerPoint3DX="589.0" centerPoint3DY="957.4">
+  <matrix>
+    <Matrix tx="334.75" ty="765.8" a="0.422882080078125" d="0.42376708984375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 137" color="#f7987e">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1805" name="PerkAnim_1_6" centerPoint3DX="2014.3" centerPoint3DY="754.95">
+  <matrix>
+    <Matrix tx="1819.95" ty="605.35" a="0.545684814453125" d="0.54595947265625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 138" color="#6181fd">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1820" name="PerkAnim_1_5" centerPoint3DX="1789.35" centerPoint3DY="742.15">
+  <matrix>
+    <Matrix tx="1582.35" ty="593.15" a="0.52850341796875" d="0.528839111328125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 139" color="#9c9aaa">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1847" name="PerkAnim_1_1" centerPoint3DX="841.4" centerPoint3DY="770.25">
+  <matrix>
+    <Matrix tx="622.2" ty="610.35" a="0.5071563720703125" d="0.5075531005859375"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 140" color="#e9cd4b">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1859" name="PerkAnim_1_0" centerPoint3DX="603.25" centerPoint3DY="739.2">
+  <matrix>
+    <Matrix tx="355.45" ty="555.4" a="0.42529296875" d="0.426177978515625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 141" color="#309bfa">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1870" name="PerkAnim_0_6" centerPoint3DX="2001.2" centerPoint3DY="441.4">
+  <matrix>
+    <Matrix tx="1828.1" ty="309.75" a="0.653228759765625" d="0.6532440185546875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 142" color="#9094d4">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1877" name="PerkAnim_0_5" centerPoint3DX="1722.05" centerPoint3DY="444.6">
+  <matrix>
+    <Matrix tx="1559.5" ty="323.45" a="0.65167236328125" d="0.6518707275390625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 143" color="#f985a6">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1891" name="PerkAnim_0_4" centerPoint3DX="1514.25" centerPoint3DY="435.85">
+  <matrix>
+    <Matrix tx="1345.45" ty="301.25" a="0.66064453125" d="0.661285400390625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 144" color="#d2b1cc">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1900" name="PerkAnim_0_3" centerPoint3DX="1256.75" centerPoint3DY="439.7">
+  <matrix>
+    <Matrix tx="1091.5" ty="317.65" a="0.641632080078125" d="0.642303466796875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 145" color="#31dc7e">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1907" name="PerkAnim_0_2" centerPoint3DX="1046.3" centerPoint3DY="459.4">
+  <matrix>
+    <Matrix tx="879.45" ty="322.85" a="0.63348388671875" d="0.6334991455078125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 146" color="#38dacc">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1915" name="PerkAnim_0_1" centerPoint3DX="771.0" centerPoint3DY="445.8">
+  <matrix>
+    <Matrix tx="598.25" ty="315.6" a="0.6557159423828125" d="0.65606689453125"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 147" color="#ddf816">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1923" name="PerkAnim_0_0" centerPoint3DX="539.6" centerPoint3DY="447.85">
+  <matrix>
+    <Matrix tx="376.6" ty="306.9" a="0.650848388671875" d="0.6522216796875"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 148" color="#d95ce6" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1917" centerPoint3DX="489.85" centerPoint3DY="1524.25">
+  <matrix>
+    <Matrix tx="464.9" ty="1503.85"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

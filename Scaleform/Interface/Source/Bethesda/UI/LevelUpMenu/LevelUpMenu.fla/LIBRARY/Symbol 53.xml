@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 53" lastModified="1571730685" symbolType="graphic">
+  <timeline>
+    <DOMTimeline name="Symbol 53" currentFrame="0">
+      <layers>
+        <DOMLayer name="Layer 1">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#000000"/>
+  </FillStyle>
+  <FillStyle index="2">
+    <SolidColor color="#8b5c29"/>
+  </FillStyle>
+  <FillStyle index="3">
+    <SolidColor color="#d59758"/>
+  </FillStyle>
+  <FillStyle index="4">
+    <SolidColor color="#0067b1"/>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle1="1" edges="!0 0! -127 1642| -82 1642| -73 1698| -59 1776| -19 1993[ -17 1992 -18 2000| -24 2012| 27 2028[ 89 2036 142 1997[ 219 1941 337 1984[ 416 2012 448 2044[ 458 2053 430 2089[ 399 2130 347 2163[ 195 2259 -5 2209[ -13 2208 -28 2219| -55 2243[ -61 2251 -72 2251| -200 2251| -219 2247| -236 2239| -270 2153[ -276 2137 -258 2108[ -250 2096 -246 2073| -241 2047[ -268 2042 -343 1914[ -414 1792 -432 1730| -447 1642| -396 1642"/>
+    <Edge fillStyle1="4" edges="!-396 1642| -127 1642"/>
+    <Edge fillStyle0="1" fillStyle1="4" edges="!-127 1642| -117 1698[ -64 2005 -59 2012[ -79 2026 -148 2029| -159 2030| -233 2026[ -244 2017 -303 1902[ -364 1782 -378 1733| -396 1642"/>
+    <Edge fillStyle0="1" fillStyle1="3" edges="!-396 1642! 297 2138[ 160 2213 7 2172| -27 2174[ -57 2183 -82 2213| -199 2219| -210 2205| -159 2194| -64 2179| -28 2172| 47 2141[ 175 2078 216 2063[ 315 2030 397 2048| 403 2052| 376 2081[ 341 2113 297 2138"/>
+    <Edge fillStyle0="1" fillStyle1="2" edges="!297 2138! 5 2138| -106 2155| -159 2165[ -205 2176 -220 2193[ -241 2162 -231 2130| -213 2101[ -197 2080 -195 2066| -159 2068| -55 2051[ -2 2097 187 2018[ 271 1984 349 2017[ 272 2015 173 2057| 5 2138"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

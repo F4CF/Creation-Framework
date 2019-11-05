@@ -1,0 +1,70 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 149" lastModified="1571730685" linkageClassName="XPMeter_Holder" linkageExportForAS="true">
+  <timeline>
+    <DOMTimeline name="Symbol 149">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#dfcb41">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText name="textField" antiAliasSharpness="0" antiAliasThickness="0" width="100.0" height="22.8" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="7.0" ty="2.0"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters>LEVEL </characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="left" rotation="true" indent="0.0" leftMargin="0.0" letterSpacing="0.1" rightMargin="0.0" size="19" bitmapSize="380" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+<DOMTextRun>
+  <characters> 0</characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="left" rotation="true" indent="0.0" leftMargin="0.0" letterSpacing="0.1" rightMargin="0.0" size="19" bitmapSize="380" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#c2d25c">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 146" name="Meter_mc" centerPoint3DX="109.85" centerPoint3DY="40.2">
+  <matrix>
+    <Matrix tx="8.55" ty="26.4" a="1.09490966796875" d="0.44000244140625"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#5283fb" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMShape isFloating="true">
+                                             <fills>
+  <FillStyle index="1">
+    <SolidColor color="#333333" alpha="0.69803923"/>
+  </FillStyle>
+</fills>
+                                             <strokes/>
+  <edges>
+    <Edge fillStyle1="1" edges="!0 0! 4800 920| 0 920| 0 0| 4800 0| 4800 920"/>
+  </edges>
+</DOMShape>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

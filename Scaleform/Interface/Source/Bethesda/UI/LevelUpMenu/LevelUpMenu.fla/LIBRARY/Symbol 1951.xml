@@ -1,0 +1,124 @@
+<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 1951" lastModified="1571730685">
+  <timeline>
+    <DOMTimeline name="Symbol 1951">
+      <layers>
+                    <DOMLayer name="Layer 1" color="#48ea51">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText name="Confirm_tf" antiAliasSharpness="0" antiAliasThickness="0" width="495.05" height="26.4" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="402.0" ty="112.0" a="1.0018768310546875" d="1.0"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters>$ConfirmPerkSelect</characters>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" letterSpacing="0.0" lineSpacing="2.0" rightMargin="0.0" size="22" bitmapSize="440" face="" fillColor="#ffffff"/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 2" color="#b479bb">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 132" name="StarHolder_mc" centerPoint3DX="524.95" centerPoint3DY="72.0">
+  <matrix>
+    <Matrix tx="524.95" ty="72.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 3" color="#a46e80">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText name="Reqs_tf" antiAliasSharpness="0" antiAliasThickness="0" width="296.0" height="21.1" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="497.0" ty="117.0"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters/>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" lineSpacing="2.0" rightMargin="0.0" face="" fillColor=""/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 4" color="#7ddb62">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText fontRenderingMode="standard" name="PerkName_tf" width="746.0" height="35.05" renderAsHTML="true" isSelectable="false">
+  <matrix>
+    <Matrix tx="272.0" ty="14.25"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters/>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" lineSpacing="2.0" rightMargin="0.0" face="" fillColor=""/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 5" color="#77ab72">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMDynamicText name="DescriptionText_tf" antiAliasSharpness="0" antiAliasThickness="0" width="744.55" height="50.0" renderAsHTML="true" isSelectable="false" lineType="multiline">
+  <matrix>
+    <Matrix tx="277.0" ty="46.0" a="1.0018768310546875" d="1.0"/>
+  </matrix>
+  <textRuns>
+                                                  <DOMTextRun>
+  <characters/>
+  <textAttrs>
+    <DOMTextAttrs alignment="center" rotation="true" indent="0.0" leftMargin="0.0" lineSpacing="2.0" rightMargin="0.0" face="" fillColor=""/>
+  </textAttrs>
+</DOMTextRun>
+                                             </textRuns>
+</DOMDynamicText>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="Layer 6" color="#8259bd" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+  <elements>
+                                        <DOMSymbolInstance libraryItemName="Symbol 1946" name="Background_mc" centerPoint3DX="651.5" centerPoint3DY="76.35">
+  <matrix>
+    <Matrix tx="115.0" ty="10.0"/>
+  </matrix>
+  <transformationPoint>
+    <Point/>
+  </transformationPoint>
+</DOMSymbolInstance>
+                                   </elements>
+</DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
