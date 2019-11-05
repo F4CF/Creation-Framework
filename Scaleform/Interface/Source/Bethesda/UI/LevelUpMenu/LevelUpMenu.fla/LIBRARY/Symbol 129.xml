@@ -1,24 +1,21 @@
-<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 129" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 129" itemID="5dc12b90-00000048" lastModified="1571730685">
   <timeline>
     <DOMTimeline name="Symbol 129">
       <layers>
-                    <DOMLayer name="Layer 1" color="#eae212" current="true" isSelected="true">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-  <elements>
-                                        <DOMSymbolInstance libraryItemName="Symbol 128" symbolType="graphic" loop="loop">
-  <matrix>
-    <Matrix tx="0.0" ty="0.0"/>
-  </matrix>
-  <transformationPoint>
-    <Point/>
-  </transformationPoint>
-</DOMSymbolInstance>
-                                   </elements>
-</DOMFrame>
-                         </frames>
-                    </DOMLayer>
-               </layers>
+        <DOMLayer name="Layer 1" color="#EAE212" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 128" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
     </DOMTimeline>
   </timeline>
 </DOMSymbolItem>

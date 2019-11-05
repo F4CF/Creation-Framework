@@ -1,27 +1,26 @@
-<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 1925" lastModified="1571730685" linkageClassName="SelectionRect" linkageExportForAS="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 1925" itemID="5dc12b90-000002c6" linkageExportForAS="true" linkageClassName="SelectionRect" lastModified="1571730685">
   <timeline>
     <DOMTimeline name="Symbol 1925">
       <layers>
-                    <DOMLayer name="Layer 1" color="#b677b1" current="true" isSelected="true">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-  <elements>
-                                        <DOMShape isFloating="true">
-                                             <fills>
-  <FillStyle index="1">
-    <SolidColor color="#333333" alpha="0.34901962"/>
-  </FillStyle>
-</fills>
-                                             <strokes/>
-  <edges>
-    <Edge fillStyle1="1" edges="!0 0! 4600 3200| 0 3200| 0 0| 4600 0| 4600 3200"/>
-  </edges>
-</DOMShape>
-                                   </elements>
-</DOMFrame>
-                         </frames>
-                    </DOMLayer>
-               </layers>
+        <DOMLayer name="Layer 1" color="#B677B1" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#333333" alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!4600 3200|0 3200!0 3200|0 0!0 0|4600 0!4600 0|4600 3200"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
     </DOMTimeline>
   </timeline>
 </DOMSymbolItem>

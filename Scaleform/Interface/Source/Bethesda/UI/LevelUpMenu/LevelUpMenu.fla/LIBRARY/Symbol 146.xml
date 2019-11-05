@@ -1,47 +1,46 @@
-<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 146" lastModified="1571730685" linkageClassName="XPMeter" linkageExportForAS="true">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 146" itemID="5dc12b90-00000054" linkageExportForAS="true" linkageClassName="XPMeter" lastModified="1571730685">
   <timeline>
     <DOMTimeline name="Symbol 146">
       <layers>
-                    <DOMLayer name="Layer 1" color="#5d9cbc">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-  <elements>
-                                        <DOMSymbolInstance libraryItemName="Symbol 5" name="Fill_mc" centerPoint3DX="48.15" centerPoint3DY="47.95">
-  <matrix>
-    <Matrix tx="0.0" ty="0.0" a="2.07684326171875" d="0.2604217529296875"/>
-  </matrix>
-  <transformationPoint>
-    <Point/>
-  </transformationPoint>
-</DOMSymbolInstance>
-                                   </elements>
-</DOMFrame>
-                         </frames>
-                    </DOMLayer>
-                    <DOMLayer name="Layer 2" color="#0397e6" current="true" isSelected="true">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-  <elements>
-                                        <DOMShape isFloating="true">
-                                             <fills/>
-                                             <strokes>
-  <StrokeStyle index="1">
-    <SolidStroke weight="2.0" scaleMode="normal" caps="square" joints="miter">
-      <fill>
-        <SolidColor color="#ffffff"/>
-      </fill>
-    </SolidStroke>
-  </StrokeStyle>
-</strokes>
-  <edges>
-    <Edge strokeStyle="1" edges="!0 0! 4000 500| 0 500| 0 0| 4000 0| 4000 500"/>
-  </edges>
-</DOMShape>
-                                   </elements>
-</DOMFrame>
-                         </frames>
-                    </DOMLayer>
-               </layers>
+        <DOMLayer name="Layer 1" color="#5D9CBC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 5" name="Fill_mc" centerPoint3DX="48.15" centerPoint3DY="47.95">
+                  <matrix>
+                    <Matrix a="2.07684326171875" d="0.260421752929688"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#0397E6" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="square" weight="2" joints="miter">
+                        <fill>
+                          <SolidColor color="#FFFFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!4000 500|0 500!0 500|0 0!0 0|4000 0!4000 0|4000 500"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
     </DOMTimeline>
   </timeline>
 </DOMSymbolItem>

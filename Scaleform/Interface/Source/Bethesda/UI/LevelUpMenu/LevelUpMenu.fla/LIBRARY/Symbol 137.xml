@@ -1,29 +1,29 @@
-<DOMSymbolItem xmlns="http://ns.adobe.com/xfl/2008/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Symbol 137" lastModified="1571730685">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 137" itemID="5dc12b90-0000004e" lastModified="1571730685">
   <timeline>
     <DOMTimeline name="Symbol 137">
       <layers>
-                    <DOMLayer name="Layer 1" color="#3abdc0" current="true" isSelected="true">
-                         <frames>
-                              <DOMFrame index="0" keyMode="9728">
-  <elements>
-                                        <DOMDynamicText name="Icon_tf" antiAliasSharpness="0" antiAliasThickness="0" width="96.0" height="20.85" renderAsHTML="true" isSelectable="false">
-  <matrix>
-    <Matrix tx="2.0" ty="2.0"/>
-  </matrix>
-  <textRuns>
-                                                  <DOMTextRun>
-  <characters>A</characters>
-  <textAttrs>
-    <DOMTextAttrs alignment="left" rotation="true" indent="0.0" leftMargin="0.0" letterSpacing="0.0" lineSpacing="2.0" rightMargin="0.0" size="20" bitmapSize="400" face="" fillColor="#ffffff"/>
-  </textAttrs>
-</DOMTextRun>
-                                             </textRuns>
-</DOMDynamicText>
-                                   </elements>
-</DOMFrame>
-                         </frames>
-                    </DOMLayer>
-               </layers>
+        <DOMLayer name="Layer 1" color="#3ABDC0" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="Icon_tf" width="96" height="20.85" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>A</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineHeight="22.35" size="20" bitmapSize="400" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
     </DOMTimeline>
   </timeline>
 </DOMSymbolItem>
