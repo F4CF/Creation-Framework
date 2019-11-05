@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="Thumb_mc" selected="true" centerPoint3DX="101.5" centerPoint3DY="57">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="Thumb_mc" centerPoint3DX="101.5" centerPoint3DY="57">
                   <matrix>
                     <Matrix a="0.0300140380859375" d="0.139999389648438" tx="51" ty="6.5"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="RightCatcher_mc" selected="true" centerPoint3DX="82" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="RightCatcher_mc" centerPoint3DX="82" centerPoint3DY="57.5">
                   <matrix>
                     <Matrix a="0.355010986328125" d="0.1199951171875" tx="31.5" ty="7"/>
                   </matrix>
@@ -41,7 +41,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="LeftCatcher_mc" selected="true" centerPoint3DX="46.5" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Border" name="LeftCatcher_mc" centerPoint3DX="46.5" centerPoint3DY="57.5">
                   <matrix>
                     <Matrix a="0.354995727539063" d="0.1199951171875" tx="-4" ty="7"/>
                   </matrix>
@@ -60,7 +60,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/Track" name="Track_mc" selected="true" centerPoint3DX="32" centerPoint3DY="14">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/Track" name="Track_mc" centerPoint3DX="32" centerPoint3DY="14">
                   <matrix>
                     <Matrix tx="1" ty="9.5"/>
                   </matrix>
@@ -76,7 +76,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/ScrollArrow" name="RightArrow_mc" selected="true" centerPoint3DX="66.85" centerPoint3DY="18.25">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/ScrollArrow" name="RightArrow_mc" centerPoint3DX="66.85" centerPoint3DY="18.25">
                   <matrix>
                     <Matrix a="0.571426391601563" d="0.4571533203125" tx="62.5" ty="9.5"/>
                   </matrix>
@@ -92,7 +92,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/ScrollArrow" name="LeftArrow_mc" selected="true" centerPoint3DX="5.35" centerPoint3DY="26.25">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/ScrollArrow" name="LeftArrow_mc" centerPoint3DX="5.35" centerPoint3DY="26.25">
                   <matrix>
                     <Matrix a="-0.571441650390625" d="-0.4571533203125" tx="1" ty="17.5"/>
                   </matrix>

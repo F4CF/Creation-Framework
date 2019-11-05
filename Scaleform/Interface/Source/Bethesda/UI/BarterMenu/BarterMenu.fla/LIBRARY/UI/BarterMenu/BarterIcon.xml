@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/BracketGraphic" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/BracketGraphic" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.195831298828125" d="8" tx="-8" ty="-8"/>
                   </matrix>

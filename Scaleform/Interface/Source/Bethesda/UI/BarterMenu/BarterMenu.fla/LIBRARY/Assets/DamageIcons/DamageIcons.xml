@@ -138,7 +138,7 @@
             </DOMFrame>
             <DOMFrame index="11" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/DamageIcons/Symbol 47" selected="true" centerPoint3DX="5.9" centerPoint3DY="5.5">
+                <DOMSymbolInstance libraryItemName="Assets/DamageIcons/Symbol 47" centerPoint3DX="5.9" centerPoint3DY="5.5">
                   <matrix>
                     <Matrix a="1.58541870117188" d="1.59092712402344"/>
                   </matrix>

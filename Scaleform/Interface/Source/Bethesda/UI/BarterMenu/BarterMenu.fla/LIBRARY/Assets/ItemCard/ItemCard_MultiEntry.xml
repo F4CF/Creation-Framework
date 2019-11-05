@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/EntryHolder" name="EntryHolder_mc" selected="true" centerPoint3DX="-73.15" centerPoint3DY="-3.4">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/EntryHolder" name="EntryHolder_mc" centerPoint3DX="-73.15" centerPoint3DY="-3.4">
                   <matrix>
                     <Matrix tx="-73.15" ty="-3.4"/>
                   </matrix>
@@ -43,7 +43,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderLight" name="Background_mc" selected="true" centerPoint3DX="-189.2" centerPoint3DY="50.5">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderLight" name="Background_mc" centerPoint3DX="-189.2" centerPoint3DY="50.5">
                   <matrix>
                     <Matrix a="1.636474609375" d="0.330490112304688" tx="-239.7"/>
                   </matrix>

@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" name="Background_mc" selected="true" centerPoint3DX="-189.2" centerPoint3DY="46.75">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" name="Background_mc" centerPoint3DX="-189.2" centerPoint3DY="46.75">
                   <matrix>
                     <Matrix a="2.39700317382813" d="0.330490112304688" tx="-239.7" ty="-3.75"/>
                   </matrix>

@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/CapsArrow" name="CapsArrowLeft_mc" selected="true" centerPoint3DX="216.85" centerPoint3DY="91.45">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/CapsArrow" name="CapsArrowLeft_mc" centerPoint3DX="216.85" centerPoint3DY="91.45">
                   <matrix>
                     <Matrix a="-0.682266235351563" d="0.682357788085938" tx="94.65" ty="48.9"/>
                   </matrix>
@@ -64,7 +64,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsIcon" name="TransferCapsIcon_mc" selected="true" centerPoint3DX="74.25" centerPoint3DY="64.45">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsIcon" name="TransferCapsIcon_mc" centerPoint3DX="74.25" centerPoint3DY="64.45">
                   <matrix>
                     <Matrix a="0.53558349609375" d="0.532333374023438" tx="59.3" ty="49.45"/>
                   </matrix>
@@ -80,7 +80,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/CapsArrow" name="CapsArrowRight_mc" selected="true" centerPoint3DX="222.25" centerPoint3DY="91.45">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/CapsArrow" name="CapsArrowRight_mc" centerPoint3DX="222.25" centerPoint3DY="91.45">
                   <matrix>
                     <Matrix a="0.682266235351563" d="0.682357788085938" tx="100.05" ty="48.9"/>
                   </matrix>
@@ -96,7 +96,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/Background" name="Background_mc" selected="true" centerPoint3DX="168.5" centerPoint3DY="130.2">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/Background" name="Background_mc" centerPoint3DX="168.5" centerPoint3DY="130.2">
                   <matrix>
                     <Matrix a="0.51763916015625" d="0.251968383789063" tx="26" ty="22.55"/>
                   </matrix>

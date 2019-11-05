@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/DamageIcons/DamageIcons" name="Icon_mc" selected="true" centerPoint3DX="23.55" centerPoint3DY="29.15">
+                <DOMSymbolInstance libraryItemName="Assets/DamageIcons/DamageIcons" name="Icon_mc" centerPoint3DX="23.55" centerPoint3DY="29.15">
                   <matrix>
                     <Matrix a="0.996566772460938" tx="14.2" ty="19.75"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_Comparison" name="Comparison_mc" selected="true" centerPoint3DX="104.8" centerPoint3DY="25.5">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_Comparison" name="Comparison_mc" centerPoint3DX="104.8" centerPoint3DY="25.5">
                   <matrix>
                     <Matrix tx="83.3" ty="20"/>
                   </matrix>
@@ -59,7 +59,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderLight" selected="true" centerPoint3DX="50.5" centerPoint3DY="54">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderLight" centerPoint3DX="50.5" centerPoint3DY="54">
                   <matrix>
                     <Matrix a="0.732009887695313" d="0.33050537109375" ty="3.5"/>
                   </matrix>

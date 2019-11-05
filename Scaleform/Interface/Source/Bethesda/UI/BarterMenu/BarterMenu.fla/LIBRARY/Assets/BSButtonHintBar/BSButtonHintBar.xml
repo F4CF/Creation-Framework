@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/ButtonBracket_Left" name="ButtonBracket_Left_mc" selected="true" centerPoint3DX="-16.85" centerPoint3DY="16">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/ButtonBracket_Left" name="ButtonBracket_Left_mc" centerPoint3DX="-16.85" centerPoint3DY="16">
                   <matrix>
                     <Matrix tx="-20.1"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/ButtonBracket_Right" name="ButtonBracket_Right_mc" selected="true" centerPoint3DX="15.55" centerPoint3DY="16">
+                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/ButtonBracket_Right" name="ButtonBracket_Right_mc" centerPoint3DX="15.55" centerPoint3DY="16">
                   <matrix>
                     <Matrix tx="12.3"/>
                   </matrix>

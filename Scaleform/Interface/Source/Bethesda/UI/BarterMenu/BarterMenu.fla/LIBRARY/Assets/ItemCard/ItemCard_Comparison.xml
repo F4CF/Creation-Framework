@@ -34,7 +34,7 @@
             </DOMFrame>
             <DOMFrame index="3" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Symbol 24" selected="true" centerPoint3DX="37.5" centerPoint3DY="5.5">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/Symbol 24" centerPoint3DX="37.5" centerPoint3DY="5.5">
                   <matrix>
                     <Matrix tx="32"/>
                   </matrix>

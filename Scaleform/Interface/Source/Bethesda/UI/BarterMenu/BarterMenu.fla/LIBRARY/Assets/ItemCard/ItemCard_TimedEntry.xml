@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/TimerIcon" name="TimerIcon_mc" selected="true" centerPoint3DX="-41.3" centerPoint3DY="26.75">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/TimerIcon" name="TimerIcon_mc" centerPoint3DX="-41.3" centerPoint3DY="26.75">
                   <matrix>
                     <Matrix tx="-51.75" ty="16.25"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_Comparison" name="Comparison_mc" selected="true" centerPoint3DX="31.5" centerPoint3DY="22">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_Comparison" name="Comparison_mc" centerPoint3DX="31.5" centerPoint3DY="22">
                   <matrix>
                     <Matrix tx="10" ty="16.5"/>
                   </matrix>
@@ -80,7 +80,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" selected="true" centerPoint3DX="-189.2" centerPoint3DY="50.5">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" centerPoint3DX="-189.2" centerPoint3DY="50.5">
                   <matrix>
                     <Matrix a="2.39700317382813" d="0.330490112304688" tx="-239.7"/>
                   </matrix>

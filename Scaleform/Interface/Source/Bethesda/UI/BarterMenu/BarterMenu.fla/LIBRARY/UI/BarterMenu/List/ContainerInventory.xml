@@ -69,7 +69,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/ListHeader" name="ContainerListHeader" selected="true" centerPoint3DX="133.35" centerPoint3DY="20.95">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/ListHeader" name="ContainerListHeader" centerPoint3DX="133.35" centerPoint3DY="20.95">
                   <matrix>
                     <Matrix tx="13.1" ty="2.75"/>
                   </matrix>
@@ -106,7 +106,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsIcon" selected="true" centerPoint3DX="38.45" centerPoint3DY="344.45">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsIcon" centerPoint3DX="38.45" centerPoint3DY="344.45">
                   <matrix>
                     <Matrix a="0.636016845703125" d="0.635452270507813" tx="23.5" ty="329.45"/>
                   </matrix>
@@ -122,7 +122,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" selected="true" centerPoint3DX="57.45" centerPoint3DY="364">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/ItemCard_BorderDark" centerPoint3DX="57.45" centerPoint3DY="364">
                   <matrix>
                     <Matrix a="3.06010437011719" d="0.297012329101563" tx="6.95" ty="313.5"/>
                   </matrix>
@@ -138,7 +138,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/Symbol 124" name="ContainerBracketBackground_mc" selected="true" centerPoint3DX="142.25" centerPoint3DY="135.35">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/Symbol 124" name="ContainerBracketBackground_mc" centerPoint3DX="142.25" centerPoint3DY="135.35">
                   <matrix>
                     <Matrix a="1.12858581542969" d="1.51226806640625" ty="27.75"/>
                   </matrix>

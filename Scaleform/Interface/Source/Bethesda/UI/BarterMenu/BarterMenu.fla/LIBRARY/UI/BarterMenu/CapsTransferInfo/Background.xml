@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/BackgroundClip" selected="true" centerPoint3DX="142.5" centerPoint3DY="107.65">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/CapsTransferInfo/BackgroundClip" centerPoint3DX="142.5" centerPoint3DY="107.65">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/ItemCard/EntryHolder" name="EntryHolder_mc" selected="true" centerPoint3DX="-220" centerPoint3DY="-10">
+                <DOMSymbolInstance libraryItemName="Assets/ItemCard/EntryHolder" name="EntryHolder_mc" centerPoint3DX="-220" centerPoint3DY="-10">
                   <matrix>
                     <Matrix tx="-220" ty="-10"/>
                   </matrix>

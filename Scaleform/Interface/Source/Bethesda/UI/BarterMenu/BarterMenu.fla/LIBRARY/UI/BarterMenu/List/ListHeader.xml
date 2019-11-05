@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/HeaderArrow" name="LeftArrow" selected="true" centerPoint3DX="20.65" centerPoint3DY="20.2">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/HeaderArrow" name="LeftArrow" centerPoint3DX="20.65" centerPoint3DY="20.2">
                   <matrix>
                     <Matrix a="-0.823287963867188" d="0.822509765625" tx="12" ty="8.65"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/HeaderArrow" name="RightArrow" selected="true" centerPoint3DX="146.65" centerPoint3DY="20.2">
+                <DOMSymbolInstance libraryItemName="UI/BarterMenu/List/HeaderArrow" name="RightArrow" centerPoint3DX="146.65" centerPoint3DY="20.2">
                   <matrix>
                     <Matrix a="0.824203491210938" d="0.822509765625" tx="138" ty="8.65"/>
                   </matrix>

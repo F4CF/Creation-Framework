@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape selected="true" isFloating="true">
+                <DOMShape isFloating="true">
                   <strokes>
                     <StrokeStyle index="1">
                       <SolidStroke scaleMode="normal" caps="square" weight="2" joints="miter">
