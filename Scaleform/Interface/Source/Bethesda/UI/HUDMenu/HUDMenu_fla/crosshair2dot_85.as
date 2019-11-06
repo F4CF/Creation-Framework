@@ -1,4 +1,4 @@
-﻿package HUDMenu_fla
+package HUDMenu_fla
 {
 	import flash.display.MovieClip;
 	import flash.events.Event;

@@ -1,423 +1,419 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#339999" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" timelineLabelWidth="357" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="C2DC6CB719E7454D917AFE0661F44A1C">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#666666" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="1640393DBAD6B6478AD380AA375286D3">
      <folders>
-          <DOMFolderItem name="HUDMenu" itemID="5dbb4831-00000341" isExpanded="true"/>
-          <DOMFolderItem name="HUDMenu/Assets" itemID="5dbfcb98-000002c2"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup" itemID="5dbb4e56-00000481"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Compass" itemID="5dbbdf32-000003b0"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Compass/PlayerSet" itemID="5dbc87ce-000003e2"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Compass/Quest" itemID="5dbc8817-00000432" isExpanded="true"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Compass/QuestDoorMarkerGroup" itemID="5dbc4b2e-0000085d" isExpanded="true"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Critical" itemID="5dbbdf3d-000003c3"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/OtherMask" itemID="5dbbdf47-000003d7"/>
-          <DOMFolderItem name="HUDMenu/BottomCenterGroup/Quest" itemID="5dbbdf52-000003ec"/>
-          <DOMFolderItem name="HUDMenu/BSButtonHintGroup" itemID="5dbc9ae6-000006f3"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup" itemID="5dbbe0ff-0000041e"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/CrosshairGroup" itemID="5dbbe3f5-000004cd"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup" itemID="5dbc9de7-0000077a"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/DirectionHitIndicatorGroup" itemID="5dbc9a75-000006c5"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/ExplosiveIndicatorGroup" itemID="5dbc8f81-000004ea"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/HitIndicatorGroup" itemID="5dbbe293-000004aa"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/QuickContainerGroup" itemID="5dbc33de-000003fd"/>
-          <DOMFolderItem name="HUDMenu/CenterGroup/RolloverWidgetGroup" itemID="5dbbe1ed-00000463"/>
-          <DOMFolderItem name="HUDMenu/FloatingTargetGroup" itemID="5dbc938d-00000549"/>
-          <DOMFolderItem name="HUDMenu/GrenadeIcons" itemID="5dbc4854-00000726"/>
-          <DOMFolderItem name="HUDMenu/HotkeyActiveEffectIcons" itemID="5dbc9acc-000006c8"/>
-          <DOMFolderItem name="HUDMenu/HUDNotificationsGroup" itemID="5dbc38ec-00000521"/>
-          <DOMFolderItem name="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup" itemID="5dbc4778-000006dc"/>
-          <DOMFolderItem name="HUDMenu/HUDNotificationsGroup/MessagesGroup" itemID="5dbc9bb7-00000725"/>
-          <DOMFolderItem name="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup" itemID="5dbc9bbe-00000727"/>
-          <DOMFolderItem name="HUDMenu/HUDNotificationsGroup/XPMeterGroup" itemID="5dbc3dd5-000005ef"/>
-          <DOMFolderItem name="HUDMenu/LeftMetersGroup" itemID="5dbb4dd6-00000475"/>
-          <DOMFolderItem name="HUDMenu/Map Markers" itemID="5dbb4ca2-00000464"/>
-          <DOMFolderItem name="HUDMenu/Map Markers/Non Authortime" itemID="5dbcacfd-00000775"/>
-          <DOMFolderItem name="HUDMenu/Map Markers/ShapeUnused" itemID="5dbd4ab1-000033ab"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup" itemID="5dbb4e99-0000048c"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/ActionPoint" itemID="5dbb5ade-000004ce"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/AmmoCount" itemID="5dbb5af7-000004db"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/ExplosiveAmmoCount" itemID="5dbb5b06-000004e9"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/Fatigue" itemID="5dbb5b16-000004f8"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/FlashLight" itemID="5dbb5b25-00000508"/>
-          <DOMFolderItem name="HUDMenu/RightMetersGroup/PowerArmorWarning" itemID="5dbb5b47-00000519"/>
-          <DOMFolderItem name="HUDMenu/SharedBackgroundBarsBrackets" itemID="5dbc9bfc-0000072a"/>
-          <DOMFolderItem name="HUDMenu/TopCenterGroup" itemID="5dbc3755-00000490"/>
-          <DOMFolderItem name="HUDMenu/TopRightGroup" itemID="5dbc3707-00000457"/>
-          <DOMFolderItem name="Shared" itemID="5dbb4a29-0000037f" isExpanded="true"/>
-          <DOMFolderItem name="Shared/Assets" itemID="5dbb4a2f-00000383" isExpanded="true"/>
-          <DOMFolderItem name="Shared/Assets/Fonts" itemID="5dbb499d-0000037a"/>
-          <DOMFolderItem name="Shared/Assets/MapMarkers" itemID="5dbffbf6-000002c3"/>
+          <DOMFolderItem name="Assets" itemID="5dc13dc7-0000029f" isExpanded="true"/>
+          <DOMFolderItem name="Assets/BSButtonHintBar" itemID="5dc2612c-000002cf"/>
+          <DOMFolderItem name="Assets/Fonts" itemID="5dc26ed9-000004ae"/>
+          <DOMFolderItem name="Assets/MapMarkers" itemID="5dc13df1-000002ab"/>
+          <DOMFolderItem name="Assets/MapMarkers/DLC01" itemID="5dc13e04-000002b0"/>
+          <DOMFolderItem name="Assets/MapMarkers/DLC06" itemID="5dc13e0a-000002b4"/>
+          <DOMFolderItem name="Assets/MapMarkers/Teammate" itemID="5dc13eb1-000002c4"/>
+          <DOMFolderItem name="Assets/MeterBar" itemID="5dc2666f-00000451"/>
+          <DOMFolderItem name="UI" itemID="5dc13dc0-0000029d" isExpanded="true"/>
+          <DOMFolderItem name="UI/HUDMenu" itemID="5dc13dc3-0000029e" isExpanded="true"/>
+          <DOMFolderItem name="UI/HUDMenu/Assets" itemID="5dc13de6-000002a7"/>
+          <DOMFolderItem name="UI/HUDMenu/BottomCenterGroup" itemID="5dc24107-000002aa"/>
+          <DOMFolderItem name="UI/HUDMenu/BottomCenterGroup/CritMeter" itemID="5dc283d3-00000559"/>
+          <DOMFolderItem name="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget" itemID="5dc284c8-00000560"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup" itemID="5dc1483d-000002c4"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/DirectionalHitIndicator" itemID="5dc27365-000004e1"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/ExplosiveIndicator" itemID="5dc27449-000004ef"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/HitIndicator" itemID="5dc27119-000004cc"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/HUDCrosshair" itemID="5dc27374-000004e3"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips" itemID="5dc27473-000004f5"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/QuickContainerWidget" itemID="5dc27b7d-00000533"/>
+          <DOMFolderItem name="UI/HUDMenu/CenterGroup/RolloverWidget" itemID="5dc26c1c-0000047e"/>
+          <DOMFolderItem name="UI/HUDMenu/FloatingQuestMarker" itemID="5dc1469f-00000299"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup" itemID="5dc13f59-000002d1"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates" itemID="5dc29881-00000612"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/Messages" itemID="5dc2963a-00000606"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/Messages/HUDMessageItem" itemID="5dc2961b-000005ff"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/QuestVaultBoy" itemID="5dc26107-000002ca"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/TutorialText" itemID="5dc25e26-000002bc"/>
+          <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/XPMeter" itemID="5dc261ec-000002d7"/>
+          <DOMFolderItem name="UI/HUDMenu/LeftMeters" itemID="5dc24129-000002b2"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters" itemID="5dc24128-000002b1"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/ActionPointMeter" itemID="5dc28a34-000005a1"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/AmmoCount" itemID="5dc28a18-00000597"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/ExplosiveAmmoCount" itemID="5dc28948-00000580"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/FatigueWarning" itemID="5dc28a26-0000059c"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/FlashLightWidget" itemID="5dc28972-00000587"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget" itemID="5dc28a07-00000594"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons" itemID="5dc28cef-000005ce"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/PowerArmorLowBatteryWarning" itemID="5dc28a54-000005ac"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/WarningTextHolder" itemID="5dc28a44-000005a6"/>
+          <DOMFolderItem name="UI/HUDMenu/TopCenterGroup" itemID="5dc146b8-0000029e"/>
+          <DOMFolderItem name="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter" itemID="5dc267d2-00000460"/>
+          <DOMFolderItem name="UI/HUDMenu/TopCenterGroup/StealthMeter" itemID="5dc267b6-0000045c"/>
+          <DOMFolderItem name="UI/HUDMenu/TopRightGroup" itemID="5dc14741-000002ab"/>
      </folders>
      <fonts>
-          <DOMFontItem name="Shared/Assets/Fonts/Courier New" itemID="5daa2c9a-000001f3" font="CourierNewPSMT" size="0" id="653" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȸȹȺȻȼȽȾȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏɐɑɔɛɡɪɵʃʊˆˇˉˊˋˍː˘˙˚˛˜˝ʹ͵Ͷͷͺͻͼͽ;Ϳ΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϏϐϑϒϓϔϕϖϗϘϙϚϛϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҇҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖՙ՚՛՜՝՞՟աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆև։֊֍֎֏ְֱֲֳִֵֶַָֹֺֻּֽ־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״؀؁؂؃؄؅؆؇؈؉؊؋،؍؎؏ؘؙؚؐؑؒؓؔؕؖؗ؛؜؞؟ؠءآأؤإئابةتثجحخدذرزسشصضطظعغػؼؽؾؿـفقكلمنهوىيًٌٍَُِّْٕٖٜٟٓٔٗ٘ٙٚٛٝٞ٠١٢٣٤٥٦٧٨٩٪٫٬٭ٮٯٰٱٲٳٴٵٶٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړڔڕږڗژڙښڛڜڝڞڟڠڡڢڣڤڥڦڧڨکڪګڬڭڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏېۑےۓ۔ەۖۗۘۙۚۛۜ۝۞ۣ۟۠ۡۢۤۥۦۧۨ۩۪ۭ۫۬ۮۯ۰۱۲۳۴۵۶۷۸۹ۺۻۼ۽۾ۿ฿ḀḁḂḃḄḅḆḇḈḉḊḋḌḍḎḏḐḑḒḓḔḕḖḗḘḙḚḛḜḝḞḟḠḡḢḣḤḥḦḧḨḩḪḫḬḭḮḯḰḱḲḳḴḵḶḷḸḹḺḻḼḽḾḿṀṁṂṃṄṅṆṇṈṉṊṋṌṍṎṏṐṑṒṓṔṕṖṗṘṙṚṛṜṝṞṟṠṡṢṣṤṥṦṧṨṩṪṫṬṭṮṯṰṱṲṳṴṵṶṷṸṹṺṻṼṽṾṿẀẁẂẃẄẅẆẇẈẉẊẋẌẍẎẏẐẑẒẓẔẕẖẗẘẙẚẛẜẝẞẟẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹỺỻỼỽỾỿἀἁἂἃἄἅἆἇἈἉἊἋἌἍἎἏἐἑἒἓἔἕἘἙἚἛἜἝἠἡἢἣἤἥἦἧἨἩἪἫἬἭἮἯἰἱἲἳἴἵἶἷἸἹἺἻἼἽἾἿὀὁὂὃὄὅὈὉὊὋὌὍὐὑὒὓὔὕὖὗὙὛὝὟὠὡὢὣὤὥὦὧὨὩὪὫὬὭὮὯὰάὲέὴήὶίὸόὺύὼώᾀᾁᾂᾃᾄᾅᾆᾇᾈᾉᾊᾋᾌᾍᾎᾏᾐᾑᾒᾓᾔᾕᾖᾗᾘᾙᾚᾛᾜᾝᾞᾟᾠᾡᾢᾣᾤᾥᾦᾧᾨᾩᾪᾫᾬᾭᾮᾯᾰᾱᾲᾳᾴᾶᾷᾸᾹᾺΆᾼ᾽ι᾿῀῁ῂῃῄῆῇῈΈῊΉῌ῍῎῏ῐῑῒΐῖῗῘῙῚΊ῝῞῟ῠῡῢΰῤῥῦῧῨῩῪΎῬ῭΅`ῲῳῴῶῷῸΌῺΏῼ´῾‌‍‎‏‒–—―‗‘’‚‛“”„‟†‡•…‰′″‴‹›‼‽‾⁄⁞ⁿ₠₡₢₣₤₥₦₧₨₩₪₫€₭₮₯₰₱₲₳₴₵₶₷₸₹₺₻₼₽₾℅ℓ№™Ω℮⅍ⅎ⅓⅔⅛⅜⅝⅞←↑→↓↔↕∂∏∑∕√∞∟∩∫≠≡≤≥─│┌┐└┘├┤┬┴┼═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬▄█▌▒▓■□▲▼○●♀♂♠♣♥♪♯ꜗꜘꜙꜚꜛꜜꜝꜞꜟ꜠꜡ꞈ꞉꞊Ꞌꞌﬓﬔﬕﬖﬗיִﬞײַﬠﬡﬢﬣﬤﬥﬦﬧﬨ﬩שׁשׂשּׁשּׂאַאָאּבּגּדּהּוּזּטּיּךּכּלּמּנּסּףּפּצּקּרּשּתּוֹבֿכֿפֿﭏﭐﭑﭒﭓﭔﭕﭖﭗﭘﭙﭚﭛﭜﭝﭞﭟﭠﭡﭢﭣﭤﭥﭦﭧﭨﭩﭪﭫﭬﭭﭮﭯﭰﭱﭲﭳﭴﭵﭶﭷﭸﭹﭺﭻﭼﭽﭾﭿﮀﮁﮂﮃﮄﮅﮆﮇﮈﮉﮊﮋﮌﮍﮎﮏﮐﮑﮒﮓﮔﮕﮖﮗﮘﮙﮚﮛﮜﮝﮞﮟﮠﮡﮢﮣﮤﮥﮦﮧﮨﮩﮪﮫﮬﮭﮮﮯﮰﮱ﮲﮳﮴﮵﮶﮷﮸﮹﮺﮻﮼﮽﮾﮿﯀﯁ﯓﯔﯕﯖﯗﯘﯙﯚﯛﯜﯝﯞﯟﯠﯡﯢﯣﯤﯥﯦﯧﯨﯩﯪﯫﯬﯭﯮﯯﯰﯱﯲﯳﯴﯵﯶﯷﯸﯹﯺﯻﯼﯽﯾﯿﰈﰉﰎﰒﰱﰲﰿﱀﱁﱂﱃﱄﱎﱏﱘﱙﱞﱟﱠﱡﱢﱣﱪﱭﱮﱯﱰﱳﱴﱵﲎﲏﲑﲔﲜﲝﲞﲟﲠﲡﲢﲣﲤﲥﲦﲨﲪﲬﲰﳉﳊﳋﳌﳍﳎﳏﳐﳑﳒﳓﳔﳕﳖﳘﳚﳛﳜﳝﳲﳳﳴﴰﴼﴽ﴾﴿ﶈﷲﷴﷺﷻ﷼ﹰﹱﹲﹳﹴﹶﹷﹸﹹﹺﹻﹼﹽﹾﹿﺀﺁﺂﺃﺄﺅﺆﺇﺈﺉﺊﺋﺌﺍﺎﺏﺐﺑﺒﺓﺔﺕﺖﺗﺘﺙﺚﺛﺜﺝﺞﺟﺠﺡﺢﺣﺤﺥﺦﺧﺨﺩﺪﺫﺬﺭﺮﺯﺰﺱﺲﺳﺴﺵﺶﺷﺸﺹﺺﺻﺼﺽﺾﺿﻀﻁﻂﻃﻄﻅﻆﻇﻈﻉﻊﻋﻌﻍﻎﻏﻐﻑﻒﻓﻔﻕﻖﻗﻘﻙﻚﻛﻜﻝﻞﻟﻠﻡﻢﻣﻤﻥﻦﻧﻨﻩﻪﻫﻬﻭﻮﻯﻰﻱﻲﻳﻴﻵﻶﻷﻸﻹﻺﻻﻼ￼" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/Arial" itemID="5daa3df5-00000215" font="ArialMT" size="0" id="654" sourceLastImported="1571438069" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛƜƝƞƟƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡǢǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿȀȁȂȃȄȅȆȇȈȉȊȋȌȍȎȏȐȑȒȓȔȕȖȗȘșȚțȜȝȞȟȠȡȢȣȤȥȦȧȨȩȪȫȬȭȮȯȰȱȲȳȴȵȶȷȸȹȺȻȼȽȾȿɀɁɂɃɄɅɆɇɈɉɊɋɌɍɎɏɐɑɔɛɡɪɵʃʊˆˇˉˊˋˍː˘˙˚˛˜˝ʹ͵Ͷͷͺͻͼͽ;Ϳ΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϏϐϑϒϓϔϕϖϗϘϙϚϛϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҇҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖՙ՚՛՜՝՞՟աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆև։֊֍֎֏ְֱֲֳִֵֶַָֹֺֻּֽ־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״؀؁؂؃؄؅؆؇؈؉؊؋،؍؎؏ؘؙؚؐؑؒؓؔؕؖؗ؛؜؞؟ؠءآأؤإئابةتثجحخدذرزسشصضطظعغػؼؽؾؿـفقكلمنهوىيًٌٍَُِّْٕٖٜٟٓٔٗ٘ٙٚٛٝٞ٠١٢٣٤٥٦٧٨٩٪٫٬٭ٮٯٰٱٲٳٴٵٶٷٸٹٺٻټٽپٿڀځڂڃڄڅچڇڈډڊڋڌڍڎڏڐڑڒړڔڕږڗژڙښڛڜڝڞڟڠڡڢڣڤڥڦڧڨکڪګڬڭڮگڰڱڲڳڴڵڶڷڸڹںڻڼڽھڿۀہۂۃۄۅۆۇۈۉۊۋیۍێۏېۑےۓ۔ەۖۗۘۙۚۛۜ۝۞ۣ۟۠ۡۢۤۥۦۧۨ۩۪ۭ۫۬ۮۯ۰۱۲۳۴۵۶۷۸۹ۺۻۼ۽۾ۿḀḁḂḃḄḅḆḇḈḉḊḋḌḍḎḏḐḑḒḓḔḕḖḗḘḙḚḛḜḝḞḟḠḡḢḣḤḥḦḧḨḩḪḫḬḭḮḯḰḱḲḳḴḵḶḷḸḹḺḻḼḽḾḿṀṁṂṃṄṅṆṇṈṉṊṋṌṍṎṏṐṑṒṓṔṕṖṗṘṙṚṛṜṝṞṟṠṡṢṣṤṥṦṧṨṩṪṫṬṭṮṯṰṱṲṳṴṵṶṷṸṹṺṻṼṽṾṿẀẁẂẃẄẅẆẇẈẉẊẋẌẍẎẏẐẑẒẓẔẕẖẗẘẙẚẛẜẝẞẟẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹỺỻỼỽỾỿἀἁἂἃἄἅἆἇἈἉἊἋἌἍἎἏἐἑἒἓἔἕἘἙἚἛἜἝἠἡἢἣἤἥἦἧἨἩἪἫἬἭἮἯἰἱἲἳἴἵἶἷἸἹἺἻἼἽἾἿὀὁὂὃὄὅὈὉὊὋὌὍὐὑὒὓὔὕὖὗὙὛὝὟὠὡὢὣὤὥὦὧὨὩὪὫὬὭὮὯὰάὲέὴήὶίὸόὺύὼώᾀᾁᾂᾃᾄᾅᾆᾇᾈᾉᾊᾋᾌᾍᾎᾏᾐᾑᾒᾓᾔᾕᾖᾗᾘᾙᾚᾛᾜᾝᾞᾟᾠᾡᾢᾣᾤᾥᾦᾧᾨᾩᾪᾫᾬᾭᾮᾯᾰᾱᾲᾳᾴᾶᾷᾸᾹᾺΆᾼ᾽ι᾿῀῁ῂῃῄῆῇῈΈῊΉῌ῍῎῏ῐῑῒΐῖῗῘῙῚΊ῝῞῟ῠῡῢΰῤῥῦῧῨῩῪΎῬ῭΅`ῲῳῴῶῷῸΌῺΏῼ´῾           ​‌‍‎‏‒–—―‖‗‘’‚‛“”„‟†‡•…‪‫‬‭‮ ‰′″‴‹›‼‽‾⁄⁞⁪⁫⁬⁭⁮⁯⁴ⁿ₠₡₢₣₤₥₦₧₨₩₪₫€₭₮₯₰₱₲₳₴₵₶₷₸₹₺₻₼₽₾℅ℓ№℗™Ω℮⅍ⅎ⅓⅔⅛⅜⅝⅞←↑→↓↔↕∂∏∑∕√∞∟∩∫≠≡≤≥─│┌┐└┘├┤┬┴┼═║╒╓╔╕╖╗╘╙╚╛╜╝╞╟╠╡╢╣╤╥╦╧╨╩╪╫╬▄█▌▒▓■□▲▼○●♀♂♠♣♥♪♯ꜗꜘꜙꜚꜛꜜꜝꜞꜟ꜠꜡ꞈ꞉꞊Ꞌꞌﬓﬔﬕﬖﬗיִﬞײַﬠﬡﬢﬣﬤﬥﬦﬧﬨ﬩שׁשׂשּׁשּׂאַאָאּבּגּדּהּוּזּטּיּךּכּלּמּנּסּףּפּצּקּרּשּתּוֹבֿכֿפֿﭏﭐﭑﭒﭓﭔﭕﭖﭗﭘﭙﭚﭛﭜﭝﭞﭟﭠﭡﭢﭣﭤﭥﭦﭧﭨﭩﭪﭫﭬﭭﭮﭯﭰﭱﭲﭳﭴﭵﭶﭷﭸﭹﭺﭻﭼﭽﭾﭿﮀﮁﮂﮃﮄﮅﮆﮇﮈﮉﮊﮋﮌﮍﮎﮏﮐﮑﮒﮓﮔﮕﮖﮗﮘﮙﮚﮛﮜﮝﮞﮟﮠﮡﮢﮣﮤﮥﮦﮧﮨﮩﮪﮫﮬﮭﮮﮯﮰﮱ﮲﮳﮴﮵﮶﮷﮸﮹﮺﮻﮼﮽﮾﮿﯀﯁ﯓﯔﯕﯖﯗﯘﯙﯚﯛﯜﯝﯞﯟﯠﯡﯢﯣﯤﯥﯦﯧﯨﯩﯪﯫﯬﯭﯮﯯﯰﯱﯲﯳﯴﯵﯶﯷﯸﯹﯺﯻﯼﯽﯾﯿﱞﱟﱠﱡﱢﱣﳲﳳﳴﴼﴽ﴾﴿ﷲﷴﷺﷻ﷼﷽ﹰﹱﹲﹳﹴﹶﹷﹸﹹﹺﹻﹼﹽﹾﹿﺀﺁﺂﺃﺄﺅﺆﺇﺈﺉﺊﺋﺌﺍﺎﺏﺐﺑﺒﺓﺔﺕﺖﺗﺘﺙﺚﺛﺜﺝﺞﺟﺠﺡﺢﺣﺤﺥﺦﺧﺨﺩﺪﺫﺬﺭﺮﺯﺰﺱﺲﺳﺴﺵﺶﺷﺸﺹﺺﺻﺼﺽﺾﺿﻀﻁﻂﻃﻄﻅﻆﻇﻈﻉﻊﻋﻌﻍﻎﻏﻐﻑﻒﻓﻔﻕﻖﻗﻘﻙﻚﻛﻜﻝﻞﻟﻠﻡﻢﻣﻤﻥﻦﻧﻨﻩﻪﻫﻬﻭﻮﻯﻰﻱﻲﻳﻴﻵﻶﻷﻸﻹﻺﻻﻼ￼" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$HandwrittenFont" itemID="5daeb3ba-0000027f" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$HandwrittenFont" linkageURL="fonts_en.swf" font="Handwritten_Institute" size="0" id="655" sourceLastImported="1571434041" embeddedCharacters="!&quot;#$%&amp;&apos;()*+,-/:;&lt;=&gt;?@[\]^_{|}~¡¢£¤§©«¬®°±²µ¶»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĄąĆćĈĉĔęĜĝĤĥıĴĵŁłŃńŐőŒœŚśŜŝŠšŬŭŰűŸŹźŻżŽžƒμ‘’“”†‡•€™" embedRanges="1|2|3"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$MAIN_Font" itemID="5daeb3ba-00000280" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="656" sourceLastImported="1571434121" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="657" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$Share-TechMono" itemID="5daeb3ba-00000281" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Terminal_Font" linkageURL="fonts_en.swf" font="Share-TechMono" size="0" id="658" sourceLastImported="1571730362" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЀЁЍАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёѝ–—‘’‚“”„†‡•…‰‹›⁄€™Ω∂∏∑∕√∞∧∫≠≤≥" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$Controller_Buttons" itemID="5daeb3ba-00000282" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons" linkageURL="fonts_en.swf" font="Controller--Buttons" size="0" id="659" embedRanges="1|2"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$Controller_Buttons_inverted" itemID="5daeb3ba-00000283" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons_inverted" linkageURL="fonts_en.swf" font="Controller--Buttons-inverted" size="0" id="660" sourceLastImported="1571433949" embedRanges="1|2"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$BRODY" itemID="5daeb3ba-00000284" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$BRODY" linkageURL="fonts_en.swf" font="Brody" size="0" id="661" sourceLastImported="1571730554" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĂăĄąĆćČčĎďĐđĘęĚěĞğİıĹĺĽľŁłŃńŇňŐőŒœŔŕŘřŚśŞşŠšŢţŤťŮůŰűŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜ΔΣΩμπ–—‗‘’‚“”„†‡•…‰‹›‼ⁿ₣™Ω←→∂∏∕√∞∫≠≤≥■" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$CClub_Font" itemID="5daeb3ba-00000285" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$CClub_Font" linkageURL="fonts_en.swf" font="Eurostile-LT-Cyr-Std" size="0" id="662" sourceLastImported="1571433864" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Assets/Fonts/$CClub_Font_Bold" itemID="5daeb3ba-00000286" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$CClub_Font_Bold" linkageURL="fonts_en.swf" font="Eurostile-Cyr-Std" size="0" id="663" sourceLastImported="1571730098" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$HandwrittenFont" itemID="5daeb3ba-0000027f" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$HandwrittenFont" linkageURL="fonts_en.swf" font="Handwritten_Institute" size="0" id="661" sourceLastImported="1571434041" embeddedCharacters="!&quot;#$%&amp;&apos;()*+,-/:;&lt;=&gt;?@[\]^_{|}~¡¢£¤§©«¬®°±²µ¶»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĄąĆćĈĉĔęĜĝĤĥıĴĵŁłŃńŐőŒœŚśŜŝŠšŬŭŰűŸŹźŻżŽžƒμ‘’“”†‡•€™" embedRanges="1|2|3"/>
+          <DOMFontItem name="Assets/Fonts/$Terminal_Font" itemID="5db577ff-000002a4" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Terminal_Font" linkageURL="fonts_en.swf" font="Share-TechMono" size="0" id="660" sourceLastImported="1572311706" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЀЁЍАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёѝ–—‘’‚“”„†‡•…‰‹›⁄€™Ω∂∏∑∕√∞∧∫≠≤≥" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$CClub_Font" itemID="5daeb3ba-00000285" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$CClub_Font" linkageURL="fonts_en.swf" font="Eurostile-LT-Cyr-Std" size="0" id="659" sourceLastImported="1571433864" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$CClub_Font_Bold" itemID="5daeb3ba-00000286" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$CClub_Font_Bold" linkageURL="fonts_en.swf" font="Eurostile-Cyr-Std" size="0" id="658" sourceLastImported="1571730098" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĄąĆćĘęıŁłŃńŒœŚśŠšŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜˝ΔΩμπЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяё–—‘’‚“”„†‡•…‰‹›⁄€ℓ™Ω℮∂∏∑∕√∞∫≠≤≥" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$BRODY" itemID="5daeb3ba-00000284" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$BRODY" linkageURL="fonts_en.swf" font="Brody" size="0" id="657" sourceLastImported="1572118724" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĂăĄąĆćČčĎďĐđĘęĚěĞğİıĹĺĽľŁłŃńŇňŐőŒœŔŕŘřŚśŞşŠšŢţŤťŮůŰűŸŹźŻżŽžƒˆˇˉ˘˙˚˛˜ΔΣΩμπ–—‗‘’‚“”„†‡•…‰‹›‼ⁿ₣™Ω←→∂∏∕√∞∫≠≤≥■" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$Controller_Buttons_inverted" itemID="5daeb3ba-00000283" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons_inverted" linkageURL="fonts_en.swf" font="ControllerButtonsInverted" size="0" id="656" sourceLastImported="1572311720" embedRanges="1|2"/>
+          <DOMFontItem name="Assets/Fonts/$Controller_Buttons" itemID="5daeb3ba-00000282" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons" linkageURL="fonts_en.swf" font="Controller--Buttons" size="0" id="655" sourceLastImported="1572311727" embedRanges="1|2"/>
+          <DOMFontItem name="Assets/Fonts/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="654" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Assets/Fonts/$MAIN_Font" itemID="5daeb3ba-00000280" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="653" sourceLastImported="1571434121" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
      </fonts>
      <media>
-          <DOMBitmapItem name="HUDMenu/Assets/bitmap581.png" itemID="5db73c49-000001ea" sourceExternalFilepath="./LIBRARY/HUDMenu/bitmap581.png" sourceLastImported="1572289609" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="HUDMenu/Assets/bitmap581.png" bitmapDataHRef="M 2 1571730685.dat" frameRight="6000" frameBottom="440"/>
-          <DOMSoundItem name="HUDMenu/Assets/sound153.mp3" itemID="5db73c49-000001e5" sourceExternalFilepath="./LIBRARY/HUDMenu/sound153.mp3" sourceLastImported="1572289609" href="HUDMenu/Assets/sound153.mp3" soundDataHRef="M 1 1572289609.dat" format="22kHz 16bit Mono" sampleCount="576" exportFormat="5" exportBits="7" dataLength="883" exportNative="true" cachedSampleCount="144"/>
+          <DOMBitmapItem name="UI/HUDMenu/Assets/bitmap581.png" itemID="5dc13d4a-0000001c" sourceLastImported="1573011631" externalFileSize="139" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="UI/HUDMenu/Assets/bitmap581.png" bitmapDataHRef="M 2 1571730685.dat" frameRight="6000" frameBottom="440"/>
+          <DOMSoundItem name="UI/HUDMenu/Assets/sound153.mp3" itemID="5dc13d4a-00000017" sourceLastImported="1572945226" externalFileSize="883" href="UI/HUDMenu/Assets/sound153.mp3" soundDataHRef="M 1 1572945226.dat" format="22kHz 16bit Mono" sampleCount="576" exportFormat="5" exportBits="7" dataLength="883" exportNative="true" cachedSampleCount="144"/>
      </media>
      <symbols>
-          <Include href="HUDMenu/BottomCenterGroup/BottomCenter.xml" itemID="5dbb4ea4-0000048d" lastModified="1572725450"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassBar.xml" loadImmediate="false" itemID="5dbbd886-000003b7" lastModified="1572591764"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassBGHolder.xml" loadImmediate="false" itemID="5dbbdd21-000003c0" lastModified="1572725543"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassBGHolderInner.xml" loadImmediate="false" itemID="5dbbdd05-000003bf" lastModified="1572592913"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassMarker_Enemy.xml" itemID="5dbc87fe-0000040a" lastModified="1572636670"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassMarkerWidget.xml" itemID="5dbc4940-00000808" lastModified="1572636778"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/CompassWidget.xml" itemID="5dbbd865-000003b6" lastModified="1572725502"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/DirectionMarkerWidget.xml" itemID="5dbc465f-00000679" lastModified="1572643386"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/MarkerShape.xml" loadImmediate="false" itemID="5dbc49d1-00000830" lastModified="1572637521"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/MarkerShapeArrow.xml" loadImmediate="false" itemID="5dbc49f6-00000831" lastModified="1572636338"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/MarkerShapeArrowDown.xml" itemIcon="1" loadImmediate="false" itemID="5dbc4a6f-00000832" lastModified="1572620949"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/MarkerShapeArrowUp.xml" itemIcon="1" loadImmediate="false" itemID="5dbc4a75-00000833" lastModified="1572620917"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetCompassMarker.xml" itemID="5dbc87b7-000003bb" lastModified="1572726182"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetCompassMarkerShape.xml" loadImmediate="false" itemID="5dbc952d-00000579" lastModified="1572640045"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/PlayerSet/PlayerSetMarker.xml" itemID="5dbc862f-000003b7" lastModified="1572636290"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/Quest/QuestCompassMarkers.xml" itemID="5dbc4987-0000082f" lastModified="1572726164"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/Quest/QuestDoorMarkerShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbc86ee-000003ba" lastModified="1572636398"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/Quest/QuestMarker.xml" itemID="5dbc8628-000003b6" lastModified="1572636352"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/QuestDoorMarkerGroup/QuestDoorCompassMarkers.xml" itemID="5dbc4b02-00000836" lastModified="1572726146"/>
-          <Include href="HUDMenu/BottomCenterGroup/Compass/QuestDoorMarkerGroup/QuestDoorMarker.xml" itemID="5dbc4adf-00000835" lastModified="1572636411"/>
-          <Include href="HUDMenu/BottomCenterGroup/Critical/CritMeter.xml" itemID="5dbbd720-000003b1" lastModified="1572724735"/>
-          <Include href="HUDMenu/BottomCenterGroup/Critical/CritMeterBar.xml" itemID="5dbbd7ac-000003b3" lastModified="1572591605"/>
-          <Include href="HUDMenu/BottomCenterGroup/Critical/CritMeterStar.xml" itemID="5dbc43f9-000005f2" lastModified="1572639446"/>
-          <Include href="HUDMenu/BottomCenterGroup/Critical/CritMeterStarsHolder.xml" itemID="5dbbd832-000003b4" lastModified="1572619385"/>
-          <Include href="HUDMenu/BottomCenterGroup/OtherMask/OtherMask.xml" loadImmediate="false" itemID="5dbbd909-000003ba" lastModified="1572592854"/>
-          <Include href="HUDMenu/BottomCenterGroup/OtherMask/OtherMaskInnerLower.xml" loadImmediate="false" itemID="5dbbd972-000003bc" lastModified="1572592098"/>
-          <Include href="HUDMenu/BottomCenterGroup/OtherMask/OtherMaskInnerShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbbd9c9-000003be" lastModified="1572592839"/>
-          <Include href="HUDMenu/BottomCenterGroup/OtherMask/OtherMaskInnerUpper.xml" loadImmediate="false" itemID="5dbbd963-000003bb" lastModified="1572592093"/>
-          <Include href="HUDMenu/BottomCenterGroup/PerkVaultBoy.xml" itemID="5dbbd6d4-000003a1" lastModified="1572591316"/>
-          <Include href="HUDMenu/BottomCenterGroup/Quest/QuestMarkerHolder.xml" loadImmediate="false" itemID="5dbbd8d5-000003b9" lastModified="1572591855"/>
-          <Include href="HUDMenu/BottomCenterGroup/Quest/QuestMask.xml" loadImmediate="false" itemID="5dbbd8aa-000003b8" lastModified="1572725497"/>
-          <Include href="HUDMenu/BottomCenterGroup/Subtitles.xml" itemID="5dbbd739-000003b2" lastModified="1572591425"/>
-          <Include href="HUDMenu/BottomCenterGroup/VaultBoyImageInternal.xml" itemID="5dbbd6a6-000003a0" lastModified="1572591295"/>
-          <Include href="HUDMenu/BSButtonHintGroup/BSButtonHint.xml" itemID="5dbc4595-00000678" lastModified="1572641489"/>
-          <Include href="HUDMenu/BSButtonHintGroup/BSButtonHint_IconHolder.xml" itemID="5dbc4507-00000676" lastModified="1572641424"/>
-          <Include href="HUDMenu/BSButtonHintGroup/IconAnimInstance.xml" loadImmediate="false" itemID="5dbc4545-00000677" lastModified="1572619589"/>
-          <Include href="HUDMenu/CenterGroup/Center.xml" loadImmediate="false" itemID="5dbbe0f4-00000408" lastModified="1572730633"/>
-          <Include href="HUDMenu/CenterGroup/ContainerName.xml" loadImmediate="false" itemID="5dbc3588-0000041b" lastModified="1572722437"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/ActivateBarHorizontal.xml" loadImmediate="false" itemID="5dbca6b9-000003c2" lastModified="1572644537"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/ActivateBarVertical.xml" loadImmediate="false" itemID="5dbca6bd-000003c3" lastModified="1572644541"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/CommandTriangle.xml" loadImmediate="false" itemID="5dbc31dd-000003aa" lastModified="1572614621"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/CrosshairBase.xml" itemID="5dbbe33c-000004af" lastModified="1572816010"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/CrosshairClips.xml" loadImmediate="false" itemID="5dbbe425-000004e7" lastModified="1572816030"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/CrosshairTicks.xml" loadImmediate="false" itemID="5dbbe35f-000004b0" lastModified="1572594642"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/Down.xml" loadImmediate="false" itemID="5dbbe37a-000004b1" lastModified="1572594608"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/HUDCrosshair.xml" itemID="5dbbe329-000004ae" lastModified="1572814379"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/Left.xml" loadImmediate="false" itemID="5dbbe3d2-000004b4" lastModified="1572594695"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/Right.xml" loadImmediate="false" itemID="5dbbe394-000004b2" lastModified="1572594597"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/activate2command.xml" itemID="5dbca294-000003bf" lastModified="1572644697"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/activate2crosshair.xml" itemID="5dbc9db1-00000778" lastModified="1572644388"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/activate2dot.xml" itemID="5dbc9dab-00000777" lastModified="1572644416"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/activate2none.xml" itemID="5dbc9da7-00000776" lastModified="1572644448"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/activateLoop.xml" itemID="5dbc9da2-00000775" lastModified="1572644285"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/command2activate.xml" itemID="5dbc9d9d-00000774" lastModified="1572644774"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/command2crosshair.xml" itemID="5dbc9d98-00000773" lastModified="1572645248"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/command2dot.xml" itemID="5dbc9d92-00000772" lastModified="1572645323"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/command2none.xml" itemID="5dbc9d8d-00000771" lastModified="1572645377"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/commandLoop.xml" itemID="5dbca2ee-000003c0" lastModified="1572645433"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/crosshair2activate.xml" itemID="5dbc9d83-0000076f" lastModified="1572644884"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/crosshair2command.xml" itemID="5dbc9d7c-0000076e" lastModified="1572645512"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/crosshair2dot.xml" itemID="5dbc9d74-0000076d" lastModified="1572645669"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/crosshair2none.xml" itemID="5dbc9d6f-0000076c" lastModified="1572645699"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/crosshairLoop.xml" itemID="5dbca330-000003c1" lastModified="1572645727"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dot2activate.xml" itemID="5dbc9d61-0000076a" lastModified="1572644966"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dot2command.xml" itemID="5dbc9d5c-00000769" lastModified="1572816416"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dot2crosshair.xml" itemID="5dbc9d58-00000768" lastModified="1572816415"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dot2none.xml" itemID="5dbc9d4d-00000766" lastModified="1572816413"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/dotLoop.xml" itemID="5dbc9d52-00000767" lastModified="1572816412"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/none2activate.xml" itemID="5dbc9d49-00000765" lastModified="1572816409"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/none2command.xml" itemID="5dbc9d43-00000764" lastModified="1572816407"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/none2crosshair.xml" itemID="5dbc9d3d-00000763" lastModified="1572816405"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/none2dot.xml" itemID="5dbc9d37-00000762" lastModified="1572816402"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/TransitionsGroup/noneLoop.xml" itemID="5dbc9d32-00000761" lastModified="1572816404"/>
-          <Include href="HUDMenu/CenterGroup/CrosshairGroup/Up.xml" loadImmediate="false" itemID="5dbbe3be-000004b3" lastModified="1572594628"/>
-          <Include href="HUDMenu/CenterGroup/DirectionHitIndicatorGroup/ArcShape.xml" loadImmediate="false" itemID="5dbc8f08-000004c1" lastModified="1572638472"/>
-          <Include href="HUDMenu/CenterGroup/DirectionHitIndicatorGroup/DirectionalHitIndicator.xml" itemID="5dbc4928-000007e3" lastModified="1572641413"/>
-          <Include href="HUDMenu/CenterGroup/DirectionHitIndicatorGroup/DirectionalHitIndicatorBase.xml" loadImmediate="false" itemID="5dbbe2da-000004ac" lastModified="1572642645"/>
-          <Include href="HUDMenu/CenterGroup/EnemyHealthOptionalBar.xml" itemID="5dbc446d-00000674" lastModified="1572619373"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorBase.xml" loadImmediate="false" itemID="5dbbe304-000004ad" lastModified="1572724200"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/Arrow.xml" loadImmediate="false" itemID="5dbc904b-000004f1" lastModified="1572638807"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/CarIcon.xml" loadImmediate="false" itemID="5dbc8ff0-000004ee" lastModified="1572638770"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/CarIconShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbc902b-000004ef" lastModified="1572638778"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicator.xml" itemID="5dbc4903-00000799" lastModified="1572639321"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicator_Icon.xml" itemID="5dbc8c1e-00000499" lastModified="1572724209"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorCarIcon.xml" loadImmediate="false" itemID="5dbc91aa-000004f4" lastModified="1572639215"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorIcon.xml" loadImmediate="false" itemID="5dbc9142-000004f3" lastModified="1572639042"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/ExplosiveIndicatorSquare.xml" loadImmediate="false" itemID="5dbc9231-000004f6" lastModified="1572639298"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/MineIcon.xml" loadImmediate="false" itemID="5dbc8fa3-000004ec" lastModified="1572638627"/>
-          <Include href="HUDMenu/CenterGroup/ExplosiveIndicatorGroup/MineIconShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbc8fb8-000004ed" lastModified="1572638648"/>
-          <Include href="HUDMenu/CenterGroup/HitIndicatorGroup/HitHolder.xml" loadImmediate="false" itemID="5dbbe257-0000047c" lastModified="1572594334"/>
-          <Include href="HUDMenu/CenterGroup/HitIndicatorGroup/HitIndicator.xml" itemID="5dbbe22e-0000047b" lastModified="1572594275"/>
-          <Include href="HUDMenu/CenterGroup/HitIndicatorGroup/TintBase.xml" loadImmediate="false" itemID="5dbbe279-0000047d" lastModified="1572594346"/>
-          <Include href="HUDMenu/CenterGroup/ListItems.xml" loadImmediate="false" itemID="5dbc330f-000003c8" lastModified="1572615014"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/BetterIcon.xml" loadImmediate="false" itemID="5dbc3407-00000418" lastModified="1572615366"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/BracketPairHolder.xml" itemID="5dbc35aa-0000041c" lastModified="1572615700"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/FavoriteIcon.xml" loadImmediate="false" itemID="5dbc33c7-000003e3" lastModified="1572615384"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/ListHeaderAndBracket.xml" itemID="5dbc354a-0000041a" lastModified="1572721994"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/LowerBracket.xml" loadImmediate="false" itemID="5dbc3604-0000041e" lastModified="1572615712"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerItem.xml" itemID="5dbc333e-000003c9" lastModified="1572615459"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/QuickContainerWidget.xml" itemID="5dbc32e9-000003c7" lastModified="1572615803"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/SelectionIndicator.xml" loadImmediate="false" itemID="5dbc34ab-00000419" lastModified="1572615339"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/TaggedForSearchIcon.xml" loadImmediate="false" itemID="5dbc3397-000003ca" lastModified="1572615403"/>
-          <Include href="HUDMenu/CenterGroup/QuickContainerGroup/UpperBracket.xml" loadImmediate="false" itemID="5dbc35e3-0000041d" lastModified="1572615661"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/ButtonHintBar.xml" itemID="5dbbe1d3-0000044d" lastModified="1572615790"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/LegendaryIcon.xml" loadImmediate="false" itemID="5dbbe194-0000044b" lastModified="1572594092"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/LegendaryIconShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbbe1aa-0000044c" lastModified="1572594098"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/RolloverWidget.xml" itemID="5dbbe121-00000420" lastModified="1572594191"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/TaggedForSearchIcon.xml" loadImmediate="false" itemID="5dbbe14f-00000421" lastModified="1572594037"/>
-          <Include href="HUDMenu/CenterGroup/RolloverWidgetGroup/TaggedForSearchIconShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbbe16d-00000436" lastModified="1572594044"/>
-          <Include href="HUDMenu/CenterGroup/StealthMeter.xml" itemID="5dbc3838-000004e5" lastModified="1572723690"/>
-          <Include href="HUDMenu/FloatingTargetGroup/FloatingPlayerSet.xml" loadImmediate="false" itemID="5dbc953c-0000057a" lastModified="1572640060"/>
-          <Include href="HUDMenu/FloatingTargetGroup/FloatingTarget.xml" itemID="5dbc4915-000007be" lastModified="1572640128"/>
-          <Include href="HUDMenu/FloatingTargetGroup/FloatingTargetDoor.xml" loadImmediate="false" itemID="5dbc944e-00000577" lastModified="1572639976"/>
-          <Include href="HUDMenu/FloatingTargetGroup/FloatingTargetRecon.xml" loadImmediate="false" itemID="5dbc9448-00000576" lastModified="1572639903"/>
-          <Include href="HUDMenu/FloatingTargetGroup/FloatingTargetShape.xml" loadImmediate="false" itemID="5dbc93d5-00000574" lastModified="1572639717"/>
-          <Include href="HUDMenu/FloatingTargetGroup/ReconScopeMarker.xml" itemID="5dbc8c3e-0000049a" lastModified="1572641257"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 332.xml" loadImmediate="false" itemID="5db73c49-00000273" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 334.xml" loadImmediate="false" itemID="5db73c49-00000274" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 336.xml" loadImmediate="false" itemID="5db73c49-00000275" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 338.xml" loadImmediate="false" itemID="5db73c49-00000276" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 340.xml" loadImmediate="false" itemID="5db73c49-00000277" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 342.xml" loadImmediate="false" itemID="5db73c49-00000278" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 344.xml" loadImmediate="false" itemID="5db73c49-00000279" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 346.xml" loadImmediate="false" itemID="5db73c49-0000027a" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 348.xml" loadImmediate="false" itemID="5db73c49-0000027b" lastModified="1571730685"/>
-          <Include href="HUDMenu/GrenadeIcons/Symbol 350.xml" loadImmediate="false" itemID="5db73c49-0000027c" lastModified="1571730685"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/AlienBlaster.xml" loadImmediate="false" itemID="5dbc98ea-000005eb" lastModified="1572641002"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Ammo.xml" loadImmediate="false" itemID="5dbc9942-000005f4" lastModified="1572641090"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Armor.xml" loadImmediate="false" itemID="5dbc9930-000005f1" lastModified="1572641072"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Bed.xml" loadImmediate="false" itemID="5dbc9958-000005f7" lastModified="1572641112"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Bomb.xml" loadImmediate="false" itemID="5dbc98d9-000005ea" lastModified="1572640985"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Clothing.xml" loadImmediate="false" itemID="5dbc9ac3-000006c7" lastModified="1572641475"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/CocktailGlass.xml" loadImmediate="false" itemID="5dbc9982-000005fd" lastModified="1572641154"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Cryonator.xml" loadImmediate="false" itemID="5dbc9748-000005e3" lastModified="1572640584"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/DoubleBarrelShotgun.xml" loadImmediate="false" itemID="5dbc96e0-000005d5" lastModified="1572640480"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Fatman.xml" loadImmediate="false" itemID="5dbc9732-000005e0" lastModified="1572640562"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Flamer.xml" loadImmediate="false" itemID="5dbc98b2-000005e4" lastModified="1572640946"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/FlareGun.xml" loadImmediate="false" itemID="5dbc98bc-000005e5" lastModified="1572640956"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/ForkKnife.xml" loadImmediate="false" itemID="5dbc9962-000005f8" lastModified="1572641122"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/GammaGun.xml" loadImmediate="false" itemID="5dbc98c1-000005e6" lastModified="1572640961"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/GaussRifle.xml" loadImmediate="false" itemID="5dbc96f6-000005d7" lastModified="1572640502"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Hand.xml" loadImmediate="false" itemID="5dbc9936-000005f2" lastModified="1572641078"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/HandmadeGun.xml" loadImmediate="false" itemID="5dbc96ec-000005d6" lastModified="1572640492"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Heart.xml" loadImmediate="false" itemID="5dbc9948-000005f5" lastModified="1572641096"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/HotkeyIcons.xml" itemID="5dbc9692-000005d0" lastModified="1572641187"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/HUDActiveEffectClip.xml" itemID="5dbc443a-00000654" lastModified="1572640417"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/IconBackground.xml" loadImmediate="false" itemID="5dbc9680-000005cf" lastModified="1572640384"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/JunkJet.xml" loadImmediate="false" itemID="5dbc98c7-000005e7" lastModified="1572640967"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/LaserGatling.xml" loadImmediate="false" itemID="5dbc973c-000005e2" lastModified="1572640572"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/LaserMusket.xml" loadImmediate="false" itemID="5dbc96fe-000005d8" lastModified="1572640510"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/LaserPistol.xml" loadImmediate="false" itemID="5dbc96cc-000005d2" lastModified="1572640460"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/LaserRifle.xml" loadImmediate="false" itemID="5dbc9704-000005d9" lastModified="1572640516"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/MedicalBag.xml" loadImmediate="false" itemID="5dbc992b-000005f0" lastModified="1572641067"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/MedicalPack.xml" loadImmediate="false" itemID="5dbc9951-000005f6" lastModified="1572641105"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Minigun.xml" loadImmediate="false" itemID="5dbc9736-000005e1" lastModified="1572640566"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Missile.xml" loadImmediate="false" itemID="5dbc972e-000005df" lastModified="1572640558"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/OnehandedMelee.xml" loadImmediate="false" itemID="5dbc971f-000005dd" lastModified="1572640543"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Pill.xml" loadImmediate="false" itemID="5dbc996c-000005fa" lastModified="1572641132"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Pistol.xml" loadImmediate="false" itemID="5dbc96c6-000005d1" lastModified="1572640454"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/PlasmaPistol.xml" loadImmediate="false" itemID="5dbc96d3-000005d3" lastModified="1572640467"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/PlasmaRifle.xml" loadImmediate="false" itemID="5dbc970a-000005da" lastModified="1572640522"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/PowerArmor.xml" loadImmediate="false" itemID="5dbc993c-000005f3" lastModified="1572641084"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/RailwayRifle.xml" loadImmediate="false" itemID="5dbc98cf-000005e8" lastModified="1572640975"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Ripper.xml" loadImmediate="false" itemID="5dbc98f1-000005ec" lastModified="1572641009"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Shishkebab.xml" loadImmediate="false" itemID="5dbc9916-000005ee" lastModified="1572641046"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Shotgun.xml" loadImmediate="false" itemID="5dbc96d8-000005d4" lastModified="1572640472"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Soup.xml" loadImmediate="false" itemID="5dbc997a-000005fc" lastModified="1572641146"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/SpannerHammer.xml" loadImmediate="false" itemID="5dbc9921-000005ef" lastModified="1572641057"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/StealthBoy.xml" loadImmediate="false" itemID="5dbc998c-000005fe" lastModified="1572641164"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Syringe.xml" loadImmediate="false" itemID="5dbc9973-000005fb" lastModified="1572641139"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Syringer.xml" loadImmediate="false" itemID="5dbc98d4-000005e9" lastModified="1572640980"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/TwoHandedMelee.xml" loadImmediate="false" itemID="5dbc9716-000005dc" lastModified="1572640534"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Unarmed.xml" loadImmediate="false" itemID="5dbc9728-000005de" lastModified="1572640552"/>
-          <Include href="HUDMenu/HotkeyActiveEffectIcons/Water.xml" loadImmediate="false" itemID="5dbc9966-000005f9" lastModified="1572641126"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDNotifications.xml" itemID="5dbc38db-00000504" lastModified="1572810104"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/HUDObjective.xml" loadImmediate="false" itemID="5dbc4769-000006bb" lastModified="1572620260"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/HUDObjectiveIcons.xml" itemID="5dbc4702-000006b9" lastModified="1572620067"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/HUDObjectiveItem.xml" itemID="5dbc4406-000005f4" lastModified="1572641300"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/HUDObjectiveUpdates.xml" itemID="5dbc3cd4-000005b0" lastModified="1572617444"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/ObjectiveIcons.xml" loadImmediate="false" itemID="5dbc471c-000006ba" lastModified="1572620077"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/ObjectiveListItemBG.xml" loadImmediate="false" itemID="5dbc47da-000006df" lastModified="1572620250"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/HUDObjectiveGroup/ObjectiveListItemBGInner.xml" loadImmediate="false" itemID="5dbc47e1-000006e0" lastModified="1572620276"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/MessagesGroup/HUDMessageItem.xml" itemID="5dbc441b-00000615" lastModified="1572641376"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/MessagesGroup/HUDMessageItemInner.xml" loadImmediate="false" itemID="5dbc9344-0000051f" lastModified="1572639556"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/MessagesGroup/HUDMessageItemInternal.xml" loadImmediate="false" itemID="5dbc9331-0000051e" lastModified="1572639537"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/MessagesGroup/HUDMessageItemInternalShape.xml" loadImmediate="false" itemID="5dbc934a-00000520" lastModified="1572639562"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/MessagesGroup/Messages.xml" itemID="5dbc3c94-000005ae" lastModified="1572617364"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/PromptMessageWidget.xml" itemID="5dbc3919-00000524" lastModified="1572791906"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/QuestUpdates.xml" itemID="5dbc3d04-000005b1" lastModified="1572725369"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/QuestVaultBoy.xml" itemID="5dbc3cb4-000005af" lastModified="1572617396"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/Hand.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3b0a-000005a3" lastModified="1572616970"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadBackground.xml" loadImmediate="false" itemID="5dbc3bfb-000005ab" lastModified="1572617266"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadBackgroundInner.xml" loadImmediate="false" itemID="5dbc3c2e-000005ad" lastModified="1572617278"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadFingerDown.xml" loadImmediate="false" itemID="5dbc3abb-000005a1" lastModified="1572616891"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadFingerIn.xml" loadImmediate="false" itemID="5dbc3aaf-000005a0" lastModified="1572616879"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeFingerDown.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3a4c-0000059d" lastModified="1572616780"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeFingerUp.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3a60-0000059f" lastModified="1572616800"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeGlasses.xml" loadImmediate="false" itemID="5dbc3ae0-000005a2" lastModified="1572617177"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeGlassesHandIn.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3b51-000005a6" lastModified="1572617041"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeGlassesHandOut.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3b54-000005a7" lastModified="1572617044"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeGlassesMouthClosed.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3b96-000005aa" lastModified="1572617138"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/HeadShapeGlassesMouthOpen.xml" itemIcon="1" loadImmediate="false" itemID="5dbc3b6d-000005a8" lastModified="1572617170"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/TutorialHeads.xml" itemID="5dbc3978-00000542" lastModified="1572702485"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/TutorialHeadsGroup/TutorialText.xml" itemID="5dbc3956-00000525" lastModified="1572617310"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/XPMeterGroup/BlinkCursor.xml" itemID="5dbc3df6-000005f0" lastModified="1572798844"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/XPMeterGroup/LeveUpTextClip.xml" itemID="5dbc3dc2-000005d0" lastModified="1572808732"/>
-          <Include href="HUDMenu/HUDNotificationsGroup/XPMeterGroup/XPMeter.xml" itemID="5dbc3d85-000005b2" lastModified="1572725420"/>
-          <Include href="HUDMenu/LeftMetersGroup/HPMeter.xml" itemID="5dbbe07f-00000406" lastModified="1572809796"/>
-          <Include href="HUDMenu/LeftMetersGroup/LeftMeters.xml" itemID="5dbb4daf-00000474" lastModified="1572810546"/>
-          <Include href="HUDMenu/LeftMetersGroup/LocationText.xml" loadImmediate="false" itemID="5dbbdfee-00000403" lastModified="1572725217"/>
-          <Include href="HUDMenu/LeftMetersGroup/RadsIcon.xml" loadImmediate="false" itemID="5dbbe053-00000405" lastModified="1572593759"/>
-          <Include href="HUDMenu/LeftMetersGroup/RadsMeter.xml" loadImmediate="false" itemID="5dbbe005-00000404" lastModified="1572724687"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/BoSMarker.xml" itemID="5dbd47b4-000020b6" lastModified="1572818204"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/BottlingPlantMarker.xml" itemID="5dbd42d5-0000096b" lastModified="1572818206"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/BrownstoneMarker.xml" itemID="5dbd476f-00001fb0" lastModified="1572818208"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/BunkerMarker.xml" itemID="5dbf5108-000019df" lastModified="1572819222"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/CastleMarker.xml" itemID="5dbd4684-00001ba6" lastModified="1572818210"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/DisciplesMarker.xml" itemID="5dbd4213-000008e8" lastModified="1572818219"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/DogmeatMarker.xml" itemID="5dbd4485-000015a1" lastModified="1572818240"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/DoorMarker.xml" itemID="5dbd445a-00001449" lastModified="1572818242"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/GalacticMarker.xml" itemID="5dbd41f7-00000865" lastModified="1572818243"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/HubMarker.xml" itemID="5dbd41dc-000007e1" lastModified="1572818244"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/KiddieKingdomMarker.xml" itemID="5dbd41cb-0000075e" lastModified="1572818245"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/LibertaliaMarker.xml" itemID="5dbcad79-0000092f" lastModified="1572818247"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/LowRiseMarker.xml" itemID="5dbcad3e-00000827" lastModified="1572818248"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/MechanistMarker.xml" itemID="5dbcacdd-0000074a" lastModified="1572818250"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/MinutemenMarker.xml" itemID="5dbcac99-0000051d" lastModified="1572818252"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/MonorailMarker.xml" itemID="5dbd41a9-000006db" lastModified="1572818253"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/OperatorsMarker.xml" itemID="5dbd4196-00000658" lastModified="1572818256"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/PackMarker.xml" itemID="5dbd417f-000005d4" lastModified="1572818258"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/POIMarker.xml" itemID="5dbd416b-00000551" lastModified="1572818260"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/PoliceStationMarker.xml" itemID="5dbd4a59-0000312b" lastModified="1572818261"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/PotentialVassalSettlementMarker.xml" itemID="5dbd4a20-00002f50" lastModified="1572818262"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/PowerArmorLocMarker.xml" itemID="5dbd4a10-00002ecd" lastModified="1572818270"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/PrydwenMarker.xml" itemID="5dbd49fe-00002e4a" lastModified="1572818271"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/RaiderSettlementMarker.xml" itemID="5dbd494e-00002b44" lastModified="1572818293"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/RailroadFactionMarker.xml" itemID="5dbd4939-00002ac1" lastModified="1572818294"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/RailroadMarker.xml" itemID="5dbd492d-00002ac0" lastModified="1572818297"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/RidesMarker.xml" itemID="5dbcae42-00000fbd" lastModified="1572818299"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/SafariMarker.xml" itemID="5dbcae26-00000f3a" lastModified="1572818301"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/SatelliteMarker.xml" itemID="5dbd48be-00002790" lastModified="1572818302"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/SentinelMarker.xml" itemID="5dbd487a-00002637" lastModified="1572818304"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/SkyscraperMarker.xml" itemID="5dbd44cf-000016fa" lastModified="1572818305"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/TeammateMarker.xml" itemID="5dbd479a-00002033" lastModified="1572818312"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/USSConstitutionMarker.xml" itemID="5dbcad63-000008ac" lastModified="1572818314"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/VassalSettlementMarker.xml" itemID="5dbd4a42-000030a8" lastModified="1572818317"/>
-          <Include href="HUDMenu/Map Markers/Non Authortime/WildWestMarker.xml" itemID="5dbcae13-00000eb7" lastModified="1572818365"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/Book.xml" loadImmediate="false" itemID="5dbd4998-00002b48" lastModified="1572686232"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/Factory_Discovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbf4e96-0000105d" lastModified="1572818582"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/Factory_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbf4e96-0000105f" lastModified="1572818582"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/FactoryMarker_Discovered.xml" itemIcon="1" loadImmediate="false" itemID="5daa491a-000002a1" lastModified="1571441351"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/FactoryMarker_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5daa492a-000002a2" lastModified="1571441353"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/IndustrialStacks_Discovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd4b29-00003434" lastModified="1572686633"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/IndustrialStacks_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd4b72-00003436" lastModified="1572686706"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/LowRise_Discovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd4b99-0000343b" lastModified="1572686745"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/LowRise_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd4b94-0000343a" lastModified="1572686740"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/RaiderSettlement_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd497d-00002b47" lastModified="1572686205"/>
-          <Include href="HUDMenu/Map Markers/ShapeUnused/Rides_Undiscovered.xml" itemIcon="1" loadImmediate="false" itemID="5dbd4b8d-00003439" lastModified="1572686733"/>
-          <Include href="HUDMenu/RightMetersGroup/ActionPoint/ActionPointBarSegment.xml" itemID="5dbb5747-000004ac" lastModified="1572558776"/>
-          <Include href="HUDMenu/RightMetersGroup/ActionPoint/ActionPointMeter.xml" itemID="5dbb5753-000004ad" lastModified="1572721498"/>
-          <Include href="HUDMenu/RightMetersGroup/ActionPoint/ActionPointSegments.xml" loadImmediate="false" itemID="5dbb5728-000004aa" lastModified="1572558758"/>
-          <Include href="HUDMenu/RightMetersGroup/AmmoCount/AmmoCount.xml" loadImmediate="false" itemID="5dbb53a5-0000049f" lastModified="1572723755"/>
-          <Include href="HUDMenu/RightMetersGroup/AmmoCount/AmmoLineInstance.xml" loadImmediate="false" itemID="5dbb53ca-000004a0" lastModified="1572557829"/>
-          <Include href="HUDMenu/RightMetersGroup/ExplosiveAmmoCount/ExplosiveAmmoCount.xml" itemID="5dbb515d-0000049a" lastModified="1572721525"/>
-          <Include href="HUDMenu/RightMetersGroup/ExplosiveAmmoCount/ExplosiveAmmoIcon.xml" itemID="5dbb5584-000004a3" lastModified="1572558228"/>
-          <Include href="HUDMenu/RightMetersGroup/ExplosiveAmmoCount/ExplosiveAmmoIconShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbb5589-000004a4" lastModified="1572639088"/>
-          <Include href="HUDMenu/RightMetersGroup/Fatigue/FatigueHead.xml" loadImmediate="false" itemID="5dbb5699-000004a7" lastModified="1572558525"/>
-          <Include href="HUDMenu/RightMetersGroup/Fatigue/FatigueHeadInner.xml" loadImmediate="false" itemID="5dbb56bb-000004a8" lastModified="1572558540"/>
-          <Include href="HUDMenu/RightMetersGroup/Fatigue/FatigueWarning.xml" loadImmediate="false" itemID="5dbb564f-000004a6" lastModified="1572558492"/>
-          <Include href="HUDMenu/RightMetersGroup/FlashLight/FlashLightIcon.xml" loadImmediate="false" itemID="5dbb52d3-0000049c" lastModified="1572557690"/>
-          <Include href="HUDMenu/RightMetersGroup/FlashLight/FlashLightIconBackground.xml" loadImmediate="false" itemID="5dbb52f6-0000049d" lastModified="1572558313"/>
-          <Include href="HUDMenu/RightMetersGroup/FlashLight/FlashlightIconBackgroundInner.xml" loadImmediate="false" itemID="5dbb55e6-000004a5" lastModified="1572558310"/>
-          <Include href="HUDMenu/RightMetersGroup/FlashLight/FlashLightWidget.xml" itemID="5dbb4ee4-0000048f" lastModified="1572721954"/>
-          <Include href="HUDMenu/RightMetersGroup/HUDActiveEffectsWidget.xml" itemID="5dbb59d3-000004c0" lastModified="1572642019"/>
-          <Include href="HUDMenu/RightMetersGroup/PowerArmorWarning/PowerArmorLowBatteryWarning.xml" loadImmediate="false" itemID="5dbb4f4b-00000490" lastModified="1572556668"/>
-          <Include href="HUDMenu/RightMetersGroup/PowerArmorWarning/WarningTextHolder.xml" itemID="5dbb4f6b-00000491" lastModified="1572723502"/>
-          <Include href="HUDMenu/RightMetersGroup/RightMeters.xml" itemID="5dbb4e85-00000482" lastModified="1572700766"/>
-          <Include href="HUDMenu/SafeRect.xml" loadImmediate="false" itemID="5dbb4718-0000033c" lastModified="1572555062"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/Bracket.xml" loadImmediate="false" itemID="5dbb5768-000004ae" lastModified="1572591504"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/ButtonBracket_Left.xml" loadImmediate="false" itemID="5dbc3648-00000438" lastModified="1572615761"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/ButtonBracket_Right.xml" loadImmediate="false" itemID="5dbc3662-00000439" lastModified="1572615796"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/MeterBar.xml" itemID="5dbb5914-000004b1" lastModified="1572559236"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/MeterBarInternal.xml" itemID="5dbb5879-000004af" lastModified="1572559255"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/MeterBarInternalInner.xml" loadImmediate="false" itemID="5dbb58dc-000004b0" lastModified="1572559268"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/MeterBarInternalInnerFade.xml" loadImmediate="false" itemID="5dbc9b5d-000006f8" lastModified="1572641635"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/SharedBackground.xml" loadImmediate="false" itemID="5dbc9c03-0000072d" lastModified="1572641803"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundHolder.xml" loadImmediate="false" itemID="5dbc9c1c-0000072f" lastModified="1572642010"/>
-          <Include href="HUDMenu/SharedBackgroundBarsBrackets/SharedBackgroundShape.xml" itemIcon="1" loadImmediate="false" itemID="5dbc9c06-0000072e" lastModified="1572641837"/>
-          <Include href="HUDMenu/TopCenterGroup/EnemyHealthMeter.xml" loadImmediate="false" itemID="5dbc3769-00000491" lastModified="1572731220"/>
-          <Include href="HUDMenu/TopCenterGroup/LegendaryIcon.xml" loadImmediate="false" itemID="5dbc378c-000004ad" lastModified="1572616106"/>
-          <Include href="HUDMenu/TopCenterGroup/SkullIcon.xml" loadImmediate="false" itemID="5dbc37c7-000004c9" lastModified="1572616154"/>
-          <Include href="HUDMenu/TopCenterGroup/TopCenter.xml" loadImmediate="false" itemID="5dbc374a-00000474" lastModified="1572730857"/>
-          <Include href="HUDMenu/TopRightGroup/ConditionBoy.xml" itemID="5dbc36ca-0000043a" lastModified="1572615901"/>
-          <Include href="HUDMenu/TopRightGroup/HUDConditionBoyWidget.xml" itemID="5dbc36f4-0000043b" lastModified="1572615924"/>
-          <Include href="HUDMenu/TopRightGroup/TopRightGroup.xml" loadImmediate="false" itemID="5dbc371d-00000459" lastModified="1572615965"/>
-          <Include href="Shared/Assets/MapMarkers/AirfieldMarker.xml" itemID="5dbd47c6-0000213a" lastModified="1571441219"/>
-          <Include href="Shared/Assets/MapMarkers/BunkerHillMarker.xml" itemID="5dbf4986-00000dd4" lastModified="1572817542"/>
-          <Include href="Shared/Assets/MapMarkers/CamperMarker.xml" itemID="5dbd46cd-00001cff" lastModified="1572817332"/>
-          <Include href="Shared/Assets/MapMarkers/CarMarker.xml" itemID="5dbd469d-00001c2a" lastModified="1571441247"/>
-          <Include href="Shared/Assets/MapMarkers/CaveMarker.xml" itemID="5dbd4671-00001ad2" lastModified="1571441254"/>
-          <Include href="Shared/Assets/MapMarkers/ChurchMarker.xml" itemID="5dbd4652-000019fd" lastModified="1571441261"/>
-          <Include href="Shared/Assets/MapMarkers/CityMarker.xml" itemID="5dbd4518-00001928" lastModified="1571441269"/>
-          <Include href="Shared/Assets/MapMarkers/CountryClubMarker.xml" itemID="5dbd44fe-00001853" lastModified="1571441278"/>
-          <Include href="Shared/Assets/MapMarkers/CustomHouseMarker.xml" itemID="5dbd44e5-0000177e" lastModified="1571441289"/>
-          <Include href="Shared/Assets/MapMarkers/DiamondCityMarker.xml" itemID="5dbd4496-00001625" lastModified="1571441298"/>
-          <Include href="Shared/Assets/MapMarkers/DriveInMarker.xml" itemID="5dbd4445-00001375" lastModified="1571441310"/>
-          <Include href="Shared/Assets/MapMarkers/ElevatedHighwayMarker.xml" itemID="5dbd4435-000012a0" lastModified="1571441321"/>
-          <Include href="Shared/Assets/MapMarkers/EncampmentMarker.xml" itemID="5dbd4419-000011ca" lastModified="1571441330"/>
-          <Include href="Shared/Assets/MapMarkers/FactoryMarker.xml" itemID="5dbd43fa-000010f0" lastModified="1571441356"/>
-          <Include href="Shared/Assets/MapMarkers/FaneuilHallMarker.xml" itemID="5dbd43de-0000101b" lastModified="1571441364"/>
-          <Include href="Shared/Assets/MapMarkers/FarmMarker.xml" itemID="5dbd43ca-00000f46" lastModified="1571441373"/>
-          <Include href="Shared/Assets/MapMarkers/FillingStationMarker.xml" itemID="5dbd43b1-00000e71" lastModified="1571441381"/>
-          <Include href="Shared/Assets/MapMarkers/ForestedMarker.xml" itemID="5dbd439d-00000d9c" lastModified="1571441391"/>
-          <Include href="Shared/Assets/MapMarkers/GoodneighborMarker.xml" itemID="5dbd4388-00000cc7" lastModified="1571441400"/>
-          <Include href="Shared/Assets/MapMarkers/GraveyardMarker.xml" itemID="5dbd4367-00000bf2" lastModified="1571441407"/>
-          <Include href="Shared/Assets/MapMarkers/HospitalMarker.xml" itemID="5dbd42ea-000009ef" lastModified="1571441418"/>
-          <Include href="Shared/Assets/MapMarkers/IndustrialDomeMarker.xml" itemID="5dbcae03-00000de3" lastModified="1571441426"/>
-          <Include href="Shared/Assets/MapMarkers/IndustrialStacksMarker.xml" itemID="5dbcadea-00000d09" lastModified="1571441434"/>
-          <Include href="Shared/Assets/MapMarkers/InstituteMarker.xml" itemID="5dbcadc7-00000c33" lastModified="1571441441"/>
-          <Include href="Shared/Assets/MapMarkers/IrishPrideMarker.xml" itemID="5dbcadb7-00000b5e" lastModified="1571441449"/>
-          <Include href="Shared/Assets/MapMarkers/JunkyardMarker.xml" itemID="5dbcad9d-00000a88" lastModified="1571441456"/>
-          <Include href="Shared/Assets/MapMarkers/LandmarkMarker.xml" itemID="5dbcad8c-000009b3" lastModified="1571441463"/>
-          <Include href="Shared/Assets/MapMarkers/MetroMarker.xml" itemID="5dbcacc9-00000676" lastModified="1571441478"/>
-          <Include href="Shared/Assets/MapMarkers/MilitaryBaseMarker.xml" itemID="5dbcacb9-000005a1" lastModified="1571441484"/>
-          <Include href="Shared/Assets/MapMarkers/MonumentMarker.xml" itemID="5dbcac60-0000049a" lastModified="1571441491"/>
-          <Include href="Shared/Assets/MapMarkers/ObservatoryMarker.xml" itemID="5dbd4a9f-00003359" lastModified="1571441497"/>
-          <Include href="Shared/Assets/MapMarkers/OfficeMarker.xml" itemID="5dbd4a75-00003201" lastModified="1571441506"/>
-          <Include href="Shared/Assets/MapMarkers/PierMarker.xml" itemID="5dbd4a6c-000031af" lastModified="1571441512"/>
-          <Include href="Shared/Assets/MapMarkers/PondLakeMarker.xml" itemID="5dbd4a32-00002fd4" lastModified="1571441519"/>
-          <Include href="Shared/Assets/MapMarkers/QuarryMarker.xml" itemID="5dbd49e8-00002d76" lastModified="1571441526"/>
-          <Include href="Shared/Assets/MapMarkers/RadioactiveAreaMarker.xml" itemID="5dbd49ca-00002ca1" lastModified="1571441532"/>
-          <Include href="Shared/Assets/MapMarkers/RadioTowerMarker.xml" itemID="5dbd49b4-00002bcc" lastModified="1571441539"/>
-          <Include href="Shared/Assets/MapMarkers/SalemMarker.xml" itemID="5dbd48ea-000028e9" lastModified="1571441545"/>
-          <Include href="Shared/Assets/MapMarkers/SancHillsMarker.xml" itemID="5dbd48d4-00002814" lastModified="1571441552"/>
-          <Include href="Shared/Assets/MapMarkers/SchoolMarker.xml" itemID="5dbd4890-000026bb" lastModified="1571441559"/>
-          <Include href="Shared/Assets/MapMarkers/SettlementMarker.xml" itemID="5dbd485e-00002563" lastModified="1571441568"/>
-          <Include href="Shared/Assets/MapMarkers/SewerMarker.xml" itemID="5dbd483c-0000248e" lastModified="1571441575"/>
-          <Include href="Shared/Assets/MapMarkers/ShipwreakMarker.xml" itemID="5dbf4e52-00000a05" lastModified="1572818514"/>
-          <Include href="Shared/Assets/MapMarkers/SubmarineMarker.xml" itemID="5dbd4803-000023b9" lastModified="1571441588"/>
-          <Include href="Shared/Assets/MapMarkers/SwanPondMarker.xml" itemID="5dbd47f2-000022e4" lastModified="1571441598"/>
-          <Include href="Shared/Assets/MapMarkers/SynthHeadMarker.xml" itemID="5dbd47da-0000220f" lastModified="1571441606"/>
-          <Include href="Shared/Assets/MapMarkers/TownMarker.xml" itemID="5dbd446d-000014cd" lastModified="1571441613"/>
-          <Include href="Shared/Assets/MapMarkers/TownRuinsMarker.xml" itemID="5dbd4305-00000ac4" lastModified="1571441620"/>
-          <Include href="Shared/Assets/MapMarkers/UrbanRuinsMarker.xml" itemID="5dbd413b-00000451" lastModified="1571441626"/>
-          <Include href="Shared/Assets/MapMarkers/VaultMarker.xml" itemID="5dbd48fd-000029be" lastModified="1571441633"/>
+          <Include href="Assets/BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc26296-000002da" lastModified="1573020310"/>
+          <Include href="Assets/BracketLeft.xml" loadImmediate="false" itemID="5dc26b04-00000471" lastModified="1573022490"/>
+          <Include href="Assets/BracketRight.xml" loadImmediate="false" itemID="5dc26af7-00000470" lastModified="1573022500"/>
+          <Include href="Assets/BSButtonHintBar/BSButtonHint.xml" itemID="5dc26cf9-00000486" lastModified="1573023605"/>
+          <Include href="Assets/BSButtonHintBar/BSButtonHint_IconHolder.xml" itemID="5dc26d00-00000487" lastModified="1573023814"/>
+          <Include href="Assets/BSButtonHintBar/BSButtonHintBar.xml" itemID="5dc26cf2-00000485" lastModified="1573023929"/>
+          <Include href="Assets/BSButtonHintBar/IconAnimation.xml" loadImmediate="false" itemID="5dc26feb-000004c6" lastModified="1573023809"/>
+          <Include href="Assets/MapMarkers/DLC01/MechanistMarker.xml" itemID="5dc13edb-000002c6" lastModified="1572945627"/>
+          <Include href="Assets/MapMarkers/DLC06/PotentialVassalSettlementMarker.xml" itemID="5dc13ee7-000002c8" lastModified="1572945639"/>
+          <Include href="Assets/MapMarkers/DLC06/Symbol 66.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000035" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/DLC06/Symbol 146.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000055" lastModified="1572945635"/>
+          <Include href="Assets/MapMarkers/DLC06/VassalSettlementMarker.xml" itemID="5dc13ee2-000002c7" lastModified="1572945634"/>
+          <Include href="Assets/MapMarkers/Symbol 6.xml" itemID="5dc13d4a-0000001f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 12.xml" itemID="5dc13d4a-00000021" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 15.xml" itemID="5dc13d4a-00000022" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 18.xml" itemID="5dc13d4a-00000023" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 21.xml" itemID="5dc13d4a-00000024" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 28.xml" itemID="5dc13d4a-00000028" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 31.xml" itemID="5dc13d4a-00000029" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 34.xml" itemID="5dc13d4a-0000002a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 37.xml" itemID="5dc13d4a-0000002b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 40.xml" itemID="5dc13d4a-0000002c" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 43.xml" itemID="5dc13d4a-0000002d" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 46.xml" itemID="5dc13d4a-0000002e" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 49.xml" itemID="5dc13d4a-0000002f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 52.xml" itemID="5dc13d4a-00000030" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 55.xml" itemID="5dc13d4a-00000031" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 58.xml" itemID="5dc13d4a-00000032" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 61.xml" itemID="5dc13d4a-00000033" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 64.xml" itemID="5dc13d4a-00000034" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 67.xml" itemID="5dc13d4a-00000036" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 70.xml" itemID="5dc13d4a-00000037" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 73.xml" itemID="5dc13d4a-00000038" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 76.xml" itemID="5dc13d4a-00000039" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 79.xml" itemID="5dc13d4a-0000003a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 81.xml" itemID="5dc13d4a-0000003b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 87.xml" itemID="5dc13d4a-0000003d" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 90.xml" itemID="5dc13d4a-0000003e" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 93.xml" itemID="5dc13d4a-0000003f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 96.xml" itemID="5dc13d4a-00000040" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 99.xml" itemID="5dc13d4a-00000041" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 102.xml" itemID="5dc13d4a-00000042" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 105.xml" itemID="5dc13d4a-00000043" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 108.xml" itemID="5dc13d4a-00000044" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 111.xml" itemID="5dc13d4a-00000045" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 115.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000047" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 116.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000048" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 117.xml" itemID="5dc13d4a-00000049" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 120.xml" itemID="5dc13d4a-0000004a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 123.xml" itemID="5dc13d4a-0000004b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 126.xml" itemID="5dc13d4a-0000004c" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 129.xml" itemID="5dc13d4a-0000004d" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 132.xml" itemID="5dc13d4a-0000004e" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 133.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-0000004f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 134.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000050" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 135.xml" itemID="5dc13d4a-00000051" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 138.xml" itemID="5dc13d4a-00000052" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 141.xml" itemID="5dc13d4a-00000053" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 144.xml" itemID="5dc13d4a-00000054" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 147.xml" itemID="5dc13d4a-00000056" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 150.xml" itemID="5dc13d4a-00000057" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 154.xml" itemID="5dc13d4a-00000058" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 157.xml" itemID="5dc13d4a-00000059" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 160.xml" itemID="5dc13d4a-0000005a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 163.xml" itemID="5dc13d4a-0000005b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 166.xml" itemID="5dc13d4a-0000005c" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 169.xml" itemID="5dc13d4a-0000005d" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 172.xml" itemID="5dc13d4a-0000005e" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 175.xml" itemID="5dc13d4a-0000005f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 178.xml" itemID="5dc13d4a-00000060" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 181.xml" itemID="5dc13d4a-00000061" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 184.xml" itemID="5dc13d4a-00000062" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 187.xml" itemID="5dc13d4a-00000063" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 190.xml" itemID="5dc13d4a-00000064" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 193.xml" itemID="5dc13d4a-00000065" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 196.xml" itemID="5dc13d4a-00000066" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 197.xml" itemID="5dc13d4a-00000067" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 200.xml" itemID="5dc13d4a-00000068" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 203.xml" itemID="5dc13d4a-00000069" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 206.xml" itemID="5dc13d4a-0000006a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 208.xml" itemID="5dc13d4a-0000006b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 210.xml" itemID="5dc13d4a-0000006c" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 213.xml" itemID="5dc13d4a-0000006d" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 216.xml" itemID="5dc13d4a-0000006e" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 219.xml" itemID="5dc13d4a-0000006f" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 222.xml" itemID="5dc13d4a-00000070" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 225.xml" itemID="5dc13d4a-00000071" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 228.xml" itemID="5dc13d4a-00000072" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 231.xml" itemID="5dc13d4a-00000073" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 234.xml" itemID="5dc13d4a-00000074" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 237.xml" itemID="5dc13d4a-00000075" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 240.xml" itemID="5dc13d4a-00000076" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 243.xml" itemID="5dc13d4a-00000077" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 246.xml" itemID="5dc13d4a-00000078" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 249.xml" itemID="5dc13d4a-00000079" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 252.xml" itemID="5dc13d4a-0000007a" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Symbol 255.xml" itemID="5dc13d4a-0000007b" lastModified="1571730685"/>
+          <Include href="Assets/MapMarkers/Teammate/Symbol 25.xml" itemID="5dc13d4a-00000027" lastModified="1571730685"/>
+          <Include href="Assets/MeterBar/MeterBar.xml" itemID="5dc263c6-000002de" lastModified="1573021242"/>
+          <Include href="Assets/MeterBar/MeterBarBracket.xml" loadImmediate="false" itemID="5dc2683f-00000464" lastModified="1573021759"/>
+          <Include href="Assets/MeterBar/MeterBarInternal.xml" itemID="5dc2651e-000002df" lastModified="1573021229"/>
+          <Include href="Assets/MeterBar/MeterBarInternalShape.xml" loadImmediate="false" itemID="5dc265d5-0000044d" lastModified="1573021141"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/BottomCenterGroup.xml" itemID="5dc1486b-000002c6" lastModified="1573029704"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeter.xml" itemID="5dc282e0-00000551" lastModified="1573032761"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterBar.xml" itemID="5dc283b8-00000555" lastModified="1573032686"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterStar.xml" itemID="5dc28c1a-000005b3" lastModified="1573032683"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterStarHolder.xml" itemID="5dc2838e-00000554" lastModified="1573032694"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/CompassBar.xml" loadImmediate="false" itemID="5dc284db-00000561" lastModified="1573029279"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/CompassBGHolder.xml" loadImmediate="false" itemID="5dc2850f-00000563" lastModified="1573033152"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/CompassBGHolderShape.xml" loadImmediate="false" itemID="5dc28550-00000567" lastModified="1573033139"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/CompassMarker_Enemy.xml" itemID="5dc28c7f-000005c5" lastModified="1573031039"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/CompassMarkerWidget.xml" itemID="5dc28c82-000005c6" lastModified="1573032886"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/DirectionMarkerWidget.xml" itemID="5dc28c58-000005be" lastModified="1573032932"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget.xml" itemID="5dc282ef-00000552" lastModified="1573029692"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget_MaskGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc28651-0000056c" lastModified="1573033134"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget_OtherMask.xml" loadImmediate="false" itemID="5dc28589-00000569" lastModified="1573029538"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget_OtherMaskBottom.xml" loadImmediate="false" itemID="5dc286c2-0000056e" lastModified="1573033138"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget_OtherMaskTop.xml" loadImmediate="false" itemID="5dc286a8-0000056d" lastModified="1573033138"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/HUDCompassWidget_QuestMask.xml" loadImmediate="false" itemID="5dc2858d-0000056a" lastModified="1573029384"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/MarkerShape.xml" loadImmediate="false" itemID="5dc2944d-000005f6" lastModified="1573033132"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/PlayerSetCompassMarker.xml" itemID="5dc28c73-000005c3" lastModified="1573031027"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/PlayerSetMarker.xml" itemID="5dc28c5b-000005bf" lastModified="1573033217"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/PlayerSetMarkerShape.xml" loadImmediate="false" itemID="5dc294dd-000005f8" lastModified="1573033181"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/QuestCompassMarkers.xml" itemID="5dc28c65-000005c1" lastModified="1573033131"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/QuestCompassMarkers_LevelArrow.xml" loadImmediate="false" itemID="5dc29434-000005f5" lastModified="1573033119"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/QuestCompassMarkers_LevelArrowGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc2948d-000005f7" lastModified="1573033261"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/QuestDoorCompassMarkers.xml" itemID="5dc28c6c-000005c2" lastModified="1573031020"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/QuestMarker.xml" itemID="5dc28c5f-000005c0" lastModified="1573033250"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/HUDCompassWidget/ReconScopeMarker.xml" itemID="5dc28c79-000005c4" lastModified="1573031033"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/PerkVaultBoy.xml" itemID="5dc282c9-00000550" lastModified="1573028656"/>
+          <Include href="UI/HUDMenu/BottomCenterGroup/Subtitles.xml" itemID="5dc282a7-0000054e" lastModified="1573028641"/>
+          <Include href="UI/HUDMenu/CenterGroup/CenterGroup.xml" loadImmediate="false" itemID="5dc14783-000002af" lastModified="1573027188"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/DirectionalHitIndicator.xml" itemID="5dc28c55-000005bd" lastModified="1573034222"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/DirectionalHitIndicator_Arc.xml" loadImmediate="false" itemID="5dc2905b-000005dd" lastModified="1573034251"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/DirectionalHitIndicator_Arc_Tween1.xml" itemIcon="1" loadImmediate="false" itemID="5dc29904-00000615" lastModified="1573034270"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/DirectionalHitIndicator_Arc_Tween2.xml" itemIcon="1" loadImmediate="false" itemID="5dc29907-00000616" lastModified="1573034272"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/DirectionalHitIndicatorBase.xml" loadImmediate="false" itemID="5dc27271-000004d1" lastModified="1573032113"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/ExplosiveIndicator.xml" itemID="5dc28c50-000005bc" lastModified="1573032594"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/ExplosiveIndicator_Arrow.xml" loadImmediate="false" itemID="5dc2924b-000005eb" lastModified="1573032573"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/ExplosiveIndicator_CarIcon.xml" loadImmediate="false" itemID="5dc2925e-000005ec" lastModified="1573032542"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/Explosiveindicator_ICON.xml" itemID="5dc28c4b-000005bb" lastModified="1573034275"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/Explosiveindicator_ICON_Border.xml" loadImmediate="false" itemID="5dc29149-000005e7" lastModified="1573032412"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/Explosiveindicator_ICON_Car.xml" loadImmediate="false" itemID="5dc2916d-000005e8" lastModified="1573034280"/>
+          <Include href="UI/HUDMenu/CenterGroup/DirectionalHitIndicator/Explosiveindicator_ICON_CarGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc2918b-000005e9" lastModified="1573034269"/>
+          <Include href="UI/HUDMenu/CenterGroup/ExplosiveIndicator/ExplosiveIndicatorBase.xml" loadImmediate="false" itemID="5dc27299-000004d2" lastModified="1573034219"/>
+          <Include href="UI/HUDMenu/CenterGroup/HitIndicator/HitHolder.xml" loadImmediate="false" itemID="5dc271d6-000004ce" lastModified="1573024286"/>
+          <Include href="UI/HUDMenu/CenterGroup/HitIndicator/HitHolder_TintBase.xml" loadImmediate="false" itemID="5dc27210-000004d0" lastModified="1573024283"/>
+          <Include href="UI/HUDMenu/CenterGroup/HitIndicator/HitIndicator.xml" itemID="5dc27107-000004c8" lastModified="1573024288"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairBase.xml" itemID="5dc272d4-000004d4" lastModified="1573026609"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips.xml" loadImmediate="false" itemID="5dc27462-000004f0" lastModified="1573026494"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Activate_Activate.xml" itemID="5dc27b03-0000052c" lastModified="1573026563"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Activate_Command.xml" itemID="5dc27b02-0000052b" lastModified="1573026562"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Activate_Dot.xml" itemID="5dc27b00-0000052a" lastModified="1573026560"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Activate_None.xml" itemID="5dc27afe-00000529" lastModified="1573026558"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Activate_Standard.xml" itemID="5dc27afc-00000528" lastModified="1573026556"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Command_Activate.xml" itemID="5dc27af9-00000527" lastModified="1573026553"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Command_Command.xml" itemID="5dc27af5-00000525" lastModified="1573026549"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Command_Dot.xml" itemID="5dc27af7-00000526" lastModified="1573026551"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Command_None.xml" itemID="5dc27aef-00000524" lastModified="1573026543"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Command_Standard.xml" itemID="5dc27aeb-00000523" lastModified="1573026539"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Dot_Activate.xml" itemID="5dc2761b-00000503" lastModified="1573026207"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Dot_Command.xml" itemID="5dc2761d-00000504" lastModified="1573026047"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Dot_Dot.xml" itemID="5dc27622-00000506" lastModified="1573025314"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Dot_None.xml" itemID="5dc27629-00000507" lastModified="1573025321"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Dot_Standard.xml" itemID="5dc2761f-00000505" lastModified="1573025311"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_None_Activate.xml" itemID="5dc2762b-00000508" lastModified="1573025323"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_None_Command.xml" itemID="5dc2762d-00000509" lastModified="1573025839"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_None_Dot.xml" itemID="5dc27633-0000050b" lastModified="1573025609"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_None_None.xml" itemID="5dc27635-0000050c" lastModified="1573025595"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_None_Standard.xml" itemID="5dc2762f-0000050a" lastModified="1573025586"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Standard_Activate.xml" itemID="5dc27ae7-00000522" lastModified="1573026535"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Standard_Command.xml" itemID="5dc27ae4-00000521" lastModified="1573026532"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Standard_Dot.xml" itemID="5dc27ae2-00000520" lastModified="1573026530"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Standard_None.xml" itemID="5dc27adf-0000051f" lastModified="1573026527"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClips_Standard_Standard.xml" itemID="5dc27618-00000502" lastModified="1573025541"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClipsArrow.xml" loadImmediate="false" itemID="5dc277cf-0000050f" lastModified="1573025743"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/CrosshairClipsBorder.xml" loadImmediate="false" itemID="5dc276b2-0000050e" lastModified="1573025497"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/Symbol 514.xml" loadImmediate="false" itemID="5dc13d4a-00000113" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairClips/Symbol 515.xml" loadImmediate="false" itemID="5dc13d4a-00000114" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairTicks.xml" loadImmediate="false" itemID="5dc272e5-000004d5" lastModified="1573024815"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairTicks_Down.xml" loadImmediate="false" itemID="5dc273db-000004e5" lastModified="1573024811"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairTicks_Left.xml" loadImmediate="false" itemID="5dc273ef-000004e8" lastModified="1573024806"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairTicks_Right.xml" loadImmediate="false" itemID="5dc273e1-000004e6" lastModified="1573024809"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/CrosshairTicks_Up.xml" loadImmediate="false" itemID="5dc273e7-000004e7" lastModified="1573024807"/>
+          <Include href="UI/HUDMenu/CenterGroup/HUDCrosshair/HUDCrosshair.xml" itemID="5dc272b7-000004d3" lastModified="1573026611"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/BetterIcon.xml" loadImmediate="false" itemID="5dc27c41-00000539" lastModified="1573026968"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/BracketPairFadeHolder.xml" itemID="5dc27d0f-0000053d" lastModified="1573027957"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/BracketPairFadeHolder_Lower.xml" loadImmediate="false" itemID="5dc280f2-00000546" lastModified="1573028082"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/BracketPairFadeHolder_Upper.xml" loadImmediate="false" itemID="5dc280f6-00000547" lastModified="1573028086"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/FavoriteIcon.xml" loadImmediate="false" itemID="5dc27c12-00000537" lastModified="1573026981"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListHeaderAndBracket.xml" itemID="5dc27cd1-0000053b" lastModified="1573028110"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListItems.xml" loadImmediate="false" itemID="5dc27b50-0000052d" lastModified="1573027010"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/QuickContainerItem.xml" itemID="5dc27bb5-00000535" lastModified="1573027008"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/QuickContainerWidget.xml" itemID="5dc27b6b-0000052e" lastModified="1573027180"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/SelectionIndicator.xml" loadImmediate="false" itemID="5dc27c54-0000053a" lastModified="1573026951"/>
+          <Include href="UI/HUDMenu/CenterGroup/QuickContainerWidget/TaggedForSearchIcon.xml" loadImmediate="false" itemID="5dc27bef-00000536" lastModified="1573026997"/>
+          <Include href="UI/HUDMenu/CenterGroup/RolloverWidget/RolloverWidget.xml" itemID="5dc26c2e-00000480" lastModified="1573023959"/>
+          <Include href="UI/HUDMenu/CenterGroup/RolloverWidget/TaggedForSearchIcon.xml" loadImmediate="false" itemID="5dc26c6d-00000482" lastModified="1573022879"/>
+          <Include href="UI/HUDMenu/CenterGroup/RolloverWidget/TaggedForSearchIconGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc26c86-00000483" lastModified="1573022867"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingQuestMarker.xml" loadImmediate="false" itemID="5dc13fa3-000002d5" lastModified="1573031886"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingTarget.xml" itemID="5dc28c44-000005ba" lastModified="1573031903"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingTarget_PlayerSet.xml" loadImmediate="false" itemID="5dc28ee6-000005d8" lastModified="1573031888"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingTarget_Quest.xml" loadImmediate="false" itemID="5dc28e8d-000005d5" lastModified="1573031901"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingTarget_QuestDoor.xml" loadImmediate="false" itemID="5dc28ea8-000005d6" lastModified="1573031899"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/FloatingTarget_Recon.xml" loadImmediate="false" itemID="5dc28ecc-000005d7" lastModified="1573031897"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/QuestDoorMarker.xml" itemID="5dc28c41-000005b9" lastModified="1573031908"/>
+          <Include href="UI/HUDMenu/FloatingQuestMarker/QuestDoorMarkerGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc28f84-000005da" lastModified="1573032012"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDNotificationsGroup.xml" itemID="5dc13f89-000002d3" lastModified="1573021382"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/HUDObjectiveIcons.xml" itemID="5dc28c27-000005b4" lastModified="1573034142"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/HUDObjectiveIcons_Completed.xml" loadImmediate="false" itemID="5dc2980b-0000060d" lastModified="1573034179"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/HUDObjectiveItem.xml" itemID="5dc28c2c-000005b5" lastModified="1573034141"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/HUDObjectiveItemInternal.xml" loadImmediate="false" itemID="5dc296b3-00000608" lastModified="1573034137"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/HUDObjectiveUpdates.xml" itemID="5dc1e219-000002d3" lastModified="1573034136"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/HUDObjectiveUpdates/ObjectiveListItemBG.xml" loadImmediate="false" itemID="5dc29547-000005f9" lastModified="1573034123"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/Messages/HUDMessageItem/HUDMessageItem.xml" itemID="5dc28c30-000005b6" lastModified="1573033888"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/Messages/HUDMessageItem/HUDMessageItemInternal.xml" loadImmediate="false" itemID="5dc29605-000005fa" lastModified="1573033874"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/Messages/HUDMessageItem/RadioStationIcon.xml" loadImmediate="false" itemID="5dc2976b-0000060c" lastModified="1573033835"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/Messages/HUDMessageItem/RadioStationIconShape.xml" loadImmediate="false" itemID="5dc29766-0000060b" lastModified="1573033830"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/Messages/Messages.xml" itemID="5dc1e189-000002d1" lastModified="1573019778"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/PromptMessageWidget.xml" itemID="5dc2498f-000002b6" lastModified="1573018901"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/QuestUpdates.xml" itemID="5dc1e237-000002d4" lastModified="1573020072"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/QuestVaultBoy/QuestUpdateVaultBoy.xml" itemID="5dc1e1b3-000002d2" lastModified="1573019899"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/QuestVaultBoy/VaultBoyImageInternal.xml" itemID="5dc260ed-000002c9" lastModified="1573019896"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 457.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000e9" lastModified="1573033353"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 458.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000ea" lastModified="1573033362"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 468.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000ed" lastModified="1573033370"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 469.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000ee" lastModified="1573033377"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 470.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000ef" lastModified="1573033385"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 471.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000f0" lastModified="1573033406"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/Symbol 472.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-000000f1" lastModified="1573033672"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads.xml" itemID="5dc25e14-000002ba" lastModified="1573019747"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads_00.xml" loadImmediate="false" itemID="5dc25f1b-000002be" lastModified="1573019419"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads_01.xml" loadImmediate="false" itemID="5dc25f21-000002bf" lastModified="1573019425"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads_02.xml" loadImmediate="false" itemID="5dc25f36-000002c0" lastModified="1573019446"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads_Border.xml" loadImmediate="false" itemID="5dc26031-000002c1" lastModified="1573019738"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialHeads_BorderShape.xml" loadImmediate="false" itemID="5dc26037-000002c2" lastModified="1573019703"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/TutorialText/TutorialText.xml" itemID="5dc14a8d-000002cf" lastModified="1573019764"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/XPMeter/LeftToRightText.xml" itemID="5dc262c3-000002db" lastModified="1573020428"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/XPMeter/LeftToRightText_Tick.xml" itemID="5dc262d1-000002dc" lastModified="1573020462"/>
+          <Include href="UI/HUDMenu/HUDNotificationsGroup/XPMeter/XPMeter.xml" itemID="5dc1e251-000002d5" lastModified="1573021348"/>
+          <Include href="UI/HUDMenu/LeftMeters/ContainerName.xml" loadImmediate="false" itemID="5dc27ced-0000053c" lastModified="1573027068"/>
+          <Include href="UI/HUDMenu/LeftMeters/HPMeter.xml" itemID="5dc27fe4-00000542" lastModified="1573028279"/>
+          <Include href="UI/HUDMenu/LeftMeters/LeftMeters.xml" itemID="5dc14861-000002c5" lastModified="1573028295"/>
+          <Include href="UI/HUDMenu/LeftMeters/LocationText.xml" loadImmediate="false" itemID="5dc27fb7-00000540" lastModified="1573028135"/>
+          <Include href="UI/HUDMenu/LeftMeters/RadsIcon.xml" loadImmediate="false" itemID="5dc2814d-00000548" lastModified="1573028202"/>
+          <Include href="UI/HUDMenu/LeftMeters/RadsMeter.xml" loadImmediate="false" itemID="5dc27fc5-00000541" lastModified="1573028208"/>
+          <Include href="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointBarSegment.xml" itemID="5dc28b75-000005b2" lastModified="1573030773"/>
+          <Include href="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointMeter.xml" itemID="5dc287ac-00000574" lastModified="1573030801"/>
+          <Include href="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointSegments.xml" loadImmediate="false" itemID="5dc28b20-000005b1" lastModified="1573030791"/>
+          <Include href="UI/HUDMenu/RightMeters/AmmoCount/AmmoCount.xml" loadImmediate="false" itemID="5dc28798-00000572" lastModified="1573030567"/>
+          <Include href="UI/HUDMenu/RightMeters/AmmoCount/AmmoLine.xml" loadImmediate="false" itemID="5dc28a67-000005ad" lastModified="1573030564"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmo_Grenade.xml" loadImmediate="false" itemID="5dc28918-0000057e" lastModified="1573030168"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmo_GrenadeGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc2891c-0000057f" lastModified="1573030188"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmo_Mine.xml" loadImmediate="false" itemID="5dc288c8-00000578" lastModified="1573032591"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmo_MineGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc288d0-00000579" lastModified="1573030096"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmoCount.xml" itemID="5dc28783-00000570" lastModified="1573030197"/>
+          <Include href="UI/HUDMenu/RightMeters/ExplosiveAmmoCount/ExplosiveAmmoCountIcon.xml" itemID="5dc28862-00000577" lastModified="1573030192"/>
+          <Include href="UI/HUDMenu/RightMeters/FatigueWarning/FatigueHead.xml" loadImmediate="false" itemID="5dc28abd-000005af" lastModified="1573030633"/>
+          <Include href="UI/HUDMenu/RightMeters/FatigueWarning/FatigueHeadShape.xml" loadImmediate="false" itemID="5dc28acd-000005b0" lastModified="1573030625"/>
+          <Include href="UI/HUDMenu/RightMeters/FatigueWarning/FatigueWarning.xml" loadImmediate="false" itemID="5dc287a3-00000573" lastModified="1573030642"/>
+          <Include href="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget.xml" itemID="5dc2878e-00000571" lastModified="1573030355"/>
+          <Include href="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Border.xml" loadImmediate="false" itemID="5dc289bb-0000058a" lastModified="1573030331"/>
+          <Include href="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Icon.xml" loadImmediate="false" itemID="5dc289c7-0000058b" lastModified="1573030352"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/HotkeyIcons.xml" itemID="5dc28c36-000005b7" lastModified="1573031246"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 274.xml" loadImmediate="false" itemID="5dc13d4a-00000087" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 276.xml" loadImmediate="false" itemID="5dc13d4a-00000088" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 278.xml" loadImmediate="false" itemID="5dc13d4a-00000089" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 280.xml" loadImmediate="false" itemID="5dc13d4a-0000008a" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 282.xml" loadImmediate="false" itemID="5dc13d4a-0000008b" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 284.xml" loadImmediate="false" itemID="5dc13d4a-0000008c" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 286.xml" loadImmediate="false" itemID="5dc13d4a-0000008d" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 288.xml" loadImmediate="false" itemID="5dc13d4a-0000008e" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 290.xml" loadImmediate="false" itemID="5dc13d4a-0000008f" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 292.xml" loadImmediate="false" itemID="5dc13d4a-00000090" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 294.xml" loadImmediate="false" itemID="5dc13d4a-00000091" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 296.xml" loadImmediate="false" itemID="5dc13d4a-00000092" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 298.xml" loadImmediate="false" itemID="5dc13d4a-00000093" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 300.xml" loadImmediate="false" itemID="5dc13d4a-00000094" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 302.xml" loadImmediate="false" itemID="5dc13d4a-00000095" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 304.xml" loadImmediate="false" itemID="5dc13d4a-00000096" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 306.xml" loadImmediate="false" itemID="5dc13d4a-00000097" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 308.xml" loadImmediate="false" itemID="5dc13d4a-00000098" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 310.xml" loadImmediate="false" itemID="5dc13d4a-00000099" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 312.xml" loadImmediate="false" itemID="5dc13d4a-0000009a" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 314.xml" loadImmediate="false" itemID="5dc13d4a-0000009b" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 316.xml" loadImmediate="false" itemID="5dc13d4a-0000009c" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 318.xml" loadImmediate="false" itemID="5dc13d4a-0000009d" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 320.xml" loadImmediate="false" itemID="5dc13d4a-0000009e" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 322.xml" loadImmediate="false" itemID="5dc13d4a-0000009f" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 324.xml" loadImmediate="false" itemID="5dc13d4a-000000a0" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 326.xml" loadImmediate="false" itemID="5dc13d4a-000000a1" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 328.xml" loadImmediate="false" itemID="5dc13d4a-000000a2" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 332.xml" loadImmediate="false" itemID="5dc13d4a-000000a5" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 334.xml" loadImmediate="false" itemID="5dc13d4a-000000a6" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 336.xml" loadImmediate="false" itemID="5dc13d4a-000000a7" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 338.xml" loadImmediate="false" itemID="5dc13d4a-000000a8" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 340.xml" loadImmediate="false" itemID="5dc13d4a-000000a9" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 342.xml" loadImmediate="false" itemID="5dc13d4a-000000aa" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 344.xml" loadImmediate="false" itemID="5dc13d4a-000000ab" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 346.xml" loadImmediate="false" itemID="5dc13d4a-000000ac" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 348.xml" loadImmediate="false" itemID="5dc13d4a-000000ad" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 350.xml" loadImmediate="false" itemID="5dc13d4a-000000ae" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 352.xml" loadImmediate="false" itemID="5dc13d4a-000000af" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 354.xml" loadImmediate="false" itemID="5dc13d4a-000000b0" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 356.xml" loadImmediate="false" itemID="5dc13d4a-000000b1" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 358.xml" loadImmediate="false" itemID="5dc13d4a-000000b2" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 360.xml" loadImmediate="false" itemID="5dc13d4a-000000b3" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 362.xml" loadImmediate="false" itemID="5dc13d4a-000000b4" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 364.xml" loadImmediate="false" itemID="5dc13d4a-000000b5" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 366.xml" loadImmediate="false" itemID="5dc13d4a-000000b6" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 368.xml" loadImmediate="false" itemID="5dc13d4a-000000b7" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 370.xml" loadImmediate="false" itemID="5dc13d4a-000000b8" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 372.xml" loadImmediate="false" itemID="5dc13d4a-000000b9" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 374.xml" loadImmediate="false" itemID="5dc13d4a-000000ba" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 376.xml" loadImmediate="false" itemID="5dc13d4a-000000bb" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 378.xml" loadImmediate="false" itemID="5dc13d4a-000000bc" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 380.xml" loadImmediate="false" itemID="5dc13d4a-000000bd" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 382.xml" loadImmediate="false" itemID="5dc13d4a-000000be" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 384.xml" loadImmediate="false" itemID="5dc13d4a-000000bf" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/Symbol 386.xml" loadImmediate="false" itemID="5dc13d4a-000000c0" lastModified="1571730685"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectClip.xml" itemID="5dc28c3a-000005b8" lastModified="1573031415"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget.xml" itemID="5dc287b9-00000575" lastModified="1573030856"/>
+          <Include href="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget_Border.xml" loadImmediate="false" itemID="5dc28ded-000005d2" lastModified="1573031405"/>
+          <Include href="UI/HUDMenu/RightMeters/PowerArmorLowBatteryWarning/PowerArmorLowBatteryWarning.xml" loadImmediate="false" itemID="5dc28774-0000056f" lastModified="1573029938"/>
+          <Include href="UI/HUDMenu/RightMeters/RightMeters.xml" itemID="5dc1487a-000002c7" lastModified="1573030860"/>
+          <Include href="UI/HUDMenu/RightMeters/WarningTextHolder/WarningTextHolder.xml" itemID="5dc287f3-00000576" lastModified="1573029935"/>
+          <Include href="UI/HUDMenu/SafeRect.xml" loadImmediate="false" itemID="5dc1488c-000002c8" lastModified="1573012329"/>
+          <Include href="UI/HUDMenu/Symbol 23.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000025" lastModified="1573033970"/>
+          <Include href="UI/HUDMenu/Symbol 257.xml" loadImmediate="false" itemID="5dc13d4a-0000007c" lastModified="1573033893"/>
+          <Include href="UI/HUDMenu/Symbol 443.xml" loadImmediate="false" itemID="5dc13d4a-000000e0" lastModified="1573033895"/>
+          <Include href="UI/HUDMenu/Symbol 599.xml" loadImmediate="false" itemID="5dc13d4a-00000153" lastModified="1573033890"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthMeter.xml" loadImmediate="false" itemID="5dc26762-00000453" lastModified="1573022363"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBar.xml" itemID="5dc269ba-0000046c" lastModified="1573022359"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBarInternal.xml" loadImmediate="false" itemID="5dc26a8f-0000046d" lastModified="1573022351"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon.xml" loadImmediate="false" itemID="5dc267ff-00000462" lastModified="1573022041"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon_Art.xml" loadImmediate="false" itemID="5dc26927-00000465" lastModified="1573022032"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon_ArtGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5dc2692e-00000466" lastModified="1573021998"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/SkullIcon.xml" loadImmediate="false" itemID="5dc2681b-00000463" lastModified="1573021861"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/StealthMeter/StealthMeter.xml" itemID="5dc267a9-00000454" lastModified="1573022503"/>
+          <Include href="UI/HUDMenu/TopCenterGroup/TopCenterGroup.xml" loadImmediate="false" itemID="5dc146f6-000002a1" lastModified="1573022506"/>
+          <Include href="UI/HUDMenu/TopRightGroup/ConditionBoy.xml" itemID="5dc26ba9-00000474" lastModified="1573030888"/>
+          <Include href="UI/HUDMenu/TopRightGroup/HUDConditionBoyWidget.xml" itemID="5dc26b84-00000473" lastModified="1573030890"/>
+          <Include href="UI/HUDMenu/TopRightGroup/TopRightGroup.xml" loadImmediate="false" itemID="5dc14778-000002ae" lastModified="1573030995"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
                <layers>
-                    <DOMLayer name="FloatingQuestMarkerBase" color="#9D35DE" locked="true" autoNamed="false">
+                    <DOMLayer name="FloatingQuestMarkerBase" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/Quest/QuestMarkerHolder" name="FloatingQuestMarkerBase">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/FloatingQuestMarker/FloatingQuestMarker" name="FloatingQuestMarkerBase" selected="true">
                                              <transformationPoint>
                                                   <Point/>
                                              </transformationPoint>
@@ -426,11 +422,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="HUDNotificationsGroup_mc" color="#D4F538" locked="true" autoNamed="false">
+                    <DOMLayer name="HUDNotificationsGroup_mc" color="#00CC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/HUDNotificationsGroup/HUDNotifications" name="HUDNotificationsGroup_mc" centerPoint3DX="314" centerPoint3DY="202.95">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/HUDNotificationsGroup/HUDNotificationsGroup" name="HUDNotificationsGroup_mc" selected="true" centerPoint3DX="314" centerPoint3DY="202.95">
                                              <matrix>
                                                   <Matrix tx="64" ty="36"/>
                                              </matrix>
@@ -438,23 +434,15 @@
                                                   <Point/>
                                              </transformationPoint>
                                         </DOMSymbolInstance>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/HUDNotificationsGroup/MessagesGroup/HUDMessageItemInner" centerPoint3DX="-26.65" centerPoint3DY="148">
-                                             <matrix>
-                                                  <Matrix tx="-39.2" ty="148"/>
-                                             </matrix>
-                                             <transformationPoint>
-                                                  <Point x="12.55"/>
-                                             </transformationPoint>
-                                        </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="TopCenterGroup_mc" color="#CCF193" locked="true" autoNamed="false">
+                    <DOMLayer name="TopCenterGroup_mc" color="#FFCC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/TopCenterGroup/TopCenter" name="TopCenterGroup_mc" centerPoint3DX="742" centerPoint3DY="101">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/TopCenterGroup" name="TopCenterGroup_mc" selected="true" centerPoint3DX="742" centerPoint3DY="101">
                                              <matrix>
                                                   <Matrix tx="640" ty="36"/>
                                              </matrix>
@@ -466,11 +454,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="TopRightGroup_mc" color="#FEE161" autoNamed="false">
+                    <DOMLayer name="TopRightGroup_mc" color="#FF00FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/TopRightGroup/TopRightGroup" name="TopRightGroup_mc" centerPoint3DX="1216" centerPoint3DY="36">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopRightGroup/TopRightGroup" name="TopRightGroup_mc" selected="true" centerPoint3DX="1216" centerPoint3DY="36">
                                              <matrix>
                                                   <Matrix tx="1216" ty="36"/>
                                              </matrix>
@@ -482,11 +470,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="CenterGroup_mc" color="#DE8BBB" locked="true" autoNamed="false">
+                    <DOMLayer name="CenterGroup_mc" color="#FF6600" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/CenterGroup/Center" name="CenterGroup_mc" centerPoint3DX="866.35" centerPoint3DY="475">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/CenterGroup" name="CenterGroup_mc" selected="true" centerPoint3DX="866.35" centerPoint3DY="475">
                                              <matrix>
                                                   <Matrix tx="640" ty="360"/>
                                              </matrix>
@@ -498,11 +486,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="LeftMeters_mc" color="#B659E5" locked="true" autoNamed="false">
+                    <DOMLayer name="LeftMeters_mc" color="#B659E5" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/LeftMetersGroup/LeftMeters" name="LeftMeters_mc" centerPoint3DX="257" centerPoint3DY="746.6">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/LeftMeters/LeftMeters" name="LeftMeters_mc" selected="true" centerPoint3DX="257" centerPoint3DY="746.6">
                                              <matrix>
                                                   <Matrix tx="64" ty="684"/>
                                              </matrix>
@@ -514,11 +502,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="BottomCenterGroup_mc" color="#5E8AAF" locked="true" autoNamed="false">
+                    <DOMLayer name="BottomCenterGroup_mc" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/BottomCenterGroup/BottomCenter" name="BottomCenterGroup_mc" centerPoint3DX="915" centerPoint3DY="797.25">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/BottomCenterGroup" name="BottomCenterGroup_mc" selected="true" centerPoint3DX="915" centerPoint3DY="797.25">
                                              <matrix>
                                                   <Matrix tx="640" ty="684"/>
                                              </matrix>
@@ -530,11 +518,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="RightMeters_mc" color="#EFB06D" locked="true" autoNamed="false">
+                    <DOMLayer name="RightMeters_mc" color="#00CC00" locked="true" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/RightMetersGroup/RightMeters" name="RightMeters_mc" centerPoint3DX="1418" centerPoint3DY="887.75">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/RightMeters" name="RightMeters_mc" selected="true" centerPoint3DX="1418" centerPoint3DY="887.75">
                                              <matrix>
                                                   <Matrix tx="1216" ty="684"/>
                                              </matrix>
@@ -546,11 +534,11 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="SafeRect_mc" color="#4ED3F7" locked="true" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="SafeRect_mc" color="#CC0000" locked="true" outline="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="HUDMenu/SafeRect" name="SafeRect_mc" centerPoint3DX="1216.5" centerPoint3DY="684.5" isVisible="false">
+                                        <DOMSymbolInstance libraryItemName="UI/HUDMenu/SafeRect" name="SafeRect_mc" selected="true" centerPoint3DX="1216.5" centerPoint3DY="684.5">
                                              <matrix>
                                                   <Matrix tx="640" ty="360"/>
                                              </matrix>
