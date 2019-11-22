@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListItems" name="ListItems_mc" selected="true" centerPoint3DX="-6" centerPoint3DY="75.15">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListItems" name="ListItems_mc" centerPoint3DX="-6" centerPoint3DY="75.15">
                   <matrix>
                     <Matrix tx="-135"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListHeaderAndBracket" name="ListHeaderAndBracket_mc" selected="true" centerPoint3DY="58">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/QuickContainerWidget/ListHeaderAndBracket" name="ListHeaderAndBracket_mc" centerPoint3DY="58">
                   <matrix>
                     <Matrix tx="-135" ty="-36"/>
                   </matrix>
@@ -38,7 +38,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" selected="true" centerPoint3DX="19.45" centerPoint3DY="178">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" centerPoint3DX="19.45" centerPoint3DY="178">
                   <matrix>
                     <Matrix ty="162"/>
                   </matrix>

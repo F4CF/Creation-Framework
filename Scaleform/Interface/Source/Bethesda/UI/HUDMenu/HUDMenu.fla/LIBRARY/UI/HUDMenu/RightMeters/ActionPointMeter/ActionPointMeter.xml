@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarBracket" name="Bracket_mc" selected="true" centerPoint3DX="-100" centerPoint3DY="4">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarBracket" name="Bracket_mc" centerPoint3DX="-100" centerPoint3DY="4">
                   <matrix>
                     <Matrix tx="-202"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointSegments" name="ActionPointSegments_mc" selected="true" centerPoint3DX="-201.5" centerPoint3DY="2">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointSegments" name="ActionPointSegments_mc" centerPoint3DX="-201.5" centerPoint3DY="2">
                   <matrix>
                     <Matrix tx="-202"/>
                   </matrix>
@@ -59,7 +59,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="MeterBar_mc" selected="true" centerPoint3DX="-102" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="MeterBar_mc" centerPoint3DX="-102" centerPoint3DY="3">
                   <matrix>
                     <Matrix tx="-202"/>
                   </matrix>
@@ -75,7 +75,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="Optional_mc" selected="true" centerPoint3DX="-102" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="Optional_mc" centerPoint3DX="-102" centerPoint3DY="3">
                   <matrix>
                     <Matrix tx="-202"/>
                   </matrix>

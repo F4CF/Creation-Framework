@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HotkeyIcons/HotkeyIcons" name="Icon_mc" selected="true" centerPoint3DX="50.05" centerPoint3DY="51.05">
+                <DOMSymbolInstance libraryItemName="Shared/HotkeyIcons/HotkeyIcons" name="Icon_mc" centerPoint3DX="50.05" centerPoint3DY="51.05">
                   <matrix>
                     <Matrix tx="24" ty="24"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget_Border" selected="true" centerPoint3DX="50.5" centerPoint3DY="50.5">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget_Border" centerPoint3DX="50.5" centerPoint3DY="50.5">
                   <matrix>
                     <Matrix a="0.479995727539063" d="0.479995727539063"/>
                   </matrix>

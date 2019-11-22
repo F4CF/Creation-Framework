@@ -37,7 +37,7 @@
           <frames>
             <DOMFrame index="0" duration="16" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarBracket" name="Bracket_mc" selected="true" centerPoint3DX="22" centerPoint3DY="-4">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarBracket" name="Bracket_mc" centerPoint3DX="22" centerPoint3DY="-4">
                   <matrix>
                     <Matrix tx="-80" ty="-8"/>
                   </matrix>
@@ -53,7 +53,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterBar" name="MeterBar_mc" selected="true" centerPoint3DX="20" centerPoint3DY="-5">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterBar" name="MeterBar_mc" centerPoint3DX="20" centerPoint3DY="-5">
                   <matrix>
                     <Matrix tx="-80" ty="-8"/>
                   </matrix>
@@ -77,7 +77,7 @@
             </DOMFrame>
             <DOMFrame index="7" duration="8" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterBar" name="MeterBar_mc" selected="true" centerPoint3DX="20" centerPoint3DY="-5">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterBar" name="MeterBar_mc" centerPoint3DX="20" centerPoint3DY="-5">
                   <matrix>
                     <Matrix tx="-80" ty="-8"/>
                   </matrix>
@@ -108,7 +108,7 @@
           <frames>
             <DOMFrame index="0" duration="16" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterStarHolder" name="CritMeterStars_mc" selected="true" centerPoint3DX="130" centerPoint3DY="-12">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/BottomCenterGroup/CritMeter/CritMeterStarHolder" name="CritMeterStars_mc" centerPoint3DX="130" centerPoint3DY="-12">
                   <matrix>
                     <Matrix tx="130" ty="-12"/>
                   </matrix>

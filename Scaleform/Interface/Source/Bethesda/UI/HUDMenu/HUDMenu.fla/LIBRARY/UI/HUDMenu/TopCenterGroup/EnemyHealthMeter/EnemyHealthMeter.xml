@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon" name="LegendaryIcon_mc" selected="true" centerPoint3DX="49.7" centerPoint3DY="18.5">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon" name="LegendaryIcon_mc" centerPoint3DX="49.7" centerPoint3DY="18.5">
                   <matrix>
                     <Matrix tx="39.75" ty="9"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/SkullIcon" name="SkullIcon_mc" selected="true" centerPoint3DX="75.75" centerPoint3DY="25">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/SkullIcon" name="SkullIcon_mc" centerPoint3DX="75.75" centerPoint3DY="25">
                   <matrix>
                     <Matrix a="0.673202514648438" d="0.6875" tx="63.5" ty="9"/>
                   </matrix>
@@ -59,7 +59,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarBracket" name="Bracket_mc" selected="true" centerPoint3DX="2" centerPoint3DY="28">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarBracket" name="Bracket_mc" centerPoint3DX="2" centerPoint3DY="28">
                   <matrix>
                     <Matrix tx="-100" ty="24"/>
                   </matrix>
@@ -75,7 +75,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="MeterBar_mc" selected="true" centerPoint3DY="27">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="MeterBar_mc" centerPoint3DY="27">
                   <matrix>
                     <Matrix tx="-100" ty="24"/>
                   </matrix>
@@ -91,7 +91,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBar" name="Optional_mc" selected="true" centerPoint3DY="27">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBar" name="Optional_mc" centerPoint3DY="27">
                   <matrix>
                     <Matrix tx="-100" ty="24"/>
                   </matrix>

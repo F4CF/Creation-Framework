@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarBracket" name="Bracket_mc" selected="true" centerPoint3DX="102" centerPoint3DY="4">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarBracket" name="Bracket_mc" centerPoint3DX="102" centerPoint3DY="4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -40,7 +40,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="RadsBar_mc" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="RadsBar_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -53,7 +53,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="MeterBar_mc" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="MeterBar_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -66,7 +66,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="Optional_mc" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="Optional_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

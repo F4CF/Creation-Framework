@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/RolloverWidget/TaggedForSearchIcon" name="TaggedForSearchIcon_mc" selected="true" centerPoint3DX="98.15" centerPoint3DY="15.2">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/CenterGroup/RolloverWidget/TaggedForSearchIcon" name="TaggedForSearchIcon_mc" centerPoint3DX="98.15" centerPoint3DY="15.2">
                   <matrix>
                     <Matrix a="0.399322509765625" d="0.39666748046875" tx="83.15" ty="0.2"/>
                   </matrix>
@@ -43,7 +43,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon_Art" name="LegendaryIcon_mc" selected="true" centerPoint3DX="71.05" centerPoint3DY="7.1">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/LegendaryIcon_Art" name="LegendaryIcon_mc" centerPoint3DX="71.05" centerPoint3DY="7.1">
                   <matrix>
                     <Matrix a="0.662246704101563" d="0.658538818359375" tx="63.5" ty="-0.05"/>
                   </matrix>
@@ -59,7 +59,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" selected="true" centerPoint3DX="19.45" centerPoint3DY="44">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" centerPoint3DX="19.45" centerPoint3DY="44">
                   <matrix>
                     <Matrix ty="28"/>
                   </matrix>

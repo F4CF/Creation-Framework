@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/HUDNotificationsGroup/XPMeter/LeftToRightText" name="LeveUpTextClip" selected="true" centerPoint3DX="196" centerPoint3DY="21.8">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/HUDNotificationsGroup/XPMeter/LeftToRightText" name="LeveUpTextClip" centerPoint3DX="196" centerPoint3DY="21.8">
                   <matrix>
                     <Matrix tx="126"/>
                   </matrix>
@@ -85,7 +85,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarBracket" name="LevelUpBracket" selected="true" centerPoint3DX="136" centerPoint3DY="40">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarBracket" name="LevelUpBracket" centerPoint3DX="136" centerPoint3DY="40">
                   <matrix>
                     <Matrix tx="34" ty="36"/>
                   </matrix>
@@ -101,7 +101,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBar" name="LevelUPBar" selected="true" centerPoint3DX="134" centerPoint3DY="39">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBar" name="LevelUPBar" centerPoint3DX="134" centerPoint3DY="39">
                   <matrix>
                     <Matrix tx="34" ty="36"/>
                   </matrix>

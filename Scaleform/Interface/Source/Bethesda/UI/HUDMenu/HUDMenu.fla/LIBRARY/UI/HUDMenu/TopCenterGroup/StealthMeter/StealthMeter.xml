@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BracketLeft" name="BracketLeftInstance" selected="true" centerPoint3DX="-80.25" centerPoint3DY="16.05">
+                <DOMSymbolInstance libraryItemName="Shared/BracketLeft" name="BracketLeftInstance" centerPoint3DX="-80.25" centerPoint3DY="16.05">
                   <matrix>
                     <Matrix tx="-83.5" ty="0.05"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BracketRight" name="BracketRightInstance" selected="true" centerPoint3DX="79" centerPoint3DY="16">
+                <DOMSymbolInstance libraryItemName="Shared/BracketRight" name="BracketRightInstance" centerPoint3DX="79" centerPoint3DY="16">
                   <matrix>
                     <Matrix tx="75.75"/>
                   </matrix>

@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BorderGraphic" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Shared/BorderGraphic" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="0.25" d="2.47500610351563" ty="7.45"/>
                   </matrix>

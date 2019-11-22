@@ -1,6 +1,6 @@
 {
 	"files.exclude": {
-		"Scaleform/": true,
+		"Scaleform/": false,
 		"Scripting/": true,
 		"ScriptingTests/": true,
 		"System/": true,

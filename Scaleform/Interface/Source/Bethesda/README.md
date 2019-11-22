@@ -1,130 +1,26 @@
-# Scaleform
-This is the root package directory for AS3 imports.
-These Flash documents reflect the vanilla UI libraries.
-<BR>**Fallout 4:** `v1.10.138.3908801`
-<BR>**FFDec:** `v11.2.0.1722`
+Welcome to the Scaleform user interface kit for Bethesda's Fallout 4.
+These Flash documents and AS3 classes are an accurate restoration of the vanilla UI source files.
 
-# Tools
-- [Adobe Flash](https://en.wikipedia.org/wiki/Adobe_Flash) or [Adobe Animate](https://en.wikipedia.org/wiki/Adobe_Animate)
-- [JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler/releases) (aka FFDec)
-- [Font Forge](https://fontforge.github.io/en-US/) & [Font Forge - Common Problems](https://fontforge.github.io/problems.html)
+Versions
+---
+- **Fallout 4:** `v1.10.138.3908801`<BR>
+- **FFDec:** `v11.2.0.1722`<BR>
 
-# [Autodesk Scaleform Documentation](https://help.autodesk.com/view/SCLFRM/ENU/)
-* [Font and Text Configuration Overview](https://help.autodesk.com/view/SCLFRM/ENU/?guid=__scaleform_help_font_html)
-* [Scaleform Game Communication Overview](https://help.autodesk.com/view/SCLFRM/ENU/?guid=__scaleform_help_game_communication_html)
-* [AS3 Extensions Reference](https://help.autodesk.com/view/SCLFRM/ENU/?guid=__scaleform_help_as3_reference_html)
-
-# Fonts
-This section provides details for the font libraries used by Fallout 4.
-
-#### Fonts Not Included
-* [Arial](https://docs.microsoft.com/en-us/typography/font-list/arial)
-* [Courier New](https://docs.microsoft.com/en-us/typography/font-list/courier-new)
-* [Roboto](https://fonts.google.com/specimen/Roboto)
-
-#### Font Symbol Mappings
-```
-map "$HandwrittenFont" = "Handwritten_Institute" Normal
-map "$MAIN_Font" = "Roboto Condensed" Normal
-map "$MAIN_Font_Bold" = "Roboto Condensed" Bold
-map "$Terminal_Font" = "Share-TechMono" Normal
-map "$Controller_Buttons" = "Controller  Buttons" Normal
-map "$Controller_Buttons_inverted" = "Controller  Buttons inverted" Normal
-map "$ConsoleFont" = "Arial" Normal
-map "$DebugTextFont" = "Consolas" Normal
-map "$BRODY" = "Brody" Bold
-map "$CClub_Font" = "Eurostile LT Std" Roman
-map "$CClub_Font_Bold" = "Eurostile LT Std" Demi
-```
-
-#### Embedded Fonts
-* `Adventure.ttf`
-* `Press Start 2P.ttf`
-* `vir2L_Medium.ttf`
+Table of Contents
+---
+- [README](.\README.md)
+  - [Tools](.\README.Tools.md)
+  - [Fonts](.\README.Fonts.md)
+  - [Issues](.\README.Issues.md)
 
 
-# Font Libraries
-The fonts displayed in game are stored in a [[Flash File]] font library.
-These font libraries are shared between menus during runtime.
-The current font configuration can be found in `Fallout 4\Data\Interface\FontConfig.txt`
+# Flash Documents
+All Scaleform documents in Fallout 4 will target `Flash Player 11.2` with `Actionscript 3.0`.
 
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $MAIN_Font
-* * **Font Family:** Roboto Condensed
-* * **Font Style:** Normal
+Fallout 4 presets for Adobe Flash Animate are provided in the `--Tools` folder.
+Install these configurations to the `...\AppData\Local\Adobe\Animate CC 2019\en_US\Configuration\` directory.
 
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $MAIN_Font_Bold
-* * **Font Family:** Roboto Condensed
-* * **Font Style:** Bold
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $HandwrittenFont
-* * **Font Family:** Handwritten_Institute
-* * **Font Style:** Normal
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $BRODY
-* * **Font Family:** "Brody"
-* * **Font Style:** Bold
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $Terminal_Font
-* * **Font Family:** Share-TechMono
-* * **Font Style:** Normal
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $Controller_Buttons
-* * **Font Family:** Controller  Buttons
-* * **Font Style:** Normal
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $Controller_Buttons_inverted
-* * **Font Family:** Controller  Buttons inverted
-* * **Font Style:** Normal
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $CClub_Font
-* * **Font Family:** Eurostile LT Std Roman
-* * **Font Style:** None
-
-* **Library:** Interface\fonts_en.swf
-* * **Font Class:** $CClub_Font_Bold
-* * **Font Family:** Eurostile Cyr Std Bold
-* * **Font Style:** None
-
-* **Library:** Interface\fonts_console.swf
-* * **Font Class:** $ConsoleFont
-* * **Font Family:** Arial
-* * **Font Style:** Normal
-
-* **Library:** Interface\fonts_console.swf
-* * **Font Class:** $DebugTextFont
-* * **Font Family:** Consolas
-* * **Font Style:** Normal
-
-
-# Issues
-* The original fonts were damaged by the extraction process.
-* `Source\Bethesda\Shared\AS3\BSScrollingList.as`:  Figure out which variable(s) are used between `bAllowWheelScrollNoSelectionChange` & `bAllowSelectionDisabledListNav`.
-* The `PipboyMenu.swf` uses a version of `Shared\AS3\BSScrollingList.as` with an additional boolean variable called `bAllowSelectionDisabledListNav`.
-* PipboyMenu could possibly use finer tweaking of the page header textfields. Its pretty dang close already though.
-* HUDMenu ammo counter seems messed up. Incorrect counting.
-
-#### Issue - Controller_Buttons_inverted (Normal)
-```
-Bad Font name
-
-The PostScript font name "Controller  Buttons inverted" is invalid.
-It should be printable ASCII,
-must not contain (){}[]<>%/ or space
-and must be shorter than 63 characters
-```
-```
-Warnings
-
-The following table(s) in the fonts have been ignored by FontForge.
-	Ignoring 'hdmx' horizontal device metrics table.
-In GID 13 the advance width (64853) is greater than the stated maximum (1610)
-	Subsequent errors will not be reported.
-```
+**Presets** <BR>
+- **Standard:** A standard full screen scaleform document uses a size of `1280x720` at `30` frames per second.
+- **Pipboy:** The Pipboy and Pipboy Tab documents use a size of `876x700` at `30` frames per second.
+- **Terminal:** A Terminal document uses a size of `826x700` at `24` frames per second.

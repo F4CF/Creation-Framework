@@ -16,7 +16,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -25,7 +25,7 @@
             </DOMFrame>
             <DOMFrame index="1" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -34,7 +34,7 @@
             </DOMFrame>
             <DOMFrame index="7" duration="8" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -46,7 +46,7 @@
             </DOMFrame>
             <DOMFrame index="15" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" name="MeterBarInternal_mc" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

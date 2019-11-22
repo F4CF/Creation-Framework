@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" duration="14" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -15,7 +15,7 @@
             </DOMFrame>
             <DOMFrame index="14" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" selected="true" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -27,7 +27,7 @@
             </DOMFrame>
             <DOMFrame index="29" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/MeterBar/MeterBarInternalShape" centerPoint3DX="100" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="Shared/MeterBar/MeterBarInternalShape" centerPoint3DX="100" centerPoint3DY="3">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

@@ -19,7 +19,7 @@
             </DOMFrame>
             <DOMFrame index="4" duration="4" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BorderGraphic" selected="true" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Shared/BorderGraphic" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="1.33332824707031" d="3" tx="4" ty="9"/>
                   </matrix>
@@ -34,7 +34,7 @@
             </DOMFrame>
             <DOMFrame index="13" duration="5" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BorderGraphic" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Shared/BorderGraphic" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="1.33332824707031" d="3" tx="4" ty="9"/>
                   </matrix>
@@ -49,7 +49,7 @@
             </DOMFrame>
             <DOMFrame index="23" duration="5" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BorderGraphic" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="Shared/BorderGraphic" symbolType="graphic" loop="loop">
                   <matrix>
                     <Matrix a="1.33332824707031" d="3" tx="4" ty="9"/>
                   </matrix>
