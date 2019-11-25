@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Presentation/Slides" itemID="5db6bd7d-000001e8" lastModified="1573104935" lastUniqueIdentifier="3">
   <timeline>
-    <DOMTimeline name="Slides" currentFrame="4">
+    <DOMTimeline name="Slides" currentFrame="3">
       <layers>
         <DOMLayer name="Guide:StageBounds" color="#FF9900" locked="true" autoNamed="false" layerType="guide">
           <frames>
@@ -158,7 +158,7 @@
             </DOMFrame>
             <DOMFrame index="3" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/MapMarkers/_DEMO_MapMarkers" centerPoint3DX="640" centerPoint3DY="360">
+                <DOMSymbolInstance libraryItemName="Shared/MapMarkers/_DEMO_MapMarkers" selected="true" centerPoint3DX="640" centerPoint3DY="360">
                   <transformationPoint>
                     <Point x="640" y="360"/>
                   </transformationPoint>

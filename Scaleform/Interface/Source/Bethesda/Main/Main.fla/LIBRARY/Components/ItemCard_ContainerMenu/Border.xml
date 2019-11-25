@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Components/ItemCard_ContainerMenu/Border" itemID="5dae9557-000002de" lastModified="1572139114">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Components/ItemCard_ContainerMenu/Border" itemID="5dae9557-000002de" lastModified="1574615995">
   <timeline>
     <DOMTimeline name="Border">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape isFloating="true">
+                <DOMShape selected="true" isFloating="true">
                   <fills>
                     <FillStyle index="1">
                       <SolidColor color="#FFFFFF"/>

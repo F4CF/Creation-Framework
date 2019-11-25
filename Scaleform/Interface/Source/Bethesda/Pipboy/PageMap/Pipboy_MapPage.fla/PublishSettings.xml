@@ -20,15 +20,15 @@
     <pngDefaultName>1</pngDefaultName>
     <swcDefaultName>1</swcDefaultName>
     <oamDefaultName>1</oamDefaultName>
-    <flashFileName>Pipboy_MapPage2.swf</flashFileName>
-    <projectorWinFileName>Pipboy_MapPage2.exe</projectorWinFileName>
-    <projectorMacFileName>Pipboy_MapPage2.app</projectorMacFileName>
-    <htmlFileName>Pipboy_MapPage2.html</htmlFileName>
-    <gifFileName>Pipboy_MapPage2.gif</gifFileName>
-    <jpegFileName>Pipboy_MapPage2.jpg</jpegFileName>
-    <pngFileName>Pipboy_MapPage2.png</pngFileName>
-    <swcFileName>Pipboy_MapPage2.swc</swcFileName>
-    <oamFileName>Pipboy_MapPage2.oam</oamFileName>
+    <flashFileName>Pipboy_MapPage.swf</flashFileName>
+    <projectorWinFileName>Pipboy_MapPage.exe</projectorWinFileName>
+    <projectorMacFileName>Pipboy_MapPage.app</projectorMacFileName>
+    <htmlFileName>Pipboy_MapPage.html</htmlFileName>
+    <gifFileName>Pipboy_MapPage.gif</gifFileName>
+    <jpegFileName>Pipboy_MapPage.jpg</jpegFileName>
+    <pngFileName>Pipboy_MapPage.png</pngFileName>
+    <swcFileName>Pipboy_MapPage.swc</swcFileName>
+    <oamFileName>Pipboy_MapPage.oam</oamFileName>
     <publishFormat id="3E6AA359-3A3C-4827-B709-9977BDDDACCB">0</publishFormat>
     <publishFormat id="BBC1F406-65F2-4219-9304-FA48C7549E44">0</publishFormat>
     <publishFormat id="BBC1F806-66F2-4339-9306-FA48C7549E59">0</publishFormat>
@@ -39,8 +39,8 @@
     <VersionInfo>30,0,0,0;26,0,0,0;25,0,0,0;23,0,0,0;21,0,0,0;20,0,0,0;19,0,0,0;18,0,0,0;17,0,0,0;16,0,0,0;14,0,0,0;13,0,0,0;12,0,0,0;11,9,0,0;11,8,0,0;11,7,0,0;11,6,0,0;11,5,0,0;11,4,0,0;11,3,0,0;11,2,0,0;11,1,0,0;10,3,0,0;10,2,153,0;10,1,52,0;9,0,124,0;8,0,24,0;7,0,14,0;6,0,79,0;5,0,58,0;4,0,32,0;3,0,8,0;2,0,1,12;1,0,0,1;</VersionInfo>
     <UsingDefaultContentFilename>1</UsingDefaultContentFilename>
     <UsingDefaultAlternateFilename>1</UsingDefaultAlternateFilename>
-    <ContentFilename>Pipboy_MapPage2_content.html</ContentFilename>
-    <AlternateFilename>Pipboy_MapPage2_alternate.html</AlternateFilename>
+    <ContentFilename>Pipboy_MapPage_content.html</ContentFilename>
+    <AlternateFilename>Pipboy_MapPage_alternate.html</AlternateFilename>
     <UsingOwnAlternateFile>0</UsingOwnAlternateFile>
     <OwnAlternateFilename></OwnAlternateFilename>
     <Width>876</Width>
@@ -153,7 +153,7 @@
   </PublishOamProperties>
   <PublishProperties id="3E6AA359-3A3C-4827-B709-9977BDDDACCB" name="SWF Archive" otf="true" enabled="true">
     <Property name="default">true</Property>
-    <Property name="filename">Pipboy_MapPage2.zip</Property>
+    <Property name="filename">Pipboy_MapPage.zip</Property>
   </PublishProperties>
   <PublishProperties id="BBC1F406-65F2-4219-9304-FA48C7549E44" name="SVG Image" otf="true" enabled="true">
     <Property name="copy">true</Property>

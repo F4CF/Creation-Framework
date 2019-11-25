@@ -1,4 +1,4 @@
-package Shared.AS3
+﻿package Shared.AS3
 {
 	import Shared.AS3.COMPANIONAPP.CompanionAppMode;
 	import Shared.GlobalFunc;
@@ -103,6 +103,7 @@ package Shared.AS3
 		
 		public function BSButtonHint()
 		{
+			trace("[BSButtonHint] (CTOR)");
 			super();
 			visible = false;
 			mouseChildren = false;

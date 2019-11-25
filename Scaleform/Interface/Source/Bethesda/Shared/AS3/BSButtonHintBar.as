@@ -1,4 +1,4 @@
-package Shared.AS3
+﻿package Shared.AS3
 {
 	import Shared.AS3.COMPANIONAPP.CompanionAppMode;
 	import Shared.AS3.COMPANIONAPP.MobileButtonHint;
@@ -37,6 +37,7 @@ package Shared.AS3
 		
 		public function BSButtonHintBar()
 		{
+			trace("[BSButtonHintBar] (CTOR)");
 			this.SetButtonHintData = this.SetButtonHintData_Impl;
 			super();
 			visible = false;

@@ -30,7 +30,7 @@
                     <DOMTextRun>
                       <characters>Component</characters>
                       <textAttrs>
-                        <DOMTextAttrs alignment="center" aliasText="false" rotation="true" lineSpacing="5" size="28" bitmapSize="560" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" rotation="true" lineSpacing="5" lineHeight="33.6" size="28" bitmapSize="560" face="$MAIN_Font*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>

@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="BSButtonHintBar/BSButtonHint" name="RightTriggerButton_mc" centerPoint3DX="871.75" centerPoint3DY="17.9">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHint" name="RightTriggerButton_mc" centerPoint3DX="871.75" centerPoint3DY="17.9">
                   <matrix>
                     <Matrix a="1.51724243164063" d="1.43339538574219" tx="720" ty="-6.9"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="BSButtonHintBar/BSButtonHint" name="LeftTriggerButton_mc" centerPoint3DX="141.75" centerPoint3DY="17.9">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHint" name="LeftTriggerButton_mc" centerPoint3DX="141.75" centerPoint3DY="17.9">
                   <matrix>
                     <Matrix a="1.51750183105469" d="1.43339538574219" tx="-10" ty="-6.9"/>
                   </matrix>

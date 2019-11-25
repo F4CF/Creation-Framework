@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" centerPoint3DX="457.45" centerPoint3DY="591">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" centerPoint3DX="457.45" centerPoint3DY="591">
                   <matrix>
                     <Matrix tx="438" ty="575"/>
                   </matrix>
