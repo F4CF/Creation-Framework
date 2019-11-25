@@ -1,4 +1,4 @@
-package
+﻿package
 {
 	import Shared.AS3.BSScrollingListFadeEntry;
 	import Shared.GlobalFunc;
@@ -26,7 +26,7 @@ package
 			this.ModSelectedIcon_mc.gotoAndStop(!!this.selected?"Selected":"Unselected");
 			this.FavoriteIcon_mc.visible = param1.modTaggedForSearch == true;
 			this.FavoriteIcon_mc.x = this.textField.getLineMetrics(0).width + this.textField.x + 5;
-			_loc3_ = var _loc3_:ColorTransform = this.FavoriteIcon_mc.transform.colorTransform;
+			var _loc3_:ColorTransform = this.FavoriteIcon_mc.transform.colorTransform;
 			_loc3_.redOffset = !!this.selected?Number(-255):Number(0);
 			_loc3_.greenOffset = !!this.selected?Number(-255):Number(0);
 			_loc3_.blueOffset = !!this.selected?Number(-255):Number(0);

@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/ContainerMenu/Lists/Entries/EquipIconGraphic" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="UI/ContainerMenu/BackgroundGraphic" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

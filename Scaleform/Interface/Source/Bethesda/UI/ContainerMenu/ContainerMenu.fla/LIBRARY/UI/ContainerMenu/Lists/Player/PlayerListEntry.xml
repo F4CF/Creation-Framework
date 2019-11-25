@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/ContainerMenu/TaggedForSearchIcon" name="TaggedForSearchIcon_mc" centerPoint3DX="53.3" centerPoint3DY="29.4">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Icons/TaggedForSearchIcon" name="TaggedForSearchIcon_mc" centerPoint3DX="53.3" centerPoint3DY="29.4">
                   <matrix>
                     <Matrix a="0.399322509765625" d="0.395004272460938" tx="38.3" ty="14.4"/>
                   </matrix>

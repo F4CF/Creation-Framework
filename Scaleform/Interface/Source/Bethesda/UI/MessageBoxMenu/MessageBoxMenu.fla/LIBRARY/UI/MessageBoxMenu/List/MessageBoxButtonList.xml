@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/ScrollArrow" name="ScrollDown" selected="true" centerPoint3DX="-19.5" centerPoint3DY="188.5">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/ScrollArrow" name="ScrollDown" centerPoint3DX="-19.5" centerPoint3DY="188.5">
                   <matrix>
                     <Matrix d="-1" tx="-27" ty="179"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/ScrollArrow" name="ScrollUp" selected="true" centerPoint3DX="-20.5" centerPoint3DY="15.5">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/ScrollArrow" name="ScrollUp" centerPoint3DX="-20.5" centerPoint3DY="15.5">
                   <matrix>
                     <Matrix tx="-28" ty="6"/>
                   </matrix>
@@ -38,7 +38,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/Border" name="border" selected="true" centerPoint3DX="50.5" centerPoint3DY="50.5">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/MessageBoxButtonList_Border" name="border" centerPoint3DX="50.5" centerPoint3DY="50.5">
                   <matrix>
                     <Matrix a="4.49998474121094" d="1.84989929199219"/>
                   </matrix>

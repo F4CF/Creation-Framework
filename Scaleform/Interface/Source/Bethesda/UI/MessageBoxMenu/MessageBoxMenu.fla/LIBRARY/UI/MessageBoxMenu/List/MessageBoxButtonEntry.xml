@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/Border" name="border" selected="true" centerPoint3DX="50.5" centerPoint3DY="50.5">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/MessageBoxButtonList_Border" name="border" centerPoint3DX="50.5" centerPoint3DY="50.5">
                   <matrix>
                     <Matrix a="4.5" d="0.300003051757813"/>
                   </matrix>

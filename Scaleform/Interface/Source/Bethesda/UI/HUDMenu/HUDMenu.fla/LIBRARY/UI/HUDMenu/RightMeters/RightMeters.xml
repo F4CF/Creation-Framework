@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/PowerArmorLowBatteryWarning/PowerArmorLowBatteryWarning" name="PowerArmorLowBatteryWarning_mc" selected="true" centerPoint3DX="200" centerPoint3DY="-398">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/PowerArmorLowBatteryWarning/PowerArmorLowBatteryWarning" name="PowerArmorLowBatteryWarning_mc" centerPoint3DX="200" centerPoint3DY="-398">
                   <matrix>
                     <Matrix ty="-410.55"/>
                   </matrix>
@@ -54,7 +54,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/AmmoCount/AmmoCount" name="AmmoCount_mc" selected="true" centerPoint3DX="26" centerPoint3DY="-41.9">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/AmmoCount/AmmoCount" name="AmmoCount_mc" centerPoint3DX="26" centerPoint3DY="-41.9">
                   <matrix>
                     <Matrix ty="-84"/>
                   </matrix>
@@ -70,7 +70,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FatigueWarning/FatigueWarning" name="FatigueWarning_mc" selected="true" centerPoint3DX="-137.8" centerPoint3DY="-21">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FatigueWarning/FatigueWarning" name="FatigueWarning_mc" centerPoint3DX="-137.8" centerPoint3DY="-21">
                   <matrix>
                     <Matrix tx="-256.55" ty="-46"/>
                   </matrix>
@@ -86,7 +86,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointMeter" name="ActionPointMeter_mc" selected="true" centerPoint3DX="89" centerPoint3DY="-13.55">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/ActionPointMeter/ActionPointMeter" name="ActionPointMeter_mc" centerPoint3DX="89" centerPoint3DY="-13.55">
                   <matrix>
                     <Matrix tx="-30" ty="-32"/>
                   </matrix>
@@ -102,7 +102,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget" name="HUDActiveEffectsWidget_mc" selected="true" centerPoint3DX="-30" centerPoint3DY="-22">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget/HUDActiveEffectsWidget" name="HUDActiveEffectsWidget_mc" centerPoint3DX="-30" centerPoint3DY="-22">
                   <matrix>
                     <Matrix tx="-30" ty="-22"/>
                   </matrix>

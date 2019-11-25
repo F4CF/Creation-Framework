@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/HUDMenu/Symbol 23" itemID="5dc13d4a-00000025" symbolType="graphic" lastModified="1573033970">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/HUDMenu/Symbol 23" itemID="5dc13d4a-00000025" symbolType="graphic" lastModified="1574615673">
   <timeline>
     <DOMTimeline name="Symbol 23">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
               <elements>
-                <DOMShape selected="true" isFloating="true">
+                <DOMShape isFloating="true">
                   <fills>
                     <FillStyle index="1">
                       <SolidColor color="#FFFFFF"/>

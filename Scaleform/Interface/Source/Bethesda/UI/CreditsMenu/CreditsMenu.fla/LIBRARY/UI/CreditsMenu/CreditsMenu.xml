@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" selected="true" centerPoint3DX="659.45" centerPoint3DY="636">
+                <DOMSymbolInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" centerPoint3DX="659.45" centerPoint3DY="636">
                   <matrix>
                     <Matrix tx="640" ty="620"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/CreditsMenu/CreditsMenuContainer" name="CreditsContainer" selected="true">
+                <DOMSymbolInstance libraryItemName="UI/CreditsMenu/CreditsMenuContainer" name="CreditsContainer">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -35,7 +35,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/CreditsMenu/Background" name="Background_mc" selected="true" centerPoint3DX="640" centerPoint3DY="350">
+                <DOMSymbolInstance libraryItemName="UI/CreditsMenu/Background" name="Background_mc" centerPoint3DX="640" centerPoint3DY="350">
                   <matrix>
                     <Matrix a="1.0546875" d="1.125" ty="-50"/>
                   </matrix>

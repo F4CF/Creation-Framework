@@ -32,13 +32,13 @@
           <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/TutorialText" itemID="5dc25e26-000002bc"/>
           <DOMFolderItem name="UI/HUDMenu/HUDNotificationsGroup/XPMeter" itemID="5dc261ec-000002d7"/>
           <DOMFolderItem name="UI/HUDMenu/LeftMeters" itemID="5dc24129-000002b2"/>
-          <DOMFolderItem name="UI/HUDMenu/RightMeters" itemID="5dc24128-000002b1" isExpanded="true"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters" itemID="5dc24128-000002b1"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/ActionPointMeter" itemID="5dc28a34-000005a1"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/AmmoCount" itemID="5dc28a18-00000597"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/ExplosiveAmmoCount" itemID="5dc28948-00000580"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/FatigueWarning" itemID="5dc28a26-0000059c"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/FlashLightWidget" itemID="5dc28972-00000587"/>
-          <DOMFolderItem name="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget" itemID="5dc28a07-00000594" isExpanded="true"/>
+          <DOMFolderItem name="UI/HUDMenu/RightMeters/HUDActiveEffectsWidget" itemID="5dc28a07-00000594"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/PowerArmorLowBatteryWarning" itemID="5dc28a54-000005ac"/>
           <DOMFolderItem name="UI/HUDMenu/RightMeters/WarningTextHolder" itemID="5dc28a44-000005a6"/>
           <DOMFolderItem name="UI/HUDMenu/TopCenterGroup" itemID="5dc146b8-0000029e"/>
@@ -58,7 +58,7 @@
           <DOMFontItem name="Shared/Fonts/$HandwrittenFont" itemID="5daeb3ba-0000027f" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$HandwrittenFont" linkageURL="fonts_en.swf" font="Handwritten_Institute" size="0" id="661" sourceLastImported="1571434041" embeddedCharacters="!&quot;#$%&amp;&apos;()*+,-/:;&lt;=&gt;?@[\]^_{|}~¡¢£¤§©«¬®°±²µ¶»¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĄąĆćĈĉĔęĜĝĤĥıĴĵŁłŃńŐőŒœŚśŜŝŠšŬŭŰűŸŹźŻżŽžƒμ‘’“”†‡•€™" embedRanges="1|2|3"/>
      </fonts>
      <media>
-          <DOMBitmapItem name="UI/HUDMenu/Assets/bitmap581.png" itemID="5dc13d4a-0000001c" sourceLastImported="1573096509" externalFileSize="139" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="UI/HUDMenu/Assets/bitmap581.png" bitmapDataHRef="M 2 1571730685.dat" frameRight="6000" frameBottom="440"/>
+          <DOMBitmapItem name="UI/HUDMenu/Assets/bitmap581.png" itemID="5dc13d4a-0000001c" sourceLastImported="1574615380" externalFileSize="139" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="UI/HUDMenu/Assets/bitmap581.png" bitmapDataHRef="M 2 1571730685.dat" frameRight="6000" frameBottom="440"/>
           <DOMSoundItem name="UI/HUDMenu/Assets/sound153.mp3" itemID="5dc13d4a-00000017" sourceLastImported="1572945226" externalFileSize="883" href="UI/HUDMenu/Assets/sound153.mp3" soundDataHRef="M 1 1572945226.dat" format="22kHz 16bit Mono" sampleCount="576" exportFormat="5" exportBits="7" dataLength="883" exportNative="true" cachedSampleCount="144"/>
      </media>
      <symbols>
@@ -389,10 +389,10 @@
           <Include href="UI/HUDMenu/RightMeters/RightMeters.xml" itemID="5dc1487a-000002c7" lastModified="1573030860"/>
           <Include href="UI/HUDMenu/RightMeters/WarningTextHolder/WarningTextHolder.xml" itemID="5dc287f3-00000576" lastModified="1573029935"/>
           <Include href="UI/HUDMenu/SafeRect.xml" loadImmediate="false" itemID="5dc1488c-000002c8" lastModified="1573012329"/>
-          <Include href="UI/HUDMenu/Symbol 23.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000025" lastModified="1573033970"/>
-          <Include href="UI/HUDMenu/Symbol 257.xml" loadImmediate="false" itemID="5dc13d4a-0000007c" lastModified="1573033893"/>
-          <Include href="UI/HUDMenu/Symbol 443.xml" loadImmediate="false" itemID="5dc13d4a-000000e0" lastModified="1573033895"/>
-          <Include href="UI/HUDMenu/Symbol 599.xml" loadImmediate="false" itemID="5dc13d4a-00000153" lastModified="1573033890"/>
+          <Include href="UI/HUDMenu/Symbol 23.xml" itemIcon="1" loadImmediate="false" itemID="5dc13d4a-00000025" lastModified="1574615673"/>
+          <Include href="UI/HUDMenu/Symbol 257.xml" loadImmediate="false" itemID="5dc13d4a-0000007c" lastModified="1574615679"/>
+          <Include href="UI/HUDMenu/Symbol 443.xml" loadImmediate="false" itemID="5dc13d4a-000000e0" lastModified="1574615677"/>
+          <Include href="UI/HUDMenu/Symbol 599.xml" loadImmediate="false" itemID="5dc13d4a-00000153" lastModified="1574615727"/>
           <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthMeter.xml" loadImmediate="false" itemID="5dc26762-00000453" lastModified="1573022363"/>
           <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBar.xml" itemID="5dc269ba-0000046c" lastModified="1573022359"/>
           <Include href="UI/HUDMenu/TopCenterGroup/EnemyHealthMeter/EnemyHealthOptionalBarInternal.xml" loadImmediate="false" itemID="5dc26a8f-0000046d" lastModified="1573022351"/>

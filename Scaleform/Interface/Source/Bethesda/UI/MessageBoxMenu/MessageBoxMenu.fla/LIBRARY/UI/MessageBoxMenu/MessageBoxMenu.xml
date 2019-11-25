@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/MessageBoxButtonList" name="List_mc" selected="true" centerPoint3DX="285.35" centerPoint3DY="162.9">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/List/MessageBoxButtonList" name="List_mc" centerPoint3DX="285.35" centerPoint3DY="162.9">
                   <matrix>
                     <Matrix tx="45" ty="69.5"/>
                   </matrix>
@@ -43,7 +43,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/BGRectBlack" name="BGRectBlack_mc" selected="true" centerPoint3DX="171.3" centerPoint3DY="111.3">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/BGRectBlack" name="BGRectBlack_mc" centerPoint3DX="171.3" centerPoint3DY="111.3">
                   <matrix>
                     <Matrix a="1.58824157714844" d="1.22723388671875"/>
                   </matrix>
@@ -59,7 +59,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/BGRect" name="BGRect_mc" selected="true" centerPoint3DX="171.25" centerPoint3DY="111.25">
+                <DOMSymbolInstance libraryItemName="UI/MessageBoxMenu/BGRect" name="BGRect_mc" centerPoint3DX="171.25" centerPoint3DY="111.25">
                   <matrix>
                     <Matrix a="1.58824157714844" d="1.22727966308594"/>
                   </matrix>

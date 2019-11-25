@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 128" symbolType="graphic" loop="loop">
+                <DOMSymbolInstance libraryItemName="UI/LevelUpMenu_UNK/SPECIALStar/SPECIALStar_Graphic" symbolType="graphic" loop="loop">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

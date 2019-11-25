@@ -249,8 +249,8 @@
     <EventFormat>0</EventFormat>
     <EventCompress>7</EventCompress>
     <OverrideSounds>0</OverrideSounds>
-    <Version>41</Version>
-    <ExternalPlayer>FlashPlayer30.0</ExternalPlayer>
+    <Version>15</Version>
+    <ExternalPlayer>FlashPlayer11.2</ExternalPlayer>
     <ActionScriptVersion>3</ActionScriptVersion>
     <PackageExportFrame>1</PackageExportFrame>
     <PackagePaths></PackagePaths>
@@ -277,7 +277,7 @@
     <IncludeXMP>1</IncludeXMP>
     <HardwareAcceleration>0</HardwareAcceleration>
     <AS3Flags>6</AS3Flags>
-    <DefaultLibraryLinkage>rsl</DefaultLibraryLinkage>
+    <DefaultLibraryLinkage>merge</DefaultLibraryLinkage>
     <RSLPreloaderMethod>wrap</RSLPreloaderMethod>
     <RSLPreloaderSWF>$(AppConfig)/ActionScript 3.0/rsls/loader_animation.swf</RSLPreloaderSWF>
     <LibraryPath>

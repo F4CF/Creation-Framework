@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Icon" selected="true" centerPoint3DX="-22.05" centerPoint3DY="-22.05">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Icon" centerPoint3DX="-22.05" centerPoint3DY="-22.05">
                   <matrix>
                     <Matrix tx="-40.3" ty="-40.3"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Border" selected="true" centerPoint3DX="22" centerPoint3DY="22">
+                <DOMSymbolInstance libraryItemName="UI/HUDMenu/RightMeters/FlashLightWidget/FlashLightWidget_Border" centerPoint3DX="22" centerPoint3DY="22">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
