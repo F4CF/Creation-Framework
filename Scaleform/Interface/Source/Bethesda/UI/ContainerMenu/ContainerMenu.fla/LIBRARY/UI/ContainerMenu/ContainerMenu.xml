@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/ContainerMenu/ContainerMenu" itemID="5dadd032-0000023b" linkageExportForAS="true" linkageClassName="ContainerMenu" lastModified="1574701506" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="UI/ContainerMenu/ContainerMenu" itemID="5dadd032-0000023b" linkageExportForAS="true" linkageClassName="ContainerMenu" lastModified="1574735820" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="ContainerMenu">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/QuantityMenu/QuantityMenu" name="QuantityMenu_mc" centerPoint3DX="438.3" centerPoint3DY="301.95">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/QuantityMenu/QuantityMenu" name="QuantityMenu_mc" centerPoint3DX="438.3" centerPoint3DY="301.95">
                   <matrix>
                     <Matrix tx="355.8" ty="244.35"/>
                   </matrix>
@@ -89,23 +89,23 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/ItemCard/ItemCard" name="ItemCard_mc" centerPoint3DX="722" centerPoint3DY="484">
+                <DOMComponentInstance libraryItemName="Shared/Assets/ItemCard/ItemCard" name="ItemCard_mc" centerPoint3DX="722" centerPoint3DY="484" uniqueID="2">
                   <matrix>
                     <Matrix tx="722" ty="484"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
-                </DOMSymbolInstance>
+                </DOMComponentInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="ButtonHintBar_mc" color="#867AAD" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="ButtonHintBar_mc" color="#867AAD" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" selected="true" centerPoint3DX="659.45" centerPoint3DY="671" uniqueID="1">
+                <DOMComponentInstance libraryItemName="Shared/BSButtonHintBar/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" selected="true" centerPoint3DX="659.45" centerPoint3DY="671" uniqueID="1">
                   <matrix>
                     <Matrix tx="640" ty="655"/>
                   </matrix>

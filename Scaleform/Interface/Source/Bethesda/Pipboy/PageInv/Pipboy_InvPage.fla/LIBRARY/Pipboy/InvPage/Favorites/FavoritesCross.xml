@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Pipboy/InvPage/Favorites/FavoritesCross" itemID="5db0ef59-00000287" linkageExportForAS="true" linkageClassName="FavoritesCross" lastModified="1571893807">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Pipboy/InvPage/Favorites/FavoritesCross" itemID="5db0ef59-00000287" linkageExportForAS="true" linkageClassName="FavoritesCross" lastModified="1574713711">
   <timeline>
     <DOMTimeline name="FavoritesCross">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/Favorites/Symbol 201" name="Selection_mc" centerPoint3DX="209.25" centerPoint3DY="29.5">
+                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/Favorites/FavoritesCross_Selection" name="Selection_mc" selected="true" centerPoint3DX="209.25" centerPoint3DY="29.5">
                   <matrix>
                     <Matrix tx="179.75"/>
                   </matrix>
@@ -18,11 +18,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="EntryHolder_mc" color="#F769D7" locked="true" autoNamed="false">
+        <DOMLayer name="EntryHolder_mc" color="#F769D7" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/Favorites/Symbol 199" name="EntryHolder_mc" centerPoint3DX="208.8" centerPoint3DY="211.85">
+                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/Favorites/FavoritesCross_EntryHolder" name="EntryHolder_mc" selected="true" centerPoint3DX="208.8" centerPoint3DY="211.85">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -31,7 +31,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Shape" color="#79EE23" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Shape" color="#79EE23" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>

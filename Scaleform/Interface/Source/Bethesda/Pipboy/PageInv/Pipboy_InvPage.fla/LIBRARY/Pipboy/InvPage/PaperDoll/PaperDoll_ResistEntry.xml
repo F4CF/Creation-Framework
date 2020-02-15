@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/PaperDoll/DamageIcons/DamageIcons" name="Icon_mc" centerPoint3DX="18.55" centerPoint3DY="21.7">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Icons/DamageIcons/DamageIcons" name="Icon_mc" centerPoint3DX="18.55" centerPoint3DY="21.7">
                   <matrix>
                     <Matrix a="0.996063232421875" d="1.00126647949219" tx="9.2" ty="12.3"/>
                   </matrix>

@@ -1,0 +1,611 @@
+digraph Bethesda
+{
+	label=<<FONT POINT-SIZE="18"><B>Scaleform</B></FONT>>;
+	node [shape=record fontsize=12];
+	rankdir=RL;
+	ranksep = 2.5;
+	nodesep = 0.25;
+	compound=true;
+
+	subgraph cluster_Shared
+	{ //---------------------------------------------
+		label="Shared";
+		color=orange;
+
+
+		subgraph cluster_Shared_Fonts
+		{ //---------------------------------------------
+			label="Shared/Fonts";
+			Shared_Fonts
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Shared/Fonts/fonts_en.fla   </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B> ASL, RSL</TD></TR>
+					<TR><TD ALIGN="left"><B>Fonts...</B></TD></TR>
+					<TR><TD ALIGN="left">- $MAIN_Font</TD></TR>
+					<TR><TD ALIGN="left">- $MAIN_Font_Bold</TD></TR>
+					<TR><TD ALIGN="left">- $CClub_Font</TD></TR>
+					<TR><TD ALIGN="left">- $CClub_Font_Bold</TD></TR>
+					<TR><TD ALIGN="left">- $Terminal_Font</TD></TR>
+					<TR><TD ALIGN="left">- $BRODY</TD></TR>
+					<TR><TD ALIGN="left">- $HandwrittenFont</TD></TR>
+					<TR><TD ALIGN="left">- $Controller_Buttons</TD></TR>
+					<TR><TD ALIGN="left">- $Controller_Buttons_inverted</TD></TR>
+					<TR><TD ALIGN="left"><B>Fonts Embeded...</B></TD></TR>
+					<TR><TD ALIGN="left">- Arial</TD></TR>
+					<TR><TD ALIGN="left">- CourierNew</TD></TR>
+					<TR><TD ALIGN="left">- TimesNewRoman</TD></TR>
+				</TABLE>>
+			];
+			Shared_Fonts_Console
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Shared/Fonts/fonts_console.fla   </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B> ASL, RSL</TD></TR>
+					<TR><TD ALIGN="left"><B>Fonts Embeded...</B></TD></TR>
+					<TR><TD ALIGN="left">- Arial</TD></TR>
+					<TR><TD ALIGN="left">- CourierNew</TD></TR>
+					<TR><TD ALIGN="left">- TimesNewRoman</TD></TR>
+				</TABLE>>
+			];
+			Shared_Fonts_Programs
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Shared/Fonts/fonts_programs.fla    </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B> ASL, RSL</TD></TR>
+					<TR><TD ALIGN="left"><B>Fonts Embeded...</B></TD></TR>
+					<TR><TD ALIGN="left">- Arial</TD></TR>
+					<TR><TD ALIGN="left">- CourierNew</TD></TR>
+					<TR><TD ALIGN="left">- TimesNewRoman</TD></TR>
+				</TABLE>>
+			];
+		}
+
+		Shared_BSButtonHintBar
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Shared/BSButtonHintBar   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL, RSL</TD></TR>
+			</TABLE>>
+		];
+		{
+			Shared_BSButtonHintBar -> Shared_Fonts;
+		}
+
+		Shared_MapMarkers
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Shared/MapMarkers   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+			</TABLE>>
+		];
+	}
+
+
+
+
+
+	subgraph cluster_Shared_Assets
+	{ //---------------------------------------------
+		label=<<FONT POINT-SIZE="18"><B>Shared/Assets.fla</B></FONT>>;
+		color=red;
+
+		Shared_Assets
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Shared/Assets.fla  </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+			</TABLE>>
+		];
+
+		subgraph cluster_Shared_Assets_Icons
+		{ //---------------------------------------------
+			label="Icons";
+			id="Shared_Assets_Icons";
+
+			Shared_DamageIcons
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Shared/DamageIcons  </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+					<TR><TD ALIGN="left"><B>Icons...</B></TD></TR>
+					<TR><TD ALIGN="left">- Damage</TD></TR>
+					<TR><TD ALIGN="left">- Defense</TD></TR>
+					<TR><TD ALIGN="left">- Energy</TD></TR>
+					<TR><TD ALIGN="left">- Fire</TD></TR>
+					<TR><TD ALIGN="left">- Frost</TD></TR>
+					<TR><TD ALIGN="left">- Poison</TD></TR>
+					<TR><TD ALIGN="left">- Radiation</TD></TR>
+				</TABLE>>
+			];
+
+			Shared_HotkeyIcons
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Shared/HotkeyIcons  </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+				</TABLE>>
+			];
+			{
+				Shared_HotkeyIcons -> Shared_Fonts;
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	subgraph cluster_Components
+	{ //---------------------------------------------
+		label="Components";
+
+		subgraph cluster_Components_ItemCard
+		{ //---------------------------------------------
+			label=<<FONT POINT-SIZE="18"><B>Components/ItemCard.fla   </B></FONT>>;
+
+
+			Components_ItemCard
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Components/ItemCard   </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+					<TR><TD ALIGN="left"><B>Entries...</B></TD></TR>
+					<TR><TD ALIGN="left">- StandardEntry</TD></TR>
+					<TR><TD ALIGN="left">- DescriptionEntry</TD></TR>
+					<TR><TD ALIGN="left">- MultiEntry</TD></TR>
+					<TR><TD ALIGN="left">- TimedEntry</TD></TR>
+					<TR><TD ALIGN="left">- ComponentsEntry</TD></TR>
+					<TR><TD ALIGN="left">- AmmoEntry</TD></TR>
+				</TABLE>>
+			];
+			{
+				Components_ItemCard -> Shared_Fonts;
+				Components_ItemCard -> Shared_DamageIcons;
+			}
+
+		}
+
+
+
+
+
+
+		Components_TextEntry
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Components/TextEntry   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+			</TABLE>>
+		];
+
+
+		Components_SWFLoaderClip
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Components/SWFLoaderClip    </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+			</TABLE>>
+		];
+
+
+		Components_GhostBarMeter
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>Components/GhostBarMeter    </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>ASL</TD></TR>
+			</TABLE>>
+		];
+
+
+	}
+
+
+	subgraph cluster_Menus
+	{ //---------------------------------------------
+		label="Menus";
+
+
+
+		subgraph cluster_Pipboy
+		{ //---------------------------------------------
+			label="Pipboy";
+			color=green;
+
+
+			UI_Pipboy
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>Pipboy</B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+				</TABLE>>
+			];
+			{
+				UI_Pipboy -> Shared_Fonts;
+				UI_Pipboy -> Shared_BSButtonHintBar;
+				UI_Pipboy -> Shared_DamageIcons;
+
+				// Pages
+				UI_Pipboy -> UI_Pipboy_PageStats;
+				UI_Pipboy -> UI_Pipboy_PageInv;
+				UI_Pipboy -> UI_Pipboy_PageData;
+				UI_Pipboy -> UI_Pipboy_PageMap;
+				UI_Pipboy -> UI_Pipboy_PageRadio;
+			}
+
+
+			subgraph cluster_PipboyPages
+			{ //---------------------------------------------
+				label="Pipboy Pages";
+
+				UI_Pipboy_PageStats
+				[
+					style=rounded;
+					label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+						<TR><TD><FONT POINT-SIZE="18"><B>Pipboy/PageStats  </B></FONT></TD></TR>
+						<TR><TD ALIGN="left"><B>Share: </B>RSL</TD></TR>
+					</TABLE>>
+				];
+				{
+					UI_Pipboy_PageStats -> Shared_Fonts;
+					UI_Pipboy_PageStats -> Shared_DamageIcons;
+				}
+
+				UI_Pipboy_PageInv
+				[
+					style=rounded;
+					label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+						<TR><TD><FONT POINT-SIZE="18"><B>Pipboy/PageInv  </B></FONT></TD></TR>
+						<TR><TD ALIGN="left"><B>Share: </B>RSL</TD></TR>
+					</TABLE>>
+				];
+				{
+					UI_Pipboy_PageInv -> Shared_Fonts;
+					UI_Pipboy_PageInv -> Shared_BSButtonHintBar;
+					UI_Pipboy_PageInv -> Shared_DamageIcons;
+					UI_Pipboy_PageInv -> Shared_HotkeyIcons;
+					UI_Pipboy_PageInv -> Components_ItemCard;
+				}
+
+				UI_Pipboy_PageData
+				[
+					style=rounded;
+					label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+						<TR><TD><FONT POINT-SIZE="18"><B>Pipboy/PageData  </B></FONT></TD></TR>
+						<TR><TD ALIGN="left"><B>Share: </B>RSL</TD></TR>
+					</TABLE>>
+				];
+				{
+					UI_Pipboy_PageData -> Shared_Fonts;
+					UI_Pipboy_PageData -> Shared_BSButtonHintBar;
+					UI_Pipboy_PageData -> Shared_DamageIcons;
+					UI_Pipboy_PageData -> Shared_HotkeyIcons;
+				}
+
+				UI_Pipboy_PageMap
+				[
+					style=rounded;
+					label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+						<TR><TD><FONT POINT-SIZE="18"><B>Pipboy/PageMap  </B></FONT></TD></TR>
+						<TR><TD ALIGN="left"><B>Share: </B>RSL</TD></TR>
+					</TABLE>>
+				];
+				{
+					UI_Pipboy_PageMap -> Shared_Fonts;
+					UI_Pipboy_PageMap -> Shared_MapMarkers;
+				}
+
+				UI_Pipboy_PageRadio
+				[
+					style=rounded;
+					label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+						<TR><TD><FONT POINT-SIZE="18"><B>Pipboy/PageRadio  </B></FONT></TD></TR>
+						<TR><TD ALIGN="left"><B>Share: </B>RSL</TD></TR>
+					</TABLE>>
+				];
+				{
+					UI_Pipboy_PageRadio -> Shared_Fonts;
+				}
+			}
+
+		}
+
+
+		subgraph cluster_HUD
+		{ //---------------------------------------------
+			label="HUD";
+
+
+			UI_HUDMenu
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>UI/HUDMenu  </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+				</TABLE>>
+			];
+			{
+				UI_HUDMenu -> Shared_Fonts;
+				UI_HUDMenu -> Shared_DamageIcons;
+				UI_HUDMenu -> Shared_MapMarkers;
+			}
+
+
+			UI_PowerArmorHUDMenu
+			[
+				style=rounded;
+				label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+					<TR><TD><FONT POINT-SIZE="18"><B>UI/PowerArmorHUDMenu   </B></FONT></TD></TR>
+					<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+				</TABLE>>
+			];
+			{
+				UI_PowerArmorHUDMenu -> Shared_Fonts;
+				UI_PowerArmorHUDMenu -> Shared_DamageIcons;
+				UI_PowerArmorHUDMenu -> Shared_MapMarkers;
+			}
+
+
+		}
+
+
+		UI_CursorMenu
+		[
+			style="rounded";
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/CursorMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+
+
+		UI_SWFLoaderMenu
+		[
+			style="rounded";
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/SWFLoaderMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+
+
+		UI_FaderMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/FaderMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+
+
+		UI_ButtonBarMenu
+		[
+			group="A";
+			style="rounded";
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/ButtonBarMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_ButtonBarMenu -> Shared_Fonts;
+			UI_ButtonBarMenu -> Shared_BSButtonHintBar;
+		}
+
+
+
+		UI_TerminalMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/TerminalMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_TerminalMenu -> Shared_Fonts;
+			UI_TerminalMenu -> Shared_BSButtonHintBar;
+		}
+
+
+
+		UI_ExamineMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/ExamineMenu  </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_ExamineMenu -> Shared_Fonts;
+			UI_ExamineMenu -> Shared_BSButtonHintBar;
+			UI_ExamineMenu -> Shared_DamageIcons;
+		}
+
+
+		UI_ContainerMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/ContainerMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_ContainerMenu -> Shared_Fonts;
+			UI_ContainerMenu -> Shared_BSButtonHintBar;
+			UI_ContainerMenu -> Shared_DamageIcons;
+			UI_ContainerMenu -> Components_ItemCard;
+		}
+
+
+		UI_FavoritesMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/FavoritesMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_FavoritesMenu -> Shared_Fonts;
+			UI_FavoritesMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_BarterMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/BarterMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_BarterMenu -> Shared_Fonts;
+			UI_BarterMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_BookMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/BookMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_BookMenu -> Shared_Fonts;
+			UI_BookMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_CreditsMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/CreditsMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_CreditsMenu -> Shared_Fonts;
+			UI_CreditsMenu -> Shared_BSButtonHintBar;
+			UI_CreditsMenu -> "Credits.txt";
+		}
+
+
+		UI_DialogueMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/DialogueMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_DialogueMenu -> Shared_Fonts;
+			UI_DialogueMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_LevelUpMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/LevelUpMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_LevelUpMenu -> Shared_Fonts;
+			UI_LevelUpMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_MessageBoxMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/MessageBoxMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_MessageBoxMenu -> Shared_Fonts;
+			UI_MessageBoxMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_MultiActivateMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/MultiActivateMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_MultiActivateMenu -> Shared_Fonts;
+			UI_MultiActivateMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_PlayBinkMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/PlayBinkMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_PlayBinkMenu -> Shared_Fonts;
+			UI_PlayBinkMenu -> Shared_BSButtonHintBar;
+		}
+
+
+		UI_PromptMenu
+		[
+			style=rounded;
+			label=<<TABLE BORDER="0.5" CELLBORDER="1" CELLSPACING="0">
+				<TR><TD><FONT POINT-SIZE="18"><B>UI/PromptMenu   </B></FONT></TD></TR>
+				<TR><TD ALIGN="left"><B>Share: </B>None</TD></TR>
+			</TABLE>>
+		];
+		{
+			UI_PromptMenu -> Shared_Fonts;
+			UI_PromptMenu -> Shared_BSButtonHintBar;
+		}
+
+
+	}
+
+
+}

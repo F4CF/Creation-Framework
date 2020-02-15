@@ -27,7 +27,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Pipboy/InvPage/Favorites/HotkeyIcons" name="Icon_mc" centerPoint3DX="54.8" centerPoint3DY="56.4">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Icons/HotkeyIcons/HotkeyIcons" name="Icon_mc" centerPoint3DX="54.8" centerPoint3DY="56.4">
                   <matrix>
                     <Matrix tx="28.25" ty="27.5"/>
                   </matrix>

@@ -38,7 +38,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/Border" name="border" centerPoint3DX="50.5" centerPoint3DY="35.5">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Border" name="border" centerPoint3DX="50.5" centerPoint3DY="35.5">
                   <matrix>
                     <Matrix a="3.6201171875" d="2.80023193359375" ty="-15"/>
                   </matrix>

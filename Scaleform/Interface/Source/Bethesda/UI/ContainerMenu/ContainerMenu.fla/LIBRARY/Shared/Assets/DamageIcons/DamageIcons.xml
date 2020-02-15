@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shared/Assets/DamageIcons/DamageIcons" itemID="5db53626-0000027a" linkageExportForAS="true" linkageClassName="DamageIcons" lastModified="1572156966">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Shared/Assets/DamageIcons/DamageIcons" itemID="5db53626-0000027a" linkageExportForAS="true" linkageClassName="DamageIcons" lastModified="1574730179">
   <timeline>
     <DOMTimeline name="DamageIcons">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/Assets/DamageIcons/Icons/DamageIcons_DamageResist" centerPoint3DX="7.25" centerPoint3DY="9">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/DamageIcons/Icons/DamageIcons_Defense" centerPoint3DX="7.25" centerPoint3DY="9">
                   <matrix>
                     <Matrix a="0.994049072265625" d="0.999725341796875"/>
                   </matrix>

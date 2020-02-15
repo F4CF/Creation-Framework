@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/Icons/SearchIcon" name="SearchIcon_mc" centerPoint3DX="401" centerPoint3DY="29.95">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Icons/TaggedForSearchIcon" name="SearchIcon_mc" centerPoint3DX="401" centerPoint3DY="29.95">
                   <matrix>
                     <Matrix tx="391" ty="20"/>
                   </matrix>
@@ -38,7 +38,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/Icons/FavoriteIcon" name="FavIcon_mc" centerPoint3DX="377.55" centerPoint3DY="25.9">
+                <DOMSymbolInstance libraryItemName="Shared/Assets/Icons/FavoriteIcon" name="FavIcon_mc" centerPoint3DX="377.55" centerPoint3DY="25.9">
                   <matrix>
                     <Matrix tx="370" ty="20"/>
                   </matrix>
@@ -54,7 +54,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Shared/ItemCard/Entries/EquipIcon" name="EquipIcon_mc" centerPoint3DX="19.6" centerPoint3DY="25.2">
+                <DOMSymbolInstance libraryItemName="Components/ItemCard/Entries/EquipIcon" name="EquipIcon_mc" centerPoint3DX="19.6" centerPoint3DY="25.2">
                   <matrix>
                     <Matrix tx="14.1" ty="19.7"/>
                   </matrix>
