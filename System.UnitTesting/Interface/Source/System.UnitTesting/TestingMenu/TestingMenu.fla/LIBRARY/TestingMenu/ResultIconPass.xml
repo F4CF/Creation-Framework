@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/ResultIconPass" itemID="5e6d549d-00000139" symbolType="graphic" lastModified="1584223620">
+  <timeline>
+    <DOMTimeline name="ResultIconPass" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lines" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="8">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!712 1636/1153 2036!1153 2036/1842 565"/>
+                    <Edge cubics="!1153 2036(;1153,2036 1842,565 1842,565q1153 2036 1842 565);"/>
+                    <Edge cubics="!712 1636(;712,1636 1153,2036 1153,2036q712 1636 1153 2036);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Circle" color="#00FFFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!2560 1280S2[2560 1811 2186 2186!2186 2186[1811 2560 1280 2560!1280 2560[749 2560 374 2186!374 2186[0 1811 0 1280!0 1280[0 749 374 374!374 374[749 0 1280 0!1280 0[1811 0 2186 374!2186 374[2560 749 2560 1280"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

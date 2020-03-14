@@ -1,14 +1,53 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="2822BE9B29417F448EBE6BC80B8B394E">
      <folders>
-          <DOMFolderItem name="TestingMenu" itemID="5e6ca169-0000013a"/>
+          <DOMFolderItem name="TestingMenu" itemID="5e6ca169-0000013a" isExpanded="true"/>
      </folders>
+     <symbols>
+          <Include href="TestingMenu/ResultIcon.xml" loadImmediate="false" itemID="5e6d566b-0000015b" lastModified="1584224062"/>
+          <Include href="TestingMenu/ResultIconFail.xml" itemIcon="1" loadImmediate="false" itemID="5e6d55fa-0000014e" lastModified="1584223738"/>
+          <Include href="TestingMenu/ResultIconIndeterminate.xml" itemIcon="1" loadImmediate="false" itemID="5e6d560e-00000154" lastModified="1584223799"/>
+          <Include href="TestingMenu/ResultIconPass.xml" itemIcon="1" loadImmediate="false" itemID="5e6d549d-00000139" lastModified="1584223620"/>
+     </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
                     <DOMLayer name="Layer_1" color="#00FFFF" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements/>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="TestingMenu/ResultIconPass" symbolType="graphic" loop="loop">
+                                             <matrix>
+                                                  <Matrix tx="49.95" ty="24"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="64" y="64"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="TestingMenu/ResultIconFail" symbolType="graphic" loop="loop">
+                                             <matrix>
+                                                  <Matrix tx="211.95" ty="24"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="64" y="64"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="TestingMenu/ResultIconIndeterminate" symbolType="graphic" loop="loop">
+                                             <matrix>
+                                                  <Matrix tx="370" ty="24"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="64" y="64"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                        <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon" selected="true">
+                                             <matrix>
+                                                  <Matrix tx="116" ty="239.05"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -17,8 +56,5 @@
      </timelines>
      <scripts/>
      <PrinterSettings/>
-     <publishHistory>
-          <PublishItem publishSize="427" publishTime="1584177762" publishDebug="true"/>
-          <PublishItem publishSize="86" publishTime="1584177573" publishDebug="true"/>
-     </publishHistory>
+     <publishHistory/>
 </DOMDocument>

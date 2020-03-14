@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/PanelBackground" itemID="5e6ae854-00000463" scaleGridLeft="-261" scaleGridRight="285" scaleGridTop="-232.95" scaleGridBottom="137.3" lastModified="1584064689">
+  <timeline>
+    <DOMTimeline name="PanelBackground">
+      <layers>
+        <DOMLayer name="Art" color="#00FFFF" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF" alpha="0.349019607843137"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="3">
+                        <fill>
+                          <SolidColor color="#FFFFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!-5849 -5311S6/-5849 -5461!-5849 -5461|5850 -5461!5850 -5461/5850 -5321"/>
+                    <Edge fillStyle0="1" edges="!5850 5258S1/5830 -201!5830 -201/5843 -1401!5843 -1401/5850 -5321!-5849 -5311/-5829 -101!-5829 -101/-5849 5278"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!5850 5258S6/5850 5461!5850 5461|-5849 5461!-5849 5461/-5849 5278"/>
+                    <Edge cubics="!5850 5258(;5850,5258 5830,-201 5830,-201q5850 5258 5830 -201);"/>
+                    <Edge cubics="!5830 -201(;5830,-201 5839,-1401 5843,-1401q5830 -201 5843 -1401);"/>
+                    <Edge cubics="!5850 -5461(;5850,-5461 5850,-5321 5850,-5321q5850 -5461 5850 -5321);"/>
+                    <Edge cubics="!5850 5258(;5850,5258 5850,5461 5850,5461q5850 5258 5850 5461);"/>
+                    <Edge cubics="!-5829 -101(;-5829,-101 -5849,5278 -5849,5278q-5829 -101 -5849 5278);"/>
+                    <Edge cubics="!-5849 -5311(;-5849,-5311 -5849,-5461 -5849,-5461q-5849 -5311 -5849 -5461);"/>
+                    <Edge cubics="!-5849 5461(;-5849,5461 -5849,5278 -5849,5278q-5849 5461 -5849 5278);"/>
+                    <Edge cubics="!5850 5461(;5850,5461 -5849,5461 -5849,5461q5850 5461 -5849 5461);"/>
+                    <Edge cubics="!-5849 -5461(;-5849,-5461 5850,-5461 5850,-5461q-5849 -5461 5850 -5461);"/>
+                    <Edge cubics="!-5849 -5311(;-5849,-5311 -5829,-101 -5829,-101q-5849 -5311 -5829 -101);"/>
+                    <Edge cubics="!5843 -1401(;5843,-1401 5850,-5321 5850,-5321q5843 -1401 5850 -5321);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
