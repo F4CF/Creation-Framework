@@ -1,4 +1,4 @@
-ScriptName System:Diagnostics:Type Extends Quest Native Const Hidden
+ScriptName System:Diagnostics:Type Extends System:Quest Native Const Hidden
 {The generic base type for all system scripts which instantiate long running instances via Quest forms.}
 
 ; OnGameReload
@@ -33,35 +33,3 @@ string Function ToString()
 	{The string representation of this type.}
 	return "[System:Diagnostics:Type]"
 EndFunction
-
-
-; Properties
-;---------------------------------------------
-
-Group Properties
-	int Property Invalid = -1 AutoReadOnly
-	{A generic invalid integer value.}
-EndGroup
-
-Group States
-	string Property StateName Hidden
-		{A property alias for the GetState function.}
-		string Function Get()
-			return GetState()
-		EndFunction
-	EndProperty
-
-	bool Property IsEmptyState Hidden
-		{Returns true if this script has the empty state.}
-		bool Function Get()
-			return StateName == EmptyState
-		EndFunction
-	EndProperty
-
-	string Property EmptyState Hidden
-		{The default papyrus script state is represented as an empty string.}
-		string Function Get()
-			return ""
-		EndFunction
-	EndProperty
-EndGroup

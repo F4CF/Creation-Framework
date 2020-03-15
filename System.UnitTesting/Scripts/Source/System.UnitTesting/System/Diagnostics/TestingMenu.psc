@@ -10,13 +10,24 @@ string BusyState = "Busy" const
 ; Events
 ;---------------------------------------------
 
+Event OnInit() ; TODO: This only happens once per object life time.
+	Debug.TraceSelf(self, "OnInit", "Called..")
+	RegisterForQuestInit(QUST)
+	RegisterForQuestShutdown(QUST)
+EndEvent
+
+
 Event OnQuestInit()
+	Debug.TraceSelf(self, "OnQuestInit", "Called..")
 	RegisterForGameReload(self)
 	OnGameReload()
 EndEvent
 
+
 Event OnGameReload()
+	Debug.TraceSelf(self, "OnGameReload", "Called..")
 	Title = "Testing"
+	Data = new UnitTestData[0]
 
 	UnitTestData unitTest1 = new UnitTestData
 	unitTest1.Name = "Test 1"
@@ -100,24 +111,19 @@ Event OnGameReload()
 
 	RegisterForMenuOpenCloseEvent(ConsoleMenu.Name)
 
-	RegisterForKey(Home)
-	RegisterForKey(Mouse4)
-	RegisterForKey(End)
+	RegisterForKey(Keyboard.Home)
+	RegisterForKey(Keyboard.Mouse4)
+	RegisterForKey(Keyboard.End)
 EndEvent
 
 
 Event OnKeyDown(int keyCode)
-	If (UI.IsMenuOpen("Console"))
+	If (UI.IsMenuOpen(ConsoleMenu.Name))
 		return
 	EndIf
 
-	If (keyCode == Home || keyCode == Mouse4)
-		System:Diagnostics:TestingMenu Framework = System:Diagnostics:TestingMenu.Get()
-		If (Framework)
-			Framework.Show(Title, Data)
-		Else
-			Debug.TraceSelf(self, "OnKeyDown", "The unit test framework could not be acquired.")
-		EndIf
+	If (keyCode == Keyboard.Home || keyCode == Keyboard.Mouse4)
+		ConsoleMenu.Open()
 	EndIf
 EndEvent
 
@@ -140,7 +146,7 @@ State Busy
 	EndEvent
 
 	Event OnKeyDown(int keyCode)
-		If (keyCode == End)
+		If (keyCode == Keyboard.End)
 			ConsoleMenu.Close()
 		EndIf
 	EndEvent
@@ -156,14 +162,6 @@ EndState
 ; Methods
 ;---------------------------------------------
 
-Function Show(string aTitle, UnitTestData[] arguments)
-	Debug.TraceSelf(self, "Show", "Showing "+ConsoleMenu.Name)
-	Title = aTitle
-	Data = arguments
-	ConsoleMenu.Open()
-EndFunction
-
-
 System:Diagnostics:TestingMenu Function Get() Global
 	return Game.GetFormFromFile(0x00000F99, "System.UnitTesting.esp") as System:Diagnostics:TestingMenu
 EndFunction
@@ -178,10 +176,8 @@ EndFunction
 ; Properties
 ;---------------------------------------------
 
-Group Keyboard
-	int Property End = 35 AutoReadOnly
-	int Property Home = 36 AutoReadOnly
-	int Property Mouse4 = 259 AutoReadOnly
+Group System
+	System:Input Property Keyboard Auto Const Mandatory
 EndGroup
 
 Group Properties

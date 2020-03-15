@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry" itemID="5e6d7bf8-00000261" linkageExportForAS="true" linkageClassName="UnitListEntry" lastModified="1584233495" lastUniqueIdentifier="6">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry" itemID="5e6d7bf8-00000261" linkageExportForAS="true" linkageClassName="UnitListEntry" lastModified="1584244179" lastUniqueIdentifier="6">
   <timeline>
     <DOMTimeline name="UnitList_Entry" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon" selected="true">
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon" name="ResultIcon" selected="true">
                   <matrix>
                     <Matrix a="0.5" d="0.5" tx="10.8" ty="6.25"/>
                   </matrix>

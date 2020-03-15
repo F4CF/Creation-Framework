@@ -20,18 +20,6 @@
 			Debug.WriteLine("[TestingPanel]", "(CTOR)");
 			addEventListener(Event.ADDED_TO_STAGE, OnAddedToStage);
 
-			// this["componentInspectorSetting"] = true;
-			// this.bracketCornerLength = 6;
-			// this.bracketLineWidth = 1.5;
-			// this.bracketPaddingX = 0;
-			// this.bracketPaddingY = 0;
-			// this.BracketStyle = "horizontal";
-			// this.bShowBrackets = true;
-			// this.bUseShadedBackground = true;
-			// this.ShadedBackgroundMethod = "Shader";
-			// this.ShadedBackgroundType = "normal";
-			// this["componentInspectorSetting"] = false;
-
 			try
 			{
 				UnitList_mc["componentInspectorSetting"] = true;
@@ -56,29 +44,29 @@
 
 			try
 			{
-				// UnitList_mc.onComponentInit(new Event(Event.INIT));
-				// UnitList_mc.SetPlatform(0, false);
-				// UnitList_mc.selectedIndex = 0;
-				// UnitList_mc.disableInput = false;
-				// UnitList_mc.disableSelection = false;
-				// UnitList_mc.filterer.filterArray = new Array();
-				// UnitList_mc.filterer.itemFilter = UnitList_mc.filterer.filterArray[0].flag;
+				UnitList_mc.onComponentInit(new Event(Event.INIT));
+				UnitList_mc.SetPlatform(0, false);
+				UnitList_mc.selectedIndex = 0;
+				UnitList_mc.disableInput = false;
+				UnitList_mc.disableSelection = false;
+				UnitList_mc.filterer.filterArray = new Array();
+				UnitList_mc.filterer.itemFilter = UnitList_mc.filterer.filterArray[0].flag;
 
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
-				// UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
+				UnitList_mc.entryList.push(NewEntry("Derp"));
 
-				// UnitList_mc.InvalidateData();
-				// UnitList_mc.selectedIndex = 0;
+				UnitList_mc.InvalidateData();
+				UnitList_mc.selectedIndex = 0;
 			}
 			catch (error:Error)
 			{

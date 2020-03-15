@@ -37,9 +37,11 @@
 			addEventListener(Event.ADDED_TO_STAGE, OnPanelAddedToStage);
 			ConsoleMenu.addChild(Panel);
 
-			Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)", "Tracing BGSCodeObj...");
-			Utility.TraceObject(ConsoleMenu.BGSCodeObj);
-			Utility.TraceDisplayList(ConsoleMenu);
+			// Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)", "Tracing BGSCodeObj...");
+			// Utility.TraceObject(ConsoleMenu.BGSCodeObj);
+
+			// Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)", "Tracing display list...");
+			// Utility.TraceDisplayList(ConsoleMenu);
 		}
 
 
