@@ -4,21 +4,20 @@
           <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b"/>
           <DOMFolderItem name="Shared/Fonts/fonts_en" itemID="5e44fa13-000001f6"/>
           <DOMFolderItem name="TestingMenu" itemID="5e6ca169-0000013a" isExpanded="true"/>
-          <DOMFolderItem name="TestingMenu/ResultIcon" itemID="5e6d744e-00000211" isExpanded="true"/>
+          <DOMFolderItem name="TestingMenu/ResultIcon" itemID="5e6d744e-00000211"/>
           <DOMFolderItem name="TestingMenu/UnitLists" itemID="5e6d7b8d-0000025a" isExpanded="true"/>
           <DOMFolderItem name="TestingMenu/UnitLists/UnitList" itemID="5e6d758c-0000023c" isExpanded="true"/>
-          <DOMFolderItem name="TestingMenu/UnitLists/UnitListEntry" itemID="5e6d7591-0000023e" isExpanded="true"/>
+          <DOMFolderItem name="TestingMenu/UnitLists/UnitListEntry" itemID="5e6d7591-0000023e"/>
      </folders>
      <fonts>
           <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font" itemID="5e46bcbb-000002fc" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1581578181" embedRanges="9999"/>
      </fonts>
-     <media/>
      <symbols>
           <Include href="TestingMenu/ResultIcon/ResultIcon.xml" loadImmediate="false" itemID="5e6ad1dc-000001c4" lastModified="1584232989"/>
           <Include href="TestingMenu/ResultIcon/ResultIconFail.xml" loadImmediate="false" itemID="5e6ad13b-000001b8" lastModified="1584058683"/>
           <Include href="TestingMenu/ResultIcon/ResultIconIndeterminate.xml" loadImmediate="false" itemID="5e6ad137-000001b7" lastModified="1584058679"/>
           <Include href="TestingMenu/ResultIcon/ResultIconPass.xml" loadImmediate="false" itemID="5e6ad13e-000001b9" lastModified="1584058686"/>
-          <Include href="TestingMenu/UnitLists/TestSuitEntry.xml" loadImmediate="false" itemID="5e6d7a6b-0000024e" lastModified="1584233125"/>
+          <Include href="TestingMenu/TestingPanel.xml" loadImmediate="false" itemID="5e6d8b32-0000014e" lastModified="1584237446"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList.xml" itemID="5e6d7a2e-00000248" lastModified="1584233490"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_Border.xml" loadImmediate="false" itemID="5e6d7bec-0000025f" lastModified="1584233452"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e6d7be7-0000025e" lastModified="1584233447"/>
@@ -29,7 +28,7 @@
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
-                    <DOMLayer name="Empty" color="#00FFFF" locked="true" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="Empty" color="#00CC00" locked="true" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements/>
@@ -41,5 +40,7 @@
      </timelines>
      <scripts/>
      <PrinterSettings/>
-     <publishHistory/>
+     <publishHistory>
+          <PublishItem publishSize="32732" publishTime="1584237334" publishDebug="true"/>
+     </publishHistory>
 </DOMDocument>

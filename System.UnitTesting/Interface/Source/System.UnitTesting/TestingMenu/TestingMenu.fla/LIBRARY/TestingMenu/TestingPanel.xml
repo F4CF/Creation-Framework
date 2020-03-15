@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/TestingPanel" itemID="5e6d8b32-0000014e" lastModified="1584237446">
+  <timeline>
+    <DOMTimeline name="TestingPanel" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="UnitList_mc" color="#FFFF00" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList" name="UnitList_mc" selected="true">
+                  <transformationPoint>
+                    <Point x="300" y="200"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
