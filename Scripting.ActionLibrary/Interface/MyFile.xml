@@ -1,0 +1,18 @@
+<Books>
+	<Book id="1">
+		<Author>Gambardella, Matthew</Author>
+		<Title>XML Developer's Guide</Title>
+		<Genre>Computer</Genre>
+		<Price>44.95</Price>
+		<PublishDate>2000-10-01</PublishDate>
+		<Description>An in-depth look at creating applications with XML.</Description>
+	 </Book>
+	 <Book id="2">
+		<Author>George Orwell</Author>
+		<Title>1984</Title>
+		<Genre>Dystopian</Genre>
+		<Price>20.00</Price>
+		<PublishDate>1949-06-08</PublishDate>
+		<Description>Nineteen Eighty-Four: A Novel, often published as 1984, is a dystopian novel by English novelist George Orwell.</Description>
+	 </Book>
+</Books>
