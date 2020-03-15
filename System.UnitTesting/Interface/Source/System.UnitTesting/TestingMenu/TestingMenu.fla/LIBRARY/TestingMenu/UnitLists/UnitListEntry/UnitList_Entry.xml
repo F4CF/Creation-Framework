@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry" itemID="5e6d7bf8-00000261" linkageExportForAS="true" linkageClassName="UnitListEntry" lastModified="1584233495" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="UnitList_Entry" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="ResultIcon" color="#FF0000" locked="true" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon" selected="true">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" tx="10.8" ty="6.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16.1" y="16.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textField" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="textField" fontRenderingMode="standard" width="296" height="22.8" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="44.5" ty="3.6"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Name</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="22.8" size="19" face="$MAIN_Font*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="border" color="#FFCC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitListEntry/UnitList_EntryBorder" name="border" centerPoint3DX="300" centerPoint3DY="18.75">
+                  <matrix>
+                    <Matrix d="0.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="300" y="25"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.08984375"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,45 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/TestSuitEntry" itemID="5e6d7a6b-0000024e" lastModified="1584233125" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="TestSuitEntry" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="ResultIcon" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon">
+                  <matrix>
+                    <Matrix a="0.5" d="0.5" ty="4.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="55.5" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Script_Name" color="#FF800A" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText selected="true" width="246" height="21.6" isSelectable="false" lineType="multiline no wrap">
+                  <matrix>
+                    <Matrix tx="53.5" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>GameOverhaul:MyUnitTest</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="21.6" size="18" bitmapSize="360" face="RobotoCondensed-Regular" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitList/UnitList_Border" itemID="5e6d7bec-0000025f" lastModified="1584233452">
+  <timeline>
+    <DOMTimeline name="UnitList_Border" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Border" color="#B93CFD" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList_BorderGraphic" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
