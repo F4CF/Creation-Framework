@@ -17,12 +17,12 @@
           <Include href="TestingMenu/ResultIcon/ResultIconFail.xml" loadImmediate="false" itemID="5e6ad13b-000001b8" lastModified="1584058683"/>
           <Include href="TestingMenu/ResultIcon/ResultIconIndeterminate.xml" loadImmediate="false" itemID="5e6ad137-000001b7" lastModified="1584058679"/>
           <Include href="TestingMenu/ResultIcon/ResultIconPass.xml" loadImmediate="false" itemID="5e6ad13e-000001b9" lastModified="1584058686"/>
-          <Include href="TestingMenu/TestingPanel.xml" itemID="5e6d8b32-0000014e" lastModified="1584244198"/>
+          <Include href="TestingMenu/TestingPanel.xml" itemID="5e6d8b32-0000014e" lastModified="1584300387"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList.xml" itemID="5e6d7a2e-00000248" lastModified="1584233490"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_Border.xml" loadImmediate="false" itemID="5e6d7bec-0000025f" lastModified="1584233452"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e6d7be7-0000025e" lastModified="1584233447"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_ScrollArrow.xml" loadImmediate="false" itemID="5e6d7bf1-00000260" lastModified="1584233457"/>
-          <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry.xml" itemID="5e6d7bf8-00000261" lastModified="1584244179"/>
+          <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry.xml" itemID="5e6d7bf8-00000261" lastModified="1584317230"/>
           <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_EntryBorder.xml" loadImmediate="false" itemID="5e6d7c03-00000262" lastModified="1584233475"/>
      </symbols>
      <timelines>
@@ -32,9 +32,9 @@
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="TestingMenu/TestingPanel" name="Panel" selected="true">
+                                        <DOMSymbolInstance libraryItemName="TestingMenu/TestingPanel" name="Panel">
                                              <matrix>
-                                                  <Matrix tx="343" ty="231.05"/>
+                                                  <Matrix tx="17.1" ty="19.1"/>
                                              </matrix>
                                              <transformationPoint>
                                                   <Point x="298.25" y="179.75"/>
@@ -47,21 +47,7 @@
                     <DOMLayer name="Unit_Testing_Menu" color="#9933CC" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements>
-                                        <DOMInputText width="685.75" height="115.2">
-                                             <matrix>
-                                                  <Matrix tx="297.15" ty="24.5"/>
-                                             </matrix>
-                                             <textRuns>
-                                                  <DOMTextRun>
-                                                       <characters>Unit Testing Menu</characters>
-                                                       <textAttrs>
-                                                            <DOMTextAttrs aliasText="false" lineHeight="115.2" size="96" bitmapSize="1920" face="$MAIN_Font*"/>
-                                                       </textAttrs>
-                                                  </DOMTextRun>
-                                             </textRuns>
-                                        </DOMInputText>
-                                   </elements>
+                                   <elements/>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -71,6 +57,24 @@
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="32232" publishTime="1584244431" publishDebug="true"/>
+          <PublishItem publishSize="33682" publishTime="1584317197" publishDebug="true"/>
+          <PublishItem publishSize="33622" publishTime="1584316964" publishDebug="true"/>
+          <PublishItem publishSize="33639" publishTime="1584316926" publishDebug="true"/>
+          <PublishItem publishSize="33641" publishTime="1584316857" publishDebug="true"/>
+          <PublishItem publishSize="33652" publishTime="1584313398" publishDebug="true"/>
+          <PublishItem publishSize="33648" publishTime="1584313033" publishDebug="true"/>
+          <PublishItem publishSize="33592" publishTime="1584312460" publishDebug="true"/>
+          <PublishItem publishSize="33567" publishTime="1584311218" publishDebug="true"/>
+          <PublishItem publishSize="33576" publishTime="1584311131" publishDebug="true"/>
+          <PublishItem publishSize="33489" publishTime="1584310194" publishDebug="true"/>
+          <PublishItem publishSize="33489" publishTime="1584309962" publishDebug="true"/>
+          <PublishItem publishSize="33483" publishTime="1584309544" publishDebug="true"/>
+          <PublishItem publishSize="33486" publishTime="1584309247" publishDebug="true"/>
+          <PublishItem publishSize="33393" publishTime="1584308863" publishDebug="true"/>
+          <PublishItem publishSize="33392" publishTime="1584308824" publishDebug="true"/>
+          <PublishItem publishSize="33368" publishTime="1584308636" publishDebug="true"/>
+          <PublishItem publishSize="33365" publishTime="1584308621" publishDebug="true"/>
+          <PublishItem publishSize="33377" publishTime="1584308481" publishDebug="true"/>
+          <PublishItem publishSize="33377" publishTime="1584307656" publishDebug="true"/>
      </publishHistory>
 </DOMDocument>

@@ -18,7 +18,8 @@ Event OnLoadComplete(bool success, string menuName, string sourceVar, string des
 ; Scaleform
 ;---------------------------------------------
 
-Event OnTesting() Native
+Event OnTestingLoaded() Native
+Event OnTestingUnloaded() Native
 
 
 ; Functions

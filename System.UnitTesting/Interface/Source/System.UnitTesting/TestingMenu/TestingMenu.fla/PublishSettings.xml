@@ -79,7 +79,7 @@
     <ActionScriptVersion>3</ActionScriptVersion>
     <PackageExportFrame>1</PackageExportFrame>
     <PackagePaths></PackagePaths>
-    <AS3PackagePaths>.;..\..\System;..\..\Bethesda</AS3PackagePaths>
+    <AS3PackagePaths>.;..\..\System.XSE;..\..\System;..\..\Bethesda</AS3PackagePaths>
     <AS3ConfigConst>CONFIG::FLASH_AUTHORING=&quot;true&quot;;</AS3ConfigConst>
     <DebuggingPermitted>1</DebuggingPermitted>
     <DebuggingPassword></DebuggingPassword>

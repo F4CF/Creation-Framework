@@ -1,13 +1,14 @@
 ScriptName System:Diagnostics:Console:Menu Extends System:Diagnostics:Console:MenuType
 {Injects AS3 code into the vanilla Console menu.}
+; See Also: `System:UI:Menu` & `System:UI:Console:MenuType`
 
 Actor Player
 
 bool Loaded = false
 string AssetValue = "" ; the loader's instance variable
 
-string TestingEvent = "System_Diagnostics_TestingEvent" const
-
+string LoadedEvent = "System_Diagnostics_TestingLoadEvent" const
+string UnloadEvent = "System_Diagnostics_TestingUnloadEvent" const
 
 ; Events
 ;---------------------------------------------
@@ -28,18 +29,21 @@ EndEvent
 
 Event OnGameReload()
 	RegisterForMenuOpenCloseEvent(Name)
+	RegisterForExternalEvent(LoadedEvent, "OnTestingLoaded")
+	RegisterForExternalEvent(UnloadEvent, "OnTestingUnloaded")
 	Debug.TraceSelf(self, "OnGameReload", ToString())
 EndEvent
 
 
 Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	Debug.TraceSelf(self, "OnMenuOpenCloseEvent(menuName:"+menuName+", opening:"+opening+")", ToString())
+	; The load logic here is occuring every time the menu opens causing duplicates.
+	; Maybe register for external events elsewhere?
 	If (opening)
-		UI.Load(Name, Root, File, self, "OnLoadComplete")
-		RegisterForExternalEvent(TestingEvent, "OnTesting")
+		Load()
 	Else
-		UnregisterForExternalEvent(TestingEvent)
-		Loaded = false
+		; UnregisterForExternalEvent(LoadedEvent)
+		; Loaded = false
 	EndIf
 EndEvent
 
@@ -57,13 +61,38 @@ EndEvent
 
 
 ; @Scaleform
-Event OnTesting()
-	Debug.TraceSelf(self, "OnTesting", ToString())
+Event OnTestingLoaded()
+	Debug.TraceSelf(self, "OnTestingLoaded", ToString())
+EndEvent
+
+
+; @Scaleform
+Event OnTestingUnloaded()
+	Debug.TraceSelf(self, "OnTestingUnloaded", ToString())
+	AssetValue = ""
+	Loaded = false
 EndEvent
 
 
 ; Methods
 ;---------------------------------------------
+
+bool Function Load()
+	If (!IsLoaded)
+		return UI.Load(Name, Root, File, self, "OnLoadComplete")
+	Else
+		Debug.TraceSelf(self, "OnMenuOpenCloseEvent", ToString()+": Is already loaded.")
+		return false
+	EndIf
+EndFunction
+
+
+Function Unload()
+	string unloadMember = Asset+"."+"Unload"
+	UI.Invoke(Name, unloadMember)
+	Debug.TraceSelf(self, "Unload", Name+"::"+unloadMember)
+EndFunction
+
 
 bool Function Open()
 	If (IsRegistered)
@@ -121,7 +150,7 @@ EndFunction
 
 string Function ToString()
 	{The string representation of this type.}
-	return parent.ToString()+"[Name:"+Name+", File:"+File+", Root:"+Root+", Asset:"+Asset+"]"
+	return parent.ToString()+"[Name:"+Name+", File:"+File+", Root:"+Root+", Asset:"+Asset+", IsLoaded:"+IsLoaded+"]"
 EndFunction
 
 
