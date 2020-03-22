@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/ResultIcon/ResultIcon" itemID="5e6ad1dc-000001c4" lastModified="1584232989" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/ResultIcon/ResultIcon" itemID="5e6ad1dc-000001c4" linkageExportForAS="true" linkageClassName="ResultIcon" lastModified="1584764602" lastUniqueIdentifier="2">
   <timeline>
-    <DOMTimeline name="ResultIcon" layerDepthEnabled="true">
+    <DOMTimeline name="ResultIcon" currentFrame="1" layerDepthEnabled="true">
       <layers>
         <DOMLayer name="Labels" color="#000000" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
@@ -29,7 +29,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIconIndeterminate">
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon_Indeterminate" selected="true">
                   <transformationPoint>
                     <Point x="16" y="16"/>
                   </transformationPoint>
@@ -41,14 +41,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="ResultIconPass" color="#FF0000" locked="true" autoNamed="false">
+        <DOMLayer name="ResultIconPass" color="#FF0000" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements/>
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIconPass" centerPoint3DX="16" centerPoint3DY="16">
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon_Pass" centerPoint3DX="16" centerPoint3DY="16">
                   <transformationPoint>
                     <Point x="16" y="16"/>
                   </transformationPoint>
@@ -67,7 +67,7 @@
             </DOMFrame>
             <DOMFrame index="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIconFail" centerPoint3DX="16" centerPoint3DY="16">
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon_Fail" centerPoint3DX="16" centerPoint3DY="16">
                   <transformationPoint>
                     <Point x="16" y="16"/>
                   </transformationPoint>

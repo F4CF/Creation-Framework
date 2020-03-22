@@ -15,9 +15,12 @@
 		public function get MenuRoot():MovieClip { return menu; }
 		public function get ConsoleMenu():MovieClip { return MenuRoot.AnimHolder_mc.Menu_mc; }
 
-		private var Panel:TestingPanel;
-		const TestingLoadEvent:String = "System_Diagnostics_TestingLoadEvent";
-		const TestingUnloadEvent:String = "System_Diagnostics_TestingUnloadEvent";
+		// Asset
+		private const ReadyEvent:String = "System_Diagnostics_TestingReadyEvent";
+		private const UnloadEvent:String = "System_Diagnostics_TestingUnloadEvent";
+
+		// Panel
+		public var Panel:TestingPanel;
 
 
 		// Initialization
@@ -28,8 +31,6 @@
 			Debug.WriteLine("[TestingMenu]", "(CTOR)");
 			addEventListener(Event.ADDED_TO_STAGE, OnAddedToStage);
 			addEventListener(Event.REMOVED_FROM_STAGE, OnRemovedFromStage);
-			addEventListener(Event.ENTER_FRAME, OnEnterFrame);
-			addEventListener(Event.ADDED, OnAdded);
 		}
 
 
@@ -37,40 +38,33 @@
 		{
 			Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)");
 			menu = stage.getChildAt(0) as MovieClip;
-
-			// Panel = new TestingPanel();
-			// ConsoleMenu.addChild(Panel);
-
-			// Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)", "Tracing BGSCodeObj...");
-			// Utility.TraceObject(ConsoleMenu.BGSCodeObj);
-
-			// Debug.WriteLine("[TestingMenu]", "(OnAddedToStage)", "Tracing display list...");
-			// Utility.TraceDisplayList(ConsoleMenu);
-
-			XSE.API = MenuRoot.f4se;
+			AquireXSE();
 			Load();
+			XSE.SendExternalEvent(ReadyEvent);
+			DebugTraceDisplay();
 		}
 
 
 		private function OnRemovedFromStage(e:Event):void
 		{
 			Debug.WriteLine("[TestingMenu]", "(OnRemovedFromStage)");
-			XSE.SendExternalEvent(TestingUnloadEvent);
+			XSE.SendExternalEvent(UnloadEvent);
+			DebugTraceDisplay();
 		}
 
 
-		private function OnEnterFrame(e:Event):void
-		{
-			removeEventListener(Event.ENTER_FRAME, OnEnterFrame);
-			Debug.WriteLine("[TestingMenu]", "(OnEnterFrame)");
-		}
+		// XSE
+		//---------------------------------------------
 
-
-		private function OnAdded(e:Event):void
+		private function AquireXSE():void
 		{
-			if(e.target == this)
+			try
 			{
-				Debug.WriteLine("[TestingMenu]", "(OnAdded)");
+				XSE.API = MenuRoot.f4se;
+			}
+			catch (error:Error)
+			{
+				Debug.WriteLine("[TestingMenu]", "(AquireXSE)", "ERROR:", error.toString());
 			}
 		}
 
@@ -78,33 +72,90 @@
 		// Methods
 		//---------------------------------------------
 
-		public function Load():void
+		private function Load():void
 		{
-			Debug.WriteLine("[TestingMenu]", "(Load)");
 			try
 			{
+				// `stage.focus` is needed for item pressed?
+				stage.focus = Panel.UnitList_mc;
 				ConsoleMenu.visible = false;
-				XSE.SendExternalEvent(TestingLoadEvent);
 			}
 			catch (error:Error)
 			{
-				Debug.WriteLine("[TestingPanel]", "(Load)", "ERROR:", error.toString());
+				Debug.WriteLine("[TestingMenu]", "(Load)", "ERROR:", error.toString());
 			}
 		}
 
 
+		// @Papyrus
+		// https://community.adobe.com/t5/animate/unloading-an-swf-movie-from-the-swf-itself-in-as3/
 		public function Unload():void
 		{
 			Debug.WriteLine("[TestingMenu]", "(Unload)");
 			try
 			{
+				stage.focus = null;
 				ConsoleMenu.visible = true;
-				this.parent.removeChild(this);
+
+				// stage.removeChild(parent);
+				RemoveFromStage();
 			}
 			catch (error:Error)
 			{
-				Debug.WriteLine("[TestingPanel]", "(Unload)", "ERROR:", error.toString());
+				Debug.WriteLine("[TestingMenu]", "(Unload)", "ERROR:", error.toString());
 			}
+		}
+
+		// Display
+		//---------------------------------------------
+
+		// Unload the "loaded" swf file from the display list.
+		private function RemoveFromStage():void
+		{
+			if (parent != null)
+			{
+				if (parent.loaderInfo != null)
+				{
+					if (parent.loaderInfo.loader != null)
+					{
+						Debug.WriteLine("[TestingMenu]", "(RemoveFromStage)", "Removing...");
+						parent.loaderInfo.loader.unloadAndStop();
+					}
+					else
+					{
+						Debug.WriteLine("[TestingMenu]", "(RemoveFromStage)", "The parent loader object cannot be null.");
+					}
+				}
+				else
+				{
+					Debug.WriteLine("[TestingMenu]", "(RemoveFromStage)", "The parent loader info cannot be null.");
+				}
+			}
+			else
+			{
+				Debug.WriteLine("[TestingMenu]", "(RemoveFromStage)", "The parent cannot be null.");
+			}
+		}
+
+
+		// Debug
+		//---------------------------------------------
+
+		private function DebugTraceLoader():void
+		{
+			Debug.WriteLine("[TestingMenu]", "(DebugTraceLoader)");
+			Debug.WriteLine("---------------------------------------------");
+			// Utility.TraceDisplayList(stage);
+			Debug.WriteLine("---------------------------------------------");
+		}
+
+
+		private function DebugTraceDisplay():void
+		{
+			Debug.WriteLine("[TestingMenu]", "(DebugTraceDisplay)");
+			Debug.WriteLine("---------------------------------------------");
+			Utility.TraceDisplayList(stage);
+			Debug.WriteLine("---------------------------------------------");
 		}
 
 

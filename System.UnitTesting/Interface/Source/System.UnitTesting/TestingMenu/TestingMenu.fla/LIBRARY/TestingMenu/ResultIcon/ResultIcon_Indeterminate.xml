@@ -1,0 +1,52 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/ResultIcon/ResultIcon_Indeterminate" itemID="5e6ed2ce-000001b0" lastModified="1584321440">
+  <timeline>
+    <DOMTimeline name="ResultIcon_Indeterminate" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lines" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="3">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                        <VariablePointWidth>
+                          <WidthMarker position="0" left="0" right="0" type="corner"/>
+                          <WidthMarker position="0.12" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.14" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.86" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.88" left="0.5" right="0.5"/>
+                          <WidthMarker position="1" left="0" right="0" type="corner"/>
+                        </VariablePointWidth>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!320 86|320 419!320 462|320 562"/>
+                    <Edge cubics="!308 86(;308,86 308,419 308,419q308 86 308 419);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Circle" color="#00FFFF" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon_ShapeGraphic" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

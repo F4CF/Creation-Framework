@@ -12,14 +12,14 @@ EndStruct
 ; Events
 ;---------------------------------------------
 
-Event OnLoadComplete(bool success, string menuName, string sourceVar, string destVar, string assetPath) Native
+Event OnAssetLoaded(bool success, string menuName, string sourceVar, string destVar, string assetPath) Native
 
 
 ; Scaleform
 ;---------------------------------------------
 
-Event OnTestingLoaded() Native
-Event OnTestingUnloaded() Native
+Event OnAssetReady() Native
+Event OnAssetUnloaded() Native
 
 
 ; Functions

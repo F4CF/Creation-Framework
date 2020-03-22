@@ -1,12 +1,12 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitList/UnitList" itemID="5e6d7a2e-00000248" linkageExportForAS="true" linkageClassName="UnitList" lastModified="1584233490">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitList/UnitList" itemID="5e6d7a2e-00000248" linkageExportForAS="true" linkageClassName="UnitList" lastModified="1584326982">
   <timeline>
     <DOMTimeline name="UnitList" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="ScrollDown" color="#908283" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="ScrollDown" color="#908283" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList_ScrollArrow" name="ScrollDown" selected="true" centerPoint3DX="33.75" centerPoint3DY="403">
+                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList_ScrollArrow" name="ScrollDown" centerPoint3DX="33.75" centerPoint3DY="403">
                   <matrix>
                     <Matrix a="-1" d="-1" tx="27" ty="400"/>
                   </matrix>
@@ -18,7 +18,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="ScrollUp" color="#A947D3" locked="true" autoNamed="false">
+        <DOMLayer name="ScrollUp" color="#A947D3" locked="true" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -38,7 +38,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList_Border" name="border" selected="true" centerPoint3DX="121.2" centerPoint3DY="93.95">
+                <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList_Border" name="border" centerPoint3DX="121.2" centerPoint3DY="93.95">
                   <matrix>
                     <Matrix a="6.00004577636719" d="4.00015258789063"/>
                   </matrix>

@@ -1,35 +1,105 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/TestingPanel" itemID="5e6d8b32-0000014e" linkageExportForAS="true" linkageClassName="TestingPanel" lastModified="1584300387">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/TestingPanel" itemID="5e6d8b32-0000014e" linkageExportForAS="true" linkageClassName="TestingPanel" lastModified="1584833937">
   <timeline>
     <DOMTimeline name="TestingPanel" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Text" color="#FF800A" locked="true" autoNamed="false">
+        <DOMLayer name="Selected" color="#FF4FFF" locked="true" autoNamed="false" layerType="folder"/>
+        <DOMLayer name="SelectedScript_tf" color="#0099FF" parentLayerIndex="0" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMInputText width="685.75" height="115.2">
+                <DOMDynamicText name="SelectedScript_tf" width="529.8" height="28.8" lineType="multiline">
                   <matrix>
-                    <Matrix tx="2" ty="2"/>
+                    <Matrix tx="719.75" ty="73.2"/>
                   </matrix>
                   <textRuns>
                     <DOMTextRun>
-                      <characters>Unit Testing Menu</characters>
+                      <characters>SelectedScript_tf</characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" lineHeight="115.2" size="96" bitmapSize="1920" face="$MAIN_Font*"/>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
-                </DOMInputText>
+                </DOMDynamicText>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="UnitList_mc" color="#FFFF00" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="SelectedName_tf" color="#FF800A" parentLayerIndex="0" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="SelectedName_tf" width="533.8" height="28.8" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="719.75" ty="125.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SelectedName_tf</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SelectedDescription_tf" color="#0099FF" parentLayerIndex="0" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="SelectedDescription_tf" width="529.8" height="28.8" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="719.75" ty="171.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SelectedDescription_tf</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Selected_Background_Shape" color="#9933CC" parentLayerIndex="0" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CC0000" alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!14353 0|25024 0!25024 0|25024 12919!25024 12919|14353 12919!14353 12919|14353 0"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="UnitList_mc" color="#FFFF00" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="TestingMenu/UnitLists/UnitList/UnitList" name="UnitList_mc">
                   <matrix>
-                    <Matrix tx="45.75" ty="119.2"/>
+                    <Matrix tx="45.75" ty="45.25"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="300" y="200"/>

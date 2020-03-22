@@ -1,0 +1,43 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/ResultIcon/ResultIcon_ShapeGraphic" itemID="5e6ed309-000001b2" symbolType="graphic" lastModified="1584321548">
+  <timeline>
+    <DOMTimeline name="ResultIcon_ShapeGraphic" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Shape" color="#0099FF" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!640 320[640 452 546 546!546 546[453 640 320 640!320 640[188 640 94 546!94 546[0 452 0 320!0 320[0 187 94 93!94 93[188 0 320 0!320 0[453 0 546 93!546 93[640 187 640 320"/>
+                    <Edge cubics="!546 93(;609,156 640,231 640,320q546 93Q640 187q640 320);"/>
+                    <Edge cubics="!320 0(;409,0 484,31 546,93q320 0Q453 0q546 93);"/>
+                    <Edge cubics="!94 93(;157,31 232,0 320,0q94 93Q188 0q320 0);"/>
+                    <Edge cubics="!0 320(;0,231 32,156 94,93q0 320Q0 187q94 93);"/>
+                    <Edge cubics="!94 546(;32,484 0,409 0,320q94 546Q0 452q0 320);"/>
+                    <Edge cubics="!320 640(;232,640 157,609 94,546q320 640Q188 640q94 546);"/>
+                    <Edge cubics="!546 546(;484,609 409,640 320,640q546 546Q453 640q320 640);"/>
+                    <Edge cubics="!640 320(;640,409 609,484 546,546q640 320Q640 452q546 546);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
