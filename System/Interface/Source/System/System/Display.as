@@ -46,7 +46,7 @@ package System
 			return GetInstanceFrom(object, object);
 		}
 
-
+		// TODO: Incorrectly prefixes some display objects.
 		public static function GetInstanceFrom(from:DisplayObject, to:DisplayObject):String
 		{
 			var path:String = from.name;
