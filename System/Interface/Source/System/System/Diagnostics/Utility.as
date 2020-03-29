@@ -12,21 +12,32 @@ package System.Diagnostics
 
 		/**
 		 * Will trace the members of an object.
-		 * This function is recursive.
 		 * @param self - The object to trace.
 		 * */
-		public static function TraceObject(self:Object):void
+		public static function TraceObject(self:*):void
 		{
-			TraceObject(self);
+			var className:String = flash.utils.getQualifiedClassName(self);
+			var classInfo:String = flash.utils.describeType(self);
+
+			if (classInfo != null && classInfo != "")
+			{
+				Debug.WriteLine("\n"+className+"\n"+classInfo);
+			}
+			else
+			{
+				Debug.WriteLine(self.toString());
+				TraceObjectRecursive(self);
+			}
 		}
 
 
+		// TODO: The for-in method works for dynamic objects ONLY!
 		/**
 		 * This function uses recursion to trace the members of an object.
 		 * @param self - The object to use.
 		 * @param indentation - The current line indentation contains prefixs for nesting.
 		 * */
-		private static function TraceObjectRecursive(self:Object, indentation:String = ""):void
+		private static function TraceObjectRecursive(self:*, indentation:String = ""):void
 		{
 			const INDENT:String = "---";
 			indentation == "" ? indentation = INDENT : indentation += INDENT;
