@@ -1,40 +1,97 @@
 package System.Diagnostics
 {
+	import System.Diagnostics.Debug;
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.utils.*;
-	import XML;
-	import System.Diagnostics.Debug;
 
 	public class Utility
 	{
+		// Object
+		//---------------------------------------------
 
-		public static function TraceObject(object:Object, prefix:String = ""):void
+		/**
+		 * Will trace the members of an object.
+		 * This function is recursive.
+		 * @param self - The object to trace.
+		 * */
+		public static function TraceObject(self:Object):void
 		{
-			prefix == "" ? prefix = "---" : prefix += "---";
-			for (var element:* in object)
+			TraceObject(self);
+		}
+
+
+		/**
+		 * This function uses recursion to trace the members of an object.
+		 * @param self - The object to use.
+		 * @param indentation - The current line indentation contains prefixs for nesting.
+		 * */
+		private static function TraceObjectRecursive(self:Object, indentation:String = ""):void
+		{
+			const INDENT:String = "---";
+			indentation == "" ? indentation = INDENT : indentation += INDENT;
+			for (var member:* in self)
 			{
-				Debug.WriteLine(prefix, element + " : " + object[element], "  ");
-				if (typeof(object[element]) == "object") TraceObject(object[element], prefix);
+				Debug.WriteLine(indentation, member + " : " + self[member], "  ");
+				if (typeof(self[member]) == "object")
+				{
+					TraceObjectRecursive(self[member], indentation);
+				}
 			}
 		}
 
 
-		public static function TraceDisplayList(container:DisplayObjectContainer, options:* = undefined, indentString:String = "", depth:int = 0, childAt:int = 0):void
+		// Display Object
+		//---------------------------------------------
+
+		/**
+		 * Will trace the parent to child relationship of display objects as a hierarchy.
+		 * Some visual details such as alpha, width, height, and some other details are also traced.
+		 * If a `Debug.Prefix` is set, then it will be used here.
+		 * This function is recursive.
+		 * @param self - The display object container to trace.
+		 * @param options - Used to specify a maximum recursion depth or filter the results by name.
+		 * The option defaults to a maximum recursion depth of infinity, the entire display list.
+		 * @example Recurse and trace the entire display list.
+		 * 	Utility.TraceDisplayList(stage);
+		 * @example Recurse only to a depth of one hundred.
+		 * 	Utility.TraceDisplayList(stage, 100);
+		 * @example Recurse to, and only trace the display object with the given name.
+		 * 	Utility.TraceDisplayList(stage, "ButtonHintBar_mc");
+		*/
+		public static function TraceDisplayList(self:DisplayObjectContainer, options:* = undefined):void
 		{
-			if (typeof options == "undefined") options = Number.POSITIVE_INFINITY;
-			if (depth > options) return;
+			TraceDisplayListRecursive(self, options);
+		}
+
+
+		/**
+		 * This function uses recursion to trace the parent to child relationship of display objects as a hierarchy.
+		 * @param self - The display object container to recurse.
+		 * @param options - Used to specify a maximum recursion depth or filter the results by name.
+		 * The option defaults to a maximum recursion depth of infinity, the entire display list.
+		 * @param indentation - The current line indentation contains prefixs for nesting.
+		 * @param depth - The current depth of recursion.
+		 * @param childAt - The current child index.
+		*/
+		private static function TraceDisplayListRecursive(self:DisplayObjectContainer, options:* = undefined, indentation:String = "", depth:int = 0, childAt:int = 0):void
+		{
+			if (typeof options == "undefined") { options = Number.POSITIVE_INFINITY; }
+			if (depth > options) { return; }
 
 			const INDENT:String = "   ";
-			var index:int = container.numChildren;
+			var index:int = self.numChildren;
 
 			while (index--)
 			{
-				var child:DisplayObject = container.getChildAt(index);
-				var output:String = indentString+(childAt++)+": "+child.name+" --> "+child;
+				var child:DisplayObject = self.getChildAt(index);
+				var output:String = indentation+(childAt++)+": "+child.name+" --> "+child;
+
+				// indent child properties
+				output += "\t\t";
 
 				// debug alpha/visible properties
-				output += "\t\talpha: "+child.alpha.toFixed(2)+"/"+child.visible;
+				output += "alpha: "+child.alpha.toFixed(2)+"/"+child.visible;
 
 				// debug x and y position
 				output += ", @: ("+child.x+", "+child.y+")";
@@ -44,13 +101,20 @@ package System.Diagnostics
 				output += ", h:"+child.height+"px ("+child.scaleY.toFixed(2)+")";
 				output += ", r:"+child.rotation.toFixed(1)+"";
 
-				if (typeof options == "number") Debug.WriteLine(output);
+				if (typeof options == "number")
+				{
+					Debug.WriteLine(output);
+				}
 				else if (typeof options == "string" && output.match(new RegExp(options, "gi")).length != 0)
 				{
-					Debug.WriteLine(output, "in", container.name, "-->", container);
+					Debug.WriteLine(output, "in", self.name, "-->", self);
 				}
 
-				if (child is DisplayObjectContainer) TraceDisplayList(DisplayObjectContainer(child), options, indentString + INDENT, depth + 1);
+				// Recurse on further display object children.
+				if (child is DisplayObjectContainer)
+				{
+					TraceDisplayListRecursive(DisplayObjectContainer(child), options, indentation + INDENT, depth + 1);
+				}
 			}
 		}
 
