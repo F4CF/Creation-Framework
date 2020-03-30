@@ -1,11 +1,11 @@
 package System
 {
+	import System.Diagnostics.Debug;
+	import System.Display;
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.display.MovieClip;
 	import flash.events.Event;
-	import System.Diagnostics.Debug;
-	import System.Display;
 
 	public class Display
 	{
@@ -41,21 +41,29 @@ package System
 		// Instance
 		//---------------------------------------------
 
-		public static function GetInstance(object:DisplayObject):String
+		// TODO: Possibly deprecate this method.
+		public static function GetInstance(self:DisplayObject):String
 		{
-			return GetInstanceFrom(object, object);
+			return GetInstanceFrom(self, self);
 		}
 
-		// TODO: Incorrectly prefixes some display objects.
-		public static function GetInstanceFrom(from:DisplayObject, to:DisplayObject):String
+
+		/**
+		 * Gets the full variable instance path from one display object to another.
+		 *
+		 * @param self - The display object that will be traversed from.
+		 * @param other - The display object that will be traversed to.
+		 * @return The full variable instance path.
+		*/
+		public static function GetInstanceFrom(self:DisplayObject, other:DisplayObject):String
 		{
-			var path:String = from.name;
-			while (from != to.root)
+			var path:String = self.name;
+			while (self != other.root)
 			{
-				from = from.parent;
-				path = from.name+"."+path;
+				self = self.parent;
+				path = self.name+"."+path;
 			};
-			return "stage."+path;
+			return path;
 		}
 
 
