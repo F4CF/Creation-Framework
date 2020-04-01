@@ -79,7 +79,7 @@
     <ActionScriptVersion>3</ActionScriptVersion>
     <PackageExportFrame>1</PackageExportFrame>
     <PackagePaths></PackagePaths>
-    <AS3PackagePaths>.;..\..\System.XSE;..\..\System;..\..\Bethesda</AS3PackagePaths>
+    <AS3PackagePaths>.;..\..\System.UnitTesting;..\..\System.XSE;..\..\System;..\..\Bethesda</AS3PackagePaths>
     <AS3ConfigConst>CONFIG::FLASH_AUTHORING=&quot;true&quot;;</AS3ConfigConst>
     <DebuggingPermitted>1</DebuggingPermitted>
     <DebuggingPassword></DebuggingPassword>
@@ -107,7 +107,7 @@
     <RSLPreloaderSWF>$(AppConfig)/ActionScript 3.0/rsls/loader_animation.swf</RSLPreloaderSWF>
     <LibraryPath>
       <library-path-entry>
-        <swc-path>$(AppConfig)/ActionScript 3.0/libs</swc-path>
+        <swc-path>$(AppConfig)\ActionScript 3.0\libs\</swc-path>
         <linkage>merge</linkage>
       </library-path-entry>
     </LibraryPath>

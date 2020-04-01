@@ -27,23 +27,44 @@
 
 		public function UnitListEntry()
 		{
-			Debug.WriteLine("[UnitListEntry]", "(CTOR)");
+			// Debug.WriteLine("[UnitListEntry]", "(CTOR)");
 			addEventListener(Event.ADDED_TO_STAGE, OnAddedToStage);
 		}
 
 
 		private function OnAddedToStage(e:Event):void
 		{
-			Debug.WriteLine("[UnitListEntry]", "(OnAddedToStage)");
+			// Debug.WriteLine("[UnitListEntry]", "(OnAddedToStage)");
 			Text = "Unknown";
 			Name = "Unnamed Unit Test";
 			Description = "This is a default unit test description.";
-			Icon_mc.Fail();
+			Icon_mc.Fail(); // this works
 		}
 
 
 		// Methods
 		//---------------------------------------------
+
+		public function Indeterminate():void
+		{
+			// Debug.WriteLine("[UnitListEntry]", "(Indeterminate)");
+			Icon_mc.Indeterminate();
+		}
+
+
+		public function Pass():void
+		{
+			// Debug.WriteLine("[UnitListEntry]", "(Pass)");
+			Icon_mc.Pass();
+		}
+
+
+		public function Fail():void
+		{
+			// Debug.WriteLine("[UnitListEntry]", "(Fail)");
+			Icon_mc.Fail();
+		}
+
 
 		public override function toString():String
 		{

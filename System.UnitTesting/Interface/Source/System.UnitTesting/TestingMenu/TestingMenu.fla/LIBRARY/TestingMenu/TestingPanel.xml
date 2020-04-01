@@ -1,9 +1,41 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/TestingPanel" itemID="5e6d8b32-0000014e" linkageExportForAS="true" linkageClassName="TestingPanel" lastModified="1584833937">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/TestingPanel" itemID="5e6d8b32-0000014e" linkageExportForAS="true" linkageClassName="TestingPanel" lastModified="1585411075" lastUniqueIdentifier="1">
   <timeline>
     <DOMTimeline name="TestingPanel" layerDepthEnabled="true">
       <layers>
+        <DOMLayer name="ButtonHintBar_mc" color="#33FF00" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="640" ty="657.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.65" y="16"/>
+                  </transformationPoint>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
         <DOMLayer name="Selected" color="#FF4FFF" locked="true" autoNamed="false" layerType="folder"/>
-        <DOMLayer name="SelectedScript_tf" color="#0099FF" parentLayerIndex="0" locked="true" autoNamed="false">
+        <DOMLayer name="SelectedIcon_mc" color="#009999" parentLayerIndex="1" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="TestingMenu/ResultIcon/ResultIcon" name="SelectedIcon_mc" selected="true">
+                  <matrix>
+                    <Matrix tx="961.7" ty="221.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SelectedScript_tf" color="#0099FF" parentLayerIndex="1" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -24,7 +56,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="SelectedName_tf" color="#FF800A" parentLayerIndex="0" locked="true" autoNamed="false">
+        <DOMLayer name="SelectedName_tf" color="#FF800A" parentLayerIndex="1" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -45,7 +77,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="SelectedDescription_tf" color="#0099FF" parentLayerIndex="0" locked="true" autoNamed="false">
+        <DOMLayer name="SelectedDescription_tf" color="#0099FF" parentLayerIndex="1" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -66,7 +98,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Selected_Background_Shape" color="#9933CC" parentLayerIndex="0" locked="true" autoNamed="false">
+        <DOMLayer name="Selected_Background_Shape" color="#9933CC" parentLayerIndex="1" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -93,7 +125,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="UnitList_mc" color="#FFFF00" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="UnitList_mc" color="#FFFF00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -113,7 +145,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMShape selected="true" isFloating="true">
+                <DOMShape isFloating="true">
                   <matrix>
                     <Matrix a="1.12251281738281" d="1.54313659667969" tx="0.05" ty="0.25"/>
                   </matrix>

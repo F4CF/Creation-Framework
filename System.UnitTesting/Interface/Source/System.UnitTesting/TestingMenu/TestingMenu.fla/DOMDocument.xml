@@ -1,40 +1,40 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="2822BE9B29417F448EBE6BC80B8B394E">
      <folders>
           <DOMFolderItem name="Shared" itemID="5e44fa09-000001f2"/>
-          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc" isExpanded="true"/>
-          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd" isExpanded="true"/>
-          <DOMFolderItem name="Shared/AS3/BSButtonHintBar/BSButtonHint" itemID="5e76864d-000003cf"/>
-          <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b" isExpanded="true"/>
+          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc"/>
+          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd"/>
+          <DOMFolderItem name="Shared/AS3/BSButtonHintBar/BSButtonHint" itemID="5e76864d-000003cf" isExpanded="true"/>
+          <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b"/>
           <DOMFolderItem name="Shared/Fonts/fonts_en" itemID="5e44fa13-000001f6" isExpanded="true"/>
           <DOMFolderItem name="TestingMenu" itemID="5e6ca169-0000013a" isExpanded="true"/>
-          <DOMFolderItem name="TestingMenu/ResultIcon" itemID="5e6d744e-00000211"/>
+          <DOMFolderItem name="TestingMenu/ResultIcon" itemID="5e6d744e-00000211" isExpanded="true"/>
           <DOMFolderItem name="TestingMenu/UnitLists" itemID="5e6d7b8d-0000025a" isExpanded="true"/>
-          <DOMFolderItem name="TestingMenu/UnitLists/UnitList" itemID="5e6d758c-0000023c"/>
+          <DOMFolderItem name="TestingMenu/UnitLists/UnitList" itemID="5e6d758c-0000023c" isExpanded="true"/>
           <DOMFolderItem name="TestingMenu/UnitLists/UnitListEntry" itemID="5e6d7591-0000023e" isExpanded="true"/>
      </folders>
      <fonts>
-          <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="3" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="Shared/Fonts/fonts_en/$Controller_Buttons_inverted" itemID="5daeb3ba-00000283" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons_inverted" linkageURL="fonts_en.swf" font="ControllerButtonsInverted" size="0" id="2" sourceLastImported="1571433949" embedRanges="1|2"/>
           <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font" itemID="5e46bcbb-000002fc" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font" linkageURL="fonts_en.swf" font="RobotoCondensed-Regular" size="0" id="1" sourceLastImported="1581578181" embedRanges="9999"/>
+          <DOMFontItem name="Shared/Fonts/fonts_en/$Controller_Buttons_inverted" itemID="5daeb3ba-00000283" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$Controller_Buttons_inverted" linkageURL="fonts_en.swf" font="ControllerButtonsInverted" size="0" id="2" sourceLastImported="1571433949" embedRanges="1|2"/>
+          <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="3" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
      </fonts>
      <symbols>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHint/BSButtonHint.xml" itemID="5ddac9d3-0000080a" lastModified="1574701160"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHint/BSButtonHint_IconAnimation.xml" itemID="5daea742-00000321" lastModified="1574701162"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHint/BSButtonHint_IconHolder.xml" itemID="5daea62e-00000315" lastModified="1574701165"/>
-          <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar.xml" itemID="5ddac9d8-0000080d" lastModified="1574701167"/>
+          <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar.xml" itemID="5ddac9d8-0000080d" lastModified="1585341759"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketLeft.xml" loadImmediate="false" itemID="5ddac8ae-000007c0" lastModified="1574701169"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketRight.xml" loadImmediate="false" itemID="5ddac8b5-000007c1" lastModified="1574619317"/>
-          <Include href="TestingMenu/ResultIcon/ResultIcon.xml" itemID="5e6ad1dc-000001c4" lastModified="1584764602"/>
+          <Include href="TestingMenu/ResultIcon/ResultIcon.xml" itemID="5e6ad1dc-000001c4" lastModified="1585408835"/>
           <Include href="TestingMenu/ResultIcon/ResultIcon_Fail.xml" loadImmediate="false" itemID="5e6ed2cb-000001af" lastModified="1584321429"/>
           <Include href="TestingMenu/ResultIcon/ResultIcon_Indeterminate.xml" loadImmediate="false" itemID="5e6ed2ce-000001b0" lastModified="1584321440"/>
           <Include href="TestingMenu/ResultIcon/ResultIcon_Pass.xml" loadImmediate="false" itemID="5e6ed2d1-000001b1" lastModified="1584321431"/>
           <Include href="TestingMenu/ResultIcon/ResultIcon_ShapeGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e6ed309-000001b2" lastModified="1584321548"/>
-          <Include href="TestingMenu/TestingPanel.xml" itemID="5e6d8b32-0000014e" lastModified="1584833937"/>
+          <Include href="TestingMenu/TestingPanel.xml" itemID="5e6d8b32-0000014e" lastModified="1585411075"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList.xml" itemID="5e6d7a2e-00000248" lastModified="1584326982"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_Border.xml" loadImmediate="false" itemID="5e6d7bec-0000025f" lastModified="1584233452"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e6d7be7-0000025e" lastModified="1584321550"/>
           <Include href="TestingMenu/UnitLists/UnitList/UnitList_ScrollArrow.xml" loadImmediate="false" itemID="5e6d7bf1-00000260" lastModified="1584233457"/>
-          <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry.xml" itemID="5e6d7bf8-00000261" lastModified="1584828197"/>
+          <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry.xml" itemID="5e6d7bf8-00000261" lastModified="1585330068"/>
           <Include href="TestingMenu/UnitLists/UnitListEntry/UnitList_EntryBorder.xml" loadImmediate="false" itemID="5e6d7c03-00000262" lastModified="1584321071"/>
      </symbols>
      <timelines>
@@ -62,8 +62,18 @@
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="44452" publishTime="1584833675" publishDebug="true"/>
-          <PublishItem publishSize="44563" publishTime="1584832917" publishDebug="true"/>
-          <PublishItem publishSize="44639" publishTime="1584830748" publishDebug="true"/>
+          <PublishItem publishSize="1968" publishTime="1585439405" publishDebug="true"/>
+          <PublishItem publishSize="1970" publishTime="1585439073" publishDebug="true"/>
+          <PublishItem publishSize="1967" publishTime="1585438969" publishDebug="true"/>
+          <PublishItem publishSize="1968" publishTime="1585438945" publishDebug="true"/>
+          <PublishItem publishSize="1968" publishTime="1585438837" publishDebug="true"/>
+          <PublishItem publishSize="1967" publishTime="1585438683" publishDebug="true"/>
+          <PublishItem publishSize="1967" publishTime="1585438653" publishDebug="true"/>
+          <PublishItem publishSize="1966" publishTime="1585438594" publishDebug="true"/>
+          <PublishItem publishSize="1967" publishTime="1585438444" publishDebug="true"/>
+          <PublishItem publishSize="1969" publishTime="1585438421" publishDebug="true"/>
+          <PublishItem publishSize="1968" publishTime="1585437278" publishDebug="true"/>
+          <PublishItem publishSize="1969" publishTime="1585435500" publishDebug="true"/>
+          <PublishItem publishSize="51629" publishTime="1585434685" publishDebug="true"/>
      </publishHistory>
 </DOMDocument>

@@ -6,9 +6,9 @@ package
 
 	public dynamic class ResultIcon extends MovieClip
 	{
-		private const ResultIndeterminate:String = "Indeterminate";
-		private const ResultPass:String = "Pass";
-		private const ResultFail:String = "Fail";
+		public const ResultIndeterminate:String = "Indeterminate";
+		public const ResultPass:String = "Pass";
+		public const ResultFail:String = "Fail";
 
 
 		// Initialization
@@ -16,7 +16,7 @@ package
 
 		public function ResultIcon()
 		{
-			Debug.WriteLine("[ResultIcon]", "(CTOR)");
+			// Debug.WriteLine("[ResultIcon]", "(CTOR)");
 		}
 
 
@@ -25,19 +25,19 @@ package
 
 		public function Indeterminate():void
 		{
-			Debug.WriteLine("[ResultIcon]", "(Indeterminate)");
+			// Debug.WriteLine("[ResultIcon]", "(Indeterminate)");
 			gotoAndStop(ResultIndeterminate);
 		}
 
 		public function Pass():void
 		{
-			Debug.WriteLine("[ResultIcon]", "(Pass)");
+			// Debug.WriteLine("[ResultIcon]", "(Pass)");
 			gotoAndStop(ResultPass);
 		}
 
 		public function Fail():void
 		{
-			Debug.WriteLine("[ResultIcon]", "(Fail)");
+			// Debug.WriteLine("[ResultIcon]", "(Fail)");
 			gotoAndStop(ResultFail);
 		}
 

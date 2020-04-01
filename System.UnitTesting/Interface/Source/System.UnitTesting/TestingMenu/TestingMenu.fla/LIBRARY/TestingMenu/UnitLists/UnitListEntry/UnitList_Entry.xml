@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry" itemID="5e6d7bf8-00000261" linkageExportForAS="true" linkageClassName="UnitListEntry" lastModified="1584828197" lastUniqueIdentifier="6">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TestingMenu/UnitLists/UnitListEntry/UnitList_Entry" itemID="5e6d7bf8-00000261" linkageExportForAS="true" linkageClassName="UnitListEntry" lastModified="1585330068" lastUniqueIdentifier="6">
   <timeline>
     <DOMTimeline name="UnitList_Entry" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Icon_mc" color="#FF0000" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Icon_mc" color="#FF0000" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -18,7 +18,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="textField" color="#0099FF" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="textField" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -39,7 +39,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Name_tf" color="#00CC00" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Name_tf" color="#00CC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -60,7 +60,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Description_tf" color="#9933CC" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Description_tf" color="#9933CC" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -81,7 +81,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="border" color="#FFCC00" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="border" color="#FFCC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
