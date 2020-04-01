@@ -23,15 +23,15 @@
 		{
 			System.Diagnostics.Debug.Prefix = "System:UI:ButtonMenu";
 			super();
-			Debug.WriteLine("[ButtonMenu] Constructor");
+			Debug.WriteLine("[ButtonMenu]", "(CTOR)");
 			ButtonBarHolder.ButtonHintBar_mc.bRedirectToButtonBarMenu = false;
 		}
 
 
-		override protected function onSetSafeRect() : void
+		protected override function onSetSafeRect() : void
 		{
 			GlobalFunc.LockToSafeRect(ButtonBarHolder, "BC", SafeX, SafeY);
-			Debug.WriteLine("[ButtonMenu] onSetSafeRect");
+			Debug.WriteLine("[ButtonMenu]", "(onSetSafeRect)");
 		}
 
 
@@ -40,7 +40,7 @@
 
 		public function SetButtons(argument:Object, ... rest) : void
 		{
-			Debug.WriteLine("[ButtonMenu] SetButtons");
+			Debug.WriteLine("[ButtonMenu]", "(SetButtons)");
 
 			if (argument != null)
 			{
@@ -68,7 +68,7 @@
 			}
 			else
 			{
-				Debug.WriteLine("[ButtonMenu] Argument was null!");
+				Debug.WriteLine("[ButtonMenu]", "(SetButtons)", "Argument was null!");
 			}
 		}
 

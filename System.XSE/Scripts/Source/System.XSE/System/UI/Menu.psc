@@ -1,4 +1,5 @@
 ScriptName System:UI:Menu Extends System:Quest Native Const Hidden
+{The base type for user interface menus.}
 import System:Debug
 import System:Exception
 
@@ -18,7 +19,8 @@ Struct IMenu
 	string Variable = ""
 	{The menu object variable with dot accessor.
 	By default, this is ignored unless given a value.
-	Some vanilla menus will use `".Menu_mc"`.}
+	Some vanilla menus will use `".Menu_mc"`.
+	Leave this empty if the menu object is the document class.}
 
 	string Root = "root1"
 	{The root display object is the top-level MovieClip that is not the stage.}

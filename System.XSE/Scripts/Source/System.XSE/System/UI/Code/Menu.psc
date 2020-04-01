@@ -1,5 +1,4 @@
 ScriptName System:UI:Code:Menu Extends System:UI:Code:MenuType
-{The framework is used to track equipment changes on the player.}
 import System:Debug
 import System:UI:Menu
 import System:UI:MenuDynamic
@@ -81,8 +80,18 @@ Event OnGameReload()
 	RegisterForExternalEvent(ClientLoadedCallback, "OnClientLoaded")
 	WriteLine(self, "OnGameReload", ToString(), log="System")
 
+	RegisterForMenuOpenCloseEvent(MenuNames.ConsoleMenu)
 	RegisterForMenuOpenCloseEvent(MenuNames.TerminalHolotapeMenu)
 	RegisterForMenuOpenCloseEvent(MenuNames.TerminalMenu)
+EndEvent
+
+
+Event OnMenuOpenCloseEvent(string menuName, bool opening)
+	WriteLine(self, "OnMenuOpenCloseEvent(MenuNames.menuName="+menuName+", opening="+opening+")", log="System")
+	If (opening)
+		IMenu_.Name = menuName
+		Load()
+	EndIf
 EndEvent
 
 
@@ -93,13 +102,5 @@ Event OnClientLoaded(bool success, string instance)
 		IMenuDynamic().Instance = instance
 	Else
 		IMenuDynamic().Instance = ""
-	EndIf
-EndEvent
-
-
-Event OnMenuOpenCloseEvent(string menuName, bool opening)
-	WriteLine(self, "OnMenuOpenCloseEvent(MenuNames.menuName="+menuName+", opening="+opening+")", log="System")
-	If (opening)
-		Load()
 	EndIf
 EndEvent

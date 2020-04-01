@@ -7,7 +7,7 @@ package System.Diagnostics
 	import Shared.AS3.BSUIComponent;
 	import Shared.IMenu;
 	import System.Diagnostics.Debug;
-	import System.UI.MenuDynamic;
+	import System.UI.MenuType;
 	import flash.display.DisplayObject;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
@@ -92,9 +92,9 @@ package System.Diagnostics
 		// System.UI
 		//---------------------------------------------
 
-		public static function MenuDynamic_Trace(self:MenuDynamic):void
+		public static function MenuType_Trace(self:MenuType):void
 		{
-			const className:String = "System.UI.MenuDynamic";
+			const className:String = "System.UI.MenuType";
 			if (self != null)
 			{
 				var name:String = GetName(self);

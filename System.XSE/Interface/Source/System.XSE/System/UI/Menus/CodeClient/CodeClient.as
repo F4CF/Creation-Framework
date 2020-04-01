@@ -4,13 +4,13 @@
 	import System.Diagnostics.Debug;
 	import System.Diagnostics.Utility;
 	import System.Display;
-	import System.UI.MenuClient;
+	import System.UI.MenuDynamic;
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import mx.utils.DisplayUtil;
 
-	public class CodeClient extends MenuClient
+	public class CodeClient extends MenuDynamic
 	{
 		// Initialize
 		//---------------------------------------------
@@ -20,11 +20,11 @@
 			Debug.Prefix = "System:UI:Code";
 			super();
 			Debug.WriteLine("\n\n");
-			Debug.WriteLine("[CodeClient]", "(ctor)", "Constructor Code");
+			Debug.WriteLine("[CodeClient]", "(CTOR)");
 		}
 
 
-		override protected function OnAddedToStage(e:Event):void
+		protected override function OnAddedToStage(e:Event):void
 		{
 			super.OnAddedToStage(e);
 
@@ -55,8 +55,9 @@
 		}
 
 
-		private function Dump():void
+		protected override function Dump():void
 		{
+			super.Dump();
 			Debug.WriteLine("[CodeClient]", "(Dump)", "------------------------------");
 			Debug.WriteLine("[CodeClient]", "(Dump)", "Instance:", Display.GetInstanceFrom(this, Root));
 

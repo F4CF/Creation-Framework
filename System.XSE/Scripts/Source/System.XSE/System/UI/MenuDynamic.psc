@@ -92,7 +92,15 @@ EndEvent
 ;---------------------------------------------
 
 bool Function Load()
+	; TODO: Validate the name and file are not none
 	return UI.Load(Name, Root, File+".swf", self, "OnDynamicLoad")
+EndFunction
+
+
+Function Unload()
+	string member = Instance+"."+"Unload"
+	UI.Invoke(Name, member)
+	Debug.TraceSelf(self, "Unload", Name+"::"+member)
 EndFunction
 
 
