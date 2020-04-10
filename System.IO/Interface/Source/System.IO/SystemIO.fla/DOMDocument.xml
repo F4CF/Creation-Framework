@@ -14,5 +14,7 @@
      </timelines>
      <scripts/>
      <PrinterSettings/>
-     <publishHistory/>
+     <publishHistory>
+          <PublishItem publishSize="2732" publishTime="1586551723" publishDebug="true"/>
+     </publishHistory>
 </DOMDocument>
