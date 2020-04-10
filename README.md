@@ -4,8 +4,18 @@ These libraries and frameworks are heavily inspired by Microsoft's .NET Framewor
 
 The framework is divided into several assemblies, imports, and namespaces.
 
-# UI Framework
-The UI scripting framework is a distributed library which may be included with source code. The user interface library has no assembly.
+# Dependencies
+The following projects are used as dependencies.
+
+## [F4SE](https://f4se.silverlock.org/)
+The Fallout 4 Script Extender, or F4SE for short, is a modder's resource that expands the scripting capabilities of Fallout 4.
+It does so without modifying the executable files on disk, so there are no permanent side effects.
+
+## [Fallout 4 Interface Development Kit](https://github.com/Scrivener07/FO4_Interface)
+The unofficial Fallout 4 user interface development kit.
+The user interface library has no assembly.
+The UI scripting framework is a distributed library which may be included with source code.
+
 
 # Assembly: `System.esl`
 The scripting framework assembly `System.esl` is divided into several imports and namespaces.
@@ -34,7 +44,6 @@ The namespace includes classes that provide extension methods for XSE functions 
 
 #### Import: `System.UI`
 The namespace includes classes that allow for interacting with the Scaleform user interface.
-
 
 
 # Assembly: `System.HUDFramework.esl`
