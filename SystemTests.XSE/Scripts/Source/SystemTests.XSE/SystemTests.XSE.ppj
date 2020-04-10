@@ -14,7 +14,6 @@
 		<Import>.</Import>
 		<Import>..\System</Import>
 		<Import>..\System.XSE</Import>
-		<Import>..\System.UI</Import>
 		<Import>..\F4SE</Import>
 		<Import>..\Base</Import>
 	</Imports>

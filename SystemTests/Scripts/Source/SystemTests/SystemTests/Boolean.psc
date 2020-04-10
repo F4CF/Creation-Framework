@@ -1,6 +1,6 @@
 ScriptName SystemTests:Boolean Extends System:Diagnostics:UnitTest
 import System:BoolType
-import System:Log
+import System:Debug
 
 ; Test Runner
 ;---------------------------------------------

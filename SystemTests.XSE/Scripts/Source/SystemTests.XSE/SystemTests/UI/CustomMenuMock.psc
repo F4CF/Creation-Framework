@@ -1,5 +1,6 @@
-ScriptName SystemTests:UI:CustomMenuMock extends System:UI:CustomType
-import System:Log
+ScriptName SystemTests:UI:CustomMenuMock Extends System:UI:MenuCustom
+import System:Debug
+; TODO: Verify overrides and base class implementations.
 
 ; Display
 ;---------------------------------------------

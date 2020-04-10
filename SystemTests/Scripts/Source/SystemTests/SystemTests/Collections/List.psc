@@ -1,5 +1,5 @@
 ScriptName SystemTests:Collections:List Extends System:Diagnostics:UnitTest
-import System:Log
+import System:Debug
 
 ; Test Runner
 ;---------------------------------------------

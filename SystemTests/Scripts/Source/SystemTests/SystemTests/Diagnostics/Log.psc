@@ -1,5 +1,5 @@
 ScriptName SystemTests:Diagnostics:Log Extends System:Diagnostics:UnitTest
-import System:Log
+import System:Debug
 
 
 ; Lilac

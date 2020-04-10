@@ -1,5 +1,5 @@
 ScriptName SystemTests:UI:ButtonMenu extends System:Diagnostics:UnitTest
-import System:Log
+import System:Debug
 import System:UI:Buttons:Menu
 
 ; Console Command: StartQuest GamesTest_SharedUIButtonMenu
@@ -202,7 +202,7 @@ bool Function ShownNoButtonTest()
 	return Done
 EndFunction
 State ShownNoButtonTest
-	Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
+	Event System:UI:Buttons:Menu.OnShown(System:UI:Buttons:Menu sender, var[] arguments)
 		WriteLine("System", self, "ShownNoButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
 		sender.Hide()
 	EndEvent
@@ -222,7 +222,7 @@ bool Function ShownButtonTest()
 	return Done
 EndFunction
 State ShownButtonTest
-	Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
+	Event System:UI:Buttons:Menu.OnShown(System:UI:Buttons:Menu sender, var[] arguments)
 		WriteLine("System", self, "ShownButtonTest::System:UI:ButtonMenu.OnShown:"+sender.GetShownEventArgs(arguments))
 		sender.Hide()
 	EndEvent
@@ -232,7 +232,6 @@ EndState
 ; Empty
 ;---------------------------------------------
 
-Event System:UI:ButtonMenu.OnShown(System:UI:ButtonMenu sender, var[] arguments)
+Event System:UI:Buttons:Menu.OnShown(System:UI:Buttons:Menu sender, var[] arguments)
 	{EMPTY}
 EndEvent
-

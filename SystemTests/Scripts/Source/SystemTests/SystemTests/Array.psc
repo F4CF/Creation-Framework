@@ -1,6 +1,6 @@
 ScriptName SystemTests:Array Extends System:Diagnostics:UnitTest
 import System:Array
-import System:Log
+import System:Debug
 
 
 ; Test Runner

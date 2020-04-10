@@ -24,10 +24,10 @@ EndFunction
 ;---------------------------------------------
 
 Event OnQuestInit()
-	System:Log.WriteLine("System", self, "OnQuestInit")
+	System:Debug.WriteLine("System", self, "OnQuestInit")
 EndEvent
 
 
 Event OnQuestShutdown()
-	System:Log.WriteLine("System", self, "OnQuestShutdown")
+	System:Debug.WriteLine("System", self, "OnQuestShutdown")
 EndEvent

@@ -1,5 +1,5 @@
 ScriptName SystemTests:Type Extends System:Diagnostics:UnitTest
-import System:Log
+import System:Debug
 
 System:Collections:List MyList
 
@@ -9,9 +9,9 @@ Function Foo()
 		MyList.Add("One")
 		MyList.Add("Two")
 		MyList.Add("Three")
-		Write(self, "[Factory] MyList contains '"+MyList.Count+"' elements..")
+		WriteLine(self, "Foo", "[Factory] MyList contains '"+MyList.Count+"' elements..")
 	Else
-		Write(self, "[Factory] MyList is none.")
+		WriteLine(self, "Foo", "[Factory] MyList is none.")
 	EndIf
 EndFunction
 
@@ -20,13 +20,13 @@ EndFunction
 ;---------------------------------------------
 
 Function Setup()
-	WriteLine("System", self, "Setup")
+	WriteLine(self, "Setup")
 	EnableVerboseLogging()
 EndFunction
 
 
 Function TestSuites()
-	WriteLine("System", self, "Executing the TestSuites function.")
+	WriteLine(self, "System", "Executing the TestSuites function.")
 ;	Describe("New List", NewListSuite())
 EndFunction
 
