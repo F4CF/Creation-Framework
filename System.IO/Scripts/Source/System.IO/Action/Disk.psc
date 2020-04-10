@@ -114,14 +114,14 @@ Group Properties
 	string Property Name Hidden
 		string Function Get()
 			{The name of this menu.}
-			return "ActionLibrary"
+			return "SystemIO"
 		EndFunction
 	EndProperty
 
 	string Property Path Hidden
 		string Function Get()
 			{The swf file path of this menu without the file extension. The root directory is "Data\Interface".}
-			return "ActionLibrary"
+			return "SystemIO"
 		EndFunction
 	EndProperty
 
