@@ -1,15 +1,4 @@
 {
-	"files.exclude": {
-		"Scaleform/": false,
-		"Scripting/": true,
-		"ScriptingTests/": true,
-		"System/": true,
-		"System.HUDFramework/": true,
-		"System.MCM/": true,
-		"System.XSE/": true,
-		"SystemTests/": true,
-		"SystemTests.HUDFramework/": true,
-		"SystemTests.MCM/": true,
-		"SystemTests.XSE/": true,
-	}
+	"files.exclude": {},
+	"explorerExclude.backup": null
 }
