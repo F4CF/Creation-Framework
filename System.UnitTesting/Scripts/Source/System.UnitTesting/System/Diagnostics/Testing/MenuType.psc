@@ -7,10 +7,3 @@ Struct UnitTestData
 	string Name = ""
 	string Description = ""
 EndStruct
-
-
-; Scaleform
-;---------------------------------------------
-
-Event OnAssetReady() Native
-Event OnAssetUnloaded() Native

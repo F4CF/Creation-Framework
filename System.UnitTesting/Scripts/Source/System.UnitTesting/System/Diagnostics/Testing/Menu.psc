@@ -8,8 +8,6 @@ ICustom ICustom_
 string Title = "Testing"
 string OpenedState = "Opened" const
 
-string ReadyEvent = "System_Diagnostics_TestingReadyEvent" const
-string UnloadEvent = "System_Diagnostics_TestingUnloadEvent" const
 
 ; Properties
 ;---------------------------------------------
@@ -63,8 +61,6 @@ EndEvent
 Event OnGameReload()
 	WriteLine(self, "OnGameReload", log="System")
 	RegisterForMenuOpenCloseEvent(Name)
-	RegisterForExternalEvent(ReadyEvent, "OnAssetReady")
-	RegisterForExternalEvent(UnloadEvent, "OnAssetUnloaded")
 	RegisterForKey(Keyboard.Home)
 	RegisterForKey(Keyboard.Mouse4)
 	RegisterForKey(Keyboard.End)
@@ -94,22 +90,6 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	OpenCloseEventArgs e = new OpenCloseEventArgs
 	e.Opening = opening
 	IMenu().OpenClose.Send(self, e)
-EndEvent
-
-
-; Scaleform
-;---------------------------------------------
-
-; @Scaleform
-Event OnAssetReady()
-	; this happens BEFORE `OnAssetLoaded`
-	Debug.TraceSelf(self, "OnAssetReady", ToString())
-EndEvent
-
-
-; @Scaleform
-Event OnAssetUnloaded()
-	Debug.TraceSelf(self, "OnAssetUnloaded", ToString())
 EndEvent
 
 
