@@ -16,6 +16,7 @@ package System.IO
 		public static const SWF:String = "swf";
 		public static const NIF:String = "nif";
 		public static const DDS:String = "dds";
+		public static const TXT:String = "txt";
 
 
 		/**

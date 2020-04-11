@@ -1,4 +1,5 @@
 ScriptName System:UI:DynamicLoadEvent Extends System:EventType
+{Provides the UI dynamic load event.}
 import System:Debug
 import System:Exception
 

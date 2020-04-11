@@ -1,4 +1,5 @@
 ScriptName System:MenuName Extends System:Object Native Default
+{A list of menu name constants for UI functions.}
 
 Group Menus
 	string Property BarterMenu = "BarterMenu" AutoReadOnly Hidden

@@ -14,14 +14,14 @@ package System.UI
 	// TODO: Rename the extenal events ReadyEvent & UnloadEvent.
 	public class MenuDynamic extends MenuType implements F4SE.ICodeObject
 	{
-		// TODO: The extenal client event.
+		// TODO: The extenal client event, deprecate.
 		private const ClientLoadedCallback:String = "SystemUI_ClientLoadedCallback";
 
 		// TODO: The asset extenal ready event.
-		public static const ReadyEvent:String = "System_Diagnostics_TestingReadyEvent";
+		public static const ReadyEvent:String = "System:UI:MenuDynamic:ReadyEvent";
 
 		// TODO: The asset extenal unload and dispose event.
-		public static const UnloadEvent:String = "System_Diagnostics_TestingUnloadEvent";
+		public static const UnloadEvent:String = "System:UI:MenuDynamic:UnloadEvent";
 
 
 		// Initialization
@@ -38,7 +38,7 @@ package System.UI
 			super.OnAddedToStage(e);
 			Debug.WriteLine("[System.UI.MenuDynamic]", "(OnAddedToStage)");
 			onF4SEObjCreated(Root.f4se);
-			XSE.SendExternalEvent(ReadyEvent);
+			SendReadyEventCallback();
 		}
 
 
@@ -121,10 +121,18 @@ package System.UI
 		// Papyrus Callbacks
 		//---------------------------------------------
 
+		// TODO: Deprecate this method in favor of `SendReadyEventCallback`.
 		protected function SendClientLoadedCallback(success:Boolean, variable:String):Boolean
 		{
 			Debug.WriteLine("[System.UI.MenuDynamic]", "(SendClientLoadedCallback)", "Sending external event:", ClientLoadedCallback, "success:"+success, "variable:"+variable);
 			return XSE.SendExternalEvent(ClientLoadedCallback, success, variable);
+		}
+
+
+		protected function SendReadyEventCallback():Boolean
+		{
+			Debug.WriteLine("[System.UI.MenuDynamic]", "(SendReadyEventCallback)", "Sending external event:", ReadyEvent);
+			return XSE.SendExternalEvent(ReadyEvent);
 		}
 
 

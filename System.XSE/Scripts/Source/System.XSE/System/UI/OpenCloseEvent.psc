@@ -1,4 +1,5 @@
 ScriptName System:UI:OpenCloseEvent Extends System:EventType
+{Provides the UI open and close event.}
 import System:Debug
 import System:Exception
 

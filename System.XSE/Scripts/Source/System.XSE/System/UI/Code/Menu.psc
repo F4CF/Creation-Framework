@@ -91,6 +91,8 @@ Event OnMenuOpenCloseEvent(string menuName, bool opening)
 	If (opening)
 		IMenu_.Name = menuName
 		Load()
+	Else
+		Unload()
 	EndIf
 EndEvent
 

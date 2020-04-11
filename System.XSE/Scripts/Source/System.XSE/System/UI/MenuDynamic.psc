@@ -52,6 +52,20 @@ Group Properties
 			return IMenuDynamic().HasLoaded
 		EndFunction
 	EndProperty
+
+	string Property ReadyEvent Hidden
+		{The dynamic menu ready event.}
+		string Function Get()
+			return "System:UI:MenuDynamic:ReadyEvent"
+		EndFunction
+	EndProperty
+
+	string Property UnloadEvent Hidden
+		{The dynamic menu unload event.}
+		string Function Get()
+			return "System:UI:MenuDynamic:UnloadEvent"
+		EndFunction
+	EndProperty
 EndGroup
 
 
@@ -88,11 +102,28 @@ Event OnDynamicLoad(bool success, string menuName, string menuRoot, string asset
 EndEvent
 
 
+; @Scaleform
+; TODO: External event needs a name/id parameter.
+Event OnDynamicReady()
+	WriteLine(self, "OnDynamicReady", log="System")
+EndEvent
+
+
+; @Scaleform
+; TODO: External event needs a name/id parameter.
+Event OnDynamicUnload()
+	WriteLine(self, "OnDynamicUnload", log="System")
+	Unload()
+EndEvent
+
+
 ; Methods
 ;---------------------------------------------
 
 bool Function Load()
 	; TODO: Validate the name and file are not none
+	RegisterForExternalEvent(ReadyEvent, "OnDynamicReady")
+	RegisterForExternalEvent(UnloadEvent, "OnDynamicUnload")
 	return UI.Load(Name, Root, File+".swf", self, "OnDynamicLoad")
 EndFunction
 
@@ -100,7 +131,7 @@ EndFunction
 Function Unload()
 	string member = Instance+"."+"Unload"
 	UI.Invoke(Name, member)
-	Debug.TraceSelf(self, "Unload", Name+"::"+member)
+	WriteLine(self, "Unload", Name+"::"+member, log="System")
 EndFunction
 
 
