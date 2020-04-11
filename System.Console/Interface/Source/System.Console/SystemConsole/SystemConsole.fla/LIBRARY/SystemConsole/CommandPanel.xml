@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandPanel" itemID="5e91f280-000001f8" linkageExportForAS="true" linkageClassName="CommandPanel" lastModified="1586645292" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="CommandPanel" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="CommandCard_mc" color="#FF0000" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandCard/CommandCard" name="CommandCard_mc">
+                  <matrix>
+                    <Matrix tx="717.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="268.7" y="322.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="CommandList_mc" color="#FFFF00" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList" name="CommandList_mc">
+                  <matrix>
+                    <Matrix tx="45.75" ty="45.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="300" y="200"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="ButtonHintBar_mc" color="#33FF00" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" uniqueID="1">
+                  <matrix>
+                    <Matrix tx="640" ty="657.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.65" y="16"/>
+                  </transformationPoint>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Background_Shape" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CC0000" alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1 5|13905 5!13905 5|13905 12924!13905 12924|1 12924!1 12924|1 5"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

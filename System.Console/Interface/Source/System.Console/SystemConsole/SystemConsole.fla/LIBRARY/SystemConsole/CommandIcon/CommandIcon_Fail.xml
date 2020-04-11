@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandIcon/CommandIcon_Fail" itemID="5e92489b-00000247" lastModified="1586645147">
+  <timeline>
+    <DOMTimeline name="CommandIcon_Fail" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Lines" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="3">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                        <VariablePointWidth>
+                          <WidthMarker position="0" left="0" right="0" type="corner"/>
+                          <WidthMarker position="0.12" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.14" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.86" left="0.5" right="0.5"/>
+                          <WidthMarker position="0.88" left="0.5" right="0.5"/>
+                          <WidthMarker position="1" left="0" right="0" type="corner"/>
+                        </VariablePointWidth>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!319 322/473 469!167 174/304 308!304 308/319 322!319 322/364 279!364 279/473 175!167 467/319 322"/>
+                    <Edge cubics="!364 279(;364,279 473,175 473,175q364 279 473 175);"/>
+                    <Edge cubics="!167 174(;167,174 304,308 304,308q167 174 304 308);"/>
+                    <Edge cubics="!167 467(;167,467 319,322 319,322q167 467 319 322);"/>
+                    <Edge cubics="!319 322(;319,322 364,279 364,279q319 322 364 279);"/>
+                    <Edge cubics="!304 308(;304,308 319,322 319,322q304 308 319 322);"/>
+                    <Edge cubics="!319 322(;319,322 473,469 473,469q319 322 473 469);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Circle" color="#00FFFF" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandIcon/CommandIcon_ShapeGraphic" symbolType="graphic" loop="loop">
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

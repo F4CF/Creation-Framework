@@ -1,0 +1,140 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandCard" itemID="5e92442b-0000022a" linkageExportForAS="true" linkageClassName="CommandCard" lastModified="1586644578">
+  <timeline>
+    <DOMTimeline name="CommandCard" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="SelectedIcon_mc" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SystemConsole/ResultIcon/ResultIcon" name="SelectedIcon_mc">
+                  <matrix>
+                    <Matrix tx="244.05" ty="221.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="16"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SelectedScript_tf" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="SelectedScript_tf" width="529.8" height="28.8" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2.1" ty="73.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SelectedScript_tf</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SelectedName_tf" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="SelectedName_tf" width="533.8" height="28.8" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2.1" ty="125.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SelectedName_tf</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="SelectedDescription_tf" color="#009999" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="SelectedDescription_tf" width="529.8" height="28.8" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2.1" ty="171.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>SelectedDescription_tf</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="28.8" size="24" bitmapSize="480" face="$MAIN_Font*"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Background_Shape" color="#FF0000" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#CC0000" alpha="0.2"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!2999 6880S7[3328 6830 3652 6837!3652 6837[3728 6840 3760 6844!3760 6844[3820 6850 3864 6867!3864 6867[3985 6913 4057 7038!4057 7038[4126 7158 4117 7292!4117 7292[4107 7424 4021 7526!4021 7526[3931 7633 3809 7640!3809 7640[3758 7644 3598
+ 7608!3598 7608[3469 7580 3397 7612!3397 7612[3351 7632 3309 7681!3309 7681[3285 7711 3244 7777!3244 7777[3185 7875 3219 7922!3219 7922[3239 7954 3287 7959!3287 7959[3316 7962 3374 7955!3374 7955[3558 7932 3740 7990!3740 7990[3923 8047
+ 4059 8172!4059 8172[4185 8403 4151 8723!4151 8723[4125 8967 3999 9290!3999 9290[3968 9373 3927 9392!3927 9392[3868 9416 3777 9355!3777 9355[3493 9174 3367 9116!3367 9116[3127 9006 2924 9027!2924 9027[2930 9005 2917 8982!2917 8982[2905
+ 8960 2882 8952"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="
+!0 0S6|10671 0!10671 0|10671 12919!10671 12919|0 12919!0 12919|0 0"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
+!2932 6957S7[2821 8017 2584 9032"/>
+                    <Edge cubics="!2932 6957(;2859,7655 2744,8347 2584,9032q2932 6957Q2821 8017q2584 9032);"/>
+                    <Edge cubics="!2999 6880(;3214,6847 3434,6832 3652,6837q2999 6880Q3328 6830q3652 6837);"/>
+                    <Edge cubics="!3652 6837(;3724,6840 3797,6842 3864,6867q3652 6837Q3728 6840q3760 6844Q3820 6850q3864 6867);"/>
+                    <Edge cubics="!3864 6867(;4029,6930 4129,7117 4117,7292q3864 6867Q3985 6913q4057 7038Q4126 7158q4117 7292);"/>
+                    <Edge cubics="!4117 7292(;4104,7462 3977,7630 3809,7640q4117 7292Q4107 7424q4021 7526Q3931 7633q3809 7640);"/>
+                    <Edge cubics="!3809 7640(;3669,7650 3524,7555 3397,7612q3809 7640Q3758 7644q3598 7608Q3469 7580q3397 7612);"/>
+                    <Edge cubics="!3397 7612(;3327,7642 3284,7712 3244,7777q3397 7612Q3351 7632q3309 7681Q3285 7711q3244 7777);"/>
+                    <Edge cubics="!3244 7777(;3217,7822 3189,7880 3219,7922q3244 7777Q3185 7875q3219 7922);"/>
+                    <Edge cubics="!3219 7922(;3249,7970 3319,7962 3374,7955q3219 7922Q3239 7954q3287 7959Q3316 7962q3374 7955);"/>
+                    <Edge cubics="!3374 7955(;3619,7925 3877,8005 4059,8172q3374 7955Q3558 7932q3740 7990Q3923 8047q4059 8172);"/>
+                    <Edge cubics="!4059 8172(;4244,8510 4139,8930 3999,9290q4059 8172Q4185 8403q4151 8723Q4125 8967q3999 9290);"/>
+                    <Edge cubics="!3999 9290(;3984,9330 3964,9375 3927,9392q3999 9290Q3968 9373q3927 9392);"/>
+                    <Edge cubics="!3927 9392(;3877,9412 3822,9385 3777,9355q3927 9392Q3868 9416q3777 9355);"/>
+                    <Edge cubics="!3777 9355(;3514,9187 3232,8995 2924,9027q3777 9355Q3493 9174q3367 9116Q3127 9006q2924 9027);"/>
+                    <Edge cubics="!2924 9027(;2932,8997 2912,8962 2882,8952q2924 9027Q2930 9005q2917 8982Q2905 8960q2882 8952);"/>
+                    <Edge cubics="!0 0(;0,0 10671,0 10671,0q0 0 10671 0);"/>
+                    <Edge cubics="!10671 0(;10671,0 10671,12919 10671,12919q10671 0 10671 12919);"/>
+                    <Edge cubics="!10671 12919(;10671,12919 0,12919 0,12919q10671 12919 0 12919);"/>
+                    <Edge cubics="!0 12919(;0,12919 0,0 0,0q0 12919 0 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

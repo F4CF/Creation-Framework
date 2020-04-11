@@ -1,0 +1,26 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow" itemID="5e9247da-00000237" lastModified="1586644954">
+  <timeline>
+    <DOMTimeline name="CommandList_ScrollArrow" layerDepthEnabled="true">
+      <layers>
+        <DOMLayer name="Button" color="#F21CC9" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!270 120|232 120!232 120|135 34!135 34|38 120!38 120|0 120!0 120|135 0!135 0|270 120"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
