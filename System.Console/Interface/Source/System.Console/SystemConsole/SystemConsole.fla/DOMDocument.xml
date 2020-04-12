@@ -1,8 +1,8 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="2822BE9B29417F448EBE6BC80B8B394E">
      <folders>
-          <DOMFolderItem name="Shared" itemID="5e44fa09-000001f2"/>
-          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc"/>
-          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd"/>
+          <DOMFolderItem name="Shared" itemID="5e44fa09-000001f2" isExpanded="true"/>
+          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc" isExpanded="true"/>
+          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd" isExpanded="true"/>
           <DOMFolderItem name="Shared/AS3/BSButtonHintBar/BSButtonHint" itemID="5e76864d-000003cf" isExpanded="true"/>
           <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b"/>
           <DOMFolderItem name="Shared/Fonts/fonts_en" itemID="5e44fa13-000001f6" isExpanded="true"/>
@@ -24,7 +24,7 @@
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar.xml" itemID="5ddac9d8-0000080d" lastModified="1585341759"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketLeft.xml" loadImmediate="false" itemID="5ddac8ae-000007c0" lastModified="1574701169"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketRight.xml" loadImmediate="false" itemID="5ddac8b5-000007c1" lastModified="1574619317"/>
-          <Include href="SystemConsole/CommandCard/CommandCard.xml" itemID="5e92442b-0000022a" lastModified="1586650136"/>
+          <Include href="SystemConsole/CommandCard/CommandCard.xml" itemID="5e92442b-0000022a" lastModified="1586659831"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList.xml" itemID="5e9247ca-00000234" lastModified="1586650275"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList_Border.xml" loadImmediate="false" itemID="5e9247d2-00000235" lastModified="1586644946"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList_BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e9247d7-00000236" lastModified="1586644951"/>
@@ -32,16 +32,16 @@
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_Entry.xml" itemID="5e9247e1-00000238" lastModified="1586648109"/>
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryBorder.xml" loadImmediate="false" itemID="5e9247e4-00000239" lastModified="1586644964"/>
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryIcon.xml" itemIcon="1" loadImmediate="false" itemID="5e925521-00000268" lastModified="1586648353"/>
-          <Include href="SystemConsole/CommandPanel.xml" itemID="5e91f280-000001f8" lastModified="1586650280"/>
+          <Include href="SystemConsole/CommandPanel.xml" itemID="5e91f280-000001f8" lastModified="1586663451"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
                <layers>
-                    <DOMLayer name="Panel" color="#00CC00" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="Panel" color="#00CC00" locked="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="SystemConsole/CommandPanel" name="Panel" selected="true">
+                                        <DOMSymbolInstance libraryItemName="SystemConsole/CommandPanel" name="Panel">
                                              <matrix>
                                                   <Matrix tx="17.1" ty="19.1"/>
                                              </matrix>
@@ -53,18 +53,29 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
+                    <DOMLayer name="ButtonHintBar_mc" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" uniqueID="1">
+                                             <matrix>
+                                                  <Matrix tx="640.65" ty="657.75"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.65" y="16"/>
+                                             </transformationPoint>
+                                        </DOMComponentInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
                </layers>
           </DOMTimeline>
      </timelines>
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="54630" publishTime="1586652844" publishDebug="true"/>
-          <PublishItem publishSize="54618" publishTime="1586652809" publishDebug="true"/>
-          <PublishItem publishSize="54590" publishTime="1586652253" publishDebug="true"/>
-          <PublishItem publishSize="54568" publishTime="1586650292" publishDebug="true"/>
-          <PublishItem publishSize="54554" publishTime="1586650118" publishDebug="true"/>
-          <PublishItem publishSize="54562" publishTime="1586649182" publishDebug="true"/>
-          <PublishItem publishSize="54591" publishTime="1586648380" publishDebug="true"/>
+          <PublishItem publishSize="54626" publishTime="1586663209" publishDebug="true"/>
+          <PublishItem publishSize="54634" publishTime="1586663141" publishDebug="true"/>
      </publishHistory>
 </DOMDocument>

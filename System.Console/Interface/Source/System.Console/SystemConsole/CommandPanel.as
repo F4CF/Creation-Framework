@@ -1,11 +1,9 @@
 ﻿package
 {
-	import Shared.AS3.BSButtonHintBar;
-	import Shared.AS3.BSButtonHintData;
+
 	import Shared.AS3.BSScrollingList;
 	import Shared.AS3.BSScrollingListEntry;
 	import Shared.AS3.BSUIComponent;
-	import Shared.PlatformChangeEvent;
 	import System.Diagnostics.Debug;
 	import System.Diagnostics.Dump;
 	import System.Diagnostics.Utility;
@@ -25,11 +23,6 @@
 
 		// Selected
 		public var CommandCard_mc:CommandCard;
-
-		// Button Bar
-		public var ButtonHintBar_mc:BSButtonHintBar;
-		private var ButtonUnload:BSButtonHintData;
-		private var ButtonRun:BSButtonHintData;
 
 
 		// Initialization
@@ -52,7 +45,6 @@
 		{
 			Debug.WriteLine("[CommandPanel]", "(OnDisplayLoaded)");
 			SetupUnitList();
-			SetupButtonBar();
 		}
 
 
@@ -62,8 +54,8 @@
 		private function SetupUnitList():void
 		{
 			Debug.WriteLine("[CommandPanel]", "(SetupUnitList)");
-			stage.stageFocusRect = false;
-			stage.focus = CommandList_mc;
+			// stage.stageFocusRect = false;
+			// stage.focus = CommandList_mc;
 
 			try
 			{
@@ -156,126 +148,6 @@
 				Debug.WriteLine("[CommandPanel]", "(SelectionHandler)", "Error:", "The unit list entry is null.");
 			}
 		}
-
-
-		// Button Bar
-		//---------------------------------------------
-
-		private function SetupButtonBar():void
-		{
-			Debug.WriteLine("[CommandPanel]", "(SetupButtonBar)");
-
-			try
-			{
-				ButtonHintBar_mc["componentInspectorSetting"] = true;
-				ButtonHintBar_mc.BackgroundAlpha = 1;
-				ButtonHintBar_mc.BackgroundColor = 0;
-				ButtonHintBar_mc.bracketCornerLength = 6;
-				ButtonHintBar_mc.bracketLineWidth = 1.5;
-				ButtonHintBar_mc.BracketStyle = "horizontal";
-				ButtonHintBar_mc.bRedirectToButtonBarMenu = false;
-				ButtonHintBar_mc.bShowBrackets = true;
-				ButtonHintBar_mc.bUseShadedBackground = true;
-				ButtonHintBar_mc.ShadedBackgroundMethod = "Shader";
-				ButtonHintBar_mc.ShadedBackgroundType = "normal";
-				ButtonHintBar_mc["componentInspectorSetting"] = false;
-			}
-			catch (error:Error)
-			{
-				Debug.WriteLine("[CommandPanel]", "(SetupButtonBar)", "ButtonHintBar_mc", "COMPONENT", "ERROR:", error.toString());
-			}
-
-			try
-			{
-				// ButtonHintBar_mc.onComponentInit(new Event(Event.INIT)); // needed on unconventional menus?
-				ButtonHintBar_mc.SetPlatform(PlatformChangeEvent.PLATFORM_PC_KB_MOUSE, false);
-			}
-			catch (error:Error)
-			{
-				Debug.WriteLine("[CommandPanel]", "(SetupButtonBar)", "ButtonHintBar_mc", "COMPONENT-INIT", "ERROR:", error.toString());
-			}
-
-			try
-			{
-				// Create a new button array.
-				var buttons:Vector.<BSButtonHintData> = new Vector.<BSButtonHintData>();
-
-				// Setup the unload button.
-				ButtonUnload = new BSButtonHintData
-				(
-					"Show Console",
-					"End", // END-35 key for unloading
-					"Up",
-					"_Positive",
-					0,
-					this.OnButtonUnload
-				);
-				ButtonUnload.name = "Unload_btn";
-				ButtonUnload.ButtonVisible = true;
-				ButtonUnload.ButtonEnabled = true;
-				buttons.push(ButtonUnload);
-
-				// Setup the test run button.
-				ButtonRun = new BSButtonHintData
-				(
-					"Run Tests",
-					"Z",
-					"Down",
-					"_Negative",
-					0,
-					this.OnButtonRun
-				);
-				ButtonRun.name = "RunTests_btn";
-				ButtonRun.ButtonVisible = true;
-				ButtonRun.ButtonEnabled = true;
-				buttons.push(ButtonRun);
-
-				// Populate
-				ButtonHintBar_mc.SetButtonHintData(buttons);
-				ButtonHintBar_mc.SetIsDirty();
-			}
-			catch (error:Error)
-			{
-				Debug.WriteLine("[CommandPanel]", "(SetupButtonBar)", "ButtonHintBar_mc", "Buttons", "ERROR:", error.toString());
-			}
-
-			// Dump and trace objects.
-			Dump.BSButtonHintBar_Trace(ButtonHintBar_mc);
-			Dump.BSButtonHintData_Trace(ButtonRun);
-			Dump.BSButtonHintData_Trace(ButtonUnload);
-		}
-
-
-		private function OnButtonUnload():void
-		{
-			Debug.WriteLine("[CommandPanel]", "(OnButtonUnload)");
-		}
-
-
-		private function OnButtonRun():void
-		{
-			Debug.WriteLine("[CommandPanel]", "(OnButtonRun)");
-		}
-
-
-		// private function ToButtonHint(argument:Object):BSButtonHintData
-		// {
-		// 	var textValue = argument["__struct__"]["__data__"]["text"];
-		// 	var keyCode = 	argument["__struct__"]["__data__"]["keyCode"];
-
-		// 	var hint:BSButtonHintData = new BSButtonHintData
-		// 	(
-		// 		textValue,
-		// 		Input.KeyCodeToPC(keyCode),
-		// 		"PlayStation",
-		// 		"Xbox",
-		// 		1,
-		// 		null
-		// 	);
-		// 	return hint;
-		// }
-
-
 
 
 		// Methods

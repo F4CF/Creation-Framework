@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandPanel" itemID="5e91f280-000001f8" linkageExportForAS="true" linkageClassName="CommandPanel" lastModified="1586650280" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandPanel" itemID="5e91f280-000001f8" linkageExportForAS="true" linkageClassName="CommandPanel" lastModified="1586663451" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="CommandPanel" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandCard/CommandCard" name="CommandCard_mc" selected="true">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandCard/CommandCard" name="CommandCard_mc">
                   <matrix>
                     <Matrix tx="717.65"/>
                   </matrix>
@@ -18,7 +18,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="CommandList_mc" color="#FFFF00" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="CommandList_mc" color="#FFFF00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -34,19 +34,10 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="ButtonHintBar_mc" color="#33FF00" locked="true" autoNamed="false">
+        <DOMLayer name="ButtonHintBar_mc" color="#33FF00" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
-              <elements>
-                <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" uniqueID="1">
-                  <matrix>
-                    <Matrix tx="640" ty="657.75"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="-0.65" y="16"/>
-                  </transformationPoint>
-                </DOMComponentInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>

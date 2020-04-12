@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandCard/CommandCard" itemID="5e92442b-0000022a" linkageExportForAS="true" linkageClassName="CommandCard" lastModified="1586650136">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandCard/CommandCard" itemID="5e92442b-0000022a" linkageExportForAS="true" linkageClassName="CommandCard" lastModified="1586659831">
   <timeline>
     <DOMTimeline name="CommandCard" layerDepthEnabled="true">
       <layers>
@@ -65,7 +65,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Background_Shape" color="#FF0000" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Layer_8" color="#FF4F4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Background_Shape" color="#FF0000" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
