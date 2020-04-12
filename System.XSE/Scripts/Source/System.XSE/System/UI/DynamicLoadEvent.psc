@@ -27,6 +27,7 @@ bool Function Send(ScriptObject sender, DynamicLoadEventArgs e)
 			return Invoke(delegate)
 		Else
 			ThrowArgumentNoneEmpty(self, "Send", "e", "The argument cannot be none.")
+			return false
 		EndIf
 	Else
 		ThrowArgumentNoneEmpty(self, "Send", "sender", "The sender cannot be none.")
