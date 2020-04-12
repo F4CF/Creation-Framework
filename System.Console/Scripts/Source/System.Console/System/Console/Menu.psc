@@ -72,8 +72,6 @@ EndEvent
 Event OnGameReload()
 	WriteLine(self, "OnGameReload", ToString(), log="System")
 	RegisterForMenuOpenCloseEvent(Name)
-	; RegisterForExternalEvent(ReadyEvent, "OnAssetReady")
-	; RegisterForExternalEvent(UnloadEvent, "OnAssetUnloaded")
 EndEvent
 
 

@@ -1,14 +1,14 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandList/CommandList/CommandList" itemID="5e9247ca-00000234" linkageExportForAS="true" linkageClassName="CommandList" lastModified="1586644938">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandList/CommandList/CommandList" itemID="5e9247ca-00000234" linkageExportForAS="true" linkageClassName="CommandList" lastModified="1586650275">
   <timeline>
     <DOMTimeline name="CommandList" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="ScrollDown" color="#908283" locked="true" autoNamed="false">
+        <DOMLayer name="ScrollDown" color="#00CC00" locked="true" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow" name="ScrollDown" centerPoint3DX="33.75" centerPoint3DY="403">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow" name="ScrollDown" centerPoint3DX="33.75" centerPoint3DY="213.35">
                   <matrix>
-                    <Matrix a="-1" d="-1" tx="27" ty="400"/>
+                    <Matrix a="-1" d="-1" tx="27" ty="210.35"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -18,13 +18,13 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="ScrollUp" color="#A947D3" locked="true" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="ScrollUp" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow" name="ScrollUp" centerPoint3DX="20.25" centerPoint3DY="3">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow" name="ScrollUp" centerPoint3DX="20.25" centerPoint3DY="-5">
                   <matrix>
-                    <Matrix tx="13.5"/>
+                    <Matrix tx="13.5" ty="-8"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
@@ -34,16 +34,16 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="border" color="#F161D9" locked="true" autoNamed="false">
+        <DOMLayer name="border" color="#F161D9" locked="true" outline="true" useOutlineView="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList_Border" name="border" centerPoint3DX="121.2" centerPoint3DY="93.95">
                   <matrix>
-                    <Matrix a="6.00004577636719" d="4.00015258789063"/>
+                    <Matrix a="6.00004577636719" d="2.39450073242188" ty="-17.9"/>
                   </matrix>
                   <transformationPoint>
-                    <Point/>
+                    <Point y="-0.05"/>
                   </transformationPoint>
                   <color>
                     <Color alphaMultiplier="0"/>

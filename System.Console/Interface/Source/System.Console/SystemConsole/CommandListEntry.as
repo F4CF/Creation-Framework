@@ -19,8 +19,6 @@
 		public function set Description(value:String):void { Description_tf.text = value; }
 		public var Description_tf:TextField;
 
-		public var Icon_mc:CommandIcon;
-
 
 		// Initialization
 		//---------------------------------------------
@@ -36,35 +34,13 @@
 		{
 			// Debug.WriteLine("[CommandListEntry]", "(OnAddedToStage)");
 			Text = "Unknown";
-			Name = "Unnamed Unit Test";
-			Description = "This is a default unit test description.";
-			Icon_mc.Fail(); // this works
+			Name = "Unknown Batch Command";
+			Description = "This is a default batch console command description.";
 		}
 
 
 		// Methods
 		//---------------------------------------------
-
-		public function Indeterminate():void
-		{
-			// Debug.WriteLine("[CommandListEntry]", "(Indeterminate)");
-			Icon_mc.Indeterminate();
-		}
-
-
-		public function Pass():void
-		{
-			// Debug.WriteLine("[CommandListEntry]", "(Pass)");
-			Icon_mc.Pass();
-		}
-
-
-		public function Fail():void
-		{
-			// Debug.WriteLine("[CommandListEntry]", "(Fail)");
-			Icon_mc.Fail();
-		}
-
 
 		public override function toString():String
 		{

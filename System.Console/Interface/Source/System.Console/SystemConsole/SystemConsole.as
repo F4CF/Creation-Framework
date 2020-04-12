@@ -44,8 +44,11 @@
 		protected function OnDisplayLoaded(e:Event):void
 		{
 			Debug.WriteLine("[SystemConsole]", "(OnDisplayLoaded)", e.toString(), "e.target:"+e.target.toString(), "e.target.name:"+e.target.name);
+
+			Panel.OnDisplayLoaded(e);
+
 			this.addEventListener(KeyboardEvent.KEY_UP, OnKeyUp);
-			// Dump();
+			Dump();
 		}
 
 
@@ -63,8 +66,8 @@
 			if (e.keyCode == Keyboard.HOME)
 			{
 				Debug.WriteLine("[SystemConsole]", "(OnKeyUp)", e.toString());
-				AddCaps(1);
-				CenterOnCell();
+				// AddCaps(1);
+				// CenterOnCell();
 			}
 		}
 
@@ -79,8 +82,8 @@
 			Debug.WriteLine("[SystemConsole]", "(DynamicBegin)");
 			try
 			{
-				ConsoleMenu.visible = false;
-				stage.focus = Panel.CommandList_mc;
+				// ConsoleMenu.visible = false;
+				// stage.focus = Panel.CommandList_mc;
 			}
 			catch (error:Error)
 			{
@@ -96,8 +99,8 @@
 			Debug.WriteLine("[SystemConsole]", "(DynamicEnd)");
 			try
 			{
-				ConsoleMenu.visible = true;
-				stage.focus = null;
+				// ConsoleMenu.visible = true;
+				// stage.focus = null;
 			}
 			catch (error:Error)
 			{

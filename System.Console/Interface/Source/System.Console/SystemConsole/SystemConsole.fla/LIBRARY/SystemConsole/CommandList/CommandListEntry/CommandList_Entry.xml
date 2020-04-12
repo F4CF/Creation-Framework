@@ -1,24 +1,31 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandList/CommandListEntry/CommandList_Entry" itemID="5e9247e1-00000238" linkageExportForAS="true" linkageClassName="CommandListEntry" lastModified="1586644961" lastUniqueIdentifier="6">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandList/CommandListEntry/CommandList_Entry" itemID="5e9247e1-00000238" linkageExportForAS="true" linkageClassName="CommandListEntry" lastModified="1586648109" lastUniqueIdentifier="6">
   <timeline>
     <DOMTimeline name="CommandList_Entry" layerDepthEnabled="true">
       <layers>
-        <DOMLayer name="Icon_mc" color="#FF0000" outline="true" current="true" isSelected="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Console_Icon" color="#9933CC" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandIcon/CommandIcon" name="Icon_mc">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandListEntry/CommandList_EntryIcon" symbolType="graphic" loop="single frame">
                   <matrix>
-                    <Matrix tx="16.4" ty="15.35"/>
+                    <Matrix tx="16" ty="13.75"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="16.15" y="16.1"/>
+                    <Point x="18" y="16"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="textField" color="#0099FF" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Icon_mc" color="#FF0000" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="textField" color="#0099FF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -39,7 +46,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Name_tf" color="#00CC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Name_tf" color="#00CC00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -60,7 +67,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Description_tf" color="#9933CC" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="Description_tf" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -81,7 +88,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="border" color="#FFCC00" locked="true" outline="true" useOutlineView="true" autoNamed="false">
+        <DOMLayer name="border" color="#FFCC00" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>

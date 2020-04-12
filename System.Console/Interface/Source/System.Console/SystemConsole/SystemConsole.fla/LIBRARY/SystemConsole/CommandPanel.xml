@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandPanel" itemID="5e91f280-000001f8" linkageExportForAS="true" linkageClassName="CommandPanel" lastModified="1586645292" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SystemConsole/CommandPanel" itemID="5e91f280-000001f8" linkageExportForAS="true" linkageClassName="CommandPanel" lastModified="1586650280" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="CommandPanel" layerDepthEnabled="true">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandCard/CommandCard" name="CommandCard_mc">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandCard/CommandCard" name="CommandCard_mc" selected="true">
                   <matrix>
                     <Matrix tx="717.65"/>
                   </matrix>
@@ -22,7 +22,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList" name="CommandList_mc">
+                <DOMSymbolInstance libraryItemName="SystemConsole/CommandList/CommandList/CommandList" name="CommandList_mc" selected="true">
                   <matrix>
                     <Matrix tx="45.75" ty="45.25"/>
                   </matrix>
@@ -70,7 +70,7 @@
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge fillStyle1="1" strokeStyle="1" edges="!1 5|13905 5!13905 5|13905 12924!13905 12924|1 12924!1 12924|1 5"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!1 -1|13905 -1!13905 -1|13905 5776!13905 5776|1 5776!1 5776|1 -1"/>
                   </edges>
                 </DOMShape>
               </elements>

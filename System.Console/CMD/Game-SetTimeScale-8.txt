@@ -1,0 +1,2 @@
+SHOW TimeScale
+SET TimeScale TO 8

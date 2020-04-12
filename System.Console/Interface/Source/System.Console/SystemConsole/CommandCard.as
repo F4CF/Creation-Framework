@@ -10,7 +10,6 @@ package
 		public var SelectedScript_tf:TextField;
 		public var SelectedName_tf:TextField;
 		public var SelectedDescription_tf:TextField;
-		public var SelectedIcon_mc:CommandIcon;
 
 
 		// Initialization

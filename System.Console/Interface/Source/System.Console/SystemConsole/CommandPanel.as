@@ -45,6 +45,12 @@
 		private function OnAddedToStage(e:Event):void
 		{
 			Debug.WriteLine("[CommandPanel]", "(OnAddedToStage)");
+		}
+
+
+		public function OnDisplayLoaded(e:Event):void
+		{
+			Debug.WriteLine("[CommandPanel]", "(OnDisplayLoaded)");
 			SetupUnitList();
 			SetupButtonBar();
 		}
@@ -92,14 +98,7 @@
 
 			try
 			{
-				// CommandList_mc.entryList.push(NewEntry("COC RedRocketExt", "Command", "Center on the cell named RedRocketExt."));
-				// CommandList_mc.entryList.push(NewEntry("Player.AddItem F 100", "Command", "Add 100 caps to the player."));
-
-
-				// TODO: Testing this.
 				GetDirectory();
-
-
 				CommandList_mc.InvalidateData();
 				CommandList_mc.selectedIndex = 0;
 			}
@@ -112,39 +111,6 @@
 		}
 
 
-
-
-
-		private function GetDirectory():void
-		{
-			Debug.WriteLine("[CommandPanel]", "(GetDirectory)");
-			const directory:String = "Data\\CMD";
-			const match:String = "*.txt";
-			const recursive:Boolean = true;
-
-			var files:Vector.<FileSystemInfo> = FileSystem.GetListing(directory, match, recursive);
-			for each(var file:FileSystemInfo in files)
-			{
-				if (file != null)
-				{
-					var fileName = Path.GetFileName(file.Path);
-
-					Debug.WriteLine("[CommandPanel]", "(GetDirectory)", "directory:"+directory, "match:"+match, "file:"+file.toString());
-
-					CommandList_mc.entryList.push(NewEntry(file.Path, fileName, "Date Modified: "+file.Modified));
-				}
-				else
-				{
-					Debug.WriteLine("[CommandPanel]", "(GetDirectory)", "directory:"+directory, "match:"+match, "The file was NULL!");
-				}
-			}
-		}
-
-
-
-
-
-
 		private function OnItemPress(e:Event):void
 		{
 			Debug.WriteLine("[CommandPanel]", "(OnItemPress)", e.toString());
@@ -152,7 +118,6 @@
 			{
 				SelectionHandler(CommandList_mc.selectedEntry as CommandListEntry);
 				(this.parent as SystemConsole).RunBatch((CommandList_mc.selectedEntry as CommandListEntry).Name);
-				(this.parent as SystemConsole).AddCaps(1);
 			}
 			else
 			{
@@ -181,38 +146,15 @@
 			if (entry != null)
 			{
 				Debug.WriteLine("[CommandPanel]", "(SelectionHandler)", "selected:", entry.toString());
-
 				CommandCard_mc.SelectedScript_tf.text = entry.Text;
 				CommandCard_mc.SelectedName_tf.text = entry.Name;
 				CommandCard_mc.SelectedDescription_tf.text = entry.Description;
-
-				Debug.WriteLine("[CommandPanel]", "(SelectionHandler)", "entry.currentFrame", entry.Icon_mc.currentFrame);
-				SwitchIcon();
 				Dump.BSScrollingListEntry_Trace(entry as BSScrollingListEntry);
 			}
 			else
 			{
 				Debug.WriteLine("[CommandPanel]", "(SelectionHandler)", "Error:", "The unit list entry is null.");
 			}
-		}
-
-
-		private function SwitchIcon():void
-		{
-			Debug.WriteLine("[CommandPanel]", "(SwitchIcon)", "SelectedIcon_mc.currentFrame", CommandCard_mc.SelectedIcon_mc.currentFrame);
-
-			if (CommandCard_mc.SelectedIcon_mc.currentFrame == 1)
-			{
-				CommandCard_mc.SelectedIcon_mc.gotoAndStop(2);
-				CommandList_mc.selectedEntry.Icon_mc.gotoAndStop(2);
-			}
-			else
-			{
-				CommandCard_mc.SelectedIcon_mc.gotoAndStop(1);
-				CommandList_mc.selectedEntry.Icon_mc.gotoAndStop(1);
-			}
-
-			Debug.WriteLine("[CommandPanel]", "(SwitchIcon)", "SelectedIcon_mc.currentFrame", "SWITCH:", CommandCard_mc.SelectedIcon_mc.currentFrame);
 		}
 
 
@@ -338,6 +280,31 @@
 
 		// Methods
 		//---------------------------------------------
+
+		private function GetDirectory():void
+		{
+			Debug.WriteLine("[CommandPanel]", "(GetDirectory)");
+			const directory:String = "Data\\CMD";
+			const match:String = "*.txt";
+			const recursive:Boolean = true;
+
+			var files:Vector.<FileSystemInfo> = FileSystem.GetListing(directory, match, recursive);
+			for each(var file:FileSystemInfo in files)
+			{
+				if (file != null)
+				{
+					var fileName = Path.GetFileName(file.Path);
+
+					Debug.WriteLine("[CommandPanel]", "(GetDirectory)", "directory:"+directory, "match:"+match, "file:"+file.toString());
+
+					CommandList_mc.entryList.push(NewEntry(file.Path, fileName, "Date Modified: "+file.Modified));
+				}
+				else
+				{
+					Debug.WriteLine("[CommandPanel]", "(GetDirectory)", "directory:"+directory, "match:"+match, "The file was NULL!");
+				}
+			}
+		}
 
 		// @Papyrus
 		public function SetData(argument:Object, ... rest):void

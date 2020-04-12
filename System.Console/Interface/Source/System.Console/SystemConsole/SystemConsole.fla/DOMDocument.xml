@@ -7,11 +7,10 @@
           <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b"/>
           <DOMFolderItem name="Shared/Fonts/fonts_en" itemID="5e44fa13-000001f6" isExpanded="true"/>
           <DOMFolderItem name="SystemConsole" itemID="5e92444a-0000022f" isExpanded="true"/>
-          <DOMFolderItem name="SystemConsole/CommandCard" itemID="5e924863-00000243" isExpanded="true"/>
-          <DOMFolderItem name="SystemConsole/CommandIcon" itemID="5e92483d-00000241" isExpanded="true"/>
+          <DOMFolderItem name="SystemConsole/CommandCard" itemID="5e924863-00000243"/>
           <DOMFolderItem name="SystemConsole/CommandList" itemID="5e924865-00000244" isExpanded="true"/>
           <DOMFolderItem name="SystemConsole/CommandList/CommandList" itemID="5e9247c2-00000232"/>
-          <DOMFolderItem name="SystemConsole/CommandList/CommandListEntry" itemID="5e9247e9-0000023a"/>
+          <DOMFolderItem name="SystemConsole/CommandList/CommandListEntry" itemID="5e9247e9-0000023a" isExpanded="true"/>
      </folders>
      <fonts>
           <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="3" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
@@ -25,19 +24,15 @@
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar.xml" itemID="5ddac9d8-0000080d" lastModified="1585341759"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketLeft.xml" loadImmediate="false" itemID="5ddac8ae-000007c0" lastModified="1574701169"/>
           <Include href="Shared/AS3/BSButtonHintBar/BSButtonHintBar_BracketRight.xml" loadImmediate="false" itemID="5ddac8b5-000007c1" lastModified="1574619317"/>
-          <Include href="SystemConsole/CommandCard/CommandCard.xml" itemID="5e92442b-0000022a" lastModified="1586644578"/>
-          <Include href="SystemConsole/CommandIcon/CommandIcon.xml" itemID="5e924898-00000246" lastModified="1586645144"/>
-          <Include href="SystemConsole/CommandIcon/CommandIcon_Fail.xml" loadImmediate="false" itemID="5e92489b-00000247" lastModified="1586645147"/>
-          <Include href="SystemConsole/CommandIcon/CommandIcon_Indeterminate.xml" loadImmediate="false" itemID="5e92489d-00000248" lastModified="1586645149"/>
-          <Include href="SystemConsole/CommandIcon/CommandIcon_Pass.xml" loadImmediate="false" itemID="5e92489f-00000249" lastModified="1586645151"/>
-          <Include href="SystemConsole/CommandIcon/CommandIcon_ShapeGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e9248a6-0000024a" lastModified="1586645158"/>
-          <Include href="SystemConsole/CommandList/CommandList/CommandList.xml" itemID="5e9247ca-00000234" lastModified="1586644938"/>
+          <Include href="SystemConsole/CommandCard/CommandCard.xml" itemID="5e92442b-0000022a" lastModified="1586650136"/>
+          <Include href="SystemConsole/CommandList/CommandList/CommandList.xml" itemID="5e9247ca-00000234" lastModified="1586650275"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList_Border.xml" loadImmediate="false" itemID="5e9247d2-00000235" lastModified="1586644946"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList_BorderGraphic.xml" itemIcon="1" loadImmediate="false" itemID="5e9247d7-00000236" lastModified="1586644951"/>
           <Include href="SystemConsole/CommandList/CommandList/CommandList_ScrollArrow.xml" loadImmediate="false" itemID="5e9247da-00000237" lastModified="1586644954"/>
-          <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_Entry.xml" itemID="5e9247e1-00000238" lastModified="1586644961"/>
+          <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_Entry.xml" itemID="5e9247e1-00000238" lastModified="1586648109"/>
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryBorder.xml" loadImmediate="false" itemID="5e9247e4-00000239" lastModified="1586644964"/>
-          <Include href="SystemConsole/CommandPanel.xml" itemID="5e91f280-000001f8" lastModified="1586645292"/>
+          <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryIcon.xml" itemIcon="1" loadImmediate="false" itemID="5e925521-00000268" lastModified="1586648353"/>
+          <Include href="SystemConsole/CommandPanel.xml" itemID="5e91f280-000001f8" lastModified="1586650280"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
@@ -64,6 +59,12 @@
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="55458" publishTime="1586642389" publishDebug="true"/>
+          <PublishItem publishSize="54630" publishTime="1586652844" publishDebug="true"/>
+          <PublishItem publishSize="54618" publishTime="1586652809" publishDebug="true"/>
+          <PublishItem publishSize="54590" publishTime="1586652253" publishDebug="true"/>
+          <PublishItem publishSize="54568" publishTime="1586650292" publishDebug="true"/>
+          <PublishItem publishSize="54554" publishTime="1586650118" publishDebug="true"/>
+          <PublishItem publishSize="54562" publishTime="1586649182" publishDebug="true"/>
+          <PublishItem publishSize="54591" publishTime="1586648380" publishDebug="true"/>
      </publishHistory>
 </DOMDocument>
