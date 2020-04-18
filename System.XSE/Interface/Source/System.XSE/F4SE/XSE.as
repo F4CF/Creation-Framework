@@ -5,7 +5,6 @@ package F4SE
 	/**
 	 * Exposes the F4SE code object's methods and data.
 	 * https://www.creationkit.com/fallout4/index.php?title=Category:F4SE
-	 * TODO: Add boolean return values for functions.
 	 */
 	public class XSE
 	{
@@ -39,9 +38,7 @@ package F4SE
 		}
 
 
-		// TODO: See if `... rest` parameters would work here.
-		// TODO: See if generic event arguments are allowed. First argument is strongly typed to String.
-		public static function SendExternalEvent(eventID:String, argument:*=null, ... rest):Boolean
+		public static function SendExternalEvent(eventID:String, ... arguments):Boolean
 		{
 			if (API != null)
 			{
@@ -50,20 +47,18 @@ package F4SE
 					var success:Boolean = true;
 					try
 					{
-						if (argument == null)
+						switch (arguments.length)
 						{
-							API.SendExternalEvent(eventID);
-						}
-						else
-						{
-							if (rest == null)
-							{
-								API.SendExternalEvent(eventID, argument);
-							}
-							else
-							{
-								API.SendExternalEvent(eventID, argument, rest);
-							}
+							case 0: API.SendExternalEvent(eventID); break;
+							case 1: API.SendExternalEvent(eventID, arguments[0]); break;
+							case 2: API.SendExternalEvent(eventID, arguments[0], arguments[1]); break;
+							case 3: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2]); break;
+							case 4: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3]); break;
+							case 5: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]); break;
+							case 6: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5]); break;
+							case 7: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6]); break;
+							case 8: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7]); break;
+							case 9: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8]); break;
 						}
 					}
 					catch (error:Error)
