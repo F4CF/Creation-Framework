@@ -74,31 +74,17 @@ package System.UI
 		//---------------------------------------------
 
 		// @IMenu
-		protected override function onPlatformRequestEvent(e:Event):*
-		{
-			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onPlatformRequestEvent)", e.toString());
-			super.onPlatformRequestEvent(e);
-		}
-
-		// @IMenu
-		protected override function onSetSafeRect():void
-		{
-			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onSetSafeRect)");
-			super.onSetSafeRect();
-		}
-
-		// @IMenu
-		protected override function onMouseFocus(e:FocusEvent):*
-		{
-			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onMouseFocus)", e.toString());
-			super.onMouseFocus(e);
-		}
-
-		// @IMenu
 		public override function SetPlatform(auiPlatform:uint, abPS3Switch:Boolean):*
 		{
 			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::SetPlatform)", "auiPlatform:"+auiPlatform, "abPS3Switch:"+abPS3Switch);
 			super.SetPlatform(auiPlatform, abPS3Switch);
+		}
+
+		// @IMenu
+		protected override function onPlatformRequestEvent(e:Event):*
+		{
+			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onPlatformRequestEvent)", e.toString());
+			super.onPlatformRequestEvent(e);
 		}
 
 		// @IMenu
@@ -113,6 +99,20 @@ package System.UI
 		{
 			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::ShrinkFontToFit)", "textField:"+textField.text, "amaxScrollV:"+amaxScrollV);
 			super.ShrinkFontToFit(textField, amaxScrollV);
+		}
+
+		// @IMenu
+		protected override function onSetSafeRect():void
+		{
+			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onSetSafeRect)");
+			super.onSetSafeRect();
+		}
+
+		// @IMenu
+		protected override function onMouseFocus(e:FocusEvent):*
+		{
+			Debug.WriteLine("[System.UI.MenuType]", "(IMenu::onMouseFocus)", e.toString());
+			super.onMouseFocus(e);
 		}
 
 

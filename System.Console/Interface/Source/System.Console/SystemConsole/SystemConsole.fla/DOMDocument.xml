@@ -1,16 +1,16 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.971" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 19.2 build 408" majorVersion="19" minorVersion="2" buildNumber="408" vanishingPoint3DX="640" vanishingPoint3DY="360" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="2822BE9B29417F448EBE6BC80B8B394E">
      <folders>
-          <DOMFolderItem name="Shared" itemID="5e44fa09-000001f2" isExpanded="true"/>
-          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc" isExpanded="true"/>
-          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd" isExpanded="true"/>
-          <DOMFolderItem name="Shared/AS3/BSButtonHintBar/BSButtonHint" itemID="5e76864d-000003cf" isExpanded="true"/>
+          <DOMFolderItem name="Shared" itemID="5e44fa09-000001f2"/>
+          <DOMFolderItem name="Shared/AS3" itemID="5e768617-000002cc"/>
+          <DOMFolderItem name="Shared/AS3/BSButtonHintBar" itemID="5e768617-000002cd"/>
+          <DOMFolderItem name="Shared/AS3/BSButtonHintBar/BSButtonHint" itemID="5e76864d-000003cf"/>
           <DOMFolderItem name="Shared/Fonts" itemID="5e416f13-0000039b"/>
           <DOMFolderItem name="Shared/Fonts/fonts_en" itemID="5e44fa13-000001f6" isExpanded="true"/>
           <DOMFolderItem name="SystemConsole" itemID="5e92444a-0000022f" isExpanded="true"/>
           <DOMFolderItem name="SystemConsole/CommandCard" itemID="5e924863-00000243"/>
-          <DOMFolderItem name="SystemConsole/CommandList" itemID="5e924865-00000244" isExpanded="true"/>
+          <DOMFolderItem name="SystemConsole/CommandList" itemID="5e924865-00000244"/>
           <DOMFolderItem name="SystemConsole/CommandList/CommandList" itemID="5e9247c2-00000232"/>
-          <DOMFolderItem name="SystemConsole/CommandList/CommandListEntry" itemID="5e9247e9-0000023a" isExpanded="true"/>
+          <DOMFolderItem name="SystemConsole/CommandList/CommandListEntry" itemID="5e9247e9-0000023a"/>
      </folders>
      <fonts>
           <DOMFontItem name="Shared/Fonts/fonts_en/$MAIN_Font_Bold" itemID="5daeb429-0000029e" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$MAIN_Font_Bold" linkageURL="fonts_en.swf" font="RobotoCondensed-Bold" size="0" id="3" sourceLastImported="1571730473" embeddedCharacters=" &#xD;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƒƠơƯưǰǺǻǼǽǾǿȘșȚțȷˆˇˉ˘˙˚˛˜˝΄΅Ά·ΈΉΊΌΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϒϖЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџѠѡѢѣѤѥѦѧѨѩѪѫѬѭѮѯѰѱѲѳѴѵѶѷѸѹѺѻѼѽѾѿҀҁ҂҃҄҅҆҈҉ҊҋҌҍҎҏҐґҒғҔҕҖҗҘҙҚқҜҝҞҟҠҡҢңҤҥҦҧҨҩҪҫҬҭҮүҰұҲҳҴҵҶҷҸҹҺһҼҽҾҿӀӁӂӃӄӅӆӇӈӉӊӋӌӍӎḀḁḾḿẀẁẂẃẄẅẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹὍ           ​–—―‗‘’‚‛“”„†‡•‥…‰′″‹›‼⁄⁴ⁿ₣₤₧₫€℅ℓ№™Ω℮⅛⅜⅝⅞∂∏∑√∞∫≠≤≥﻿￼" embedRanges="1|2|3|4|5"/>
@@ -33,6 +33,7 @@
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryBorder.xml" loadImmediate="false" itemID="5e9247e4-00000239" lastModified="1586644964"/>
           <Include href="SystemConsole/CommandList/CommandListEntry/CommandList_EntryIcon.xml" itemIcon="1" loadImmediate="false" itemID="5e925521-00000268" lastModified="1586648353"/>
           <Include href="SystemConsole/CommandPanel.xml" itemID="5e91f280-000001f8" lastModified="1586663451"/>
+          <Include href="SystemConsole/MenuButtonBar.xml" itemID="5e9353c5-00000295" lastModified="1586714436"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1" layerDepthEnabled="true">
@@ -53,18 +54,18 @@
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="ButtonHintBar_mc" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+                    <DOMLayer name="MenuButtonBar_mc" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
-                                        <DOMComponentInstance libraryItemName="Shared/AS3/BSButtonHintBar/BSButtonHintBar" name="ButtonHintBar_mc" uniqueID="1">
+                                        <DOMSymbolInstance libraryItemName="SystemConsole/MenuButtonBar" name="MenuButtonBar_mc">
                                              <matrix>
-                                                  <Matrix tx="640.65" ty="657.75"/>
+                                                  <Matrix tx="640" ty="673.75"/>
                                              </matrix>
                                              <transformationPoint>
-                                                  <Point x="-0.65" y="16"/>
+                                                  <Point/>
                                              </transformationPoint>
-                                        </DOMComponentInstance>
+                                        </DOMSymbolInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
@@ -75,7 +76,12 @@
      <scripts/>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="54626" publishTime="1586663209" publishDebug="true"/>
-          <PublishItem publishSize="54634" publishTime="1586663141" publishDebug="true"/>
+          <PublishItem publishSize="55106" publishTime="1586714419" publishDebug="true"/>
+          <PublishItem publishSize="55110" publishTime="1586714344" publishDebug="true"/>
+          <PublishItem publishSize="55428" publishTime="1586714298" publishDebug="true"/>
+          <PublishItem publishSize="55444" publishTime="1586714119" publishDebug="true"/>
+          <PublishItem publishSize="1719" publishTime="1586714094" publishDebug="true"/>
+          <PublishItem publishSize="54895" publishTime="1586711708" publishDebug="true"/>
+          <PublishItem publishSize="54877" publishTime="1586711680" publishDebug="true"/>
      </publishHistory>
 </DOMDocument>

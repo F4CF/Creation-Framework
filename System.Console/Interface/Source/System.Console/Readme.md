@@ -3,3 +3,7 @@ This is the root package directory for AS3 imports. Add this directory to the Fl
 
 # TODO
 * "Console Batch" script runner UI.
+* Load file contents into UI.
+
+# Notes
+* The console menu cannot handle mouse clicks.
