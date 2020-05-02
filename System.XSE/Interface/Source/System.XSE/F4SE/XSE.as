@@ -14,7 +14,7 @@ package F4SE
 
 		/**
 		 * Gets an object representing the running version of F4SE.
-		 * @return Object - The F4SE `version` object.
+		 * @return Object - The F4SE 'version' object.
 		 */
 		public static function GetVersion():Object
 		{
@@ -38,52 +38,175 @@ package F4SE
 		}
 
 
-		public static function SendExternalEvent(eventID:String, ... arguments):Boolean
+		// TODO: See if generic event arguments are allowed. First argument is strongly typed to String.
+		public static function SendExternalEvent(eventName:String, ... arguments):Boolean
 		{
 			if (API != null)
 			{
-				if (eventID != null)
+				if (eventName != null)
 				{
 					var success:Boolean = true;
 					try
 					{
 						switch (arguments.length)
 						{
-							case 0: API.SendExternalEvent(eventID); break;
-							case 1: API.SendExternalEvent(eventID, arguments[0]); break;
-							case 2: API.SendExternalEvent(eventID, arguments[0], arguments[1]); break;
-							case 3: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2]); break;
-							case 4: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3]); break;
-							case 5: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]); break;
-							case 6: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5]); break;
-							case 7: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6]); break;
-							case 8: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7]); break;
-							case 9: API.SendExternalEvent(eventID, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8]); break;
+							case 0: API.SendExternalEvent(eventName); break;
+							case 1: API.SendExternalEvent(eventName, arguments[0]); break;
+							case 2: API.SendExternalEvent(eventName, arguments[0], arguments[1]); break;
+							case 3: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2]); break;
+							case 4: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3]); break;
+							case 5: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]); break;
+							case 6: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5]); break;
+							case 7: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6]); break;
+							case 8: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7]); break;
+							case 9: API.SendExternalEvent(eventName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8]); break;
 						}
 					}
 					catch (error:Error)
 					{
-						Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "ERROR:", error.toString());
+						Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "ERROR: ", error.toString());
 						success = false;
 					}
 					return success;
 				}
 				else
 				{
-					Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "eventID", "The `eventID` cannot be null.");
+					Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "eventName", "The 'eventName' cannot be null.");
 					return false;
 				}
 			}
 			else
 			{
-				Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "API", "The `API` object cannot be null.");
+				Debug.WriteLine("[F4SE.XSE]", "(SendExternalEvent)", "API", "The 'API' object cannot be null.");
+				return false;
+			}
+		}
+
+
+		public static function CallFunctionNoWait(receiver:Object, functionName:String, ... arguments):Boolean
+		{
+			if (API != null)
+			{
+				if (receiver != null)
+				{
+					if (!receiver.hasOwnProperty("__type__"))
+					{
+						Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "receiver", "The 'receiver' object must have the '__type__' property.");
+						return false;
+					}
+					else if (!receiver.hasOwnProperty("__handleHigh__"))
+					{
+						Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "receiver", "The 'receiver' object must have the '__handleHigh__' property.");
+						return false;
+					}
+					else if (!receiver.hasOwnProperty("__handleLow__"))
+					{
+						Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "receiver", "The 'receiver' object must have the '__handleLow__' property.");
+						return false;
+					}
+					else
+					{
+						if (functionName != null)
+						{
+							var success:Boolean = true;
+							try
+							{
+								switch (arguments.length)
+								{
+									case 0: API.CallFunctionNoWait(receiver, functionName); break;
+									case 1: API.CallFunctionNoWait(receiver, functionName, arguments[0]); break;
+									case 2: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1]); break;
+									case 3: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2]); break;
+									case 4: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3]); break;
+									case 5: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]); break;
+									case 6: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5]); break;
+									case 7: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6]); break;
+									case 8: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7]); break;
+									case 9: API.CallFunctionNoWait(receiver, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8]); break;
+								}
+							}
+							catch (error:Error)
+							{
+								Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "ERROR: ", error.toString());
+								success = false;
+							}
+							return success;
+						}
+						else
+						{
+							Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "functionName", "The 'functionName' cannot be null.");
+							return false;
+						}
+					}
+				}
+				else
+				{
+					Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "receiver", "The 'receiver' object cannot be null.");
+					return false;
+				}
+			}
+			else
+			{
+				Debug.WriteLine("[F4SE.XSE]", "(CallFunctionNoWait)", "API", "The 'API' object cannot be null.");
+				return false;
+			}
+		}
+
+
+		public static function CallGlobalFunctionNoWait(className:String, functionName:String, ... arguments):Boolean
+		{
+			if (API != null)
+			{
+				if (className != null)
+				{
+					if (functionName != null)
+					{
+						var success:Boolean = true;
+						try
+						{
+							switch (arguments.length)
+							{
+								case 0: API.CallGlobalFunctionNoWait(className, functionName); break;
+								case 1: API.CallGlobalFunctionNoWait(className, functionName, arguments[0]); break;
+								case 2: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1]); break;
+								case 3: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2]); break;
+								case 4: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3]); break;
+								case 5: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]); break;
+								case 6: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5]); break;
+								case 7: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6]); break;
+								case 8: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7]); break;
+								case 9: API.CallGlobalFunctionNoWait(className, functionName, arguments[0], arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8]); break;
+							}
+						}
+						catch (error:Error)
+						{
+							Debug.WriteLine("[F4SE.XSE]", "(CallGlobalFunctionNoWait)", "ERROR: ", error.toString());
+							success = false;
+						}
+						return success;
+					}
+					else
+					{
+						Debug.WriteLine("[F4SE.XSE]", "(CallGlobalFunctionNoWait)", "functionName", "The 'functionName' cannot be null.");
+						return false;
+					}
+				}
+				else
+				{
+					Debug.WriteLine("[F4SE.XSE]", "(CallGlobalFunctionNoWait)", "className", "The 'className' cannot be null.");
+					return false;
+				}
+			}
+			else
+			{
+				Debug.WriteLine("[F4SE.XSE]", "(CallGlobalFunctionNoWait)", "API", "The 'API' object cannot be null.");
 				return false;
 			}
 		}
 
 
 		/**
-		 * Gets an array of objects representing `FileSystemInfo` objects for the given path.
+		 * Gets an array of objects representing 'FileSystemInfo' objects for the given path.
 		 * @param path - The directory to search within. Searches the top level folder only.
 		 * @param match - Filters the listing using a string pattern. The pattern accepts a wildcard expression (*).
 		 * @param recursive - Searches any child directories as well.
@@ -100,7 +223,7 @@ package F4SE
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.XSE]", "(GetDirectoryListing)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(GetDirectoryListing)", "ERROR: ", error.toString());
 				}
 				return array;
 			}
@@ -130,7 +253,7 @@ package F4SE
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.XSE]", "(MountImage)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(MountImage)", "ERROR: ", error.toString());
 					success = false;
 				}
 				return success;
@@ -160,7 +283,7 @@ package F4SE
 				}
 				catch (error:Error)
 				{
-					Debug.WriteLine("[F4SE.XSE]", "(UnmountImage)", "ERROR:", error.toString());
+					Debug.WriteLine("[F4SE.XSE]", "(UnmountImage)", "ERROR: ", error.toString());
 					success = false;
 				}
 				return success;
@@ -175,7 +298,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param API - The F4SE `code` object to use.
+		//  * @param API - The F4SE 'code' object to use.
 		//  */
 		// public static function GetMembers(API:*):void
 		// {
@@ -192,7 +315,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param API - The F4SE `code` object to use.
+		//  * @param API - The F4SE 'code' object to use.
 		//  */
 		// public static function CallFunctionNoWait(API:*):void
 		// {
@@ -209,7 +332,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param API - The F4SE `code` object to use.
+		//  * @param API - The F4SE 'code' object to use.
 		//  */
 		// public static function AllowTextInput(API:*):void
 		// {
@@ -226,7 +349,7 @@ package F4SE
 
 		// /**
 		//  *
-		//  * @param API - The F4SE `code` object to use.
+		//  * @param API - The F4SE 'code' object to use.
 		//  */
 		// public static function GetPlugins(API:*):void
 		// {
