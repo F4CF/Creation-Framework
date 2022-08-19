@@ -10,7 +10,7 @@ WidgetData Widget
 
 Struct WidgetData
 	string ID = "I_Forgot_To_Set_A_Widget_ID"
-	{The path to your widget's SWF file. The root directory is WidgetData\Interface.}
+	{The path to your widget's SWF file. The root directory is Data\Interface.}
 
 	bool LoadNow = false
 	{Load the widget immediately after registration. (default: false)}
